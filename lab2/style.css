@@ -1,0 +1,25 @@
+.chu-mau-do {
+  color: blueviolet;
+}
+
+.font-big {
+  font-size: 50px;
+}
+
+.list {
+  background-color: greenyellow;
+}
+
+.decoration {
+  text-decoration: underline blueviolet 1px;
+}
+.spacing {
+  text-indent: 30px;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  line-height: 100px;
+}
+
+.text-shadow {
+  text-shadow: 3px 2px 5px #99ff00, 0 0 3px #0000ff;
+}

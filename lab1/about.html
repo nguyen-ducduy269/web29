@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terraform</title>
+    <link
+      rel="shortcut icon"
+      href="https://img2.thuthuatphanmem.vn/uploads/2018/12/14/icon-de-thuong_110448396.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <p>Terraform – AWS VPC – Tạo Private Subnets và Bastion Host</p>
+  <p>26 tháng 08, 2022 - 75 lượt xem</p>
+  <div><a href="">Thực hành Lab</a> <a href="">AWS</a></div>
+  <p>
+    Tiếp tục với loạt bài về Terraform, trong bài viết này chúng ta chúng ta sẽ
+    xây dựng một Private Subnet hoàn chỉnh. Để tạo Private Subnet và có thể test
+    được, chúng ta nên tạo một full network như bên dưới:
+  </p>
+  <img
+    src="https://media.techmaster.vn/api/static/695/u_PnJlxw"
+    alt="icon đẹp"
+    width="1000"
+  />
+
+  <p>Trong đó chúng ta có:</p>
+  <ul>
+    <li>1 VPC</li>
+    <li>1 Public Subnet</li>
+    <li>1 Private Subnet</li>
+    <li>
+      1 Internet Geteway nằm trong VPC, dùng để điều hướng traffic từ VPC ra
+      internet và ngược lại
+    </li>
+    <li>
+      1 NAT Geteway nằm trong Public Subnet dùng để điều hướng traffic từ
+      Private Subnet ra Internet Geteway
+    </li>
+    <li>
+      1 EC2 instance nằm trong Public Subnet dùng để làm bastion host. Chúng ta
+      có thể SSH đến con instance này từ máy local của chúng ta.
+    </li>
+    <li>
+      1 EC2 instance nằm trong Private Subnet. Instance này có thể truy cập
+      internet thông qua NAT Gateway và chỉ có thể được SSH từ bastion
+      host(instance được tạo trong Public Subnet). Tuy nhiên, chúng ta không thể
+      truy cập instance này từ internet hoặc SSH từ máy local của chúng ta.
+    </li>
+  </ul>
+
+  <body>
+    <h1><b>Tiến hành viết code Terraform để triển khai</b></h1>
+    <ol>
+      <li>Tạo một mạng VP</li>
+      <p>
+        resource "aws_vpc" "my_vpc" {
+        <br />
+        cidr_block = "10.0.0.0/16" <br />
+        enable_dns_hostnames = true
+
+        <br />
+        tags = { <br />
+        Name = "My VPC" }
+        <li>
+          Tạo một Public Subnet nằm trong my_vpc, chú ý subnet này có
+          map_public_ip_on_launch = true nghĩa là nó sẽ tự động assign public IP
+          cho những instance được run trong nó. <br />
+          resource "aws_subnet" "public" {<br />
+          vpc_id = aws_vpc.my_vpc.id <br />
+          cidr_block = "10.0.0.0/24"<br />
+          availability_zone = "ap-southeast-1a" <br />
+          map_public_ip_on_launch = true<br />
+          tags = { <br />
+          Name = "Public Subnet" <br />
+          } <br />
+          }<br />
+        </li>
+      </p>
+    </ol>
+  </body>
+</html>
