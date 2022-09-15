@@ -1,0 +1,204 @@
+.box {
+  width: 100px;
+  height: 100px;
+}
+.back-ground-red {
+  background-color: red;
+}
+.back-ground-blue {
+  background-color: blue;
+}
+.back-ground-yellow {
+  background-color: rgba(56, 56, 8, 0.21);
+}
+.back-ground-pink {
+  background-color: pink;
+}
+.back-ground-green {
+  background-color: green;
+}
+.static {
+  position: static;
+  /*Đây là giá trị position mặc định của tất cả phần tử trên trang. Các thuộc tính top, left, right, bottom, z-index không có tác dụng */
+}
+.fixed {
+  position: fixed;
+  /*Cho phép cố định 1 phần tử trên khung nhìn trình duyệt. Các thuộc tính top, left, right, bottom cho phép tùy chỉnh vị trí cụ thể*/
+  /*Khi 1 phần tử có position: fixed thì vị trí gốc ban đầu không còn tồn tại, các phần tử khác thì coi như không có sự xuất hiện của phần tử này*/
+  /*Các thuộc tính này sẽ căn theo mép của trình duyệt*/
+  top: 50px;
+  right: 50px;
+  /*Có thể áp dụng cùng lúc 4 giá trị nhưng chỉ có tác dụng khi không có giá trị width và height*/
+  bottom: 50px;
+  left: 50px;
+  /*Thường sử dụng cho navbar, hoặc chatbox, nút call, modal,lớp phủ toàn bộ màn hình,.....*/
+  /*   width: unset;
+    height: unset; */
+}
+.relative {
+  /*Di chuyển nội dung so với vị trí ban đầu. Không ảnh hưởng đến nội dung xung quanh*/
+  /*Các giá trị top left right bottom tăng theo vị trí ban đầu của phần tử*/
+  /*Chỉ áp dụng được 2 giá trị cùng lúc theo 1 góc cụ thể. Thực tế là relative thì thường chỉ sử dụng để làm mốc cho phần tử (abosute) khác căn theo*/
+  /**/
+  left: 320px;
+  top: 170px;
+  position: relative;
+}
+.absolute {
+  /*Thường phần tử có position: absolute thì nằm trong 1 phần tử khác có position: relative( có thể là absolute hoặc fixed)*/
+  /*Lúc này các thuộc tính top left right bottom sẽ căn theo vị trí của phần tử cha gần nhất có position*/
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  /*Có thể áp dụng đồng thời cả 4 thuộc tính, chỉ áp dụng khhi không có width và height*/
+  /*Thường dùng để tạo lớp phủ cho 1 mục nội dung, menu đa cấp hoặc các mục trang trí nhỏ*/
+}
+
+body {
+  height: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.movie {
+  position: relative;
+  width: 400px;
+}
+
+.btn-play,
+.movie-info {
+  position: absolute;
+}
+
+.btn-play {
+  top: 10px;
+  left: 5px;
+}
+
+.movie-info {
+  left: 0px;
+  right: 0px;
+  /*kéo căng phần tử */
+  bottom: 0px;
+  /*Đặt phần tử ở vị trí mép dưới*/
+  font-size: 16px;
+  color: white;
+  padding: 30px 15px 10px;
+  background-image: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.movie-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: auto;
+  transform: rotate(45deg);
+}
+.circle {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.top {
+  top: -50px;
+}
+
+.left {
+  left: -50px;
+}
+
+.name {
+  position: absolute;
+  z-index: 1;
+  color: black;
+  transform: rotate(-45deg);
+  top: 28px;
+  right: 50px;
+  font-size: 14px;
+}
+
+/*Pseudo class*/
+/*có thể áp dụng css khi phần tử này được di chuột qua*/
+/*Áp dụng CSS cho phần tử con khi phần tử cha được hover qua*/
+.heart:hover {
+  background-color: pink;
+}
+.heart:hover .circle {
+  background-color: pink;
+}
+
+.heart:hover .name {
+  color: yellow;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  background-color: black;
+}
+
+.menu-items {
+  flex-grow: 1;
+  position: relative;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.menu-items:hover .menu-link {
+  background-color: aquamarine;
+}
+
+.sub-menu {
+  position: absolute;
+  display: none;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background-color: antiquewhite;
+  list-style: none;
+  box-shadow: 0px 0px 1px;
+  text-align: center;
+}
+
+.menu-items:hover .sub-menu {
+  display: block;
+}
