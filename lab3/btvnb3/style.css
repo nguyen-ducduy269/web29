@@ -66,6 +66,7 @@ img {
 }
 .card-list {
   display: flex;
+  list-style: none;
 }
 
 .box {
@@ -73,3 +74,6 @@ img {
   height: 90px;
   width: 500px;
 }
+ul {
+  list-style: none;
+} 
