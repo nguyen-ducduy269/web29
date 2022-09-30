@@ -30,7 +30,7 @@
 
 * lấy giá trị hiện tại của x cộng với giá trị phía bên phải
 
-- x += 4 -> x + 4 =
+- x += 4 -> x + 4 = x
 - x ++, x --, ++ x, -- x : tăng hoặc giảm giá trị của x lên 1.
 
 - toán tử increment/decrement:

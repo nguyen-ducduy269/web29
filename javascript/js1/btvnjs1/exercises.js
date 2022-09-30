@@ -8,17 +8,15 @@
  * @return {number} Số lớn nhất trong 3 số
  */
 function maxOfThree(a, b, c) {
-  if (a > b && a > c) {
-    return a;
-  } else if (b > a && b > c) {
-    return b;
-  } else {
-    return c;
-  }
+  let max = a;
+  if (b > max) max = b;
+  if (c > max) max = c;
+  return max;
 }
-console.log("Số lớn nhất trong 3 chữ số là:", maxOfThree(3, 4, 5));
-console.log("Số lớn nhất trong 3 chữ số là:", maxOfThree(1, 10, 5));
-console.log("Số lớn nhất trong 3 chữ số là:", maxOfThree(53, 20, 1));
+console.log(maxOfThree(3, 4, 5));
+console.log(maxOfThree(1, 10, 5));
+console.log(maxOfThree(53, 20, 1));
+console.log(maxOfThree(2, 2, 1));
 /**
  * Tìm mùa tương ứng với tháng
  *
@@ -32,14 +30,41 @@ console.log("Số lớn nhất trong 3 chữ số là:", maxOfThree(53, 20, 1));
  * @return {'Winter' | 'Spring' | 'Summer' | 'Fall'} Mùa tương ứng với tháng
  */
 function findSeason(month) {
+  switch (month) {
+    case 12:
+    case 1:
+    case 2:
+      return "Winter";
+
+    case 3:
+    case 4:
+    case 5:
+      return "Spring";
+
+    case 6:
+    case 7:
+    case 8:
+      return "Summer";
+
+    case 9:
+    case 10:
+    case 11:
+      return "Autumn";
+
+    default:
+      break;
+  }
+
   if (month == 12 || month == 1 || month == 2) {
     return "Winter";
   } else if (month == 3 || month == 4 || month == 5) {
     return "Spring";
   } else if (month == 6 || month == 7 || month == 8) {
     return "Summer";
-  } else {
+  } else if (month == 9 || month == 10 || month == 11) {
     return "Fall";
+  } else {
+    return NaN;
   }
 }
 console.log("Bây giờ là mùa", findSeason(12));
@@ -60,15 +85,7 @@ console.log("Bây giờ là mùa", findSeason(5));
  * @return {boolean} Năm này có phải năm nhuận hay không
  */
 function isLeafYear(year) {
-  let nhuan = true;
-  let khongnhuan = false;
-  if (year % 4 == 0 && year % 100 != 0) {
-    return "Năm " + year + " nhuận";
-  } else if (year % 4 == 0 && year % 100 == 0) {
-    return "Năm " + year + " không nhuận";
-  } else if (year % 100 == 0 && year % 400 == 0) {
-    return "Năm " + year + " nhuận";
-  }
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 console.log(isLeafYear(2020));
 console.log(isLeafYear(3100));
@@ -88,28 +105,36 @@ console.log(isLeafYear(8000));
  * @return {number} Số ngày trong tháng đó
  */
 function findDayOfMonth(month, year) {
-  if (
-    month == 1 ||
-    month == 3 ||
-    month == 5 ||
-    month == 7 ||
-    month == 8 ||
-    month == 10 ||
-    month == 12
-  ) {
-    return " có 31 ngày";
-  } else if (month == 4 || month == 6 || month == 9 || month == 11) {
-    return " có 30 ngày";
-  } else if (month == 2) {
-    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-      return " có 29 ngày";
+  switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      return "31";
+      break;
+
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      return "30";
+      break;
+
+    case 2: {
+      if (isLeafYear(year)) return 29;
+      else return 28;
+
+      // return isLeafYear(year) ? 29 : 28;
     }
-    return " có 28 ngày";
-  } else {
-    return "không biết";
+    default:
+      break;
   }
 }
 console.log("thang 2 co bao nhieu ngay: ", findDayOfMonth(2, 2018));
+console.log(findDayOfMonth(9, 2002));
 /**
  * Xếp loại sinh viên theo số điểm trung bình
  *
@@ -134,6 +159,8 @@ function calcGrade(point) {
     return "B";
   } else if (point > 8.5 && point <= 10) {
     return "A";
+  } else {
+    return NaN;
   }
 }
 console.log(calcGrade(1.0));
