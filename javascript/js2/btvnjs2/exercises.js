@@ -66,6 +66,16 @@ function fibonacci(n) {
     s.push(s[s.length - 1] + s[s.length - 2]);
     return s;
   }
+
+  //let a = 0, b = 1, c;
+  // if( n === 1) return a;
+  // if(n === 2) return b;
+  // for ( let i = 1; i <= n - 2; i++ ){
+  // c = a + b;
+  // a = b;
+  // b = c;
+  //}
+  // return c;
 }
 console.log(fibonacci(5));
 /**
@@ -106,6 +116,15 @@ function isStrong(n) {
     n = Math.floor(n / 10);
   }
   console.log(sum);
+
+  // let temp = n;
+  // let sum = 0;
+  // while (temp > 0){
+    // const reminder = temp % 10;
+    // sum += factorial(n : reminder);
+    // temp = (temp - reminder) / 10;
+  //}
+  // return sum === n;
 }
 isStrong(132);
 isStrong(145);
