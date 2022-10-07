@@ -1,0 +1,3 @@
+- number, string, datetime, json, array
+- cho phép gọi các phương thức của kiểu dữ liệu tương ứng trực tiếp trên các giá trị nguyên thủy
+- [].splice(start, count,... values); - xóa, chèn, thay thế

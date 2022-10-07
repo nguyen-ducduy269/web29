@@ -65,3 +65,20 @@ rectangle1.toString(); // gọi trường hợp mà yêu cầu object chuyển v
 console.log(String(rectangle1));
 // toString
 // mặc định tất cả object đều in ra chuỗi [object Object]
+
+//Đệ quy
+let obj = {
+  x: 1,
+  y: 2,
+  z: {
+    name: "Duy",
+  },
+};
+let clone = {};
+for (let key in obj) {
+  if (typeof obj[key] === "object") {
+    clone[key] = object.assign({}, obj[key]);
+  } else {
+    clone[key] = obj[key];
+  }
+}
