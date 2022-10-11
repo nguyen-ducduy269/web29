@@ -10,8 +10,11 @@
  * @returns {string} Chuỗi viết hoa chữ cái đầu
  */
 function capitalize(str) {
-  return str[0].toUpperCase() + str.slice(1).toLocaleLowerCase();
+  for (let key in str) {
+    return str[0].toUpperCase() + str.slice(1).toLowerCase();
+  }
 }
+console.log(capitalize("  javascript is Fun "));
 
 /**
  * Chuyển đổi chuỗi thành dạng title (viết hoa chữ cái đầu của mỗi từ)
@@ -48,8 +51,17 @@ console.log(title("javaScript iS fUn"));
  *
  * @returns {number} Số ký tự nguyên âm có trong chuỗi
  */
-function countVowel(str) {}
-
+function countVowel(str) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let counter = 0;
+  for (let key of str.toLowerCase()) {
+    if (vowels.includes(key)) {
+      counter++;
+    }
+  }
+  return counter;
+}
+console.log(countVowel("javaScript iS fUn"));
 /**
  * Tạo một mã màu ngẫu nhiên (hệ màu HEX)
  *
@@ -65,7 +77,7 @@ function randomColor() {
   }
   return result;
 }
-
+console.log(randomColor());
 /**
  * Đảo ngược thứ tự các từ trong chuỗi
  *
@@ -75,8 +87,14 @@ function randomColor() {
  *
  * @returns {string} Chuỗi đảo ngược
  */
-function reverseWords(str) {}
-
+function reverseWords(str) {
+  let o = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    o += str[i];
+  }
+  return o;
+}
+console.log(reverseWords("The fox is comming for the chicken"));
 /**
  * Tạo chuỗi URL (viết thường, các từ được nối với nhau bằng dấu -)
  *
@@ -85,4 +103,8 @@ function reverseWords(str) {}
  *
  * @returns {string} Chuỗi URL
  */
-function parameterize(str) {}
+function parameterize(str) {
+  str = str.split("").join("-");
+  return str;
+}
+console.log(parameterize("JavaScript is fun"));

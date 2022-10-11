@@ -46,13 +46,13 @@ const myFamily = {
  * @return {{[key: string]: number}} Danh sách thành viên và số tuổi tương ứng sau `n` năm
  */
 function afterNYears(obj, n) {
-  let newObj = "";
-  for (obj in myFamily) {
-    newObj = value + n;
+  let newObj = Object.assign({}, obj);
+  for (let key in newObj) {
+    newObj[key] += n;
   }
   return newObj;
 }
-console.log(afterNYears("Fred", 5));
+console.log(afterNYears(myFamily, 5));
 /**
  * Đảo ngược key thành value, value thành key của một object bất kỳ
  *
@@ -62,13 +62,22 @@ console.log(afterNYears("Fred", 5));
  *
  * @return {[key: string]: string} Object mới sau khi đảo ngược
  */
-function invert(obj) {}
+function invert(obj) {
+  let swap = {};
+  for (let key in obj) {
+    swap[obj[key]] = key;
+  }
+  return swap;
+}
+console.log(invert(myFamily));
 
 // Danh sách items
 // Key là tên, value là giá trị tương ứng
 const items = {
   tv: 300,
   ipad: 1000,
+  laptop: 20000,
+  iphone: 1500,
 };
 
 /**
@@ -78,7 +87,14 @@ const items = {
  *
  * @return {number} Tổng giá trị các items
  */
-function totalAmount(items) {}
+function totalAmount(items) {
+  let sum = 0;
+  for (let value in items) {
+    sum += items[value];
+  }
+  return sum;
+}
+console.log(totalAmount(items));
 
 /**
  * Lọc và trả về danh sách các items có giá trị cao (value >= 1000) trong danh sách đầu vào
@@ -89,4 +105,15 @@ function totalAmount(items) {}
  *
  * @return {{[key: string]: number}} Danh sách các items có giá trị cao
  */
-function expensiveItems(items) {}
+function expensiveItems(items) {
+  let itemsExpensive = {}; // hàm tích lũy
+  for (let key in items) {
+    // duyệt mảng xem key có ở trong items ko
+    if (items[key] >= 1000) {
+      // nếu như giá trị của key >= 1000
+      itemsExpensive[key] = items[key]; //thì giá trị của key thỏa mãn sẽ được in vào hàm tích lũy itemsExpensive
+    }
+  }
+  return itemsExpensive; //trả về giá trị đã được lưu lại trong hàm tích lũy
+}
+console.log(expensiveItems(items));

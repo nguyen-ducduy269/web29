@@ -58,9 +58,10 @@ console.log(minMax([1, 2, 7, 6]));
 function swap(arr, x, y) {
   const temp = arr[x];
   arr[x] = arr[y];
-  arr[y] = arr[x];
+  arr[y] = temp;
+  return arr;
 }
-
+console.log(swap([1, 2, 7, 3], 0, 2));
 /**
  * Tìm các số xuất hiện trong cả 2 mảng
  *
@@ -115,8 +116,16 @@ function removeDuplicate(arr) {
  *
  * @return {number} Số lớn thứ 2 trong mảng
  */
-function secondLargest(arr) {}
-
+function secondLargest(arr) {
+  let secondMax = arr[i];
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[i - 1] && arr[i] < max(arr)) {
+      secondMax = arr[i];
+    }
+    return secondMax;
+  }
+}
+console.log(secondLargest(1, 2, 6, 3, 7));
 /**
  * Xáo trộn vị trí các phần tử trong một mảng
  *
