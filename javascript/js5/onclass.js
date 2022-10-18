@@ -1,12 +1,12 @@
-[].forEach();
+[].forEach(); //dùng để duyệt qua mảng, gọi hàm callback 1 lần với mỗi giá trị
 [].find(); // tìm 1 giá trị đầu tiên trong mảng phù hợp với điều kiện nhất định đc đánh giá bởi hàm callback
 [].findIndex(); // tìm index của giá trị đầu tiên phù hợp với điều kiện được đánh giá bởi hàm callback
 [].map(); // chuyển đổi tất cả giá trị trong mảng thành giá trị mới được tính toán bởi hàm callback, mảng mới không ảnh hưởng đến mảng ban đầu
 [].filter(); // tìm tất cả giá trị phù hợp với yêu cầu được đánh giá bởi hàm callback
-[].reduce(); // tổng hợp các giá trị trong mạch được tính toán bởi hàm callback
+[].reduce(); // tổng hợp các giá trị trong mảng được tính toán bởi hàm callback
 [].some(); //
 [].every(); //
-[].sort(); //Sắp xếp các giá trị bên trong mảng
+[].sort(); // sắp xếp các giá trị bên trong mảng
 
 let arr = [1, 2, 3, 4, 5, 6];
 //in từng giá trị trong mảng ra console.log
@@ -15,7 +15,7 @@ for (let value of arr) {
 }
 // console.log là 1 hàm/ phương thức.
 // hàm callback - là 1 hàm truyền vào hàm khác dưới dạng đối số.
-// khi callback truyền ra giá trị sẽ truyền đủ value, index, arr.
+// khi callback truyền ra giá trị sẽ truyền đủ 3 tham số value, index, arr.
 // forEach dùng để duyệt qua mảng, gọi hàm callback 1 lần với mỗi giá trị
 // nó ko có kết quả trả về và cũng ko ngắt đc forEach
 arr.forEach(console.log);

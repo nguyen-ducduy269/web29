@@ -154,4 +154,85 @@ function shuffle(arr) {}
  *
  * @return {student[]}
  */
-function fullname(students) {}
+const students = [
+  {
+    id: 1,
+    firstname: "Duy",
+    lastname: "Nguyen",
+    gender: "X",
+    point: 7,
+  },
+
+  {
+    id: 2,
+    firstname: "Hieu",
+    lastname: "Nguyen",
+    gender: "L",
+    point: 4,
+  },
+
+  {
+    id: 3,
+    firstname: "Manh",
+    lastname: "Nguyen",
+    gender: "E",
+    point: 8,
+  },
+];
+function mapFullName(student) {
+  return {
+    id: student.id,
+    fullname: student.firstname.concat(" ", student.lastname),
+    gender: student.gender,
+    point: student.point,
+  };
+}
+const studentWithFullName = students.map(mapFullName);
+console.log(studentWithFullName);
+
+// sắp xếp theo điểm giảm dần
+function pointFall(student1, student2) {
+  return student1.point - student2.point;
+}
+students.sort(pointFall).reverse();
+console.log(students);
+//
+students.sort(function (a, b) {
+  return a.point - b.point;
+});
+// sắp xếp theo độ dài full name
+function compareByFullName(student1, student2) {
+  return (
+    student1.firstname.concat(" ", student1.lastname).length -
+    student2.firstname.concat(" ", student2.lastname).length
+  );
+}
+students.sort(compareByFullName);
+console.log(students);
+//
+students.sort(function (a, b) {
+  return (
+    a.firstname.concat(" ", a.lastname).length -
+    b.firstname.concat(" ", b.lastname).length
+  );
+});
+// lọc ra các học sinh có điểm từ 5 đến 8
+function compareByPoint(student) {
+  return student.point >= 5 && student.point <= 8;
+}
+//let studentsGood = students.filter(compareByPoint);
+const studentsGood = students.filter(function (a) {
+  return a.point >= 5 && a.point <= 8;
+});
+console.log(studentsGood);
+
+// tính điểm trung bình của các học viên
+function sumPoint(total, student) {
+  return total + student.point;
+}
+//const total = students.reduce(sumPoint, 0);
+const total = students.reduce(function (sum, student) {
+  return sum + student.point;
+}, 0);
+const avg = total / students.length;
+console.log(avg);
