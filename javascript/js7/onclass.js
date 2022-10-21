@@ -58,7 +58,7 @@ console.log(text.childNodes);
 //Element : tất cả những node là thẻ HTMl(nodeType = 1)
 const body1 = document.body;
 console.log(body1.attributes);
-console.log(body1.attributes.lang.value);
+// console.log(body1.attributes.lang.value);
 console.log(body1.children);
 console.log(body.innerHTML);
 console.log(body.innerText);
@@ -128,21 +128,21 @@ for (let element of children) {
 // Btap bảng
 // tìm ra thẻ body
 const table = document.body.firstElementChild; // HTMLCollection [a, form, img, script]
-const tbody = table.tBodies[0];
-// lấy ra các rows
-const rows = tbody.rows;
-//duyệt qua các rows
-for (let row of rows) {
-  const rowIndex = row.rowIndex;
-  //lấy qua các cells tương ứng
-  const cells = row.cells;
-  // lấy ra cells tương ứng với rowIndex
-  const cell = cells[rowIndex];
-  //thay đổi style el.style.backgroundColor = "red"
-  cell.style.backgroundColor = "red";
-}
-// Rút gọn
-// const rows = document.body.firstElementChild.tBodies[0].rows;
+// const tbody = table.tBodies[0];
+// // lấy ra các rows
+// const rows = tbody.rows;
+// //duyệt qua các rows
 // for (let row of rows) {
-//  row.cells[row.rowIndex].style.backgroundColor = "red";
+//   const rowIndex = row.rowIndex;
+//   //lấy qua các cells tương ứng
+//   const cells = row.cells;
+//   // lấy ra cells tương ứng với rowIndex
+//   const cell = cells[rowIndex];
+//   //thay đổi style el.style.backgroundColor = "red"
+//   cell.style.backgroundColor = "red";
 // }
+// Rút gọn
+const rows = document.body.firstElementChild.tBodies[0].rows;
+for (let row of rows) {
+  row.cells[row.rowIndex].style.backgroundColor = "red";
+}
