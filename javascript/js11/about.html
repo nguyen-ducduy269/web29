@@ -11,9 +11,9 @@
     <div class="leadding">
       <h1>Todo App</h1>
 
-      <form action="">
+      <form action="" name="created">
         <div class="input-group">
-          <input type="text" />
+          <input type="text" name="title"/>
           <button class="btn-add">Thêm công việc mới</button>
         </div>
 
@@ -52,11 +52,12 @@
           </div>
         </div>
 
-        <div class="summary">
-          <div class="pending">Có 2 công việc cần làm</div>
+        <div class="summary is-empty">
+          <div class="pending">Có <strong class="pending-value">2</strong> công việc cần làm</div>
 
           <button class="btn-clear">Xóa hết</button>
         </div>
+        <div class="empty">Không có bất kì công việc nào</div>
       </ul>
     </div>
     <script src="online.js"></script>

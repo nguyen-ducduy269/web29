@@ -1,7 +1,9 @@
-// hiển thị danh sách công việc, số lượng công việc cần hoàn thành
-// thêm mới 1 công việc cần làm thông qua nhập vào form
-// đánh dấu 1 công việc hoàn thành, xóa 1 công việc và xóa tất cả công việc
-// lọc theo trạng thái
+const todoList = document.querySelector(".todo-list");
+const container = document.querySelector(".todos");
+const pending = document.querySelector(".pending-value");
+const createForm = document.forms.create;
+const filterForm = document.forms.filter;
+const btnClear = document.querySelector(".btn-clear");
 function createId() {
   let id = Math.floor(Math.random() * 10000);
   return id;
@@ -23,70 +25,114 @@ let todos = [
     status: true,
   },
 ];
-const todo_list = document.querySelector(".todo-list");
-function createTodoItem(str) {
-  todo_list.innerHTML = "";
-
-  if (str.length == 0) {
-    todo_list.innerHTML =
-      '<p class="todos-empty">Không có công việc nào trong danh sách</p>';
-    return;
-  }
-
-  for (let i = 0; i < str.length; i++) {
-    const a = str[i];
-    todo_list.innerHTML += `
-            <div class="todo-item ${a.status ? "active-todo" : ""}">
-                <div class="todo-item-title">
-                    <input type="checkbox" ${
-                      a.status ? "checked" : ""
-                    } onclick="toggleStatus(${a.id})">
-                    <p>${a.title}</p>
-                </div>
-                <div class="option">
-                    <button class="btn btn-update">
-                        <img src="./img/pencil.svg" alt="icon">
-                    </button>
-                    <button class="btn btn-delete" onclick="deleteTodo(${
-                      a.id
-                    })">
-                        <img src="./img/remove.svg" alt="icon">
-                    </button>
-                </div>
-            </div>
-        `;
-  }
-}
-const btn_add = document.querySelector(".btn-add");
-btn_add.addEventListener("click", function () {
-  let todoTt = todo_input.value;
-  if (todoTt == "") {
-    alert("Nội dung không được để trống");
-    return;
-  }
-  let newTodo = {
-    id: createId(),
-    title: todoTt,
-    status: false,
-  };
-  todos.push(newTodo);
-  createTodoItem(todos);
-  todo_input.value = "";
-});
-
-function toggleTodo(id) {
-  for (let i = 0; i < todos.length; i++) {
-    if (todos[i].id == id) {
-      todos[i].status = !todos[i].status;
-    }
-  }
-  createTodoItem(todos);
-}
 function deleteTodo(id) {
-  for (let i = 0; i < todos.length; i++) {
-    if (todos[i].id == id) {
-      todos.splice(i, 1);
-    }
+  if (confirm("Xóa todo?")) {
+    const index = todos.findIndex(function (todo) {
+      return todo.id === id;
+    });
+
+    todos.splice(index, 1);
+    el.remove();
+    updateSummary();
+    save();
   }
-  createTodoItem(todos);
 }
+
+function createTodoItem(todo) {
+  const div = document.createElement("div");
+  div.className = todo.status ? "todo-item completed" : "todo-item";
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = todo.status;
+
+  const title = document.createElement("span");
+  title.className = "todo-title";
+  title.innerText = todo.title;
+
+  const button = document.createElement("button");
+  button.innerText = "Xóa";
+  button.onclick = function () {
+    deleteTodo(todo.id, div);
+  };
+
+  div.append(checkbox, title, button);
+
+  return div;
+}
+
+function updateSummary() {
+  if (todos.length > 0) {
+    container.classList.remove("is-empty");
+    pending.innerText = todos.length;
+  } else {
+    container.classList.add("is-empty");
+  }
+}
+
+function renderTodosList() {
+  todos.forEach(function (todo) {
+    const item = createTodoItem(todo);
+    todoList.prepend(item);
+  });
+}
+
+function handleCreateFormSubmit(e) {
+  e.preventDefault();
+  const title = e.target.elements.title;
+  if (title.value.trim().length > 0) {
+    const newItem = {
+      id: createId,
+      title: title.value.trim(),
+      status: false,
+    };
+    todos.push(newItem);
+    const item = createTodoItem(newItem);
+    todoList.prepend(item);
+    title.value = "";
+    updateSummary();
+    save();
+  }
+}
+function clear() {
+  if (confirm("Xóa tất cả?")) {
+    todos.length = 0;
+    todoList.innerHTML = "";
+    updateSummary();
+    save();
+  }
+}
+function handleFilterChange(e) {
+  const option = filterForm.elements.filter.value;
+  switch (option) {
+    case "active":
+      items.forEach(function (item) {
+        if (!item.classList.contains("completed")) {
+          item.classList.add("hide");
+        } else {
+          item.classList.remove("hiden");
+        }
+      });
+      break;
+
+    case "completed":
+      items.forEach(function (item) {
+        if (item.classList.contains("completed")) {
+          item.classList.remove("hiden");
+        }
+      });
+  }
+}
+
+function save() {
+  const str = JSON.stringify(todos);
+  localStorage.setItem("todos", str);
+}
+window.onload = function () {
+  renderTodosList();
+  updateSummary();
+  createForm.onsubmit = handleCreateFormSubmit();
+  filterForm.onchange = handleFilterChange;
+  btnClear.onclick = clear;
+};
+
