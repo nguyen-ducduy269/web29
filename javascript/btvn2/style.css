@@ -5,7 +5,7 @@
 }
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -16,7 +16,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(https://1.bp.blogspot.com/-degdTvzm4So/Xp3-Njf73UI/AAAAAAAABPw/Aru7FhevkpYxNYNItJdB0T7dF6OPm2TJQCLcBGAsYHQ/s1600/clock.png);
   background-size: cover;
   border: 10px solid white;
 }
@@ -60,18 +59,18 @@ body {
 .hr:before {
   content: "";
   position: absolute;
-  width: 8px;
+  width: 4px;
   height: 80px;
-  background: red;
+  background: black;
   z-index: 10;
   border-radius: 6px 6px 0 0;
 }
 .mn:before {
   content: "";
   position: absolute;
-  width: 4px;
+  width: 3px;
   height: 100px;
-  background: white;
+  background: black;
   z-index: 11;
   border-radius: 6px 6px 0 0;
 }
@@ -80,7 +79,7 @@ body {
   position: absolute;
   width: 2px;
   height: 150px;
-  background: white;
+  background: red;
   z-index: 12;
   border-radius: 6px 6px 0 0;
 }

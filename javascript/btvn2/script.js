@@ -14,16 +14,23 @@ setInterval(() => {
 });
 
 function dongHo() {
-  const today = new Date();
+  let today = new Date();
   const gio = today.getHours();
   const phut = today.getMinutes();
   const giay = today.getSeconds();
+  let thoigian = "";
 
   if (gio < 10) gio = "0" + gio;
-  if (phut < 10) gio = "0" + phut;
-  if (giay < 10) gio = "0" + giay;
+  if (phut < 10) phut = "0" + phut;
+  if (giay < 10) giay = "0" + giay;
+  if (gio <= 12) {
+    thoigian = "AM";
+  } else {
+    thoigian = "PM";
+  }
   document.getElementById("time").innerHTML =
-    "Bây giờ là: " + gio + ":" + phut + ":" + giay;
+    gio + ":" + phut + ":" + giay + " " + thoigian;
   setTimeout("dongHo()", 1000);
 }
-dongHo();
+console.log(dongHo());
+
