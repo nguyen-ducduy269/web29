@@ -15,6 +15,9 @@ setInterval(() => {
 
 function dongHo() {
   let today = new Date();
+  const thang = today.getMonth() + 1;
+  const ngay = today.getDate();
+  const thu = today.getDay();
   const gio = today.getHours();
   const phut = today.getMinutes();
   const giay = today.getSeconds();
@@ -31,6 +34,7 @@ function dongHo() {
   document.getElementById("time").innerHTML =
     gio + ":" + phut + ":" + giay + " " + thoigian;
   setTimeout("dongHo()", 1000);
+  document.getElementById("intime").innerHTML =
+    "Thứ " + thu + "," + " tháng " + thang + " ngày " + ngay;
 }
 console.log(dongHo());
-

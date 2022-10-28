@@ -5,10 +5,19 @@
 }
 body {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+button {
+  width: 80px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
+  margin-bottom: 100px;
 }
 .clock {
   width: 350px;
@@ -86,4 +95,9 @@ body {
 #time {
   font-size: 35px;
   font-family: "Times New Roman", Times, serif;
+}
+#intime {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.5;
 }
