@@ -17,6 +17,7 @@
 .tab-cart {
   width: 1290px;
   height: 356px;
+  padding-left: 20px;
 }
 .row {
   margin-left: 0;
@@ -54,7 +55,10 @@ h5 {
 .cart-item-detail {
   display: flex;
 }
-
+.counter-value {
+  width: 63px;
+  height: 21px;
+}
 .course-img {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -147,6 +151,7 @@ img {
   font-size: larger;
 }
 .btn-blue {
+  cursor: pointer;
   width: 293px;
   height: 38px;
   border-radius: 4px;
