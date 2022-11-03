@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: aqua;
+}
+
+.btn-add{
+  background-color: rgb(104, 230, 104);
+  width: 200px;
+  height: 50px;
+}
