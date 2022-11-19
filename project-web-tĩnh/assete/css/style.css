@@ -228,9 +228,3 @@ body .container {
 .menu-item:hover .sub-sub-menu {
   display: flex;
 }
-
-.sub-sub-item:hover .sub-sub-items {
-  background-color: black;
-  color: white;
-  border-radius: 100%;
-}
