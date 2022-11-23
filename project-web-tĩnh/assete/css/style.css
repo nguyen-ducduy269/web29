@@ -430,8 +430,142 @@ h2 .btn-title {
 }
 .limit-time .owl-nav button {
   width: 50px;
-  height: 50px;
+  height: 70px;
   position: relative;
   z-index: 99;
   top: -300px;
+}
+
+#limit-time .owl-prev {
+  font-size: 50px;
+  background-color: #00000042;
+  color: white;
+}
+
+#limit-time .owl-next {
+  font-size: 50px;
+  background-color: #00000042;
+  color: white;
+}
+
+/* Weekly Deals */
+.weekly-deal .wrap-tilte {
+  margin-bottom: 20px;
+}
+.item-weekly-deals {
+  height: 500px;
+  width: 100%;
+  background-color: blue;
+  margin-bottom: 30px;
+}
+.item-weekly {
+  height: 500px;
+  position: relative;
+  width: 100%;
+}
+.weekly-content {
+  background-color: rgba(240, 240, 240, 0.9);
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.img-weekly {
+  width: 70%;
+  position: absolute;
+  z-index: 1;
+}
+
+.img-weekly img {
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
+}
+.weekly {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.weekly-box {
+  height: 15px;
+  width: 200px;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.weekly-deal .button {
+  margin-top: 40px;
+  width: 200px;
+  height: 50px;
+  border: 1px solid red;
+  color: red;
+}
+
+.weekly-deal button:hover {
+  background-color: red;
+  color: white;
+}
+/* Sales and Events */
+.sales-and-events .wrap-tilte {
+  margin-bottom: 20px;
+}
+.sales-and-events .item {
+  height: 500px;
+  width: 100%;
+  background-color: red;
+}
+
+.sales-and-events .item-chil {
+  height: 235px;
+  width: 100%;
+  background-color: palegreen;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  height: 500px;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.footer .item {
+  height: 400px;
+  background-color: white;
+}
+
+/* Responsive */
+/* Kích thước màn hình: pc, laptop, tablet, mobile */
+/* Responsive:
+    + Desktop first: Kích thước màn hình từ to xuống nhỏ từ pc -> mobile
+    + Mobile first: Kích thước màn hình từ nhỏ lên to từ mobile -> pc
+ */
+
+/* Giao diện vừa làm là từ 1280px trở lên -> pc+ desktop*/
+@media screen and (max-width: 1279px) {
+  /* Giao diện tablet xoay ngang và tablet dọc */
+  .wrap-tilte h2 {
+    font-size: 14px;
+  }
+
+  .wrap-tilte .btn-title {
+    padding: 9px;
+  }
+}
+
+/* Giao diện từ  */
+@media screen and (max-width: 769px) {
+  /* Giao diện tablet */
+  /* style */
+}
+
+@media screen and (max-width: 480px) {
+  /* Giao diện mobile xoay ngang và dọc*/
+  /* style */
 }

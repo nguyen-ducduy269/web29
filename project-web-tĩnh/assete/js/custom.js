@@ -21,6 +21,16 @@ $("#banner").owlCarousel({
 
 //Limit Time Offer
 $("#limit-time").owlCarousel({
+  navText: [
+    // button nav
+    `<span aria-label= "Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </span>`,
+
+    `<span aria-label= "Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </span>`,
+  ],
   loop: true,
   margin: 10,
   nav: true,
