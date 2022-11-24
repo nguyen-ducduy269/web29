@@ -11,7 +11,6 @@
 }
 /* Header all */
 .header {
-  height: 200px;
   width: 100%;
 }
 .header-top {
@@ -656,6 +655,15 @@ h2 .btn-title {
   background-color: white;
 }
 
+.mobile-cart,
+.search-mobile,
+.open-btn,
+.logo-mobile {
+  display: none;
+}
+.wrap-menu-mobile p {
+  display: none;
+}
 /* Responsive */
 /* Kích thước màn hình: pc, laptop, tablet, mobile */
 /* Responsive:
@@ -664,24 +672,86 @@ h2 .btn-title {
  */
 
 /* Giao diện vừa làm là từ 1280px trở lên -> pc+ desktop*/
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1023px) {
   /* Giao diện tablet xoay ngang và tablet dọc */
-  .wrap-tilte h2 {
-    font-size: 14px;
+  .header-top {
+    justify-content: center;
   }
 
-  .wrap-tilte .btn-title {
-    padding: 9px;
+  .header-btn {
+    display: none;
   }
-}
 
-/* Giao diện từ  */
-@media screen and (max-width: 769px) {
-  /* Giao diện tablet */
-  /* style */
-}
+  .contact-header-left,
+  .logo,
+  .wrap-search,
+  .wrap-cart {
+    display: none;
+  }
 
-@media screen and (max-width: 480px) {
-  /* Giao diện mobile xoay ngang và dọc*/
-  /* style */
+  .wrap-menu-mobile p {
+    display: block;
+  }
+  .search-mobile,
+  .open-btn,
+  .logo-mobile {
+    display: block;
+  }
+  .mobile-cart {
+    display: block;
+    position: relative;
+  }
+  .mobile-cart span {
+    position: absolute;
+    top: -4px;
+    left: -6px;
+    background-color: red;
+    font-size: 13px;
+    width: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-mobile {
+    min-width: 250px;
+    position: relative;
+  }
+  .search-mobile input {
+    width: 98%;
+    position: absolute;
+    margin-left: 10px;
+    padding-left: 5px;
+    border: 1px solid rgba(194, 192, 192, 0.358);
+  }
+  .search-mobile i {
+    top: 6px;
+    position: absolute;
+    right: 35px;
+  }
+  .logo-mobile img {
+    width: 130px;
+    height: 100%;
+    padding-top: 20px;
+  }
+  .open-btn {
+    border: none;
+    margin-top: 10px;
+  }
+  .wrap-menu-mobile {
+    background-color: blue;
+    width: 70%;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    top: 0;
+    left: -70%;
+    transition: 1s;
+  }
+  .menu-mobile {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

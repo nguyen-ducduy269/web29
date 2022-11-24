@@ -49,3 +49,14 @@ $("#limit-time").owlCarousel({
     },
   },
 });
+
+// Xử lý menu mobile
+$(".open-btn").on("click", function () {
+  let x = $(".wrap-menu-mobile");
+  x.css("left", "0");
+});
+
+$(".close-btn").on("click", function () {
+  let x = $(".wrap-menu-mobile");
+  x.css("left", "-70%");
+});
