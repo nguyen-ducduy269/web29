@@ -704,19 +704,159 @@ h2 .btn-title {
 .pre-footer .border-item {
   border-right: 2px solid orange;
 }
+
+/* Contact */
+.contact .item {
+  height: 150px;
+}
+
+.contact .submit-text {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contact .submit {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  margin-left: 145px;
+}
+.contact .submit input {
+  height: 100%;
+  width: 292px;
+  line-height: 48px;
+  font-size: 14px;
+  padding-left: 20px;
+  margin-top: 4px;
+}
+
+.contact .submit button {
+  margin-right: 5px;
+  height: 100%;
+  margin-top: 4px;
+  width: 121px;
+  background-color: black;
+  color: white;
+}
+
+.contact .submit button:hover {
+  background-color: white;
+  color: black;
+}
+.contact .contact-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contact .contact-icon .icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  margin-left: 30px;
+}
+
+.contact .contact-icon .icon:hover {
+  background-color: #007aff;
+}
+.contact .contact-icon .icon i {
+  font-size: 30px;
+  padding-left: 9px;
+  padding-top: 8px;
+}
 /* Footer */
 .footer {
-  background-color: black;
-  height: 500px;
+  height: 400px;
   width: 100%;
   padding: 50px 0;
 }
 
-.footer .item {
-  height: 400px;
-  background-color: white;
+.footer .item .item-heading {
+  color: #161616;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 28px;
 }
 
+.footer .item ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .item .ul {
+  list-style: none;
+  display: block;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 15px;
+  color: #545454;
+  font-weight: 400;
+  padding: 0;
+}
+
+.footer .item ul a {
+  display: block;
+  font-size: 12px;
+  margin-top: 15px;
+  text-decoration: none;
+  line-height: 15px;
+  color: #545454;
+  font-weight: 400;
+  padding: 0;
+}
+
+.footer .item .item-ul {
+  margin-bottom: 28px;
+}
+
+.footer .item .col-ul {
+  width: 100%;
+  display: flex;
+}
+
+.footer .item .col-ul li {
+  padding-left: 10px;
+}
+
+/* Details */
+.details .item {
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.details .item-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.details .first-item {
+  width: 100%;
+  display: flex;
+}
+.details .first-item .item-one {
+  padding-left: 10px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.details .last-item {
+  width: 100%;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* Responsive cho màn 1023px trở lên */
 .mobile-cart,
 .search-mobile,
 .open-btn,
@@ -726,7 +866,7 @@ h2 .btn-title {
 .wrap-menu-mobile p {
   display: none;
 }
-/* Responsive */
+/* Responsive cho màn từ 1023px đến 678px*/
 /* Kích thước màn hình: pc, laptop, tablet, mobile */
 /* Responsive:
     + Desktop first: Kích thước màn hình từ to xuống nhỏ từ pc -> mobile
