@@ -36,7 +36,7 @@ $("#limit-time").owlCarousel({
   nav: true,
   dots: false,
   autoplay: true,
-  autoplayTimeout: 2000,
+  autoplayTimeout: 10000,
   responsive: {
     0: {
       items: 1,

@@ -286,6 +286,7 @@ body .container {
 
 .list-category-main .container .item {
   margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
 .feature-daily a {
@@ -333,14 +334,16 @@ body .container {
   justify-content: space-around;
   line-height: 50px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
 }
 
 .name-category .btn-category {
   width: 250px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  border: 1px solid black;
 }
 
 .name-category a {
@@ -348,12 +351,12 @@ body .container {
   color: black;
 }
 .btn-category:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 /* Feature Daily Deals */
 .feature-daily .container {
-  height: 750px;
+  height: 733px;
   background-color: #f3f4f6;
 }
 
@@ -381,11 +384,14 @@ h2 .btn-title {
 }
 
 .feature-daily .item {
-  height: 550px;
+  height: 500px;
   margin-top: 20px;
   background-color: white;
 }
 
+.feature-daily .item img {
+  width: 300px;
+}
 .feature-daily .row .item:hover {
   position: relative;
   animation: mymove 1s infinite;
@@ -417,6 +423,12 @@ h2 .btn-title {
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 110%;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .feature-daily-current a {
@@ -454,7 +466,7 @@ h2 .btn-title {
   height: 70px;
   position: relative;
   z-index: 99;
-  top: -300px;
+  top: -325px;
 }
 
 #limit-time .owl-prev {
@@ -860,7 +872,8 @@ h2 .btn-title {
 .mobile-cart,
 .search-mobile,
 .open-btn,
-.logo-mobile {
+.logo-mobile,
+.close-btn {
   display: none;
 }
 .wrap-menu-mobile p {
@@ -896,7 +909,8 @@ h2 .btn-title {
   }
   .search-mobile,
   .open-btn,
-  .logo-mobile {
+  .logo-mobile,
+  .close-btn {
     display: block;
   }
   .mobile-cart {
