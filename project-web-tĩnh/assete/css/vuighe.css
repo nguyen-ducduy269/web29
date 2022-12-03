@@ -77,9 +77,156 @@
   height: 40px;
   line-height: 38px;
   margin-right: 10px;
-  margin-top: 5px;
+  margin-top: 7px;
   padding-top: 1px;
   position: relative;
   text-align: center;
   width: 40px;
+}
+
+.header {
+  display: block;
+}
+
+.wrap-menu-mobile .menu-mobile {
+  display: none;
+}
+.open-btn,
+.close-btn {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  /* Header */
+  .header ul,
+  .search-item {
+    display: none;
+  }
+
+  .header {
+    position: relative;
+  }
+  .header .item .icon-item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .headding {
+    width: 100px;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+  }
+  .wrap-menu-mobile .menu-mobile {
+    display: block;
+  }
+  .open-btn,
+  .close-btn {
+    display: block;
+  }
+  .open-btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: white;
+  }
+
+  .close-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    background-color: white;
+  }
+  /* Menu */
+  .wrap-menu-mobile {
+    height: 550px;
+    width: 250px;
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -448px;
+    transition: 1s;
+  }
+  .menu-mobile {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap-menu {
+    font-size: 14px;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+  }
+
+  .wrap-menu a {
+    text-decoration: none;
+    color: black;
+  }
+  .wrap-menu-mobile .menu-mobile img {
+    width: 180px;
+    height: 55px;
+    padding-left: 20px;
+  }
+
+  .menu-details {
+    width: 100%;
+    margin-left: 22px;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .menu-details i {
+    padding-top: 12px;
+    margin-right: 20px;
+  }
+
+  .menu-details .wrap-menu {
+    font-size: 20px;
+    font-family: vuighe !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    text-transform: none;
+  }
+  /* Search */
+  .menu-mobile .search-items {
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 17px;
+  }
+
+  .menu-mobile .search-items input {
+    border: 1px solid #ddd;
+    display: block;
+    font-size: 13px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 30px;
+    margin-top: 10px;
+    width: 90%;
+  }
+
+  .menu-mobile .search-items i {
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 27px;
+    text-align: center;
+    top: 6px;
+    width: 20px;
+  }
 }
