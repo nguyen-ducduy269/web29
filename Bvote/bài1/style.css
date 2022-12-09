@@ -90,6 +90,7 @@ body {
   list-style: none;
   color: black;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .top-description {
@@ -1354,6 +1355,6 @@ h2 {
     height: 3310px;
   }
   .layer {
-    margin-top: 30%;
+    margin-top: 45%;
   }
 }
