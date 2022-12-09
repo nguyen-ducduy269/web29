@@ -12,17 +12,18 @@ $(".close-btn").on("click", function () {
 $(".owl-carousel").owlCarousel({
   navText: [
     // button nav
-    `<span aria-label= "Previous">
+    `<span class="owl-prev">
         <i class="fa-solid fa-chevron-left"></i>
       </span>`,
 
-    `<span aria-label= "Next">
+    `<span class="owl-next">
         <i class="fa-solid fa-chevron-right"></i>
       </span>`,
   ],
   loop: true,
   margin: 10,
   nav: true,
+  dots: false,
   autoplay: true,
   autoplayTimeout: 10000,
   responsive: {
@@ -33,7 +34,7 @@ $(".owl-carousel").owlCarousel({
       items: 3,
     },
     1000: {
-      items: 5,
+      items: 6,
     },
   },
 });
