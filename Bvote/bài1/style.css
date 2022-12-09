@@ -1093,14 +1093,14 @@ h2 {
   }
   .wrap-menu-mobile {
     height: 700px;
-    width: 250%;
+    width: 350%;
     background-color: white;
     position: absolute;
     z-index: 999;
     top: 0;
     right: 0;
     bottom: 0;
-    left: -250%;
+    left: -350%;
     transition: 1s;
   }
   .menu-mobile {
@@ -1270,4 +1270,76 @@ h2 {
 }
 
 @media screen and (max-width: 576px) {
+  .heading {
+    height: 150px;
+  }
+  .open-btn {
+    width: 150px;
+    height: 150px;
+    border: none;
+  }
+  .open-btn i {
+    font-size: 65px;
+  }
+  .close-btn i {
+    font-size: 70px;
+  }
+  .wrap-menu {
+    padding-top: 80px;
+  }
+  .wrap-menu-mobile {
+    height: 780px;
+    width: 350%;
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -350%;
+    transition: 1s;
+  }
+  .wrap-menu a {
+    font-size: 32px;
+  }
+  .heading-two {
+    width: 100%;
+    max-height: 100px;
+    display: block;
+    color: black;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .heading-two div {
+    font-size: 40px;
+  }
+  .heading-two i {
+    width: 30%;
+    height: 100%;
+    font-weight: 600;
+    font-size: 45px;
+    padding-left: 15px;
+  }
+  .container .cart-two .box button {
+    position: absolute;
+    margin-top: -435px;
+    margin-left: 265px;
+    width: 370px;
+    height: 120px;
+    border-radius: 50px;
+    border-style: none;
+    font-size: 45px;
+    letter-spacing: 2px;
+    background-image: linear-gradient(yellow, orange);
+    color: white;
+  }
+  .container .cart-two .cart-thumbnail {
+    bottom: 0;
+  }
+  .bottom {
+    height: 3310px;
+  }
+  .layer {
+    margin-top: 30%;
+  }
 }

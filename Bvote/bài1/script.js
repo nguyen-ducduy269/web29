@@ -5,7 +5,7 @@ $(".open-btn").on("click", function () {
 });
 
 $(".close-btn").on("click", function () {
-  x.css("left", "-250%");
+  x.css("left", "-350%");
 });
 
 // Owlcarousel
