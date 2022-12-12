@@ -44,7 +44,7 @@ $("#second-banner").owlCarousel({
   nav: false,
   dots: false,
   autoplay: true,
-  autoplayTimeout: 5000,
+  autoplayTimeout: 8000,
   responsive: {
     0: {
       items: 1,
