@@ -9,7 +9,7 @@ $(".close-btn").on("click", function () {
 });
 
 // Owlcarousel
-$("#middle-image").owlCarousel({
+$("#activity-image").owlCarousel({
   loop: true,
   margin: 10,
   nav: false,
