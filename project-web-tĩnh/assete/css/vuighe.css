@@ -96,7 +96,34 @@
 .header .item .search-item {
   position: relative;
 }
+.subnav .subnav-content .item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+}
 
+.subnav .subnav-content .item img {
+  width: 150px;
+  height: 90px;
+  transition: width 0.1s, height 0.1s;
+}
+.subnav .subnav-content .item img:hover {
+  width: 155px;
+  height: 95px;
+}
+.subnav .subnav-content .item span {
+  position: absolute;
+  bottom: -38px;
+  font-size: 13px;
+  color: white;
+  width: 150px;
+}
+
+.subnav .subnav-content .item span:hover {
+  color: red;
+}
 .header .item .search-item input {
   border: 1px solid #ddd;
   border-radius: 16px;
