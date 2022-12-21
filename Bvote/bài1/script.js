@@ -29,7 +29,7 @@ $("#activity-image").owlCarousel({
   },
 });
 
-$("#layer").owlCarousel({
+$("#banner").owlCarousel({
   navText: [
     // button nav
     `<span class="owl-prev">
