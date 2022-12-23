@@ -252,6 +252,10 @@
 .top .row .new-item {
   display: flex;
   margin-top: 10px;
+  padding: 12px 11px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
 }
 .top .row a {
   text-decoration: none;
@@ -262,11 +266,14 @@
   margin: 12px 11px;
 }
 .top .row .new-item span {
-  margin-top: 6px;
   color: #fff;
   font-weight: 400;
   max-height: 60px;
   font-size: 14px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .header {
