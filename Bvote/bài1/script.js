@@ -14,8 +14,8 @@ $("#activity-image").owlCarousel({
   margin: 10,
   nav: false,
   dots: false,
-  autoplay: true,
-  autoplayTimeout: 10000,
+  // autoplay: true,
+  // autoplayTimeout: 10000,
   responsive: {
     0: {
       items: 1,
@@ -44,8 +44,8 @@ $("#banner").owlCarousel({
   margin: 10,
   nav: true,
   dots: false,
-  autoplay: true,
-  autoplayTimeout: 10000,
+  // autoplay: true,
+  // autoplayTimeout: 10000,
   responsive: {
     0: {
       items: 1,
