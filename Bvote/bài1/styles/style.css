@@ -304,7 +304,10 @@ h3 {
   position: relative;
   margin-bottom: 110px;
 }
-
+#activity-image .item {
+  width: 100%;
+  margin: 0 auto;
+}
 .activity::before {
   content: "";
   position: absolute;
@@ -411,8 +414,7 @@ table .top-table {
 #activity-image {
   width: 1270px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: block;
 }
 #activity-image .owl-carousel .owl-nav.disabled {
   display: none;
@@ -892,7 +894,7 @@ table .top-table {
     transform: translateY(-115px);
   }
   .activity .activity-icon {
-    bottom: 25%;
+    bottom: 20%;
   }
   #activity-image {
     width: 100%;
@@ -1051,5 +1053,105 @@ table .top-table {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* width: 100%; */
+  .bs-container {
+    width: 100%;
+  }
+  /* top */
+  .top-description {
+    height: 97px;
+  }
+  .top-des {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .top-description .top-ul {
+    display: none;
+  }
+  .top-decord {
+    display: none;
+  }
+  .top-navigation::after {
+    bottom: -8px;
+    height: 65px;
+  }
+  /* about */
+  .box .p {
+    font-size: 22px;
+  }
+  .about .box button {
+    transform: translate(190%, 76%);
+  }
+  /* activity */
+  .activity {
+    margin-top: 88%;
+    margin-bottom: 130px;
+  }
+  .activity .title .h1 {
+    transform: translate(54%, 73px);
+    font-size: 32px;
+    color: white;
+  }
+  .activity table {
+    transform: translateY(-11px);
+  }
+  .activity .activity-line {
+    position: absolute;
+    display: flex;
+    top: 10%;
+    width: 40%;
+    transform: translateX(79%);
+  }
+  .activity::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 74px;
+    background: black;
+    opacity: 0.3;
+    clip-path: polygon(0% 0%, 0% 40%, 50% 100%, 100% 40%, 100% 0%, 50% 59%);
+    transform: rotate(180deg);
+  }
+  .activity .activity-icon {
+    bottom: 0;
+  }
+  .activity .activity-icon {
+    bottom: 9%;
+  }
+  .activity .activity-icon .icon {
+    width: 50px;
+    height: 50px;
+  }
+  #activity-image {
+    margin-top: 0;
+    width: unset;
+  }
+  /* about */
+  table .top-table {
+    border-top: 4px solid yellow;
+    border-bottom: 2px solid black;
+  }
+  /* candidates-list */
+  .candidates-list {
+    height: 3070px;
+    margin-bottom: 17%;
+  }
+  /* banner */
+  .owl-theme .owl-nav [class*="owl-"]:hover {
+    background: #86979163;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .owl-theme .owl-nav [class*="owl-"] {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 11px;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+  }
 }
