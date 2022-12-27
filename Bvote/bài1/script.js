@@ -1,13 +1,3 @@
-// MObile heading
-let x = $(".wrap-menu-mobile");
-$(".open-btn").on("click", function () {
-  x.css("left", "0");
-});
-
-$(".close-btn").on("click", function () {
-  x.css("left", "-350%");
-});
-
 // Owlcarousel
 $("#activity-image").owlCarousel({
   loop: true,
@@ -47,13 +37,19 @@ $("#banner").owlCarousel({
   // autoplay: true,
   // autoplayTimeout: 10000,
   responsive: {
-    0: {
-      items: 1,
-    },
-    991: {
+    767: {
       items: 4,
     },
-    1000: {
+    991: {
+      items: 5,
+    },
+    1199: {
+      items: 5,
+    },
+    1350: {
+      items: 6,
+    },
+    1496: {
       items: 6,
     },
   },

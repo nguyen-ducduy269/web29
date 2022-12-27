@@ -673,6 +673,9 @@ table .top-table {
 }
 
 @media only screen and (max-width: 1350px) {
+  .bs-container {
+    width: 1170px;
+  }
   .heading {
     max-width: 100%;
   }
@@ -696,7 +699,7 @@ table .top-table {
   }
   .cart-thumbnail img {
     margin-top: -50px;
-    margin-left: -10px;
+    margin-left: -12px;
     max-width: none;
     height: unset;
   }
@@ -726,15 +729,25 @@ table .top-table {
   .banner {
     width: 100%;
   }
+  #banner {
+    width: 1020px;
+  }
+  .banner .owl-carousel .owl-nav.disabled {
+    width: 1150px;
+  }
   /* footer */
   .footer .footer-img img {
     width: 100%;
+  }
+  .footer::before {
+    clip-path: polygon(0% 0%, 0% 40%, 50% 100%, 100% 40%, 100% 0%, 50% 78%);
+    transform: rotate(180deg);
   }
 }
 
 @media only screen and (max-width: 1199px) {
   .bs-container {
-    width: 750px;
+    width: 970px;
   }
   /* TOP */
   .top-description {
@@ -835,7 +848,7 @@ table .top-table {
   .cart-thumbnail img {
     width: 582px;
     margin-top: -25px;
-    margin-left: 0;
+    margin-left: 18px;
   }
   .about .box button {
     width: 163px;
@@ -852,6 +865,9 @@ table .top-table {
   /* candidate list */
   .candidates-list {
     height: 2170px;
+  }
+  .candidates-list .text {
+    width: 100%;
   }
   /* activity */
   .activity .activity-line {
@@ -870,9 +886,19 @@ table .top-table {
   .activity::before {
     clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 78%);
   }
+  /* banner */
+  #banner {
+    width: 850px;
+    margin: 0 auto;
+  }
+  .banner .owl-carousel .owl-nav.disabled {
+    width: 975px;
+  }
 }
 @media only screen and (max-width: 991px) {
-  /* width: 750px; */
+  .bs-container {
+    width: 750px;
+  }
 }
 @media only screen and (max-width: 767px) {
   /* width: 100%; */
