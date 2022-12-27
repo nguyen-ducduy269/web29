@@ -7,13 +7,13 @@ $("#activity-image").owlCarousel({
   // autoplay: true,
   // autoplayTimeout: 10000,
   responsive: {
-    991: {
+    767: {
       items: 1,
     },
-    600: {
+    991: {
       items: 2,
     },
-    1000: {
+    1350: {
       items: 2,
     },
   },
