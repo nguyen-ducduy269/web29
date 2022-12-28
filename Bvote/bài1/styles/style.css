@@ -381,12 +381,12 @@ table .top-table {
 }
 
 .activity .activity-icon {
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   position: absolute;
-  bottom: 27%;
+  bottom: 24%;
 }
 
 .activity .activity-icon .icon {
@@ -412,7 +412,6 @@ table .top-table {
 
 /* activity-image */
 #activity-image {
-  width: 1270px;
   margin: 0 auto;
   display: block;
 }
@@ -725,6 +724,9 @@ table .top-table {
   .activity img {
     width: 100%;
   }
+  .activity .activity-icon {
+    width: 84%;
+  }
   /* candidate list */
   .candidates-list {
     margin-top: 8%;
@@ -895,6 +897,7 @@ table .top-table {
   }
   .activity .activity-icon {
     bottom: 20%;
+    width: 78%;
   }
   #activity-image {
     width: 100%;
@@ -1006,7 +1009,7 @@ table .top-table {
     line-height: 80px;
   }
   .activity .activity-icon {
-    bottom: 20%;
+    bottom: 16%;
   }
   #activity-image {
     width: 50%;
@@ -1118,14 +1121,15 @@ table .top-table {
     bottom: 0;
   }
   .activity .activity-icon {
-    bottom: 9%;
+    width: 100%;
+    bottom: 26%;
   }
   .activity .activity-icon .icon {
     width: 50px;
     height: 50px;
   }
   #activity-image {
-    margin-top: 0;
+    margin-top: 10%;
     width: unset;
   }
   /* about */
@@ -1139,6 +1143,14 @@ table .top-table {
     margin-bottom: 17%;
   }
   /* banner */
+  #banner {
+    width: 530px;
+    margin: 0 auto;
+  }
+  .banner .owl-carousel .owl-nav.disabled {
+    width: 640px;
+    left: -55px;
+  }
   .owl-theme .owl-nav [class*="owl-"]:hover {
     background: #86979163;
     color: #fff;
@@ -1153,5 +1165,24 @@ table .top-table {
     display: inline-block;
     cursor: pointer;
     border-radius: 3px;
+  }
+  /* footer */
+  .footer .footer-details img {
+    width: 35%;
+    padding-bottom: 17px;
+    padding-top: 73px;
+  }
+
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: -21px;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: black;
+    opacity: 0.3;
+    clip-path: polygon(0% 0%, 0% 35%, 50% 100%, 100% 36%, 100% 0%, 50% 58%);
+    transform: rotate(180deg);
   }
 }

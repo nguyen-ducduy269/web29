@@ -8,7 +8,7 @@ $("#activity-image").owlCarousel({
   // autoplayTimeout: 10000,
   responsive: {
     767: {
-      items: 2,
+      items: 1,
     },
     991: {
       items: 2,
@@ -37,6 +37,9 @@ $("#banner").owlCarousel({
   // autoplay: true,
   // autoplayTimeout: 10000,
   responsive: {
+    365: {
+      items: 3,
+    },
     767: {
       items: 4,
     },
