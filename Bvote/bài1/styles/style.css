@@ -1202,6 +1202,7 @@ table .top-table {
     width: 100px;
     height: 50px;
     line-height: 50px;
+    padding-left: 20px;
   }
   .top-menu .menu a:hover {
     color: yellow;
@@ -1296,8 +1297,12 @@ table .top-table {
     margin: 0 auto;
   }
   .banner .owl-carousel .owl-nav.disabled {
-    width: 645px;
-    left: -55px;
+    position: absolute;
+    top: 110%;
+    left: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .owl-theme .owl-nav [class*="owl-"]:hover {
     background: #86979163;
