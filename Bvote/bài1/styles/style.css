@@ -750,6 +750,23 @@ table .top-table {
   .activity .activity-icon {
     width: 84%;
   }
+  .activity .title {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 16%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .activity .activity-line {
+    position: absolute;
+    display: flex;
+    top: 11%;
+    width: 50%;
+    transform: translateX(80%);
+  }
   /* candidate list */
   .candidates-list {
     margin-top: 8%;
@@ -805,11 +822,7 @@ table .top-table {
     line-height: 50px;
   }
   .top-decord {
-    display: flex;
-    color: white;
-    position: absolute;
-    top: 0;
-    transform: translate(27%, 419px);
+    display: none;
   }
   .top-navigation .top-decord .decord-logo img {
     width: 86%;
@@ -908,6 +921,7 @@ table .top-table {
   }
   /* candidate list */
   .candidates-list {
+    margin-top: 13%;
     height: 2170px;
   }
   .candidates-list .text {
@@ -922,7 +936,7 @@ table .top-table {
     transform: translateY(-87px);
   }
   .activity .activity-icon {
-    bottom: 20%;
+    bottom: 19%;
     width: 78%;
   }
   #activity-image {

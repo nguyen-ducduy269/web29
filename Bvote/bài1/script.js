@@ -15,6 +15,9 @@ $("#activity-image").owlCarousel({
   // autoplay: true,
   // autoplayTimeout: 10000,
   responsive: {
+    500: {
+      items: 1,
+    },
     767: {
       items: 1,
     },
