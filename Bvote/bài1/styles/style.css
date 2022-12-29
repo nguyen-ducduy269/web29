@@ -1481,10 +1481,10 @@ table .top-table {
   }
   .activity-td li {
     list-style: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     text-overflow: ellipsis;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
   }
   .activity .activity-icon {
     width: 100%;
@@ -1669,10 +1669,10 @@ table .top-table {
   }
   .activity-td li {
     list-style: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     text-overflow: ellipsis;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
   }
   .activity .activity-icon {
     width: 100%;
