@@ -48,6 +48,9 @@ $("#banner").owlCarousel({
   // autoplay: true,
   // autoplayTimeout: 10000,
   responsive: {
+    200: {
+      items: 1,
+    },
     365: {
       items: 3,
     },
