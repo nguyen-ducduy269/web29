@@ -1727,6 +1727,9 @@ table .top-table {
   .cart-detail {
     font-size: 14px;
   }
+  .activity table {
+    width: 100%;
+  }
   /* banner */
   #banner {
     width: 100%;
