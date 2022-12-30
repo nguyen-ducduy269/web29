@@ -1302,6 +1302,10 @@ table .top-table {
     margin-top: 10%;
     max-width: 100%;
   }
+  .activity-td td {
+    padding: 0px 5px 0px 5px;
+    white-space: nowrap;
+  }
   /* about */
   table .top-table {
     border-top: 4px solid yellow;
@@ -1574,6 +1578,7 @@ table .top-table {
 
 @media only screen and (max-width: 320px) {
   .bs-container {
+    /* width: 550px; */
     width: 100%;
   }
   /* TOP */
@@ -1702,10 +1707,15 @@ table .top-table {
   .activity-td td {
     width: 150px;
     white-space: nowrap;
+    padding: 0px 35px 0px 30px;
+  }
+  .top-table th {
+    font-size: 12px;
+    line-height: 0;
   }
   .activity .activity-icon {
     width: 100%;
-    bottom: -6%;
+    bottom: -7%;
   }
   #activity-image {
     display: none;
