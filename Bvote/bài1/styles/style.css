@@ -379,9 +379,6 @@ table .top-table {
   line-height: 78px;
   border-left: 5px solid transparent;
 }
-.activity-td li {
-  list-style: none;
-}
 
 .activity-td:hover {
   background-color: #f0ca9dcf;
@@ -450,6 +447,7 @@ table .top-table {
   width: 530px;
   margin: 0 auto;
   font-size: 47px;
+  text-align: center;
 }
 
 .candidates-list .activity-line {
@@ -1359,6 +1357,9 @@ table .top-table {
 }
 
 @media only screen and (max-width: 450px) {
+  .bs-container {
+    width: 100%;
+  }
   /* TOP */
   .top-navigation .top-img {
     padding-top: 57px;
@@ -1370,7 +1371,7 @@ table .top-table {
     bottom: -6px;
     left: 0;
     right: 0;
-    height: 37px;
+    height: 45px;
     background: black;
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 44%, 100% 0%, 50% 54%);
@@ -1479,22 +1480,32 @@ table .top-table {
     min-width: 100%;
     font-size: 10px;
   }
-  .activity-td li {
-    list-style: none;
-    /* overflow-x: hidden;
-    text-overflow: ellipsis;
-    display: flex;
-    flex-wrap: nowrap; */
+  .activity-td td {
+    width: 150px;
+    white-space: nowrap;
+  }
+  .activity-td td {
+    width: 150px;
+    white-space: nowrap;
   }
   .activity .activity-icon {
     width: 100%;
-    bottom: 15%;
+    bottom: 0%;
+  }
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #activity-image {
+    display: none;
   }
   /* candidate */
   .candid-title {
     width: 100%;
     margin: 0 auto;
     font-size: 29px;
+    text-align: center;
   }
   .candidates-list .sum-list {
     grid-template-columns: 1fr;
@@ -1506,9 +1517,8 @@ table .top-table {
     max-width: 100%;
   }
   /* banner */
-  #banner {
-    width: 100%;
-    margin: 0 auto;
+  .banner {
+    display: none;
   }
   /* footer */
   .footer .footer-img img {
@@ -1526,6 +1536,9 @@ table .top-table {
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 35%, 50% 100%, 100% 36%, 100% 0%, 50% 58%);
     transform: rotate(180deg);
+  }
+  .footer .footer-details {
+    max-width: 100%;
   }
   .footer .footer-details img {
     width: 28%;
@@ -1539,14 +1552,16 @@ table .top-table {
     background-image: linear-gradient(to right, black, yellow, black);
   }
   .footer .footer-details .detail {
-    width: 100%;
+    max-width: 100%;
     color: white;
     font-size: 10px;
     text-align: center;
   }
 }
-
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 320px) {
+  .bs-container {
+    width: 100%;
+  }
   /* TOP */
   .top-navigation .top-img {
     padding-top: 57px;
@@ -1617,7 +1632,7 @@ table .top-table {
   .activity {
     max-width: 100%;
     margin-top: 0%;
-    margin-bottom: 130px;
+    margin-bottom: 45%;
   }
   .activity::before {
     content: "";
@@ -1666,17 +1681,20 @@ table .top-table {
     box-shadow: -1px -1px 9px black, -1px -1px black;
     min-width: 100%;
     font-size: 10px;
+    overflow: auto;
+    display: block;
+    position: relative;
   }
-  .activity-td li {
-    list-style: none;
-    /* overflow-x: hidden;
-    text-overflow: ellipsis;
-    display: flex;
-    flex-wrap: nowrap; */
+  .activity-td td {
+    width: 150px;
+    white-space: nowrap;
   }
   .activity .activity-icon {
     width: 100%;
-    bottom: 15%;
+    bottom: -2%;
+  }
+  #activity-image {
+    display: none;
   }
   /* candidate */
   .candid-title {
@@ -1690,8 +1708,24 @@ table .top-table {
   }
   .candidates-list {
     height: 6000px;
-    margin-bottom: 36%;
     max-width: 100%;
+  }
+
+  .candidates-list .sum-list .item {
+    width: 200px;
+    height: 380px;
+  }
+  .cart-head img {
+    width: 100%;
+  }
+  .item .cart-head p {
+    width: 100%;
+  }
+  .item-img img {
+    width: 100%;
+  }
+  .cart-detail {
+    font-size: 14px;
   }
   /* banner */
   #banner {
@@ -1699,6 +1733,9 @@ table .top-table {
     margin: 0 auto;
   }
   /* footer */
+  .footer {
+    margin-top: 150px;
+  }
   .footer .footer-img img {
     max-width: 100%;
     height: 150px;
@@ -1714,6 +1751,9 @@ table .top-table {
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 35%, 50% 100%, 100% 36%, 100% 0%, 50% 58%);
     transform: rotate(180deg);
+  }
+  .footer .footer-details {
+    max-width: 100%;
   }
   .footer .footer-details img {
     width: 28%;
