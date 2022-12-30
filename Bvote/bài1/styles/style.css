@@ -1679,7 +1679,7 @@ table .top-table {
     margin: 0 auto;
     transform: translateY(-63px);
     box-shadow: -1px -1px 9px black, -1px -1px black;
-    min-width: 100%;
+    width: 100%;
     font-size: 10px;
     overflow: auto;
     display: block;
@@ -1696,6 +1696,9 @@ table .top-table {
   #activity-image {
     display: none;
   }
+  /* .activity table {
+    width: 100%;
+  } */
   /* candidate */
   .candid-title {
     width: 100%;
@@ -1726,9 +1729,6 @@ table .top-table {
   }
   .cart-detail {
     font-size: 14px;
-  }
-  .activity table {
-    width: 100%;
   }
   /* banner */
   #banner {
