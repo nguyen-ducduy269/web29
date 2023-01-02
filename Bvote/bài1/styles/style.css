@@ -376,6 +376,7 @@ table .top-table {
   background-color: white;
   line-height: 78px;
   border-left: 5px solid transparent;
+  text-align: center;
 }
 
 .activity-td:hover {
