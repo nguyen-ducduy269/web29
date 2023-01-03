@@ -13,6 +13,9 @@ $("#activity-image").owlCarousel({
   nav: false,
   dots: false,
   responsive: {
+    200: {
+      items: 1,
+    },
     500: {
       items: 1,
     },
@@ -43,8 +46,8 @@ $("#banner").owlCarousel({
   margin: 10,
   nav: true,
   dots: false,
-  autoplay: true,
-  autoplayTimeout: 10000,
+  // autoplay: true,
+  // autoplayTimeout: 10000,
   responsive: {
     200: {
       items: 1,
