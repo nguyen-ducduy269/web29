@@ -209,16 +209,18 @@ header .item i {
   letter-spacing: 2px;
   background-image: linear-gradient(yellow, orange);
   color: white;
+  font-weight: 600;
 }
 
 /* activity */
 .activity {
   position: relative;
+  height: 1446px;
 }
 .activity .content {
   width: 100%;
   position: absolute;
-  top: 30%;
+  top: 7%;
   text-align: center;
 }
 .activity .content h1 {
@@ -297,4 +299,129 @@ table .activity-td:hover {
 }
 .act-image .item img {
   height: 100%;
+}
+/* list */
+.list {
+  position: relative;
+  background-color: #7fffd42e;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.list h2 {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+.list-line {
+  width: 300px;
+  height: 15px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 30px;
+}
+.list-line .line {
+  width: 100%;
+  height: 2px;
+  background-color: yellow;
+  margin-top: 5px;
+}
+
+.list .text {
+  width: 63%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 100px;
+}
+
+.list .sum-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.cart-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cart-head img {
+  z-index: 1;
+}
+.list .item {
+  position: relative;
+  margin: 0 auto;
+  height: 420px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+.list p {
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 60px;
+  z-index: 1;
+}
+.sum-list .item-img {
+  position: absolute;
+  top: 43px;
+  padding-left: 10px;
+}
+.sum-list .item-detail {
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  height: 100px;
+  text-align: center;
+}
+.sum-list .item-detail .cart-detail {
+  font-weight: 600;
+}
+.sum-list .item-detail .list-button {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.fa-solid,
+.fas {
+  height: 18px;
+  font-weight: 900;
+}
+.fa-caret-up:before {
+  content: "\f0d8";
+  font-size: 30px;
+}
+.item-detail .list-button button {
+  width: 110px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+}
+.list::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -120px;
+  height: 120px;
+  background: #7fffd4bd;
+  opacity: 0.3;
+  clip-path: polygon(0% 0%, 0% 0%, 50.5% 100%, 100% 3%, 100% 0%, 50.5% 0%);
+  transform: rotate(180deg);
+}
+.list::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -120px;
+  height: 120px;
+  background: #7fffd4bd;
+  opacity: 0.3;
+  clip-path: polygon(0% 0%, 0% 0%, 50.5% 100%, 100% 3%, 100% 0%, 50.5% 0%);
 }

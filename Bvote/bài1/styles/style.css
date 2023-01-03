@@ -592,7 +592,11 @@ table .top-table {
   cursor: pointer;
   border-radius: 3px;
 }
-
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
+  color: #fff;
+  text-decoration: none;
+}
 /* footer */
 .footer {
   max-width: 100%;
