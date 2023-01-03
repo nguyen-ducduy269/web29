@@ -1374,7 +1374,7 @@ table .top-table {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   .bs-container {
     width: 100%;
   }
@@ -1577,7 +1577,7 @@ table .top-table {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 450px) {
   .bs-container {
     /* width: 550px; */
     width: 100%;
