@@ -129,9 +129,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.top-ul .subnav:hover {
-  border-bottom: 5px solid yellow;
-}
+
 .top-ul .subnav:hover > .a {
   color: yellow;
   border-bottom: 5px solid yellow;
@@ -266,8 +264,11 @@ h3 {
   letter-spacing: 3px;
   font-size: 13px;
 }
-
-.about .box button {
+.about .about-button {
+  width: 100%;
+  height: 100%;
+}
+.about .about-button button {
   width: 163px;
   height: 50px;
   border-radius: 50px;
@@ -361,6 +362,7 @@ h3 {
   box-shadow: -1px -1px 9px black, -1px -1px black;
   position: relative;
   z-index: 1;
+  border-collapse: collapse;
 }
 
 table .top-table {
@@ -419,7 +421,7 @@ table .top-table {
   margin: 0 auto;
   display: block;
   position: relative;
-  padding-top: 90px;
+  margin-top: 90px;
 }
 #activity-image .owl-carousel .owl-nav.disabled {
   display: none;
@@ -481,7 +483,7 @@ table .top-table {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 97px;
+  padding-top: 97px;
   gap: 40px;
 }
 
@@ -491,6 +493,7 @@ table .top-table {
   text-align: center;
   background-color: white;
   box-shadow: 4px 4px 18px #7fffd4, -1px -1px 18px #7fffd4;
+  margin: 0 auto;
 }
 .item .cart-head {
   position: relative;
@@ -593,6 +596,7 @@ table .top-table {
 /* footer */
 .footer {
   max-width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -808,17 +812,20 @@ table .top-table {
   }
   /* TOP */
   .top-description {
-    height: 150px;
+    height: 100px;
   }
   .top-des {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .top-description .top-ul {
     height: 50px;
     line-height: 50px;
+    margin-top: 28px;
+    padding-left: 50px;
+    gap: 26px;
   }
   .top-decord {
     display: none;
@@ -873,12 +880,19 @@ table .top-table {
   }
   /* about */
   .about {
-    height: 600px;
+    height: 455px;
+  }
+  .cart {
+    margin-top: 20px;
   }
   .box {
-    width: 38%;
+    width: 50%;
     margin-right: 10px;
     margin-top: 17px;
+    margin-left: 10px;
+  }
+  .box .p {
+    font-size: 16px;
   }
   .cart-thumbnail {
     width: 50%;
@@ -906,7 +920,11 @@ table .top-table {
     margin-top: -25px;
     margin-left: 18px;
   }
-  .about .box button {
+  .about .about-button {
+    width: 100%;
+    height: 40%;
+  }
+  .about .about-button button {
     width: 163px;
     height: 50px;
     border-radius: 50px;
@@ -952,7 +970,7 @@ table .top-table {
     width: 100%;
   }
   .activity::before {
-    clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 78%);
+    clip-path: polygon(0% 0%, 0% 50%, 50% 100%, 100% 50%, 100% 0%, 50% 78%);
   }
   /* banner */
   #banner {
@@ -973,6 +991,18 @@ table .top-table {
     margin-right: 60px;
   }
   /* top */
+  .top-description img {
+    width: 130px;
+    height: 50px;
+    margin-top: 25px;
+  }
+  .top-description .top-ul {
+    /* height: 50px; */
+    line-height: 50px;
+    margin-top: 28px;
+    padding-left: 50px;
+    gap: 26px;
+  }
   .top-decord {
     transform: translate(13%, 327px);
   }
@@ -1031,9 +1061,9 @@ table .top-table {
     color: black;
     text-decoration: none;
     font-weight: 600;
-    height: 97px;
+    height: 100px;
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
   }
   /* about */
   .about {
@@ -1052,19 +1082,11 @@ table .top-table {
   .cart-thumbnail {
     display: none;
   }
-  .cart-thumb {
-    display: block;
-  }
-  .cart-thumb img {
-    width: 100%;
-    padding-top: 20%;
-  }
   .about .box button {
     transform: translate(250%, 65%);
   }
   /* activity */
   .activity {
-    margin-top: 64%;
     margin-bottom: 130px;
   }
   .activity .title {
@@ -1135,8 +1157,8 @@ table .top-table {
     height: 100%;
   }
   .footer .footer-details img {
-    padding-bottom: 45px;
-    padding-top: 30px;
+    padding-bottom: 5%;
+    padding-top: 8%;
   }
   .footer .footer-details .other {
     margin-bottom: 7px;
@@ -1166,6 +1188,12 @@ table .top-table {
   /* top */
   .top-description {
     height: 97px;
+  }
+  .top-description img {
+    width: 110px;
+    height: 41px;
+    margin-top: 28px;
+    margin-left: 25px;
   }
   .top-des {
     width: 100%;
@@ -1198,7 +1226,7 @@ table .top-table {
   .fa-bars:before,
   .fa-navicon:before {
     content: "\f0c9";
-    font-size: 50px;
+    font-size: 30px;
   }
   .top-menu .menu {
     width: 250px;
@@ -1210,6 +1238,7 @@ table .top-table {
     overflow: auto;
     z-index: 99;
     transition: 1s;
+    padding-top: 20px;
   }
   .top-menu .menu i {
     width: 100%;
@@ -1219,10 +1248,10 @@ table .top-table {
   }
   .fa-xmark:before {
     content: "\f00d";
-    font-size: 50px;
+    font-size: 30px;
   }
   .top-menu .menu a {
-    width: 100px;
+    width: 150px;
     height: 50px;
     line-height: 50px;
     padding-left: 20px;
@@ -1253,7 +1282,6 @@ table .top-table {
   /* activity */
   .activity {
     max-width: 100%;
-    margin-top: 88%;
     margin-bottom: 130px;
   }
   .activity img {
@@ -1265,6 +1293,7 @@ table .top-table {
   }
   .activity table {
     margin-top: -77px;
+    font-size: 18px;
   }
   .activity .title {
     height: 8%;
@@ -1293,7 +1322,7 @@ table .top-table {
   }
   .activity .activity-icon {
     width: 100%;
-    bottom: 26%;
+    bottom: 24%;
   }
   .activity .activity-icon .icon {
     width: 50px;
@@ -1355,11 +1384,18 @@ table .top-table {
     height: 200px;
   }
   .footer .footer-details img {
-    width: 42%;
-    padding-bottom: 29px;
-    padding-top: 39px;
+    padding-bottom: 5%;
+    padding-top: 8%;
   }
-
+  .footer .footer-details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* bottom: 17px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .footer::before {
     content: "";
     position: absolute;
@@ -1431,9 +1467,13 @@ table .top-table {
     padding-top: 15px;
   }
   /* ABOUT */
+  .h3 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .h3-box {
-    margin-top: 0px;
-    margin-left: 9px;
+    margin-top: 20px;
+    margin-left: 60px;
   }
   h3 {
     font-size: 45px;
@@ -1448,7 +1488,7 @@ table .top-table {
   .activity {
     max-width: 100%;
     margin-top: 0%;
-    margin-bottom: 130px;
+    margin-bottom: 45%;
   }
   .activity::before {
     content: "";
@@ -1496,7 +1536,7 @@ table .top-table {
     margin-top: -66px;
     box-shadow: -1px -1px 9px black, -1px -1px black;
     min-width: 100%;
-    font-size: 10px;
+    font-size: 14px;
   }
   .activity-td td {
     width: 150px;
@@ -1508,7 +1548,7 @@ table .top-table {
   }
   .activity .activity-icon {
     width: 100%;
-    bottom: 0%;
+    bottom: -10%;
   }
   .owl-carousel .owl-item img {
     display: block;
@@ -1527,7 +1567,6 @@ table .top-table {
   }
   .candidates-list .sum-list {
     grid-template-columns: 1fr;
-    padding-left: 40px;
   }
   .candidates-list {
     height: 6000px;
@@ -1642,7 +1681,10 @@ table .top-table {
   h3 {
     font-size: 45px;
   }
-  .about .box button {
+  .box .p {
+    font-size: 16px;
+  }
+  .about .about-button button {
     transform: translate(55%, 76%);
   }
   .cart-thumb {
@@ -1651,8 +1693,8 @@ table .top-table {
   /* ACTIVITY */
   .activity {
     max-width: 100%;
-    margin-top: 0%;
-    margin-bottom: 65%;
+    margin-top: 4%;
+    margin-bottom: 55%;
   }
   .activity::before {
     content: "";
@@ -1716,7 +1758,7 @@ table .top-table {
   }
   .activity .activity-icon {
     width: 100%;
-    bottom: -7%;
+    bottom: -9%;
   }
   #activity-image {
     display: none;
@@ -1730,7 +1772,6 @@ table .top-table {
   }
   .candidates-list .sum-list {
     grid-template-columns: 1fr;
-    padding-left: 40px;
   }
   .candidates-list {
     height: 5545px;

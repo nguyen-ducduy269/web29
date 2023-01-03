@@ -12,8 +12,6 @@ $("#activity-image").owlCarousel({
   margin: 10,
   nav: false,
   dots: false,
-  autoplay: true,
-  autoplayTimeout: 10000,
   responsive: {
     500: {
       items: 1,
