@@ -36,6 +36,7 @@
 body a {
   text-decoration: none;
   color: black;
+  overflow-x: hidden;
 }
 body a:hover {
   color: yellow;
@@ -65,6 +66,9 @@ header .item i {
 /* header-top */
 .header-top {
   position: relative;
+}
+.header-top img {
+  width: 100%;
 }
 .top {
   width: 100%;
@@ -194,6 +198,7 @@ header .item i {
   width: 90%;
   height: 300px;
   padding-top: 50px;
+  position: relative;
 }
 .about .description .text {
   font-size: 17px;
@@ -216,6 +221,9 @@ header .item i {
 .activity {
   position: relative;
   height: 1446px;
+}
+.activity .act-img img {
+  width: 100%;
 }
 .activity::before {
   content: "";
@@ -307,9 +315,9 @@ table .activity-td:hover {
 }
 .activity .act-image .item {
   width: 100%;
-  height: 300px;
 }
 .act-image .item img {
+  width: 100%;
   height: 100%;
 }
 /* list */
@@ -508,7 +516,7 @@ footer::before {
   width: 300px;
   height: auto;
   padding-top: 50px;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 }
 .footer .line {
   width: 100%;
@@ -528,4 +536,362 @@ footer::before {
   margin-top: 20px;
   font-size: 18px;
   font-weight: 400;
+}
+.option,
+.last-img {
+  display: none;
+}
+@media only screen and (max-width: 1496px) {
+  #banner .owl-nav.disabled {
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 27%;
+    left: -55px;
+  }
+  .option,
+  .last-img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .container {
+    width: 1170px;
+  }
+  .option,
+  .last-img {
+    display: none;
+  }
+  .top-banner {
+    position: absolute;
+    width: 100%;
+    bottom: 75px;
+  }
+  .header-top::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -28px;
+    height: 126px;
+    background: black;
+    opacity: 0.3;
+    clip-path: polygon(0% 0%, 0% 40%, 50.5% 100%, 100% 40%, 100% 0%, 50.5% 76%);
+  }
+  .about .heading h2 {
+    width: 50%;
+    height: 100%;
+    border-left: 7px solid yellow;
+    margin-left: 3px;
+    line-height: 50px;
+    padding-left: 20px;
+    font-weight: 600;
+  }
+  .about img {
+    width: 568px;
+  }
+  .activity {
+    height: 1330px;
+    margin-top: 50px;
+  }
+  .activity::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -25px;
+    height: 151px;
+    background: black;
+    opacity: 0.3;
+    clip-path: polygon(0% 0%, 0% 50%, 50% 100%, 100% 50%, 100% 0%, 50.5% 76%);
+    transform: rotate(180deg);
+  }
+  .activity .content {
+    top: 4%;
+  }
+  .content table {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .list .sum-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  footer {
+    margin-top: 50px;
+  }
+  footer::before {
+    height: 104px;
+  }
+  .footer img {
+    margin-bottom: 27px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+  .option,
+  .last-img {
+    display: none;
+  }
+  .about img {
+    width: 107%;
+  }
+  .about .description .text {
+    font-size: 15px;
+  }
+  .activity::before {
+    height: 141px;
+  }
+  .activity {
+    height: 1330px;
+    margin-top: 90px;
+  }
+  .list {
+    position: relative;
+    background-color: #7fffd42e;
+    margin-top: 123px;
+    margin-bottom: 200px;
+  }
+  .list .text {
+    width: 87%;
+  }
+  footer::before {
+    height: 90px;
+  }
+  .footer img {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+  .last-img {
+    display: none;
+  }
+  .top-option {
+    display: none;
+  }
+  .top-banner {
+    display: none;
+  }
+  .option {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .header-top::after {
+    height: 104px;
+    bottom: -20px;
+  }
+  .option .open {
+    position: absolute;
+    right: 15%;
+    top: 35%;
+    font-size: 24px;
+  }
+  .option .option-content {
+    width: 330px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -330px;
+    z-index: 1;
+    transition: 1s;
+  }
+  .option-content .close {
+    top: 4px;
+    position: relative;
+    font-size: 24px;
+    left: 90%;
+  }
+  .option-content .content {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 20px;
+  }
+  .option-banner .title {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 20px;
+  }
+  .option-logo {
+    width: 100%;
+    padding-left: 80px;
+  }
+  .option-logo .item {
+    width: 150px;
+    height: 100%;
+  }
+  .option-logo .item img {
+    width: 100%;
+    height: 100%;
+  }
+  .about .heading h2 {
+    width: 100%;
+    height: 100%;
+    border-left: 7px solid yellow;
+    margin-left: 3px;
+    line-height: 50px;
+    padding-left: 6px;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 30px;
+  }
+  .about .description {
+    width: 90%;
+    height: 300px;
+    padding-top: 5px;
+  }
+  .about .description .text {
+    font-size: 12px;
+  }
+  .about img {
+    width: 370px;
+    height: 360px;
+  }
+  .activity {
+    height: 1250px;
+  }
+  .activity::before {
+    height: 103px;
+  }
+  .activity .content {
+    top: 3%;
+  }
+  .list .text {
+    width: 100%;
+  }
+  .list .sum-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .content table {
+    width: 90%;
+  }
+  .content .act-line {
+    margin-bottom: 8px;
+  }
+  footer::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -29px;
+    height: 110px;
+    background: black;
+    opacity: 0.3;
+    clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 49%);
+    transform: rotate(180deg);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  .top {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.76);
+    position: absolute;
+    top: 0;
+  }
+  .top img {
+    width: 135px;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .header-top::after {
+    height: 72px;
+    bottom: -20px;
+  }
+  .option .open {
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    font-size: 24px;
+  }
+  .header-top::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -23px;
+    height: 68px;
+    background: black;
+    opacity: 0.3;
+    clip-path: polygon(0% 0%, 0% 40%, 50.5% 100%, 100% 40%, 100% 0%, 51.5% 62%);
+  }
+  .about img {
+    width: 100%;
+    height: 100%;
+  }
+  .about .heading h2 {
+    width: 67%;
+    height: 100%;
+    border-left: 7px solid yellow;
+    margin-left: 3px;
+    line-height: 50px;
+    padding-left: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 45px;
+  }
+  .about .description .text {
+    font-size: 18px;
+  }
+  .first-img {
+    display: none;
+  }
+  .last-img {
+    display: block;
+  }
+  .about button {
+    margin-bottom: 15px;
+  }
+  .activity .content h1 {
+    font-size: 36px;
+    color: white;
+  }
+  .activity {
+    height: 1180px;
+  }
+  .activity::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -25px;
+    height: 94px;
+    background: black;
+    opacity: 0.3;
+    clip-path: polygon(0% 0%, 0% 50%, 50% 100%, 100% 50%, 100% 0%, 50.5% 55%);
+    transform: rotate(180deg);
+  }
+  .activity .content {
+    top: 4%;
+  }
+  .content .act-line {
+    margin-bottom: 56px;
+  }
+  .content table {
+    width: 1000px;
+    margin-left: 30px;
+  }
+  .list .text {
+    width: 100%;
+  }
+  #banner .owl-nav.disabled {
+    width: 125%;
+  }
 }
