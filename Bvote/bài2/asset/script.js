@@ -16,7 +16,7 @@ $("#banner").owlCarousel({
     200: {
       items: 1,
     },
-    365: {
+    600: {
       items: 3,
     },
     767: {
