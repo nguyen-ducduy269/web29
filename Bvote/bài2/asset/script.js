@@ -14,7 +14,7 @@ $("#banner").owlCarousel({
   // autoplayTimeout: 10000,
   responsive: {
     200: {
-      items: 1,
+      items: 2,
     },
     600: {
       items: 3,
