@@ -925,7 +925,7 @@ footer::before {
     height: 25px;
   }
   .top img {
-    width: 60px;
+    width: 50px;
     height: 17px;
     margin-top: -2px;
   }
@@ -991,6 +991,9 @@ footer::before {
   }
   .about button {
     margin-top: 114px;
+  }
+  .activity {
+    height: 1220px;
   }
   .activity .content {
     top: 2%;
