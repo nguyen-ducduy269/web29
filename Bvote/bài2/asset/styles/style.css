@@ -1062,15 +1062,15 @@ footer::before {
     position: absolute;
     right: 0;
     left: 0;
-    top: -32px;
-    height: 72px;
+    top: -20px;
+    height: 43px;
     background: black;
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 49%);
     transform: rotate(180deg);
   }
   footer {
-    height: unset;
+    height: 100%;
   }
   .footer img {
     width: 200px;
