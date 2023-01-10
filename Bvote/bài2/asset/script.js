@@ -14,13 +14,16 @@ $("#banner").owlCarousel({
   // autoplayTimeout: 10000,
   responsive: {
     200: {
-      items: 2,
+      items: 1,
+    },
+    320: {
+      items: 1,
     },
     600: {
       items: 3,
     },
     767: {
-      items: 4,
+      items: 3,
     },
     991: {
       items: 5,
