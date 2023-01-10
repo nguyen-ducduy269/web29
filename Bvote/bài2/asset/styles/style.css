@@ -529,7 +529,6 @@ footer::before {
   background-image: linear-gradient(to right, black, yellow, black);
 }
 .footer-about {
-  height: 200px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -713,6 +712,7 @@ footer::before {
     left: -330px;
     z-index: 1;
     transition: 1s;
+    overflow: auto;
   }
   .option-content .close {
     top: 4px;
@@ -953,7 +953,7 @@ footer::before {
     background-color: white;
     position: fixed;
     top: 0;
-    left: -330px;
+    left: -150px;
     z-index: 1;
     transition: 1s;
   }
