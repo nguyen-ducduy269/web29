@@ -56,10 +56,13 @@ header .item {
   height: 48px;
   float: right;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: 27px;
 }
-
+header a {
+  padding-right: 21px;
+}
 header .item i {
   color: yellow;
 }
@@ -72,25 +75,26 @@ header .item i {
 }
 .top {
   width: 100%;
-  height: 100px;
+  height: 97px;
   background-color: rgba(255, 255, 255, 0.76);
   position: absolute;
   top: 0;
 }
 .top img {
-  width: 180px;
-  height: 60px;
-  margin-top: 20px;
+  width: 175px;
+  height: 56px;
+  margin-top: 22px;
+  margin-left: 39px;
 }
 .top-option {
   width: 100%;
-  height: 100px;
+  height: 97px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
   text-align: center;
   font-size: 18px;
-  line-height: 100px;
+  line-height: 92px;
   font-weight: 600;
 }
 .top-option .item {
@@ -105,7 +109,7 @@ header .item i {
   height: 300px;
   background-color: white;
   position: absolute;
-  top: 100px;
+  top: 97px;
 }
 .top-option .item-more {
   display: none;
@@ -124,7 +128,7 @@ header .item i {
 .top-banner {
   position: absolute;
   width: 100%;
-  bottom: 140px;
+  bottom: 118px;
 }
 .top-banner .item {
   width: 100%;
@@ -138,21 +142,53 @@ header .item i {
 .top-banner .banner-text {
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 700;
   text-decoration: underline;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   color: white;
 }
-.top-banner .banner-img {
-  width: 150px;
-  height: 100%;
+.top-banner .banner-img1 {
+  width: 155px;
+  height: 92px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   border: 2px solid yellow;
+  margin-left: 13px;
+}
+.top-banner .banner-img2 {
+  width: 136px;
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid yellow;
+  margin-left: -7px;
+}
+.top-banner .banner-img3 {
+  width: 120px;
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid yellow;
+  margin-left: -8px;
+}
+.top-banner .banner-img4 {
+  width: 128px;
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid yellow;
+  margin-left: -12px;
 }
 .header-top::after {
   content: "";
@@ -170,7 +206,7 @@ header .item i {
 /* about */
 .about {
   position: relative;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .about .heading {
   width: 100%;
@@ -178,31 +214,35 @@ header .item i {
   display: flex;
   flex-wrap: nowrap;
   border-left: 3px solid yellow;
+  margin-left: 35px;
 }
 .about .heading h2 {
-  width: 35%;
+  width: 47%;
   height: 100%;
+  font-size: 50px;
   border-left: 7px solid yellow;
   margin-left: 3px;
   line-height: 50px;
-  padding-left: 20px;
+  padding-left: 18px;
   font-weight: 600;
 }
 .about .heading .line {
-  width: 300px;
+  width: 290px;
   height: 2px;
   background-color: yellow;
   margin-top: 25px;
 }
 .about .description {
-  width: 90%;
+  width: 100%;
   height: 300px;
-  padding-top: 50px;
+  padding-top: 47px;
+  margin-left: 37px;
   position: relative;
+  word-spacing: -1px;
 }
 .about .description .text {
-  font-size: 17px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 31px;
   font-weight: 600;
 }
 .about button {
@@ -210,17 +250,30 @@ header .item i {
   height: 50px;
   border-radius: 50px;
   border-style: none;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
-  background-image: linear-gradient(yellow, orange);
+  background-image: linear-gradient(to top, orange, yellow);
   color: white;
   font-weight: 600;
+  margin-left: 33px;
+  margin-top: -7px;
+  box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.15);
 }
-
+.about .first-img {
+  padding-left: 31px;
+  margin-top: -72px;
+  width: 117%;
+  height: 100%;
+}
+.first-img img {
+  width: 100%;
+  height: 100%;
+}
 /* activity */
 .activity {
   position: relative;
   height: 1446px;
+  margin-top: -11px;
 }
 .activity .act-img img {
   width: 100%;
@@ -240,12 +293,14 @@ header .item i {
 .activity .content {
   width: 100%;
   position: absolute;
-  top: 7%;
+  top: 6%;
   text-align: center;
 }
 .activity .content h1 {
   font-size: 50px;
+  padding-left: 37px;
   color: white;
+  padding-bottom: 14px;
 }
 .content .act-line {
   width: 500px;
@@ -256,53 +311,67 @@ header .item i {
   margin-bottom: 30px;
 }
 .content .act-line .line {
-  width: 150px;
+  width: 120px;
   height: 2px;
   background-color: yellow;
   margin-top: 7px;
 }
+.act-line img {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .content table {
-  width: 1300px;
-  margin-top: 30px;
+  width: 1030px;
   margin: 0 auto;
+  margin-top: 48px;
   box-shadow: 1px 1px 10px black, -1px -1px 3px black;
   border-collapse: collapse;
-  background-color: white;
 }
 table .title-table {
-  height: 100px;
+  height: 104px;
   border-top: 3px solid yellow;
-  background-color: #ffffff8a;
+  background-color: #1e17018f;
   font-size: 18px;
+  border-left: transparent;
+  color: #ffffff;
+}
+.title-table th {
+  padding-left: 9px;
 }
 table .activity-td {
-  height: 70px;
+  height: 65px;
   background-color: white;
+  line-height: 65px;
   font-size: 16px;
   font-weight: 600;
   border-left: 5px solid transparent;
 }
+.activity-td td {
+  padding-left: 45px;
+}
 table .activity-td:hover {
   border-left: 5px solid yellow;
-  background-color: #f0ca9dcf;
+  background-color: #f4eae0;
 }
 .content .act-icon {
-  width: 180px;
+  width: 98px;
   height: 50px;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
   flex-wrap: nowrap;
+  padding-left: 6px;
+  padding-top: 5px;
   justify-content: space-around;
 }
 .content .act-icon .icon {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 39px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 6px;
 }
 .content .act-icon .icon i {
   color: yellow;
@@ -313,26 +382,58 @@ table .activity-td:hover {
   border: none;
 }
 .activity .act-image {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .activity .act-image .item {
   width: 100%;
+  position: relative;
 }
 .act-image .item img {
-  width: 100%;
+  width: 650px;
   height: 100%;
+  padding-left: 35px;
+}
+.act-image .image {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  top: 23px;
+  left: 50px;
+}
+.act-image .image img {
+  width: 122px;
+  height: 63px;
+  margin-top: 45px;
+  margin-bottom: 12px;
+  margin-left: -36px;
+}
+.act-image .image .san {
+  font-size: 18px;
+  color: #c90005;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.act-image .image .bat {
+  font-size: 20px;
+  color: #c90005;
+  font-weight: 700;
+  text-align: center;
 }
 /* list */
 .list {
   position: relative;
-  background-color: #7fffd42e;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  background-color: rgba(238, 253, 255);
+  margin-top: 116px;
+  height: 1720px;
+  margin-bottom: 197px;
 }
 .list h2 {
   font-size: 50px;
   font-weight: 600;
   text-align: center;
+  margin-top: -29px;
+  margin-bottom: 41px;
 }
 .list-line {
   width: 300px;
@@ -347,18 +448,16 @@ table .activity-td:hover {
   background-color: yellow;
   margin-top: 5px;
 }
-
 .list .text {
-  width: 63%;
+  width: 84%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 34px;
   font-size: 17px;
   font-style: italic;
   font-weight: 700;
-  margin-bottom: 100px;
+  margin-bottom: 76px;
 }
-
 .list .sum-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -370,27 +469,36 @@ table .activity-td:hover {
 }
 .cart-head img {
   z-index: 1;
+  width: 100%;
 }
 .list .item {
+  width: 286px;
   position: relative;
   margin: 0 auto;
-  height: 420px;
+  height: 449px;
   background-color: white;
   margin-bottom: 30px;
+  box-shadow: 0 0 25px rgb(0 39 62 / 20%);
 }
 .list p {
   position: absolute;
   top: 0;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 68px;
   z-index: 1;
 }
 .sum-list .item-img {
   position: absolute;
   top: 43px;
-  padding-left: 10px;
+  margin-left: 13px;
+  width: 260px;
+  height: 284px;
+}
+.item-img img {
+  width: 100%;
+  height: 100%;
 }
 .sum-list .item-detail {
   width: 100%;
@@ -429,9 +537,9 @@ table .activity-td:hover {
   position: absolute;
   right: 0;
   left: 0;
-  top: -120px;
-  height: 120px;
-  background: #7fffd4bd;
+  top: -98px;
+  height: 98px;
+  background: #7fffd478;
   opacity: 0.3;
   clip-path: polygon(0% 0%, 0% 0%, 50.5% 100%, 100% 3%, 100% 0%, 50.5% 0%);
   transform: rotate(180deg);
@@ -443,49 +551,60 @@ table .activity-td:hover {
   left: 0;
   bottom: -120px;
   height: 120px;
-  background: #7fffd4bd;
+  background: #7fffd478;
   opacity: 0.3;
   clip-path: polygon(0% 0%, 0% 0%, 50.5% 100%, 100% 3%, 100% 0%, 50.5% 0%);
 }
 /* banner */
 .banner {
   position: relative;
-  height: 100%;
+  padding-top: 23px;
 }
 .banner .item {
   display: flex;
   justify-content: center;
   margin: 4px auto;
   width: 150px;
-  height: 130px;
+  height: 110px;
   flex-direction: column;
-  box-shadow: 1px 1px 8px black, -1px -1px 5px black;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+#banner {
+  width: 1119px;
+  margin: 0 auto;
 }
 #banner .owl-nav.disabled {
   display: block;
 }
 #banner .owl-nav.disabled {
-  width: 1380px;
+  width: 1245px;
+  height: 65px;
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 27%;
-  left: -42px;
+  top: 2%;
+  left: -59px;
 }
-.owl-carousel .owl-nav button {
-  width: 50px;
-  height: 50px;
+#banner button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .owl-carousel .owl-nav button span {
-  font-size: 24px;
+  font-size: 60px;
   color: red;
 }
 .owl-theme .owl-nav [class*="owl-"]:hover {
-  background: #869791;
+  background: unset;
   color: white;
   text-decoration: none;
 }
-
+.owl-carousel .owl-item img {
+  display: block;
+  width: 120px;
+  height: 100px;
+  margin: 0 auto;
+}
 /* footer */
 footer {
   position: relative;
@@ -517,10 +636,11 @@ footer::before {
   align-items: center;
 }
 .footer img {
-  width: 300px;
-  height: auto;
-  padding-top: 50px;
-  padding-bottom: 28px;
+  width: 245px;
+  height: 80px;
+  margin-top: 60px;
+  margin-left: 27px;
+  margin-bottom: 42px;
 }
 .footer .line {
   width: 100%;
@@ -535,9 +655,10 @@ footer::before {
   align-items: center;
 }
 .footer .text {
-  color: white;
-  margin-top: 20px;
-  font-size: 18px;
+  color: rgba(255, 255, 255);
+  margin-top: 22px;
+  font-size: 16px;
+  margin-left: -24px;
   font-weight: 400;
 }
 .option,
