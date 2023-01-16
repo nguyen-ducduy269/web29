@@ -551,7 +551,6 @@ table tbody tr:hover {
 /* banner */
 .banner {
   position: relative;
-  padding-top: 23px;
 }
 .banner .item {
   display: flex;
@@ -562,13 +561,25 @@ table tbody tr:hover {
   flex-direction: column;
   box-shadow: 0 0 25px rgb(0 0 0 / 10%);
   align-items: center;
+  background-color: white;
 }
 #banner {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-
+.owl-carousel .owl-nav.disabled {
+  display: block;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 20%;
+}
+.owl-nav.disabled button span {
+  font-size: 50px;
+  color: #a51f1f;
+}
 /* footer */
 footer {
   position: relative;
@@ -585,10 +596,10 @@ footer::before {
   position: absolute;
   right: 0;
   left: 0;
-  top: -27px;
+  top: -1px;
   height: 126px;
-  background: black;
-  opacity: 0.3;
+  background: rgb(40 29 0);
+  opacity: 0.88;
   clip-path: polygon(0% 0%, 0% 28%, 50% 100%, 100% 28%, 100% 0%, 50.5% 76%);
   transform: rotate(180deg);
 }
@@ -761,8 +772,6 @@ footer::before {
     left: 0;
     top: -23px;
     height: 104px;
-    background: black;
-    opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 28%, 50% 100%, 100% 28%, 100% 0%, 49.5% 76%);
     transform: rotate(180deg);
   }
@@ -777,6 +786,15 @@ footer::before {
   }
   .top-option {
     font-size: 16px;
+  }
+  .top-banner .banner-img {
+    width: 130px;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid yellow;
   }
   .about img {
     width: 107%;
@@ -806,9 +824,19 @@ footer::before {
     margin-top: 90px;
   }
   .activity .content h1 {
-    font-size: 43px;
+    font-size: 30px;
     padding-left: 37px;
     color: white;
+  }
+  .act-image .image {
+    top: -12px;
+    left: 9px;
+  }
+  .act-image .image .san {
+    font-size: 14px;
+  }
+  .act-image .image .bat {
+    font-size: 16px;
   }
   .list {
     position: relative;
@@ -819,8 +847,20 @@ footer::before {
   .list .text {
     width: 87%;
   }
+  .owl-nav {
+    position: absolute;
+    top: -5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .owl-nav button span {
+    font-size: 66px;
+    color: #c90005;
+  }
   footer::before {
-    height: 90px;
+    height: 100px;
+    top: -2px;
   }
   .footer img {
     margin-bottom: 15px;
@@ -863,7 +903,6 @@ footer::before {
     left: -330px;
     z-index: 1;
     transition: 1s;
-    overflow: auto;
   }
   .option-content .close {
     top: 4px;
@@ -951,8 +990,6 @@ footer::before {
     left: 0;
     top: -29px;
     height: 110px;
-    background: black;
-    opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 49%);
     transform: rotate(180deg);
   }

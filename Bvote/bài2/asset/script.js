@@ -6,17 +6,14 @@ $(".close").on("click", function () {
   x.css("left", "-330px");
 });
 
-$(document).ready(function () {
-  $(".owl-carousel").owlCarousel();
-});
-$(".owl-carousel").owlCarousel({
+$("#banner").owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
   nav: true,
   dots: false,
-  autoplay: true,
-  autoplayTimeout: 10000,
+  // autoplay: true,
+  // autoplayTimeout: 10000,
   responsive: {
     0: {
       items: 1,
@@ -24,8 +21,11 @@ $(".owl-carousel").owlCarousel({
     600: {
       items: 3,
     },
-    1000: {
+    1200: {
       items: 5,
+    },
+    1400: {
+      items: 6,
     },
   },
 });
