@@ -15,8 +15,8 @@ $(".owl-carousel").owlCarousel({
   nav: true,
   nav: true,
   dots: false,
-  // autoplay: true,
-  // autoplayTimeout: 10000,
+  autoplay: true,
+  autoplayTimeout: 10000,
   responsive: {
     0: {
       items: 1,
