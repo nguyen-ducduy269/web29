@@ -847,6 +847,11 @@ footer::before {
   .list .text {
     width: 87%;
   }
+  #banner .owl-nav.disabled {
+    width: 100%;
+    left: -5px;
+    top: 16%;
+  }
   .owl-nav {
     position: absolute;
     top: -5%;
@@ -1048,6 +1053,7 @@ footer::before {
   }
   .about .description .text {
     font-size: 13px;
+    line-height: 24px;
   }
   .first-img {
     display: none;
@@ -1059,7 +1065,7 @@ footer::before {
     margin-top: 15px;
   }
   .activity .content h1 {
-    font-size: 36px;
+    font-size: 25px;
     color: white;
   }
   .activity {
@@ -1081,7 +1087,13 @@ footer::before {
     top: 4%;
   }
   .content .act-line {
-    margin-bottom: 56px;
+    margin-bottom: 10px;
+  }
+  .content .act-line .line {
+    width: 99px;
+    height: 2px;
+    background-color: yellow;
+    margin-top: 7px;
   }
   .list .text {
     width: 100%;
