@@ -15,11 +15,12 @@ $("#banner").owlCarousel({
   // autoplay: true,
   // autoplayTimeout: 10000,
   responsive: {
-    0: {
-      items: 1,
+
+    500: {
+      items: 3,
     },
     600: {
-      items: 3,
+      items: 4,
     },
     1000: {
       items: 4,

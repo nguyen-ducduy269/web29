@@ -863,6 +863,17 @@ footer::before {
     font-size: 66px;
     color: #c90005;
   }
+  .banner .item {
+    display: flex;
+    justify-content: center;
+    margin: 4px auto;
+    width: 120px px;
+    height: 110px;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+    align-items: center;
+    background-color: white;
+  }
   footer::before {
     height: 100px;
     top: -2px;
@@ -1067,9 +1078,10 @@ footer::before {
   .activity .content h1 {
     font-size: 25px;
     color: white;
+    padding-bottom: 0px;
   }
   .activity {
-    height: 1260px;
+    height: 1010px;
   }
   .activity::before {
     content: "";
@@ -1084,24 +1096,77 @@ footer::before {
     transform: rotate(180deg);
   }
   .activity .content {
-    top: 4%;
+    top: 3%;
   }
   .content .act-line {
     margin-bottom: 10px;
   }
   .content .act-line .line {
-    width: 99px;
+    width: 69px;
     height: 2px;
     background-color: yellow;
-    margin-top: 7px;
+  }
+  table .title-table {
+    height: 68px;
+    border-top: 3px solid yellow;
+    background-color: #1e17018f;
+    font-size: 16px;
+    border-left: transparent;
+    color: #ffffff;
+  }
+  table .activity-td {
+    height: 50px;
+    background-color: #f4eae0;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 5px solid transparent;
+    white-space: nowrap;
+  }
+  table .activity-td2 {
+    height: 50px;
+    background-color: white;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 5px solid transparent;
+    white-space: nowrap;
   }
   .list .text {
     width: 100%;
   }
+  .act-image .image img {
+    width: 100px;
+    height: 42px;
+    margin-top: 34px;
+    margin-bottom: 12px;
+    margin-left: -51px;
+  }
+  .act-image .image .san {
+    font-size: 10px;
+    margin-left: -29px;
+  }
+  .act-image .image .bat {
+    font-size: 12px;
+    margin-left: -40px;
+  }
+  .banner .item {
+    display: flex;
+    justify-content: center;
+    margin: 4px auto;
+    width: 120px;
+    height: 110px;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+    align-items: center;
+    background-color: white;
+  }
   #banner .owl-nav.disabled {
-    width: 125%;
+    width: 110%;
   }
   footer {
+    width: 100%;
+    height: 100%;
     margin-top: 100px;
   }
   footer::before {
@@ -1179,13 +1244,13 @@ footer::before {
     right: 0;
     left: 0;
     bottom: -18px;
-    height: 60px;
+    height: 75px;
     background: black;
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 50%, 50.5% 100%, 100% 50%, 100% 0%, 51.5% 48%);
   }
   .about .description {
-    height: 240px;
+    height: 220px;
   }
   .about .heading h2 {
     width: 60%;
@@ -1202,14 +1267,14 @@ footer::before {
     width: 150px;
   }
   .about .description .text {
-    font-size: 10px;
+    font-size: 14px;
   }
   .about button {
     margin-top: 0;
     margin-bottom: 20px;
   }
   .activity {
-    height: 1375px;
+    height: 1200px;
   }
   .activity .content {
     top: 2%;
@@ -1228,15 +1293,25 @@ footer::before {
     position: relative;
   }
   table .title-table {
-    height: 70px;
+    height: 40px;
     border-top: 3px solid yellow;
     background-color: #ffffff8a;
-    font-size: 16px;
+    font-size: 14px;
   }
   table .activity-td {
+    height: 30px;
     width: 100%;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+  }
+  table .activity-td2 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+  .activity-td2 td {
+    padding-left: 0px;
   }
   table .activity-td td {
     width: 150px;
@@ -1248,8 +1323,8 @@ footer::before {
     position: absolute;
     right: 0;
     left: 0;
-    top: -14px;
-    height: 53px;
+    top: -21px;
+    height: 70px;
     background: black;
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 50%, 50% 100%, 100% 50%, 100% 0%, 50.5% 55%);
@@ -1275,6 +1350,28 @@ footer::before {
     display: grid;
     grid-template-columns: 1fr;
   }
+  .act-image .image {
+    position: absolute;
+    width: 200px;
+    height: 190px;
+    top: 23px;
+    left: 35px;
+  }
+  .act-image .image img {
+    width: 140px;
+    height: 70px;
+    margin-top: 17px;
+    margin-bottom: 12px;
+    margin-left: -51px;
+  }
+  .act-image .image .san {
+    font-size: 14px;
+    margin-left: -27px;
+  }
+  .act-image .image .bat {
+    font-size: 18px;
+    margin-left: -27px;
+  }
   footer::before {
     content: "";
     position: absolute;
@@ -1286,6 +1383,14 @@ footer::before {
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 49%);
     transform: rotate(180deg);
+  }
+  .owl-nav {
+    position: absolute;
+    top: 4%;
+    width: 571px;
+    left: -21px;
+    display: flex;
+    justify-content: space-between;
   }
   footer {
     height: 100%;
@@ -1383,14 +1488,18 @@ footer::before {
     width: 150px;
   }
   .about .description .text {
-    font-size: 10px;
+    font-size: 12px;
   }
   .about button {
     margin-top: 0;
     margin-bottom: 20px;
   }
   .activity {
-    height: 1375px;
+    height: 1135px;
+  }
+  .activity .act-img img {
+    width: 100%;
+    height: 140px;
   }
   .activity .content {
     top: 2%;
@@ -1409,12 +1518,19 @@ footer::before {
     position: relative;
   }
   table .title-table {
-    height: 70px;
+    height: 50px;
     border-top: 3px solid yellow;
     background-color: #ffffff8a;
     font-size: 16px;
   }
   table .activity-td {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  table .activity-td2 {
+    height: 50px;
     width: 100%;
     text-align: center;
     font-size: 14px;
@@ -1436,6 +1552,28 @@ footer::before {
     clip-path: polygon(0% 0%, 0% 50%, 50% 100%, 100% 50%, 100% 0%, 50.5% 55%);
     transform: rotate(180deg);
   }
+  .act-image .image {
+    position: absolute;
+    width: 200px;
+    height: 190px;
+    top: 1px;
+    left: 20px;
+  }
+  .act-image .image img {
+    width: 110px;
+    height: 55px;
+    margin-top: 17px;
+    margin-bottom: 12px;
+    margin-left: -51px;
+  }
+  .act-image .image .san {
+    font-size: 12px;
+    margin-left: -27px;
+  }
+  .act-image .image .bat {
+    font-size: 14px;
+    margin-left: -27px;
+  }
   .content .act-line {
     margin-bottom: 10px;
   }
@@ -1443,10 +1581,11 @@ footer::before {
     margin-top: 120px;
   }
   .list h2 {
-    font-size: 38px;
+    font-size: 35px;
+    margin-bottom: 25px;
   }
   .list .text {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 30px;
   }
   .list-line {
@@ -1456,13 +1595,32 @@ footer::before {
     display: grid;
     grid-template-columns: 1fr;
   }
+  .banner .item {
+    display: flex;
+    justify-content: center;
+    margin: 4px auto;
+    width: 100px;
+    height: 110px;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+    align-items: center;
+    background-color: white;
+  }
+  .owl-nav {
+    position: absolute;
+    top: 76%;
+    width: 100px;
+    left: 158px;
+    display: flex;
+    justify-content: space-between;
+  }
   footer::before {
     content: "";
     position: absolute;
     right: 0;
     left: 0;
     top: -20px;
-    height: 43px;
+    height: 48px;
     background: black;
     opacity: 0.3;
     clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 49%);
@@ -1484,12 +1642,15 @@ footer::before {
     width: 100%;
   }
   header .item {
-    width: 200px;
+    width: 126px;
     height: 48px;
     float: right;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
+  header a {
+    padding-right: 0px;
   }
   header .item i {
     padding-left: 20px;
@@ -1512,6 +1673,7 @@ footer::before {
   .about .heading {
     width: 100%;
     height: 40px;
+    margin-left: 0;
   }
   .option .option-content {
     width: 150px;
@@ -1520,7 +1682,7 @@ footer::before {
     position: fixed;
     top: 0;
     left: -330px;
-    z-index: 1;
+    z-index: 10;
     transition: 1s;
   }
   .option-content .close {
@@ -1551,7 +1713,8 @@ footer::before {
     clip-path: polygon(0% 0%, 0% 50%, 50.5% 100%, 100% 50%, 100% 0%, 51.5% 48%);
   }
   .about .description {
-    height: 240px;
+    height: 250px;
+    margin-left: 0;
   }
   .about .heading h2 {
     width: 50%;
@@ -1569,7 +1732,7 @@ footer::before {
     margin-top: 18px;
   }
   .about .description .text {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 20px;
   }
   .about button {
@@ -1597,18 +1760,14 @@ footer::before {
     display: block;
     margin: 0 auto;
     position: relative;
+    margin-top: 30px;
   }
   table .title-table {
     height: 50px;
     border-top: 3px solid yellow;
     background-color: #ffffff8a;
     font-size: 14px;
-  }
-  table .activity-td {
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
+    color: black;
   }
   table .activity-td td {
     width: 150px;
@@ -1627,8 +1786,85 @@ footer::before {
     clip-path: polygon(0% 0%, 0% 50%, 50% 100%, 100% 50%, 100% 0%, 50.5% 55%);
     transform: rotate(180deg);
   }
+  .act-image .image {
+    position: absolute;
+    width: 104px;
+    height: 190px;
+    top: 1px;
+    left: 72px;
+  }
+  .act-image .image img {
+    width: 91px;
+    height: 40px;
+    margin-top: 17px;
+    margin-bottom: 12px;
+    margin-left: -94px;
+  }
+  .act-image .image .san {
+    font-size: 10px;
+    margin-left: -70px;
+  }
+  .act-image .image .bat {
+    font-size: 12px;
+    margin-left: -68px;
+  }
   .content .act-line {
     margin-bottom: 10px;
+  }
+  .list .item {
+    width: 234px;
+    position: relative;
+    margin: 0 auto;
+    height: 330px;
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 0 25px rgb(0 39 62 / 20%);
+  }
+  .list p {
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 56px;
+    z-index: 1;
+  }
+  .sum-list .item-img {
+    position: absolute;
+    top: 40px;
+    margin-left: 13px;
+    width: 208px;
+    height: 207px;
+  }
+  .sum-list .item-detail {
+    width: 100%;
+    position: absolute;
+    bottom: -21px;
+    height: 100px;
+    text-align: center;
+  }
+  .sum-list .item-detail .cart-detail {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .fa-solid,
+  .fas {
+    height: 14px;
+    font-weight: 900;
+  }
+  .item-detail .list-button button {
+    width: 94px;
+    height: 26px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+  .sum-list .item-detail .list-button {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .list {
     margin-top: 120px;
@@ -1637,7 +1873,7 @@ footer::before {
     font-size: 28px;
   }
   .list .text {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 30px;
   }
   .list-line {
@@ -1646,6 +1882,25 @@ footer::before {
   .list .sum-list {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .banner .item {
+    display: flex;
+    justify-content: center;
+    margin: 4px auto;
+    width: 85px;
+    height: 110px;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+    align-items: center;
+    background-color: white;
+  }
+  .owl-nav {
+    position: absolute;
+    top: 76%;
+    width: 100px;
+    left: 97px;
+    display: flex;
+    justify-content: space-between;
   }
   footer::before {
     content: "";
@@ -1663,10 +1918,13 @@ footer::before {
     height: 100%;
   }
   .footer img {
-    width: 200px;
-    margin-bottom: 2px;
+    width: 150px;
+    margin-bottom: 10px;
+    height: 50px;
   }
   .footer .text {
     font-size: 10px;
+    padding-left: 25px;
+    margin-bottom: 10px;
   }
 }
