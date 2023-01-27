@@ -365,13 +365,20 @@ table tbody tr:hover {
   border: 1px solid #fff700;
   border-radius: 6px;
 }
-.content .act-icon .icon i {
-  color: yellow;
+.hover-anh {
+  display: block;
 }
-.content .act-icon .icon:hover {
-  color: white;
+.anh-an {
+  display: none;
+}
+.icon:hover {
   background-image: linear-gradient(yellow, orange);
-  border: none;
+}
+.icon:hover .hover-anh {
+  display: none;
+}
+.icon:hover .anh-an {
+  display: block;
 }
 .activity .act-image {
   margin-top: 60px;
