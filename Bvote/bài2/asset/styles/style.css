@@ -37,6 +37,8 @@ html {
 }
 body {
   overflow-x: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 body a {
   text-decoration: none;
@@ -55,7 +57,6 @@ header {
   height: 50px;
   background-color: black;
 }
-
 header .item {
   width: 200px;
   height: 48px;
@@ -63,10 +64,10 @@ header .item {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 27px;
+  margin-right: 76px;
 }
 header a {
-  padding-right: 21px;
+  padding-right: 18px;
 }
 header .item i {
   color: yellow;
@@ -83,20 +84,20 @@ header .item i {
 }
 .top {
   width: 100%;
-  height: 97px;
+  height: 89px;
   background-color: rgba(255, 255, 255, 0.76);
   position: absolute;
   top: 0;
 }
 .top img {
-  width: 175px;
-  height: 56px;
-  margin-top: 22px;
-  margin-left: 39px;
+  width: 164px;
+  height: 49px;
+  margin-top: 20px;
+  margin-left: 84px;
 }
 .top-option {
   width: 100%;
-  height: 97px;
+  height: 89px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -117,7 +118,7 @@ header .item i {
   height: 300px;
   background-color: white;
   position: absolute;
-  top: 97px;
+  top: 89px;
 }
 .top-option .item-more {
   display: none;
@@ -136,7 +137,8 @@ header .item i {
 .top-banner {
   position: absolute;
   width: 100%;
-  bottom: 118px;
+  bottom: 105px;
+  left: 50px;
 }
 .top-banner .item {
   width: 100%;
@@ -145,7 +147,6 @@ header .item i {
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 20px;
-  padding-left: 20px;
 }
 .top-banner .banner-text {
   width: 100%;
@@ -159,8 +160,8 @@ header .item i {
   color: white;
 }
 .top-banner .banner-img {
-  width: 155px;
-  height: 92px;
+  width: 149px;
+  height: 88px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -196,16 +197,16 @@ header .item i {
   display: flex;
   flex-wrap: nowrap;
   border-left: 3px solid yellow;
-  margin-left: 35px;
+  margin-left: 81px;
 }
 .about .heading h2 {
   width: 47%;
   height: 100%;
-  font-size: 50px;
+  font-size: 46px;
   border-left: 7px solid yellow;
   margin-left: 3px;
-  line-height: 50px;
-  padding-left: 18px;
+  line-height: 43px;
+  padding-left: 17px;
   font-weight: 600;
 }
 .about .heading .line {
@@ -216,35 +217,36 @@ header .item i {
 }
 .about .description {
   width: 100%;
-  height: 300px;
-  padding-top: 47px;
-  margin-left: 37px;
+  height: 275px;
+  padding-top: 31px;
+  margin-left: 83px;
   position: relative;
   word-spacing: -1px;
 }
 .about .description .text {
-  font-size: 16px;
-  line-height: 31px;
+  width: 569px;
+  font-size: 15px;
+  line-height: 30px;
   font-weight: 600;
 }
 .about button {
-  width: 163px;
-  height: 50px;
+  width: 154px;
+  height: 45px;
   border-radius: 50px;
   border-style: none;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 14px;
+  letter-spacing: 1px;
   background-image: linear-gradient(to top, orange, yellow);
   color: white;
   font-weight: 600;
-  margin-left: 33px;
+  margin-left: 80px;
   margin-top: -7px;
-  box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 15px 0px 15px rgb(0 0 0 / 15%);
 }
 .about .first-img {
   padding-left: 31px;
   margin-top: -72px;
-  width: 117%;
+  width: 108%;
   height: 100%;
 }
 .first-img img {
@@ -279,10 +281,10 @@ header .item i {
   text-align: center;
 }
 .activity .content h1 {
-  font-size: 50px;
+  font-size: 45px;
   padding-left: 37px;
   color: white;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
 }
 .content .act-line {
   width: 500px;
@@ -290,27 +292,27 @@ header .item i {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: -5px;
 }
 .content .act-line .line {
-  width: 120px;
+  width: 100px;
   height: 2px;
   background-color: yellow;
   margin-top: 7px;
 }
 .act-line img {
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 5px;
 }
 .content table {
-  width: 1030px;
+  width: 945px;
   margin: 0 auto;
   margin-top: 48px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgb(0 0 0 / 10%);
   border-collapse: collapse;
 }
 table .title-table {
-  height: 104px;
+  height: 95px;
   border-top: 3px solid yellow;
   background-color: #1e17018f;
   font-size: 18px;
