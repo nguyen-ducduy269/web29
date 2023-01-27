@@ -967,7 +967,7 @@ footer::before {
   }
   .about .description {
     width: 90%;
-    height: 300px;
+    height: 340px;
     padding-top: 5px;
   }
   .about .description .text {
@@ -1062,6 +1062,11 @@ footer::before {
     white-space: nowrap;
     font-size: 33px;
   }
+  .about .description {
+    width: 90%;
+    height: 240px;
+    padding-top: 5px;
+  }
   .about .description .text {
     font-size: 13px;
     line-height: 24px;
@@ -1074,6 +1079,7 @@ footer::before {
   }
   .about button {
     margin-top: 15px;
+    margin-bottom: 15px;
   }
   .activity .content h1 {
     font-size: 25px;
@@ -1250,7 +1256,7 @@ footer::before {
     clip-path: polygon(0% 0%, 0% 50%, 50.5% 100%, 100% 50%, 100% 0%, 51.5% 48%);
   }
   .about .description {
-    height: 220px;
+    height: 260px;
   }
   .about .heading h2 {
     width: 60%;
@@ -1295,7 +1301,7 @@ footer::before {
   table .title-table {
     height: 40px;
     border-top: 3px solid yellow;
-    background-color: #ffffff8a;
+    background-color: #ffffff42;
     font-size: 14px;
   }
   table .activity-td {
@@ -1471,7 +1477,7 @@ footer::before {
     clip-path: polygon(0% 0%, 0% 50%, 50.5% 100%, 100% 50%, 100% 0%, 51.5% 48%);
   }
   .about .description {
-    height: 240px;
+    height: 300px;
   }
   .about .heading h2 {
     width: 60%;
@@ -1520,7 +1526,7 @@ footer::before {
   table .title-table {
     height: 50px;
     border-top: 3px solid yellow;
-    background-color: #ffffff8a;
+    background-color: #ffffff42;
     font-size: 16px;
   }
   table .activity-td {
@@ -1673,7 +1679,7 @@ footer::before {
   .about .heading {
     width: 100%;
     height: 40px;
-    margin-left: 0;
+    margin: 0 auto;
   }
   .option .option-content {
     width: 150px;
@@ -1714,7 +1720,7 @@ footer::before {
   }
   .about .description {
     height: 250px;
-    margin-left: 0;
+    margin: 0 auto;
   }
   .about .heading h2 {
     width: 50%;
