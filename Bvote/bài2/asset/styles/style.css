@@ -1345,6 +1345,7 @@ footer img {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 0px;
   }
   header .item i {
     padding-left: 20px;
