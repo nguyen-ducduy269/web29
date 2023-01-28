@@ -572,10 +572,49 @@ table tbody tr:hover {
   color: #a51f1f;
 }
 /* footer */
-footer img {
+footer {
   width: 100%;
-  height: 100%;
+  height: 278px;
   margin-top: 38px;
+  position: relative;
+}
+footer .background {
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+}
+footer .layout {
+  width: 100%;
+  height: 298px;
+  position: absolute;
+  z-index: 2;
+  top: -20px;
+}
+footer .icon {
+  position: absolute;
+  width: 226px;
+  height: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: 38%;
+}
+footer .line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: 79%;
+}
+footer p {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: 84%;
+  color: white;
+  text-align: center;
 }
 .option,
 .last-img {
@@ -808,6 +847,15 @@ footer img {
     align-items: center;
     background-color: white;
   }
+  footer {
+    width: 100%;
+    height: 260px;
+    margin-top: 38px;
+    position: relative;
+  }
+  footer .layout {
+    height: 279px;
+  }
 }
 @media only screen and (max-width: 992px) {
   .container {
@@ -940,7 +988,10 @@ footer img {
   }
   footer {
     margin-top: 50px;
-    height: 258px;
+    height: 215px;
+  }
+  footer .layout {
+    height: 234px;
   }
 }
 @media only screen and (max-width: 769px) {
@@ -1099,20 +1150,55 @@ footer img {
     display: flex;
     justify-content: center;
     margin: 4px auto;
-    width: 120px;
-    height: 110px;
+    width: 90px;
+    height: 102px;
     flex-direction: column;
     box-shadow: 0 0 25px rgb(0 0 0 / 10%);
     align-items: center;
     background-color: white;
+  }
+  .owl-nav button span {
+    font-size: 52px;
+    color: #c90005;
   }
   #banner .owl-nav.disabled {
     width: 110%;
   }
   footer {
     width: 100%;
-    height: 210px;
+    height: 200px;
     margin-top: 100px;
+  }
+  footer .layout {
+    height: 221px;
+  }
+  footer .icon {
+    position: absolute;
+    width: 195px;
+    height: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 28%;
+  }
+  footer .line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 72%;
+    width: 70%;
+  }
+  footer p {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 80%;
+    color: white;
+    text-align: center;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1318,7 +1404,10 @@ footer img {
     justify-content: space-between;
   }
   footer {
-    height: 160px;
+    height: 170px;
+  }
+  footer .layout {
+    height: 186px;
   }
 }
 @media only screen and (max-width: 426px) {
@@ -1581,8 +1670,8 @@ footer img {
     display: flex;
     justify-content: center;
     margin: 4px auto;
-    width: 100px;
-    height: 110px;
+    width: 91px;
+    height: 91px;
     flex-direction: column;
     box-shadow: 0 0 25px rgb(0 0 0 / 10%);
     align-items: center;
@@ -1601,22 +1690,22 @@ footer img {
     font-size: 50px;
     color: #c90005;
   }
-  footer::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: -20px;
-    height: 48px;
-    background: black;
-    opacity: 0.3;
-    clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 49%);
-    transform: rotate(180deg);
-  }
   footer {
-    height: 130px;
+    height: 120px;
+  }
+  footer .layout {
+    height: 139px;
+  }
+  footer .icon {
+    width: 110px;
+    height: 39px;
+    top: 30%;
+  }
+  footer p {
+    font-size: 10px;
   }
 }
+
 @media only screen and (max-width: 330px) {
   .container {
     width: 100%;
@@ -1874,19 +1963,11 @@ footer img {
     align-items: center;
     background-color: white;
   }
-  footer::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: -20px;
-    height: 43px;
-    background: black;
-    opacity: 0.3;
-    clip-path: polygon(0% 0%, 0% 45%, 50% 100%, 100% 45%, 100% 0%, 50% 49%);
-    transform: rotate(180deg);
-  }
   footer {
-    height: 110px;
+    height: 125px;
+  }
+  footer .layout {
+    height: 124px;
+    top: -10px;
   }
 }
