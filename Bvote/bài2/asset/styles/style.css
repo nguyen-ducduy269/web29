@@ -385,40 +385,11 @@ table tbody tr:hover {
 .activity .act-image {
   margin-top: 41px;
 }
-.activity .act-image .item {
+.act-image .owl-carousel .owl-nav.disabled {
+  display: none;
+}
+.act-image .item {
   width: 100%;
-  position: relative;
-}
-.act-image .item img {
-  width: 553px;
-  height: 257px;
-}
-.act-image .image {
-  position: absolute;
-  width: 200px;
-  height: 190px;
-  top: 23px;
-  left: 50px;
-}
-.act-image .image img {
-  width: 122px;
-  height: 63px;
-  margin-top: 45px;
-  margin-bottom: 12px;
-  margin-left: -36px;
-}
-.act-image .image .san {
-  font-size: 18px;
-  color: #c90005;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 0px;
-}
-.act-image .image .bat {
-  font-size: 20px;
-  color: #c90005;
-  font-weight: 700;
-  text-align: center;
 }
 /* list */
 .list {
@@ -781,23 +752,24 @@ footer img {
     height: 141px;
   }
   .activity {
-    height: 1330px;
+    height: 1250px;
     margin-top: 90px;
+  }
+  .content .act-line {
+    width: 500px;
+    height: 14px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
   }
   .activity .content h1 {
     font-size: 30px;
     padding-left: 37px;
     color: white;
   }
-  .act-image .image {
-    top: -12px;
-    left: 9px;
-  }
-  .act-image .image .san {
-    font-size: 14px;
-  }
-  .act-image .image .bat {
-    font-size: 16px;
+  #act-image .owl-nav {
+    display: none;
   }
   .list {
     position: relative;
@@ -842,6 +814,9 @@ footer img {
     width: 750px;
   }
   .last-img {
+    display: none;
+  }
+  .act-image .owl-carousel .owl-nav.disabled {
     display: none;
   }
   .top-option {
@@ -941,6 +916,9 @@ footer img {
   .activity .content {
     top: 3%;
   }
+  .act-image .owl-carousel .owl-nav.disabled {
+    display: none;
+  }
   .list .text {
     width: 100%;
   }
@@ -1003,8 +981,11 @@ footer img {
     clip-path: polygon(0% 0%, 0% 40%, 50.5% 100%, 100% 40%, 100% 0%, 51.5% 62%);
   }
   .about img {
-    width: 100%;
+    width: 80%;
     height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .about .heading h2 {
     width: 67%;
@@ -1035,6 +1016,9 @@ footer img {
   .about button {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+  .act-image .owl-carousel .owl-nav.disabled {
+    display: none;
   }
   .activity .content h1 {
     font-size: 25px;
@@ -1223,7 +1207,7 @@ footer img {
     margin-bottom: 20px;
   }
   .activity {
-    height: 1200px;
+    height: 850px;
   }
   .activity .content {
     top: 2%;
@@ -1233,6 +1217,9 @@ footer img {
   }
   .content .act-line {
     width: 192px;
+  }
+  .act-image .owl-carousel .owl-nav.disabled {
+    display: none;
   }
   .content table {
     overflow: auto;
@@ -1338,14 +1325,22 @@ footer img {
   .container {
     width: 100%;
   }
+  header {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+  }
   header .item {
     width: 200px;
-    height: 48px;
+    height: 40px;
     float: right;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 0px;
+    margin-right: 10px;
+  }
+  header a {
+    padding-right: 1px;
   }
   header .item i {
     padding-left: 20px;
@@ -1354,10 +1349,10 @@ footer img {
     height: 40px;
   }
   .top img {
-    width: 102px;
-    height: 33px;
-    margin-top: 5px;
-    margin-left: 10px;
+    width: 95px;
+    height: 28px;
+    margin-top: 6px;
+    margin-left: 30px;
   }
   .option .open {
     position: absolute;
@@ -1433,11 +1428,15 @@ footer img {
     font-size: 12px;
   }
   .about button {
-    margin-top: 0;
+    margin-top: -70px;
     margin-bottom: 20px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 0;
   }
   .activity {
-    height: 1135px;
+    height: 975px;
   }
   .activity .act-img img {
     width: 100%;
@@ -1451,7 +1450,20 @@ footer img {
     top: 2%;
   }
   .activity .content h1 {
-    font-size: 25px;
+    font-size: 22px;
+    padding-top: 10px;
+  }
+  .act-line img {
+    padding-left: 4px;
+    padding-right: 0px;
+    width: 20px;
+    height: 10px;
+  }
+  .content .act-line .line {
+    width: 69px;
+    height: 2px;
+    background-color: yellow;
+    margin-top: 4px;
   }
   .content .act-line {
     width: 192px;
@@ -1498,27 +1510,8 @@ footer img {
     clip-path: polygon(0% 0%, 0% 50%, 50% 100%, 100% 50%, 100% 0%, 50.5% 55%);
     transform: rotate(180deg);
   }
-  .act-image .image {
-    position: absolute;
-    width: 200px;
-    height: 190px;
-    top: 1px;
-    left: 20px;
-  }
-  .act-image .image img {
-    width: 110px;
-    height: 55px;
-    margin-top: 17px;
-    margin-bottom: 12px;
-    margin-left: -51px;
-  }
-  .act-image .image .san {
-    font-size: 12px;
-    margin-left: -27px;
-  }
-  .act-image .image .bat {
-    font-size: 14px;
-    margin-left: -27px;
+  .act-image .owl-carousel .owl-nav.disabled {
+    display: none;
   }
   .content .act-line {
     margin-bottom: 10px;
