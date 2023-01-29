@@ -708,6 +708,10 @@ footer p {
     line-height: 30px;
     font-weight: 600;
   }
+  .about button {
+    margin-left: 80px;
+    margin-top: 10px;
+  }
   .activity {
     height: 1330px;
     margin-top: 50px;
@@ -725,7 +729,10 @@ footer p {
     transform: rotate(180deg);
   }
   .activity .content {
-    top: 4%;
+    top: 5%;
+  }
+  .content .act-line {
+    margin-bottom: 50px;
   }
   .act-image .image {
     top: -12px;
@@ -783,6 +790,7 @@ footer p {
     padding-top: 30px;
   }
   .about .description .text {
+    max-width: 90%;
     font-size: 12px;
   }
   .about .heading h2 {
@@ -956,6 +964,7 @@ footer p {
   }
   .about .description .text {
     font-size: 12px;
+    line-height: 25px;
   }
   .about img {
     width: 370px;
@@ -1071,8 +1080,8 @@ footer p {
     display: block;
   }
   .about button {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 70px;
+    margin-bottom: 0px;
   }
   .act-image .owl-carousel .owl-nav.disabled {
     display: none;
@@ -1278,7 +1287,7 @@ footer p {
     height: 260px;
   }
   .about .heading h2 {
-    width: 60%;
+    width: 45%;
     height: 100%;
     border-left: 7px solid yellow;
     margin-left: 3px;
@@ -1822,7 +1831,7 @@ footer p {
     margin-top: 60px;
   }
   .activity {
-    height: 1050px;
+    height: 970px;
   }
   .activity .act-img img {
     height: 110px;
@@ -1960,6 +1969,13 @@ footer p {
   }
   .list-line {
     width: 250px;
+  }
+  .list-line img {
+    width: 23px;
+    height: 12px;
+  }
+  .list-line .line {
+    width: 100px;
   }
   .list .sum-list {
     display: grid;
