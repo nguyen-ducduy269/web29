@@ -45,11 +45,14 @@ $("#banner").owlCarousel({
   // autoplay: true,
   // autoplayTimeout: 10000,
   responsive: {
-    500: {
+    300: {
+      items: 2,
+    },
+    400: {
       items: 3,
     },
     600: {
-      items: 4,
+      items: 3,
     },
     1000: {
       items: 4,

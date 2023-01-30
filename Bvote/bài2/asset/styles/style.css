@@ -1172,12 +1172,15 @@ footer p {
     align-items: center;
     background-color: white;
   }
+  .owl-nav {
+    top: 12%;
+  }
   .owl-nav button span {
     font-size: 52px;
     color: #c90005;
   }
   #banner .owl-nav.disabled {
-    width: 110%;
+    width: 115%;
   }
   footer {
     width: 100%;
@@ -1985,7 +1988,7 @@ footer p {
     display: flex;
     justify-content: center;
     margin: 4px auto;
-    width: 85px;
+    width: 100px;
     height: 110px;
     flex-direction: column;
     box-shadow: 0 0 25px rgb(0 0 0 / 10%);
