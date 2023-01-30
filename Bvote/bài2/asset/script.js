@@ -12,8 +12,8 @@ $("#act-image").owlCarousel({
   nav: true,
   nav: true,
   dots: false,
-  // autoplay: true,
-  // autoplayTimeout: 10000,
+  autoplay: true,
+  autoplayTimeout: 10000,
   responsive: {
     100: {
       items: 1,
@@ -42,8 +42,8 @@ $("#banner").owlCarousel({
   nav: true,
   nav: true,
   dots: false,
-  // autoplay: true,
-  // autoplayTimeout: 10000,
+  autoplay: true,
+  autoplayTimeout: 10000,
   responsive: {
     300: {
       items: 2,
