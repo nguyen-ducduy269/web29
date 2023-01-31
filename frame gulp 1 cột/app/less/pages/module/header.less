@@ -133,6 +133,12 @@
       }
     }
     .nav {
+      .show__menu {
+        display: none;
+      }
+      .menu-respon {
+        display: none;
+      }
       .menu {
         .menu-list {
           display: flex;
@@ -205,12 +211,119 @@
     top: 0px;
   }
 }
-.Rectangle_264 {
-  background-color: rgb(239, 243, 250);
-  position: absolute;
-  left: -36px;
-  top: 22px;
-  width: 2033px;
-  height: 261px;
-  z-index: 2;
+
+@media only screen and (max-width: 1350px) {
+  .bs-container {
+    width: 1170px;
+  }
+  .header-nav {
+    .nav-content {
+      .nav {
+        .show__menu {
+          display: none;
+        }
+        .menu-respon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .bs-container {
+    width: 970px;
+  }
+  .header-top {
+    .item {
+      .icon {
+        position: absolute;
+        right: 11px;
+        top: -2px;
+      }
+    }
+  }
+  .header-nav {
+    .nav-content {
+      .logo {
+        img {
+          height: 46px;
+          width: 179px;
+          margin-left: 30px;
+          margin-top: 11px;
+        }
+      }
+      .nav {
+        .show__menu {
+          display: none;
+        }
+        .menu {
+          .menu-list {
+            margin-left: 0;
+            .menu-list__item {
+              width: 70px;
+              .active {
+                width: 70px;
+              }
+            }
+          }
+        }
+        .menu-respon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .bs-container {
+    width: 750px;
+  }
+  .header-nav {
+    .nav-content {
+      .logo {
+        img {
+          height: 46px;
+          width: 179px;
+          margin-left: 0px;
+          margin-top: 11px;
+        }
+      }
+      .nav {
+        .show__menu {
+          display: block;
+          position: absolute;
+          right: -260%;
+          top: 15px;
+          font-size: 24px;
+        }
+        .menu {
+          .menu-list {
+            display: none;
+          }
+        }
+        .menu-respon {
+          display: block;
+          width: 250px;
+          height: 100%;
+          background: white;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          .close-menu {
+            position: relative;
+            right: -215px;
+            top: 5px;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .bs-container {
+    width: 100%;
+  }
 }
