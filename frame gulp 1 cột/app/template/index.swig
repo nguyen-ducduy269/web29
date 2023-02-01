@@ -12,7 +12,7 @@ content %}
               <h2 class="title"></h2>
             </div>
             <div class="module-content">
-              <div class="col-md-8">
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                 <div class="item">
                   <div class="all">
                     <div class="title">
@@ -80,7 +80,7 @@ content %}
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="item">
                   <div class="search">
                     <input type="text" placeholder="Tìm kiếm" />
