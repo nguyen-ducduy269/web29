@@ -37,10 +37,85 @@
   <div class="header-nav">
     <div class="bs-container">
       <div class="nav-content clearfix">
-        <div class="bs-row"></div>
+        <div class="bs-row">
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="logo">
+              <a href="#"><img src="../../../dist/images/logo.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="nav">
+              <span class="show__menu"><i class="fa-solid fa-bars"></i></span>
+              <div class="menu">
+                <ul class="menu-list clearfix">
+                  <li class="menu-list__item">
+                    <a href="index.html" class="menu-list__link active"
+                      >TRANG CHỦ</a
+                    >
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="introduce.html" class="menu-list__link"
+                      >GIỚI THIỆU</a
+                    >
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="service.html" class="menu-list__link">LĨNH VỰC</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="product.html" class="menu-list__link">DỰ ÁN</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="news.html" class="menu-list__link">TIN TỨC</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="contacts.html" class="menu-list__link">LIÊN HỆ</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-respon">
+                <span class="close__menu"
+                  ><i class="fa-solid fa-xmark"></i
+                ></span>
+                <ul class="menu-list clearfix">
+                  <li class="menu-list__item">
+                    <a href="index.html" class="menu-list__link active"
+                      >TRANG CHỦ</a
+                    >
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="introduce.html" class="menu-list__link"
+                      >GIỚI THIỆU</a
+                    >
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="service.html" class="menu-list__link">LĨNH VỰC</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="product.html" class="menu-list__link">DỰ ÁN</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="#" class="menu-list__link">TIN TỨC</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="contacts.html" class="menu-list__link">LIÊN HỆ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="header-banner">
+    <div class="title">TIN TỨC</div>
+    <div class="description">Trang chủ / Tin tức</div>
+    <div class="layout"></div>
   </div>
 </header>
