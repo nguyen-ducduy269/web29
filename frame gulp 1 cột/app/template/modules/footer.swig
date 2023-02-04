@@ -6,7 +6,7 @@
   <div class="bs-container">
     <div class="content">
       <div class="bs-row">
-        <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="item">
             <div class="noidung">
               <img src="../../../dist/images/footer.png" alt="" />
@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="item">
             <div class="bs-row">
               <div class="col-md-3 col-sm-3 col-xs-3">
