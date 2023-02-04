@@ -1,4 +1,4 @@
-{% extends 'layouts/base.swig' %} {% block pageTitle %} Biệt thự trên cao Forest
+{% extends 'layouts/base2.swig' %} {% block pageTitle %} Biệt thự trên cao Forest
 in the Sky {% endblock %} {% block bodyClass %}index{% endblock %} {% block
 content %}
 
