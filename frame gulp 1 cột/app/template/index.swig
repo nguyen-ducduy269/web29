@@ -2,5 +2,7 @@
 in the Sky {% endblock %} {% block bodyClass %}index{% endblock %} {% block
 content %}
 
-<main id="main"></main>
+<main id="main">
+    
+</main>
 {% endblock %} {% block script %} {% endblock %}

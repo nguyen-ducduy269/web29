@@ -1,5 +1,9 @@
 <header id="header">
-  <div class="header-top">
+  <div class="background-slide">
+    <img src="../../../dist/images/slide1.png" alt="" />
+    <div class="layout"></div>
+  </div>
+  <div class="head-top">
     <div class="bs-container">
       <div class="row">
         <div class="col-6 col-md-6 col-sm-6">
@@ -33,8 +37,7 @@
       </div>
     </div>
   </div>
-
-  <div class="header-nav">
+  <div class="head-nav">
     <div class="bs-container">
       <div class="nav-content clearfix">
         <div class="bs-row">
@@ -97,7 +100,7 @@
                     <a href="product.html" class="menu-list__link">DỰ ÁN</a>
                   </li>
                   <li class="menu-list__item">
-                    <a href="#" class="menu-list__link">TIN TỨC</a>
+                    <a href="news.html" class="menu-list__link">TIN TỨC</a>
                   </li>
                   <li class="menu-list__item">
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
@@ -113,9 +116,12 @@
       </div>
     </div>
   </div>
-  <div class="header-banner">
-    <div class="title">TIN TỨC</div>
-    <div class="description">Trang chủ / Tin tức</div>
-    <div class="layout"></div>
+  <div class="head-banner">
+    <div class="title">FROM CONCEPT TO CREATION</div>
+    <div class="description">
+      It is a long established fact that a reader will be distracted by the
+      readable content.
+    </div>
+    <button>XEM THÊM</button>
   </div>
 </header>
