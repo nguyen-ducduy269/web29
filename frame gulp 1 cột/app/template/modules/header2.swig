@@ -116,7 +116,7 @@
     </div>
   </div>
   <div class="head-banner">
-    <div class="title">FROM CONCEPT TO CREATION</div>
+    <div class="title">FROM CONCEPT TO CREATION.</div>
     <div class="description">
       It is a long established fact that a reader will be distracted by the
       readable content.
