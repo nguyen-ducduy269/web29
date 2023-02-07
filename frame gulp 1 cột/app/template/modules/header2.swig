@@ -1,7 +1,6 @@
-<header id="header">
+<header id="head">
   <div class="background-slide">
     <img src="../../../dist/images/slide1.png" alt="" />
-    <div class="layout"></div>
   </div>
   <div class="head-top">
     <div class="bs-container">
