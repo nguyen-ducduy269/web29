@@ -4,16 +4,24 @@ block content %}
 
 <main id="main">
   <section class="about-us">
+    <div class="outside">
+      <img class="maytrai" src="../../dist/images/maytrai.png" alt="" />
+      <img class="cautruc1" src="../../dist/images/cautruc1.png" alt="" />
+      <img class="cautruc2" src="../../dist/images/cautruc2.png" alt="" />
+      <img class="mayphai" src="../../dist/images/mayphai.png" alt="" />
+    </div>
     <div class="bs-container">
       <div class="bs-row">
         <div class="bs-col">
           <div class="module module-index">
             <div class="about-img">
-              <img src="../../dist/images/Untitled-1.png" alt="" />
+              <a href=""
+                ><img src="../../dist/images/Untitled-1.png" alt=""
+              /></a>
             </div>
             <div class="content">
               <div class="about-header">
-                <h2 class="title">VỀ CHÚNG TÔI</h2>
+                <h2 class="title"><b>VỀ CHÚNG TÔI</b></h2>
                 <div class="more">
                   <img src="../../dist/images/Rectangle 247.png" alt="" />
                   <div class="line"></div>
@@ -29,9 +37,91 @@ block content %}
                   till shed only fact age its end.
                 </div>
                 <button>Xem thêm</button>
-                <h1>ABOUT US</h1>
+                <h1><b>ABOUT US</b></h1>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="activity">
+    <div class="bs-container">
+      <div class="bs-row">
+        <div class="bs-col">
+          <div class="module-activity">
+            <div class="act-title">
+              <h2><b>LĨNH VỰC HOẠT ĐỘNG</b></h2>
+              <div class="more">
+                <img src="../../dist/images/Rectangle 247.png" alt="" />
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="act-content">
+              <div class="main-content">
+                <div class="design">
+                  <img src="../../dist/images/01.png" alt="" />
+                  <div class="title"><b>THIẾT KẾ KIẾN TRÚC</b></div>
+                  <div class="text">
+                    <p>
+                      <a href=""
+                        >Scarcely on striking packages by so property in
+                        delicate. Up or well must less rent read walk so be.
+                        Easy sold at do hour sing spot.</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="design">
+                  <img src="../../dist/images/02.png" alt="" />
+                  <div class="title"><b>THIẾT KẾ KIẾN TRÚC</b></div>
+                  <div class="text">
+                    <p>
+                      <a href=""
+                        >Scarcely on striking packages by so property in
+                        delicate. Up or well must less rent read walk so be.
+                        Easy sold at do hour sing spot.</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="design">
+                  <img src="../../dist/images/03.png" alt="" />
+                  <div class="title"><b>THIẾT KẾ KIẾN TRÚC</b></div>
+                  <div class="text">
+                    <p>
+                      <a href=""
+                        >Scarcely on striking packages by so property in
+                        delicate. Up or well must less rent read walk so be.
+                        Easy sold at do hour sing spot.</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="design">
+                  <img src="../../dist/images/04.png" alt="" />
+                  <div class="title"><b>THIẾT KẾ KIẾN TRÚC</b></div>
+                  <div class="text">
+                    <p>
+                      <a href=""
+                        >Scarcely on striking packages by so property in
+                        delicate. Up or well must less rent read walk so be.
+                        Easy sold at do hour sing spot.</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-img">
+                <img src="../../dist/images/activity-main.png" alt="" />
+              </div>
+            </div>
+            <div class="act-bonus"><b>MARKET</b></div>
           </div>
         </div>
       </div>
