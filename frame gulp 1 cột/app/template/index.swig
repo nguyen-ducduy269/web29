@@ -127,5 +127,102 @@ block content %}
       </div>
     </div>
   </section>
+
+  <section class="project">
+    <div class="bs-container">
+      <div class="bs-row">
+        <div class="bs-col">
+          <div class="module-project">
+            <div class="col-lg-3">
+              <div class="module">
+                <div class="title">
+                  <h4>DỰ ÁN MỚI NHẤT</h4>
+                  <h1><b>DỰ ÁN NỔI BẬT</b></h1>
+                  <div class="more">
+                    <img src="../../dist/images/Rectangle 247.png" alt="" />
+                    <div class="line"></div>
+                  </div>
+                </div>
+                <div class="content">
+                  <a href=""><div class="noidung">TẤT CẢ</div></a>
+                  <a href=""><div class="noidung">THƯƠNG MẠI</div></a>
+                  <a href=""><div class="noidung">GIÁO DỤC</div></a>
+                  <a href=""><div class="noidung">BỆNH VIỆN</div></a>
+                  <a href=""><div class="noidung">THƯỜNG TRÚ</div></a>
+                  <a href=""><div class="noidung">VĂN PHÒNG</div></a>
+                  <a href=""><div class="noidung">TÁI THIẾT</div></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="module">
+                <div class="mutiple">
+                  <div class="multiple-items">
+                    <div class="item">
+                      <img src="../../dist/images/building1.png" alt="" />
+                      <div class="discription">
+                        <div class="title">TÒA NHÀ THÀNH PHỐ</div>
+                        <div class="more">Thương mại</div>
+                        <button>+</button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../../dist/images/building2.png" alt="" />
+                      <div class="discription">
+                        <div class="title">TÒA NHÀ THÀNH PHỐ</div>
+                        <div class="more">Thương mại</div>
+                        <button>+</button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../../dist/images/building3.png" alt="" />
+                      <div class="discription">
+                        <div class="title">TÒA NHÀ THÀNH PHỐ</div>
+                        <div class="more">Thương mại</div>
+                        <button>+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="multiple-items">
+                    <div class="item">
+                      <img src="../../dist/images/building2.png" alt="" />
+                      <div class="discription">
+                        <div class="title">TÒA NHÀ THÀNH PHỐ</div>
+                        <div class="more">Thương mại</div>
+                        <button>+</button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../../dist/images/building4.png" alt="" />
+                      <div class="discription">
+                        <div class="title">TÒA NHÀ THÀNH PHỐ</div>
+                        <div class="more">Thương mại</div>
+                        <button>+</button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../../dist/images/building5.png" alt="" />
+                      <div class="discription">
+                        <div class="title">TÒA NHÀ THÀNH PHỐ</div>
+                        <div class="more">Thương mại</div>
+                        <button>+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bonus"><b>PROJECTS</b></div>
+          <div class="left-img">
+            <img src="../../dist/images/Untitled-4.png" alt="" />
+          </div>
+          <div class="right-img">
+            <img src="../../dist/images/cautruc2.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 {% endblock %} {% block script %} {% endblock %}

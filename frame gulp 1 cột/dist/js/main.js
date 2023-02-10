@@ -48,3 +48,5 @@ $(".show__menu").on("click", function () {
 $(".close__menu").on("click", function () {
   x.css("left", "-250px");
 });
+
+
