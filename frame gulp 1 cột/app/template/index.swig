@@ -212,6 +212,14 @@ block content %}
                 </div>
               </div>
             </div>
+            <div class="button">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
           </div>
           <div class="bonus"><b>PROJECTS</b></div>
           <div class="left-img">
@@ -220,6 +228,50 @@ block content %}
           <div class="right-img">
             <img src="../../dist/images/cautruc2.png" alt="" />
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recruitment">
+    <div class="bs-container">
+      <div class="bs-col">
+        <div class="bs-row">
+          <div class="main-img">
+            <img src="../../dist/images/recruitment.png" alt="" />
+          </div>
+          <div class="content">
+            <h1><b>TUYỂN DỤNG</b></h1>
+            <div class="more">
+              <img src="../../dist/images/Rectangle 247.png" alt="" />
+              <div class="line"></div>
+            </div>
+            <div class="text">
+              Resources exquisite set arranging moonlight sem him household had.
+              Months had too ham cousin remove far spirit. She procuring the why
+              performed continual improving.
+            </div>
+            <button>NỘP ĐƠN >></button>
+            <div class="bonus"><b>RECRUITMENT</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="latest-news">
+    <div class="bs-container">
+      <div class="bs-col">
+        <div class="bs-row">
+          <div class="title"><b>TIN MỚI NHẤT</b></div>
+          <div class="more">
+            <div class="line"></div>
+            <img src="../../dist/images/Rectangle 247.png" alt="" />
+            <div class="line"></div>
+          </div>
+          <div class="content"></div>
+          <button>XEM TIẾP</button>
+          <div class="bonus">LASTEST NEWS.</div>
         </div>
       </div>
     </div>
