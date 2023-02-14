@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-html {
+body {
   overflow-x: hidden;
 }
 #head {
@@ -11,7 +11,7 @@ html {
   .background-slide {
     position: absolute;
     top: 0;
-    right: -8px;
+    right: 0;
     width: 922px;
     height: 787px;
     img {
@@ -207,4 +207,67 @@ html {
       background-color: #1bcd8d;
     }
   }
+}
+@media only screen and (min-width: 1350px) {
+  #head {
+    .background-slide {
+      right: -14px;
+    }
+    .head-banner {
+      left: 9%;
+    }
+  }
+}
+@media only screen and (max-width: 1350px) and (min-width: 1199px) {
+  #head {
+    .head-top {
+      .item {
+        i {
+          font-size: 14px;
+          margin-left: 60px;
+        }
+        .hotline {
+          font-size: 14px;
+          line-height: 12px;
+        }
+        input {
+          margin-left: 150px;
+          width: 200px;
+          height: 30px;
+        }
+        .icon {
+          position: absolute;
+          right: 231px;
+          top: 13px;
+        }
+        .country {
+          width: 45px;
+          height: 25px;
+          margin-top: -1px;
+          img {
+            height: 16px;
+            margin-left: -22px;
+            width: 30px;
+            padding-left: 7px;
+            margin-top: 5px;
+          }
+          i {
+            margin-top: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+}
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+}
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+}
+@media only screen and (max-width: 500px) and (min-width: 425px) {
+}
+@media only screen and (max-width: 425px) and (min-width: 320px) {
 }
