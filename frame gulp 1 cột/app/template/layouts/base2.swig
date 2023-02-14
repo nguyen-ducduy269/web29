@@ -20,6 +20,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Link owl carousel -->
+    <link
+      rel="stylesheet"
+      href="../../../dist/lib/owlcarousel/assets/owl.carousel.min.css"
+    />
     <!-- Link font awesome -->
     <link
       rel="stylesheet"
@@ -34,6 +39,8 @@
     {% include '../modules/header2.swig' %} {% block content %} {% endblock%} {%
     include '../modules/footer2.swig' %}
     <script src="js/tool.min.js"></script>
+    <!-- Link Owl Carousel -->
+    <script src="../../../dist/lib/owlcarousel/owl.carousel.js"></script>
     <script src="js/main.min.js"></script>
     <script>
       {% block script %}{% endblock %}

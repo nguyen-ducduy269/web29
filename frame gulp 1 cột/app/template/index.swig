@@ -263,81 +263,83 @@ block content %}
     <div class="bs-container">
       <div class="bs-col">
         <div class="bs-row">
-          <div class="title"><b>TIN MỚI NHẤT</b></div>
-          <div class="more">
-            <div class="line"></div>
-            <img src="../../dist/images/Rectangle 247.png" alt="" />
-            <div class="line"></div>
-          </div>
-          <div class="main-content">
-            <div class="content">
-              <img src="../../dist/images/news1.png" alt="" />
-              <div class="discription">
-                <div class="heading">
-                  <div class="clock"><i class="fa-regular fa-clock"></i></div>
-                  <div class="text">5.december.2020</div>
-                  <div class="block">|</div>
-                  <div class="eye">
-                    <i class="fa-regular fa-eye"></i>
+          <div class="news_module">
+            <div class="title"><b>TIN MỚI NHẤT</b></div>
+            <div class="more">
+              <div class="line"></div>
+              <img src="../../dist/images/Rectangle 247.png" alt="" />
+              <div class="line"></div>
+            </div>
+            <div class="main-content">
+              <div class="content">
+                <img src="../../dist/images/news1.png" alt="" />
+                <div class="discription">
+                  <div class="heading">
+                    <div class="clock"><i class="fa-regular fa-clock"></i></div>
+                    <div class="text">5.december.2020</div>
+                    <div class="block">|</div>
+                    <div class="eye">
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                    <div class="view">328</div>
                   </div>
-                  <div class="view">328</div>
-                </div>
-                <div class="text">
-                  Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
-                </div>
-                <div class="button">
-                  <h4>Xem thêm</h4>
-                  <button>+</button>
+                  <div class="text">
+                    Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
+                  </div>
+                  <div class="button">
+                    <h4>Xem thêm</h4>
+                    <button>+</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="content">
-              <img src="../../dist/images/news1.png" alt="" />
-              <div class="discription">
-                <div class="heading">
-                  <div class="clock"><i class="fa-regular fa-clock"></i></div>
-                  <div class="text">5.december.2020</div>
-                  <div class="block">|</div>
-                  <div class="eye">
-                    <i class="fa-regular fa-eye"></i>
+              <div class="content">
+                <img src="../../dist/images/news1.png" alt="" />
+                <div class="discription">
+                  <div class="heading">
+                    <div class="clock"><i class="fa-regular fa-clock"></i></div>
+                    <div class="text">5.december.2020</div>
+                    <div class="block">|</div>
+                    <div class="eye">
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                    <div class="view">328</div>
                   </div>
-                  <div class="view">328</div>
-                </div>
-                <div class="text">
-                  Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
-                </div>
-                <div class="button">
-                  <h4>Xem thêm</h4>
-                  <button>+</button>
+                  <div class="text">
+                    Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
+                  </div>
+                  <div class="button">
+                    <h4>Xem thêm</h4>
+                    <button>+</button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="content">
-              <img src="../../dist/images/news1.png" alt="" />
-              <div class="discription">
-                <div class="heading">
-                  <div class="clock"><i class="fa-regular fa-clock"></i></div>
-                  <div class="text">5.december.2020</div>
-                  <div class="block">|</div>
-                  <div class="eye">
-                    <i class="fa-regular fa-eye"></i>
+              <div class="content">
+                <img src="../../dist/images/news1.png" alt="" />
+                <div class="discription">
+                  <div class="heading">
+                    <div class="clock"><i class="fa-regular fa-clock"></i></div>
+                    <div class="text">5.december.2020</div>
+                    <div class="block">|</div>
+                    <div class="eye">
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                    <div class="view">328</div>
                   </div>
-                  <div class="view">328</div>
-                </div>
-                <div class="text">
-                  Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
-                </div>
-                <div class="button">
-                  <h4>Xem thêm</h4>
-                  <button>+</button>
+                  <div class="text">
+                    Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
+                  </div>
+                  <div class="button">
+                    <h4>Xem thêm</h4>
+                    <button>+</button>
+                  </div>
                 </div>
               </div>
             </div>
+            <button class="xemthem">XEM TIẾP</button>
+            <div class="bonus"><b>LATEST NEWS</b></div>
           </div>
-          <button>XEM TIẾP</button>
-          <div class="bonus">LASTEST NEWS.</div>
         </div>
       </div>
     </div>
