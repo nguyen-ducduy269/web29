@@ -5,14 +5,14 @@
   <div class="head-top">
     <div class="bs-container">
       <div class="row">
-        <div class="col-6 col-md-6 col-sm-6">
+        <div class="col-6 col-md-6 col-sm-4 col-xs-6">
           <div class="item">
             <i class="fa-solid fa-phone-flip"></i>
             <div class="hotline">HOTLINE:1900 2863</div>
           </div>
         </div>
 
-        <div class="col-6 col-md-6 col-sm-6">
+        <div class="col-6 col-md-6 col-sm-8 col-xs-6">
           <div class="item">
             <input type="search" placeholder="Search..." />
             <div class="icon">
@@ -40,12 +40,12 @@
     <div class="bs-container">
       <div class="nav-content clearfix">
         <div class="bs-row">
-          <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <div class="logo">
               <a href="#"><img src="../../../dist/images/logo.png" alt="" /></a>
             </div>
           </div>
-          <div class="col-lg-8 col-md-8 col-sm-8">
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
             <div class="nav">
               <span class="show__menu"><i class="fa-solid fa-bars"></i></span>
               <div class="menu">

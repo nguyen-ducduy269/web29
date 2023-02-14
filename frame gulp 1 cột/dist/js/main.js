@@ -46,7 +46,7 @@ $(".show__menu").on("click", function () {
   x.css("left", "0");
 });
 $(".close__menu").on("click", function () {
-  x.css("left", "-250px");
+  x.css("left", "-50%");
 });
 
 $("#footer-details").owlCarousel({
