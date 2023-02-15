@@ -68,6 +68,9 @@
             margin-top: 5px;
           }
         }
+        .other {
+          display: none;
+        }
       }
 
       .about-content {
@@ -104,6 +107,7 @@
       top: -312px;
       left: 0;
       width: 315px;
+      z-index: -1;
     }
     .cautruc1 {
       position: absolute;
@@ -111,12 +115,14 @@
       top: -100px;
       left: 36%;
       width: 428px;
+      z-index: -1;
       height: 250px;
     }
     .cautruc2 {
       position: absolute;
       top: 193px;
       width: 300px;
+      z-index: -1;
       left: 187px;
     }
     .mayphai {
@@ -124,6 +130,7 @@
       right: 0;
       width: 403px;
       top: 62%;
+      z-index: -1;
     }
   }
 }
@@ -160,6 +167,9 @@
           background-color: #8397b9;
           margin-top: 9px;
         }
+      }
+      .other {
+        display: none;
       }
     }
 
@@ -379,6 +389,7 @@
             width: 206px;
             height: 100%;
             position: relative;
+            overflow: hidden;
             img {
               position: absolute;
               left: 50%;
@@ -388,13 +399,12 @@
               top: -14px;
             }
             .discription {
-              display: none;
               position: absolute;
               width: 196px;
               height: 42px;
               background-color: #fff;
               bottom: 6px;
-              right: 5px;
+              right: 205px;
               .title {
                 position: absolute;
                 left: 9px;
@@ -424,29 +434,9 @@
               }
             }
             &:hover {
-              animation: itemmove 0.5s infinite;
-              @keyframes itemmove {
-                from {
-                  top: 0px;
-                }
-                to {
-                  top: -10px;
-                }
-              }
+              transform: translateY(-10px);
               .discription {
-                display: block;
-                animation: dismove 0.5s infinite;
-                @keyframes dismove {
-                  from {
-                    left: -200px;
-                  }
-                  to {
-                    left: 0px;
-                  }
-                }
-                button {
-                  transform: translateX(180deg);
-                }
+                right: 5px;
               }
             }
           }
@@ -546,6 +536,9 @@
         margin-left: 10px;
         margin-top: 6px;
       }
+    }
+    .other {
+      display: none;
     }
     .text {
       font-size: 12px;
@@ -721,4 +714,490 @@
       }
     }
   }
+}
+@media only screen and (max-width: 1350px) and (min-width: 1199px) {
+  .about-us {
+    .module-index {
+      .content {
+        .about-header {
+          .other {
+            display: none;
+          }
+        }
+        .about-content {
+          h1 {
+            margin-left: -90px;
+          }
+        }
+      }
+    }
+  }
+  .latest-news {
+    .bs-row {
+      .news_module {
+        .xemthem {
+          width: 130px;
+          height: 35px;
+        }
+        .bonus {
+          right: 6%;
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .about-us {
+    margin-top: 50px;
+    .module-index {
+      display: flex;
+      flex-direction: column-reverse;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        .about-header {
+          width: unset;
+          .title {
+            font-size: 45px;
+            padding: 0;
+          }
+          .other {
+            display: none;
+          }
+        }
+        .about-content {
+          margin-left: 0;
+          .text {
+            font-size: 16px;
+          }
+          button {
+            width: 135px;
+            height: 37px;
+          }
+          h1 {
+            position: absolute;
+            right: 20%;
+            bottom: 50%;
+            font-size: 55px;
+          }
+        }
+      }
+    }
+    .outside {
+      .cautruc1 {
+        position: absolute;
+        top: -90px;
+        width: 428px;
+        z-index: -1;
+        height: 250px;
+        left: 50%;
+      }
+      .cautruc2 {
+        position: absolute;
+        top: 160px;
+        width: 300px;
+        z-index: -1;
+        left: 170px;
+      }
+      .mayphai {
+        right: -100px;
+      }
+    }
+  }
+  .activity {
+    .module-activity {
+      .act-title {
+        margin-left: 80px;
+      }
+      .act-content {
+        .main-content {
+          .design {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+  .project {
+    .module-project {
+      .module {
+        margin-left: -45px;
+        .title {
+          h4 {
+            font-size: 16px;
+          }
+          h1 {
+            width: 70%;
+          }
+          .more {
+            width: 70%;
+          }
+        }
+        .content {
+          margin-top: 0px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .recruitment {
+    .content {
+      .bonus {
+        bottom: 30px;
+        font-size: 60px;
+        left: -70px;
+      }
+    }
+  }
+  .latest-news {
+    .bs-row {
+      .news_module {
+        .main-content {
+          margin-top: 50px;
+          .content {
+            width: 100%;
+            .discription {
+              .heading {
+                margin-left: 30px;
+                .clock {
+                  margin-right: -6px;
+                }
+              }
+              .button {
+                button {
+                  font-size: 24px;
+                  width: 35px;
+                  height: 35px;
+                }
+              }
+            }
+          }
+        }
+        .xemthem {
+          width: 135px;
+          height: 40px;
+        }
+        .bonus {
+          right: 40px;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .about-us {
+    margin-top: 50px;
+    .module-index {
+      display: flex;
+      flex-direction: column-reverse;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        .about-header {
+          width: unset;
+          .more {
+            display: none;
+          }
+          .other {
+            display: block;
+          }
+          .other {
+            display: flex;
+            width: 230px;
+            margin: 0 auto;
+            img {
+              margin: 0px 10px;
+            }
+            .line {
+              width: 100px;
+              height: 2px;
+              background-color: #8397b9;
+              margin-top: 8px;
+            }
+          }
+          .title {
+            font-size: 45px;
+            padding: 0;
+          }
+        }
+        .about-content {
+          margin-left: 0;
+          .text {
+            font-size: 16px;
+          }
+          button {
+            width: 135px;
+            height: 37px;
+          }
+          h1 {
+            position: absolute;
+            right: 20%;
+            bottom: 50%;
+            font-size: 55px;
+          }
+        }
+      }
+    }
+    .outside {
+      .cautruc1 {
+        position: absolute;
+        top: -90px;
+        width: 428px;
+        z-index: -1;
+        height: 250px;
+        left: 50%;
+      }
+      .cautruc2 {
+        position: absolute;
+        top: 160px;
+        width: 300px;
+        z-index: -1;
+        left: 70px;
+      }
+      .mayphai {
+        right: -130px;
+        width: 345px;
+        top: 70%;
+      }
+      .maytrai {
+        display: none;
+      }
+    }
+  }
+  .activity {
+    .module-activity {
+      .act-title {
+        margin-left: 0px;
+        height: 90px;
+        h2 {
+          text-align: center;
+        }
+        .more {
+          display: none;
+        }
+        .other {
+          display: block;
+        }
+        .other {
+          display: flex;
+          width: 230px;
+          margin: 0 auto;
+          img {
+            width: 12px;
+            height: 12px;
+            margin: 0 10px;
+          }
+          .line {
+            width: 100px;
+            height: 3px;
+            background-color: #8397b9;
+            margin-top: 5px;
+          }
+        }
+      }
+      .act-content {
+        display: flex;
+        flex-direction: column;
+        .main-content {
+          .design {
+            height: 70px;
+            width: 400px;
+            margin: 0 auto;
+            img {
+              width: 60px;
+            }
+            .title {
+              font-size: 16px;
+            }
+            .text {
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .content-img {
+          img {
+            width: 485px;
+            margin-left: 20%;
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+  .project {
+    .module-project {
+      .module {
+        margin-left: -20px;
+        .title {
+          h4 {
+            font-size: 16px;
+            white-space: nowrap;
+          }
+          h1 {
+            width: 100%;
+          }
+          .more {
+            width: 100%;
+          }
+        }
+        .content {
+          margin-top: 0px;
+          width: 100%;
+          right: 20px;
+        }
+        .mutiple {
+          max-width: 100%;
+          .multiple-items {
+            max-width: 100%;
+            object-fit: cover;
+            gap: 10px;
+            .item {
+              width: 180px;
+            }
+          }
+        }
+      }
+    }
+    .left-img {
+      display: none;
+    }
+    .right-img {
+      display: none;
+    }
+    .bonus {
+      font-size: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -83px;
+    }
+  }
+  .recruitment {
+    margin-top: 200px;
+    .bs-row {
+      display: flex;
+      flex-direction: column-reverse;
+      .content {
+        width: 100%;
+        left: 0;
+        top: -30px;
+        h1 {
+          text-align: center;
+          font-size: 45px;
+        }
+        .more {
+          display: none;
+        }
+        .other {
+          display: block;
+        }
+        .other {
+          display: flex;
+          width: 230px;
+          margin: 0 auto;
+          img {
+            width: 12px;
+            height: 12px;
+            margin: 0 10px;
+          }
+          .line {
+            width: 100px;
+            height: 3px;
+            background-color: #8397b9;
+          }
+        }
+        .text {
+          width: 60%;
+          margin: 0 auto;
+          text-align: center;
+          margin-top: 20px;
+        }
+        button {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          margin: 0;
+          margin-top: 10px;
+        }
+        .bonus {
+          bottom: -60px;
+          left: unset;
+          right: 0;
+          font-size: 40px;
+        }
+      }
+      .main-img {
+        width: 100%;
+        margin-top: 100px;
+        img {
+          width: 440px;
+          height: 500px;
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+  .latest-news {
+    .bs-row {
+      .news_module {
+        max-width: 100%;
+        .main-content {
+          margin-top: 50px;
+          gap: 10px;
+          .content {
+            img {
+              max-width: 100%;
+              height: 180px;
+            }
+            .discription {
+              position: absolute;
+              background-color: #fff;
+              width: 90%;
+              height: 140px;
+              bottom: 30px;
+              .heading {
+                margin-left: 10px;
+                .clock {
+                  margin-right: -5px;
+                }
+                .text {
+                  margin-left: 10px;
+                }
+              }
+              .text {
+                font-size: 14px;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+        button {
+          width: 150px;
+          height: 40px;
+          bottom: -32px;
+          font-size: 14px;
+        }
+        .bonus {
+          right: 23px;
+          bottom: -40px;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+}
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+}
+@media only screen and (max-width: 500px) and (min-width: 425px) {
+}
+@media only screen and (max-width: 425px) and (min-width: 320px) {
 }

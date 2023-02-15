@@ -26,6 +26,11 @@ block content %}
                   <img src="../../dist/images/Rectangle 247.png" alt="" />
                   <div class="line"></div>
                 </div>
+                <div class="other">
+                  <div class="line"></div>
+                  <img src="../../dist/images/Rectangle 247.png" alt="" />
+                  <div class="line"></div>
+                </div>
               </div>
               <div class="about-content">
                 <div class="text">
@@ -54,6 +59,11 @@ block content %}
             <div class="act-title">
               <h2><b>LĨNH VỰC HOẠT ĐỘNG</b></h2>
               <div class="more">
+                <img src="../../dist/images/Rectangle 247.png" alt="" />
+                <div class="line"></div>
+              </div>
+              <div class="other">
+                <div class="line"></div>
                 <img src="../../dist/images/Rectangle 247.png" alt="" />
                 <div class="line"></div>
               </div>
@@ -133,7 +143,7 @@ block content %}
       <div class="bs-row">
         <div class="bs-col">
           <div class="module-project">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="module">
                 <div class="title">
                   <h4>DỰ ÁN MỚI NHẤT</h4>
@@ -154,7 +164,7 @@ block content %}
                 </div>
               </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
               <div class="module">
                 <div class="mutiple">
                   <div class="multiple-items">
@@ -243,6 +253,11 @@ block content %}
           <div class="content">
             <h1><b>TUYỂN DỤNG</b></h1>
             <div class="more">
+              <img src="../../dist/images/Rectangle 247.png" alt="" />
+              <div class="line"></div>
+            </div>
+            <div class="other">
+              <div class="line"></div>
               <img src="../../dist/images/Rectangle 247.png" alt="" />
               <div class="line"></div>
             </div>
