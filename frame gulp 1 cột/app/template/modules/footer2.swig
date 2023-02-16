@@ -3,7 +3,7 @@
     <div class="bs-col">
       <div class="bs-row">
         <div class="footer-module">
-          <div class="col-md-6">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
             <div class="item">
               <div class="main-content">
                 <img src="../../../dist/images/footer-main.png" alt="" />
@@ -24,7 +24,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
             <div class="item">
               <div class="service">
                 <div class="title"><b>DỊCH VỤ</b></div>
@@ -35,7 +35,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <div class="item">
               <div class="service2">
                 <div class="title"><b>DỊCH VỤ</b></div>

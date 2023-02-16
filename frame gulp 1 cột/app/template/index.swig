@@ -152,6 +152,11 @@ block content %}
                     <img src="../../dist/images/Rectangle 247.png" alt="" />
                     <div class="line"></div>
                   </div>
+                  <div class="other">
+                    <div class="line"></div>
+                    <img src="../../dist/images/Rectangle 247.png" alt="" />
+                    <div class="line"></div>
+                  </div>
                 </div>
                 <div class="content">
                   <a href=""><div class="noidung">TẤT CẢ</div></a>
@@ -354,6 +359,9 @@ block content %}
             </div>
             <button class="xemthem">XEM TIẾP</button>
             <div class="bonus"><b>LATEST NEWS</b></div>
+          </div>
+          <div class="news-img">
+            <img src="../../dist/images/world.png" alt="" />
           </div>
         </div>
       </div>
