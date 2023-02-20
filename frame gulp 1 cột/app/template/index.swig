@@ -174,7 +174,11 @@ block content %}
                 <div class="mutiple">
                   <div class="multiple-items">
                     <div class="item">
-                      <img src="../../dist/images/building1.png" alt="" />
+                      <img
+                        class="project-img"
+                        src="../../dist/images/building1.png"
+                        alt=""
+                      />
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
@@ -182,7 +186,11 @@ block content %}
                       </div>
                     </div>
                     <div class="item">
-                      <img src="../../dist/images/building2.png" alt="" />
+                      <img
+                        class="project-img"
+                        src="../../dist/images/building2.png"
+                        alt=""
+                      />
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
@@ -190,7 +198,11 @@ block content %}
                       </div>
                     </div>
                     <div class="item">
-                      <img src="../../dist/images/building3.png" alt="" />
+                      <img
+                        class="project-img"
+                        src="../../dist/images/building3.png"
+                        alt=""
+                      />
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
@@ -200,7 +212,11 @@ block content %}
                   </div>
                   <div class="multiple-items">
                     <div class="item">
-                      <img src="../../dist/images/building2.png" alt="" />
+                      <img
+                        class="project-img"
+                        src="../../dist/images/building2.png"
+                        alt=""
+                      />
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
@@ -208,7 +224,11 @@ block content %}
                       </div>
                     </div>
                     <div class="item">
-                      <img src="../../dist/images/building4.png" alt="" />
+                      <img
+                        class="project-img"
+                        src="../../dist/images/building4.png"
+                        alt=""
+                      />
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
@@ -216,7 +236,11 @@ block content %}
                       </div>
                     </div>
                     <div class="item">
-                      <img src="../../dist/images/building5.png" alt="" />
+                      <img
+                        class="project-img"
+                        src="../../dist/images/building5.png"
+                        alt=""
+                      />
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
@@ -224,6 +248,55 @@ block content %}
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div class="popup">
+                <div class="main-pop">
+                  <img src="../../dist/images/popup.png" alt="" />
+                  <div class="title"><b>DỰ ÁN N04B - NGOẠI GIAO ĐOÀN</b></div>
+                  <div class="main-content">
+                    <div class="content">
+                      <div class="name">Tên dự án</div>
+                      <div class="dis">
+                        : Tổ hợp chung cư cao tầng N04B - Khu đoàn Ngoại giao
+                        tại Hà Nội
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="name">Chủ đầu tư</div>
+                      <div class="dis">
+                        : Công ty Cổ phần Đầu tư Xây dựng Bất động sản Lanmak
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="name">Hạng mục</div>
+                      <div class="dis">
+                        : Phần kết cấu thân nhà/ Phần hoàn thiện kiến trúc
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="name">Địa điểm</div>
+                      <div class="dis">
+                        : Khu đoàn Ngoại giao, Xuân Tảo, Bắc Từ Liêm, Hà Nội
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="name">Loại công trình</div>
+                      <div class="dis">: Dân dụng, căn hộ chung cư</div>
+                    </div>
+                    <div class="content">
+                      <div class="name">Cấp công trình</div>
+                      <div class="dis">: Cấp 1</div>
+                    </div>
+                    <div class="content">
+                      <div class="name">Thời gian thực hiện</div>
+                      <div class="dis">: 2013-2015</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="layout"></div>
+                <div class="close-pop">
+                  <i class="fa-regular fa-circle-xmark"></i>
                 </div>
               </div>
             </div>
