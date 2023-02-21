@@ -879,10 +879,10 @@
     .module-project {
       .popup {
         .main-pop {
-          margin-top: 22%;
+          margin-top: 3%;
         }
         .close-pop {
-          top: 21%;
+          top: 4%;
           right: 21%;
           i {
             font-size: 45px;
@@ -913,11 +913,11 @@
     .module-project {
       .popup {
         .main-pop {
-          margin-top: 25%;
+          margin-top: 3%;
         }
         .close-pop {
-          top: 21%;
-          right: 18%;
+          top: 2%;
+          right: 17%;
           i {
             font-size: 45px;
           }
@@ -1036,11 +1036,11 @@
       }
       .popup {
         .main-pop {
-          margin-top: 25%;
+          margin-top: 3%;
         }
         .close-pop {
-          top: 17%;
-          right: 12%;
+          top: 2%;
+          right: 10%;
           i {
             font-size: 45px;
           }
@@ -1259,26 +1259,33 @@
           right: 20px;
         }
         .mutiple {
-          max-width: 100%;
+          width: 100%;
+          margin-top: 70px;
           .multiple-items {
             max-width: 100%;
             object-fit: cover;
             gap: 10px;
             .item {
               width: 180px;
+              .discription {
+                width: 170px;
+              }
             }
           }
         }
       }
       .popup {
         .main-pop {
-          margin-top: 25%;
+          margin-top: 1%;
+          left: 50%;
         }
         .close-pop {
-          top: 21%;
-          right: 4%;
+          top: 2%;
+          left: 9%;
+          z-index: 11;
           i {
-            font-size: 45px;
+            font-size: 26px;
+            color: black;
           }
         }
       }
@@ -1633,7 +1640,34 @@
             gap: 10px;
             .item {
               width: 180px;
+              .discription {
+                width: 170px;
+              }
             }
+          }
+        }
+      }
+      .popup {
+        .main-pop {
+          width: 520px;
+          height: 520px;
+          margin-top: 9%;
+          left: 50%;
+          img {
+            width: 100%;
+            margin-top: 0;
+            height: 330px;
+          }
+          .title {
+            top: 55%;
+          }
+        }
+        .close-pop {
+          top: 2%;
+          left: 9%;
+          z-index: 11;
+          i {
+            font-size: 26px;
           }
         }
       }
@@ -1988,6 +2022,30 @@
           }
         }
       }
+      .popup {
+        .main-pop {
+          width: 435px;
+          height: 520px;
+          margin-top: 8%;
+          left: 50%;
+          img {
+            width: 100%;
+            margin-top: 0;
+            height: 278px;
+          }
+          .title {
+            top: 47%;
+          }
+        }
+        .close-pop {
+          top: 1%;
+          left: 9%;
+          z-index: 11;
+          i {
+            font-size: 26px;
+          }
+        }
+      }
       .button {
         display: none;
       }
@@ -2335,8 +2393,62 @@
           .multiple-items {
             display: flex;
             .item {
-              width: 160px;
+              width: 135px;
+              .discription {
+                width: 100%;
+                right: 0;
+                left: 0;
+                .title {
+                  left: 2px;
+                  font-size: 9px;
+                  top: 10px;
+                }
+                .more {
+                  left: 2px;
+                }
+              }
             }
+          }
+        }
+      }
+      .popup {
+        .main-pop {
+          width: 365px;
+          height: 475px;
+          margin-top: 18%;
+          left: 50%;
+          img {
+            width: 100%;
+            margin-top: 0;
+            height: 245px;
+          }
+          .title {
+            top: 44%;
+            width: 85%;
+            white-space: nowrap;
+            line-height: 50px;
+            font-size: 17px;
+          }
+          .main-content {
+            margin-top: 15px;
+            .content {
+              width: 100%;
+              .name {
+                font-size: 10px;
+                width: 20%;
+              }
+              .dis {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .close-pop {
+          top: 7%;
+          left: 9%;
+          z-index: 11;
+          i {
+            font-size: 26px;
           }
         }
       }
@@ -2688,7 +2800,61 @@
             display: flex;
             .item {
               width: 135px;
+              .discription {
+                width: 100%;
+                right: 0;
+                left: 0;
+                .title {
+                  left: 2px;
+                  font-size: 9px;
+                  top: 10px;
+                }
+                .more {
+                  left: 2px;
+                }
+              }
             }
+          }
+        }
+      }
+      .popup {
+        .main-pop {
+          width: 365px;
+          height: 475px;
+          margin-top: 18%;
+          left: 50%;
+          img {
+            width: 100%;
+            margin-top: 0;
+            height: 245px;
+          }
+          .title {
+            top: 44%;
+            width: 85%;
+            white-space: nowrap;
+            line-height: 50px;
+            font-size: 17px;
+          }
+          .main-content {
+            margin-top: 15px;
+            .content {
+              width: 100%;
+              .name {
+                font-size: 10px;
+                width: 20%;
+              }
+              .dis {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .close-pop {
+          top: 7%;
+          left: 9%;
+          z-index: 11;
+          i {
+            font-size: 26px;
           }
         }
       }
@@ -2788,7 +2954,7 @@
             width: 80%;
             margin: 0 auto;
             margin-bottom: 50px;
-            z-index: 5;
+            z-index: 0;
             img {
               width: 100%;
               height: 100%;
@@ -3061,6 +3227,47 @@
                 right: 31px;
               }
             }
+          }
+        }
+      }
+      .popup {
+        .main-pop {
+          width: 302px;
+          height: 475px;
+          margin-top: 23%;
+          left: 50%;
+          img {
+            width: 100%;
+            margin-top: 0;
+            height: 245px;
+          }
+          .title {
+            top: 44%;
+            width: 85%;
+            white-space: nowrap;
+            line-height: 50px;
+            font-size: 15px;
+          }
+          .main-content {
+            margin-top: 15px;
+            .content {
+              width: 100%;
+              .name {
+                font-size: 10px;
+                width: 20%;
+              }
+              .dis {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .close-pop {
+          top: 7%;
+          left: 9%;
+          z-index: 11;
+          i {
+            font-size: 26px;
           }
         }
       }

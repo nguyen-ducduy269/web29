@@ -65,7 +65,7 @@
                     <a href="product.html" class="menu-list__link">DỰ ÁN</a>
                   </li>
                   <li class="menu-list__item">
-                    <a href="news.html" class="menu-list__link">TIN TỨC</a>
+                    <a href="new.html" class="menu-list__link">TIN TỨC</a>
                   </li>
                   <li class="menu-list__item">
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
@@ -97,7 +97,7 @@
                     <a href="product.html" class="menu-list__link">DỰ ÁN</a>
                   </li>
                   <li class="menu-list__item">
-                    <a href="#" class="menu-list__link">TIN TỨC</a>
+                    <a href="new.html" class="menu-list__link">TIN TỨC</a>
                   </li>
                   <li class="menu-list__item">
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
