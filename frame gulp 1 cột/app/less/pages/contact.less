@@ -1,0 +1,129 @@
+html {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+#contact {
+  .section-contact {
+    .module-contact {
+      width: 100%;
+      height: 100px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      .contact {
+        width: 28%;
+        height: 100%;
+        .location {
+          width: 87%;
+          display: flex;
+          margin-left: 40px;
+          margin-top: 8px;
+          height: 80px;
+          .main-img {
+            width: 132px;
+            margin-top: 4px;
+            height: 76px;
+            background: rgba(239, 243, 250);
+            border-radius: 41px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            img {
+              width: 22px;
+              height: 22px;
+            }
+          }
+          .text {
+            color: rgba(17, 59, 94);
+            padding-left: -18px;
+            margin-top: 25px;
+            font-size: 12px;
+            width: 365px;
+            padding-left: 11px;
+            line-height: 16px;
+          }
+          &:hover {
+            .main-img {
+              background: rgba(27, 205, 141);
+            }
+          }
+        }
+        .call {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-left: 33px;
+          .main-img {
+            width: 76px;
+            margin-top: -1px;
+            height: 72px;
+            border-radius: 41px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            img {
+              width: 22px;
+              height: 22px;
+            }
+          }
+          .active {
+            background: rgba(27, 205, 141);
+          }
+          .number {
+            font-size: 20px;
+            padding-left: 10px;
+            font-family: "OpenSans";
+          }
+          &:hover {
+            .number {
+              color: black;
+            }
+          }
+        }
+        .mail {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          margin-left: 25px;
+          .main-img {
+            width: 76px;
+            margin-top: -1px;
+            height: 72px;
+            background: rgba(239, 243, 250);
+            border-radius: 41px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            img {
+              width: 22px;
+              height: 18px;
+            }
+          }
+          .gmail {
+            font-family: "OpenSans";
+            color: rgb(0, 45, 82);
+            font-size: 14px;
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+    .module-infor {
+      width: 100%;
+    }
+  }
+  .section-infor {
+    width: 100%;
+    height: 368px;
+    background-color: red;
+    margin-top: 30px;
+  }
+}

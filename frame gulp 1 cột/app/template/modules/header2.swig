@@ -73,7 +73,7 @@
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
                   </li>
                   <li class="menu-list__item">
-                    <a href="contacts.html" class="menu-list__link">LIÊN HỆ</a>
+                    <a href="contact.html" class="menu-list__link">LIÊN HỆ</a>
                   </li>
                 </ul>
               </div>
@@ -105,7 +105,7 @@
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
                   </li>
                   <li class="menu-list__item">
-                    <a href="contacts.html" class="menu-list__link">LIÊN HỆ</a>
+                    <a href="contact.html" class="menu-list__link">LIÊN HỆ</a>
                   </li>
                 </ul>
               </div>

@@ -114,8 +114,8 @@
     </div>
   </div>
   <div class="header-banner">
-    <div class="title">TIN TỨC</div>
-    <div class="description">Trang chủ / Tin tức</div>
+    <div class="title">LIÊN HỆ</div>
+    <div class="description">Trang chủ / Liên hệ</div>
     <div class="layout"></div>
   </div>
 </header>
