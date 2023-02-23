@@ -70,7 +70,7 @@ block content %}
         <input type="text" placeholder="Email" />
         <input type="text" placeholder="Số điện thoại" />
       </div>
-      <div class="content">
+      <div class="content">s
         <input type="text" placeholder="Nội dung..." />
       </div>
       <button>GỬI TIN</button>

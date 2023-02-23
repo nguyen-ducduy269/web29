@@ -48,7 +48,7 @@
               <span class="show__menu"><i class="fa-solid fa-bars"></i></span>
               <div class="menu">
                 <ul class="menu-list clearfix">
-                  <li class="menu-list__item">
+                  <li class="menu-list__item list-active">
                     <a href="index.html" class="menu-list__link active"
                       >TRANG CHỦ</a
                     >
