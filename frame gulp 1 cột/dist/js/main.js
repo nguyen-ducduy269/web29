@@ -76,6 +76,9 @@ let pop = $(".popup");
 $(".project-img").on("click", function () {
   pop.css("display", "block");
 });
+$(".mutiple-button").on("click", function () {
+  pop.css("display", "block");
+});
 $(".close-pop").on("click", function () {
   pop.css("display", "none");
 });

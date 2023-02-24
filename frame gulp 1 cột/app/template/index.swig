@@ -182,7 +182,7 @@ block content %}
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
-                        <button>+</button>
+                        <button class="mutiple-button">+</button>
                       </div>
                     </div>
                     <div class="item">
@@ -194,7 +194,7 @@ block content %}
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
-                        <button>+</button>
+                        <button class="mutiple-button">+</button>
                       </div>
                     </div>
                     <div class="item">
@@ -206,7 +206,7 @@ block content %}
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
-                        <button>+</button>
+                        <button class="mutiple-button">+</button>
                       </div>
                     </div>
                   </div>
@@ -220,7 +220,7 @@ block content %}
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
-                        <button>+</button>
+                        <button class="mutiple-button">+</button>
                       </div>
                     </div>
                     <div class="item">
@@ -232,7 +232,7 @@ block content %}
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
-                        <button>+</button>
+                        <button class="mutiple-button">+</button>
                       </div>
                     </div>
                     <div class="item">
@@ -244,7 +244,7 @@ block content %}
                       <div class="discription">
                         <div class="title">TÒA NHÀ THÀNH PHỐ</div>
                         <div class="more">Thương mại</div>
-                        <button>+</button>
+                        <button class="mutiple-button">+</button>
                       </div>
                     </div>
                   </div>
