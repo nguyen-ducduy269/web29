@@ -139,32 +139,84 @@ body {
                 height: 27px;
                 text-align: center;
                 line-height: 27px;
-                margin-left: -22px;
                 margin-right: 20px;
-              }
-              a {
-                width: 81px;
-                text-decoration: none;
-                color: #fff;
-                font-size: 11px;
-                font-weight: 600;
-                display: block;
-                white-space: nowrap;
-                height: 27px;
-                line-height: 27px;
-                text-align: center;
-                &:hover {
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: -5px;
+                  left: -4px;
+                  width: 30px;
+                  height: 1px;
                   background-color: #1bcd8d;
+                  animation: topmove 0.55s infinite;
+                }
+                @keyframes topmove {
+                  from {
+                    left: -4px;
+                  }
+                  to {
+                    left: 56px;
+                  }
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -4px;
+                  right: 15px;
+                  width: 30px;
+                  height: 1px;
+                  background-color: #1bcd8d;
+                  animation: bottommove 0.55s infinite;
+                }
+                @keyframes bottommove {
+                  from {
+                    right: 15px;
+                  }
+                  to {
+                    right: 75px;
+                  }
                 }
               }
-              .active {
-                display: block;
-                width: 81px;
-                height: 26px;
-                text-align: center;
-                line-height: 26px;
-                background-color: #1bcd8d;
-                color: #f0fcf7;
+              &:hover {
+                a {
+                  color: #f0fcf7;
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -4px;
+                    left: -4px;
+                    width: 0.5px;
+                    height: 20px;
+                    background-color: #1bcd8d;
+                    animation: leftmove 0.45s infinite;
+                  }
+                  @keyframes leftmove {
+                    from {
+                      bottom: -5px;
+                    }
+                    to {
+                      bottom: 12px;
+                    }
+                  }
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: -7px;
+                    right: -4px;
+                    width: 0.5px;
+                    height: 20px;
+                    background-color: #1bcd8d;
+                    animation: rightmove 0.45s infinite;
+                  }
+                  @keyframes rightmove {
+                    from {
+                      top: -6px;
+                    }
+                    to {
+                      top: 12px;
+                    }
+                  }
+                }
                 &::before {
                   content: "";
                   position: absolute;
@@ -202,6 +254,21 @@ body {
                   }
                 }
               }
+              a {
+                width: 81px;
+                text-decoration: none;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 600;
+                display: block;
+                white-space: nowrap;
+                height: 27px;
+                line-height: 27px;
+                text-align: center;
+                &:hover {
+                  background-color: #1bcd8d;
+                }
+              }
             }
             .list-active {
               &::before {
@@ -226,7 +293,7 @@ body {
                 content: "";
                 position: absolute;
                 top: -7px;
-                right: -4px;
+                right: 15px;
                 width: 0.5px;
                 height: 20px;
                 background-color: #1bcd8d;

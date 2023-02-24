@@ -89,7 +89,15 @@
     );
     border-radius: 10px;
     z-index: 0;
-
+    animation: detail 1.7s infinite alternate;
+    @keyframes detail {
+      from {
+        top: -140px;
+      }
+      to {
+        top: -130px;
+      }
+    }
     &::before {
       content: "";
       position: absolute;

@@ -77,11 +77,12 @@
         margin-top: 38px;
         margin-left: 36px;
         .text {
-          font-size: 12px;
+          font-size: 14px;
           width: 390px;
           line-height: 1.9;
           margin-bottom: 27px;
           color: #1d407d;
+          font-style: italic;
         }
         button {
           width: 125px;
@@ -92,11 +93,22 @@
           color: white;
         }
         h1 {
+          position: absolute;
+          bottom: -120px;
           margin-top: 4px;
           font-size: 77px;
           margin-left: -16px;
           color: white;
           text-shadow: 1px 1px 1px green, 0px 0px green;
+          animation: nut 2s infinite alternate;
+        }
+        @keyframes nut {
+          from {
+            bottom: -120px;
+          }
+          to {
+            bottom: -150px;
+          }
         }
       }
     }
@@ -105,9 +117,18 @@
     .maytrai {
       position: absolute;
       top: -312px;
-      left: 0;
+      left: -100px;
       width: 315px;
       z-index: -1;
+      animation: maytrai 4s infinite alternate;
+    }
+    @keyframes maytrai {
+      from {
+        left: -100px;
+      }
+      to {
+        left: -30px;
+      }
     }
     .cautruc1 {
       position: absolute;
@@ -117,6 +138,15 @@
       width: 428px;
       z-index: -1;
       height: 250px;
+      animation: cautruc1 3s infinite alternate;
+    }
+    @keyframes cautruc1 {
+      from {
+        transform: rotate(3deg);
+      }
+      to {
+        transform: rotate(-10deg);
+      }
     }
     .cautruc2 {
       position: absolute;
@@ -124,13 +154,31 @@
       width: 300px;
       z-index: -1;
       left: 187px;
+      animation: cautruc2 3s infinite alternate;
+    }
+    @keyframes cautruc2 {
+      from {
+        transform: rotate(-15deg);
+      }
+      to {
+        transform: rotate(5deg);
+      }
     }
     .mayphai {
       position: absolute;
-      right: 0;
+      right: -150px;
       width: 403px;
       top: 62%;
       z-index: -1;
+      animation: mayphai 4s infinite alternate;
+    }
+    @keyframes mayphai {
+      from {
+        right: -150px;
+      }
+      to {
+        right: -100px;
+      }
     }
   }
 }
@@ -288,6 +336,15 @@
       left: 43%;
       top: 20px;
       transform: translateX(-16%);
+      animation: bonus 3s infinite alternate;
+    }
+    @keyframes bonus {
+      from {
+        top: 20px;
+      }
+      to {
+        top: 50px;
+      }
     }
   }
 }
@@ -621,6 +678,15 @@
     letter-spacing: 4.2px;
     color: white;
     text-shadow: 1px 1px 1px rgba(46, 214, 153), 0px 0px 3px rgba(46, 214, 153);
+    animation: bons 3s infinite alternate;
+    @keyframes bons {
+      from {
+        bottom: -116px;
+      }
+      to {
+        bottom: -160px;
+      }
+    }
   }
   .left-img {
     position: absolute;
@@ -629,9 +695,18 @@
     transform: rotate(0deg);
     width: 100%;
     z-index: -1;
+    animation: lef 3s infinite alternate;
     img {
       width: 700px;
       height: 1920px;
+    }
+    @keyframes lef {
+      from {
+        transform: rotate(5deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
     }
   }
   .right-img {
@@ -639,9 +714,18 @@
     right: -24px;
     bottom: -46%;
     z-index: -1;
+    animation: righ 3s infinite alternate;
     img {
       width: 513px;
       height: 440px;
+    }
+    @keyframes righ {
+      from {
+        transform: rotate(7deg);
+      }
+      to {
+        transform: rotate(-2deg);
+      }
     }
   }
 }
@@ -719,6 +803,15 @@
       color: #fff;
       text-shadow: 1px 1px 1px rgba(31, 211, 146),
         0px 1px 0px rgba(31, 211, 146);
+      animation: nus 3s infinite alternate;
+      @keyframes nus {
+        from {
+          bottom: 88px;
+        }
+        to {
+          bottom: 50px;
+        }
+      }
     }
   }
 }
@@ -862,6 +955,15 @@
         font-size: 64px;
         color: #fff;
         text-shadow: 1px 1px 1px rgb(31 211 146), 1px 0 1px rgb(31 211 146);
+        animation: latest 3s infinite alternate;
+        @keyframes latest {
+          from {
+            bottom: -40px;
+          }
+          to {
+            bottom: -80px;
+          }
+        }
       }
     }
     .news-img {
