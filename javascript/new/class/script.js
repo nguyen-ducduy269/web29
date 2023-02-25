@@ -116,27 +116,41 @@
 // randomRgbCode() => rgb(12,32,122)
 
 // Bài 10. Viết function vào 1 mảng tên học viên, sắp xếp lại mảng này theo chiều ngược của bảng chữ cái.
-function sortStudent(array) {
-  array.sort(function (a, b) {
-    // sort: sắp xếp mảng theo thứ tự tăng dần
-    return b.localeCompare(a);
-    // localeCompare: sắp xếp mảng theo thứ tự ngược lại
-  });
-  return array;
-}
-console.log(sortStudent(["Nam", "Duy", "Mạnh"]));
+// function sortStudent(array) {
+//   array.sort(function (a, b) {
+//     // sort: sắp xếp mảng theo thứ tự tăng dần
+//     return b.localeCompare(a);
+//     // localeCompare: sắp xếp mảng theo thứ tự ngược lại
+//   });
+//   return array;
+// }
+// console.log(sortStudent(["Nam", "Duy", "Mạnh"]));
 // sortStudents([‘Nam’, ‘Hoa’, ‘Tuấn’]) => [‘Tuấn’, ‘Nam’, ‘Hoa’]
 // Bài 11: Viết function đổi chỗ ngẫu nhiên vị trí của các phần tử trong mảng
-
+function shuffle(arry, value) {
+  for (let i = 0; i < arry.length; i++) {
+    return arry.localeCompare(value[i]);
+  }
+}
+console.log(shuffle([1, 2, 3, 4, 5]));
 // shuffle([1,2,3,4,5]) => [2,3,4,1,5]
 // shuffle([1,2,3,4,5]) => [4,2,3,5,1]
 // Bài 12: Viết function để lấy sự phần tử không xuất hiện ở cả 2 mảng
-
+function symmetricDifference(a, b) {
+  let arr = [];
+  a.filter((el) => !b.includes(el)).forEach((el) => arr.push(el));
+  b.filter((el) => !a.includes(el)).forEach((el) => arr.push(el));
+  return arr;
+}
+console.log(symmetricDifference([1, 2, 3], [1, 2, 4]));
 // symmetricDifference([1, 2, 3], [1, 2, 4]) => [3,4]
 // Bài 13: Viết function lấy tất cả các phần tử không trùng nhau trong cả 2 mảng
-
+function union(a, b) {
+  let arrays = [];
+  a.filter((el) => !arrays.includes(el)).forEach((el) => arrays.push(el));
+  b.filter((el) => !arrays.includes(el)).forEach((el) => arrays.push(el));
+  return arrays;
+}
+console.log(union([1, 2, 3, 4], [2, 3, 4, 5, 6]));
 // union([1, 2, 3, 1], [4, 3, 2, 4]) => [1,2,3,4]
-// union([1, 2, 3, 2, 3], [1, 2, 3, 1, 2]) => [1,2,3]Bài 8: Viết function để tạo mã màu HEX ngẫu nhiên.
-
-// randomHexCode() => #728a98
-// randomHexCode() => #a72938
+// union([1, 2, 3, 2, 3], [1, 2, 3, 1, 2]) => [1,2,3]
