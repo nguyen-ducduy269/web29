@@ -70,8 +70,14 @@ block content %}
         <input type="text" placeholder="Email" />
         <input type="text" placeholder="Số điện thoại" />
       </div>
-      <div class="content">s
-        <input type="text" placeholder="Nội dung..." />
+      <div class="content">
+        <textarea
+          name=""
+          id=""
+          cols="20"
+          rows="10"
+          placeholder="Nội dung..."
+        ></textarea>
       </div>
       <button>GỬI TIN</button>
     </div>

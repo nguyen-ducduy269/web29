@@ -55,10 +55,13 @@ $("#footer-details").owlCarousel({
   nav: true,
   responsive: {
     320: {
-      items: 3,
+      items: 2,
     },
     375: {
       items: 2,
+    },
+    425: {
+      items: 3,
     },
     600: {
       items: 3,

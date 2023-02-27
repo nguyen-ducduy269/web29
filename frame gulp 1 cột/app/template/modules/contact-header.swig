@@ -49,7 +49,7 @@
               <div class="menu">
                 <ul class="menu-list clearfix">
                   <li class="menu-list__item">
-                    <a href="index.html" class="menu-list__link active"
+                    <a href="index.html" class="menu-list__link"
                       >TRANG CHỦ</a
                     >
                   </li>
@@ -70,8 +70,8 @@
                   <li class="menu-list__item">
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
                   </li>
-                  <li class="menu-list__item">
-                    <a href="contact.html" class="menu-list__link">LIÊN HỆ</a>
+                  <li class="menu-list__item list-active">
+                    <a href="contact.html" class="menu-list__link active">LIÊN HỆ</a>
                   </li>
                 </ul>
               </div>

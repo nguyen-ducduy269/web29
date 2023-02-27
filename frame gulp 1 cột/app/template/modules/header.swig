@@ -48,8 +48,8 @@
               <span class="show__menu"><i class="fa-solid fa-bars"></i></span>
               <div class="menu">
                 <ul class="menu-list clearfix">
-                  <li class="menu-list__item list-active">
-                    <a href="index.html" class="menu-list__link active"
+                  <li class="menu-list__item">
+                    <a href="index.html" class="menu-list__link"
                       >TRANG CHỦ</a
                     >
                   </li>
@@ -64,8 +64,8 @@
                   <li class="menu-list__item">
                     <a href="product.html" class="menu-list__link">DỰ ÁN</a>
                   </li>
-                  <li class="menu-list__item">
-                    <a href="new.html" class="menu-list__link">TIN TỨC</a>
+                  <li class="menu-list__item list-active">
+                    <a href="new.html" class="menu-list__link active">TIN TỨC</a>
                   </li>
                   <li class="menu-list__item">
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
