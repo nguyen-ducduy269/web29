@@ -45,13 +45,10 @@
           </div>
           <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="nav">
-              <span class="show__menu"><i class="fa-solid fa-bars"></i></span>
               <div class="menu">
                 <ul class="menu-list clearfix">
                   <li class="menu-list__item">
-                    <a href="index.html" class="menu-list__link"
-                      >TRANG CHỦ</a
-                    >
+                    <a href="index.html" class="menu-list__link">TRANG CHỦ</a>
                   </li>
                   <li class="menu-list__item">
                     <a href="introduce.html" class="menu-list__link"
@@ -71,42 +68,45 @@
                     <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
                   </li>
                   <li class="menu-list__item list-active">
-                    <a href="contact.html" class="menu-list__link active">LIÊN HỆ</a>
+                    <a href="contact.html" class="menu-list__link active"
+                      >LIÊN HỆ</a
+                    >
                   </li>
                 </ul>
               </div>
-              <div class="menu-respon">
-                <span class="close__menu"
-                  ><i class="fa-solid fa-xmark"></i
-                ></span>
-                <ul class="menu-list clearfix">
-                  <li class="menu-list__item">
-                    <a href="index.html" class="menu-list__link active"
-                      >TRANG CHỦ</a
-                    >
-                  </li>
-                  <li class="menu-list__item">
-                    <a href="introduce.html" class="menu-list__link"
-                      >GIỚI THIỆU</a
-                    >
-                  </li>
-                  <li class="menu-list__item">
-                    <a href="service.html" class="menu-list__link">LĨNH VỰC</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a href="product.html" class="menu-list__link">DỰ ÁN</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a href="new.html" class="menu-list__link">TIN TỨC</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a href="contact.html" class="menu-list__link">LIÊN HỆ</a>
-                  </li>
-                </ul>
-              </div>
+            </div>
+          </div>
+          <div id="menu">
+            <span class="show__menu"><i class="fa-solid fa-bars"></i></span>
+            <div class="menu-respon">
+              <span class="close__menu"><i class="fa-solid fa-xmark"></i></span>
+              <ul class="menu-list clearfix">
+                <li class="menu-list__item">
+                  <a href="index.html" class="menu-list__link active"
+                    >TRANG CHỦ</a
+                  >
+                </li>
+                <li class="menu-list__item">
+                  <a href="introduce.html" class="menu-list__link"
+                    >GIỚI THIỆU</a
+                  >
+                </li>
+                <li class="menu-list__item">
+                  <a href="service.html" class="menu-list__link">LĨNH VỰC</a>
+                </li>
+                <li class="menu-list__item">
+                  <a href="product.html" class="menu-list__link">DỰ ÁN</a>
+                </li>
+                <li class="menu-list__item">
+                  <a href="new.html" class="menu-list__link">TIN TỨC</a>
+                </li>
+                <li class="menu-list__item">
+                  <a href="#" class="menu-list__link">TUYỂN DỤNG</a>
+                </li>
+                <li class="menu-list__item">
+                  <a href="contact.html" class="menu-list__link">LIÊN HỆ</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

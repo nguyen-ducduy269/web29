@@ -133,12 +133,6 @@
       }
     }
     .nav {
-      .show__menu {
-        display: none;
-      }
-      .menu-respon {
-        display: none;
-      }
       .menu {
         .menu-list {
           display: flex;
@@ -332,6 +326,14 @@
         }
       }
     }
+    #show-menu {
+      .show__menu {
+        display: none;
+      }
+      .menu-respon {
+        display: none;
+      }
+    }
   }
 }
 .header-banner {
@@ -372,18 +374,6 @@
   .bs-container {
     width: 1170px;
   }
-  .header-nav {
-    .nav-content {
-      .nav {
-        .show__menu {
-          display: none;
-        }
-        .menu-respon {
-          display: none;
-        }
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
@@ -410,9 +400,6 @@
         }
       }
       .nav {
-        .show__menu {
-          display: none;
-        }
         .menu {
           .menu-list {
             margin-left: 0;
@@ -423,9 +410,6 @@
               }
             }
           }
-        }
-        .menu-respon {
-          display: none;
         }
       }
     }
@@ -460,26 +444,28 @@
         }
       }
       .nav {
-        .show__menu {
-          display: block;
-          position: absolute;
-          right: -400px;
-          top: 15px;
-          font-size: 24px;
-        }
         .menu {
           .menu-list {
             display: none;
           }
         }
+      }
+      #show-menu {
+        .show__menu {
+          display: block;
+          position: absolute;
+          right: 15%;
+          top: 50px;
+          font-size: 24px;
+        }
         .menu-respon {
           display: block;
-          width: 250px;
+          width: 30%;
           height: 100%;
           background: white;
           position: fixed;
           top: 0;
-          left: -250px;
+          left: -50%;
           z-index: 10;
           transition: 1s;
           .close__menu {
@@ -528,26 +514,28 @@
         }
       }
       .nav {
-        .show__menu {
-          display: block;
-          position: absolute;
-          right: -400px;
-          top: 15px;
-          font-size: 24px;
-        }
         .menu {
           .menu-list {
             display: none;
           }
         }
+      }
+      #show-menu {
+        .show__menu {
+          display: block;
+          position: absolute;
+          right: 6%;
+          top: 50px;
+          font-size: 24px;
+        }
         .menu-respon {
           display: block;
-          width: 250px;
+          width: 30%;
           height: 100%;
           background: white;
           position: fixed;
           top: 0;
-          left: -250px;
+          left: -50%;
           z-index: 10;
           transition: 1s;
           .close__menu {
@@ -610,26 +598,28 @@
         }
       }
       .nav {
-        .show__menu {
-          display: block;
-          position: absolute;
-          right: -300px;
-          top: 15px;
-          font-size: 24px;
-        }
         .menu {
           .menu-list {
             display: none;
           }
         }
+      }
+      #show-menu {
+        .show__menu {
+          display: block;
+          position: absolute;
+          right: 6%;
+          top: 50px;
+          font-size: 24px;
+        }
         .menu-respon {
           display: block;
-          width: 250px;
+          width: 30%;
           height: 100%;
           background: white;
           position: fixed;
           top: 0;
-          left: -250px;
+          left: -50%;
           z-index: 10;
           transition: 1s;
           .close__menu {
@@ -692,26 +682,28 @@
         }
       }
       .nav {
-        .show__menu {
-          display: block;
-          position: absolute;
-          right: -200px;
-          top: 15px;
-          font-size: 24px;
-        }
         .menu {
           .menu-list {
             display: none;
           }
         }
+      }
+      #show-menu {
+        .show__menu {
+          display: block;
+          position: absolute;
+          right: 6%;
+          top: 50px;
+          font-size: 24px;
+        }
         .menu-respon {
           display: block;
-          width: 250px;
+          width: 30%;
           height: 100%;
           background: white;
           position: fixed;
           top: 0;
-          left: -250px;
+          left: -50%;
           z-index: 10;
           transition: 1s;
           .close__menu {
@@ -771,26 +763,28 @@
         }
       }
       .nav {
-        .show__menu {
-          display: block;
-          position: absolute;
-          right: -400%;
-          top: 15px;
-          font-size: 24px;
-        }
         .menu {
           .menu-list {
             display: none;
           }
         }
+      }
+      #show-menu {
+        .show__menu {
+          display: block;
+          position: absolute;
+          right: 10%;
+          top: 50px;
+          font-size: 24px;
+        }
         .menu-respon {
           display: block;
-          width: 250px;
+          width: 30%;
           height: 100%;
           background: white;
           position: fixed;
           top: 0;
-          left: -250px;
+          left: -50%;
           z-index: 10;
           transition: 1s;
           .close__menu {
