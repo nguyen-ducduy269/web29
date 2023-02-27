@@ -145,93 +145,101 @@
           margin-left: 98px;
           margin-top: 20px;
           .menu-list__item {
-            width: 81px;
-            height: 26px;
-            text-align: center;
-            line-height: 26px;
-            margin-right: 12px;
             position: relative;
+            width: 90px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            &:hover {
+              background-color: unset;
+            }
             a {
               text-decoration: none;
               color: #1b4a9b;
               font-size: 11px;
               font-weight: 600;
+              width: 81px;
+              height: 27px;
             }
             &:hover {
-              background-color: #1bcd8d;
               a {
+                background-color: #1bcd8d;
                 color: #f0fcf7;
                 &::before {
                   content: "";
                   position: absolute;
-                  bottom: -4px;
-                  left: -4px;
+                  bottom: -80px;
+                  left: 0px;
                   width: 0.5px;
-                  height: 20px;
+                  height: 40px;
                   background-color: #1bcd8d;
-                  animation: leftmove 0.45s infinite;
+                  animation: leftmove 1.5s infinite;
                 }
                 @keyframes leftmove {
                   from {
-                    bottom: -5px;
+                    bottom: -80px;
                   }
                   to {
-                    bottom: 12px;
+                    bottom: 35px;
                   }
                 }
                 &::after {
                   content: "";
                   position: absolute;
-                  top: -7px;
-                  right: -4px;
+                  top: -80px;
+                  right: 1px;
                   width: 0.5px;
-                  height: 20px;
+                  height: 40px;
                   background-color: #1bcd8d;
-                  animation: rightmove 0.45s infinite;
+                  animation: rightmove 1.5s infinite;
+                  animation-delay: 0.35s;
                 }
                 @keyframes rightmove {
                   from {
-                    top: -6px;
+                    top: -80px;
                   }
                   to {
-                    top: 12px;
+                    top: 35px;
                   }
                 }
               }
               &::before {
                 content: "";
                 position: absolute;
-                top: -5px;
-                left: -4px;
-                width: 30px;
+                top: 0px;
+                left: -40px;
+                width: 40px;
                 height: 1px;
                 background-color: #1bcd8d;
-                animation: topmove 0.55s infinite;
+                animation: topmove 1.5s infinite;
               }
               @keyframes topmove {
                 from {
-                  left: -4px;
+                  left: -40px;
                 }
                 to {
-                  left: 57px;
+                  left: 90px;
                 }
               }
               &::after {
                 content: "";
                 position: absolute;
-                bottom: -4px;
-                right: -5px;
-                width: 30px;
+                bottom: 0px;
+                right: -40px;
+                width: 40px;
                 height: 1px;
                 background-color: #1bcd8d;
-                animation: bottommove 0.55s infinite;
+                animation: bottom-move 1.5s infinite;
+                animation-delay: 1s;
               }
-              @keyframes bottommove {
+              @keyframes bottom-move {
                 from {
-                  right: -4px;
+                  right: -40px;
                 }
                 to {
-                  right: 57px;
+                  right: 90px;
                 }
               }
             }
@@ -246,45 +254,38 @@
               &::before {
                 content: "";
                 position: absolute;
-                top: -5px;
-                left: -4px;
-                width: 30px;
+                top: 0px;
+                left: -40px;
+                width: 40px;
                 height: 1px;
                 background-color: #1bcd8d;
-                animation: topmove infinite 0.55s linear;
+                animation: topmove 1.5s infinite;
               }
               @keyframes topmove {
                 from {
-                  left: -4px;
+                  left: -40px;
                 }
                 to {
-                  left: 57px;
+                  left: 90px;
                 }
               }
               &::after {
                 content: "";
                 position: absolute;
-                bottom: -4px;
-                right: -5px;
-                width: 30px;
+                bottom: 0px;
+                right: -40px;
+                width: 40px;
                 height: 1px;
                 background-color: #1bcd8d;
-                animation: bottommove 0.55s infinite;
+                animation: bottom-move 1.5s infinite;
+                animation-delay: 1s;
               }
-              @keyframes bottommove {
+              @keyframes bottom-move {
                 from {
-                  right: -4px;
+                  right: -40px;
                 }
                 to {
-                  right: 57px;
-                }
-              }
-              &:hover {
-                &::before {
-                  display: none;
-                }
-                &::after {
-                  display: none;
+                  right: 90px;
                 }
               }
             }
@@ -293,37 +294,38 @@
             &::before {
               content: "";
               position: absolute;
-              bottom: -4px;
-              left: -4px;
+              bottom: -80px;
+              left: 0px;
               width: 0.5px;
-              height: 20px;
+              height: 40px;
               background-color: #1bcd8d;
-              animation: leftmove 0.45s infinite;
+              animation: leftmove 1.5s infinite;
             }
             @keyframes leftmove {
               from {
-                bottom: -5px;
+                bottom: -80px;
               }
               to {
-                bottom: 12px;
+                bottom: 35px;
               }
             }
             &::after {
               content: "";
               position: absolute;
-              top: -7px;
-              right: -4px;
+              top: -80px;
+              right: 0px;
               width: 0.5px;
-              height: 20px;
+              height: 40px;
               background-color: #1bcd8d;
-              animation: rightmove 0.45s infinite;
+              animation: rightmove 1.5s infinite;
+              animation-delay: 0.35s;
             }
             @keyframes rightmove {
               from {
-                top: -6px;
+                top: -80px;
               }
               to {
-                top: 12px;
+                top: 35px;
               }
             }
           }
