@@ -85,3 +85,11 @@ $(".mutiple-button").on("click", function () {
 $(".close-pop").on("click", function () {
   pop.css("display", "none");
 });
+
+let scoll = $(".country-scoll");
+$(".country").on("click", function () {
+  scoll.css("display", "block");
+});
+$(".option").on("click", function () {
+  scoll.css("display", "none");
+});

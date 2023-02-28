@@ -4,6 +4,31 @@
   </div>
   <div class="head-top">
     <div class="bs-container">
+      <!-- <div class="main-content">
+        <div class="head-left">
+          <i class="fa-solid fa-phone-flip"></i>
+          <div class="hotline">HOTLINE:1900 2863</div>
+        </div>
+        <div class="head-right">
+          <input type="search" placeholder="Search..." />
+          <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="country">
+            <a href=""
+              ><img src="../../../dist/images/icon-co-viet-nam.jpg" alt=""
+            /></a>
+            <i class="fa-solid fa-chevron-down"></i>
+            <div class="country-scoll">
+              <a class="option" href=""
+                ><img
+                  src="../../../dist/images/istockphoto-1144423641-612x612.jpg"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <div class="row">
         <div class="col-6 col-md-6 col-sm-4 col-xs-6">
           <div class="item">
@@ -24,7 +49,7 @@
               /></a>
               <i class="fa-solid fa-chevron-down"></i>
               <div class="country-scoll">
-                <a href=""
+                <a class="option" href=""
                   ><img
                     src="../../../dist/images/istockphoto-1144423641-612x612.jpg"
                     alt=""
@@ -51,8 +76,8 @@
               <div class="menu">
                 <ul class="menu-list clearfix">
                   <li class="menu-list__item list-active">
-                    <a href="index.html" class="menu-list__link active"
-                      >TRANG CHỦ</a
+                    <a href="index.html" class="menu-list__link"
+                      ><div class="active">TRANG CHỦ</div></a
                     >
                   </li>
                   <li class="menu-list__item">
@@ -116,11 +141,13 @@
     </div>
   </div>
   <div class="head-banner">
-    <div class="title">FROM CONCEPT TO CREATION.</div>
-    <div class="description">
-      It is a long established fact that a reader will be distracted by the
-      readable content.
+    <div class="bs-container">
+      <div class="title">FROM CONCEPT TO CREATION.</div>
+      <div class="description">
+        It is a long established fact that a reader will be distracted by the
+        readable content.
+      </div>
+      <button>XEM THÊM</button>
     </div>
-    <button>XEM THÊM</button>
   </div>
 </header>
