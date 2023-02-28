@@ -4,4 +4,3 @@ export const getRandomMeals = () => {
     .then((data) => data.meals)
     .catch((err) => console.log(err));
 };
-

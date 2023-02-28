@@ -10,7 +10,7 @@ const copy = arr;
 copy.push(4);
 console.log(arr); //giữ nguyên [1,2,3]
 // tạo mảng mới
-const clone = [...arr];
+const clone = [...arr]; 
 const cloneObj = { ...obj };
 console.log(arr);
 console.log(...arr); // tách các giá trị khi truyền vào hàm
