@@ -214,22 +214,24 @@
   }
 }
 
-@media only screen and (max-width: 1350px) and (min-width: 1199px) {
-  .bs-container {
-    width: 1170px;
-  }
-}
-
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
-  .bs-container {
-    width: 970px;
-  }
   .header-top {
-    .item {
-      .icon {
-        position: absolute;
-        right: 11px;
-        top: -2px;
+    .top {
+      .header-left {
+        i {
+          margin-left: 8%;
+        }
+      }
+      .header-right {
+        input {
+          right: 19%;
+        }
+        .country {
+          right: 10%;
+        }
+        .icon {
+          right: 22%;
+        }
       }
     }
   }
@@ -267,20 +269,23 @@
     }
   }
 }
-@media only screen and (max-width: 992px) and (min-width: 769px) {
-  .bs-container {
-    width: 750px;
-  }
+@media only screen and (max-width: 992px) and (min-width: 768px) {
   .header-top {
-    .item {
-      .icon {
-        position: absolute;
-        right: -52px;
-        top: -2px;
+    .top {
+      .header-left {
+        i {
+          margin-left: 8%;
+        }
       }
-      .country {
-        img {
-          margin-left: -25px;
+      .header-right {
+        input {
+          right: 22%;
+        }
+        .country {
+          right: 10%;
+        }
+        .icon {
+          right: 25%;
         }
       }
     }
@@ -341,17 +346,24 @@
     }
   }
 }
-@media only screen and (max-width: 768px) and (min-width: 600px) {
+@media only screen and (max-width: 767px) and (min-width: 600px) {
   .header-top {
-    .item {
-      i {
-        margin-left: -91px;
+    .top {
+      .header-left {
+        i {
+          margin-left: 8%;
+        }
       }
-      input {
-        width: 120px;
-      }
-      .icon {
-        right: 7%;
+      .header-right {
+        input {
+          right: 25%;
+        }
+        .country {
+          right: 10%;
+        }
+        .icon {
+          right: 30%;
+        }
       }
     }
   }
@@ -412,30 +424,23 @@
   }
 }
 @media only screen and (max-width: 600px) and (min-width: 500px) {
-  .bs-container {
-    width: 100%;
-  }
   .header-top {
-    .item {
-      i {
-        margin-left: -91px;
+    .top {
+      .header-left {
+        i {
+          margin-left: 8%;
+        }
       }
-      .hotline {
-        font-size: 8px;
-        font-style: italic;
-        color: #d2d9e5;
-        line-height: 9px;
-      }
-      input {
-        width: 135px;
-        height: 20px;
-        margin-left: 94px;
-        margin-top: -4px;
-      }
-      .icon {
-        position: absolute;
-        right: 3%;
-        top: -2px;
+      .header-right {
+        input {
+          right: 27%;
+        }
+        .country {
+          right: 10%;
+        }
+        .icon {
+          right: 30%;
+        }
       }
     }
   }
@@ -496,30 +501,23 @@
   }
 }
 @media only screen and (max-width: 500px) and (min-width: 425px) {
-  .bs-container {
-    width: 100%;
-  }
   .header-top {
-    .item {
-      i {
-        margin-left: -91px;
+    .top {
+      .header-left {
+        i {
+          margin-left: 8%;
+        }
       }
-      .hotline {
-        font-size: 8px;
-        font-style: italic;
-        color: #d2d9e5;
-        line-height: 9px;
-      }
-      input {
-        width: 99px;
-        height: 20px;
-        margin-left: 94px;
-        margin-top: -4px;
-      }
-      .icon {
-        position: absolute;
-        right: -1px;
-        top: -2px;
+      .header-right {
+        input {
+          right: 30%;
+        }
+        .country {
+          right: 10%;
+        }
+        .icon {
+          right: 35%;
+        }
       }
     }
   }
@@ -579,28 +577,105 @@
     }
   }
 }
-@media only screen and (max-width: 425px) and (min-width: 320px) {
+@media only screen and (max-width: 425px) and (min-width: 375px) {
   .header-top {
-    .item {
-      i {
-        margin-left: -50px;
+    .top {
+      .header-left {
+        i {
+          margin-left: 8%;
+        }
       }
-      .hotline {
-        font-size: 8px;
-        font-style: italic;
-        color: #d2d9e5;
-        line-height: 9px;
+      .header-right {
+        input {
+          right: 30%;
+        }
+        .country {
+          right: 8%;
+        }
+        .icon {
+          right: 35%;
+        }
       }
-      input {
-        width: 99px;
-        height: 20px;
-        margin-left: 72px;
-        margin-top: -4px;
+    }
+  }
+  .header-nav {
+    .nav-content {
+      .logo {
+        img {
+          height: 26px;
+          width: 91px;
+          margin-left: 0;
+          margin-top: 17px;
+        }
       }
-      .icon {
-        position: absolute;
-        right: 9px;
-        top: -2px;
+      .nav {
+        .menu {
+          .menu-list {
+            display: none;
+          }
+        }
+      }
+      #menu {
+        .show__menu {
+          display: block;
+          position: absolute;
+          right: 7%;
+          top: 50px;
+          font-size: 20px;
+        }
+        .menu-respon {
+          display: block;
+          width: 50%;
+          height: 100%;
+          background: white;
+          position: fixed;
+          top: 0;
+          left: -50%;
+          z-index: 10;
+          transition: 1s;
+          .close__menu {
+            position: relative;
+            font-size: 25px;
+            right: -85%;
+            top: 2px;
+          }
+          .menu-list {
+            .menu-list__item {
+              padding-bottom: 20px;
+              a {
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 375px) and (min-width: 320px) {
+  .header-top {
+    .top {
+      .header-left {
+        i {
+          margin-left: 8%;
+        }
+        .hotline {
+          font-size: 10px;
+        }
+      }
+      .header-right {
+        input {
+          width: 110px;
+          right: 30%;
+        }
+        .country {
+          right: 5%;
+        }
+        .icon {
+          right: 35%;
+        }
       }
     }
   }
