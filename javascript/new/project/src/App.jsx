@@ -1,32 +1,18 @@
-import Card from "./component/Card";
-import Double from "./component/Double";
-import Text from "./component/Text";
-import Dbtext from "./component/Dbtext";
-import Triptext from "./component/Triptext";
-import Class from "./component/Class";
+import { useState } from "react";
+import Form from "./component/Form";
+import List from "./component/List";
 
 function App() {
+  const [items, setItems] = useState(["abc", "def", "xyz"]);
+  const addItem = (newItem) => {
+    const newItems = [...items, newItem];
+    setItems(newItems);
+  };
   return (
     <div>
-      <Card />
-      <Double />
-      <Card />
-      <Double />
-      <Card />
-      <Double />
-      <Card />
-      <Double />
-
-      <Text />
-      <Triptext />
-      <Dbtext />
-
-      <Class />
-      <Class />
-      <Class />
-      <Class />
-      <Class />
-      <Class />
+      <h1>List</h1>
+      <Form onSubmit={addItem} />
+      <List items={items} />
     </div>
   );
 }
