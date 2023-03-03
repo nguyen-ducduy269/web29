@@ -10,7 +10,6 @@ export default function Form({ onSubmit }) {
     e.preventDefault();
     onSubmit(input);
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -20,6 +19,7 @@ export default function Form({ onSubmit }) {
         placeholder="New item"
       />
       <button>Add</button>
+      {/* <button>Remove</button> */}
     </form>
   );
 }

@@ -7,15 +7,16 @@ import React, { useState } from "react";
 // }
 export default function Count() {
   const [count, setCount] = useState(0);
-  const [input, setInput] = useState("");
-  const [userInfor, setUserInfor] = useState({
-    username: "",
-    passwork: "",
-  });
+  let color = "#333333";
+  if (count > 0) {
+    color = "green";
+  } else if (count < 0) {
+    color = "red";
+  }
 
   return (
     <div>
-      Counter: {count}
+      <h1 style={{ color }}>Counter: {count}</h1>
       <button onClick={() => setCount(count + 1)}>Cong</button>
       <button onClick={() => setCount(count - 1)}>Tru</button>
     </div>
