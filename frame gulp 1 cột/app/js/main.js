@@ -94,11 +94,3 @@ $(".option").on("click", function () {
   scoll.css("display", "none");
 });
 
-// const scrolled = document.getElementsByClassName("scrolled");
-// window.addEventListener("scroll", function () {
-//   if (window.pageYOffset > 100) {
-//     scrolled.css("background", "white");
-//   } else {
-//     scrolled.css("background", "unset");
-//   }
-// });

@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="head-nav scrolled">
+  <div class="head-nav">
     <div class="bs-container">
       <div class="nav-content clearfix">
         <div class="logo">
