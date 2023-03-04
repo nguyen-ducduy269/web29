@@ -1,4 +1,4 @@
-<header id="head" class="scoll">
+<header id="head">
   <div class="head-top">
     <div class="bs-container">
       <div class="main-content">
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="head-nav">
+  <div class="head-nav scrolled">
     <div class="bs-container">
       <div class="nav-content clearfix">
         <div class="logo">

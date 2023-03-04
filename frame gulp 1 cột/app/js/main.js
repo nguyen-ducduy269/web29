@@ -93,3 +93,12 @@ $(".country").on("click", function () {
 $(".option").on("click", function () {
   scoll.css("display", "none");
 });
+
+// const scrolled = document.getElementsByClassName("scrolled");
+// window.addEventListener("scroll", function () {
+//   if (window.pageYOffset > 100) {
+//     scrolled.css("display", "block");
+//   } else {
+//     scrolled.css("display", "none");
+//   }
+// });
