@@ -97,8 +97,8 @@ $(".option").on("click", function () {
 // const scrolled = document.getElementsByClassName("scrolled");
 // window.addEventListener("scroll", function () {
 //   if (window.pageYOffset > 100) {
-//     scrolled.css("display", "block");
+//     scrolled.css("background", "white");
 //   } else {
-//     scrolled.css("display", "none");
+//     scrolled.css("background", "unset");
 //   }
 // });
