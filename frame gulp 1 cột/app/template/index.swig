@@ -231,6 +231,55 @@ block content %}
                       alt=""
                     />
                   </div>
+
+                  <div class="layer layer4">
+                    <img
+                      class="line1"
+                      src="../../dist/images/line1.gif"
+                      alt=""
+                    />
+                    <img
+                      class="line2"
+                      src="../../dist/images/line2.gif"
+                      alt=""
+                    />
+                    <img
+                      class="line3"
+                      src="../../dist/images/line3.gif"
+                      alt=""
+                    />
+                    <img
+                      class="line4"
+                      src="../../dist/images/line4.gif"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="layer layer5">
+                    <img
+                      src="../../dist/images/layer1.gif"
+                      alt=""
+                      class="lay1"
+                    />
+
+                    <img
+                      src="../../dist/images/layer2.gif"
+                      alt=""
+                      class="lay2"
+                    />
+
+                    <img
+                      src="../../dist/images/layer3.gif"
+                      alt=""
+                      class="lay3"
+                    />
+
+                    <img
+                      src="../../dist/images/layer4.gif"
+                      alt=""
+                      class="lay4"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

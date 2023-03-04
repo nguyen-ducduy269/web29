@@ -6,10 +6,12 @@ export default function Form({ onSubmit }) {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(input);
   };
+  
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -19,7 +21,6 @@ export default function Form({ onSubmit }) {
         placeholder="New item"
       />
       <button>Add</button>
-      {/* <button>Remove</button> */}
     </form>
   );
 }
