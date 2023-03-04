@@ -1,4 +1,4 @@
-<header id="head">
+<header id="head" class="scoll">
   <div class="head-top">
     <div class="bs-container">
       <div class="main-content">
