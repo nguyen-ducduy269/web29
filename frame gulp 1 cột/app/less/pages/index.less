@@ -320,10 +320,237 @@
         }
       }
       .content-img {
-        img {
-          width: 485px;
-          margin-left: 60px;
-          margin-top: 5px;
+        .activity-img {
+          position: relative;
+          width: 490px;
+          height: 300px;
+          margin-left: 58px;
+          margin-top: 45px;
+          .main-round {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+          .layer {
+            position: absolute;
+          }
+          .layer1 {
+            position: absolute;
+            width: 37px;
+            height: 58px;
+            left: 35%;
+            top: 64px;
+            .layer1-1 {
+              width: 100%;
+              height: 100%;
+              img {
+                width: 53px;
+                position: absolute;
+                height: 100%;
+                margin-left: 4px;
+                // animation: layer1-1 5s infinite alternate;
+              }
+              @keyframes layer1-1 {
+                from {
+                  top: -10px;
+                }
+                to {
+                  top: 5px;
+                }
+              }
+            }
+            .layer1-2 {
+              position: absolute;
+              width: 8px;
+              left: 28px;
+              height: 47px;
+              top: 18px;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                // animation: layer1-2 5s infinite alternate;
+              }
+              @keyframes layer1-2 {
+                from {
+                  top: -10px;
+                }
+                to {
+                  top: 5px;
+                }
+              }
+            }
+          }
+          .layer2 {
+            position: absolute;
+            width: 37px;
+            height: 58px;
+            right: 34%;
+            top: 93px;
+            .layer2-1 {
+              img {
+                width: 64px;
+                position: absolute;
+                height: 42px;
+                margin-left: 0px;
+                top: 16px;
+                // animation: layer2-1 5s infinite alternate;
+              }
+              @keyframes layer2-1 {
+                from {
+                  top: 16px;
+                }
+                to {
+                  top: 25px;
+                }
+              }
+            }
+            .layer2-2 {
+              position: absolute;
+              width: 32px;
+              left: -23px;
+              height: 10px;
+              top: 48px;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                // animation: layer2-2 5s infinite alternate;
+              }
+              @keyframes layer2-2 {
+                from {
+                  top: 5px;
+                }
+                to {
+                  top: 10px;
+                }
+              }
+            }
+          }
+          .layer3 {
+            position: absolute;
+            width: 37px;
+            height: 58px;
+            right: 34%;
+            top: 93px;
+            .layer3-1 {
+              img {
+                width: 22px;
+                position: absolute;
+                height: 50px;
+                margin-left: 4px;
+                top: -76px;
+              }
+            }
+            .layer3-2 {
+              position: absolute;
+              width: 23px;
+              left: 0px;
+              height: 59px;
+              top: -73px;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+              }
+            }
+            .main-center {
+              position: absolute;
+              width: 194px;
+              height: 121px;
+              left: -154px;
+              top: -16px;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .tower1 {
+              position: absolute;
+              width: 36px;
+              height: 73px;
+              left: -74px;
+              top: -41px;
+            }
+            .tower2 {
+              position: absolute;
+              width: 41px;
+              height: 99px;
+              top: -86px;
+              left: -36px;
+            }
+            .tower3 {
+              position: absolute;
+              width: 66px;
+              height: 92px;
+              top: 66px;
+              left: -12px;
+            }
+            .personal {
+              position: absolute;
+              width: 50px;
+              height: 50px;
+              top: 30px;
+              left: -38px;
+            }
+            .house {
+              position: absolute;
+              width: 46px;
+              height: 40px;
+              right: 105px;
+              top: 26px;
+            }
+            .tree {
+              position: absolute;
+              height: 17px;
+              width: 7px;
+              left: -81px;
+              top: 54px;
+            }
+            .tree1 {
+              position: absolute;
+              height: 12px;
+              width: 5px;
+              left: -117px;
+              top: 39px;
+            }
+            .tree2 {
+              position: absolute;
+              height: 12px;
+              width: 5px;
+              left: -124px;
+              top: 39px;
+            }
+            .coint {
+              position: absolute;
+              width: 20px;
+              left: -129px;
+              top: 51px;
+            }
+            .layer6 {
+              position: absolute;
+              width: 25px;
+              height: 35px;
+              left: -82px;
+              top: -60px;
+            }
+            .layer5 {
+              position: absolute;
+              width: 87px;
+              left: -161px;
+              height: 29px;
+              top: 13px;
+              z-index: 1;
+            }
+            .layer5_1 {
+              position: absolute;
+              width: 17px;
+              left: -145px;
+              height: 12px;
+              top: 14px;
+              z-index: 2;
+            }
+          }
         }
       }
     }

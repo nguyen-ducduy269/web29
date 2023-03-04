@@ -128,7 +128,110 @@ block content %}
               </div>
 
               <div class="content-img">
-                <img src="../../dist/images/activity-main.png" alt="" />
+                <div class="activity-img">
+                  <img
+                    class="main-round"
+                    src="../../dist/images/main_round.gif"
+                    alt=""
+                  />
+                  <div class="layer layer1">
+                    <div class="layer layer1-1">
+                      <img src="../../dist/images/main_personal2.gif" alt="" />
+                    </div>
+                    <div class="layer layer1-2">
+                      <img
+                        src="../../dist/images/main_personal2_1.gif"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="layer layer2">
+                    <div class="layer layer2-1">
+                      <img src="../../dist/images/main_personal3.gif" alt="" />
+                    </div>
+                    <div class="layer layer2-2">
+                      <img
+                        src="../../dist/images/main_personal3_1.gif"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="layer layer3">
+                    <div class="layer layer3-1">
+                      <img src="../../dist/images/main_personal4.gif" alt="" />
+                    </div>
+                    <div class="layer layer3-2">
+                      <img
+                        src="../../dist/images/main_personal4_1.gif"
+                        alt=""
+                      />
+                    </div>
+                    <div class="layer main-center">
+                      <img src="../../dist/images/main_center.gif" alt="" />
+                    </div>
+
+                    <img
+                      class="tower1"
+                      src="../../dist/images/tower1.gif"
+                      alt=""
+                    />
+                    <img
+                      class="tower2"
+                      src="../../dist/images/tower2.gif"
+                      alt=""
+                    />
+                    <img
+                      class="tower3"
+                      src="../../dist/images/tower3.gif"
+                      alt=""
+                    />
+
+                    <img
+                      src="../../dist/images/main_personal.gif"
+                      alt=""
+                      class="personal"
+                    />
+                    <img
+                      src="../../dist/images/home.gif"
+                      alt=""
+                      class="house"
+                    />
+
+                    <img src="../../dist/images/tree.gif" alt="" class="tree" />
+                    <img
+                      src="../../dist/images/tree (1).gif"
+                      alt=""
+                      class="tree1"
+                    />
+                    <img
+                      src="../../dist/images/tree (2).gif"
+                      alt=""
+                      class="tree2"
+                    />
+                    <img
+                      src="../../dist/images/coin.gif"
+                      alt=""
+                      class="coint"
+                    />
+                    <img
+                      src="../../dist/images/layer6.gif"
+                      alt=""
+                      class="layer6"
+                    />
+                    <img
+                      src="../../dist/images/layer5.gif"
+                      alt=""
+                      class="layer5"
+                    />
+                    <img
+                      class="layer5_1"
+                      src="../../dist/images/layer5_1.gif"
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div class="act-bonus"><b>MARKET</b></div>
@@ -768,7 +871,7 @@ block content %}
       </div>
     </div>
   </section>
-  
+
   <section class="recruitment">
     <div class="bs-container">
       <div class="bs-col">
