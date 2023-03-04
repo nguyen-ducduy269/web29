@@ -1,12 +1,14 @@
-import React from "react";
-import Accordionheader from "./Accordionheader";
-import Accordioncontent from "./Accordioncontent";
+import AccordionHeader from './AccordionHeader';
+import AccordionContent from './AccordionContent';
+import './AccordionItem.css';
 
-export default function AccordionItem({ title, content, onClick }) {
+export default function AccordionItem({ title, content, onClick, isOpen}) {
+  const itemClasses = isOpen ? `accordion-item accordion-item--active` : `accordion-item`;
+  
   return (
-    <div className="accordion-item">
-      <Accordionheader onClick={onClick}>{title}</Accordionheader>
-      <Accordioncontent>{content}</Accordioncontent>
+    <div className={itemClasses}>
+      <AccordionHeader onClick={onClick}>{ title }</AccordionHeader>
+      <AccordionContent>{ content }</AccordionContent>
     </div>
-  );
+  )
 }

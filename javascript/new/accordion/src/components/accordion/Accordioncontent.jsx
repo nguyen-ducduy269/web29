@@ -1,6 +1,5 @@
-import React from "react";
-import { Children } from "react";
-
-export default function Accordioncontent() {
-  return <div className="accordion-content">{Children}</div>;
+export default function AccordionContent({ children }) {
+  return <div className="accordion-content">
+    { children }
+  </div>
 }

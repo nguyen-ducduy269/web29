@@ -1,10 +1,22 @@
-import { useState } from "react";
+import Accordion from './components/accordion/Accordion'
+import './App.css'
 
-function App() {
+
+export default function App() {
+  const items = [
+    {
+      title: "Item 1",
+      content: "Content 1"
+    },
+    {
+      title: "Item 2",
+      content: "Content 2"
+    }
+  ];
+  
   return (
-    <div className="App">
-    </div>
-  );
+    <main>
+      <Accordion items={items} />
+    </main>
+  )
 }
-
-export default App;
