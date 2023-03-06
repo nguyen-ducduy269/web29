@@ -172,49 +172,44 @@ block content %}
                       <img src="../../dist/images/main_center.gif" alt="" />
                     </div>
 
-                    <img
-                      class="tower1"
-                      src="../../dist/images/tower1.gif"
-                      alt=""
-                    />
-                    <img
-                      class="tower2"
-                      src="../../dist/images/tower2.gif"
-                      alt=""
-                    />
-                    <img
-                      class="tower3"
-                      src="../../dist/images/tower3.gif"
-                      alt=""
-                    />
+                    <div class="tower1">
+                      <img src="../../dist/images/tower1.gif" alt="" />
+                    </div>
+
+                    <div class="tower2">
+                      <img src="../../dist/images/tower2.gif" alt="" />
+                    </div>
+
+                    <div class="tower3">
+                      <img src="../../dist/images/tower3.gif" alt="" />
+                    </div>
 
                     <img
                       src="../../dist/images/main_personal.gif"
                       alt=""
                       class="personal"
                     />
-                    <img
-                      src="../../dist/images/home.gif"
-                      alt=""
-                      class="house"
-                    />
 
-                    <img src="../../dist/images/tree.gif" alt="" class="tree" />
-                    <img
-                      src="../../dist/images/tree (1).gif"
-                      alt=""
-                      class="tree1"
-                    />
-                    <img
-                      src="../../dist/images/tree (2).gif"
-                      alt=""
-                      class="tree2"
-                    />
-                    <img
-                      src="../../dist/images/coin.gif"
-                      alt=""
-                      class="coint"
-                    />
+                    <div class="house">
+                      <img src="../../dist/images/home.gif" alt="" />
+                    </div>
+
+                    <div class="tree">
+                      <img src="../../dist/images/tree.gif" alt="" />
+                    </div>
+
+                    <div class="tree1">
+                      <img src="../../dist/images/tree (1).gif" alt="" />
+                    </div>
+
+                    <div class="tree2">
+                      <img src="../../dist/images/tree (2).gif" alt="" />
+                    </div>
+
+                    <div class="coint">
+                      <img src="../../dist/images/coin.gif" alt="" />
+                    </div>
+
                     <img
                       src="../../dist/images/layer6.gif"
                       alt=""

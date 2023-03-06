@@ -348,14 +348,14 @@
                 position: absolute;
                 height: 100%;
                 margin-left: 4px;
-                // animation: layer1-1 5s infinite alternate;
+                animation: layer1-1 5s infinite alternate;
               }
               @keyframes layer1-1 {
                 from {
-                  top: -10px;
+                  top: 0px;
                 }
                 to {
-                  top: 5px;
+                  top: 55px;
                 }
               }
             }
@@ -369,39 +369,40 @@
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                // animation: layer1-2 5s infinite alternate;
+                animation: layer1-2 5s infinite alternate;
               }
               @keyframes layer1-2 {
                 from {
-                  top: -10px;
+                  top: 0px;
                 }
                 to {
-                  top: 5px;
+                  top: 30px;
                 }
               }
             }
           }
           .layer2 {
             position: absolute;
-            width: 37px;
-            height: 58px;
-            right: 34%;
-            top: 93px;
+            width: 76px;
+            height: 69px;
+            right: 29%;
+            top: 87px;
+            overflow: hidden;
             .layer2-1 {
               img {
                 width: 64px;
                 position: absolute;
                 height: 42px;
-                margin-left: 0px;
-                top: 16px;
-                // animation: layer2-1 5s infinite alternate;
+                margin-left: 21px;
+                top: 18px;
+                animation: layer2-1 5s infinite alternate;
               }
               @keyframes layer2-1 {
                 from {
-                  top: 16px;
+                  top: 18px;
                 }
                 to {
-                  top: 25px;
+                  top: 72px;
                 }
               }
             }
@@ -415,42 +416,54 @@
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                // animation: layer2-2 5s infinite alternate;
+                left: 25px;
+                animation: layer2-2 5s infinite alternate;
               }
               @keyframes layer2-2 {
                 from {
-                  top: 5px;
+                  top: 0px;
                 }
                 to {
-                  top: 10px;
+                  top: 25px;
                 }
               }
             }
           }
           .layer3 {
             position: absolute;
-            width: 37px;
-            height: 58px;
-            right: 34%;
-            top: 93px;
+            width: 195px;
+            height: 157px;
+            right: 30%;
+            top: 56px;
             .layer3-1 {
+              width: 100%;
+              height: 100%;
               img {
                 width: 22px;
                 position: absolute;
                 height: 50px;
-                margin-left: 4px;
-                top: -76px;
+                top: -40px;
+                right: 30px;
+                animation: layer3-1 5s infinite alternate;
+              }
+              @keyframes layer3-1 {
+                from {
+                  top: -3px;
+                }
+                to {
+                  top: -40px;
+                }
               }
             }
             .layer3-2 {
               position: absolute;
-              width: 23px;
-              left: 0px;
-              height: 59px;
-              top: -73px;
+              width: 100%;
+              height: 100%;
               img {
-                width: 100%;
-                height: 100%;
+                width: 23px;
+                height: 59px;
+                top: -33px;
+                right: 33px;
                 position: absolute;
               }
             }
@@ -458,8 +471,9 @@
               position: absolute;
               width: 194px;
               height: 121px;
-              left: -154px;
-              top: -16px;
+              left: -14px;
+              top: 20px;
+              z-index: 3;
               img {
                 width: 100%;
                 height: 100%;
@@ -467,87 +481,198 @@
             }
             .tower1 {
               position: absolute;
-              width: 36px;
-              height: 73px;
-              left: -74px;
-              top: -41px;
+              width: 38px;
+              height: 72px;
+              top: -4px;
+              left: 32%;
+              z-index: 2;
+              img {
+                width: 100%;
+                height: 100%;
+              }
             }
             .tower2 {
               position: absolute;
               width: 41px;
-              height: 99px;
-              top: -86px;
-              left: -36px;
+              height: 91px;
+              top: -44px;
+              left: 51%;
+              img {
+                width: 100%;
+                height: 100%;
+              }
             }
             .tower3 {
               position: absolute;
               width: 66px;
               height: 92px;
-              top: 66px;
-              left: -12px;
+              top: 104px;
+              right: 1px;
+              overflow: hidden;
+              img {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                animation: tower3 5s infinite alternate;
+              }
+              @keyframes tower3 {
+                from {
+                  top: 0px;
+                }
+                to {
+                  top: 98px;
+                }
+              }
             }
             .personal {
               position: absolute;
               width: 50px;
               height: 50px;
-              top: 30px;
-              left: -38px;
+              top: 64px;
+              right: 46px;
+              z-index: 3;
             }
             .house {
               position: absolute;
               width: 46px;
               height: 40px;
-              right: 105px;
-              top: 26px;
+              right: 65%;
+              top: 62px;
+              z-index: 3;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                animation: house 5s infinite alternate;
+              }
+              @keyframes house {
+                from {
+                  top: 0px;
+                }
+                to {
+                  top: 60px;
+                }
+              }
             }
             .tree {
               position: absolute;
               height: 17px;
               width: 7px;
-              left: -81px;
-              top: 54px;
+              left: 57px;
+              top: 91px;
+              z-index: 3;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                animation: tree 5s infinite alternate;
+              }
+              @keyframes tree {
+                from {
+                  top: 0px;
+                }
+                to {
+                  top: 25px;
+                }
+              }
             }
             .tree1 {
               position: absolute;
               height: 12px;
               width: 5px;
-              left: -117px;
-              top: 39px;
+              left: 20px;
+              top: 76px;
+              z-index: 3;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                animation: tree1 5s infinite alternate;
+              }
+              @keyframes tree1 {
+                from {
+                  top: 0px;
+                }
+                to {
+                  top: 24px;
+                }
+              }
             }
             .tree2 {
               position: absolute;
               height: 12px;
               width: 5px;
-              left: -124px;
-              top: 39px;
+              left: 14px;
+              top: 76px;
+              z-index: 3;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                animation: tree2 5s infinite alternate;
+              }
+              @keyframes tree2 {
+                from {
+                  top: 0px;
+                }
+                to {
+                  top: 24px;
+                }
+              }
             }
             .coint {
               position: absolute;
               width: 20px;
-              left: -129px;
-              top: 51px;
+              left: 8px;
+              top: 90px;
+              z-index: 3;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                animation: coint 5s infinite alternate;
+              }
+              @keyframes coint {
+                from {
+                  top: 0px;
+                }
+                to {
+                  top: 30px;
+                }
+              }
             }
             .layer6 {
               position: absolute;
-              width: 25px;
+              width: 35px;
               height: 35px;
-              left: -82px;
-              top: -60px;
+              top: -23px;
+              left: 27%;
             }
             .layer5 {
               position: absolute;
-              width: 87px;
-              left: -161px;
+              width: 90px;
+              left: -22px;
               height: 29px;
-              top: 13px;
+              top: 51px;
               z-index: 1;
             }
             .layer5_1 {
               position: absolute;
               width: 17px;
-              left: -145px;
+              left: -8px;
               height: 12px;
-              top: 14px;
+              top: 33%;
               z-index: 2;
             }
           }
@@ -586,10 +711,167 @@
             height: 100%;
             .lay1 {
               position: absolute;
-              bottom: 16px;
-              left: 30px;
+              bottom: 6%;
+              left: 6%;
               width: 90px;
               height: 92px;
+              animation: lay1 3s infinite;
+            }
+            @keyframes lay1 {
+              0% {
+                bottom: 6%;
+                left: 6%;
+              }
+              2% {
+                bottom: 11%;
+                left: 4%;
+              }
+              4% {
+                bottom: 16%;
+                left: 2%;
+              }
+              6% {
+                bottom: 21%;
+                left: -3%;
+              }
+              8% {
+                bottom: 26%;
+                left: -5%;
+              }
+              10% {
+                bottom: 31%;
+                left: -7%;
+              }
+              12% {
+                bottom: 39%;
+                left: -8%;
+              }
+              14% {
+                bottom: 13%;
+                left: -1%;
+              }
+              16% {
+                bottom: 44%;
+                left: -7%;
+              }
+              18% {
+                bottom: 49%;
+                left: -6%;
+              }
+              20% {
+                bottom: 56%;
+                left: -4%;
+              }
+              22% {
+                bottom: 61%;
+                left: -2%;
+              }
+              24% {
+                bottom: 78%;
+                left: 9%;
+              }
+              26% {
+                bottom: 83%;
+                left: 17%;
+              }
+              28% {
+                bottom: 88%;
+                left: 22%;
+              }
+              30% {
+                bottom: 90%;
+                left: 27%;
+              }
+              32% {
+                bottom: 90%;
+                left: 29%;
+              }
+              34% {
+                bottom: 90%;
+                left: 32%;
+              }
+              36% {
+                bottom: 90%;
+                left: 37%;
+              }
+              38% {
+                bottom: 91%;
+                left: 42%;
+              }
+              40% {
+                bottom: 91%;
+                left: 47%;
+              }
+              42% {
+                bottom: 91%;
+                left: 50%;
+              }
+              44% {
+                bottom: 90%;
+                left: 52%;
+              }
+              46% {
+                bottom: 90%;
+                left: 54%;
+              }
+              48% {
+                bottom: 85%;
+                left: 63%;
+              }
+              50% {
+                bottom: 78%;
+                left: 75%;
+              }
+              52% {
+              }
+              54% {
+              }
+              56% {
+              }
+              58% {
+              }
+              60% {
+              }
+              62% {
+              }
+              64% {
+              }
+              66% {
+              }
+              68% {
+              }
+              70% {
+              }
+              72% {
+              }
+              74% {
+              }
+              76% {
+              }
+              78% {
+              }
+              80% {
+              }
+              82% {
+              }
+              84% {
+              }
+              86% {
+              }
+              88% {
+              }
+              90% {
+              }
+              92% {
+              }
+              94% {
+              }
+              96% {
+              }
+              98% {
+              }
+              100% {
+              }
             }
             .lay2 {
               position: absolute;
