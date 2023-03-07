@@ -43,7 +43,7 @@ export default function Counter() {
 
 
   // các lỗi thường gặp:
-  // không xác định đúng dependencies
+  // KHÔNG XÁC ĐỊNH ĐÚNG DEPENDENCIES
   // - muốn chạy khi nào, 1 lần, nhiều lần, phụ thuộc vào cái gì không?
   // - tất cả những giá trị sử bên trong useEffect(state, hàm) thì nên có mặt trong dependencies
   // - triển khai hàm dọn dẹp
