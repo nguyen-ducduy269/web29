@@ -921,7 +921,44 @@ block content %}
       <div class="bs-col">
         <div class="bs-row">
           <div class="main-img">
-            <img src="../../dist/images/recruitment.png" alt="" />
+            <div class="main">
+              <img src="../../dist/images/main.gif" alt="" />
+            </div>
+
+            <div class="layer-personal">
+              <div class="personal">
+                <img src="../../dist/images/main_personal (1).gif" alt="" />
+              </div>
+              <div class="personal1">
+                <img src="../../dist/images/main_personal_1.gif" alt="" />
+              </div>
+
+              <div class="personal2">
+                <img src="../../dist/images/main_personal_2.gif" alt="" />
+              </div>
+            </div>
+
+            <div class="layer1">
+              <div class="layer1-2">
+                <img src="../../dist/images/layer1_2.gif" alt="" />
+              </div>
+
+              <div class="layer1-1">
+                <img src="../../dist/images/layer1_1.gif" alt="" />
+              </div>
+
+              <div class="lay1">
+                <img src="../../dist/images/layer1 (1).gif" alt="" />
+              </div>
+
+              <div class="layer1_3">
+                <img src="../../dist/images/layer1_3.gif" alt="" />
+              </div>
+
+              <div class="layer1_4">
+                <img src="../../dist/images/layer1_4.gif" alt="" />
+              </div>
+            </div>
           </div>
           <div class="content">
             <h1><b>TUYỂN DỤNG</b></h1>
