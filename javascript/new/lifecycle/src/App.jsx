@@ -4,15 +4,39 @@ function App() {
   // Ví dụ sử dụng useEffect để đồng bộ trạng thái ứng dụng React với Server
   // Trạng thái của React => Client State (useState)
   // Dữ liệu lưu ở Server => Server State (jsonplaceholder)
+
   const [users, setUsers] = useState([]);
-  const [newUserInfor, setNewUserInfor] = useState({});
+
+  const [newUserInfo, setNewUserInfo] = useState({});
+
   const handleInputChange = (e) => {
-    setNewUserInfor((previous) => {
+    setNewUserInfo((previous) => {
       return {
         ...previous,
         [e.target.name]: e.target.value,
       };
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("https://jsonplaceholder.typicode.com/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUserInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers((previous) => {
+          return [...previous, data];
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   useEffect(() => {
@@ -22,24 +46,24 @@ function App() {
         setUsers(data);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   }, []);
 
-  const rows = users.map((users) => (
-    <tr key={users.id}>
-      <th>{users.id}</th>
-      <th>{users.name}</th>
-      <th>{users.username}</th>
-      <th>{users.email}</th>
-      <th>{users.address.street}</th>
-      <th>{users.website}</th>
-      <th>{users.company.name}</th>
+  const rows = users.map((user) => (
+    <tr key={user.id}>
+      <td>{user.name}</td>
+      <td>{user.username}</td>
+      <td>{user.email}</td>
+      <td>{user.address.street}</td>
+      <td>{user.website}</td>
+      <td>{user.company.name}</td>
     </tr>
   ));
+
   return (
     <div className="App">
-      <form action="">
+      <form style={{ display: "flex" }} onSubmit={handleSubmit}>
         <div
           style={{
             display: "flex",
@@ -61,7 +85,7 @@ function App() {
             flexDirection: "column",
           }}
         >
-          <label htmlFor="username">UserName</label>
+          <label htmlFor="username">Username</label>
           <input
             type="text"
             id="username"
@@ -78,7 +102,7 @@ function App() {
         >
           <label htmlFor="email">Email</label>
           <input
-            type="email"
+            type="text"
             id="email"
             name="email"
             onChange={handleInputChange}
@@ -108,7 +132,7 @@ function App() {
         >
           <label htmlFor="website">Website</label>
           <input
-            type="link"
+            type="text"
             id="website"
             name="website"
             onChange={handleInputChange}
@@ -129,12 +153,15 @@ function App() {
             onChange={handleInputChange}
           />
         </div>
+
+        <div style={{ alignSelf: "flex-end" }}>
+          <button>Save</button>
+        </div>
       </form>
       <table>
-        <caption>User Table</caption>
+        <caption>Users table</caption>
         <thead>
           <tr>
-            <th>ID</th>
             <th>Name</th>
             <th>Username</th>
             <th>Email</th>
@@ -143,6 +170,7 @@ function App() {
             <th>Company</th>
           </tr>
         </thead>
+
         <tbody>{rows}</tbody>
       </table>
     </div>
@@ -150,3 +178,8 @@ function App() {
 }
 
 export default App;
+
+// Event
+// useRef vs useState
+// Cách hủy request khi re-render
+// Custom hook (cho ví dụ cụ thể)
