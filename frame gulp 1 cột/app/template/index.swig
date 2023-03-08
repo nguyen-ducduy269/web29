@@ -984,6 +984,27 @@ block content %}
                 <div class="two">
                   <img src="../../dist/images/layer2_4.gif" alt="" />
                 </div>
+
+                <div class="broad">
+                  <img src="../../dist/images/layer2 (1).gif" alt="" />
+                  <div class="layer-broad">
+                    <img
+                      class="broad1"
+                      src="../../dist/images/layer2_2.gif"
+                      alt=""
+                    />
+                    <img
+                      src="../../dist/images/layer2_3 (1).gif"
+                      alt=""
+                      class="move-broad"
+                    />
+                    <img
+                      class="broad3"
+                      src="../../dist/images/layer2_3.gif"
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
