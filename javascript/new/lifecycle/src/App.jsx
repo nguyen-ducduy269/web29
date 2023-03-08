@@ -15,10 +15,6 @@ function App() {
     });
   };
 
-  const handleSubmit = (e) =>{
-    e.prevenDefault();
-    fetch("https://jsonplaceholder.typicode.com/users", {method:"POST"}, headers:{"Content-Type": "appLication/jison"}, body:JSON.stringify{newUserInfor0,})
-  }
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())

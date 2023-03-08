@@ -1917,6 +1917,8 @@
       right: 30%;
       width: 95px;
       height: 253px;
+      z-index: 5;
+      animation: layerpersonal 3s infinite alternate;
       .personal {
         position: absolute;
         width: 83px;
@@ -1947,20 +1949,233 @@
         height: 38px;
         left: 31%;
         top: 2px;
+        animation: personal2 5s infinite linear;
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+      @keyframes personal2 {
+        0%,
+        50% {
+          opacity: 0;
+        }
+        51%,
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes layerpersonal {
+        from {
+          bottom: 13%;
+        }
+        to {
+          bottom: 15%;
         }
       }
     }
 
     .layer1 {
       position: absolute;
-      .layer1-2 {
+      right: 12%;
+      bottom: 13%;
+      width: 85px;
+      height: 241px;
+      .layer1_2 {
         position: absolute;
+        bottom: 0;
+        z-index: 1;
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+      .layer1-1 {
+        position: absolute;
+        bottom: 7px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        width: 85%;
+        height: 57px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .lay1 {
+        position: absolute;
+        bottom: 3px;
+        left: 4px;
+        width: 87%;
+        height: 157px;
+        z-index: 0;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .layer1_3 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 31%;
+        bottom: 37%;
+        animation: layer13 3s infinite alternate;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @keyframes layer13 {
+        from {
+          bottom: 37%;
+        }
+        to {
+          bottom: 40%;
+        }
+      }
+      .layer1_4 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 31%;
+        bottom: 54%;
+        animation: layer14 3s infinite alternate;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @keyframes layer14 {
+        from {
+          bottom: 54%;
+        }
+        to {
+          bottom: 60%;
+        }
+      }
+      .layway {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 80px;
+        height: 70px;
+        position: relative;
+        .layer151 {
+          position: absolute;
+          bottom: 4px;
+          right: 22px;
+          width: 35px;
+          animation: layer151 2s infinite linear;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        @keyframes layer151 {
+          0%,
+          20% {
+            opacity: 0;
+          }
+          21%,
+          100% {
+            opacity: 1;
+          }
+        }
+        .layer152 {
+          position: absolute;
+          bottom: 11px;
+          right: 11px;
+          width: 45px;
+          animation: layer152 2s infinite linear;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        @keyframes layer152 {
+          0%,
+          40% {
+            opacity: 0;
+          }
+          41%,
+          100% {
+            opacity: 1;
+          }
+        }
+        .layer153 {
+          position: absolute;
+          width: 54px;
+          right: 0px;
+          bottom: 18px;
+          animation: layer153 2s infinite linear;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        @keyframes layer153 {
+          0%,
+          60% {
+            opacity: 0;
+          }
+          61%,
+          100% {
+            opacity: 1;
+          }
+        }
+        .layer154 {
+          position: absolute;
+          width: 16px;
+          top: 3px;
+          left: 28px;
+          animation: layer154 2s infinite linear;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        @keyframes layer154 {
+          0%,
+          80% {
+            opacity: 0;
+          }
+          81%,
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .layer2 {
+      position: absolute;
+      .background-layer {
+        position: relative;
+        .one {
+          position: absolute;
+          z-index: 0;
+          left: 49%;
+          top: -10%;
+          width: 281px;
+          height: 352px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .two {
+          position: relative;
+          z-index: 1;
+          left: 53%;
+          bottom: 41%;
+          width: 281px;
+          height: 352px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }

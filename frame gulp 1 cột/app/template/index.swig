@@ -939,7 +939,7 @@ block content %}
             </div>
 
             <div class="layer1">
-              <div class="layer1-2">
+              <div class="layer1_2">
                 <img src="../../dist/images/layer1_2.gif" alt="" />
               </div>
 
@@ -957,6 +957,33 @@ block content %}
 
               <div class="layer1_4">
                 <img src="../../dist/images/layer1_4.gif" alt="" />
+              </div>
+
+              <div class="layway">
+                <div class="layer151">
+                  <img src="../../dist/images/layer1_5_1.gif" alt="" />
+                </div>
+                <div class="layer152">
+                  <img src="../../dist/images/layer1_5_2.gif" alt="" />
+                </div>
+                <div class="layer153">
+                  <img src="../../dist/images/layer1_5_3.gif" alt="" />
+                </div>
+                <div class="layer154">
+                  <img src="../../dist/images/layer1_5_4.gif" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="layer2">
+              <div class="background-layer">
+                <div class="one">
+                  <img src="../../dist/images/layer2_4 (1).gif" alt="" />
+                </div>
+
+                <div class="two">
+                  <img src="../../dist/images/layer2_4.gif" alt="" />
+                </div>
               </div>
             </div>
           </div>
