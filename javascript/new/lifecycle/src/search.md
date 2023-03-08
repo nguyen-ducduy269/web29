@@ -58,32 +58,31 @@
     import { useEffect } from 'react';
 
     function MyComponent() {
-    useEffect(() => {
-    const source = axios.CancelToken.source();
-    const fetchData = async () => {
-    try {
-    const response = await axios.get('https://api.example.com/data', {
-    cancelToken: source.token,
-    });
-    console.log(response.data);
-    } catch (err) {
-    if (axios.isCancel(err)) {
-    console.log('Request cancelled', err.message);
-    } else {
-    console.log(err.message);
-    }
-    }
-    };
+        useEffect(() => {
+            const source = axios.CancelToken.source();
+            const fetchData = async () => {
+                try {
+                    const response = await axios.get('https://api.example.com/data', {
+                    cancelToken: source.token,
+                });
+                console.log(response.data);
+                } catch (err) {
+                if (axios.isCancel(err)) {
+                     console.log('Request cancelled', err.message);
+                } else {
+                    console.log(err.message);
+                }
+            }
+        };
     fetchData();
     return () => {
-    source.cancel('Component unmounted');
+        source.cancel('Component unmounted');
     };
     }, []);
     return (
-
-    <div>
-    {/_ Component content _/}
-    </div>
+        <div>
+            {/_ Component content _/}
+        </div>
     );
     }
   ```
@@ -97,35 +96,35 @@
 
 
     function MyComponent() {
-    const [data, setData] = useState(null);
+        const [data, setData] = useState(null);
 
-    useEffect(() => {
-    const controller = new AbortController();
-    const signal = controller.signal;
-    const fetchData = async () => {
-    try {
-    const response = await fetch('https://api.example.com/data', { signal });
-    const result = await response.json();
-    setData(result);
-    } catch (err) {
-    if (err.name === 'AbortError') {
-    console.log('Request cancelled', err.message);
-    } else {
-    console.log(err.message);
-    }
-    }
-    };
+        useEffect(() => {
+            const controller = new AbortController();
+            const signal = controller.signal;
+            const fetchData = async () => {
+                try {
+                    const response = await fetch('https://api.example.com/data', { signal });
+                    const result = await response.json();
+                    setData(result);
+                } catch (err) {
+                if (err.name === 'AbortError') {
+                    console.log('Request cancelled', err.message);
+                } else {
+                    console.log(err.message);
+                }
+            }
+        };
     fetchData();
     return () => {
-    controller.abort();
-    };
+            controller.abort();
+        };
     }, []);
     return (
-    <div>
-    {/_ Component content _/}
-    {data && <p>{JSON.stringify(data)}</p>}
-    </div>
-    );
+        <div>
+            {/_ Component content _/}
+            {data && <p>{JSON.stringify(data)}</p>}
+        </div>
+        );
     }
   ```
 
@@ -141,17 +140,17 @@
     import { useState, useEffect } from 'react';
 
     function useClickCounter() {
-    const [count, setCount] = useState(0);
+        const [count, setCount] = useState(0);
 
-    useEffect(() => {
-    document.addEventListener('click', () => {
-    setCount(count + 1);
-    });
-    return () => {
-    document.removeEventListener('click', () => {
-    setCount(count + 1);
-    });
-    };
+        useEffect(() => {
+            document.addEventListener('click', () => {
+                setCount(count + 1);
+            });
+        return () => {
+            document.removeEventListener('click', () => {
+                setCount(count + 1);
+            });
+        };
     }, [count]);
 
     return count;
@@ -167,9 +166,9 @@
     const count = useClickCounter();
 
     return (
-    <div>
-    <p>You clicked the mouse {count} times</p>
-    </div>
-    );
+        <div>
+            <p>You clicked the mouse {count} times</p>
+        </div>
+        );
     }
    ```

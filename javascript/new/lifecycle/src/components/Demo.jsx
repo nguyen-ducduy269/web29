@@ -47,6 +47,7 @@ export default Demo;
 // là các hàm đặc biệt cho phép function component có thể sử dụng được các tính năng của React(state, lifecycle methods)
 // Tất cả các Hooks thì bắt đầu bằng use
 // Cho phép tự tạo ra các hook riêng (customHooks)
+
 // state: useState thì có thể nhận vào 1 hàm(lazyInitialState), setState: cũng có nhận vào một hàm, sẽ nhận vào giá trị trạng thái trước đó( thường dùng để tránh bị cache callback)
 // effect: về cơ bản cho phép triển khai các lifecycle methods trong function components(thay thế cho didMount, didUpdate và WillMount)
 // context: Cung cấp các giá trị chung cho toàn bộ cây thành phần con sử dụng, tránh truyền props quá nhiều cấp
