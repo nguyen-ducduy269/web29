@@ -41,7 +41,6 @@ export default function Counter() {
     };
   });
 
-
   // các lỗi thường gặp:
   // KHÔNG XÁC ĐỊNH ĐÚNG DEPENDENCIES
   // - muốn chạy khi nào, 1 lần, nhiều lần, phụ thuộc vào cái gì không?
