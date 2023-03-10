@@ -40,7 +40,7 @@ export default function App() {
         onLoggedIn,
       }}
     >
-      {!credential ? <LoginForm /> : <TodoApp />}
+      {!credential ? <AuthForm /> : <TodoApp />}
     </AppContext.Provider>
   );
 }
