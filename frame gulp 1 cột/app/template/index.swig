@@ -978,25 +978,77 @@
 
                 <div class="broad">
                   <img src="../../dist/images/layer2 (1).gif" alt="" />
-                  <div class="layer-broad">
-                    <img
-                      class="broad1"
-                      src="../../dist/images/layer2_2.gif"
-                      alt=""
-                    />
+                </div>
 
-                    <img
-                      src="../../dist/images/layer2_3 (1).gif"
-                      alt=""
-                      class="move-broad"
-                    />
-                    
-                    <img
-                      class="broad3"
-                      src="../../dist/images/layer2_3.gif"
-                      alt=""
-                    />
+                <div class="broad-news">
+                  <div class="new1">
+                    <img src="../../dist/images/layer2_3 (1).gif" alt="" />
                   </div>
+                  <div class="new2">
+                    <img src="../../dist/images/layer2_2.gif" alt="" />
+                  </div>
+                  <div class="new3">
+                    <img src="../../dist/images/layer2_3.gif" alt="" />
+                  </div>
+
+                  <div class="new4">
+                    <img src="../../dist/images/layer2_1.gif" alt="">
+                  </div>
+                </div>
+
+                <div class="stars">
+                  <div class="star1">
+                    <img src="../../dist/images/layer_2_star.gif" alt="" />
+                  </div>
+
+                  <div class="star2">
+                    <img src="../../dist/images/layer_2_star1.gif" alt="" />
+                  </div>
+
+                  <div class="star3">
+                    <img src="../../dist/images/layer_2_star2.gif" alt="" />
+                  </div>
+
+                  <div class="star4">
+                    <img src="../../dist/images/layer_2_star3.gif" alt="" />
+                  </div>
+
+                  <div class="star5">
+                    <img src="../../dist/images/layer_2_star4.gif" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layer3">
+              <div class="under1">
+                <img src="../../dist/images/layer_main.gif" alt="" />
+              </div>
+
+              <div class="under2">
+                <img src="../../dist/images/layer_main.gif" alt="" />
+              </div>
+
+              <div class="under3">
+                <img src="../../dist/images/layer_main.gif" alt="" />
+              </div>
+
+              <div class="under4">
+                <img src="../../dist/images/layer_main.gif" alt="" />
+              </div>
+
+              <div class="layway">
+                <div class="layer151">
+                  <img src="../../dist/images/layer1_5_1.gif" alt="" />
+                </div>
+                <div class="layer152">
+                  <img src="../../dist/images/layer1_5_2.gif" alt="" />
+                </div>
+                <div class="layer153">
+                  <img src="../../dist/images/layer1_5_3.gif" alt="" />
+                </div>
+                <div class="layer154">
+                  <img src="../../dist/images/layer1_5_4.gif" alt="" />
                 </div>
               </div>
             </div>
