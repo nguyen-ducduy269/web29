@@ -336,7 +336,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Giáo dục</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Bệnh viện</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -360,7 +360,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Thường trú</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -372,7 +372,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Văn phòng</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -384,7 +384,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Tái thiết</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -476,19 +476,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building2.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Giáo dục</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -500,19 +488,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building2.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Giáo dục</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -524,7 +500,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Giáo dục</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -536,7 +512,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Giáo dục</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -547,24 +523,12 @@ block content %}
                 <div class="item">
                   <img
                     class="project-img"
-                    src="../../dist/images/building1.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
                     src="../../dist/images/building2.png"
                     alt=""
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Bệnh viện</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -576,7 +540,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Bệnh viện</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -588,7 +552,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Bệnh viện</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -600,19 +564,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building5.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Bệnh viện</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -623,36 +575,12 @@ block content %}
                 <div class="item">
                   <img
                     class="project-img"
-                    src="../../dist/images/building1.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building2.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
                     src="../../dist/images/building3.png"
                     alt=""
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Thường trú</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -664,31 +592,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building4.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building5.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Thường trú</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -704,43 +608,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building2.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building3.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building2.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Văn phòng</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -752,7 +620,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Văn phòng</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -764,7 +632,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Văn phòng</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -775,24 +643,24 @@ block content %}
                 <div class="item">
                   <img
                     class="project-img"
-                    src="../../dist/images/building1.png"
+                    src="../../dist/images/building5.png"
                     alt=""
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Tái thiết</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
                 <div class="item">
                   <img
                     class="project-img"
-                    src="../../dist/images/building2.png"
+                    src="../../dist/images/building1.png"
                     alt=""
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Tái thiết</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -804,7 +672,7 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Tái thiết</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
@@ -816,31 +684,19 @@ block content %}
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Tái thiết</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>
                 <div class="item">
                   <img
                     class="project-img"
-                    src="../../dist/images/building4.png"
+                    src="../../dist/images/building3.png"
                     alt=""
                   />
                   <div class="discription">
                     <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
-                    <button class="mutiple-button">+</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img
-                    class="project-img"
-                    src="../../dist/images/building5.png"
-                    alt=""
-                  />
-                  <div class="discription">
-                    <div class="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div class="more">Thương mại</div>
+                    <div class="more">Tái thiết</div>
                     <button class="mutiple-button">+</button>
                   </div>
                 </div>

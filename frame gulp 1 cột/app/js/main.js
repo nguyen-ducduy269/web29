@@ -75,6 +75,22 @@ $("#footer-details").owlCarousel({
   },
 });
 
+// $('.multiple-items').owlCarousel({
+//     loop: true,
+//     margin: 10,
+//     nav: true,
+//     responsive: {
+//         0: {
+//             items: 1
+//         },
+//         600: {
+//             items: 3
+//         },
+//         1000: {
+//             items: 5
+//         }
+//     }
+// })
 let pop = $(".popup");
 $(".project-img").on("click", function () {
   pop.css("display", "block");
@@ -93,4 +109,3 @@ $(".country").on("click", function () {
 $(".option").on("click", function () {
   scoll.css("display", "none");
 });
-
