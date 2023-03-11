@@ -486,9 +486,23 @@
               top: -4px;
               left: 32%;
               z-index: 2;
+              animation: tower1 10s infinite linear;
               img {
                 width: 100%;
                 height: 100%;
+              }
+            }
+            @keyframes tower1 {
+              0%,
+              22%,
+              97%,
+              100% {
+                transform: scale(0);
+                transform-origin: bottom center;
+              }
+              25%,
+              95% {
+                transform: scale(1);
               }
             }
             .tower2 {
@@ -497,9 +511,23 @@
               height: 91px;
               top: -44px;
               left: 51%;
+              animation: tower2 10s infinite linear;
               img {
                 width: 100%;
                 height: 100%;
+              }
+            }
+            @keyframes tower2 {
+              0%,
+              100%,
+              32%,
+              97% {
+                transform: scale(0);
+                transform-origin: bottom center;
+              }
+              35%,
+              95% {
+                transform: scale(1);
               }
             }
             .tower3 {
@@ -514,14 +542,19 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
-                animation: tower3 5s infinite alternate;
+                animation: tower3 10s infinite alternate;
               }
               @keyframes tower3 {
-                from {
-                  top: 0px;
+                0%,
+                100%,
+                42%,
+                97% {
+                  transform: scale(0);
+                  transform-origin: bottom center;
                 }
-                to {
-                  top: 98px;
+                45%,
+                95% {
+                  transform: scale(1);
                 }
               }
             }
@@ -532,7 +565,7 @@
               top: 64px;
               right: 46px;
               z-index: 3;
-              animation: personal 3s infinite alternate;
+              animation: personal 10s infinite alternate;
             }
             @keyframes personal {
               0%,
@@ -551,21 +584,25 @@
               right: 65%;
               top: 62px;
               z-index: 3;
-              overflow: hidden;
+              animation: house 10s infinite alternate;
               img {
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 top: 0;
-                animation: house 5s infinite alternate;
               }
-              @keyframes house {
-                from {
-                  top: 0px;
-                }
-                to {
-                  top: 60px;
-                }
+            }
+            @keyframes house {
+              0%,
+              100%,
+              15%,
+              97% {
+                transform-origin: bottom center;
+                transform: scale(0);
+              }
+              20%,
+              95% {
+                transform: scale(1);
               }
             }
             .tree {
@@ -575,21 +612,25 @@
               left: 57px;
               top: 91px;
               z-index: 3;
-              overflow: hidden;
+              animation: tree 10s infinite linear;
               img {
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 top: 0;
-                animation: tree 5s infinite alternate;
               }
-              @keyframes tree {
-                from {
-                  top: 0px;
-                }
-                to {
-                  top: 25px;
-                }
+            }
+            @keyframes tree {
+              0%,
+              10%,
+              100%,
+              97% {
+                transform-origin: bottom center;
+                transform: scale(0);
+              }
+              15%,
+              95% {
+                transform: scale(1);
               }
             }
             .tree1 {
@@ -599,21 +640,25 @@
               left: 20px;
               top: 76px;
               z-index: 3;
-              overflow: hidden;
+              animation: tree1 10s infinite alternate;
               img {
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 top: 0;
-                animation: tree1 5s infinite alternate;
               }
-              @keyframes tree1 {
-                from {
-                  top: 0px;
-                }
-                to {
-                  top: 24px;
-                }
+            }
+            @keyframes tree1 {
+              0%,
+              100%,
+              20%,
+              97% {
+                transform-origin: bottom center;
+                transform: scale(0);
+              }
+              25%,
+              95% {
+                transform: scale(1);
               }
             }
             .tree2 {
@@ -623,44 +668,51 @@
               left: 14px;
               top: 76px;
               z-index: 3;
-              overflow: hidden;
+              animation: tree2 10s infinite alternate;
               img {
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 top: 0;
-                animation: tree2 5s infinite alternate;
               }
-              @keyframes tree2 {
-                from {
-                  top: 0px;
-                }
-                to {
-                  top: 24px;
-                }
+            }
+            @keyframes tree2 {
+              0%,
+              100%,
+              25%,
+              97% {
+                transform: scale(0);
+                transform-origin: bottom center;
+              }
+              30%,
+              95% {
+                transform: scale(1);
               }
             }
             .coint {
               position: absolute;
               width: 20px;
-              left: 8px;
+              height: 20px;
+              left: 11px;
               top: 90px;
+              animation: coint 11s infinite alternate;
               z-index: 3;
-              overflow: hidden;
               img {
                 width: 100%;
                 height: 100%;
-                position: absolute;
-                top: 0;
-                animation: coint 5s infinite alternate;
               }
-              @keyframes coint {
-                from {
-                  top: 0px;
-                }
-                to {
-                  top: 30px;
-                }
+            }
+            @keyframes coint {
+              0%,
+              100%,
+              30%,
+              97% {
+                transform: scale(0);
+                transform-origin: bottom center;
+              }
+              35%,
+              95% {
+                transform: scale(1);
               }
             }
             .layer6 {
@@ -727,6 +779,7 @@
               width: 90px;
               height: 92px;
               animation: lay1 10s infinite linear;
+              animation-delay: 5s;
             }
             @keyframes lay1 {
               0% {
@@ -833,12 +886,12 @@
               }
               52.5% {
                 bottom: 80%;
-                left: 72.6%;
+                left: 70.6%;
               }
 
               55% {
-                bottom: 62.1%;
-                left: 85.4%;
+                bottom: 66.1%;
+                left: 83.4%;
               }
 
               57.5% {
@@ -937,6 +990,7 @@
               width: 90px;
               height: 92px;
               animation: lay2 10s infinite linear;
+              animation-delay: 5s;
             }
             @keyframes lay2 {
               0% {
@@ -1147,6 +1201,7 @@
               bottom: 80%;
               left: 72.6%;
               animation: lay3 10s infinite linear;
+              animation-delay: 5s;
             }
             @keyframes lay3 {
               0% {
@@ -1354,6 +1409,7 @@
               bottom: 78.5%;
               left: 6.3%;
               animation: lay4 10s infinite linear;
+              animation-delay: 5s;
             }
             @keyframes lay4 {
               0% {
@@ -1721,7 +1777,6 @@
               height: 24px;
               font-size: 15px;
               background-color: #72dcb6;
-              color: #fff;
             }
           }
           &:hover {
@@ -1748,7 +1803,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: #fff;
+        a {
+          color: #fff;
+        }
       }
     }
     .popup {

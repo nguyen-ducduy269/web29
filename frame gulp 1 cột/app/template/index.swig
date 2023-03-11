@@ -1,73 +1,82 @@
-{% extends 'layouts/base2.swig' %} {% block pageTitle %} Biệt thự trên cao Forest in the Sky {% endblock %} {% block bodyClass %}index{% endblock %} {% block content %}
+{% extends 'layouts/base2.swig' %} {% block pageTitle %} Biệt thự trên cao
+Forest in the Sky {% endblock %} {% block bodyClass %}index{% endblock %} {%
+block content %}
 
 <main id="main">
-    <section class="about-us">
-        <div class="outside">
-            <img class="maytrai" src="../../dist/images/maytrai.png" alt="" />
-            <img class="cautruc1" src="../../dist/images/cautruc1.png" alt="" />
-            <img class="cautruc2" src="../../dist/images/cautruc2.png" alt="" />
-            <img class="mayphai" src="../../dist/images/mayphai.png" alt="" />
-        </div>
-        <div class="bs-container">
-            <div class="bs-row">
-                <div class="bs-col">
-                    <div class="module module-index">
-                        <div class="about-img">
-                            <a href=""><img src="../../dist/images/Untitled-1.png" alt="" /></a>
-                        </div>
-                        <div class="content">
-                            <div class="about-header">
-                                <h2 class="title"><b>VỀ CHÚNG TÔI</b></h2>
-                                <div class="more">
-                                    <img src="../../dist/images/Rectangle 247.png" alt="" />
-                                    <div class="line"></div>
-                                </div>
-                                <div class="other">
-                                    <div class="line"></div>
-                                    <img src="../../dist/images/Rectangle 247.png" alt="" />
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-                            <div class="about-content">
-                                <div class="text">
-                                    Scarcely on striking packages by so property in delicate. Up or well must less rent read walk so be. Easy sold at do hour sing spot. Any meant has cease too the decay. Since party burst am it match. By or blushes between besides offices noisier as. Sending
-                                    do brought windng compass in. Paid day till shed only fact age its end.
-                                </div>
-                                <button>Xem thêm</button>
-                                <h1><b>ABOUT US</b></h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <section class="about-us">
+    <div class="outside">
+      <img class="maytrai" src="../../dist/images/maytrai.png" alt="" />
+      <img class="cautruc1" src="../../dist/images/cautruc1.png" alt="" />
+      <img class="cautruc2" src="../../dist/images/cautruc2.png" alt="" />
+      <img class="mayphai" src="../../dist/images/mayphai.png" alt="" />
+    </div>
+    <div class="bs-container">
+      <div class="bs-row">
+        <div class="bs-col">
+          <div class="module module-index">
+            <div class="about-img">
+              <a href=""
+                ><img src="../../dist/images/Untitled-1.png" alt=""
+              /></a>
             </div>
+            <div class="content">
+              <div class="about-header">
+                <h2 class="title"><b>VỀ CHÚNG TÔI</b></h2>
+                <div class="more">
+                  <img src="../../dist/images/Rectangle 247.png" alt="" />
+                  <div class="line"></div>
+                </div>
+                <div class="other">
+                  <div class="line"></div>
+                  <img src="../../dist/images/Rectangle 247.png" alt="" />
+                  <div class="line"></div>
+                </div>
+              </div>
+              <div class="about-content">
+                <div class="text">
+                  Scarcely on striking packages by so property in delicate. Up
+                  or well must less rent read walk so be. Easy sold at do hour
+                  sing spot. Any meant has cease too the decay. Since party
+                  burst am it match. By or blushes between besides offices
+                  noisier as. Sending do brought windng compass in. Paid day
+                  till shed only fact age its end.
+                </div>
+                <button>Xem thêm</button>
+                <h1><b>ABOUT US</b></h1>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="activity">
-        <div class="bs-container">
-            <div class="bs-row">
-                <div class="bs-col">
-                    <div class="module-activity">
-                        <div class="act-title">
-                            <h2><b>LĨNH VỰC HOẠT ĐỘNG</b></h2>
-                            <div class="more">
-                                <img src="../../dist/images/Rectangle 247.png" alt="" />
-                                <div class="line"></div>
-                            </div>
-                            <div class="other">
-                                <div class="line"></div>
-                                <img src="../../dist/images/Rectangle 247.png" alt="" />
-                                <div class="line"></div>
-                            </div>
-                        </div>
-                        <div class="act-content">
-                            <div class="main-content">
-                                <div class="design">
-                                    <img src="../../dist/images/01.png" alt="" />
-                                    <div class="title"><b>THIẾT KẾ KIẾN TRÚC</b></div>
-                                    <div class="text">
-                                        <p>
-                                            <a href="">Scarcely on striking packages by so property in
+  <section class="activity">
+    <div class="bs-container">
+      <div class="bs-row">
+        <div class="bs-col">
+          <div class="module-activity">
+            <div class="act-title">
+              <h2><b>LĨNH VỰC HOẠT ĐỘNG</b></h2>
+              <div class="more">
+                <img src="../../dist/images/Rectangle 247.png" alt="" />
+                <div class="line"></div>
+              </div>
+              <div class="other">
+                <div class="line"></div>
+                <img src="../../dist/images/Rectangle 247.png" alt="" />
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="act-content">
+              <div class="main-content">
+                <div class="design">
+                  <img src="../../dist/images/01.png" alt="" />
+                  <div class="title"><b>THIẾT KẾ KIẾN TRÚC</b></div>
+                  <div class="text">
+                    <p>
+                      <a href=""
+                        >Scarcely on striking packages by so property in
                         delicate. Up or well must less rent read walk so be.
                         Easy sold at do hour sing spot.</a
                       >
@@ -890,10 +899,12 @@
         </div>
         <div class="button">
           <div class="icon">
-            <i class="fa-solid fa-arrow-left"></i>
+            <a href="">
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
           </div>
           <div class="icon">
-            <i class="fa-solid fa-arrow-right"></i>
+            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -992,7 +1003,7 @@
                   </div>
 
                   <div class="new4">
-                    <img src="../../dist/images/layer2_1.gif" alt="">
+                    <img src="../../dist/images/layer2_1.gif" alt="" />
                   </div>
                 </div>
 
