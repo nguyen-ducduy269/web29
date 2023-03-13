@@ -315,7 +315,7 @@ block content %}
           </div>
           <div class="tab-content">
             <div class="tab-item active" id="tatca">
-              <div class="multiple-items">
+              <div class="multiple-items owl-carousel owl-theme">
                 <div class="item">
                   <img
                     class="project-img"

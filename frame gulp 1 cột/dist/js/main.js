@@ -75,7 +75,57 @@ $("#footer-details").owlCarousel({
   },
 });
 
-// $('.multiple-items').owlCarousel({
+// $(".bs-slide").slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     arrows: true,
+//     centerMode: true,
+//     centerPadding: '0',
+//     dots: true,
+//     fade: false,
+//     autoplay: true,
+//     infinite: true,
+//     draggable: false,
+//     swipeToSlide: false,
+//     touchMove: false,
+//     swipe: false,
+//     nextArrow: '.next_caro',
+//     prevArrow: '.prev_caro',
+
+//     responsive: [{
+//             breakpoint: 1200,
+//             settings: {
+//                 slidesToShow: 3,
+//                 slidesToScroll: 1
+//             }
+//         }, {
+
+//             breakpoint: 767,
+//             settings: {
+//                 slidesToShow: 3,
+//                 slidesToScroll: 1
+//             }
+//         },
+
+//         {
+//             breakpoint: 550,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1
+//             }
+//         },
+
+//         {
+//             breakpoint: 479,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1
+//             }
+//         }
+//     ]
+// });
+
+// $('.owl-carousel').owlCarousel({
 //     loop: true,
 //     margin: 10,
 //     nav: true,
@@ -84,13 +134,14 @@ $("#footer-details").owlCarousel({
 //             items: 1
 //         },
 //         600: {
-//             items: 3
+//             items: 2
 //         },
 //         1000: {
-//             items: 5
+//             items: 3
 //         }
 //     }
 // })
+
 let pop = $(".popup");
 $(".project-img").on("click", function () {
   pop.css("display", "block");
