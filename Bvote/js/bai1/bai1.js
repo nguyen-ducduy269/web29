@@ -27,3 +27,30 @@ function abc() {
     }
   }
 }
+
+const myDog = {
+  type: "cho ta",
+};
+myDog.name = "Dan";
+myDog.age = "2";
+
+const myCat = {
+  type: "meo ta",
+};
+
+const myPet = [myCat, myDog];
+console.log(myPet[1].name);
+
+const classmates = [
+  (ha = {
+    age: 20,
+    from: "Ha Noi",
+    gener: "male",
+  }),
+  (thanh = {
+    age: 18,
+    from: "Bac Ning",
+    fullname: "nguyen trong thanh",
+  }),
+];
+console.log(classmates[1].fullname);

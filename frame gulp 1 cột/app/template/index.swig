@@ -1022,8 +1022,6 @@ block content %}
                 </div>
               </div>
             </div>
-            <button class="xemthem">XEM TIẾP</button>
-            <div class="bonus"><b>LATEST NEWS</b></div>
           </div>
           <div class="news-img">
             <img src="../../dist/images/world.png" alt="" />
@@ -1032,5 +1030,9 @@ block content %}
       </div>
     </div>
   </section>
+  <div class="last">
+    <button class="xemthem">XEM TIẾP</button>
+    <div class="bonus"><b>LATEST NEWS</b></div>
+  </div>
 </main>
 {% endblock %} {% block script %} {% endblock %}
