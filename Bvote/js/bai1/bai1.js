@@ -16,12 +16,9 @@ function abc() {
     list.push(value);
     console.log(value);
     // tạo danh sách các giá trị đã nhập
-    const ul = document.createElement("ul");
-    const list = document.querySelector(".abc");
-    document.list.appendChild(ul);
+    const ul = document.getElementById("abc");
     // xét mảng có giá trị rỗng
-    ul.innerHTML = "";
-    for (let i = 0; i < ul.length; i++) {
+    for (let i = 0; i < list.length; i++) {
       // khi nhận nội dung sẽ thêm vào danh sách
       const li = document.createElement("li");
       li.textContent = list[i];
