@@ -17,12 +17,10 @@ function abc() {
     console.log(value);
     // tạo danh sách các giá trị đã nhập
     const ul = document.getElementById("abc");
-    // xét mảng có giá trị rỗng
-    for (let i = 0; i < list.length; i++) {
-      // khi nhận nội dung sẽ thêm vào danh sách
-      const li = document.createElement("li");
-      li.textContent = list[i];
-      ul.appendChild(li);
-    }
+    // ul.innerHTML = list.join("<br>");
+    // thêm giá trị nhập vào danh sách
+    const li = document.createElement("li");
+    li.textContent = value;
+    ul.appendChild(li);
   }
 }
