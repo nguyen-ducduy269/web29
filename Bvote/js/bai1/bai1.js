@@ -39,5 +39,6 @@ function deleteItem() {
 }
 
 function dbItem() {
+  newList = [...list];
   console.log(newList);
 }
