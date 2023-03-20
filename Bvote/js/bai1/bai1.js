@@ -4,13 +4,30 @@
 // c) nút sắp xếp các phần tử trong mảng theo chiều tăng dần, giảm dần.
 // d) Khi ấn vào các button sẽ hiển thị và nhập yêu cầu thông qua câu lệnh prompt(), sau mỗi lần thay đổi sẽ có 1 dòng chữ thông báo và hiển thị mảng mới sau khi thay đổi.
 
-// const list = [];
-// tạo danh sách các giá trị đã nhập
-// const ul = document.getElementById("abc");
 const ul = document.createElement("abc");
 document.body.appendChild(ul);
 ul.innerHTML = list = [];
-const newList = list.concat(list);
+
+let arr = [1, 2, 3, 4, 5];
+const li = document.createElement("li");
+
+function renderArr(arr) {
+  const temp = arr
+    .map((e, index) => {
+      return `<div class="list-item-${index}"><div> ${e} </div> <button class="delete-button" onclick="deleteItem()">
+      Delete Item
+    </button> <button class="fixitem" onclick="fixItem()">Edit Item</button></div>`;
+    })
+    .join("");
+  // Nội dung nhập vào đc gán vào phần tử trong danh sách
+  li.innerHTML = temp;
+  // thêm phần tử đã gán vào trong danh sách
+  ul.appendChild(li);
+}
+
+window.onload = () => {
+  renderArr(arr);
+};
 
 function add() {
   // giá trị của value được nhận từ prompt nên không cần truyền vào hàm
@@ -20,25 +37,32 @@ function add() {
     document.querySelector("abc").innerHTML = "Giá trị nhập không hợp lệ";
   } else {
     // nếu độ dài nhập hợp lệ thì thêm phần tử nhập vào trong mảng
-    list.push(value);
+    arr.push(value);
+    renderArr(arr);
     console.log(value);
-    // ul.innerHTML = list.join("<br>");
-    // thêm phần tử bên trong danh sách
-    const li = document.createElement("li");
-    // Nội dung nhập vào đc gán vào phần tử trong danh sách
-    li.textContent = value;
-    // thêm phần tử đã gán vào trong danh sách
-    ul.appendChild(li);
   }
 }
 
-function deleteItem() {
+function deleteItem(arr) {
+  const temp = arr.splice(i, 1);
+  console.log(temp);
+}
+
+function deleteAllItem() {
   const li = document.querySelector("li");
   // xóa phần tử khỏi list
   ul.removeChild(li);
 }
 
 function dbItem() {
-  newList = [...list];
+  const newList = list.concat(list);
+  // const newList = [...list];
+  list.push(newList);
+  document.querySelector("abc").innerHTML = newList;
   console.log(newList);
 }
+
+// function fixItem() {
+//   const fixButton = document.querySelector("fixitem");
+//   fixButton.addEventListener("click", function () {});
+// }
