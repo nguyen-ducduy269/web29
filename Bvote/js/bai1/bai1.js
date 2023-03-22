@@ -9,8 +9,6 @@ function bai1() {
   document.body.appendChild(btnEditItem);
   document.body.appendChild(btnDeleteItem);
   document.body.appendChild(btnDbItem);
-  document.body.appendChild(inCreaseItem);
-  document.body.appendChild(deCreaseItem);
   display(arr);
 }
 arr = ["a", "b", "c"];
@@ -63,16 +61,14 @@ function deleteFn() {
 const btnDbItem = document.createElement("button");
 btnDbItem.innerHTML = "Double Item";
 btnDbItem.classList.add("btn-item");
-btnDbItem.addEventListener("click", () => dbFn());
+btnDbItem.addEventListener("click", () => dbFn(newList));
 
-function dbFn() {}
+const newList = list.concat(list);
 
-// Tăng dần
-const inCreaseItem = document.createElement("button");
-inCreaseItem.innerHTML = "Increase Item";
-inCreaseItem.classList.add("btn-item");
-
-// Giảm dần
-const deCreaseItem = document.createElement("button");
-deCreaseItem.innerHTML = "Decrease Item";
-deCreaseItem.classList.add("btn-item");
+function dbFn(newList) {
+  console.log(newList);
+  for (let i = 0; i < newList.length; i++) {
+    newList = list + list;
+  }
+  return newList;
+}
