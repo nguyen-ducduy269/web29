@@ -4,9 +4,75 @@
 // c) nút sắp xếp các phần tử trong mảng theo chiều tăng dần, giảm dần.
 // d) Khi ấn vào các button sẽ hiển thị và nhập yêu cầu thông qua câu lệnh prompt(), sau mỗi lần thay đổi sẽ có 1 dòng chữ thông báo và hiển thị mảng mới sau khi thay đổi.
 
-const array = [1, 2, 3, 4, 5, 6];
-
 function bai1() {
-  const arr = document.getElementById("demo");
-  arr.innerHTML = array;
+  document.body.appendChild(btnAddItem);
+  document.body.appendChild(btnEditItem);
+  document.body.appendChild(btnDeleteItem);
+  document.body.appendChild(btnDbItem);
+  document.body.appendChild(inCreaseItem);
+  document.body.appendChild(deCreaseItem);
+  display(arr);
 }
+arr = ["a", "b", "c"];
+console.log(arr);
+console.log(String(arr));
+const display = (arr) => {
+  document.getElementById("demo").innerHTML = String(arr);
+};
+
+const ul = document.getElementById("demo");
+ul.innerHTML = list = [];
+// Thêm
+const btnAddItem = document.createElement("button");
+btnAddItem.innerHTML = "Add Item";
+btnAddItem.classList.add("btn-item");
+btnAddItem.addEventListener("click", () => addFn());
+
+function addFn() {
+  const addItem = document.createAttribute("nhap");
+  addItem.value = value = prompt("Nhập họ tên của bạn: ");
+  btnAddItem.setAttributeNode(addItem);
+  if (value === null || value === "") {
+    ul.innerHTML = "Giá trị nhập không hợp lệ";
+  } else {
+    list.push(value);
+    console.log(value);
+    const li = document.createElement("li");
+    li.textContent = value;
+    ul.appendChild(li);
+  }
+}
+
+// Sửa
+const btnEditItem = document.createElement("button");
+btnEditItem.innerHTML = "Edit Item";
+btnEditItem.classList.add("btn-item");
+
+// Xóa
+const btnDeleteItem = document.createElement("button");
+btnDeleteItem.innerHTML = "Delete Item";
+btnDeleteItem.classList.add("btn-item");
+btnDeleteItem.addEventListener("click", () => deleteFn());
+
+function deleteFn() {
+  const li = document.querySelector("li");
+  ul.removeChild(li);
+}
+
+// Nhân đôi
+const btnDbItem = document.createElement("button");
+btnDbItem.innerHTML = "Double Item";
+btnDbItem.classList.add("btn-item");
+btnDbItem.addEventListener("click", () => dbFn());
+
+function dbFn() {}
+
+// Tăng dần
+const inCreaseItem = document.createElement("button");
+inCreaseItem.innerHTML = "Increase Item";
+inCreaseItem.classList.add("btn-item");
+
+// Giảm dần
+const deCreaseItem = document.createElement("button");
+deCreaseItem.innerHTML = "Decrease Item";
+deCreaseItem.classList.add("btn-item");
