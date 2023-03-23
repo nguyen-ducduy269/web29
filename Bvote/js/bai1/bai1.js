@@ -9,17 +9,18 @@ function bai1() {
   document.body.appendChild(btnEditItem);
   document.body.appendChild(btnDeleteItem);
   document.body.appendChild(btnDbItem);
-  display(arr);
+  // display(arr);
 }
-arr = ["a", "b", "c"];
-console.log(arr);
-console.log(String(arr));
-const display = (arr) => {
-  document.getElementById("demo").innerHTML = String(arr);
-};
+// arr = ["a", "b", "c"];
+// console.log(arr);
+// console.log(String(arr));
+// const display = (arr) => {
+//   document.getElementById("demo").innerHTML = String(arr);
+// };
 
-const ul = document.getElementById("demo");
-ul.innerHTML = list = [];
+const list = [];
+const ul = document.createElement("ul");
+const demo = document.getElementById("demo").appendChild(ul);
 // Thêm
 const btnAddItem = document.createElement("button");
 btnAddItem.innerHTML = "Add Item";
@@ -31,13 +32,12 @@ function addFn() {
   addItem.value = value = prompt("Nhập họ tên của bạn: ");
   btnAddItem.setAttributeNode(addItem);
   if (value === null || value === "") {
-    ul.innerHTML = "Giá trị nhập không hợp lệ";
+    demo.innerHTML = "Giá trị nhập không hợp lệ";
   } else {
     list.push(value);
-    console.log(value);
     const li = document.createElement("li");
-    li.textContent = value;
-    ul.appendChild(li);
+    li.innerText = value;
+    ul.append(li);
   }
 }
 
@@ -55,20 +55,25 @@ btnDeleteItem.addEventListener("click", () => deleteFn());
 function deleteFn() {
   const li = document.querySelector("li");
   ul.removeChild(li);
+  list.splice(0, 1);
+  console.log(list, list.splice(-1, 1));
 }
 
 // Nhân đôi
 const btnDbItem = document.createElement("button");
 btnDbItem.innerHTML = "Double Item";
 btnDbItem.classList.add("btn-item");
-btnDbItem.addEventListener("click", () => dbFn(newList));
+btnDbItem.addEventListener("click", () => dbFn(list));
 
-const newList = list.concat(list);
-
-function dbFn(newList) {
-  console.log(newList);
-  for (let i = 0; i < newList.length; i++) {
-    newList = list + list;
+function dbFn(list) {
+  // const newList = [...list, ...list];
+  // list = newList;
+  // console.log(list);
+  let newList = [];
+  for (let i = 0; i < list.length; i++) {
+    newList.push(list[i]);
   }
-  return newList;
+  newList = list;
+  console.log(newList);
+  demo.innerHTML = newList;
 }
