@@ -66,14 +66,8 @@ btnDbItem.classList.add("btn-item");
 btnDbItem.addEventListener("click", () => dbFn(list));
 
 function dbFn(list) {
-  // const newList = [...list, ...list];
-  // list = newList;
-  // console.log(list);
-  let newList = [];
-  for (let i = 0; i < list.length; i++) {
-    newList.push(list[i]);
-  }
-  newList = list;
-  console.log(newList);
-  demo.innerHTML = newList;
+  const newList = [...list, ...list];
+  list = newList;
+  console.log(list);
+  demo.innerHTML = newList.join("");
 }
