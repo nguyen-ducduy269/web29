@@ -19,8 +19,7 @@ function bai1() {
 // };
 
 let list = [];
-const ul = document.createElement("ul");
-const demo = document.getElementById("demo").appendChild(ul);
+const demo = document.getElementById("demo");
 // Thêm
 const btnAddItem = document.createElement("button");
 btnAddItem.innerHTML = "Add Item";
@@ -28,23 +27,20 @@ btnAddItem.classList.add("btn-item");
 btnAddItem.addEventListener("click", () => addFn());
 
 function addFn() {
-  const addItem = document.createAttribute("nhap");
-  addItem.value = value = prompt("Nhập họ tên của bạn: ");
-  btnAddItem.setAttributeNode(addItem);
+  const value = prompt("Nhập giá trị: ");
   if (value === null || value === "") {
     demo.innerHTML = "Giá trị nhập không hợp lệ";
   } else {
     list.push(value);
-    const li = document.createElement("li");
-    li.innerText = value;
-    ul.append(li);
+    demo.innerHTML = list;
+    show(list);
   }
-  show(list);
 }
+
 //hiện
-function show(list) {
+function show() {
   console.log("list", list);
-  document.getElementById("demo").innerHTML = list.join(", ");
+  document.getElementById("demo").innerHTML = list.join(" ");
 }
 
 // Sửa
@@ -59,10 +55,8 @@ btnDeleteItem.classList.add("btn-item");
 btnDeleteItem.addEventListener("click", () => deleteFn());
 
 function deleteFn() {
-  const li = document.querySelector("li");
-  ul.removeChild(li);
-  list.splice(0, 1);
-  console.log(list, list.splice(-1, 1));
+  const value = prompt("Nhập giá trị mà bạn muốn xóa: ");
+  list.splice(value, 1);
   show(list);
 }
 
@@ -78,5 +72,4 @@ function dbFn(list) {
   list = list.join(list);
   //return list
   show(list);
-  return list;
 }
