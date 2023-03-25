@@ -19,3 +19,4 @@
   - Nếu cả 2 vế đều là null hoặc undefined tính cả trường hợp một vế null, vế kia là undefined thì là true
 
 - Cấu trúc String() dùng để chuyển loại dữ liệu khác về dạng chuỗi
+- Giá trị của this trong JavaScript chính là object gọi phương thức - đối tượng trước dấu chấm (.)

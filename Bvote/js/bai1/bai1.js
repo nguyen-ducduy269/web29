@@ -18,7 +18,7 @@ function bai1() {
 //   document.getElementById("demo").innerHTML = String(arr);
 // };
 
-const list = [];
+let list = [];
 const ul = document.createElement("ul");
 const demo = document.getElementById("demo").appendChild(ul);
 // Thêm
@@ -39,6 +39,12 @@ function addFn() {
     li.innerText = value;
     ul.append(li);
   }
+  show(list);
+}
+//hiện
+function show(list) {
+  console.log("list", list);
+  document.getElementById("demo").innerHTML = list.join(", ");
 }
 
 // Sửa
@@ -57,6 +63,7 @@ function deleteFn() {
   ul.removeChild(li);
   list.splice(0, 1);
   console.log(list, list.splice(-1, 1));
+  show(list);
 }
 
 // Nhân đôi
@@ -66,8 +73,10 @@ btnDbItem.classList.add("btn-item");
 btnDbItem.addEventListener("click", () => dbFn(list));
 
 function dbFn(list) {
-  const newList = [...list, ...list];
-  list = newList;
-  console.log(list);
-  demo.innerHTML = newList.join("");
+  console.log("list", list);
+  //nhân đôi list
+  list = list.join(list);
+  //return list
+  show(list);
+  return list;
 }
