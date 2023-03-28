@@ -92,9 +92,21 @@ increaseItem.classList.add("btn-item");
 increaseItem.addEventListener("click", () => (list = incFn(list)));
 
 function incFn(list) {
-  list = list.sort();
+  if (!isSorted(list)) {
+    // nếu mảng chưa được sắp xếp thì thực hiện sắp xếp lại
+    list = list.sort();
+  }
   demo.innerHTML = list;
   show(list);
+  // trả lại mảng sau khi sắp xếp
+  return list;
+}
+
+function isSorted(arr) {
+  // kiểm tra xem mảng đã được sắp xếp chưa
+  return arr.every((item, index) => {
+    return index === 0 || item >= arr[index - 1];
+  });
 }
 
 // sắp xếp theo chiều giảm dần
@@ -104,7 +116,10 @@ decreaseItem.classList.add("btn-item");
 decreaseItem.addEventListener("click", () => (list = decFn(list)));
 
 function decFn(list) {
-  list = list.sort().reverse();
+  if (!isSorted(list)) {
+    // nếu mảng chưa được sắp xếp thì thực hiện sắp xếp lại
+    list = list.sort().reverse();
+  }
   demo.innerHTML = list;
   show(list);
 }
