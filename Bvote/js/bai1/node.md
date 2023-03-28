@@ -20,3 +20,10 @@
 
 - Cấu trúc String() dùng để chuyển loại dữ liệu khác về dạng chuỗi
 - Giá trị của this trong JavaScript chính là object gọi phương thức - đối tượng trước dấu chấm (.)
+- [].forEach(); dùng để duyệt qua mảng, gọi hàm callback 1 lần với mỗi giá trị
+- [].find(); tìm 1 giá trị đầu tiên trong mảng phù hợp với điều kiện nhất định đc đánh giá bởi hàm callback
+- [].findIndex(); tìm index của giá trị đầu tiên phù hợp với điều kiện được đánh giá bởi hàm callback
+- [].map(); chuyển đổi tất cả giá trị trong mảng thành giá trị mới được tính toán bởi hàm callback, mảng mới không ảnh hưởng đến mảng ban đầu
+- [].filter(); tìm tất cả giá trị phù hợp với yêu cầu được đánh giá bởi hàm callback
+- [].reduce(); tổng hợp các giá trị trong mảng được tính toán bởi hàm callback
+- [].sort(); sắp xếp các giá trị bên trong mảng
