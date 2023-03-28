@@ -27,3 +27,4 @@
 - [].filter(); tìm tất cả giá trị phù hợp với yêu cầu được đánh giá bởi hàm callback
 - [].reduce(); tổng hợp các giá trị trong mảng được tính toán bởi hàm callback
 - [].sort(); sắp xếp các giá trị bên trong mảng
+- [].every(); thực thi một hàm cho từng phần tử

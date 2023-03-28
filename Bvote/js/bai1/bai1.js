@@ -102,10 +102,10 @@ function incFn(list) {
   return list;
 }
 
-function isSorted(arr) {
+function isSorted(array) {
   // kiểm tra xem mảng đã được sắp xếp chưa
-  return arr.every((item, index) => {
-    return index === 0 || item >= arr[index - 1];
+  return array.every((item, index) => {
+    return index === 0 || item >= array[index - 1];
   });
 }
 
@@ -122,4 +122,5 @@ function decFn(list) {
   }
   demo.innerHTML = list;
   show(list);
+  return list;
 }
