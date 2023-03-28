@@ -14,7 +14,7 @@ function bai1(list) {
   show(list);
 }
 
-let list = [4, 7, 2, 1];
+let list = [4, 7, 2, 1, 6, 9, 5, 3, 8];
 const demo = document.getElementById("demo");
 let value;
 console.log("listxxxx", list);
@@ -61,7 +61,7 @@ btnDeleteItem.innerHTML = "Delete Item";
 btnDeleteItem.classList.add("btn-item");
 btnDeleteItem.addEventListener("click", () => deleteFn(list));
 
-function deleteFn(list) {
+function deleteFn() {
   // lựa chọn vị trí của giá trị muốn xóa
   const value = prompt("Nhập giá trị muốn xóa: ");
   // xóa phần tử có index là value
