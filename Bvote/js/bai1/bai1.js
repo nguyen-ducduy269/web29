@@ -96,15 +96,15 @@ function incFn(list) {
     // nếu mảng chưa được sắp xếp thì thực hiện sắp xếp lại
     list = list.sort();
   }
-  demo.innerHTML = list;
   show(list);
   // trả lại mảng sau khi sắp xếp
   return list;
 }
 
 function isSorted(array) {
-  // kiểm tra xem mảng đã được sắp xếp chưa
+  // kiểm tra xem mảng đã được sắp xếp chưa bằng phương thức every
   return array.every((item, index) => {
+    // nếu index bằng 0 (điều kiện trong mệnh đề index === 0) thì sẽ trả về true, hoặc nếu item lớn hơn hoặc bằng phần tử trước đó trong mảng (điều kiện trong mệnh đề item >= arr[index - 1]) thì cũng trả về true.
     return index === 0 || item >= array[index - 1];
   });
 }
@@ -116,11 +116,7 @@ decreaseItem.classList.add("btn-item");
 decreaseItem.addEventListener("click", () => (list = decFn(list)));
 
 function decFn(list) {
-  if (!isSorted(list)) {
-    // nếu mảng chưa được sắp xếp thì thực hiện sắp xếp lại
-    list = list.sort().reverse();
-  }
-  demo.innerHTML = list;
+  list = list.sort().reverse();
   show(list);
   return list;
 }
