@@ -18,20 +18,46 @@ let list = [4, 7, 2, 1, 6, 9, 5, 3, 8];
 const demo = document.getElementById("demo");
 let value;
 console.log("listxxxx", list);
+
+// tạo nút
+const btnAddItem = document.createElement("button");
+btnAddItem.innerHTML = "Add Item";
+btnAddItem.classList.add("btn-item");
+btnAddItem.addEventListener("click", () => addFn());
+
+const btnEditItem = document.createElement("button");
+btnEditItem.innerHTML = "Edit Item";
+btnEditItem.classList.add("btn-item");
+btnEditItem.addEventListener("click", () => editFn());
+
+const btnDeleteItem = document.createElement("button");
+btnDeleteItem.innerHTML = "Delete Item";
+btnDeleteItem.classList.add("btn-item");
+btnDeleteItem.addEventListener("click", () => deleteFn(list));
+
+const btnDbItem = document.createElement("button");
+btnDbItem.innerHTML = "Double Item";
+btnDbItem.classList.add("btn-item");
+btnDbItem.addEventListener("click", () => (list = dbFn(list)));
+
+const increaseItem = document.createElement("button");
+increaseItem.innerHTML = "Increase Item";
+increaseItem.classList.add("btn-item");
+increaseItem.addEventListener("click", () => (list = incFn(list)));
+
+const decreaseItem = document.createElement("button");
+decreaseItem.innerHTML = "Decrease Item";
+decreaseItem.classList.add("btn-item");
+decreaseItem.addEventListener("click", () => (list = decFn(list)));
 //hiện
 function show(array) {
   demo.innerHTML = array.join(" ");
 }
 
 // Thêm
-const btnAddItem = document.createElement("button");
-btnAddItem.innerHTML = "Add Item";
-btnAddItem.classList.add("btn-item");
-btnAddItem.addEventListener("click", () => addFn());
-
 function addFn() {
   let value = prompt("Nhập giá trị: ");
-  if (value === null || value === "") {
+  if (value === null || value === "" || value.length >= 10) {
     demo.innerHTML = "Giá trị nhập không hợp lệ";
   } else {
     // thêm vào list giá trị value vừa nhập
@@ -43,11 +69,6 @@ function addFn() {
 }
 
 // Sửa
-const btnEditItem = document.createElement("button");
-btnEditItem.innerHTML = "Edit Item";
-btnEditItem.classList.add("btn-item");
-btnEditItem.addEventListener("click", () => editFn());
-
 function editFn() {
   const fixValue = prompt("Nhập vị trí muốn sửa: ");
   const newValue = prompt("Nhập giá trị muốn sửa: ");
@@ -56,11 +77,6 @@ function editFn() {
 }
 
 // Xóa
-const btnDeleteItem = document.createElement("button");
-btnDeleteItem.innerHTML = "Delete Item";
-btnDeleteItem.classList.add("btn-item");
-btnDeleteItem.addEventListener("click", () => deleteFn(list));
-
 function deleteFn() {
   // lựa chọn vị trí của giá trị muốn xóa
   const value = prompt("Nhập giá trị muốn xóa: ");
@@ -70,11 +86,6 @@ function deleteFn() {
 }
 
 // Nhân đôi
-const btnDbItem = document.createElement("button");
-btnDbItem.innerHTML = "Double Item";
-btnDbItem.classList.add("btn-item");
-btnDbItem.addEventListener("click", () => (list = dbFn(list)));
-
 function dbFn(list) {
   // nhân đôi list bằng cách tạo ra một mảng mới
   list = list.concat(list);
@@ -86,11 +97,6 @@ function dbFn(list) {
 }
 
 // sắp xếp theo chiều tăng dần
-const increaseItem = document.createElement("button");
-increaseItem.innerHTML = "Increase Item";
-increaseItem.classList.add("btn-item");
-increaseItem.addEventListener("click", () => (list = incFn(list)));
-
 function incFn(list) {
   if (!isSorted(list)) {
     // nếu mảng chưa được sắp xếp thì thực hiện sắp xếp lại
@@ -101,6 +107,7 @@ function incFn(list) {
   return list;
 }
 
+// hàm sắp xếp thứ tự từ nhỏ đến lớn
 function isSorted(array) {
   // kiểm tra xem mảng đã được sắp xếp chưa bằng phương thức every
   return array.every((item, index) => {
@@ -110,11 +117,6 @@ function isSorted(array) {
 }
 
 // sắp xếp theo chiều giảm dần
-const decreaseItem = document.createElement("button");
-decreaseItem.innerHTML = "Decrease Item";
-decreaseItem.classList.add("btn-item");
-decreaseItem.addEventListener("click", () => (list = decFn(list)));
-
 function decFn(list) {
   list = list.sort().reverse();
   show(list);
