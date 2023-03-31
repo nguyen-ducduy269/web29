@@ -28,3 +28,4 @@
 - [].reduce(); tổng hợp các giá trị trong mảng được tính toán bởi hàm callback
 - [].sort(); sắp xếp các giá trị bên trong mảng
 - [].every(); thực thi một hàm cho từng phần tử
+- [].pop(); có thể dùng để lấy ra phần tử cuối cùng của mảng hoặc dùng để xóa đi phần tử cuối của mảng
