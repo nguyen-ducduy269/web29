@@ -18,3 +18,4 @@
 - console.log(strr.split()); - cắt chuỗi thành 1 mảng từ hoặc ký tự riêng
 - console.log(strr.slice()); - sao chép từ start đến end và trả về phần đó
 - console.log(strr.concat()); - ghép chuỗi
+- == : so sánh về giá trị ; === : so sánh về giá trị và về kiểu dữ liệu

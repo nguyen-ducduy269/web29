@@ -13,3 +13,6 @@ function sayHello(count) {
   sayHello(count - 1);
 }
 sayHello(5);
+
+let workWithJs =
+  "https://phambinh.net/bai-viet/cac-ham-lam-viec-voi-string-trong-javascript/";

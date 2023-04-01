@@ -8,12 +8,13 @@
 function bai2() {
   document.body.appendChild(btnFootageItem);
   document.body.appendChild(btnAddItem);
+  document.body.appendChild(btnDeleteItem);
   show(list);
 }
 
 const demo = document.getElementById("demo");
-const list = "5 2 6 3 1 9";
-const newList = [];
+let list = "5 2 6 3 1 9 ";
+let value = "";
 
 function show(string) {
   demo.innerHTML = string;
@@ -32,19 +33,41 @@ function footFunc() {
   show("Độ dài của phần tử mới nhập là: " + lastItem.length);
 }
 
+// Thêm
 const btnAddItem = document.createElement("button");
 btnAddItem.innerHTML = "Nhập";
 btnAddItem.classList.add("btn");
 btnAddItem.setAttribute("onclick", "addFunc()");
 
 function addFunc() {
-  const value = prompt("Nhập vào chuỗi: ");
+  value = prompt("Nhập vào chuỗi: ");
   if (value === null || value === "" || value.length < 10) {
     demo.innerHTML = "Giá trị nhập vào không hợp lệ";
   } else {
     // thực hiện phương thức thêm vào như 1 mảng
-    newList.push(value);
-    list = newList.join(" ");
+    list = list.concat(value);
     show(list);
   }
+}
+
+// Xóa
+const btnDeleteItem = document.createElement("button");
+btnDeleteItem.innerHTML = "Xóa phần tử";
+btnDeleteItem.classList.add("btn");
+btnDeleteItem.setAttribute("onclick", "delFunc()");
+
+function delFunc() {
+  value = prompt("Nhập vào chuỗi cần xóa: ");
+  // tìm vị trí của phần tử muốn xóa
+  let deleteValueIndex = list.search(value);
+  console.log("deleteValueIndex", deleteValueIndex);
+
+  // biến chuỗi thành 1 mảng
+  const newList = list.split("");
+  // xóa đi vị trị của phần tử
+  newList.split(value);
+  // gộp các phần tử còn lại để tao thành chuỗi mới
+  list = newList.join("");
+  // hiển thị chuỗi mới
+  show(list);
 }
