@@ -9,11 +9,15 @@ function bai2() {
   document.body.appendChild(btnFootageItem);
   document.body.appendChild(btnAddItem);
   document.body.appendChild(btnDeleteItem);
+  document.body.appendChild(btnReplaceItem);
+  document.body.appendChild(btnIndexItem);
+  document.body.appendChild(btnLowerItem);
+  document.body.appendChild(btnUpperItem);
   show(list);
 }
 
 const demo = document.getElementById("demo");
-let list = "5 2 6 3 1 9 ";
+let list = "5 2 Duy 3 mộT 9 ";
 let value = "";
 
 function show(string) {
@@ -25,6 +29,37 @@ btnFootageItem.innerHTML = "Chiều dài chuỗi mới nhập";
 btnFootageItem.classList.add("btn");
 btnFootageItem.setAttribute("onclick", "footFunc()");
 
+const btnAddItem = document.createElement("button");
+btnAddItem.innerHTML = "Nhập";
+btnAddItem.classList.add("btn");
+btnAddItem.setAttribute("onclick", "addFunc()");
+
+const btnDeleteItem = document.createElement("button");
+btnDeleteItem.innerHTML = "Xóa chuỗi";
+btnDeleteItem.classList.add("btn");
+btnDeleteItem.setAttribute("onclick", "delFunc()");
+
+const btnReplaceItem = document.createElement("button");
+btnReplaceItem.innerHTML = "Thay thế chuỗi mới";
+btnReplaceItem.classList.add("btn");
+btnReplaceItem.setAttribute("onclick", "repFunc()");
+
+const btnIndexItem = document.createElement("button");
+btnIndexItem.innerHTML = "Vị trí của chuỗi bất kì";
+btnIndexItem.classList.add("btn");
+btnIndexItem.setAttribute("onclick", "indexFunc()");
+
+const btnLowerItem = document.createElement("button");
+btnLowerItem.innerHTML = "Viết thường";
+btnLowerItem.classList.add("btn");
+btnLowerItem.setAttribute("onclick", "lowerFunc()");
+
+const btnUpperItem = document.createElement("button");
+btnUpperItem.innerHTML = "Viết hoa";
+btnUpperItem.classList.add("btn");
+btnUpperItem.setAttribute("onclick", "upperFunc()");
+
+// Chiều dài chuỗi mới nhập
 function footFunc() {
   // tác chuỗi thành 1 mảng bằng split
   // dùng pop để lấy ra phần tử cuối cùng của mảng
@@ -34,40 +69,50 @@ function footFunc() {
 }
 
 // Thêm
-const btnAddItem = document.createElement("button");
-btnAddItem.innerHTML = "Nhập";
-btnAddItem.classList.add("btn");
-btnAddItem.setAttribute("onclick", "addFunc()");
-
 function addFunc() {
   value = prompt("Nhập vào chuỗi: ");
   if (value === null || value === "" || value.length < 10) {
     demo.innerHTML = "Giá trị nhập vào không hợp lệ";
   } else {
     // thực hiện phương thức thêm vào như 1 mảng
-    list = list.concat(value);
+    list = list.concat(value, " ");
     show(list);
   }
 }
 
 // Xóa
-const btnDeleteItem = document.createElement("button");
-btnDeleteItem.innerHTML = "Xóa phần tử";
-btnDeleteItem.classList.add("btn");
-btnDeleteItem.setAttribute("onclick", "delFunc()");
-
 function delFunc() {
   value = prompt("Nhập vào chuỗi cần xóa: ");
-  // tìm vị trí của phần tử muốn xóa
-  let deleteValueIndex = list.search(value);
-  console.log("deleteValueIndex", deleteValueIndex);
-
-  // biến chuỗi thành 1 mảng
-  const newList = list.split("");
   // xóa đi vị trị của phần tử
-  newList.split(value);
-  // gộp các phần tử còn lại để tao thành chuỗi mới
-  list = newList.join("");
-  // hiển thị chuỗi mới
+  list = list.replace(value, "");
   show(list);
+}
+
+// Thay thế
+function repFunc() {
+  value = prompt("Nhập vào chuỗi cần thay thế: ");
+  const newValue = prompt("Nhập vào chuỗi mới: ");
+  list = list.replace(value, newValue);
+  show(list);
+}
+
+// Vị trí
+function indexFunc() {
+  value = prompt("Nhập vào chuỗi: ");
+  const valueIndex = list.search(value);
+  show("Vị trí của chuỗi vừa nhập là: " + valueIndex);
+}
+
+// viết thường
+function lowerFunc() {
+  const newList = list.toLowerCase();
+  list = newList;
+  show(newList);
+}
+
+// viết hoa
+function upperFunc() {
+  const newList = list.toUpperCase();
+  list = newList;
+  show(newList);
 }
