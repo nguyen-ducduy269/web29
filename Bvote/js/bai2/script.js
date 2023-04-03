@@ -13,6 +13,7 @@ function bai2() {
   document.body.appendChild(btnIndexItem);
   document.body.appendChild(btnLowerItem);
   document.body.appendChild(btnUpperItem);
+  document.body.appendChild(btnFindItem);
   show(list);
 }
 
@@ -59,33 +60,37 @@ btnUpperItem.innerHTML = "Viết hoa";
 btnUpperItem.classList.add("btn");
 btnUpperItem.setAttribute("onclick", "upperFunc()");
 
+const btnFindItem = document.createElement("button");
+btnFindItem.innerHTML = "Chuỗi cần tìm";
+btnFindItem.classList.add("btn");
+btnFindItem.setAttribute("onclick", "findFunc()");
 // Chiều dài chuỗi mới nhập
 function footFunc() {
   // tác chuỗi thành 1 mảng bằng split
   // dùng pop để lấy ra phần tử cuối cùng của mảng
   const lastItem = list.split(" ").pop();
-  console.log("lastItem", lastItem);
   show("Độ dài của phần tử mới nhập là: " + lastItem.length);
 }
 
 // Thêm
 function addFunc() {
   value = prompt("Nhập vào chuỗi: ");
-  if (value === null || value === "" || value.length < 10) {
+  if (value === null || value === "") {
     demo.innerHTML = "Giá trị nhập vào không hợp lệ";
   } else {
     // thực hiện phương thức thêm vào như 1 mảng
-    list = list.concat(value, " ");
+    list = list.concat(value);
     show(list);
   }
 }
 
 // Xóa
 function delFunc() {
-  value = prompt("Nhập vào chuỗi cần xóa: ");
+  value = prompt("Nhập vào vị trí bắt đầu cần xóa: ");
+  const newValue = prompt("Nhập vào vị trí cuối cần xóa: ");
   // xóa đi vị trị của phần tử
-  list = list.replace(value, "");
-  show(list);
+  list = list.slice(value, newValue);
+  show("Chuỗi vừa xóa là: " + list);
 }
 
 // Thay thế
@@ -99,7 +104,7 @@ function repFunc() {
 // Vị trí
 function indexFunc() {
   value = prompt("Nhập vào chuỗi: ");
-  const valueIndex = list.search(value);
+  const valueIndex = list.indexOf(value);
   show("Vị trí của chuỗi vừa nhập là: " + valueIndex);
 }
 
@@ -115,4 +120,17 @@ function upperFunc() {
   const newList = list.toUpperCase();
   list = newList;
   show(newList);
+}
+
+// tìm vị trí của chuỗi
+function findFunc() {
+  // Nhập vào chuỗi cần tìm
+  const newValue = prompt("Nhập vào chuỗi cần tìm: ");
+  for (let i = 0; i < list.length; i++) {
+    // nhập vào thứ tự của chuỗi đó trong các chuỗi giống nó
+    i = prompt("Vị trí của chuỗi: ");
+    // nếu giá trị và thứ tự trùng với list thì in ra giá trị
+    if ((newValue = list[i])) return newValue;
+  }
+  show(newValue);
 }
