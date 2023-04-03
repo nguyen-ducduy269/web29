@@ -18,7 +18,7 @@ function bai2() {
 }
 
 const demo = document.getElementById("demo");
-let list = "5 2 Duy 3 mộT 9 ";
+let list = "9 5 2 9 Duy 3 mộT 9 ";
 let value = "";
 
 function show(string) {
@@ -64,6 +64,7 @@ const btnFindItem = document.createElement("button");
 btnFindItem.innerHTML = "Chuỗi cần tìm";
 btnFindItem.classList.add("btn");
 btnFindItem.setAttribute("onclick", "findFunc()");
+
 // Chiều dài chuỗi mới nhập
 function footFunc() {
   // tác chuỗi thành 1 mảng bằng split
@@ -123,14 +124,15 @@ function upperFunc() {
 }
 
 // tìm vị trí của chuỗi
+const findList = [];
 function findFunc() {
   // Nhập vào chuỗi cần tìm
-  const newValue = prompt("Nhập vào chuỗi cần tìm: ");
+  value = prompt("Nhập vào chuỗi cần tìm: ");
   for (let i = 0; i < list.length; i++) {
-    // nhập vào thứ tự của chuỗi đó trong các chuỗi giống nó
-    i = prompt("Vị trí của chuỗi: ");
-    // nếu giá trị và thứ tự trùng với list thì in ra giá trị
-    if ((newValue = list[i])) return newValue;
+    if (list[i] == value) {
+      i++;
+      findList.push(i);
+    }
   }
-  show(newValue);
+  show("Vị trí của giá trị vừa nhập là: " + findList);
 }
