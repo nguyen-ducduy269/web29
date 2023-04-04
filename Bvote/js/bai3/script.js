@@ -6,198 +6,152 @@
 // 	Hướng dẫn cách để sort 1 bảng:
 // https://www.w3schools.com/howto/howto_js_sort_table.asp
 // 	Sử dụng (for in) để tính độ dài object.
-
 let listStudent = [
   {
+    number: "Số thứ tự",
+    name: "Tên",
+    age: "Tuổi",
+    gener: "Giới tính",
+    math: "Điểm toán",
+    literature: "Điểm văn",
+    sumScore: "Tổng điểm toán văn",
+  },
+  {
     number: 1,
-    name: "Duy1",
+    name: "A1",
     age: 20,
     gener: "Male",
     math: 8,
     literature: 5,
+    sumScore: "",
   },
   {
     number: 2,
-    name: "Lan1",
+    name: "A2",
     age: 26,
     gener: "Female",
     math: 7,
     literature: 10,
+    sumScore: "",
   },
   {
     number: 3,
-    name: "Tuyết1",
+    name: "A3",
     age: 20,
     gener: "Female",
     math: 8,
     literature: 6,
+    sumScore: "",
   },
   {
     number: 4,
-    name: "Mạnh1",
+    name: "A4",
     age: 26,
     gener: "Male",
     math: 3,
     literature: 5,
+    sumScore: "",
   },
   {
     number: 5,
-    name: "Duy2",
+    name: "A5",
     age: 20,
     gener: "Male",
     math: 1,
     literature: 2,
+    sumScore: "",
   },
   {
     number: 6,
-    name: "Lan2",
+    name: "A6",
     age: 26,
     gener: "Female",
     math: 3,
     literature: 4,
+    sumScore: "",
   },
   {
     number: 7,
-    name: "Tuyết2",
+    name: "A7",
     age: 20,
     gener: "Female",
     math: 8,
     literature: 6,
+    sumScore: "",
   },
   {
     number: 8,
-    name: "Mạnh2",
+    name: "A8",
     age: 26,
     gener: "Male",
     math: 3,
     literature: 5,
+    sumScore: "",
   },
   {
     number: 9,
-    name: "Lan3",
+    name: "A9",
     age: 26,
     gener: "Female",
     math: 3,
     literature: 4,
+    sumScore: "",
   },
   {
     number: 10,
-    name: "Tuyết3",
+    name: "A10",
     age: 20,
     gener: "Female",
     math: 8,
     literature: 6,
+    sumScore: "",
   },
 ];
-console.log(listStudent[0].name);
 
 function bai3() {
-  show(list);
-}
+  // tạo thẻ table
+  const tableRender = document.createElement("table");
+  // tạo thẻ tr
+  const row = document.createElement("tr");
+  // xét class cho thẻ tr
+  row.setAttribute("class", "table-row");
 
-const list = `
-  <table>
-    <tr>
-      <th>Số báo danh</th>
-      <th>Tên</th>
-      <th>Tuổi</th>
-      <th>Giới tính</th>
-      <th>Điểm môn Toán</th>
-      <th>Điểm môn Văn</th>
-      <th>Tổng điểm Toán Văn</th>
-    </tr>
-    <tr>
-      <td>${listStudent[0].number}</td>
-      <td>${listStudent[0].name}</td>
-      <td>${listStudent[0].age}</td>
-      <td>${listStudent[0].gener}</td>
-      <td>${listStudent[0].math}</td>
-      <td>${listStudent[0].literature}</td>
-      <td>${listStudent[0].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[1].number}</td>
-      <td>${listStudent[1].name}</td>
-      <td>${listStudent[1].age}</td>
-      <td>${listStudent[1].gener}</td>
-      <td>${listStudent[1].math}</td>
-      <td>${listStudent[1].literature}</td>
-      <td>${listStudent[1].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[2].number}</td>
-      <td>${listStudent[2].name}</td>
-      <td>${listStudent[2].age}</td>
-      <td>${listStudent[2].gener}</td>
-      <td>${listStudent[2].math}</td>
-      <td>${listStudent[2].literature}</td>
-      <td>${listStudent[2].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[3].number}</td>
-      <td>${listStudent[3].name}</td>
-      <td>${listStudent[3].age}</td>
-      <td>${listStudent[3].gener}</td>
-      <td>${listStudent[3].math}</td>
-      <td>${listStudent[3].literature}</td>
-      <td>${listStudent[3].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[4].number}</td>
-      <td>${listStudent[4].name}</td>
-      <td>${listStudent[4].age}</td>
-      <td>${listStudent[4].gener}</td>
-      <td>${listStudent[4].math}</td>
-      <td>${listStudent[4].literature}</td>
-      <td>${listStudent[4].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[5].number}</td>
-      <td>${listStudent[5].name}</td>
-      <td>${listStudent[5].age}</td>
-      <td>${listStudent[5].gener}</td>
-      <td>${listStudent[5].math}</td>
-      <td>${listStudent[5].literature}</td>
-      <td>${listStudent[5].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[6].number}</td>
-      <td>${listStudent[6].name}</td>
-      <td>${listStudent[6].age}</td>
-      <td>${listStudent[6].gener}</td>
-      <td>${listStudent[6].math}</td>
-      <td>${listStudent[6].literature}</td>
-      <td>${listStudent[6].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[7].number}</td>
-      <td>${listStudent[7].name}</td>
-      <td>${listStudent[7].age}</td>
-      <td>${listStudent[7].gener}</td>
-      <td>${listStudent[7].math}</td>
-      <td>${listStudent[7].literature}</td>
-      <td>${listStudent[7].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[8].number}</td>
-      <td>${listStudent[8].name}</td>
-      <td>${listStudent[8].age}</td>
-      <td>${listStudent[8].gener}</td>
-      <td>${listStudent[8].math}</td>
-      <td>${listStudent[8].literature}</td>
-      <td>${listStudent[8].name}</td>
-    </tr>
-    <tr>
-      <td>${listStudent[9].number}</td>
-      <td>${listStudent[9].name}</td>
-      <td>${listStudent[9].age}</td>
-      <td>${listStudent[9].gener}</td>
-      <td>${listStudent[9].math}</td>
-      <td>${listStudent[9].literature}</td>
-      <td>${listStudent[9].name}</td>
-    </tr>
-  </table>
-  `;
-function show(list) {
-  demo.innerHTML = list;
+  // duyệt qua mảng bằng map
+  listStudent.map((item) => {
+    // tạo thẻ td
+    const col1 = document.createElement("td");
+    // gán giá trị cho thẻ td
+    col1.innerText = `${item.number}`;
+    // thêm thẻ td vào trong tr
+    row.appendChild(col1);
+
+    const col2 = document.createElement("td");
+    col2.innerText = `${item.name}`;
+    row.appendChild(col2);
+
+    const col3 = document.createElement("td");
+    col3.innerText = `${item.age}`;
+    row.appendChild(col3);
+
+    const col4 = document.createElement("td");
+    col4.innerText = `${item.gener}`;
+    row.appendChild(col4);
+
+    const col5 = document.createElement("td");
+    col5.innerText = `${item.math}`;
+    row.appendChild(col5);
+
+    const col6 = document.createElement("td");
+    col6.innerText = `${item.literature}`;
+    row.appendChild(col6);
+
+    const col7 = document.createElement("td");
+    col7.innerText = `${item.sumScore}`;
+    row.appendChild(col7);
+  });
+
+  // thêm tr vào trong table
+  tableRender.appendChild(row);
+  // thêm table vào thẻ có id demo
+  document.getElementById("demo").appendChild(tableRender);
 }
