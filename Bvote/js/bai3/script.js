@@ -94,7 +94,7 @@ let listStudent = [
     age: 26,
     gener: "Female",
     math: 3,
-    literature: 4,
+    literature: 9,
     sumScore: "",
   },
   {
@@ -118,6 +118,7 @@ for (let i = 1; i < listStudent.length; i++) {
 function bai3() {
   createTable();
   document.getElementById("demo").appendChild(mathHighButton);
+  document.getElementById("demo").appendChild(literHighButton);
 }
 
 function createTable() {
@@ -168,19 +169,49 @@ function createTable() {
   document.getElementById("demo").appendChild(tableRender);
 }
 
+const list = [];
+
+// học sinh có điểm toán cao nhất
 const mathHighButton = document.createElement("button");
 mathHighButton.innerHTML = "Max toán: ";
 mathHighButton.classList.add("btn");
 mathHighButton.setAttribute("onclick", "mathHighestScore()");
+
 function mathHighestScore() {
+  // khai báo biến trung gian
+  let max = -Infinity;
+
+  // dùng vòng lặp giới hạn trong số lượng phần tử list
   for (let i = 0; i < listStudent.length; i++) {
-    for (let j = 0; j < listStudent.length; j++) {
-      let max = 1;
-      if (listStudent[i].math > max > listStudent[j].math) {
-        listStudent[i].math = max;
-        document.getElementById("demo").innerHTML = listStudent[i].name;
-      }
+    if (listStudent[i].math > max) {
+      max = listStudent[i].math;
+      list.push(listStudent[i].name);
+    } else if (listStudent[i].math === max) {
+      list.push(listStudent[i].name);
     }
-    return listStudent[i].name;
   }
+
+  document.getElementById("demo").innerHTML =
+    "Những học sinh có điểm toán cao nhât là: " + list.join(", ");
+}
+
+// học sinh có điểm văn cao nhất
+const literHighButton = document.createElement("button");
+literHighButton.innerHTML = "Max văn: ";
+literHighButton.classList.add("btn");
+literHighButton.setAttribute("onclick", "literatureHighestScore()");
+
+function literatureHighestScore() {
+  let max = -Infinity;
+  for (let i = 0; i < listStudent.length; i++) {
+    if (listStudent[i].literature > max) {
+      max = listStudent[i].literature;
+      list.push(listStudent[i].name);
+    } else if (listStudent[i].literature === max) {
+      list.push(listStudent[i].name);
+    }
+  }
+
+  document.getElementById("demo").innerHTML =
+    "Những học sinh có điểm văn cao nhât là: " + list.join(", ");
 }
