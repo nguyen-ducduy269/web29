@@ -108,7 +108,19 @@ let listStudent = [
   },
 ];
 
+for (let i = 1; i < listStudent.length; i++) {
+  let student = listStudent[i];
+  let sum = student.math + student.literature;
+  student.sumScore = sum;
+  // listStudent[i].sumScore = listStudent[i].math + listStudent[i].literature;
+}
+
 function bai3() {
+  createTable();
+  document.getElementById("demo").appendChild(mathHighButton);
+}
+
+function createTable() {
   // tạo thẻ table
   const tableRender = document.createElement("table");
   // tạo thẻ tr
@@ -154,4 +166,21 @@ function bai3() {
   tableRender.appendChild(row);
   // thêm table vào thẻ có id demo
   document.getElementById("demo").appendChild(tableRender);
+}
+
+const mathHighButton = document.createElement("button");
+mathHighButton.innerHTML = "Max toán: ";
+mathHighButton.classList.add("btn");
+mathHighButton.setAttribute("onclick", "mathHighestScore()");
+function mathHighestScore() {
+  for (let i = 0; i < listStudent.length; i++) {
+    for (let j = 0; j < listStudent.length; j++) {
+      let max = 1;
+      if (listStudent[i].math > max > listStudent[j].math) {
+        listStudent[i].math = max;
+        document.getElementById("demo").innerHTML = listStudent[i].name;
+      }
+    }
+    return listStudent[i].name;
+  }
 }
