@@ -190,7 +190,7 @@ function mathHighestScore() {
     }
   }
 
-  const table = document.createElement("table-bf");
+  const table = document.createElement("table");
   const row = document.createElement("tr");
   row.setAttribute("class", "table-row");
 
