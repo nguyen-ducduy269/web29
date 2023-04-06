@@ -25,5 +25,5 @@ function quadratic_equation(a, b, c) {
   }
 }
 quadratic_equation(0, -2, 1);
-quadratic_equation(0, -2, 1);
+quadratic_equation(3, 5, 9);
 quadratic_equation(2, 8, 1);
