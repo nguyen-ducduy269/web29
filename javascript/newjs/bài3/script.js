@@ -1,9 +1,13 @@
 // viết phương trình giải ptrinh bậc 2
-
+// destruring object - lấy giá trị của 1 chuỗi bên ngoài bằng cách gán params, bên trong func truyền params là 1 object chứa các key và value tg ứng với object truyền vào
 function quadratic_equation(a, b, c) {
   let d1;
   let d2;
   let d;
+  if (typeof a != "number" || typeof b != "number" || typeof c != "number") {
+    console.log("Giá trị không hợp lệ");
+    return;
+  }
   if (a == 0) {
     d = -c / b;
     console.log("Phương trình có nghiệm duy nhất: ", d);
@@ -27,3 +31,4 @@ function quadratic_equation(a, b, c) {
 quadratic_equation(0, -2, 1);
 quadratic_equation(3, 5, 9);
 quadratic_equation(2, 8, 1);
+quadratic_equation(2, 8, "abcdefgh");
