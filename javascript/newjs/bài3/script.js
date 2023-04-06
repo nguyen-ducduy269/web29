@@ -17,7 +17,6 @@ function quadratic_equation(a, b, c) {
       d2 = (-b - Math.sqrt(delta)) / (2 * a);
       console.log("Phương trình có 2 nghiệm là: ", d1, d2);
     } else if (delta == 0) {
-      d1 = d2 = d;
       d = -b / (2 * a);
       console.log("Phương trình có nghiệm duy nhất: ", d);
     } else {
