@@ -74,9 +74,9 @@ my_girl.dayOfBirth = "09/10/2020";
 console.log(my_girl.dayOfBirth);
 
 // gán thêm phương thức
-// my_girl.prototype.cleaning = function () {
-//   console.log("Hello");
-// };
+my_girl.cleaning = function () {
+  console.log("Hello");
+};
 
 // xóa
 delete my_girl.dayOfBirth;
