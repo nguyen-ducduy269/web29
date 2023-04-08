@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+}
+header {
+  width: 100%;
+  height: 100px;
+  box-shadow: 1px -1px 28px #00000073;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+}
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.button-list {
+  display: flex;
+  position: relative;
+}
+
+.button-content {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  border: 1px solid;
+  display: none;
+  background-color: white;
+}
+.item {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: white;
+}
+.btn:hover .button-content {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.button-content a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 10px;
+}
+.sign-in {
+  width: 70px;
+  height: 40px;
+  background-color: white;
+  border: none;
+}
+
+.sign-in:hover {
+  background-color: blue;
+  color: white;
+}
+
+.sign-up {
+  width: 70px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+.respon-btn {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  display: none;
+}
+
+.reponsive {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .respon-btn {
+    display: block;
+  }
+  .button-list {
+    display: none;
+  }
+  .sign {
+    display: flex;
+  }
+  .reponsive {
+    width: 300px;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: -300px;
+  }
+  .reponsive.active {
+    left: 0;
+  }
+  .button-new {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .button-new .item {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+  }
+  .button-new .btn .item {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #0000006b;
+    display: none;
+  }
+  .overlay.active {
+    display: block;
+  }
+  .button-content {
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    display: none;
+  }
+}
