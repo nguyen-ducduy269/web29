@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: bisque;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 70px;
+  background-color: purple;
+  color: white;
+}
+input,
+button {
+  height: 30px;
+}
+
+li {
+  margin-top: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+.active {
+  text-decoration: line-through;
+}

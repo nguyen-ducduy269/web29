@@ -32,9 +32,9 @@ buttons.forEach((button) => {
 // button.addEventListener("click", (e) => {
 //   console.log("Hello");
 
-//   //  e chính là phần tử dùng để lắng nghe sự kiện
-//   // e.target - khi chỉ có button mà không chứa j bên trong
-//   // e.currentTarget - trả về giá trị là tagName button nếu bên trong button chứa 1 hoặc nhiều thẻ khác
+//   e chính là phần tử dùng để lắng nghe sự kiện
+//   e.target - khi chỉ có button mà không chứa j bên trong
+//   e.currentTarget - trả về giá trị là tagName button nếu bên trong button chứa 1 hoặc nhiều thẻ khác
 //   console.log(e.target);
 //   console.log(e.currentTarget);
 // });
