@@ -14,6 +14,10 @@ let list = [];
 
 button.addEventListener("click", () => {
   const inputValue = document.querySelector("input").value;
+  if (inputValue == "") {
+    alert("Bắt buộc phải nhập giá trị!");
+    return false;
+  }
   let item = {};
   item.task_name = inputValue;
   addValue(item);
