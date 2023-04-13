@@ -40,36 +40,43 @@ function renderList(params) {
     li.innerHTML = `<span ${doneClass}>${task_name}</span>
     <button class="complete">Done</button> <button class="delete">Delete</button>`;
 
-    li.querySelector("button.complete").addEventListener("click", () => {
-      if (status && status == "done") return false;
-      item.status = "done";
-      li.querySelector("span").classList.add("active");
-    });
+    li.querySelector("button.complete").addEventListener("click", () =>
+      updateItem(status, item, li)
+    );
 
     //
-    li.querySelector("button.delete").addEventListener("click", () => {
-      let newArray = [];
-      let confirmValue = confirm("Xóa nhớ?");
-
-      if (confirmValue == true) {
-        for (let currentItem of params) {
-          if (currentItem.task_name != task_name) {
-            newArray.push(currentItem);
-          }
-        }
-        // .find()
-        // .reduce()
-        // .filter()
-
-        // gán lại array cũ bằng giá trị array mới
-        list = [...newArray];
-        // xóa cái li
-        li.remove();
-        // trả lại array mới bằng rỗng
-        newArray = "";
-        console.log("ul", ul);
-      }
-    });
+    li.querySelector("button.delete").addEventListener("click", () =>
+      deleteItem(task_name, li, params)
+    );
     document.querySelector("ul").appendChild(li);
+  }
+}
+
+function updateItem(status, item, li) {
+  if (status && status == "done") return false;
+  item.status = "done";
+  li.querySelector("span").classList.add("active");
+}
+
+function deleteItem(task_name, li, params) {
+  let newArray = [];
+  let confirmValue = confirm("Xóa nhớ?");
+
+  if (confirmValue == true) {
+    for (let currentItem of params) {
+      if (currentItem.task_name != task_name) {
+        newArray.push(currentItem);
+      }
+    }
+    // .find()
+    // .reduce()
+    // .filter()
+
+    // gán lại array cũ bằng giá trị array mới
+    list = [...newArray];
+    // xóa cái li
+    li.remove();
+    // trả lại array mới bằng rỗng
+    newArray = "";
   }
 }
