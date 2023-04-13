@@ -3,8 +3,6 @@
 // b)	Tạo các nút sắp xếp các thí sinh trong bảng theo chiều tăng dần, giảm dần theo môn toán.
 // c)	Tạo nút sắp sếp các thí sinh sinh trong bảng  theo chiều tăng dần hoặc giảm dần theo môn văn
 // d)	Tạo nút sắp xếp các thí sinh sinh trong bảng  theo chiều giảm dần hoặc tăng dần theo tổng điểm.
-// 	Hướng dẫn cách để sort 1 bảng:
-// https://www.w3schools.com/howto/howto_js_sort_table.asp
 // 	Sử dụng (for in) để tính độ dài object.
 let listStudent = [
   {
@@ -114,11 +112,13 @@ for (let i = 1; i < listStudent.length; i++) {
   student.sumScore = sum;
 }
 
+const demo = document.getElementById("demo");
 function bai3() {
   createTable();
-  document.getElementById("demo").appendChild(mathHighButton);
-  document.getElementById("demo").appendChild(literHighButton);
-  document.getElementById("demo").appendChild(sumHighButton);
+  demo.appendChild(mathHighButton);
+  demo.appendChild(literHighButton);
+  demo.appendChild(sumHighButton);
+  demo.appendChild(increaseMathButton);
 }
 
 function createTable() {
@@ -166,10 +166,10 @@ function createTable() {
   // thêm tr vào trong table
   tableRender.appendChild(row);
   // thêm table vào thẻ có id demo
-  document.getElementById("demo").appendChild(tableRender);
+  console.log(typeof tableRender);
+  demo.innerHTML = `${tableRender.outerHTML}`;
 }
 
-const demo = document.getElementById("demo");
 // học sinh có điểm toán cao nhất
 const mathHighButton = document.createElement("button");
 mathHighButton.innerHTML = "Max toán: ";
@@ -223,7 +223,7 @@ function mathHighestScore() {
   row.appendChild(col7);
 
   table.appendChild(row);
-  demo.appendChild(table);
+  demo.innerHTML = `Học sinh có điểm toán cao nhất: ${table.outerHTML}`;
 }
 
 // học sinh có điểm văn cao nhất
@@ -277,7 +277,7 @@ function literatureHighestScore() {
   row.appendChild(col7);
 
   table.appendChild(row);
-  demo.appendChild(table);
+  demo.innerHTML = `Học sinh có điểm văn cao nhất: ${table.outerHTML}`;
 }
 
 // học sinh có điểm tổng toán văn cao nhất
@@ -331,5 +331,30 @@ function sumHighestScore() {
   row.appendChild(col7);
 
   table.appendChild(row);
-  demo.appendChild(table);
+  demo.innerHTML = `Học sinh có tổng điểm cao nhất: ${table.outerHTML}`;
+}
+
+const increaseMathButton = document.createElement("button");
+increaseMathButton.innerHTML = "Điểm toán theo chiều tăng dần: ";
+increaseMathButton.classList.add("btn");
+increaseMathButton.setAttribute("onclick", "increaseMath(listStudent)");
+
+function increaseMath(listStudent) {
+  // dùng hàm sort để sắp xếp
+  listStudent.sort(function (a, b) {
+    if (a.math > b.math) {
+      return 1;
+    }
+    if (b.math > a.math) {
+      return -1;
+    }
+    return 0;
+  });
+
+  for (let i = 0; i < listStudent.length; i++) {
+    const studentElement = document.createElement("p");
+    studentElement.innerHTML = `Name: ${listStudent[i].name}, Math score: ${listStudent[i].math}`;
+    demo.appendChild(studentElement);
+  }
+  console.log(listStudent);
 }

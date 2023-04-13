@@ -33,22 +33,43 @@ function renderList(params) {
     let { task_name, status } = item;
 
     let doneClass = "";
+    if (status && status == "done") {
+      doneClass = 'class="done"';
+    }
     let li = document.createElement("li");
     li.innerHTML = `<span ${doneClass}>${task_name}</span>
-    <button>Done</button>`;
+    <button class="complete">Done</button> <button class="delete">Delete</button>`;
 
-    li.querySelector("button").addEventListener("click", () => {
+    li.querySelector("button.complete").addEventListener("click", () => {
       if (status && status == "done") return false;
       item.status = "done";
       li.querySelector("span").classList.add("active");
     });
 
+    //
+    li.querySelector("button.delete").addEventListener("click", () => {
+      let newArray = [];
+      let confirmValue = confirm("Xóa nhớ?");
+
+      if (confirmValue == true) {
+        for (let currentItem of params) {
+          if (currentItem.task_name != task_name) {
+            newArray.push(currentItem);
+          }
+        }
+        // .find()
+        // .reduce()
+        // .filter()
+
+        // gán lại array cũ bằng giá trị array mới
+        list = [...newArray];
+        // xóa cái li
+        li.remove();
+        // trả lại array mới bằng rỗng
+        newArray = "";
+        console.log("ul", ul);
+      }
+    });
     document.querySelector("ul").appendChild(li);
   }
 }
-/**
- * B1: sau khi ấn done thì chữ bị gạch ngang và cập nhật bên trong list
- * B2: render lại list
- * done rồi ko cho click nữa
- * done rồi thì tên mặc định bị gạch
- */
