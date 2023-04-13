@@ -15,7 +15,6 @@
  * JSON.stringify - kéo phẳng hết ra thành 1 string
  * JSON.parse(JSON.stringify(obj))
  */
-
 const main = document.querySelector("main");
 const button = main.querySelector("button");
 button.addEventListener("click", () => {
@@ -23,7 +22,19 @@ button.addEventListener("click", () => {
   console.log("valueConfirm", valueConfirm);
 
   if (valueConfirm == true) {
-    main.querySelector("p").innerText = "Nội dung đã được thay đổi mới";
+    let newContent = { content: "Nội dung đã được thay đổi mới" };
+    main.querySelector("p").innerText = newContent;
+    // lưu vào localStorage - luôn lưu theo dạng string(bắt buộc)
+    // localStorage.setItem(tên của cái localStorage đó, cái mình cần lưu)
+    localStorage.setItem("newValue", JSON.stringify(newContent));
+    // lấy ra từ localStorage
+    // localStorage.getItem(tên cái localStorage cần lấy)
+    if (localStorage.setItem("newValue", JSON.stringify(newContent))) {
+      main.querySelector("p").innerHTML = localStorage.getItem("newValue");
+    }
+
+    // xóa localStorage
+    // localStorage.removeItem(tên của cái localStorage mình cần xóa)
   }
 });
 

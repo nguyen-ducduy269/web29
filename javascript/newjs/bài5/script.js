@@ -84,3 +84,9 @@ function deleteItem(task_name, li, params) {
     newArray = "";
   }
 }
+
+/**
+ * localStorage -
+ * sectionStorage
+ * cookie
+ */
