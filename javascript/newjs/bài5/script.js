@@ -12,6 +12,10 @@ const ul = document.querySelector("ul");
 const li = document.createElement("li");
 let list = [];
 
+if (localStorage.getItem("todo-list")) {
+  list = JSON.parse(localStorage.getItem("todo-list"));
+  renderList(list);
+}
 button.addEventListener("click", () => {
   const inputValue = document.querySelector("input").value;
   if (inputValue == "") {
@@ -27,6 +31,7 @@ function addValue(params) {
   if (!params) return false;
   list.push(params);
   renderList(list);
+  setLocalStorage(list);
 }
 
 function renderList(params) {
@@ -82,6 +87,8 @@ function deleteItem(task_name, li, params) {
     li.remove();
     // trả lại array mới bằng rỗng
     newArray = "";
+    renderList(list);
+    setLocalStorage(list);
   }
 }
 
@@ -90,3 +97,7 @@ function deleteItem(task_name, li, params) {
  * sectionStorage
  * cookie
  */
+
+function setLocalStorage(params) {
+  localStorage.setItem("todo-list", JSON.stringify(params));
+}
