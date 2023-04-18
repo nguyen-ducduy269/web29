@@ -119,6 +119,7 @@ function bai3() {
   demo.appendChild(literHighButton);
   demo.appendChild(sumHighButton);
   demo.appendChild(increaseMathButton);
+  demo.appendChild(decreaseMathButton);
 }
 
 function createTable() {
@@ -334,14 +335,17 @@ function sumHighestScore() {
   demo.innerHTML = `Học sinh có tổng điểm cao nhất: ${table.outerHTML}`;
 }
 
+// sắp xếp học sinh theo thứ tự có điểm toán từ thấp đến cao
 const increaseMathButton = document.createElement("button");
-increaseMathButton.innerHTML = "Điểm toán theo chiều tăng dần: ";
+increaseMathButton.innerHTML =
+  "Sắp xếp học sinh theo điểm toán chiều tăng dần: ";
 increaseMathButton.classList.add("btn");
 increaseMathButton.setAttribute("onclick", "increaseMath(listStudent)");
 
 function increaseMath(listStudent) {
   // dùng hàm sort để sắp xếp
   listStudent.sort(function (a, b) {
+    // dùng hàm sort để sắp xếp nếu 1 thì trả về giá trị lớn hơn, -1 là nhỏ hơn còn 0 là giá trị bằng nhau
     if (a.math > b.math) {
       return 1;
     }
@@ -353,7 +357,37 @@ function increaseMath(listStudent) {
 
   for (let i = 0; i < listStudent.length; i++) {
     const studentElement = document.createElement("p");
-    studentElement.innerHTML = `Name: ${listStudent[i].name}, Math score: ${listStudent[i].math}`;
+    studentElement.innerHTML = `Họ tên học sinh : ${listStudent[i].name}, Điểm toán: ${listStudent[i].math}`;
+    demo.appendChild(studentElement);
+  }
+  console.log(listStudent);
+}
+
+// sắp xếp học sinh theo thứ tự có điểm toán từ thấp đến cao
+const decreaseMathButton = document.createElement("button");
+decreaseMathButton.innerHTML =
+  "Sắp xếp học sinh theo điểm toán chiều giảm dần: ";
+decreaseMathButton.classList.add("btn");
+decreaseMathButton.setAttribute("onclick", "decreaseMath(listStudent)");
+
+function decreaseMath(listStudent) {
+  // dùng hàm sort để sắp xếp
+  listStudent
+    .sort(function (a, b) {
+      // dùng hàm sort để sắp xếp nếu 1 thì trả về giá trị lớn hơn, -1 là nhỏ hơn còn 0 là giá trị bằng nhau
+      if (a.math > b.math) {
+        return 1;
+      }
+      if (b.math > a.math) {
+        return -1;
+      }
+      return 0;
+    })
+    .reverse();
+
+  for (let i = 0; i < listStudent.length; i++) {
+    const studentElement = document.createElement("p");
+    studentElement.innerHTML = `Họ tên học sinh : ${listStudent[i].name}, Điểm toán: ${listStudent[i].math}`;
     demo.appendChild(studentElement);
   }
   console.log(listStudent);
