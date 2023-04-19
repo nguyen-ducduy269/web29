@@ -6,15 +6,6 @@
 // 	Sử dụng (for in) để tính độ dài object.
 let listStudent = [
   {
-    number: "Số thứ tự",
-    name: "Tên",
-    age: "Tuổi",
-    gener: "Giới tính",
-    math: "Điểm toán",
-    literature: "Điểm văn",
-    sumScore: "Tổng điểm toán văn",
-  },
-  {
     number: 1,
     name: "K",
     age: 20,
@@ -26,7 +17,7 @@ let listStudent = [
   {
     number: 2,
     name: "Y",
-    age: 26,
+    age: 10,
     gener: "Female",
     math: 3,
     literature: 10,
@@ -35,25 +26,25 @@ let listStudent = [
   {
     number: 3,
     name: "P",
-    age: 20,
+    age: 15,
     gener: "Female",
     math: 5,
-    literature: 6,
+    literature: 3,
     sumScore: "",
   },
   {
     number: 4,
     name: "A",
-    age: 26,
+    age: 16,
     gener: "Male",
     math: 7,
-    literature: 1,
+    literature: 2,
     sumScore: "",
   },
   {
     number: 5,
     name: "B",
-    age: 20,
+    age: 12,
     gener: "Male",
     math: 1,
     literature: 9,
@@ -62,7 +53,7 @@ let listStudent = [
   {
     number: 6,
     name: "Q",
-    age: 26,
+    age: 11,
     gener: "Female",
     math: 2,
     literature: 4,
@@ -71,7 +62,7 @@ let listStudent = [
   {
     number: 7,
     name: "M",
-    age: 20,
+    age: 19,
     gener: "Female",
     math: 9,
     literature: 6,
@@ -80,7 +71,7 @@ let listStudent = [
   {
     number: 8,
     name: "H",
-    age: 26,
+    age: 18,
     gener: "Male",
     math: 4,
     literature: 7,
@@ -89,7 +80,7 @@ let listStudent = [
   {
     number: 9,
     name: "X",
-    age: 26,
+    age: 17,
     gener: "Female",
     math: 6,
     literature: 8,
@@ -98,7 +89,7 @@ let listStudent = [
   {
     number: 10,
     name: "G",
-    age: 20,
+    age: 13,
     gener: "Female",
     math: 10,
     literature: 1,
@@ -106,7 +97,7 @@ let listStudent = [
   },
 ];
 
-for (let i = 1; i < listStudent.length; i++) {
+for (let i = 0; i < listStudent.length; i++) {
   let student = listStudent[i];
   let sum = student.math + student.literature;
   student.sumScore = sum;
@@ -120,18 +111,54 @@ function bai3() {
   demo.appendChild(sumHighButton);
   demo.appendChild(increaseMathButton);
   demo.appendChild(decreaseMathButton);
+  demo.appendChild(incrLiteratureButton);
+  demo.appendChild(decrLiteratureButton);
+  demo.appendChild(incrSumScoreButton);
+  demo.appendChild(decrSumScoreButton);
 }
 
 function createTable() {
   // tạo thẻ table
   const tableRender = document.createElement("table");
   // tạo thẻ tr
-  const row = document.createElement("tr");
+  const rowTitle = document.createElement("tr");
   // xét class cho thẻ tr
-  row.setAttribute("class", "table-row");
+  rowTitle.setAttribute("class", "table-row");
+  const colTitle1 = document.createElement("td");
+  colTitle1.innerText = `Số thứ tự`;
+  rowTitle.appendChild(colTitle1);
+
+  const colTitle2 = document.createElement("td");
+  colTitle2.innerText = `Tên`;
+  rowTitle.appendChild(colTitle2);
+
+  const colTitle3 = document.createElement("td");
+  colTitle3.innerText = `Tuổi`;
+  rowTitle.appendChild(colTitle3);
+
+  const colTitle4 = document.createElement("td");
+  colTitle4.innerText = `Giới tính`;
+  rowTitle.appendChild(colTitle4);
+
+  const colTitle5 = document.createElement("td");
+  colTitle5.innerText = `Điểm toán`;
+  rowTitle.appendChild(colTitle5);
+
+  const colTitle6 = document.createElement("td");
+  colTitle6.innerText = `Điểm văn`;
+  rowTitle.appendChild(colTitle6);
+
+  const colTitle7 = document.createElement("td");
+  colTitle7.innerText = `Tổng điểm toán văn`;
+  rowTitle.appendChild(colTitle7);
+
+  // thêm tr vào trong table
+  tableRender.appendChild(rowTitle);
 
   // duyệt qua mảng bằng map
   listStudent.map((item) => {
+    const row = document.createElement("tr");
+    row.setAttribute("class", "table-row");
     // tạo thẻ td
     const col1 = document.createElement("td");
     // gán giá trị cho thẻ td
@@ -162,10 +189,9 @@ function createTable() {
     const col7 = document.createElement("td");
     col7.innerText = `${item.sumScore}`;
     row.appendChild(col7);
-  });
 
-  // thêm tr vào trong table
-  tableRender.appendChild(row);
+    tableRender.appendChild(row);
+  });
   // thêm table vào thẻ có id demo
   console.log(typeof tableRender);
   demo.innerHTML = `${tableRender.outerHTML}`;
@@ -191,9 +217,34 @@ function mathHighestScore() {
     }
   }
 
-  const table = document.createElement("table");
+  const tableRender = document.createElement("table");
+  const rowTitle = document.createElement("tr");
+  rowTitle.setAttribute("class", "table-row-2");
+
+  const colTitle1 = document.createElement("td");
+  colTitle1.innerText = `Số thứ tự`;
+  rowTitle.appendChild(colTitle1);
+
+  const colTitle2 = document.createElement("td");
+  colTitle2.innerText = `Tên`;
+  rowTitle.appendChild(colTitle2);
+
+  const colTitle3 = document.createElement("td");
+  colTitle3.innerText = `Tuổi`;
+  rowTitle.appendChild(colTitle3);
+
+  const colTitle4 = document.createElement("td");
+  colTitle4.innerText = `Giới tính`;
+  rowTitle.appendChild(colTitle4);
+
+  const colTitle5 = document.createElement("td");
+  colTitle5.innerText = `Điểm toán`;
+  rowTitle.appendChild(colTitle5);
+
+  tableRender.appendChild(rowTitle);
+
   const row = document.createElement("tr");
-  row.setAttribute("class", "table-row");
+  row.setAttribute("class", "table-row-2");
 
   const col1 = document.createElement("td");
   col1.innerText = `${highestMathStudent.number}`;
@@ -215,16 +266,10 @@ function mathHighestScore() {
   col5.innerText = `${highestMathStudent.math}`;
   row.appendChild(col5);
 
-  const col6 = document.createElement("td");
-  col6.innerText = `${highestMathStudent.literature}`;
-  row.appendChild(col6);
+  tableRender.appendChild(row);
 
-  const col7 = document.createElement("td");
-  col7.innerText = `${highestMathStudent.sumScore}`;
-  row.appendChild(col7);
-
-  table.appendChild(row);
-  demo.innerHTML = `Học sinh có điểm toán cao nhất: ${table.outerHTML}`;
+  console.log(typeof tableRender);
+  demo.innerHTML = `Học sinh có điểm toán cao nhất: ${tableRender.outerHTML}`;
 }
 
 // học sinh có điểm văn cao nhất
@@ -245,9 +290,34 @@ function literatureHighestScore() {
     }
   }
 
-  const table = document.createElement("table");
+  const tableRender = document.createElement("table");
+  const rowTitle = document.createElement("tr");
+  rowTitle.setAttribute("class", "table-row-2");
+
+  const colTitle1 = document.createElement("td");
+  colTitle1.innerText = `Số thứ tự`;
+  rowTitle.appendChild(colTitle1);
+
+  const colTitle2 = document.createElement("td");
+  colTitle2.innerText = `Tên`;
+  rowTitle.appendChild(colTitle2);
+
+  const colTitle3 = document.createElement("td");
+  colTitle3.innerText = `Tuổi`;
+  rowTitle.appendChild(colTitle3);
+
+  const colTitle4 = document.createElement("td");
+  colTitle4.innerText = `Giới tính`;
+  rowTitle.appendChild(colTitle4);
+
+  const colTitle5 = document.createElement("td");
+  colTitle5.innerText = `Điểm văn`;
+  rowTitle.appendChild(colTitle5);
+
+  tableRender.appendChild(rowTitle);
+
   const row = document.createElement("tr");
-  row.setAttribute("class", "table-row");
+  row.setAttribute("class", "table-row-2");
 
   const col1 = document.createElement("td");
   col1.innerText = `${highestLiteratureStudent.number}`;
@@ -266,19 +336,13 @@ function literatureHighestScore() {
   row.appendChild(col4);
 
   const col5 = document.createElement("td");
-  col5.innerText = `${highestLiteratureStudent.math}`;
+  col5.innerText = `${highestLiteratureStudent.literature}`;
   row.appendChild(col5);
 
-  const col6 = document.createElement("td");
-  col6.innerText = `${highestLiteratureStudent.literature}`;
-  row.appendChild(col6);
+  tableRender.appendChild(row);
 
-  const col7 = document.createElement("td");
-  col7.innerText = `${highestLiteratureStudent.sumScore}`;
-  row.appendChild(col7);
-
-  table.appendChild(row);
-  demo.innerHTML = `Học sinh có điểm văn cao nhất: ${table.outerHTML}`;
+  console.log(typeof tableRender);
+  demo.innerHTML = `Học sinh có điểm toán cao nhất: ${tableRender.outerHTML}`;
 }
 
 // học sinh có điểm tổng toán văn cao nhất
@@ -299,9 +363,34 @@ function sumHighestScore() {
     }
   }
 
-  const table = document.createElement("table");
+  const tableRender = document.createElement("table");
+  const rowTitle = document.createElement("tr");
+  rowTitle.setAttribute("class", "table-row-2");
+
+  const colTitle1 = document.createElement("td");
+  colTitle1.innerText = `Số thứ tự`;
+  rowTitle.appendChild(colTitle1);
+
+  const colTitle2 = document.createElement("td");
+  colTitle2.innerText = `Tên`;
+  rowTitle.appendChild(colTitle2);
+
+  const colTitle3 = document.createElement("td");
+  colTitle3.innerText = `Tuổi`;
+  rowTitle.appendChild(colTitle3);
+
+  const colTitle4 = document.createElement("td");
+  colTitle4.innerText = `Giới tính`;
+  rowTitle.appendChild(colTitle4);
+
+  const colTitle5 = document.createElement("td");
+  colTitle5.innerText = `Tổng điểm toán văn`;
+  rowTitle.appendChild(colTitle5);
+
+  tableRender.appendChild(rowTitle);
+
   const row = document.createElement("tr");
-  row.setAttribute("class", "table-row");
+  row.setAttribute("class", "table-row-2");
 
   const col1 = document.createElement("td");
   col1.innerText = `${highestSumStudent.number}`;
@@ -320,19 +409,13 @@ function sumHighestScore() {
   row.appendChild(col4);
 
   const col5 = document.createElement("td");
-  col5.innerText = `${highestSumStudent.math}`;
+  col5.innerText = `${highestSumStudent.sumScore}`;
   row.appendChild(col5);
 
-  const col6 = document.createElement("td");
-  col6.innerText = `${highestSumStudent.literature}`;
-  row.appendChild(col6);
+  tableRender.appendChild(row);
 
-  const col7 = document.createElement("td");
-  col7.innerText = `${highestSumStudent.sumScore}`;
-  row.appendChild(col7);
-
-  table.appendChild(row);
-  demo.innerHTML = `Học sinh có tổng điểm cao nhất: ${table.outerHTML}`;
+  console.log(typeof tableRender);
+  demo.innerHTML = `Học sinh có tổng điểm toán văn cao nhất: ${tableRender.outerHTML}`;
 }
 
 // sắp xếp học sinh theo thứ tự có điểm toán từ thấp đến cao
@@ -363,7 +446,7 @@ function increaseMath(listStudent) {
   console.log(listStudent);
 }
 
-// sắp xếp học sinh theo thứ tự có điểm toán từ thấp đến cao
+// sắp xếp học sinh theo thứ tự có điểm toán từ cao đến thấp
 const decreaseMathButton = document.createElement("button");
 decreaseMathButton.innerHTML =
   "Sắp xếp học sinh theo điểm toán chiều giảm dần: ";
@@ -388,6 +471,118 @@ function decreaseMath(listStudent) {
   for (let i = 0; i < listStudent.length; i++) {
     const studentElement = document.createElement("p");
     studentElement.innerHTML = `Họ tên học sinh : ${listStudent[i].name}, Điểm toán: ${listStudent[i].math}`;
+    demo.appendChild(studentElement);
+  }
+  console.log(listStudent);
+}
+
+// sắp xếp học sinh theo thứ tự có điểm văn từ thấp đến cao
+const incrLiteratureButton = document.createElement("button");
+incrLiteratureButton.innerHTML =
+  "Sắp xếp học sinh theo điểm văn chiều tăng dần: ";
+incrLiteratureButton.classList.add("btn");
+incrLiteratureButton.setAttribute("onclick", "incrLiterature(listStudent)");
+
+function incrLiterature(listStudent) {
+  // dùng hàm sort để sắp xếp
+  listStudent.sort(function (a, b) {
+    // dùng hàm sort để sắp xếp nếu 1 thì trả về giá trị lớn hơn, -1 là nhỏ hơn còn 0 là giá trị bằng nhau
+    if (a.literature > b.literature) {
+      return 1;
+    }
+    if (b.literature > a.literature) {
+      return -1;
+    }
+    return 0;
+  });
+
+  for (let i = 0; i < listStudent.length; i++) {
+    const studentElement = document.createElement("p");
+    studentElement.innerHTML = `Họ tên học sinh : ${listStudent[i].name}, Điểm văn: ${listStudent[i].literature}`;
+    demo.appendChild(studentElement);
+  }
+  console.log(listStudent);
+}
+
+// sắp xếp học sinh theo thứ tự có điểm văn từ cao đến thấp
+const decrLiteratureButton = document.createElement("button");
+decrLiteratureButton.innerHTML =
+  "Sắp xếp học sinh theo điểm văn chiều giảm dần: ";
+decrLiteratureButton.classList.add("btn");
+decrLiteratureButton.setAttribute("onclick", "decrLiterature(listStudent)");
+
+function decrLiterature(listStudent) {
+  // dùng hàm sort để sắp xếp
+  listStudent
+    .sort(function (a, b) {
+      // dùng hàm sort để sắp xếp nếu 1 thì trả về giá trị lớn hơn, -1 là nhỏ hơn còn 0 là giá trị bằng nhau
+      if (a.literature > b.literature) {
+        return 1;
+      }
+      if (b.literature > a.literature) {
+        return -1;
+      }
+      return 0;
+    })
+    .reverse();
+
+  for (let i = 0; i < listStudent.length; i++) {
+    const studentElement = document.createElement("p");
+    studentElement.innerHTML = `Họ tên học sinh : ${listStudent[i].name}, Điểm văn: ${listStudent[i].literature}`;
+    demo.appendChild(studentElement);
+  }
+  console.log(listStudent);
+}
+
+// sắp xếp học sinh theo thứ tự có tổng điểm toán văn từ thấp đến cao
+const incrSumScoreButton = document.createElement("button");
+incrSumScoreButton.innerHTML =
+  "Sắp xếp học sinh theo tổng điểm toán văn chiều tăng dần: ";
+incrSumScoreButton.classList.add("btn");
+incrSumScoreButton.setAttribute("onclick", "incrSumScore(listStudent)");
+
+function incrSumScore(listStudent) {
+  listStudent.sort(function (a, b) {
+    if (a.sumScore > b.sumScore) {
+      return 1;
+    }
+    if (b.sumScore > a.sumScore) {
+      return -1;
+    }
+    return 0;
+  });
+
+  for (let i = 0; i < listStudent.length; i++) {
+    const studentElement = document.createElement("p");
+    studentElement.innerHTML = `Họ tên học sinh : ${listStudent[i].name}, Tổng điểm toán văn: ${listStudent[i].sumScore}`;
+    demo.appendChild(studentElement);
+  }
+  console.log(listStudent);
+}
+
+// sắp xếp học sinh theo thứ tự có tổng điểm toán văn từ cao đến thấp
+const decrSumScoreButton = document.createElement("button");
+decrSumScoreButton.innerHTML =
+  "Sắp xếp học sinh theo tổng điểm toán văn chiều giảm dần: ";
+decrSumScoreButton.classList.add("btn");
+decrSumScoreButton.setAttribute("onclick", "decrSumScore(listStudent)");
+
+function decrSumScore(listStudent) {
+  listStudent
+    .sort(function (a, b) {
+      if (a.sumScore > b.sumScore) {
+        return 1;
+      }
+      if (b.sumScore > a.sumScore) {
+        return -1;
+      }
+      return 0;
+    })
+    .reverse();
+
+  for (let i = 0; i < listStudent.length; i++) {
+    const studentElement = document.createElement("p");
+    studentElement.innerHTML = `Họ tên học sinh : ${listStudent[i].name}, Tổng điểm toán văn: ${listStudent[i].sumScore}`;
     demo.appendChild(studentElement);
   }
   console.log(listStudent);
