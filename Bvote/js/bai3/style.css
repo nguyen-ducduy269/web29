@@ -30,10 +30,6 @@ td {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.table-row-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
 .btn {
   margin-top: 10px;
   margin-right: 10px;
