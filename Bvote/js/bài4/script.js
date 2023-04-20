@@ -41,6 +41,8 @@ keys.addEventListener("click", (e) => {
       action === "divide"
     ) {
       display.textContent = keyContent;
+      // sau khi ấn các pthuc sẽ thêm class isPressed
+      key.classList.add("isPressed");
     }
     if (action === "decimal") {
       // nếu ấn dấu . thì sẽ thêm ngay sau và sau đó thêm các số khác bth
@@ -56,5 +58,10 @@ keys.addEventListener("click", (e) => {
     if (action === "calculate") {
       console.log("calculate key");
     }
+
+    // sau khi ấn các pthuc thì hiện lại các số
+    Array.from(key.parentNode.children).forEach((k) =>
+      k.classList.remove("isPressed")
+    );
   }
 });
