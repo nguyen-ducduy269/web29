@@ -9,8 +9,9 @@ const display = calcu.querySelector(".display");
 
 keys.addEventListener("click", (e) => {
   // khai báo 2 biến loai nút và kiểu nút trước đó
-  const previousKeyType = calcu.dataset.previousKeyType;
+  let previousKeyType = calcu.dataset.previousKeyType;
   const previousKey = calcu.dataset.previousKey;
+  console.log(calcu.dataset, previousKeyType);
 
   if (e.target.matches("button")) {
     // e.target = keys
@@ -24,6 +25,8 @@ keys.addEventListener("click", (e) => {
 
     if (!action) {
       // nếu giá trị ở display là 0 hoặc operator thì sẽ replace nó bằng number sau khi người dùng click vào
+      console.log("displaynum", displayedNum);
+      console.log(previousKey, previousKeyType);
       if (
         displayedNum === "0" ||
         previousKeyType === "operator" ||
@@ -31,7 +34,9 @@ keys.addEventListener("click", (e) => {
       ) {
         // nếu ấn nút có giá trị khác 0 thì thay 0 bằng giá trị đó
         display.textContent = keyContent;
+        previousKeyType = undefined;
       } else {
+        console.log(previousKey);
         // nếu đã có giá trị khác 0 thì thêm giá trị mới vào đằng sau
         display.textContent = displayedNum + keyContent;
       }
