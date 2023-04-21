@@ -2,38 +2,6 @@
 // a)	Giao diện hiển thị máy tính đẹp, bắt mắt.
 // b)	Máy tính hiển thị hết dãy số nhập cả các phép tính và hiển thị kết quả sau khi nhấn dấu (=).
 
-// function bai4() {
-//   show();
-// }
-
-// const demo = document.getElementById("demo");
-// function show() {
-//   demo.innerHTML = `
-//   <div class="calculator">
-//         <div class="display">0</div>
-//         <div class="calculator-button">
-//           <button class="action" data-action="add">+</button>
-//           <button class="action" data-action="subtract">-</button>
-//           <button class="action" data-action="multiply">&times;</button>
-//           <button class="action" data-action="divide">÷</button>
-//           <button class="number">7</button>
-//           <button class="number">8</button>
-//           <button class="number">9</button>
-//           <button class="number">4</button>
-//           <button class="number">5</button>
-//           <button class="number">6</button>
-//           <button class="number">1</button>
-//           <button class="number">2</button>
-//           <button class="number">3</button>
-//           <button class="number">0</button>
-//           <button class="number" data-action="decimal">.</button>
-//           <button class="number" data-action="clear">AC</button>
-//           <button class="calculate" data-action="calculate">=</button>
-//         </div>
-//       </div>
-//   `;
-// }
-
 const demo = document.getElementById("demo");
 const calcu = document.querySelector(".calculator");
 const keys = calcu.querySelector(".calculator-button");
