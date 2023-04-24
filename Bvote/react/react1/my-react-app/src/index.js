@@ -3,6 +3,32 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 const Hobby = () => {
+  const cancleJob = () => {
+    prompt("Xóa nhé?");
+    if (true) {
+      const inputValue = document.querySelector(".name");
+      inputValue.value = "";
+    }
+  };
+
+  const editJob = (e) => {
+    const btnEdit = e.target;
+    const trEdit = btnEdit.parentElement.parentElement.parentElement;
+    const fixItem = trEdit.querySelector(".name");
+    // dùng hàm contentEditable để chỉnh sửa trực tiếp trên HTML
+    fixItem.setAttribute("contentEditable", "true");
+    // dùng focus để đặt trỏ chuột vào vị trí có khả năng sửa
+    fixItem.focus();
+    fixItem.addEventListener("keydown", (e) => {
+      // khi nhấn phím nếu là Enter, sử dụng hàm preventDefault để tránh việc xuống dòng liền tục
+      if (e.key === "Enter") {
+        e.preventDefault();
+        // chuyển contentEditable về thành false
+        fixItem.setAttribute("contentEditable", "false");
+      }
+    });
+  };
+
   const handleJob = () => {
     const inputValue = document.querySelector(".name").value;
     const selectValue = document.querySelector("select").value;
@@ -33,38 +59,12 @@ const Hobby = () => {
       // render ra hoạt động cuối
       const activityCell = newRow.insertCell(3);
       activityCell.innerHTML = `
-    <div class="button">
-      <button class="btn_edit" onClick={editJob}>Sửa</button>
-      <button class="btn_remove">Xóa</button>
-    </div>
-    `;
+        <div class="button">
+          <button class="btn_edit" onClick="editJob()">Sửa</button>
+          <button class="btn_remove">Xóa</button>
+        </div>
+      `;
     }
-  };
-
-  const cancleJob = () => {
-    prompt("Xóa nhé?");
-    if (true) {
-      const inputValue = document.querySelector(".name");
-      inputValue.value = "";
-    }
-  };
-
-  const editJob = (e) => {
-    const btnEdit = e.target;
-    const trEdit = btnEdit.parentElement.parentElement.parentElement;
-    const fixItem = trEdit.querySelector(".name");
-    // dùng hàm contentEditable để chỉnh sửa trực tiếp trên HTML
-    fixItem.setAttribute("contentEditable", "true");
-    // dùng focus để đặt trỏ chuột vào vị trí có khả năng sửa
-    fixItem.focus();
-    fixItem.addEventListener("keydown", (e) => {
-      // khi nhấn phím nếu là Enter, sử dụng hàm preventDefault để tránh việc xuống dòng liền tục
-      if (e.key === "Enter") {
-        e.preventDefault();
-        // chuyển contentEditable về thành false
-        fixItem.setAttribute("contentEditable", "false");
-      }
-    });
   };
 
   return (
