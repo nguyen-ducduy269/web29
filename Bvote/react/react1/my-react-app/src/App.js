@@ -1,11 +1,13 @@
 import "./App.css";
+// import AddJob from "./addjob";
+import RenderJob from "./renderjob";
 
 function App() {
   return (
     <div className="App">
       <h1 className="header">Quản lý công việc</h1>
       <div className="container">
-        <div className="left-job">
+        {/* <div className="left-job">
           <p className="add">Thêm công việc</p>
 
           <div className="form">
@@ -24,10 +26,10 @@ function App() {
               <button className="btn_remove">Hủy bỏ</button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="right-job">
-          <button>Thêm công việc</button>
+          <RenderJob />
           <div className="more">
             <input
               className="main-input"
