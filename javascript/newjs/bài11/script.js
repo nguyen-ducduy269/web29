@@ -71,7 +71,6 @@ const menuBox = main.querySelector(".menu-box");
 
 // cafe-box1
 const cafeBox1 = menuBox.querySelectorAll(".cafe-box1");
-
 cafeBox1.forEach((cafeBox1) => {
   const cafeImg = cafeBox1.querySelector(".image");
   const cafeImage = document.createElement("img");
@@ -280,7 +279,6 @@ cafeBox1.forEach((cafeBox1) => {
 
 // cafe-box2
 const cafeBox2 = menuBox.querySelectorAll(".cafe-box2");
-
 cafeBox2.forEach((cafeBox2) => {
   const cafeImg2 = cafeBox2.querySelector(".image");
   const cafeImage2 = document.createElement("img");
@@ -481,7 +479,6 @@ cafeBox2.forEach((cafeBox2) => {
 
 // cafe-box3
 const cafeBox3 = menuBox.querySelectorAll(".cafe-box3");
-
 cafeBox3.forEach((cafeBox3) => {
   const cafeImg3 = cafeBox3.querySelector(".image");
   const cafeImage3 = document.createElement("img");
@@ -686,15 +683,31 @@ submit.addEventListener("click", () => {
   if (!order) {
     alert("Bạn không có sản phẩm nào!");
   } else {
-    document.querySelector(".orders").innerHTML =
-      "Bạn đã thanh toán thành công!";
+    document.querySelector(".orders").innerHTML = [];
+    alert("Bạn đã thanh toán thành công!");
   }
 });
 
 const header = document.querySelector("header");
 const input = header.querySelector("input");
 const filter = header.querySelector("button");
-filter.addEventListener("click", () => {
-  const inputValue = input.value;
-  console.log(inputValue);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    menuBox.innerHTML = "";
+    const inputValue = input.value;
+    const titleSearch = document.querySelectorAll(".title");
+    let isMatched = false;
+    titleSearch.forEach((title) => {
+      if (inputValue.toUpperCase() === title.innerText.toUpperCase()) {
+        isMatched = true;
+      }
+    });
+    if (isMatched) {
+      const cafeBox1 = "<div>Cafe Box 1</div>";
+      const cafeBox2 = "<div>Cafe Box 2</div>";
+      menuBox.innerHTML = `${cafeBox1}${cafeBox2}`;
+    }
+    console.log(menuBox);
+  }
 });
