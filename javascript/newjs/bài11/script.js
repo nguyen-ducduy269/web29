@@ -691,23 +691,36 @@ submit.addEventListener("click", () => {
 const header = document.querySelector("header");
 const input = header.querySelector("input");
 const filter = header.querySelector("button");
+const cafeBoxTemplate = document.querySelector(".cafe-box");
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    menuBox.innerHTML = "";
-    const inputValue = input.value;
-    const titleSearch = document.querySelectorAll(".title");
-    let isMatched = false;
-    titleSearch.forEach((title) => {
-      if (inputValue.toUpperCase() === title.innerText.toUpperCase()) {
-        isMatched = true;
-      }
-    });
-    if (isMatched) {
-      const cafeBox1 = "<div>Cafe Box 1</div>";
-      const cafeBox2 = "<div>Cafe Box 2</div>";
-      menuBox.innerHTML = `${cafeBox1}${cafeBox2}`;
+window.addEventListener("load", (event) => {
+  console.log(document.querySelectorAll(".menu-box .title"));
+});
+
+let newMenus = [];
+
+filter.addEventListener("click", () => {
+  const titleSearch = document.querySelectorAll(".menu-box .title");
+
+  const inputValue = input.value;
+  newMenus = [];
+
+  // sao chép phần tử cafe-box
+  const cafeBoxClone = cafeBoxTemplate.cloneNode(true);
+
+  titleSearch.forEach((title) => {
+    if (new RegExp(`${inputValue}`, "i").test(title.innerHTML)) {
+      console.log("A");
+      // sao chép thêm 1 bản sao nữa của cafe-box
+      const cafeBox = cafeBoxClone.cloneNode(true);
+      newMenus.push(cafeBox);
     }
-    console.log(menuBox);
-  }
+  });
+
+  menuBox.innerHTML = "";
+  newMenus.forEach((newMenu) => {
+    menuBox.appendChild(newMenu);
+  });
+
+  console.log(menuBox);
 });
