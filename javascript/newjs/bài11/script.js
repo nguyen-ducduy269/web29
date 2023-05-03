@@ -701,7 +701,6 @@ let newMenus = [];
 
 filter.addEventListener("click", () => {
   const titleSearch = document.querySelectorAll(".menu-box .title");
-
   const inputValue = input.value;
   newMenus = [];
 
