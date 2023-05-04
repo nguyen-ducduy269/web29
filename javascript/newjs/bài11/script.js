@@ -156,7 +156,7 @@ cafeBox1.forEach((cafeBox1) => {
       deleteItem.setAttribute("class", "delete-item");
       deleteItem.innerHTML = "X";
       order.appendChild(deleteItem);
-      deleteItem.addEventListener("click", (e) => {
+      deleteItem.addEventListener("click", () => {
         const itemChoose = deleteItem.parentNode;
         if (confirm("Bạn có chắc muốn xóa? ")) {
           document.querySelector(".orders").removeChild(itemChoose);
@@ -228,9 +228,9 @@ cafeBox1.forEach((cafeBox1) => {
       const more = document.createElement("div");
       more.setAttribute("class", "more");
       more.innerHTML = `
-      <div class="type-title">Loại:</div>
-      <div class="detail">${brownCoffee.variations[1].type}</div>
-    `;
+        <div class="type-title">Loại:</div>
+        <div class="detail">${brownCoffee.variations[1].type}</div>
+      `;
       orderDis.appendChild(more);
 
       const sum = document.createElement("div");
@@ -246,6 +246,19 @@ cafeBox1.forEach((cafeBox1) => {
       price.setAttribute("class", "price");
       price.innerHTML = brownCoffee.variations[1].price + "đ";
       orderDis.appendChild(price);
+
+      const deleteItem = document.createElement("button");
+      deleteItem.setAttribute("class", "delete-item");
+      deleteItem.innerHTML = "X";
+      order.appendChild(deleteItem);
+      deleteItem.addEventListener("click", () => {
+        const itemChoose = deleteItem.parentNode;
+        if (confirm("Bạn có chắc muốn xóa? ")) {
+          document.querySelector(".orders").removeChild(itemChoose);
+        } else {
+          return false;
+        }
+      });
 
       const quantityInput = sum.querySelector(".total");
       const plusButton = sum.querySelector(".plus");
@@ -377,10 +390,10 @@ cafeBox2.forEach((cafeBox2) => {
       deleteItem.setAttribute("class", "delete-item");
       deleteItem.innerHTML = "X";
       order.appendChild(deleteItem);
-      deleteItem.addEventListener("click", (e) => {
+      deleteItem.addEventListener("click", () => {
         const itemChoose = deleteItem.parentNode;
         if (confirm("Bạn có chắc muốn xóa? ")) {
-          document.querySelector(".orders").removeChild(itemChoose);
+          document.getElementsByClassName(".orders").removeChild(itemChoose);
         } else {
           return false;
         }
@@ -445,24 +458,37 @@ cafeBox2.forEach((cafeBox2) => {
       const more = document.createElement("div");
       more.setAttribute("class", "more");
       more.innerHTML = `
-      <div class="type-title">Loại:</div>
-      <div class="detail">${blackCoffee.variations[1].type}</div>
-    `;
+        <div class="type-title">Loại:</div>
+        <div class="detail">${blackCoffee.variations[1].type}</div>
+      `;
       orderDis.appendChild(more);
 
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-    <button class="plus">+</button>
-    <div class="total">1</div>
-    <button class="divide">-</button>
-  `;
+        <button class="plus">+</button>
+        <div class="total">1</div>
+        <button class="divide">-</button>
+      `;
       orderDis.appendChild(sum);
 
       const price = document.createElement("div");
       price.setAttribute("class", "price");
       price.innerHTML = blackCoffee.variations[1].price + "đ";
       orderDis.appendChild(price);
+
+      const deleteItem = document.createElement("button");
+      deleteItem.setAttribute("class", "delete-item");
+      deleteItem.innerHTML = "X";
+      order.appendChild(deleteItem);
+      deleteItem.addEventListener("click", () => {
+        const itemChoose = deleteItem.parentNode;
+        if (confirm("Bạn có chắc muốn xóa? ")) {
+          document.querySelector(".orders").removeChild(itemChoose);
+        } else {
+          return false;
+        }
+      });
 
       const quantityInput = sum.querySelector(".total");
       const plusButton = sum.querySelector(".plus");
@@ -658,24 +684,37 @@ cafeBox3.forEach((cafeBox3) => {
       const more = document.createElement("div");
       more.setAttribute("class", "more");
       more.innerHTML = `
-      <div class="type-title">Loại:</div>
-      <div class="detail">${silverShun.variations[1].type}</div>
-    `;
+        <div class="type-title">Loại:</div>
+        <div class="detail">${silverShun.variations[1].type}</div>
+      `;
       orderDis.appendChild(more);
 
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-    <button class="plus">+</button>
-    <div class="total">1</div>
-    <button class="divide">-</button>
-  `;
+        <button class="plus">+</button>
+        <div class="total">1</div>
+        <button class="divide">-</button>
+      `;
       orderDis.appendChild(sum);
 
       const price = document.createElement("div");
       price.setAttribute("class", "price");
       price.innerHTML = silverShun.variations[1].price + "đ";
       orderDis.appendChild(price);
+
+      const deleteItem = document.createElement("button");
+      deleteItem.setAttribute("class", "delete-item");
+      deleteItem.innerHTML = "X";
+      order.appendChild(deleteItem);
+      deleteItem.addEventListener("click", () => {
+        const itemChoose = deleteItem.parentNode;
+        if (confirm("Bạn có chắc muốn xóa? ")) {
+          document.querySelector(".orders").removeChild(itemChoose);
+        } else {
+          return false;
+        }
+      });
 
       const quantityInput = sum.querySelector(".total");
       const plusButton = sum.querySelector(".plus");
