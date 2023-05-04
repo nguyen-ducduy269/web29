@@ -85,6 +85,10 @@ cafeBox1.forEach((cafeBox1) => {
   const priceCafe = discription.querySelector(".price");
   priceCafe.innerHTML = brownCoffee.variations[0].price + "đ";
 
+  // thêm dấu , vào đằng trước 3 số 0 để phân biệt hàng nghìn
+  // const newPrice = brownCoffee.variations[0].price;
+  // priceCafe.innerHTML = newPrice.toLocaleString("vi-VN") + "đ";
+
   const buttons = discription.querySelector(".button");
   buttons.querySelector(".type-title").innerHTML = "Loại:";
   const hotBrown = buttons.querySelector(".hot-brown");
@@ -692,9 +696,9 @@ cafeBox3.forEach((cafeBox3) => {
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-        <button class="divide">-</button>
-        <div class="total">1</div>
-        <button class="plus">+</button>
+      <button class="divide">-</button>
+      <div class="total">1</div>
+      <button class="plus">+</button>
       `;
       orderDis.appendChild(sum);
 
