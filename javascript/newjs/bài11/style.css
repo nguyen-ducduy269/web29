@@ -50,6 +50,7 @@ h3 {
   justify-items: center;
   background-color: #eee4d999;
   padding: 20px 0px;
+  gap: 20px;
 }
 
 .cafe-box {
