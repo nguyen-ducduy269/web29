@@ -141,9 +141,9 @@ cafeBox1.forEach((cafeBox1) => {
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-        <button class="plus">+</button>
-        <div class="total">1</div>
         <button class="divide">-</button>
+        <div class="total">1</div>
+        <button class="plus">+</button>
       `;
       orderDis.appendChild(sum);
 
@@ -236,9 +236,9 @@ cafeBox1.forEach((cafeBox1) => {
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-        <button class="plus">+</button>
-        <div class="total">1</div>
         <button class="divide">-</button>
+        <div class="total">1</div>
+        <button class="plus">+</button>
       `;
       orderDis.appendChild(sum);
 
@@ -375,9 +375,9 @@ cafeBox2.forEach((cafeBox2) => {
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-        <button class="plus">+</button>
-        <div class="total">1</div>
         <button class="divide">-</button>
+        <div class="total">1</div>
+        <button class="plus">+</button>
       `;
       orderDis.appendChild(sum);
 
@@ -466,9 +466,9 @@ cafeBox2.forEach((cafeBox2) => {
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-        <button class="plus">+</button>
-        <div class="total">1</div>
         <button class="divide">-</button>
+        <div class="total">1</div>
+        <button class="plus">+</button>
       `;
       orderDis.appendChild(sum);
 
@@ -601,9 +601,9 @@ cafeBox3.forEach((cafeBox3) => {
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-        <button class="plus">+</button>
-        <div class="total">1</div>
         <button class="divide">-</button>
+        <div class="total">1</div>
+        <button class="plus">+</button>
       `;
       orderDis.appendChild(sum);
 
@@ -692,9 +692,9 @@ cafeBox3.forEach((cafeBox3) => {
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-        <button class="plus">+</button>
-        <div class="total">1</div>
         <button class="divide">-</button>
+        <div class="total">1</div>
+        <button class="plus">+</button>
       `;
       orderDis.appendChild(sum);
 
