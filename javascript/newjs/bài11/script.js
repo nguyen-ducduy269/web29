@@ -133,9 +133,9 @@ cafeBox1.forEach((cafeBox1) => {
       const more = document.createElement("div");
       more.setAttribute("class", "more");
       more.innerHTML = `
-      <div class="type-title">Loại:</div>
-      <div class="detail">${brownCoffee.variations[0].type}</div>
-    `;
+        <div class="type-title">Loại:</div>
+        <div class="detail">${brownCoffee.variations[0].type}</div>
+      `;
       orderDis.appendChild(more);
 
       const sum = document.createElement("div");
@@ -151,6 +151,19 @@ cafeBox1.forEach((cafeBox1) => {
       price.setAttribute("class", "price");
       price.innerHTML = brownCoffee.variations[0].price + "đ";
       orderDis.appendChild(price);
+
+      const deleteItem = document.createElement("button");
+      deleteItem.setAttribute("class", "delete-item");
+      deleteItem.innerHTML = "X";
+      order.appendChild(deleteItem);
+      deleteItem.addEventListener("click", (e) => {
+        const itemChoose = deleteItem.parentNode;
+        if (confirm("Bạn có chắc muốn xóa? ")) {
+          document.querySelector(".orders").removeChild(itemChoose);
+        } else {
+          return false;
+        }
+      });
 
       const quantityInput = sum.querySelector(".total");
       const plusButton = sum.querySelector(".plus");
@@ -341,24 +354,37 @@ cafeBox2.forEach((cafeBox2) => {
       const more = document.createElement("div");
       more.setAttribute("class", "more");
       more.innerHTML = `
-      <div class="type-title">Loại:</div>
-      <div class="detail">${blackCoffee.variations[0].type}</div>
-    `;
+        <div class="type-title">Loại:</div>
+        <div class="detail">${blackCoffee.variations[0].type}</div>
+      `;
       orderDis.appendChild(more);
 
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-    <button class="plus">+</button>
-    <div class="total">1</div>
-    <button class="divide">-</button>
-  `;
+        <button class="plus">+</button>
+        <div class="total">1</div>
+        <button class="divide">-</button>
+      `;
       orderDis.appendChild(sum);
 
       const price = document.createElement("div");
       price.setAttribute("class", "price");
       price.innerHTML = blackCoffee.variations[0].price + "đ";
       orderDis.appendChild(price);
+
+      const deleteItem = document.createElement("button");
+      deleteItem.setAttribute("class", "delete-item");
+      deleteItem.innerHTML = "X";
+      order.appendChild(deleteItem);
+      deleteItem.addEventListener("click", (e) => {
+        const itemChoose = deleteItem.parentNode;
+        if (confirm("Bạn có chắc muốn xóa? ")) {
+          document.querySelector(".orders").removeChild(itemChoose);
+        } else {
+          return false;
+        }
+      });
 
       const quantityInput = sum.querySelector(".total");
       const plusButton = sum.querySelector(".plus");
@@ -541,24 +567,37 @@ cafeBox3.forEach((cafeBox3) => {
       const more = document.createElement("div");
       more.setAttribute("class", "more");
       more.innerHTML = `
-      <div class="type-title">Loại:</div>
-      <div class="detail">${silverShun.variations[0].type}</div>
-    `;
+        <div class="type-title">Loại:</div>
+        <div class="detail">${silverShun.variations[0].type}</div>
+      `;
       orderDis.appendChild(more);
 
       const sum = document.createElement("div");
       sum.setAttribute("class", "sum");
       sum.innerHTML = `
-    <button class="plus">+</button>
-    <div class="total">1</div>
-    <button class="divide">-</button>
-  `;
+        <button class="plus">+</button>
+        <div class="total">1</div>
+        <button class="divide">-</button>
+      `;
       orderDis.appendChild(sum);
 
       const price = document.createElement("div");
       price.setAttribute("class", "price");
       price.innerHTML = silverShun.variations[0].price + "đ";
       orderDis.appendChild(price);
+
+      const deleteItem = document.createElement("button");
+      deleteItem.setAttribute("class", "delete-item");
+      deleteItem.innerHTML = "X";
+      order.appendChild(deleteItem);
+      deleteItem.addEventListener("click", (e) => {
+        const itemChoose = deleteItem.parentNode;
+        if (confirm("Bạn có chắc muốn xóa? ")) {
+          document.querySelector(".orders").removeChild(itemChoose);
+        } else {
+          return false;
+        }
+      });
 
       const quantityInput = sum.querySelector(".total");
       const plusButton = sum.querySelector(".plus");
@@ -724,29 +763,3 @@ document.addEventListener("keydown", (event) => {
     console.log(menuBox);
   }
 });
-
-// const filter = header.querySelector("button");
-// filter.addEventListener("click", () => {
-//   const titleSearch = document.querySelectorAll(".menu-box .title");
-//   const inputValue = input.value;
-//   newMenus = [];
-
-//   // sao chép phần tử cafe-box
-//   const cafeBoxClone = cafeBoxTemplate.cloneNode(true);
-
-//   titleSearch.forEach((title) => {
-//     if (new RegExp(`${inputValue}`, "i").test(title.innerHTML)) {
-//       console.log("A");
-//       // sao chép thêm 1 bản sao nữa của cafe-box
-//       const cafeBox = cafeBoxClone.cloneNode(true);
-//       newMenus.push(cafeBox);
-//     }
-//   });
-
-//   menuBox.innerHTML = "";
-//   newMenus.forEach((newMenu) => {
-//     menuBox.appendChild(newMenu);
-//   });
-
-//   console.log(menuBox);
-// });
