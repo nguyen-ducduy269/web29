@@ -90,6 +90,9 @@ let data = [
 const main = document.querySelector("main");
 const menuBox = main.querySelector(".menu-box");
 
+const totalPrice = document.querySelector(".total-price");
+totalPrice.innerHTML = "Tổng hóa đơn của bạn là: " + 0 + "đ";
+
 function menuDrink() {
   data.map((product) => {
     let cafeBox = document.createElement("div");
@@ -123,7 +126,7 @@ function menuDrink() {
     const addBtn = cafeBox.querySelector(".add");
     addBtn.addEventListener("click", () => {
       addCoffee(cafeBox, product);
-      priceCoffee(product);
+      priceCoffee(product, totalPrice);
       deleteCoffee();
     });
   });
@@ -238,23 +241,36 @@ function addCoffee(cafeBox, product) {
   }
 }
 
-function priceCoffee(product) {
+function priceCoffee(product, totalPrice) {
   const drink = {
     name: product.name,
     price: product.price,
   };
 
   const order = document.querySelectorAll(".order");
-  // phần tử forEach không thể dùng trên 1 phần tử duy nhất nên phải dùng querySelectorAll
+
+  let totalOrderPrice = 0; // khởi tạo biến tổng giá trị đơn hàng
+
+  // cập nhật giá trị tổng đơn hàng ban đầu
+  totalPrice.innerHTML =
+    "Tổng hóa đơn của bạn là: " + totalOrderPrice.toLocaleString("en-US") + "đ";
+
   order.forEach((item) => {
     const plus = item.querySelector(".sum .plus");
     const divide = item.querySelector(".sum .divide");
     let quantity = item.querySelector(".sum .total");
     let currentPrice = item.querySelector(".order-discription .price");
 
-    //////// parseFloat - chuyển từ chuỗi về số
     let newPrice = parseFloat(drink.price);
     let quantities = parseFloat(quantity.innerHTML);
+
+    // lấy số lượng sản phẩm đã có trong giỏ hàng trước đó từ thuộc tính data-count
+    // lấy giá trị số lượng sản phẩm đã được lưu trữ trong thuộc tính `data-count` của phần tử hiện tại. Nếu thuộc tính này không có giá trị, `count` sẽ được gán bằng 0.
+    const count = item.dataset.count ? parseInt(item.dataset.count) : 0;
+
+    // cộng thêm giá tiền của sản phẩm vào tổng giá trị đơn hàng
+    // quantities là giá trị mới đc thêm vào trừ đi count để cộng thêm số lượng món được thêm vào menu
+    totalOrderPrice += parseFloat(drink.price) * (quantities - count);
 
     plus.addEventListener("click", () => {
       quantities += 1;
@@ -263,6 +279,16 @@ function priceCoffee(product) {
       newPrice = parseFloat(drink.price) * quantities;
       console.log(newPrice);
       currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
+
+      // cập nhật tổng giá trị đơn hàng khi thêm sản phẩm
+      totalOrderPrice += parseFloat(drink.price);
+      totalPrice.innerHTML =
+        "Tổng hóa đơn của bạn là: " +
+        totalOrderPrice.toLocaleString("en-US") +
+        "đ";
+
+      // lưu trữ số lượng sản phẩm trong giỏ hàng vào thuộc tính data-count
+      item.dataset.count = parseInt(quantity.innerHTML);
     });
 
     divide.addEventListener("click", () => {
@@ -273,8 +299,25 @@ function priceCoffee(product) {
         newPrice = parseFloat(drink.price) * quantities;
         console.log(newPrice);
         currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
+
+        // cập nhật tổng giá trị đơn hàng khi giảm sản phẩm
+        totalOrderPrice -= parseFloat(drink.price);
+        totalPrice.innerHTML =
+          "Tổng hóa đơn của bạn là: " +
+          totalOrderPrice.toLocaleString("en-US") +
+          "đ";
+
+        // lưu trữ số lượng sản phẩm trong giỏ hàng vào thuộc tính data-count
+        item.dataset.count = parseInt(quantity.innerHTML);
       }
     });
+
+    // cập nhật tổng giá trị đơn hàng mỗi lần duyệt qua 1 đơn hàng
+    totalOrderPrice += parseFloat(drink.price) * count;
+    totalPrice.innerHTML =
+      "Tổng hóa đơn của bạn là: " +
+      totalOrderPrice.toLocaleString("en-US") +
+      "đ";
   });
 }
 

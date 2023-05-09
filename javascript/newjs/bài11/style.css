@@ -200,25 +200,23 @@ main {
 }
 
 .submit-button {
-  width: 100%;
-  height: 60px;
+  height: 100px;
   bottom: 0px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: 10;
+  position: fixed;
   display: flex;
   background-color: white;
+  border-top: 3px dashed black;
+  z-index: 11;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .submit {
-  position: absolute;
   width: 200px;
   height: 39px;
   border-radius: 9px;
   background-color: #f27c4a;
-  z-index: 11;
   color: white;
 }
 
