@@ -91,7 +91,7 @@ const main = document.querySelector("main");
 const menuBox = main.querySelector(".menu-box");
 
 function menuDrink() {
-  data.forEach((product) => {
+  data.map((product) => {
     let cafeBox = document.createElement("div");
     cafeBox.classList.add("cafe-box");
 
