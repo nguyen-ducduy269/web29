@@ -90,25 +90,10 @@ main {
   width: 175px;
   height: 39px;
   border-radius: 9px;
-  background-color: #ea4c89;
+  background-color: #f27c4a;
   color: white;
 }
 
-.discription .add2 {
-  width: 175px;
-  height: 39px;
-  border-radius: 9px;
-  background-color: #ea4c89;
-  color: white;
-}
-
-.discription .add3 {
-  width: 175px;
-  height: 39px;
-  border-radius: 9px;
-  background-color: #ea4c89;
-  color: white;
-}
 /* Card */
 .card {
   width: 20%;
@@ -232,7 +217,7 @@ main {
   width: 200px;
   height: 39px;
   border-radius: 9px;
-  background-color: #ea4c89;
+  background-color: #f27c4a;
   z-index: 11;
   color: white;
 }
@@ -242,8 +227,9 @@ main {
   height: 30px;
   margin-right: 10px;
   border-radius: 20px;
-  background-color: black;
+  background-color: #f27c4a;
   color: white;
+  border: none;
 }
 
 /* left menu */
@@ -277,7 +263,7 @@ main {
 }
 
 #home {
-  color: #ea4c89;
+  color: #f27c4a;
 }
 
 .choose-order {
