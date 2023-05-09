@@ -15,8 +15,8 @@ h3 {
 }
 
 main {
-  background-color: #8080800f;
-  padding: 0px 30px;
+  background-color: #8080801a;
+  padding: 30px 30px;
 }
 /* Menu box */
 
@@ -26,7 +26,6 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  background-color: #eee4d999;
   padding: 20px 0px;
   gap: 20px;
 }
@@ -37,6 +36,7 @@ main {
   display: flex;
   background-color: white;
   align-items: center;
+  border-radius: 20px;
 }
 
 .cafe-box .image {
@@ -88,25 +88,25 @@ main {
 
 .discription .add {
   width: 175px;
-  height: 30px;
-  border-radius: 20px;
-  background-color: rgb(191, 216, 112);
+  height: 39px;
+  border-radius: 9px;
+  background-color: #ea4c89;
   color: white;
 }
 
 .discription .add2 {
   width: 175px;
-  height: 30px;
-  border-radius: 20px;
-  background-color: rgb(191, 216, 112);
+  height: 39px;
+  border-radius: 9px;
+  background-color: #ea4c89;
   color: white;
 }
 
 .discription .add3 {
   width: 175px;
-  height: 30px;
-  border-radius: 20px;
-  background-color: rgb(191, 216, 112);
+  height: 39px;
+  border-radius: 9px;
+  background-color: #ea4c89;
   color: white;
 }
 /* Card */
@@ -117,7 +117,7 @@ main {
   top: 0;
   right: 0;
   padding: 30px 20px;
-  background-color: #eee4d9;
+  background-color: white;
 }
 
 .card-title {
@@ -203,16 +203,15 @@ main {
   font-weight: 600;
   text-align: left;
 }
-.order .delete-item {
+.order i {
   position: absolute;
   bottom: 5px;
   right: 5px;
   width: 25px;
   height: 25px;
-  background-color: red;
-  color: white;
   font-size: 18px;
   font-weight: 600;
+  border: none;
 }
 
 .submit-button {
@@ -224,17 +223,18 @@ main {
   transform: translate(-50%);
   z-index: 10;
   display: flex;
-  background-color: #eee4d9;
+  background-color: white;
   align-items: center;
   justify-content: center;
 }
 .submit {
   position: absolute;
   width: 200px;
-  height: 30px;
-  border-radius: 20px;
-  background-color: rgb(191, 216, 112);
+  height: 39px;
+  border-radius: 9px;
+  background-color: #ea4c89;
   z-index: 11;
+  color: white;
 }
 
 .active {
@@ -246,6 +246,50 @@ main {
   color: white;
 }
 
+/* left menu */
+.left-menu {
+  width: 110px;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.main-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 50px;
+}
+
+.main-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.left-menu i {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+#home {
+  color: #ea4c89;
+}
+
+.choose-order {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+}
+
+.choose-order img {
+  width: 100%;
+  height: 100%;
+}
 @media only screen and (max-width: 1350px) {
   .container {
     width: 1170px;

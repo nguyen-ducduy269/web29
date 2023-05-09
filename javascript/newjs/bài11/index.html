@@ -7,9 +7,10 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-      integrity="sha384-aVLwEFO+E7e/AaxlpRmBVyHFg+zv9aaWQ12ODsjtLlYEZAsFbzv0JW7y3zyiJ+K1"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -20,151 +21,7 @@
         <!-- xong mới thao tác với DOM -->
         <h3>Coffee Menu</h3>
 
-        <div class="menu-box">
-          <div class="cafe-box cafe-box1">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot-brown"></button>
-                <button class="ice-brown"></button>
-              </div>
-
-              <button class="add"></button>
-            </div>
-          </div>
-
-          <div class="cafe-box cafe-box2">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot-black"></button>
-                <button class="ice-black"></button>
-              </div>
-
-              <button class="add2"></button>
-            </div>
-          </div>
-
-          <div class="cafe-box cafe-box3">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot"></button>
-                <button class="ice"></button>
-              </div>
-
-              <button class="add3"></button>
-            </div>
-          </div>
-
-          <div class="cafe-box cafe-box2">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot-black"></button>
-                <button class="ice-black"></button>
-              </div>
-
-              <button class="add2"></button>
-            </div>
-          </div>
-
-          <div class="cafe-box cafe-box1">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot-brown"></button>
-                <button class="ice-brown"></button>
-              </div>
-
-              <button class="add"></button>
-            </div>
-          </div>
-
-          <div class="cafe-box cafe-box3">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot"></button>
-                <button class="ice"></button>
-              </div>
-
-              <button class="add3"></button>
-            </div>
-          </div>
-
-          <div class="cafe-box cafe-box2">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot-black"></button>
-                <button class="ice-black"></button>
-              </div>
-
-              <button class="add2"></button>
-            </div>
-          </div>
-
-          <div class="cafe-box cafe-box1">
-            <div class="image"></div>
-
-            <div class="discription">
-              <div class="title"></div>
-
-              <div class="price"></div>
-
-              <div class="button">
-                <div class="type-title"></div>
-                <button class="hot-brown"></button>
-                <button class="ice-brown"></button>
-              </div>
-
-              <button class="add"></button>
-            </div>
-          </div>
-        </div>
+        <div class="menu-box"></div>
 
         <div class="card">
           <div class="card-title">
@@ -186,11 +43,23 @@
           </div>
 
           <div class="submit-button">
-            <button class="submit">Thanh Toán</button>
+            <button class="submit" onclick="submitButton()">Thanh Toán</button>
           </div>
         </div>
+
+        <div class="left-menu">
+          <div class="main-icon">
+            <img src="./image/th.jpg" alt="" />
+          </div>
+          <i id="home" class="fa-solid fa-house"></i>
+          <div class="choose-order">
+            <img src="./image/645061.png" alt="" />
+          </div>
+          <i id="heart" class="fa-regular fa-heart"></i>
+          <i id="wallet" class="fa-solid fa-wallet"></i>
+          <i id="setting" class="fa-solid fa-gear"></i>
+        </div>
       </main>
-      <footer></footer>
     </div>
     <script src="script.js"></script>
   </body>

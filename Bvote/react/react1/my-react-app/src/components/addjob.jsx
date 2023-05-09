@@ -1,6 +1,8 @@
+import CloseJob from "./closejob";
+
 function AddJob() {
   return (
-    <div className="left-job">
+    <div className="left">
       <p className="add">Thêm công việc</p>
 
       <div className="form">
@@ -16,7 +18,7 @@ function AddJob() {
 
         <div className="button">
           <button className="btn_add">Thêm</button>
-          <button className="btn_remove">Hủy bỏ</button>
+          <CloseJob />
         </div>
       </div>
     </div>
