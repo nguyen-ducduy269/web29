@@ -200,6 +200,7 @@ main {
 }
 
 .submit-button {
+  width: 20%;
   height: 100px;
   bottom: 0px;
   position: fixed;
@@ -211,6 +212,7 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  gap: 20px;
 }
 .submit {
   width: 200px;
