@@ -92,7 +92,6 @@ const menuBox = main.querySelector(".menu-box");
 
 function menuDrink() {
   data.forEach((product) => {
-    const orders = document.querySelector(".orders");
     let cafeBox = document.createElement("div");
     cafeBox.classList.add("cafe-box");
 
@@ -123,131 +122,9 @@ function menuDrink() {
     // add cart
     const addBtn = cafeBox.querySelector(".add");
     addBtn.addEventListener("click", () => {
-      const hotCoffee = cafeBox.querySelector(".hot");
-      const iceCoffee = cafeBox.querySelector(".ice");
-
-      if (hotCoffee.classList.contains("active")) {
-        const drink = {
-          name: product.name,
-          price: product.price,
-          type: product.type.hot.name,
-        };
-
-        const order = document.createElement("div");
-        order.classList.add("order");
-        order.innerHTML = `
-          <div class="image">
-            <img src="${product.images[0]}" alt="${product.name}">
-          </div>
-
-          <div class="order-discription">
-            <div class="title">${drink.name}</div>
-
-            <div class="more">
-              <div class="type-title">Loại:</div>
-              <div class="detail">${drink.type}</div>
-            </div>
-
-            <div class="sum">
-              <button class="divide">-</button>
-              <div class="total">1</div>
-              <button class="plus">+</button>
-            </div>
-
-            <div class="price">${drink.price.toLocaleString("en-US")}đ</div>
-            <i class="fa-regular fa-trash-can"></i>
-          </div>
-        `;
-
-        orders.appendChild(order);
-        hotCoffee.classList.remove("active");
-      } else if (iceCoffee.classList.contains("active")) {
-        const drink = {
-          name: product.name,
-          price: product.price,
-          type: product.type.cold.name,
-        };
-
-        const order = document.createElement("div");
-        order.classList.add("order");
-        order.innerHTML = `
-          <div class="image">
-            <img src="${product.images[1]}" alt="${product.name}">
-          </div>
-
-          <div class="order-discription">
-            <div class="title">${drink.name}</div>
-
-            <div class="more">
-              <div class="type-title">Loại:</div>
-              <div class="detail">${drink.type}</div>
-            </div>
-
-            <div class="sum">
-              <button class="divide">-</button>
-              <div class="total">1</div>
-              <button class="plus">+</button>
-            </div>
-
-            <div class="price">${drink.price.toLocaleString("en-US")}đ</div>
-            <i class="fa-regular fa-trash-can"></i>
-          </div>
-        `;
-
-        orders.appendChild(order);
-        iceCoffee.classList.remove("active");
-      } else {
-        alert(
-          "Bạn phải chọn loại nóng hoặc đá cho coffee trước khi thêm vào giỏ hàng"
-        );
-      }
-
-      // total price
-      const order = document.querySelectorAll(".order");
-
-      // phần tử forEach không thể dùng trên 1 phần tử duy nhất nên phải dùng querySelectorAll
-      order.forEach((item) => {
-        const drink = {
-          name: product.name,
-          price: product.price,
-        };
-
-        const plus = item.querySelector(".sum .plus");
-        const divide = item.querySelector(".sum .divide");
-        let quantity = item.querySelector(".sum .total");
-        let currentPrice = item.querySelector(".order-discription .price");
-
-        //////// parseFloat - chuyển từ chuỗi về số
-        let newPrice = parseFloat(drink.price);
-        let quantities = parseFloat(quantity.innerHTML);
-
-        plus.addEventListener("click", () => {
-          quantities += 1;
-          quantity.innerHTML = quantities;
-
-          newPrice = parseFloat(drink.price) * quantities;
-          console.log(newPrice);
-          currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
-        });
-
-        divide.addEventListener("click", () => {
-          if (quantities > 1) {
-            quantities--;
-            quantity.innerHTML = quantities;
-
-            newPrice = parseFloat(drink.price) * quantities;
-            console.log(newPrice);
-            currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
-          }
-        });
-      });
-
-      // xóa phần tử
-      const trashIcons = document.querySelectorAll(".fa-trash-can");
-      trashIcons.forEach((icon) => {
-        icon.addEventListener("click", handleDelete);
-      });
-      //
+      addCoffee(cafeBox, product);
+      priceCoffee(product);
+      deleteCoffee();
     });
   });
 }
@@ -279,6 +156,128 @@ function changeDrink() {
 }
 changeDrink();
 
+function addCoffee(cafeBox, product) {
+  const orders = document.querySelector(".orders");
+  const hotCoffee = cafeBox.querySelector(".hot");
+  const iceCoffee = cafeBox.querySelector(".ice");
+
+  if (hotCoffee.classList.contains("active")) {
+    const drink = {
+      name: product.name,
+      price: product.price,
+      type: product.type.hot.name,
+    };
+
+    const order = document.createElement("div");
+    order.classList.add("order");
+    order.innerHTML = `
+          <div class="image">
+            <img src="${product.images[0]}" alt="${product.name}">
+          </div>
+
+          <div class="order-discription">
+            <div class="title">${drink.name}</div>
+
+            <div class="more">
+              <div class="type-title">Loại:</div>
+              <div class="detail">${drink.type}</div>
+            </div>
+
+            <div class="sum">
+              <button class="divide">-</button>
+              <div class="total">1</div>
+              <button class="plus">+</button>
+            </div>
+
+            <div class="price">${drink.price.toLocaleString("en-US")}đ</div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        `;
+
+    orders.appendChild(order);
+    hotCoffee.classList.remove("active");
+  } else if (iceCoffee.classList.contains("active")) {
+    const drink = {
+      name: product.name,
+      price: product.price,
+      type: product.type.cold.name,
+    };
+
+    const order = document.createElement("div");
+    order.classList.add("order");
+    order.innerHTML = `
+          <div class="image">
+            <img src="${product.images[1]}" alt="${product.name}">
+          </div>
+
+          <div class="order-discription">
+            <div class="title">${drink.name}</div>
+
+            <div class="more">
+              <div class="type-title">Loại:</div>
+              <div class="detail">${drink.type}</div>
+            </div>
+
+            <div class="sum">
+              <button class="divide">-</button>
+              <div class="total">1</div>
+              <button class="plus">+</button>
+            </div>
+
+            <div class="price">${drink.price.toLocaleString("en-US")}đ</div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        `;
+
+    orders.appendChild(order);
+    iceCoffee.classList.remove("active");
+  } else {
+    alert(
+      "Bạn phải chọn loại nóng hoặc đá cho coffee trước khi thêm vào giỏ hàng"
+    );
+  }
+}
+
+function priceCoffee(product) {
+  const drink = {
+    name: product.name,
+    price: product.price,
+  };
+
+  const order = document.querySelectorAll(".order");
+  // phần tử forEach không thể dùng trên 1 phần tử duy nhất nên phải dùng querySelectorAll
+  order.forEach((item) => {
+    const plus = item.querySelector(".sum .plus");
+    const divide = item.querySelector(".sum .divide");
+    let quantity = item.querySelector(".sum .total");
+    let currentPrice = item.querySelector(".order-discription .price");
+
+    //////// parseFloat - chuyển từ chuỗi về số
+    let newPrice = parseFloat(drink.price);
+    let quantities = parseFloat(quantity.innerHTML);
+
+    plus.addEventListener("click", () => {
+      quantities += 1;
+      quantity.innerHTML = quantities;
+
+      newPrice = parseFloat(drink.price) * quantities;
+      console.log(newPrice);
+      currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
+    });
+
+    divide.addEventListener("click", () => {
+      if (quantities > 1) {
+        quantities--;
+        quantity.innerHTML = quantities;
+
+        newPrice = parseFloat(drink.price) * quantities;
+        console.log(newPrice);
+        currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
+      }
+    });
+  });
+}
+
 function handleDelete(event) {
   if (confirm("Bạn có chắc chắn muốn xóa đơn hàng này không?")) {
     const orderElement = event.target.closest(".order");
@@ -286,28 +285,16 @@ function handleDelete(event) {
   }
 }
 
+function deleteCoffee() {
+  // xóa phần tử
+  const trashIcons = document.querySelectorAll(".fa-trash-can");
+  trashIcons.forEach((icon) => {
+    icon.addEventListener("click", handleDelete);
+  });
+}
+
 function submitButton() {
   const orders = document.querySelector(".orders");
   orders.innerHTML = "";
   alert("Bạn đã thanh toán thành công!");
 }
-//
-//
-// function render_drink() {
-//   drinks.map((drink) => {
-//     let drink = { name, price, type, id };
-//     let item = document.createElement("div");
-//     item.classList.add("item");
-
-//     item.innerHTML = `
-//       <button>add</button>
-//     `;
-
-//     item.querySelector("button").addEventListener("click", () => {
-//       // add vào giỏ hàng dựa theo id sản phẩm
-//       addCart(id);
-//     });
-//   });
-// }
-
-// function addCart() {}
