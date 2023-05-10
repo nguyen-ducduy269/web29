@@ -127,6 +127,7 @@ function menuDrink() {
     addBtn.addEventListener("click", () => {
       addCoffee(cafeBox, product);
       priceCoffee(product, totalPrice);
+      updateQuantity(totalPrice);
       deleteCoffee();
     });
   });
@@ -249,8 +250,6 @@ function priceCoffee(product) {
 
   const order = document.querySelectorAll(".order");
 
-  // let totalOrderPrice = 0;
-
   order.forEach((item) => {
     const plus = item.querySelector(".sum .plus");
     const divide = item.querySelector(".sum .divide");
@@ -260,17 +259,6 @@ function priceCoffee(product) {
     let newPrice = parseInt(drink.price);
     let quantities = parseFloat(quantity.innerHTML);
 
-    // lấy số lượng sản phẩm đã có trong giỏ hàng trước đó từ thuộc tính data-count
-    // lấy giá trị số lượng sản phẩm đã được lưu trữ trong thuộc tính `data-count` của phần tử hiện tại. Nếu thuộc tính này không có giá trị, `count` sẽ được gán bằng 0.
-    // const count = parseInt(item.dataset.count) ? item.dataset.count : 1;
-
-    // // cộng thêm giá tiền của sản phẩm vào tổng giá trị đơn hàng
-    // // quantities là giá trị mới đc thêm vào trừ đi count để cộng thêm số lượng món được thêm vào menu
-    // if (count > 0) {
-    //   quantities -= count;
-    //   totalOrderPrice += parseFloat(drink.price) * count;
-    // }
-
     plus.addEventListener("click", () => {
       quantities += 1;
       quantity.innerHTML = quantities;
@@ -278,17 +266,7 @@ function priceCoffee(product) {
       newPrice = parseFloat(drink.price) * quantities;
       currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
 
-      updateQuantity(product, totalPrice);
-
-      // // cập nhật tổng giá trị đơn hàng khi thêm sản phẩm
-      // totalOrderPrice += parseFloat(drink.price);
-      // totalPrice.innerHTML =
-      //   "Tổng hóa đơn của bạn là: " +
-      //   totalOrderPrice.toLocaleString("en-US") +
-      //   "đ";
-
-      // // lưu trữ số lượng sản phẩm trong giỏ hàng vào thuộc tính data-count
-      // item.dataset.count = parseInt(quantity.innerHTML);
+      updateQuantity(totalPrice);
     });
 
     divide.addEventListener("click", () => {
@@ -299,61 +277,25 @@ function priceCoffee(product) {
         newPrice = parseFloat(drink.price) * quantities;
         currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
 
-        updateQuantity(product, totalPrice);
-
-        // // cập nhật tổng giá trị đơn hàng khi giảm sản phẩm
-        // totalOrderPrice -= parseFloat(drink.price);
-        // totalPrice.innerHTML =
-        //   "Tổng hóa đơn của bạn là: " +
-        //   totalOrderPrice.toLocaleString("en-US") +
-        //   "đ";
-
-        // item.dataset.count = parseInt(quantity.innerHTML);
+        updateQuantity(totalPrice);
       }
     });
-
-    // totalOrderPrice += parseFloat(drink.price) * quantities;
   });
-
-  // lấy số lượng sp mới thêm vào trừ đi số lượng sp cũ
-  // tổng giá mới - nhân giá của sản phẩm mới được thêm vào với số lượng sản phẩm mới này và cộng vào tổng giá trị đơn hàng được tính trước đó.
-  // const countNewItems = order.length - order[0].dataset.count;
-  // let newItemsTotalPrice = 0;
-  // for (let i = order.length - countNewItems; i < order.length; i++) {
-  //   const drink = order[i].querySelector(".order-discription");
-  //   newItemsTotalPrice += parseFloat(drink.dataset.price);
-  // }
-  // totalOrderPrice += newItemsTotalPrice;
-
-  // totalPrice.innerHTML =
-  //   "Tổng hóa đơn của bạn là: " + totalOrderPrice.toLocaleString("en-US") + "đ";
 }
 
-function updateQuantity(product, totalPrice) {
+function updateQuantity(totalPrice) {
   const orderList = document.querySelectorAll(".order");
   let totalCurrentPrice = 0;
 
   orderList.forEach((item) => {
-    const drink = {
-      name: product.name,
-      price: product.price,
-    };
-
-    const quantity = item.querySelector(".sum .total");
-    const currentPrice = item.querySelector(".order-discription .price");
-
-    let newPrice = parseFloat(drink.price);
-    let quantities = parseFloat(quantity.innerHTML);
-
-    newPrice = parseFloat(drink.price) * quantities;
-    currentPrice.innerHTML = newPrice.toLocaleString("en-US") + "đ";
-    totalCurrentPrice += newPrice;
+    const currentPrice = parseFloat(
+      item.querySelector(".order-discription .price").innerHTML
+    );
+    totalCurrentPrice += currentPrice;
   });
 
   totalPrice.innerHTML =
-    "Tổng hóa đơn của bạn là: " +
-    totalCurrentPrice.toLocaleString("en-US") +
-    "đ";
+    "Tổng hóa đơn của bạn là: " + totalCurrentPrice + ",000đ";
 }
 
 function handleDelete(event) {
