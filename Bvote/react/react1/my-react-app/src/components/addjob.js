@@ -1,6 +1,6 @@
-import CloseJob from "./closejob";
+import Add from "./add";
 
-function AddJob() {
+function AddJob({ setShowAddJob }) {
   return (
     <div className="left">
       <p className="add">Thêm công việc</p>
@@ -17,8 +17,12 @@ function AddJob() {
         </select>
 
         <div className="button">
-          <button className="btn_add">Thêm</button>
-          <CloseJob />
+          <button className="btn_add" onClick={() => Add()}>
+            Thêm
+          </button>
+          <button className="btn_remove" onClick={() => setShowAddJob(false)}>
+            Hủy bỏ
+          </button>
         </div>
       </div>
     </div>

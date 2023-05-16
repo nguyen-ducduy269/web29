@@ -1,6 +1,4 @@
-// import { useState } from "react";
 import "./App.css";
-// import AddJob from "./components/addjob";
 import RenderJob from "./components/renderjob";
 
 function App() {
