@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1400px;
+  position: relative;
+}
+
+.discription {
+  width: 400px;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  margin-bottom: 30px;
+}
+
+.img figure {
+  border: 5px solid #0000ff73;
+  border-radius: 100%;
+}
+
+.selfie {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  position: relative;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.selfie input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 35%;
+  top: 40%;
+}
