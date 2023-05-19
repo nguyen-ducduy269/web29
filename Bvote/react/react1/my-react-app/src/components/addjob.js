@@ -13,9 +13,38 @@ function AddJob({ setShowAddJob }) {
   };
 
   const handleAddClick = () => {
-    // Lấy giá trị của name và status để sử dụng ở đây
     console.log(name);
     console.log(status);
+
+    // tạo thẻ tr và gắn với handleAddClick
+    // const tr = React.createElement(
+    //   "tr",
+    //   null,
+    //   React.createElement("td", { className: "stt" }, 1),
+    //   React.createElement("td", { className: "name" }, { name }),
+    //   React.createElement("td", { className: "status" }, { status }),
+    //   React.createElement(
+    //     "td",
+    //     { className: "activity" },
+    //     React.createElement("button", { className: "btn_edit" }, "Sửa"),
+    //     React.createElement("button", { className: "btn_remove" }, "Xóa")
+    //   )
+    // );
+    const item = { stt, name, status };
+
+    const tr = (
+      <tr>
+        <td className="stt">{item.stt}</td>
+        <td className="name">{item.name}</td>
+        <td className="status">{item.status}</td>
+        <td className="activity">
+          <button className="btn_edit">Sửa</button>
+          <button className="btn_remove">Xóa</button>
+        </td>
+      </tr>
+    );
+    const tbody = document.getElementsByTagName("tbody");
+    ReactDOM.render(tr, tbody);
   };
 
   return (
