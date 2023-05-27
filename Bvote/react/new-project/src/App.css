@@ -160,13 +160,6 @@ tbody .status {
   color: white;
 }
 
-tbody .button {
-  margin-top: 0px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
 tbody .button button {
   padding: 0px 5px;
   text-align: center;
