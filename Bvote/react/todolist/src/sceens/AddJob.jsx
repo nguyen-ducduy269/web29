@@ -5,23 +5,21 @@ export const AddJob = ({ onAdd, setDisplay }) => {
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
 
+  const closeDisplay = () => {
+    setDisplay(false);
+  };
+
   const handleSubmit = () => {
     console.log("name", name);
     console.log("status", status);
     onAdd({
-      n: name,
-      s: status,
+      name: name,
+      status: status,
     });
 
     setName("");
     closeDisplay();
   };
-
-  const closeDisplay = () => {
-    setDisplay(false);
-  };
-
-  console.log("data", data);
 
   return (
     <>

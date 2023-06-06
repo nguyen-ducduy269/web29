@@ -12,22 +12,17 @@ function App() {
 
   console.log("ara", array);
 
+  const onAdd = (aJob) => {
+    const temp = [...array, aJob];
+    setArray(temp);
+  };
+
   return (
     <>
       <Header>Quản lý công việc</Header>
       <Container>
         <div className="left-job">
-          {display ? (
-            <AddJob
-              onAdd={(aJob) => {
-                const temp = [...array, aJob];
-                setArray(temp);
-              }}
-              setDisplay={setDisplay}
-            />
-          ) : (
-            false
-          )}
+          {display ? <AddJob onAdd={onAdd} setDisplay={setDisplay} /> : false}
 
           <button className="add-job" onClick={showDisplay}>
             Thêm công việc
@@ -73,10 +68,10 @@ function App() {
 
               {array?.map((e, i) => (
                 <tr key={i}>
-                  <td className="stt">{i}</td>
-                  <td className="name">{e.n}</td>
+                  <td className="stt">{i + 1}</td>
+                  <td className="name">{e.name}</td>
                   <td className="status">
-                    <p className="status-active">{e.s}</p>
+                    <p className="status-active">{e.status}</p>
                   </td>
                   <td className="activity button">
                     <button className="btn_edit">Sửa</button>
