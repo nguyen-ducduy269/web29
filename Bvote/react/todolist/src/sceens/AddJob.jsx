@@ -1,21 +1,27 @@
 import React from "react";
 import { useState } from "react";
 
-export const AddJob = ({ data, setData, setDisplay }) => {
+export const AddJob = ({ onAdd, setDisplay }) => {
   const [name, setName] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("Kích hoạt");
+
   const handleSubmit = () => {
     console.log("name", name);
     console.log("status", status);
-    setData({
+    onAdd({
       n: name,
       s: status,
     });
+
+    setName("");
+    closeDisplay();
   };
 
   const closeDisplay = () => {
     setDisplay(false);
   };
+
+  console.log("data", data);
 
   return (
     <>

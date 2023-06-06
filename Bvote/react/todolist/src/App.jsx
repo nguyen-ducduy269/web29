@@ -1,24 +1,33 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AddJob } from "./sceens/AddJob";
 import styled from "styled-components";
 
 function App() {
   const [display, setDisplay] = useState(false);
-  const [data, setData] = useState({});
+
   const showDisplay = () => {
     setDisplay(true);
   };
   const [array, setArray] = useState([]);
-  useEffect(() => {
-    setArray([...array, data]);
-  }, [data]);
-  console.log("data:", data);
+
+  console.log("ara", array);
+
   return (
     <>
       <Header>Quản lý công việc</Header>
       <Container>
         <div className="left-job">
-          {display ? <AddJob data={data} setData={setData} /> : false}
+          {display ? (
+            <AddJob
+              onAdd={(aJob) => {
+                const temp = [...array, aJob];
+                setArray(temp);
+              }}
+              setDisplay={setDisplay}
+            />
+          ) : (
+            false
+          )}
 
           <button className="add-job" onClick={showDisplay}>
             Thêm công việc
@@ -62,9 +71,9 @@ function App() {
                 <td className="activity"></td>
               </tr>
 
-              {array.map((e, i) => (
+              {array?.map((e, i) => (
                 <tr key={i}>
-                  <td className="stt">{}</td>
+                  <td className="stt">{i}</td>
                   <td className="name">{e.n}</td>
                   <td className="status">
                     <p className="status-active">{e.s}</p>
@@ -121,8 +130,7 @@ const Container = styled.div`
   }
 
   .form {
-    width: 100%;
-    height: 200px;
+    height: 190px;
     border: 1px solid bisque;
     padding: 10px 10px;
   }
@@ -132,7 +140,7 @@ const Container = styled.div`
   }
 
   .left-job .name {
-    width: 100%;
+    width: 97%;
     height: 40px;
     border-radius: 8px;
     padding-left: 5px;
