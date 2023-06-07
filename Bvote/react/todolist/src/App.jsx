@@ -1,20 +1,31 @@
 import { useState } from "react";
 import { AddJob } from "./sceens/AddJob";
+import { EditJob } from "./sceens/EditJob";
 import styled from "styled-components";
 
+let data = [
+  { id: 1, name: "a", status: "Kích hoạt", i: 0 },
+  { id: 2, name: "b", status: "Ẩn", i: 1 },
+];
 function App() {
+  const [array, setArray] = useState(data);
   const [display, setDisplay] = useState(false);
+  const [updateJob, setUpdateJob] = useState("");
 
   const showDisplay = () => {
     setDisplay(true);
   };
-  const [array, setArray] = useState([]);
-
-  console.log("ara", array);
 
   const onAdd = (aJob) => {
-    const temp = [...array, aJob];
-    setArray(temp);
+    const newJob = { ...aJob, id: array.length + 1 }; // Tăng id khi thêm công việc mới
+    setArray((prevArray) => [...prevArray, newJob]);
+  };
+
+  const onDelete = (id) => {
+    setArray((prevArray) => prevArray.filter((newArray) => newArray.id !== id));
+
+    const deleArr = array.filter((newArray) => newArray.id === id);
+    console.log("deleArr", deleArr);
   };
 
   return (
@@ -23,6 +34,12 @@ function App() {
       <Container>
         <div className="left-job">
           {display ? <AddJob onAdd={onAdd} setDisplay={setDisplay} /> : false}
+          <EditJob
+            array={array}
+            setArray={setArray}
+            updateJob={updateJob}
+            setUpdateJob={setUpdateJob}
+          />
 
           <button className="add-job" onClick={showDisplay}>
             Thêm công việc
@@ -74,8 +91,24 @@ function App() {
                     <p className="status-active">{e.status}</p>
                   </td>
                   <td className="activity button">
-                    <button className="btn_edit">Sửa</button>
-                    <button className="btn_remove">Xóa</button>
+                    <button
+                      className="btn_edit"
+                      onClick={() =>
+                        setUpdateJob({
+                          id: e.id,
+                          name: e.name,
+                          status: e.status,
+                        })
+                      }
+                    >
+                      Sửa
+                    </button>
+                    <button
+                      className="btn_remove"
+                      onClick={() => onDelete(e.id)}
+                    >
+                      Xóa
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -254,6 +287,7 @@ const Container = styled.div`
     text-align: center;
     background-color: coral;
     color: white;
+    margin-right: 10px;
   }
 
   tbody .button .btn_remove {
