@@ -2,13 +2,10 @@ import { useState } from "react";
 import { AddJob } from "./sceens/AddJob";
 import { EditJob } from "./sceens/EditJob";
 import styled from "styled-components";
+import { Data } from "./Data";
 
-let data = [
-  { id: 1, name: "a", status: "Kích hoạt", i: 0 },
-  { id: 2, name: "b", status: "Ẩn", i: 1 },
-];
 function App() {
-  const [array, setArray] = useState(data);
+  const [array, setArray] = useState(Data);
   const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
 
