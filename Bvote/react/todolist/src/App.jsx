@@ -16,6 +16,10 @@ function App() {
     setDisplay(true);
   };
 
+  const closeDisplay = () => {
+    setDisplay(false);
+  };
+
   const onAdd = (aJob) => {
     const newJob = { ...aJob, id: array.length + 1 }; // Tăng id khi thêm công việc mới
     setArray((prevArray) => [...prevArray, newJob]);
@@ -33,7 +37,12 @@ function App() {
       <Header>Quản lý công việc</Header>
       <Container>
         <div className="left-job">
-          {display ? <AddJob onAdd={onAdd} setDisplay={setDisplay} /> : false}
+          {display ? (
+            <AddJob onAdd={onAdd} closeDisplay={closeDisplay} />
+          ) : (
+            false
+          )}
+
           <EditJob
             array={array}
             setArray={setArray}
@@ -141,9 +150,9 @@ const Container = styled.div`
     position: relative;
   }
   .add-job {
-    position: absolute;
-    top: -10%;
-    right: -47%;
+    position: relative;
+    top: -100%;
+    right: -105%;
     width: 150px;
     height: 30px;
     background-color: blue;
