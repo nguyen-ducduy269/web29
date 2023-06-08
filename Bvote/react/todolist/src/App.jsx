@@ -3,6 +3,7 @@ import { AddJob } from "./sceens/AddJob";
 import { EditJob } from "./sceens/EditJob";
 import styled from "styled-components";
 import { Data } from "./Data";
+import { OnRightJob } from "./sceens/OnRightJob";
 
 function App() {
   const [array, setArray] = useState(Data);
@@ -22,18 +23,11 @@ function App() {
     setArray((prevArray) => [...prevArray, newJob]);
   };
 
-  const onDelete = (id) => {
-    setArray((prevArray) => prevArray.filter((newArray) => newArray.id !== id));
-
-    const deleArr = array.filter((newArray) => newArray.id === id);
-    console.log("deleArr", deleArr);
-  };
-
   return (
     <>
       <Header>Quản lý công việc</Header>
       <Container>
-        <div className="left-job">
+        <LeftJob>
           {display ? (
             <AddJob onAdd={onAdd} closeDisplay={closeDisplay} />
           ) : (
@@ -47,80 +41,16 @@ function App() {
             setUpdateJob={setUpdateJob}
           />
 
-          <button className="add-job" onClick={showDisplay}>
-            Thêm công việc
-          </button>
-        </div>
+          <AddButton onClick={showDisplay}>Thêm công việc</AddButton>
+        </LeftJob>
 
-        <div className="right-job">
-          <div className="more">
-            <input
-              className="main-input"
-              type="text"
-              placeholder="Nhập từ khóa..."
-            ></input>
-            <button>Tìm</button>
-            <button className="reduce">Sắp xếp</button>
-          </div>
-
-          <table>
-            <thead>
-              <tr>
-                <td className="stt">STT</td>
-                <td className="name">Tên</td>
-                <td className="status">Trạng thái</td>
-                <td className="activity">Hành động</td>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td className="stt"></td>
-                <td className="name">
-                  <input className="add-input" type="text"></input>
-                </td>
-                <td className="status">
-                  <select>
-                    <option>Tất cả</option>
-                    <option>Kích hoạt</option>
-                    <option>Ẩn</option>
-                  </select>
-                </td>
-                <td className="activity"></td>
-              </tr>
-
-              {array?.map((e, i) => (
-                <tr key={i}>
-                  <td className="stt">{i + 1}</td>
-                  <td className="name">{e.name}</td>
-                  <td className="status">
-                    <p className="status-active">{e.status}</p>
-                  </td>
-                  <td className="activity button">
-                    <button
-                      className="btn_edit"
-                      onClick={() =>
-                        setUpdateJob({
-                          id: e.id,
-                          name: e.name,
-                          status: e.status,
-                        })
-                      }
-                    >
-                      Sửa
-                    </button>
-                    <button
-                      className="btn_remove"
-                      onClick={() => onDelete(e.id)}
-                    >
-                      Xóa
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <RightJob>
+          <OnRightJob
+            array={array}
+            setArray={setArray}
+            setUpdateJob={setUpdateJob}
+          />
+        </RightJob>
       </Container>
     </>
   );
@@ -142,20 +72,6 @@ const Container = styled.div`
   display: flex;
   gap: 20px;
 
-  .left-job {
-    width: 30%;
-    position: relative;
-  }
-  .add-job {
-    position: relative;
-    top: -100%;
-    right: -105%;
-    width: 150px;
-    height: 30px;
-    background-color: blue;
-    color: white;
-  }
-
   .add {
     height: 50px;
     line-height: 50px;
@@ -172,19 +88,23 @@ const Container = styled.div`
     font-size: 20px;
     font-weight: 700;
   }
+`;
 
-  .left-job .name {
+const LeftJob = styled.div`
+  width: 30%;
+  position: relative;
+  .name {
     width: 97%;
     height: 40px;
     border-radius: 8px;
     padding-left: 5px;
   }
-  .left-job select {
+  select {
     width: 100%;
     height: 40px;
     border-radius: 8px;
   }
-  .left-job .button {
+  .button {
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -204,12 +124,22 @@ const Container = styled.div`
     background-color: red;
     color: white;
   }
+`;
 
-  .right-job {
-    width: 60%;
-    height: 276.6px;
-  }
-  .right-job button {
+const AddButton = styled.button`
+  position: relative;
+  top: -100%;
+  right: -105%;
+  width: 150px;
+  height: 30px;
+  background-color: blue;
+  color: white;
+`;
+
+const RightJob = styled.div`
+  width: 60%;
+  height: 276.6px;
+  button {
     background-color: #0000ffc7;
     font-size: 14px;
     text-align: center;
@@ -220,7 +150,7 @@ const Container = styled.div`
     margin-bottom: 0;
   }
 
-  .right-job .reduce {
+  .reduce {
     margin-left: 20px;
   }
   .main-input {
