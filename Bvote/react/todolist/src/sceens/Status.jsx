@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 export const Status = ({ array, setArray }) => {
   const [stat, setStat] = useState("");
-  console.log(stat);
 
   const handleStat = () => {
     let newStat = [...array];

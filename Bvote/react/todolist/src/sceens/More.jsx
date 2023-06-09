@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Arrange } from "./Arrange";
+import styled from "styled-components";
 
 export const More = ({ setArray, array }) => {
   const [searchValue, setSearchValue] = useState("");
@@ -13,9 +15,18 @@ export const More = ({ setArray, array }) => {
     setArray(newArray);
   };
 
+  const [showArrange, setShowArrange] = useState(false);
+  const closeArrng = () => {
+    setShowArrange(false);
+  };
+
+  const showArrng = () => {
+    setShowArrange(true);
+  };
+
   return (
     <>
-      <div className="more">
+      <Mored>
         <input
           className="main-input"
           type="text"
@@ -24,8 +35,19 @@ export const More = ({ setArray, array }) => {
           onChange={(e) => setSearchValue(e.target.value)}
         ></input>
         <button onClick={handleSearch}>Tìm</button>
-        <button className="reduce">Sắp xếp</button>
-      </div>
+        <button className="reduce" onClick={showArrng}>
+          Sắp xếp
+        </button>
+        {showArrange ? (
+          <Arrange array={array} setArray={setArray} closeArrng={closeArrng} />
+        ) : (
+          false
+        )}
+      </Mored>
     </>
   );
 };
+
+const Mored = styled.div`
+  position: relative;
+`;
