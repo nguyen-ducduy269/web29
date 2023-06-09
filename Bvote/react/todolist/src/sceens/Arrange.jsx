@@ -5,9 +5,17 @@ export const Arrange = ({ setArray, array, closeArrng }) => {
   const [arrange, setArrange] = useState("");
   console.log(arrange);
 
-  const handleArrange = (e) => {
-    setArrange(e.target.value);
-    closeArrng();
+  const handleArrange = (value) => {
+    // setArrange(e.target.value);
+    console.log(value);
+
+    let newArray = [...array];
+
+    newArray = newArray.filter((item) => {
+      return item.status.includes(value);
+    });
+
+    setArray(newArray);
   };
 
   return (
@@ -25,12 +33,16 @@ export const Arrange = ({ setArray, array, closeArrng }) => {
             </a>
           </li>
           <li>
-            <a type="button" value="Kích hoạt" onClick={handleArrange}>
+            <a
+              type="button"
+              value="Kích hoạt"
+              onClick={() => handleArrange("Kích hoạt")}
+            >
               <span>Trạng thái Kích hoạt</span>
             </a>
           </li>
           <li>
-            <a type="button" value="Ẩn" onClick={handleArrange}>
+            <a type="button" value="Ẩn" onClick={() => handleArrange("Ẩn")}>
               <span>Trạng thái Ẩn</span>
             </a>
           </li>
