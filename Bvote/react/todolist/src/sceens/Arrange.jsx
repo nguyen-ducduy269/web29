@@ -16,6 +16,29 @@ export const Arrange = ({ setArray, array, closeArrng }) => {
     });
 
     setArray(newArray);
+    closeArrng();
+  };
+
+  const fromAToZ = () => {
+    let newArray = [...array];
+
+    newArray = newArray.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+    setArray(newArray);
+    closeArrng();
+  };
+
+  const fromZToA = () => {
+    let newArray = [...array];
+
+    newArray = newArray
+      .sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      })
+      .reverse();
+    setArray(newArray);
+    closeArrng();
   };
 
   return (
@@ -23,12 +46,12 @@ export const Arrange = ({ setArray, array, closeArrng }) => {
       <Arranged>
         <ul>
           <li>
-            <a type="button">
+            <a type="button" onClick={() => fromAToZ()}>
               <span>Từ A - Z</span>
             </a>
           </li>
           <li>
-            <a type="button">
+            <a type="button" onClick={() => fromZToA()}>
               <span>Từ Z - A</span>
             </a>
           </li>
