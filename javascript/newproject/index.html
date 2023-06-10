@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/contain.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,25 +14,85 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="./lib/owl-carousel/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./lib/owl-carousel/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="header-favicon"></div>
-        <div class="shopping">
-          <div class="search">
-            <input type="text" placeholder="Search..." />
-            <button class="find">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-favicon"></div>
+          <div class="shopping">
+            <div class="search">
+              <input type="text" placeholder="Search..." />
+              <button class="find">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
 
-          <div class="cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div class="number">0</div>
+            <div class="cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div class="number">0</div>
+            </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
+
+    <div class="contain">
+      <div class="container">
+        <div class="banner">
+          <div class="categories">
+            <b class="title">
+              <i class="fa-solid fa-bars"></i>
+              <p>Categories</p>
+            </b>
+
+            <div class="list-categories"></div>
+          </div>
+
+          <div class="advertisement">
+            <div class="more">
+              <a href=""><b>Plus</b></a>
+              <a href=""><b>Cool Home Gadgets</b></a>
+              <a href=""><b>Super Deals</b></a>
+              <a href=""><b>New User Zone</b></a>
+            </div>
+            <div class="owl-carousel owl-theme big-one">
+              <a href=""><img src="./img/new-kingkong-9.webp" alt="" /></a>
+              <a href=""><img src="./img/automobile.webp" alt="" /></a>
+              <a href=""><img src="./img/computer-office.webp" alt="" /></a>
+              <a href=""
+                ><img src="./img/consumer-electronics.webp" alt=""
+              /></a>
+              <a href=""><img src="./img/home-appliances.webp" alt="" /></a>
+              <a href=""><img src="./img/mother-&-kids.webp" alt="" /></a>
+              <a href=""><img src="./img/motorcycles.webp" alt="" /></a>
+              <a href=""><img src="./img/phone-accessories.webp"" alt="" /></a>
+              <a href=""><img src="./img/security-protection.webp" alt="" /></a>
+              <a href=""><img src="./img/toys-hobbies.webp" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+
+  <script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-1.11.0.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+  ></script>
+  <script src="./lib/owl-carousel/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="./js/owl-carousel.js"></script>
+  <script type="module" src="./js/script.js"></script>
 </html>

@@ -3,15 +3,26 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #22222221;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
 }
 
 header {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  padding-top: 30px;
+}
+
+.header {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30px;
 }
 
 .header-favicon {
@@ -19,7 +30,7 @@ header {
   width: 170px;
   height: 40px;
   overflow: hidden;
-  background-image: url(./img/398x92.png);
+  background-image: url(../img/398x92.png);
   background-size: cover;
 }
 
@@ -59,10 +70,14 @@ header {
 
 /* Cart */
 .cart {
-  margin-left: 10px;
+  margin-left: 20px;
   position: relative;
 }
 
+.cart i {
+  font-size: 24px;
+  padding-top: 5px;
+}
 .cart .number {
   position: absolute;
   top: 2px;
