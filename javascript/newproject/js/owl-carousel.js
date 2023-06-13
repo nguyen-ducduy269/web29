@@ -8,7 +8,7 @@ $(".big-one").owlCarousel({
   margin: 10,
   nav: true,
   autoplay: true,
-  autoplayTimeout: 10000,
+  autoplayTimeout: 50000,
   responsive: {
     0: {
       items: 1,
@@ -30,6 +30,8 @@ $(".slick-track").owlCarousel({
   margin: 10,
   nav: false,
   dots: false,
+  autoplay: true,
+  autoplayTimeout: 10000,
   responsive: {
     0: {
       items: 1,
@@ -58,7 +60,7 @@ $(".new-deals").owlCarousel({
   nav: false,
   dots: false,
   autoplay: true,
-  autoplayTimeout: 5000,
+  autoplayTimeout: 30000,
   responsive: {
     0: {
       items: 1,

@@ -18,6 +18,8 @@ header {
   height: 100px;
   background-color: white;
   padding-top: 30px;
+  position: fixed;
+  z-index: 10;
 }
 
 .header {

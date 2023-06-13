@@ -17,6 +17,7 @@
 
 .banner {
   display: flex;
+  margin-top: 100px;
 }
 
 /* categories */
@@ -86,8 +87,12 @@
 
 .big-one .owl-dots {
   position: absolute;
-  left: 33%;
+  left: 25%;
   top: 81%;
+}
+
+.big-one .owl-nav button {
+  height: 100%;
 }
 
 .big-one .owl-nav {
@@ -138,7 +143,7 @@
 }
 .ranking-main .slick-track {
   width: 68%;
-  padding-top: 27px;
+  padding-top: 30px;
 }
 
 .slick-track .item {
@@ -158,6 +163,10 @@
 .item-img img {
   width: 100%;
   height: 100%;
+}
+
+.slick-track .item a {
+  text-decoration: none;
 }
 
 .slick-track .item .discount-deal {
@@ -244,7 +253,7 @@
 }
 
 .new-deal {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   background-image: url(../img/new-deal.webp);
   background-repeat: no-repeat;
@@ -327,6 +336,9 @@
   }
 
   .ranking-main .head {
+    width: 100%;
+  }
+  .new-deal {
     width: 100%;
   }
 }
