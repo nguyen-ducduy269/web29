@@ -453,6 +453,9 @@
 }
 
 @media only screen and (max-width: 426px) {
+  .container {
+    width: 100% !important;
+  }
   .list-categories {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -460,6 +463,9 @@
 }
 
 @media only screen and (max-width: 321px) {
+  .container {
+    width: 100% !important;
+  }
   .list-categories {
     display: grid;
     grid-template-columns: 1fr;
