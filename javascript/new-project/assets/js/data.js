@@ -295,7 +295,208 @@ const products = [
     discription:
       "Men Military Watch Digital 50m Waterproof Wristwatch LED Quartz Clock Sport Watch Male Big Watches Men Relogios Masculino",
   },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S16956f3408594b6db3aeb6759379fde4k/Wireless-Headphones-5-1-Bluetooth-Earphones-HIFI-Lossless-Sound-Headsets-Sports-Mini-TWS-Earbuds-For-iphone.jpg_220x220xz.jpg_.webp",
+    price: 253,
+    first_sold: "5,000+ sold",
+    next_sold: "4.4",
+    discription:
+      "Wireless Headphones 5.1 Bluetooth Earphones HIFI Lossless Sound Headsets Sports Mini TWS Earbuds For iphone XS Max Xiaomi Phones",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S25f8ddcc017549f1ad928888487500edG/Huawei-General-Bluetooth-Headphones-Tws-Wireless-Earphone-Noise-Reduction-Waterproof-Low-Latency-9d-Hifi-Stereo-Long.jpg_220x220xz.jpg_.webp",
+    price: 414.135,
+    first_sold: "8 sold",
+    next_sold: "3.0",
+    discription:
+      "Huawei General Bluetooth Headphones Tws Wireless Earphone Noise Reduction Waterproof Low Latency 9d Hifi Stereo Long Endurance",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S624f58ebe30548b18c4ed9e3b078ec5aI/2pcs-Set-Fashion-Mens-Sports-Watches-Man-Business-Quartz-Wristwatch-Luxury-Men-Casual-Clock-Watch-Relogio.jpg_220x220xz.jpg_.webp",
+    after_price: 53.814,
+    before_price: 146.467,
+    choice: [
+      "./assets/image/product/190x64.webp",
+      "./assets/image/product/super-deal.png",
+    ],
+    first_sold: "1,000+ sold",
+    next_sold: "4.5",
+    discription:
+      "2pcs Set Fashion Mens Sports Watches Man Business Quartz Wristwatch Luxury Men Casual Clock Watch Relogio Masculino",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S8c8de857462b4a929767114bc86f1753B/Drone-GPS-5G-6K-8K-HD-Drones-Professional-Aerial-Photography-Wifi-FPV-Obstacle-Avoidance-Folding-Quadcopter.jpg_220x220xz.jpg_.webp",
+    price: 128.82,
+    sale_off: "₫ 93,998 off every ₫ 704,984",
+    first_sold: "2,000+ sold",
+    next_sold: "4.1",
+    discription:
+      "Drone GPS 5G 6K 8K HD Drones Professional Aerial Photography Wifi FPV Obstacle Avoidance Folding Quadcopter Rc Distance 3000M",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/Sc06a357efdfd4db18229f4de41ab97c8N/Luxury-Skull-Ring-for-Women-Men-Punk-Hip-Hop-Hollow-Skeleton-Adjustable-Opening-Rings-Halloween-Party.jpg_220x220xz.jpg_.webp",
+    price: 37.129,
+    sale_off: "₫ 93,998 off every ₫ 704,984",
+    first_sold: "3 sold",
+    next_sold: "1.2",
+    discription:
+      "Luxury Skull Ring for Women Men Punk Hip Hop Hollow Skeleton Adjustable Opening Rings Halloween Party Jewelry Accessories Gift",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S1b267460fc174fac944b5ea6cf3b2b755/2022-New-Fashion-Female-Shoulder-Bag-Rhombus-Embroidered-Solid-Color-Chain-Women-Shoulder-Crossbody-Casual-Trendy.jpg_220x220xz.jpg_.webp",
+    after_price: 53.344,
+    before_price: 140.527,
+    choice: [
+      "./assets/image/product/190x64.webp",
+      "./assets/image/product/super-deal.png",
+    ],
+    first_sold: "5,000+ sold",
+    next_sold: "4.5",
+    discription:
+      "2022 New Fashion Female Shoulder Bag Rhombus Embroidered Solid Color Chain Women Shoulder Crossbody Casual Trendy Phone Bag",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S3a11b85341d448ffa339d504553b5b3eB/Men-s-Wallet-Leather-Billfold-Slim-Hipster-Cowhide-Credit-Card-ID-Holders-Inserts-Coin-Purses-Luxury.jpg_220x220xz.jpg_.webp",
+    after_price: 71.673,
+    choice: [
+      "./assets/image/product/top-selling.png",
+      "./assets/image/product/190x64.webp",
+    ],
+    first_sold: "10,000+ sold",
+    next_sold: "4.5",
+    discription:
+      "Men's Wallet Leather Billfold Slim Hipster Cowhide Credit Card/ID Holders Inserts Coin Purses Luxury Business Foldable Wallet",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S9388e27c3a4445d492de00bea0519e12K/2023-Dragon-Ball-Z-Sports-Shorts-Cartoon-New-Men-s-Summer-Shorts-Anime-T-shirts-Oversized.jpg_220x220xz.jpg_.webp",
+    price: 54.519,
+    sale_off: "₫ 93,998 off every ₫ 704,984",
+    first_sold: "295+ sold",
+    next_sold: "4.5",
+    discription:
+      "2023 Dragon Ball Z Sports Shorts Cartoon New Men's Summer Shorts Anime T-shirts Oversized Y2k Goku Vegeta Man Shorts Fashion",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S63bc74e3da9d4dc5befcee58f1fee22c1/Quartz-Watch-Men-Business-Fashion-Fake-Three-Eye-Six-Pin-Calendar-Watch-For-Men-Mesh-Belt.jpg_220x220xz.jpg_.webp",
+    after_price: 93.763,
+    before_price: 246.745,
+    choice: [
+      "./assets/image/product/190x64.webp",
+      "./assets/image/product/super-deal.png",
+    ],
+    first_sold: "10,000+ sold",
+    next_sold: "4.0",
+    discription:
+      "Quartz Watch Men Business Fashion Fake Three Eye Six Pin Calendar Watch For Men Mesh Belt Men Watch Non Mechanical Boy",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/Sfb9d9c7461ef4d099357187e02749521B/Electric-Water-Storage-Gun-Pistol-Shooting-Toy-Portable-Children-Summer-Beach-Outdoor-Fight-Fantasy-Toys-for.jpg_220x220xz.jpg_.webp",
+    after_price: 161.206,
+    before_price: 489.259,
+    choice: [
+      "./assets/image/product/190x64.webp",
+      "./assets/image/product/super-deal.png",
+    ],
+    first_sold: "425+ sold",
+    next_sold: 0,
+    discription:
+      "Electric Water Storage Gun Pistol Shooting Toy Portable Children Summer Beach Outdoor Fight Fantasy Toys for Boys Kids Game",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/Sa81cd0c25ed647778b27db1c51435f9ca/Starry-Collection-Charms-Beads-Women-925-Silver-Sun-Stars-Moon-Dangle-Pendants-Fit-Original-Pandora-Jewelry.jpg_220x220xz.jpg_.webp",
+    price: 81.476,
+    sale_off: "₫ 93,998 off every ₫ 704,984",
+    first_sold: "3+ sold",
+    next_sold: 0,
+    discription:
+      "Starry Collection Charms Beads Women 925 Silver Sun Stars Moon Dangle Pendants Fit Original Pandora Jewelry Bracelet Necklace",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/Se921fb855b8f454e8a64f4d86c4353ffL/SMAEL-New-Sport-Watch-Mens-50M-Waterproof-Clock-Alarm-Reloj-Hombre-1545D-Dual-Display-Wristwatch-Quartz.jpg_220x220xz.jpg_.webp",
+    after_price: 140.057,
+    before_price: 425.341,
+    choice: [
+      "./assets/image/product/190x64.webp",
+      "./assets/image/product/super-deal.png",
+    ],
+    first_sold: "1,000+ sold",
+    next_sold: "4.8",
+    discription:
+      "SMAEL New Sport Watch Mens 50M Waterproof Clock Alarm Reloj Hombre 1545D Dual Display Wristwatch Quartz Military Watches For Men",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/H35a86aa144784f6fab7f372ca69ba109i/Fashion-Letters-Embroidery-Women-Men-Baseball-Caps-Female-Male-Sport-Visors-Snapback-Cap-Sun-Hat-For.jpg_220x220xz.jpg_.webp",
+    after_price: 88.123,
+    before_price: 187.526,
+    choice: [
+      "./assets/image/product/summer-sale.png",
+      "./assets/image/product/top-selling.png",
+    ],
+    first_sold: "5,000+ sold",
+    next_sold: "4.6",
+    discription:
+      "Fashion Letters Embroidery  Women Men Baseball Caps Female Male Sport Visors Snapback Cap Sun Hat For Women Men",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S3c0ea91fbee846b79af82217932ebdbbt/AOMEISHA-Retinol-Lifting-Firming-Cream-Remove-Wrinkle-Anti-Aging-Fade-Fine-Lines-Face-Whitening-Brighten-Skin.png_220x220xz.png_.webp",
+    price: 280.505,
+    sale_off: "Extra 3% off with coins",
+    first_sold: "144+ sold",
+    next_sold: "5",
+    discription:
+      "AOMEISHA Retinol Lifting Firming Cream Remove Wrinkle Anti-Aging Fade Fine Lines Face Whitening Brighten Skin Beauty Health Care",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S95124749f6e444519179ac91cb7d34dbJ/Creative-Frameless-DIY-Wall-Clock-Wall-Decal-Home-Silent-Clock-Living-Room-Office-Wall-Decoration.jpg_220x220xz.jpg_.webp",
+    after_price: 42.534,
+    before_price: 134.417,
+    choice: [
+      "./assets/image/product/190x64.webp",
+      "./assets/image/product/super-deal.png",
+    ],
+    first_sold: "5,000+ sold",
+    next_sold: "4.5",
+    discription:
+      "Creative Frameless DIY Wall Clock Wall Decal Home Silent Clock Living Room Office Wall Decoration",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/Sc5538f3ba4a34c16a27f5d9ff9b8b230e/Metal-Stripe-Loud-Lighter-Unusual-Lighters-Cigarette-Lighter-Creative-Wheel-Lighter-Butane-Gas-Lighter-Open-Fire.jpg_220x220xz.jpg_.webp",
+    price: 129.952,
+    first_sold: "1,000+ sold",
+    next_sold: "4.5",
+    discription:
+      "Metal Stripe Loud Lighter Unusual Lighters Cigarette Lighter Creative Wheel Lighter Butane Gas Lighter Open Fire Square Lighter",
+  },
+  {
+    image:
+      "https://ae01.alicdn.com/kf/S36008550e7df48c19c6f28cbc79ca80cz/Men-s-Sneakers-2022-New-Lightweight-Men-Vulcanized-Shoes-Anti-skid-Breathable-Male-Trend-Casual-Shoes.jpg_220x220xz.jpg_.webphttps://ae01.alicdn.com/kf/S36008550e7df48c19c6f28cbc79ca80cz/Men-s-Sneakers-2022-New-Lightweight-Men-Vulcanized-Shoes-Anti-skid-Breathable-Male-Trend-Casual-Shoes.jpg_220x220xz.jpg_.webp",
+    price: 232.645,
+    sale_off: "₫ 93,998 off every ₫ 704,984",
+    choice: "./assets/image/product/limited-deals.png",
+    first_sold: "20,000+ sold",
+    next_sold: "4.8",
+    discription:
+      "Men's Sneakers 2022 New Lightweight Men Vulcanized Shoes Anti-skid Breathable Male Trend Casual Shoes Fashion Men's Sports Shoes",
+  },
 ];
 export default { clothes, sale, products };
 ("./assets/image/product/summer-sale.png");
 ("./assets/image/product/top-selling.png");
+("./assets/image/product/190x64.webp");
+("./assets/image/product/super-deal.png");

@@ -88,7 +88,7 @@ function renderProducts() {
             <div class="sold">
               <span>${item.first_sold}</span>
               <img src="./assets/image/product/48x48.png" alt="" />
-              <span>${item.next_sold}</span>
+              <span class="next-sold">${item.next_sold}</span>
             </div>
 
             <div class="discription">${item.discription}</div>
@@ -118,7 +118,7 @@ function renderProducts() {
                   <div class="sold">
                     <span>${item.first_sold}</span>
                     <img src="./assets/image/product/48x48.png" alt="" />
-                    <span>${item.next_sold}</span>
+                    <span class="next-sold">${item.next_sold}</span>
                   </div>
 
                   <div class="discription">${item.discription}</div>
@@ -150,7 +150,7 @@ function renderProducts() {
                   <div class="sold">
                     <span>${item.first_sold}</span>
                     <img src="./assets/image/product/48x48.png" alt="" />
-                    <span>${item.next_sold}</span>
+                    <span class="next-sold">${item.next_sold}</span>
                   </div>
 
                   <div class="discription">${item.discription}</div>
@@ -185,7 +185,7 @@ function renderProducts() {
                   <div class="sold">
                     <span>${item.first_sold}</span>
                     <img src="./assets/image/product/48x48.png" alt="" />
-                    <span>${item.next_sold}</span>
+                    <span class="next-sold">${item.next_sold}</span>
                   </div>
 
                   <div class="discription">${item.discription}</div>
