@@ -6,3 +6,98 @@
   font-size: 24px;
   text-align: center;
 }
+
+.more-to-love a {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.content-item {
+  width: 190px;
+  height: 330px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.content-item:hover {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12);
+}
+
+.content-item img {
+  width: 100%;
+}
+
+.content-img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product-item {
+  padding: 5px;
+}
+
+.product-item .item-price {
+  display: flex;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.sale-off {
+  font-size: 14px;
+  color: red;
+  margin-bottom: 5px;
+}
+
+.sold {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+}
+
+.sold img {
+  width: 11px;
+  height: 11px;
+}
+
+.discription {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+}
+
+.shipping {
+  font-size: 16px;
+  color: rgb(0, 153, 102);
+}
+
+.after-price {
+  font-size: 20px;
+  color: red;
+  margin-right: 10px;
+}
+
+.befor-price {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.choice {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.choice img {
+  width: 54px;
+  height: 15px;
+}
