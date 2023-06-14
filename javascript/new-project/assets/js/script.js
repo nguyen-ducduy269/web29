@@ -64,21 +64,3 @@ function summerSale() {
 }
 
 summerSale();
-
-const url =
-  "https://aliexpress-datahub.p.rapidapi.com/item_detail_4?itemId=4000960538194";
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "3b93defb0cmshabc28385acdd9a3p1ca3f9jsn299b31f12dc1",
-    "X-RapidAPI-Host": "aliexpress-datahub.p.rapidapi.com",
-  },
-};
-
-try {
-  const response = await fetch(url, options);
-  const result = await response.text();
-  console.log(result);
-} catch (error) {
-  console.error(error);
-}
