@@ -20,6 +20,7 @@ header {
   padding-top: 30px;
   position: fixed;
   z-index: 10;
+  border-bottom: 5px solid #00000036;
 }
 
 .header {

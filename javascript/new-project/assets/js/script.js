@@ -69,7 +69,17 @@ function renderProducts() {
   const content = document.querySelector(".content");
   products.map((item) => {
     const contentA = document.createElement("a");
-    contentA.setAttribute("href", "");
+    contentA.setAttribute("href", "./product.html");
+
+    contentA.onclick = function () {
+      const product = {
+        image: item.image,
+        price: item.price,
+        description: item.discription,
+      };
+
+      localStorage.setItem("product", JSON.stringify(product));
+    };
 
     if (item.sale_off == null && item.choice == null) {
       contentA.innerHTML += `
