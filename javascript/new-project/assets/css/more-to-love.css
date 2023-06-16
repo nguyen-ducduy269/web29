@@ -108,13 +108,19 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #808080ad;
   z-index: 7;
   display: none;
+  background-color: #808080ad;
 }
 
 .product-active {
   display: block;
+}
+
+.button-active {
+  background-color: #ffe6e7;
+  color: red;
+  border: none;
 }
 
 .main-content {

@@ -194,18 +194,69 @@ function renderProducts() {
 }
 renderProducts();
 
-const detailItem = document.querySelectorAll(".content-item");
-const detailProduct = document.querySelector(".details-product");
-detailItem.forEach((item) => {
-  item.addEventListener("click", () => {
-    const detailProduct = document.querySelector(".details-product");
-    detailProduct.classList.add("product-active");
+function toggleItem() {
+  const detailItem = document.querySelectorAll(".content-item");
+  detailItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      const detailProduct = document.querySelector(".details-product");
+      detailProduct.classList.add("product-active");
+    });
   });
-});
 
-detailProduct.addEventListener("click", () => {
-  detailProduct.classList.remove("product-active");
-});
+  const closeButton = document.querySelector(".close-site");
+  closeButton.addEventListener("click", () => {
+    const detailProduct = document.querySelector(".details-product");
+    detailProduct.classList.remove("product-active");
+  });
+}
+toggleItem();
 
-function openDetailItem() {}
-openDetailItem();
+function changeSizeRing() {
+  const buttonRing = document.querySelectorAll(".button-ring button");
+  buttonRing.forEach((item) => {
+    item.addEventListener("click", () => {
+      const sizeRingNumber = document.querySelector(".size-ring h3");
+      sizeRingNumber.innerHTML = "Ring size: " + item.value;
+
+      const value7 = document.querySelector(".value-7");
+      const value8 = document.querySelector(".value-8");
+      const value9 = document.querySelector(".value-9");
+
+      value7.addEventListener("click", () => {
+        value7.classList.add("button-active");
+        value8.classList.remove("button-active");
+        value9.classList.remove("button-active");
+      });
+
+      value8.addEventListener("click", () => {
+        value7.classList.remove("button-active");
+        value8.classList.add("button-active");
+        value9.classList.remove("button-active");
+      });
+
+      value9.addEventListener("click", () => {
+        value7.classList.remove("button-active");
+        value8.classList.remove("button-active");
+        value9.classList.add("button-active");
+      });
+    });
+  });
+}
+changeSizeRing();
+
+function changImage() {
+  const colorImage = document.querySelectorAll(".color img");
+  const imgContent = document.querySelector(".image img");
+  products.map((product) => {
+    colorImage.forEach((item) => {
+      item.addEventListener("click", () => {
+        for (let i = 0; i < product.more_details.length; i++) {
+          imgContent.setAttribute("src", product.more_details[i]);
+          colorImage.classList.add("active");
+        }
+      });
+    });
+  });
+}
+
+changImage();
