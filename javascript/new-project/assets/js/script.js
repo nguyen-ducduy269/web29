@@ -68,22 +68,11 @@ summerSale();
 function renderProducts() {
   const content = document.querySelector(".content");
   products.map((item) => {
-    const contentA = document.createElement("a");
-    contentA.setAttribute("href", "./product.html");
-
-    contentA.onclick = function () {
-      const product = {
-        image: item.image,
-        price: item.price,
-        description: item.discription,
-      };
-
-      localStorage.setItem("product", JSON.stringify(product));
-    };
+    const contentItem = document.createElement("div");
+    contentItem.classList.add("content-item");
 
     if (item.sale_off == null && item.choice == null) {
-      contentA.innerHTML += `
-        <div class="content-item">
+      contentItem.innerHTML += `
           <img
             class="content-img"
             src=${item.image}
@@ -105,13 +94,11 @@ function renderProducts() {
 
             <div class="shipping">Free shipping</div>
           </div>
-        </div>
       `;
-      content.appendChild(contentA);
+      content.appendChild(contentItem);
     }
     if (item.sale_off && item.choice == null) {
-      contentA.innerHTML += `
-            <div class="content-item">
+      contentItem.innerHTML += `
                 <img
                   class="content-img"
                   src=${item.image}
@@ -135,12 +122,11 @@ function renderProducts() {
 
                   <div class="shipping">Free shipping</div>
                 </div>
-              </div>`;
-      content.appendChild(contentA);
+                `;
+      content.appendChild(contentItem);
     }
     if (item.sale_off == null && item.choice) {
-      contentA.innerHTML += `
-            <div class="content-item">
+      contentItem.innerHTML += `
                 <img
                   class="content-img"
                   src=${item.image}
@@ -167,12 +153,11 @@ function renderProducts() {
 
                   <div class="shipping">Free shipping</div>
                 </div>
-              </div>`;
-      content.appendChild(contentA);
+                `;
+      content.appendChild(contentItem);
     }
     if (item.sale_off && item.choice) {
-      contentA.innerHTML += `
-            <div class="content-item">
+      contentItem.innerHTML += `
                 <img
                   class="content-img"
                   src=${item.image}
@@ -202,9 +187,25 @@ function renderProducts() {
 
                   <div class="shipping">Free shipping</div>
                 </div>
-              </div>`;
-      content.appendChild(contentA);
+                `;
+      content.appendChild(contentItem);
     }
   });
 }
 renderProducts();
+
+const detailItem = document.querySelectorAll(".content-item");
+const detailProduct = document.querySelector(".details-product");
+detailItem.forEach((item) => {
+  item.addEventListener("click", () => {
+    const detailProduct = document.querySelector(".details-product");
+    detailProduct.classList.add("product-active");
+  });
+});
+
+detailProduct.addEventListener("click", () => {
+  detailProduct.classList.remove("product-active");
+});
+
+function openDetailItem() {}
+openDetailItem();
