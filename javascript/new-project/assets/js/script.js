@@ -65,6 +65,20 @@ function summerSale() {
 
 summerSale();
 
+const person = {
+  name: "A",
+};
+
+const person2 = person;
+
+person2.name = "N";
+
+console.log("person", person);
+
+const cliked = () => {
+  console.log("cliced");
+};
+
 function renderProducts() {
   const content = document.querySelector(".content");
   products.map((item) => {
@@ -93,6 +107,14 @@ function renderProducts() {
             <div class="discription">${item.discription}</div>
 
             <div class="shipping">Free shipping</div>
+
+            <div class="content-button">
+              <button class="like">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+
+              <button class="add-to-cart" id = ${item.id} >Add To Cart</button>
+            </div>
           </div>
       `;
       content.appendChild(contentItem);
@@ -121,6 +143,14 @@ function renderProducts() {
                   <div class="discription">${item.discription}</div>
 
                   <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="like">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart</button>
+                  </div>
                 </div>
                 `;
       content.appendChild(contentItem);
@@ -152,6 +182,14 @@ function renderProducts() {
                   <div class="discription">${item.discription}</div>
 
                   <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="like">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart</button>
+                  </div>
                 </div>
                 `;
       content.appendChild(contentItem);
@@ -186,6 +224,14 @@ function renderProducts() {
                   <div class="discription">${item.discription}</div>
 
                   <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="like">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart</button>
+                  </div>
                 </div>
                 `;
       content.appendChild(contentItem);
@@ -194,69 +240,20 @@ function renderProducts() {
 }
 renderProducts();
 
-function toggleItem() {
-  const detailItem = document.querySelectorAll(".content-item");
-  detailItem.forEach((item) => {
-    item.addEventListener("click", () => {
-      const detailProduct = document.querySelector(".details-product");
-      detailProduct.classList.add("product-active");
-    });
-  });
+const btns = document.querySelectorAll(".add-to-cart");
+const btn = Array.prototype.slice.call(btns);
 
-  const closeButton = document.querySelector(".close-site");
-  closeButton.addEventListener("click", () => {
-    const detailProduct = document.querySelector(".details-product");
-    detailProduct.classList.remove("product-active");
-  });
-}
-toggleItem();
+let array = [];
+btn.forEach((b) =>
+  b.addEventListener("click", () => {
+    const idProduct = b.getAttribute("id");
+    const productFind = products.find((el) => el.id === +idProduct);
 
-function changeSizeRing() {
-  const buttonRing = document.querySelectorAll(".button-ring button");
-  buttonRing.forEach((item) => {
-    item.addEventListener("click", () => {
-      const sizeRingNumber = document.querySelector(".size-ring h3");
-      sizeRingNumber.innerHTML = "Ring size: " + item.value;
+    console.log(idProduct);
+    console.log(productFind);
 
-      const value7 = document.querySelector(".value-7");
-      const value8 = document.querySelector(".value-8");
-      const value9 = document.querySelector(".value-9");
-
-      value7.addEventListener("click", () => {
-        value7.classList.add("button-active");
-        value8.classList.remove("button-active");
-        value9.classList.remove("button-active");
-      });
-
-      value8.addEventListener("click", () => {
-        value7.classList.remove("button-active");
-        value8.classList.add("button-active");
-        value9.classList.remove("button-active");
-      });
-
-      value9.addEventListener("click", () => {
-        value7.classList.remove("button-active");
-        value8.classList.remove("button-active");
-        value9.classList.add("button-active");
-      });
-    });
-  });
-}
-changeSizeRing();
-
-function changImage() {
-  const colorImage = document.querySelectorAll(".color img");
-  const imgContent = document.querySelector(".image img");
-  products.map((product) => {
-    colorImage.forEach((item) => {
-      item.addEventListener("click", () => {
-        for (let i = 0; i < product.more_details.length; i++) {
-          imgContent.setAttribute("src", product.more_details[i]);
-          colorImage.classList.add("active");
-        }
-      });
-    });
-  });
-}
-
-changImage();
+    array.push(productFind);
+    localStorage.setItem("array", JSON.stringify(array));
+  })
+);
+console.log(products);

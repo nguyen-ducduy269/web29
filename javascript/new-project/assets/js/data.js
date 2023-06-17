@@ -139,6 +139,7 @@ const sale = [
 const products = [
   // không có sale_off không có choice
   {
+    id: 1,
     image:
       "./assets/image/product/Luminous-Dragon-Rings-Gothic-Adjustable-Metal-Resin-Rings-Unique-Men-Women-Jewellery-Vintage-Halloween-Anillos-Accessorie.jpg_220x220xz.jpg_.webp",
     price: 22.09,
@@ -146,15 +147,11 @@ const products = [
     next_sold: "4.4",
     discription:
       "Luminous Dragon Rings Gothic Adjustable Metal Resin Rings Unique Men Women Jewellery Vintage Halloween Anillos Accessorie Gifts",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Hceece6fa9c794ce491eb8f6ef3bca9ceK/New-Luminous-Dragons-Ring-for-Men-Noctilucent-Night-Light-Glowing-in-the-Dark-Jewelry-SCI88.jpg_640x640.jpghttps://ae01.alicdn.com/kf/Hceece6fa9c794ce491eb8f6ef3bca9ceK/New-Luminous-Dragons-Ring-for-Men-Noctilucent-Night-Light-Glowing-in-the-Dark-Jewelry-SCI88.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/H64977eb3300e43f09e793332ce6404f4i/New-Luminous-Dragons-Ring-for-Men-Noctilucent-Night-Light-Glowing-in-the-Dark-Jewelry-SCI88.jpg_.webp",
-      "https://ae01.alicdn.com/kf/Hae93563050c44503b9dd9fb8a6554c75K/New-Luminous-Dragons-Ring-for-Men-Noctilucent-Night-Light-Glowing-in-the-Dark-Jewelry-SCI88.jpg_640x640.jpg",
-    ],
     type: "ring",
   },
   // chỉ có sale_off
   {
+    id: 2,
     image:
       "./assets/image/product/Original-Pro6-TWS-Touch-Control-Wireless-Bluetooth-5-0-Headphones-Sport-Earbuds-Music-Headset-For-iphone.jpg_220x220xz.jpg_.webp",
     price: 70.968,
@@ -163,16 +160,10 @@ const products = [
     next_sold: "4.3",
     discription:
       "Original Pro6 TWS Touch Control Wireless Bluetooth 5.0 Headphones Sport Earbuds Music Headset For iphone Xiaomi phones Earphones",
-    more_details: [
-      "./assets/image/product/Original-Pro6-TWS-Touch-Control-Wireless-Bluetooth-5-0-Headphones-Sport-Earbuds-Music-Headset-For-iphone.jpg_220x220xz.jpg_.webp",
-      "https://ae01.alicdn.com/kf/S6ee8ada04f004faf8ebf20503a426fa28/Original-Pro6-TWS-Touch-Control-Wireless-Bluetooth-5-0-Headphones-Sport-Earbuds-Music-Headset-For-iphone.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/S4fc249085f374942b9e72ce2d63b44efY/Original-Pro6-TWS-Touch-Control-Wireless-Bluetooth-5-0-Headphones-Sport-Earbuds-Music-Headset-For-iphone.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/S051f27215c6243d3b883baa0245f6fadc/Original-Pro6-TWS-Touch-Control-Wireless-Bluetooth-5-0-Headphones-Sport-Earbuds-Music-Headset-For-iphone.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/S260d41332a0d42afb3e8db17c171e0e7Q/Original-Pro6-TWS-Touch-Control-Wireless-Bluetooth-5-0-Headphones-Sport-Earbuds-Music-Headset-For-iphone.jpg_640x640.jpg",
-    ],
   },
   // chỉ có choice
   {
+    id: 3,
     image:
       "./assets/image/product/Luxury-Fashion-Mens-Watches-Stainless-Steel-Quartz-Wristwatch-Calendar-Luminous-Clock-Men-Business-Casual-Watch-Reloj.jpg_220x220xz.jpg_.webp",
     after_price: 46.764,
@@ -185,12 +176,10 @@ const products = [
     next_sold: "4.0",
     discription:
       "Luxury Fashion Mens Watches Stainless Steel Quartz Wristwatch Calendar Luminous Clock Men Business Casual Watch Reloj Hombre",
-    more_details: [
-      "./assets/image/product/Luxury-Fashion-Mens-Watches-Stainless-Steel-Quartz-Wristwatch-Calendar-Luminous-Clock-Men-Business-Casual-Watch-Reloj.jpg_220x220xz.jpg_.webp",
-    ],
   },
   // có cả 2
   {
+    id: 4,
     image:
       "./assets/image/product/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_220x220xz.jpg_.webp",
     price: 57.574,
@@ -200,17 +189,11 @@ const products = [
     next_sold: "4.7",
     discription:
       "2023 New Rings For Women 100% 925 Sterling Silver Star Moon Colorful Zircon Rings Fine Wedding Engagement Birthday Jewelry Gifts",
-    more_details: [
-      "./assets/image/product/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_220x220xz.jpg_.webp",
-      "https://ae01.alicdn.com/kf/S2fa95552690a4762b88762dfbc318019v/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/Sb336ee9455b24777bbac7dc7c01a6bb36/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/S033d5da4b2d24e5d83466973133fb2aew/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_.webp",
-      "https://ae01.alicdn.com/kf/Sb2e3b4e1b6f74e6d9795280ad4cdb5f2T/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_.webp",
-    ],
     type: "ring",
   },
 
   {
+    id: 5,
     image:
       "https://ae01.alicdn.com/kf/Sf9633bfdb5ec4eeba9d1666dae729f7cA/TWS-Pro60-Fone-Bluetooth-5-0-Earphones-Wireless-Headphones-HiFi-Stero-Headset-Noise-Reduction-Sports-Earbuds.jpg_220x220xz.jpg_.webp",
     price: 98.463,
@@ -218,13 +201,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "TWS Pro60 Fone Bluetooth 5.0 Earphones Wireless Headphones HiFi Stero Headset Noise Reduction Sports Earbuds with Mic for Phone",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Sf9633bfdb5ec4eeba9d1666dae729f7cA/TWS-Pro60-Fone-Bluetooth-5-0-Earphones-Wireless-Headphones-HiFi-Stero-Headset-Noise-Reduction-Sports-Earbuds.jpg_220x220xz.jpg_.webp",
-      "https://ae01.alicdn.com/kf/Sfcc140d87cbe41309049941fcf629dfah/TWS-Pro60-Fone-Bluetooth-5-0-Earphones-Wireless-Headphones-HiFi-Stero-Headset-Noise-Reduction-Sports-Earbuds.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/S90588b1186be4950b3addf7d92e545aby/TWS-Pro60-Fone-Bluetooth-5-0-Earphones-Wireless-Headphones-HiFi-Stero-Headset-Noise-Reduction-Sports-Earbuds.jpg_640x640.jpg",
-    ],
   },
   {
+    id: 6,
     image:
       "https://ae01.alicdn.com/kf/S3a9f556948f1484f822a8fb53ea4b6aan/TWS-E6S-Bluetooth-Earphones-Wireless-bluetooth-headset-Noise-Cancelling-Headsets-With-Microphone-Headphones-For-Xiaomi-Redmi.jpg_220x220xz.jpg_.webp",
     price: 66.269,
@@ -233,14 +212,9 @@ const products = [
     next_sold: "4.4",
     discription:
       "TWS E6S Bluetooth Earphones Wireless bluetooth headset Noise Cancelling Headsets With Microphone Headphones For Xiaomi Redmi",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S3a9f556948f1484f822a8fb53ea4b6aan/TWS-E6S-Bluetooth-Earphones-Wireless-bluetooth-headset-Noise-Cancelling-Headsets-With-Microphone-Headphones-For-Xiaomi-Redmi.jpg_220x220xz.jpg_.webp",
-      "https://ae01.alicdn.com/kf/S8716339137d44867a0e63a29a6fe4d07w/TWS-E6S-Bluetooth-Earphones-Wireless-bluetooth-headset-Noise-Cancelling-Headsets-With-Microphone-Headphones-For-Xiaomi-Redmi.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/Sb4869149d956479092d2370238422bd6j/TWS-E6S-Bluetooth-Earphones-Wireless-bluetooth-headset-Noise-Cancelling-Headsets-With-Microphone-Headphones-For-Xiaomi-Redmi.jpg_640x640.jpg",
-      "https://ae01.alicdn.com/kf/S5fd1d22496614884b5550db4102f2986o/TWS-E6S-Bluetooth-Earphones-Wireless-bluetooth-headset-Noise-Cancelling-Headsets-With-Microphone-Headphones-For-Xiaomi-Redmi.jpg_640x640.jpg",
-    ],
   },
   {
+    id: 7,
     image:
       "https://ae01.alicdn.com/kf/S5dd07f6fcfcd409d98b24bcf2ea2a5bdT/Fashion-Mens-Watches-Luxury-Stainless-Steel-Quartz-Wristwatch-Calendar-Luminous-Clock-Men-Business-Casual-Watch-Reloj.jpg_220x220xz.jpg_.webp",
     after_price: 80.603,
@@ -253,11 +227,9 @@ const products = [
     next_sold: "4.4",
     discription:
       "Fashion Mens Watches Luxury Stainless Steel Quartz Wristwatch Calendar Luminous Clock Men Business Casual Watch Reloj Hombre",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S5dd07f6fcfcd409d98b24bcf2ea2a5bdT/Fashion-Mens-Watches-Luxury-Stainless-Steel-Quartz-Wristwatch-Calendar-Luminous-Clock-Men-Business-Casual-Watch-Reloj.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 8,
     image:
       "https://ae01.alicdn.com/kf/S7aa25fb0590b47f387fa10d8c34874e0o/Men-Watch-Sports-Quartz-Watches-Men-Waterproof-Chronograph-Wristwatch-Mens-Military-Clock-Man-Relogio-Masculino.jpg_220x220xz.jpg_.webp",
     after_price: 253.935,
@@ -270,11 +242,9 @@ const products = [
     next_sold: "4.6",
     discription:
       "Men Watch Sports Quartz Watches Men Waterproof Chronograph Wristwatch Mens Military Clock Man Relogio Masculino",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S7aa25fb0590b47f387fa10d8c34874e0o/Men-Watch-Sports-Quartz-Watches-Men-Waterproof-Chronograph-Wristwatch-Mens-Military-Clock-Man-Relogio-Masculino.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 9,
     image:
       "https://ae01.alicdn.com/kf/S0eb22b5e0e1c47a39fd0951fc9b82712j/TWS-Bluetooth-Earphones-3500mAh-Charging-Box-Wireless-Headphone-Fone-Stereo-Wireless-Headset-with-Mic-Sports-Waterproof.jpg_220x220xz.jpg_.webp",
     price: 46.764,
@@ -282,11 +252,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "TWS Bluetooth Earphones 3500mAh Charging Box Wireless Headphone Fone Stereo Wireless Headset with Mic Sports Waterproof Earbuds",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S0eb22b5e0e1c47a39fd0951fc9b82712j/TWS-Bluetooth-Earphones-3500mAh-Charging-Box-Wireless-Headphone-Fone-Stereo-Wireless-Headset-with-Mic-Sports-Waterproof.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 10,
     image:
       "https://ae01.alicdn.com/kf/S388da9fc1f044ad39fae434edd8421d83/New-2023-Usb-3-0-Pendrive-2TB-High-Speed-Pen-Drive-16TB-Metal-Cle-Usb-Flash.jpg_220x220xz.jpg_.webp",
     after_price: 30.475,
@@ -299,11 +267,9 @@ const products = [
     next_sold: "4.4",
     discription:
       "New 2023 Usb 3.0 Pendrive 2TB High Speed Pen Drive 16TB Metal Cle Usb Flash Drive 4TB 8TB Portable SSD Memoria Usb Free Shipping",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S388da9fc1f044ad39fae434edd8421d83/New-2023-Usb-3-0-Pendrive-2TB-High-Speed-Pen-Drive-16TB-Metal-Cle-Usb-Flash.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 11,
     image:
       "https://ae01.alicdn.com/kf/S0c5659e1d52e465c9235c765491343efy/E7S-TWS-Wireless-Headphones-Bluetooth-earphone-Control-Sport-Headset-Waterproof-Microphone-Music-Earphone-Work-On-All.jpg_220x220xz.jpg_.webp",
     price: 68.853,
@@ -318,6 +284,7 @@ const products = [
     ],
   },
   {
+    id: 12,
     image:
       "https://ae01.alicdn.com/kf/S443b3605f110411ab81e1edb0cc2b79e2/2023-USB-Electric-Lighters-Windproof-USB-Rechargeable-Touch-Windproof-Cigarette-Accessories-Electric-Lighter-Portable-e-ziggarte.jpg_220x220xz.jpg_.webp",
     after_price: 34.779,
@@ -330,11 +297,9 @@ const products = [
     next_sold: "4.7",
     discription:
       "2023 USB Electric Lighters Windproof USB Rechargeable Touch Windproof Cigarette Accessories Electric Lighter Portable e ziggarte",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S443b3605f110411ab81e1edb0cc2b79e2/2023-USB-Electric-Lighters-Windproof-USB-Rechargeable-Touch-Windproof-Cigarette-Accessories-Electric-Lighter-Portable-e-ziggarte.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 13,
     image:
       "https://ae01.alicdn.com/kf/Sa8eaedc39d364a468a122eae8e66c516Q/Men-Military-Watch-Digital-50m-Waterproof-Wristwatch-LED-Quartz-Clock-Sport-Watch-Male-Big-Watches-Men.jpg_220x220xz.jpg_.webp",
     after_price: 159.091,
@@ -347,11 +312,9 @@ const products = [
     next_sold: "4.8",
     discription:
       "Men Military Watch Digital 50m Waterproof Wristwatch LED Quartz Clock Sport Watch Male Big Watches Men Relogios Masculino",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Sa8eaedc39d364a468a122eae8e66c516Q/Men-Military-Watch-Digital-50m-Waterproof-Wristwatch-LED-Quartz-Clock-Sport-Watch-Male-Big-Watches-Men.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 14,
     image:
       "https://ae01.alicdn.com/kf/S16956f3408594b6db3aeb6759379fde4k/Wireless-Headphones-5-1-Bluetooth-Earphones-HIFI-Lossless-Sound-Headsets-Sports-Mini-TWS-Earbuds-For-iphone.jpg_220x220xz.jpg_.webp",
     price: 253,
@@ -359,11 +322,9 @@ const products = [
     next_sold: "4.4",
     discription:
       "Wireless Headphones 5.1 Bluetooth Earphones HIFI Lossless Sound Headsets Sports Mini TWS Earbuds For iphone XS Max Xiaomi Phones",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S16956f3408594b6db3aeb6759379fde4k/Wireless-Headphones-5-1-Bluetooth-Earphones-HIFI-Lossless-Sound-Headsets-Sports-Mini-TWS-Earbuds-For-iphone.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 15,
     image:
       "https://ae01.alicdn.com/kf/S25f8ddcc017549f1ad928888487500edG/Huawei-General-Bluetooth-Headphones-Tws-Wireless-Earphone-Noise-Reduction-Waterproof-Low-Latency-9d-Hifi-Stereo-Long.jpg_220x220xz.jpg_.webp",
     price: 414.135,
@@ -371,11 +332,9 @@ const products = [
     next_sold: "3.0",
     discription:
       "Huawei General Bluetooth Headphones Tws Wireless Earphone Noise Reduction Waterproof Low Latency 9d Hifi Stereo Long Endurance",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S25f8ddcc017549f1ad928888487500edG/Huawei-General-Bluetooth-Headphones-Tws-Wireless-Earphone-Noise-Reduction-Waterproof-Low-Latency-9d-Hifi-Stereo-Long.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 16,
     image:
       "https://ae01.alicdn.com/kf/S624f58ebe30548b18c4ed9e3b078ec5aI/2pcs-Set-Fashion-Mens-Sports-Watches-Man-Business-Quartz-Wristwatch-Luxury-Men-Casual-Clock-Watch-Relogio.jpg_220x220xz.jpg_.webp",
     after_price: 53.814,
@@ -388,11 +347,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "2pcs Set Fashion Mens Sports Watches Man Business Quartz Wristwatch Luxury Men Casual Clock Watch Relogio Masculino",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S624f58ebe30548b18c4ed9e3b078ec5aI/2pcs-Set-Fashion-Mens-Sports-Watches-Man-Business-Quartz-Wristwatch-Luxury-Men-Casual-Clock-Watch-Relogio.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 17,
     image:
       "https://ae01.alicdn.com/kf/S8c8de857462b4a929767114bc86f1753B/Drone-GPS-5G-6K-8K-HD-Drones-Professional-Aerial-Photography-Wifi-FPV-Obstacle-Avoidance-Folding-Quadcopter.jpg_220x220xz.jpg_.webp",
     price: 128.82,
@@ -401,11 +358,9 @@ const products = [
     next_sold: "4.1",
     discription:
       "Drone GPS 5G 6K 8K HD Drones Professional Aerial Photography Wifi FPV Obstacle Avoidance Folding Quadcopter Rc Distance 3000M",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S8c8de857462b4a929767114bc86f1753B/Drone-GPS-5G-6K-8K-HD-Drones-Professional-Aerial-Photography-Wifi-FPV-Obstacle-Avoidance-Folding-Quadcopter.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 18,
     image:
       "https://ae01.alicdn.com/kf/Sc06a357efdfd4db18229f4de41ab97c8N/Luxury-Skull-Ring-for-Women-Men-Punk-Hip-Hop-Hollow-Skeleton-Adjustable-Opening-Rings-Halloween-Party.jpg_220x220xz.jpg_.webp",
     price: 37.129,
@@ -414,11 +369,9 @@ const products = [
     next_sold: "1.2",
     discription:
       "Luxury Skull Ring for Women Men Punk Hip Hop Hollow Skeleton Adjustable Opening Rings Halloween Party Jewelry Accessories Gift",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Sc06a357efdfd4db18229f4de41ab97c8N/Luxury-Skull-Ring-for-Women-Men-Punk-Hip-Hop-Hollow-Skeleton-Adjustable-Opening-Rings-Halloween-Party.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 19,
     image:
       "https://ae01.alicdn.com/kf/S1b267460fc174fac944b5ea6cf3b2b755/2022-New-Fashion-Female-Shoulder-Bag-Rhombus-Embroidered-Solid-Color-Chain-Women-Shoulder-Crossbody-Casual-Trendy.jpg_220x220xz.jpg_.webp",
     after_price: 53.344,
@@ -431,11 +384,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "2022 New Fashion Female Shoulder Bag Rhombus Embroidered Solid Color Chain Women Shoulder Crossbody Casual Trendy Phone Bag",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S1b267460fc174fac944b5ea6cf3b2b755/2022-New-Fashion-Female-Shoulder-Bag-Rhombus-Embroidered-Solid-Color-Chain-Women-Shoulder-Crossbody-Casual-Trendy.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 20,
     image:
       "https://ae01.alicdn.com/kf/S3a11b85341d448ffa339d504553b5b3eB/Men-s-Wallet-Leather-Billfold-Slim-Hipster-Cowhide-Credit-Card-ID-Holders-Inserts-Coin-Purses-Luxury.jpg_220x220xz.jpg_.webp",
     after_price: 71.673,
@@ -447,11 +398,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "Men's Wallet Leather Billfold Slim Hipster Cowhide Credit Card/ID Holders Inserts Coin Purses Luxury Business Foldable Wallet",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S3a11b85341d448ffa339d504553b5b3eB/Men-s-Wallet-Leather-Billfold-Slim-Hipster-Cowhide-Credit-Card-ID-Holders-Inserts-Coin-Purses-Luxury.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 21,
     image:
       "https://ae01.alicdn.com/kf/S9388e27c3a4445d492de00bea0519e12K/2023-Dragon-Ball-Z-Sports-Shorts-Cartoon-New-Men-s-Summer-Shorts-Anime-T-shirts-Oversized.jpg_220x220xz.jpg_.webp",
     price: 54.519,
@@ -460,11 +409,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "2023 Dragon Ball Z Sports Shorts Cartoon New Men's Summer Shorts Anime T-shirts Oversized Y2k Goku Vegeta Man Shorts Fashion",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S9388e27c3a4445d492de00bea0519e12K/2023-Dragon-Ball-Z-Sports-Shorts-Cartoon-New-Men-s-Summer-Shorts-Anime-T-shirts-Oversized.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 22,
     image:
       "https://ae01.alicdn.com/kf/S63bc74e3da9d4dc5befcee58f1fee22c1/Quartz-Watch-Men-Business-Fashion-Fake-Three-Eye-Six-Pin-Calendar-Watch-For-Men-Mesh-Belt.jpg_220x220xz.jpg_.webp",
     after_price: 93.763,
@@ -477,11 +424,9 @@ const products = [
     next_sold: "4.0",
     discription:
       "Quartz Watch Men Business Fashion Fake Three Eye Six Pin Calendar Watch For Men Mesh Belt Men Watch Non Mechanical Boy",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S63bc74e3da9d4dc5befcee58f1fee22c1/Quartz-Watch-Men-Business-Fashion-Fake-Three-Eye-Six-Pin-Calendar-Watch-For-Men-Mesh-Belt.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 23,
     image:
       "https://ae01.alicdn.com/kf/Sfb9d9c7461ef4d099357187e02749521B/Electric-Water-Storage-Gun-Pistol-Shooting-Toy-Portable-Children-Summer-Beach-Outdoor-Fight-Fantasy-Toys-for.jpg_220x220xz.jpg_.webp",
     after_price: 161.206,
@@ -494,11 +439,9 @@ const products = [
     next_sold: 0,
     discription:
       "Electric Water Storage Gun Pistol Shooting Toy Portable Children Summer Beach Outdoor Fight Fantasy Toys for Boys Kids Game",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Sfb9d9c7461ef4d099357187e02749521B/Electric-Water-Storage-Gun-Pistol-Shooting-Toy-Portable-Children-Summer-Beach-Outdoor-Fight-Fantasy-Toys-for.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 24,
     image:
       "https://ae01.alicdn.com/kf/Sa81cd0c25ed647778b27db1c51435f9ca/Starry-Collection-Charms-Beads-Women-925-Silver-Sun-Stars-Moon-Dangle-Pendants-Fit-Original-Pandora-Jewelry.jpg_220x220xz.jpg_.webp",
     price: 81.476,
@@ -507,11 +450,9 @@ const products = [
     next_sold: 0,
     discription:
       "Starry Collection Charms Beads Women 925 Silver Sun Stars Moon Dangle Pendants Fit Original Pandora Jewelry Bracelet Necklace",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Sa81cd0c25ed647778b27db1c51435f9ca/Starry-Collection-Charms-Beads-Women-925-Silver-Sun-Stars-Moon-Dangle-Pendants-Fit-Original-Pandora-Jewelry.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 25,
     image:
       "https://ae01.alicdn.com/kf/Se921fb855b8f454e8a64f4d86c4353ffL/SMAEL-New-Sport-Watch-Mens-50M-Waterproof-Clock-Alarm-Reloj-Hombre-1545D-Dual-Display-Wristwatch-Quartz.jpg_220x220xz.jpg_.webp",
     after_price: 140.057,
@@ -524,11 +465,9 @@ const products = [
     next_sold: "4.8",
     discription:
       "SMAEL New Sport Watch Mens 50M Waterproof Clock Alarm Reloj Hombre 1545D Dual Display Wristwatch Quartz Military Watches For Men",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Se921fb855b8f454e8a64f4d86c4353ffL/SMAEL-New-Sport-Watch-Mens-50M-Waterproof-Clock-Alarm-Reloj-Hombre-1545D-Dual-Display-Wristwatch-Quartz.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 26,
     image:
       "https://ae01.alicdn.com/kf/H35a86aa144784f6fab7f372ca69ba109i/Fashion-Letters-Embroidery-Women-Men-Baseball-Caps-Female-Male-Sport-Visors-Snapback-Cap-Sun-Hat-For.jpg_220x220xz.jpg_.webp",
     after_price: 88.123,
@@ -541,11 +480,9 @@ const products = [
     next_sold: "4.6",
     discription:
       "Fashion Letters Embroidery  Women Men Baseball Caps Female Male Sport Visors Snapback Cap Sun Hat For Women Men",
-    more_details: [
-      "https://ae01.alicdn.com/kf/H35a86aa144784f6fab7f372ca69ba109i/Fashion-Letters-Embroidery-Women-Men-Baseball-Caps-Female-Male-Sport-Visors-Snapback-Cap-Sun-Hat-For.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 27,
     image:
       "https://ae01.alicdn.com/kf/S3c0ea91fbee846b79af82217932ebdbbt/AOMEISHA-Retinol-Lifting-Firming-Cream-Remove-Wrinkle-Anti-Aging-Fade-Fine-Lines-Face-Whitening-Brighten-Skin.png_220x220xz.png_.webp",
     price: 280.505,
@@ -554,11 +491,9 @@ const products = [
     next_sold: "5",
     discription:
       "AOMEISHA Retinol Lifting Firming Cream Remove Wrinkle Anti-Aging Fade Fine Lines Face Whitening Brighten Skin Beauty Health Care",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S3c0ea91fbee846b79af82217932ebdbbt/AOMEISHA-Retinol-Lifting-Firming-Cream-Remove-Wrinkle-Anti-Aging-Fade-Fine-Lines-Face-Whitening-Brighten-Skin.png_220x220xz.png_.webp",
-    ],
   },
   {
+    id: 28,
     image:
       "https://ae01.alicdn.com/kf/S95124749f6e444519179ac91cb7d34dbJ/Creative-Frameless-DIY-Wall-Clock-Wall-Decal-Home-Silent-Clock-Living-Room-Office-Wall-Decoration.jpg_220x220xz.jpg_.webp",
     after_price: 42.534,
@@ -571,11 +506,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "Creative Frameless DIY Wall Clock Wall Decal Home Silent Clock Living Room Office Wall Decoration",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S95124749f6e444519179ac91cb7d34dbJ/Creative-Frameless-DIY-Wall-Clock-Wall-Decal-Home-Silent-Clock-Living-Room-Office-Wall-Decoration.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 29,
     image:
       "https://ae01.alicdn.com/kf/Sc5538f3ba4a34c16a27f5d9ff9b8b230e/Metal-Stripe-Loud-Lighter-Unusual-Lighters-Cigarette-Lighter-Creative-Wheel-Lighter-Butane-Gas-Lighter-Open-Fire.jpg_220x220xz.jpg_.webp",
     price: 129.952,
@@ -583,11 +516,9 @@ const products = [
     next_sold: "4.5",
     discription:
       "Metal Stripe Loud Lighter Unusual Lighters Cigarette Lighter Creative Wheel Lighter Butane Gas Lighter Open Fire Square Lighter",
-    more_details: [
-      "https://ae01.alicdn.com/kf/Sc5538f3ba4a34c16a27f5d9ff9b8b230e/Metal-Stripe-Loud-Lighter-Unusual-Lighters-Cigarette-Lighter-Creative-Wheel-Lighter-Butane-Gas-Lighter-Open-Fire.jpg_220x220xz.jpg_.webp",
-    ],
   },
   {
+    id: 30,
     image:
       "https://ae01.alicdn.com/kf/S36008550e7df48c19c6f28cbc79ca80cz/Men-s-Sneakers-2022-New-Lightweight-Men-Vulcanized-Shoes-Anti-skid-Breathable-Male-Trend-Casual-Shoes.jpg_220x220xz.jpg_.webphttps://ae01.alicdn.com/kf/S36008550e7df48c19c6f28cbc79ca80cz/Men-s-Sneakers-2022-New-Lightweight-Men-Vulcanized-Shoes-Anti-skid-Breathable-Male-Trend-Casual-Shoes.jpg_220x220xz.jpg_.webp",
     price: 232.645,
@@ -597,9 +528,6 @@ const products = [
     next_sold: "4.8",
     discription:
       "Men's Sneakers 2022 New Lightweight Men Vulcanized Shoes Anti-skid Breathable Male Trend Casual Shoes Fashion Men's Sports Shoes",
-    more_details: [
-      "https://ae01.alicdn.com/kf/S36008550e7df48c19c6f28cbc79ca80cz/Men-s-Sneakers-2022-New-Lightweight-Men-Vulcanized-Shoes-Anti-skid-Breathable-Male-Trend-Casual-Shoes.jpg_220x220xz.jpg_.webphttps://ae01.alicdn.com/kf/S36008550e7df48c19c6f28cbc79ca80cz/Men-s-Sneakers-2022-New-Lightweight-Men-Vulcanized-Shoes-Anti-skid-Breathable-Male-Trend-Casual-Shoes.jpg_220x220xz.jpg_.webp",
-    ],
   },
 ];
 export default { clothes, sale, products };
