@@ -130,6 +130,11 @@
   background-color: white;
 }
 
+.content-button .like .active {
+  color: red;
+  border: red;
+}
+
 .content-button .add-to-cart {
   width: 100px;
   height: 30px;

@@ -65,20 +65,6 @@ function summerSale() {
 
 summerSale();
 
-const person = {
-  name: "A",
-};
-
-const person2 = person;
-
-person2.name = "N";
-
-console.log("person", person);
-
-const cliked = () => {
-  console.log("cliced");
-};
-
 function renderProducts() {
   const content = document.querySelector(".content");
   products.map((item) => {
@@ -110,7 +96,7 @@ function renderProducts() {
 
             <div class="content-button">
               <button class="like">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
               </button>
 
               <button class="add-to-cart" id = ${item.id} >Add To Cart</button>
@@ -257,3 +243,11 @@ btn.forEach((b) =>
   })
 );
 console.log(products);
+
+const hearthButton = () => {
+  const hearthBtn = document.querySelector(".like");
+  hearthBtn.addEventListener("click", () => {
+    this.classList.add(".active");
+  });
+};
+hearthButton();
