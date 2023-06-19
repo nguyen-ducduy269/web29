@@ -62,7 +62,6 @@ function summerSale() {
     globalSale.appendChild(firstA);
   });
 }
-
 summerSale();
 
 function renderProducts() {
@@ -95,11 +94,7 @@ function renderProducts() {
             <div class="shipping">Free shipping</div>
 
             <div class="content-button">
-              <button class="like">
-                <i class="fa-solid fa-heart"></i>
-              </button>
-
-              <button class="add-to-cart" id = ${item.id} >Add To Cart</button>
+              <button class="add-to-cart" id = ${item.id} >Add To Cart 🛒</button>
             </div>
           </div>
       `;
@@ -131,11 +126,7 @@ function renderProducts() {
                   <div class="shipping">Free shipping</div>
 
                   <div class="content-button">
-                    <button class="like">
-                      <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <button class="add-to-cart" id = ${item.id}>Add To Cart</button>
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
                   </div>
                 </div>
                 `;
@@ -170,11 +161,7 @@ function renderProducts() {
                   <div class="shipping">Free shipping</div>
 
                   <div class="content-button">
-                    <button class="like">
-                      <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <button class="add-to-cart" id = ${item.id}>Add To Cart</button>
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
                   </div>
                 </div>
                 `;
@@ -212,11 +199,7 @@ function renderProducts() {
                   <div class="shipping">Free shipping</div>
 
                   <div class="content-button">
-                    <button class="like">
-                      <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <button class="add-to-cart" id = ${item.id}>Add To Cart</button>
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
                   </div>
                 </div>
                 `;
@@ -226,28 +209,92 @@ function renderProducts() {
 }
 renderProducts();
 
+// account log
+function signUp() {
+  const signUpButton = document.querySelector(".contain .register");
+  const accSignUp = document.querySelector(".account-sign-up");
+
+  signUpButton.addEventListener("click", () => {
+    accSignUp.classList.add("sign-active");
+    signUpForm();
+  });
+
+  const closeAccSignUp = document.querySelector(".sign-up-title button");
+  closeAccSignUp.addEventListener("click", () => {
+    accSignUp.classList.remove("sign-active");
+  });
+}
+signUp();
+
+function signUpForm() {
+  const emailSignUp = document.getElementById("email-sign-up");
+  const passSignUp = document.getElementById("password-sign-up");
+
+  let emailValue = emailSignUp.nodeValue;
+  let passValue = passSignUp.nodeValue;
+
+  const createAcc = document.querySelector(".create-account");
+  createAcc.addEventListener("click", () => {
+    console.log("1", emailValue);
+    console.log("2", passValue);
+  });
+
+  // if (emailSignUp && passSignUp) {
+  //   console.log("dung");
+  //   const createAcc = document.querySelector(".create-account");
+  //   createAcc.addEventListener("click", () => {
+  //     console.log("emailSignUp.value", typeof emailSignUp.value);
+  //     console.log("passSignUp.value", typeof passSignUp.value);
+  //     const account = {
+  //       email: emailSignUp.value,
+  //       password: passSignUp.value,
+  //     };
+  //     localStorage.setItem("account", JSON.stringify(account));
+  //     accSignUp.classList.remove("sign-active");
+  //     alert("Bạn đã đăng kí tài khoản thành công!");
+  //   });
+  // }
+  // if (emailSignUp.value == "" && passSignUp.value != "") {
+  //   console.log("sai");
+  //   alert("Bạn phải nhập tài khoản!");
+  // }
+  // if (
+  //   (emailSignUp.value && passSignUp.value == "") ||
+  //   (emailSignUp.value && passSignUp.value == null)
+  // ) {
+  //   console.log("sai");
+  //   alert("Bạn phải nhập mật khẩu!");
+  // }
+}
+
+function signIn() {
+  const signInButton = document.querySelector(".contain .sign-in");
+  const accSignIn = document.querySelector(".account-sign-in");
+
+  signInButton.addEventListener("click", () => {
+    accSignIn.classList.add("sign-active");
+  });
+
+  const closeAccSignIn = document.querySelector(".sign-in-title button");
+  4;
+  closeAccSignIn.addEventListener("click", () => {
+    accSignIn.classList.remove("sign-active");
+  });
+}
+signIn();
+
 const btns = document.querySelectorAll(".add-to-cart");
 const btn = Array.prototype.slice.call(btns);
-
 let array = [];
 btn.forEach((b) =>
   b.addEventListener("click", () => {
     const idProduct = b.getAttribute("id");
     const productFind = products.find((el) => el.id === +idProduct);
 
-    console.log(idProduct);
-    console.log(productFind);
-
     array.push(productFind);
     localStorage.setItem("array", JSON.stringify(array));
+
+    const numberItem = document.querySelector("header .number");
+    numberItem.innerHTML = array.length;
   })
 );
-console.log(products);
-
-const hearthButton = () => {
-  const hearthBtn = document.querySelector(".like");
-  hearthBtn.addEventListener("click", () => {
-    this.classList.add(".active");
-  });
-};
-hearthButton();

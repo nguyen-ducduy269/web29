@@ -115,6 +115,8 @@
 
 .content-item:hover .content-button {
   display: block;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .content-button {
@@ -123,20 +125,8 @@
   display: none;
 }
 
-.content-button .like {
-  width: 28px;
-  height: 28px;
-  border: none;
-  background-color: white;
-}
-
-.content-button .like .active {
-  color: red;
-  border: red;
-}
-
 .content-button .add-to-cart {
-  width: 100px;
+  width: 150px;
   height: 30px;
   background-color: #ffe6e7;
   color: #fd384f;
