@@ -252,6 +252,43 @@
   font-weight: 700;
 }
 
+.aftext {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.account-contact {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.account-contact a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.account-contact a img {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  background-color: #80808030;
+  border-radius: 20px;
+}
+
+.account-contact a h4 {
+  font-size: 12px;
+}
+
 .new-deal {
   width: 90%;
   margin: 0 auto;
@@ -321,7 +358,7 @@
 
 .account-sign-up .sign-up {
   width: 40%;
-  height: 60%;
+  height: 70%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -362,6 +399,7 @@
   margin-bottom: 15px;
   padding-left: 10px;
   border-radius: 7px;
+  color: gray;
 }
 
 .form-sign-up a {
@@ -460,6 +498,7 @@
   margin-bottom: 15px;
   padding-left: 10px;
   border-radius: 7px;
+  color: gray;
 }
 
 .form-sign-in a {
@@ -478,6 +517,29 @@
   color: white;
   border-radius: 20px;
   margin-bottom: 10px;
+}
+
+.scoll-to-top {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  bottom: 10%;
+  right: 1%;
+  background-color: #80808042;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s ease-in-out;
+}
+
+.scoll-to-top a i {
+  color: black;
+  opacity: 0.2;
+}
+
+.scoll-to-top a i:hover {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1350px) {
@@ -534,6 +596,10 @@
 
   .form-sign-in {
     padding: 0 80px;
+  }
+  .account-contact a img {
+    width: 40px;
+    height: 40px;
   }
 }
 

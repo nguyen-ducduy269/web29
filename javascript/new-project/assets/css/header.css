@@ -44,6 +44,9 @@ header {
   display: flex;
 }
 
+.shopping a {
+  color: black;
+}
 /* Search */
 .search {
   width: 70%;

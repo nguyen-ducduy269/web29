@@ -227,44 +227,48 @@ function signUp() {
 signUp();
 
 function signUpForm() {
+  const fullName = document.getElementById("full-name");
+  fullName.addEventListener("click", (e) => {
+    e.target.value = "";
+  });
   const emailSignUp = document.getElementById("email-sign-up");
+  emailSignUp.addEventListener("click", (e) => {
+    e.target.value = "";
+  });
   const passSignUp = document.getElementById("password-sign-up");
-
-  let emailValue = emailSignUp.nodeValue;
-  let passValue = passSignUp.nodeValue;
-
-  const createAcc = document.querySelector(".create-account");
-  createAcc.addEventListener("click", () => {
-    console.log("1", emailValue);
-    console.log("2", passValue);
+  passSignUp.addEventListener("click", (e) => {
+    e.target.value = "";
   });
 
-  // if (emailSignUp && passSignUp) {
-  //   console.log("dung");
-  //   const createAcc = document.querySelector(".create-account");
-  //   createAcc.addEventListener("click", () => {
-  //     console.log("emailSignUp.value", typeof emailSignUp.value);
-  //     console.log("passSignUp.value", typeof passSignUp.value);
-  //     const account = {
-  //       email: emailSignUp.value,
-  //       password: passSignUp.value,
-  //     };
-  //     localStorage.setItem("account", JSON.stringify(account));
-  //     accSignUp.classList.remove("sign-active");
-  //     alert("Bạn đã đăng kí tài khoản thành công!");
-  //   });
-  // }
-  // if (emailSignUp.value == "" && passSignUp.value != "") {
-  //   console.log("sai");
-  //   alert("Bạn phải nhập tài khoản!");
-  // }
-  // if (
-  //   (emailSignUp.value && passSignUp.value == "") ||
-  //   (emailSignUp.value && passSignUp.value == null)
-  // ) {
-  //   console.log("sai");
-  //   alert("Bạn phải nhập mật khẩu!");
-  // }
+  const accSignUp = document.querySelector(".account-sign-up");
+  const createAcc = document.querySelector(".create-account");
+  createAcc.addEventListener("click", () => {
+    let fullNameValue = fullName.value;
+    let emailValue = emailSignUp.value;
+    let passValue = passSignUp.value;
+    console.log("1", fullNameValue);
+    console.log("2", emailValue);
+    console.log("3", passValue);
+    if (!fullNameValue && emailValue && passValue) {
+      alert("Bạn chưa nhập họ tên");
+    }
+    if (fullNameValue && !emailValue && passValue) {
+      alert("Bạn phải đăng nhập tài khoản!");
+    }
+    if (fullNameValue && emailValue && !passValue) {
+      alert("Bạn phải đăng nhập mật khẩu!");
+    }
+    if (fullNameValue && emailValue && passValue) {
+      const account = {
+        full_name: fullName.value,
+        email: emailSignUp.value,
+        password: passSignUp.value,
+      };
+      localStorage.setItem("account", JSON.stringify(account));
+      accSignUp.classList.remove("sign-active");
+      alert("Bạn đã đăng kí tài khoản thành công!");
+    }
+  });
 }
 
 function signIn() {
@@ -273,28 +277,165 @@ function signIn() {
 
   signInButton.addEventListener("click", () => {
     accSignIn.classList.add("sign-active");
+    signInForm();
   });
 
   const closeAccSignIn = document.querySelector(".sign-in-title button");
-  4;
   closeAccSignIn.addEventListener("click", () => {
     accSignIn.classList.remove("sign-active");
   });
 }
 signIn();
 
-const btns = document.querySelectorAll(".add-to-cart");
-const btn = Array.prototype.slice.call(btns);
-let array = [];
-btn.forEach((b) =>
-  b.addEventListener("click", () => {
-    const idProduct = b.getAttribute("id");
-    const productFind = products.find((el) => el.id === +idProduct);
+function signInForm() {
+  const localAccount = JSON.parse(localStorage.getItem("account"));
+  console.log("localAccount", localAccount);
 
-    array.push(productFind);
-    localStorage.setItem("array", JSON.stringify(array));
+  const emailSignIn = document.getElementById("email-sign-in");
+  emailSignIn.addEventListener("click", (e) => {
+    e.target.value = "";
+  });
+  const passSignIn = document.getElementById("pass-sign-in");
+  passSignIn.addEventListener("click", (e) => {
+    e.target.value = "";
+  });
 
-    const numberItem = document.querySelector("header .number");
-    numberItem.innerHTML = array.length;
-  })
-);
+  const accSignIn = document.querySelector(".account-sign-in");
+  const signInBtn = document.querySelector(".sign-in-button");
+  signInBtn.addEventListener("click", () => {
+    let emailSignInValue = emailSignIn.value;
+    let passSignInValue = passSignIn.value;
+
+    if (emailSignInValue && !passSignInValue) {
+      alert("Bạn phải nhập tài khoản!");
+    }
+    if (emailSignInValue && !passSignInValue) {
+      alert("Bạn phải nhập mật khẩu!");
+    }
+    if (emailSignInValue && passSignInValue) {
+      if (
+        emailSignInValue != localAccount.email &&
+        passSignInValue == localAccount.password
+      ) {
+        alert("Sai tài khoản!");
+      }
+      if (
+        emailSignInValue == localAccount.email &&
+        passSignInValue != localAccount.password
+      ) {
+        alert("Sai mật khẩu!");
+      }
+      if (
+        emailSignInValue == localAccount.email &&
+        passSignInValue == localAccount.password
+      ) {
+        alert("Bạn đã đăng nhập thành công");
+        accSignIn.classList.remove("sign-active");
+
+        const main = document.querySelector(".main");
+        main.innerHTML = "";
+        main.innerHTML += `
+            <div class="main">
+              <div class="account">
+                <img src="./assets/image/account.webp" alt="" />
+              </div>
+              <div class="aftext">Hi ${localAccount.full_name} <br />Welcome to AliExpress</div>
+
+              <div class="account-contact">
+                <a href="">
+                  <img src="./assets/image/user.png" alt="" />
+                  <h4>Account</h4>
+                </a>
+
+                <a href="myorder.html">
+                  <img src="./assets/image/clipboard.png" alt="" />
+                  <h4>Orders</h4>
+                </a>
+
+                <a href="">
+                  <img id="log-out" src="./assets/image/logout.png" alt="" />
+                  <h4>Log out</h4>
+                </a>
+              </div>
+            </div>
+            `;
+        addToCart();
+        addProducts();
+        logOut();
+
+        const cartItem = document.querySelector(".shopping a");
+        cartItem.setAttribute("href", "myorder.html");
+      }
+    }
+  });
+}
+
+function addToCart() {
+  const btns = document.querySelectorAll(".add-to-cart");
+  const btn = Array.prototype.slice.call(btns);
+  let array = [];
+  btn.forEach((b) =>
+    b.addEventListener("click", () => {
+      const idProduct = b.getAttribute("id");
+      const productFind = products.find((el) => el.id === +idProduct);
+
+      array.push(productFind);
+      localStorage.setItem("array", JSON.stringify(array));
+
+      const numberItem = document.querySelector("header .number");
+      numberItem.innerHTML = array.length;
+    })
+  );
+}
+
+function addProducts() {
+  const array = JSON.parse(localStorage.getItem("array"));
+  const numberItem = document.querySelector("header .number");
+  numberItem.innerHTML = array.length;
+
+  const btns = document.querySelectorAll(".add-to-cart");
+  const btn = Array.prototype.slice.call(btns);
+  let newArray = [...array];
+  btn.forEach((b) =>
+    b.addEventListener("click", () => {
+      const idProduct = b.getAttribute("id");
+      const productFind = products.find((el) => el.id === +idProduct);
+
+      newArray.push(productFind);
+      localStorage.setItem("array", JSON.stringify(newArray));
+
+      const numberItem = document.querySelector("header .number");
+      numberItem.innerHTML = newArray.length;
+    })
+  );
+}
+
+function logOut() {
+  const logOutBtn = document.getElementById("log-out");
+  logOutBtn.addEventListener("click", () => {
+    const main = document.querySelector(".main");
+    main.innerHTML = "";
+    if (confirm("Bạn có chắc muốn đăng xuất?") == true) {
+      main.innerHTML += `
+        <div class="main">
+          <div class="account">
+            <img src="./assets/image/account.webp" alt="" />
+          </div>
+          <div class="text">Welcome to AliExpress</div>
+
+          <div class="button">
+            <button class="register">Register</button>
+            <button class="sign-in">Sign in</button>
+          </div>
+        </div>
+      `;
+    } else {
+      return false;
+    }
+  });
+}
+
+$("a[href='#top']").click(function () {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});

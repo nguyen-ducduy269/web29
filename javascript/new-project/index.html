@@ -39,10 +39,12 @@
               </button>
             </div>
 
-            <div class="cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <div class="number">0</div>
-            </div>
+            <a href="">
+              <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="number">0</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -162,7 +164,7 @@
           </div>
 
           <div class="account-main">
-            <div>
+            <div class="main">
               <div class="account">
                 <img src="./assets/image/account.webp" alt="" />
               </div>
@@ -338,17 +340,24 @@
 
         <div class="form-sign-up">
           <input
+            type="text"
+            name="full-name"
+            id="full-name"
+            value="Full Name"
+          />
+
+          <input
             type="email"
             name="email-address"
             id="email-sign-up"
-            placeholder="Email address"
+            value="Email address"
           />
 
           <input
             type="password"
             name="password"
             id="password-sign-up"
-            placeholder="Password"
+            value="Password"
           />
 
           <button class="create-account">Create New Account</button>
@@ -377,14 +386,14 @@
             type="email"
             name="email-address"
             id="email-sign-in"
-            placeholder="Email address"
+            value="Email address"
           />
 
           <input
             type="password"
             name="password"
-            id="password-sign-in"
-            placeholder="Password"
+            id="pass-sign-in"
+            value="Password"
           />
 
           <a href="">Forgot Password?</a>
@@ -400,6 +409,12 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="scoll-to-top">
+      <a href="#top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
     </div>
 
     <footer>
