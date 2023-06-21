@@ -18,7 +18,7 @@ shoppingItem.map((item) => {
         <div class="shipping">Free shipping</div>
 
         <div class="size-ring">
-            <p>Choose size ring:</p>
+            <p>Choose size ring: 7</p>
             <div>
                 <button value="7" class="size-ring-active">7</button>
                 <button value="7">8</button>
