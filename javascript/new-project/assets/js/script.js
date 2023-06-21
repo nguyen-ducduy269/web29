@@ -182,7 +182,7 @@ function renderProducts() {
 
                   <div class="sale-off">${item.sale_off}</div>
                   <div class="choice">
-                  <img
+                    <img
                       src=${item.choice}
                       alt=""
                     />
@@ -447,9 +447,9 @@ function filterProduct() {
 
   searchBtn.addEventListener("click", () => {
     console.log("1", searchInput.value);
-    let newValue = searchInput.value;
+    let newValue = searchInput.value.toLowerCase();
     let filteredProducts = products.filter((item) =>
-      item.discription.includes(newValue)
+      item.discription.toLowerCase().includes(newValue)
     );
 
     content.innerHTML = "";
@@ -460,82 +460,151 @@ function filterProduct() {
       contentItem.classList.add("content-item");
 
       contentItem.innerHTML = `
-        <img class="content-img" src="${item.image}" alt="" />
-        <div class="product-item">
-          <div class="item-price">
-            ₫<p style="font-size: 20px">${item.price}</p>
+      ${
+        item.sale_off == null && item.choice == null
+          ? `
+          <img
+            class="content-img"
+            src=${item.image}
+            alt=""
+          />
+          <div class="product-item">
+            <div class="item-price">
+              ₫
+              <p style="font-size: 20px">${item.price}</p>
+            </div>
+
+            <div class="sold">
+              <span>${item.first_sold}</span>
+              <img src="./assets/image/product/48x48.png" alt="" />
+              <span class="next-sold">${item.next_sold}</span>
+            </div>
+
+            <div class="discription">${item.discription}</div>
+
+            <div class="shipping">Free shipping</div>
+
+            <div class="content-button">
+              <button class="add-to-cart" id = ${item.id} >Add To Cart 🛒</button>
+            </div>
           </div>
-          ${item.sale_off ? `<div class=sale-off>${item.sale_off}</div>` : ""}
-          ${
-            item.choice
-              ? `<div class="choice">
-              <img src=${item.choice[0]} alt="" />
-              <img src=${item.choice[1]} alt="" />
-            </div>`
-              : null
-          }
-          <div class="sold">
-            <span>${item.first_sold}</span>
-            <img src="./assets/image/product/48x48.png" alt="" />
-            <span class="next-sold">${item.next_sold}</span>
-          </div>
-          <div class="discription">${item.discription}</div>
-          <div class="shipping">Free shipping</div>
-          <div class="content-button"><button class="add-to-cart" id=${
-            item.id
-          }>Add To Cart 🛒</button></div>
-        </div>
+        
+      `
+          : ""
+      }
+
+      ${
+        item.sale_off && item.choice == null
+          ? `
+                <img
+                  class="content-img"
+                  src=${item.image}
+                  alt=""
+                />
+                <div class="product-item">
+                  <div class="item-price">
+                    ₫
+                    <p style="font-size: 20px">${item.price}</p>
+                  </div>
+
+                  <div class="sale-off">${item.sale_off}</div>
+
+                  <div class="sold">
+                    <span>${item.first_sold}</span>
+                    <img src="./assets/image/product/48x48.png" alt="" />
+                    <span class="next-sold">${item.next_sold}</span>
+                  </div>
+
+                  <div class="discription">${item.discription}</div>
+
+                  <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
+                  </div>
+                </div>
+          `
+          : ""
+      }
+      
+      ${
+        item.sale_off == null && item.choice
+          ? `
+                <img
+                  class="content-img"
+                  src=${item.image}
+                  alt=""
+                />
+                <div class="product-item">
+                  <div class="item-price">
+                    <p class="after-price">₫${item.after_price}</p>
+                    <p class="befor-price">₫${item.before_price}</p>
+                  </div>
+
+                  <div class="choice">
+                    <img src=${item.choice[0]} alt="" />
+                    <img src=${item.choice[1]} alt="" />
+                  </div>
+
+                  <div class="sold">
+                    <span>${item.first_sold}</span>
+                    <img src="./assets/image/product/48x48.png" alt="" />
+                    <span class="next-sold">${item.next_sold}</span>
+                  </div>
+
+                  <div class="discription">${item.discription}</div>
+
+                  <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
+                  </div>
+                </div>
+      `
+          : ""
+      }
+
+      ${
+        item.sale_off && item.choice
+          ? `
+                <img
+                  class="content-img"
+                  src=${item.image}
+                  alt=""
+                />
+                <div class="product-item">
+                  <div class="item-price">
+                    ₫
+                    <p style="font-size: 20px">${item.price}</p>
+                  </div>
+
+                  <div class="sale-off">${item.sale_off}</div>
+                  <div class="choice">
+                    <img
+                      src=${item.choice}
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="sold">
+                    <span>${item.first_sold}</span>
+                    <img src="./assets/image/product/48x48.png" alt="" />
+                    <span class="next-sold">${item.next_sold}</span>
+                  </div>
+
+                  <div class="discription">${item.discription}</div>
+
+                  <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
+                  </div>
+                </div>
+        `
+          : ""
+      }
       `;
       content.appendChild(contentItem);
-
-      // if (item.sale_off && !item.choice) {
-      //   contentItem.innerHTML = `
-      //   <img class="content-img" src="${item.image}" alt="" />
-      //   <div class="product-item">
-      //     <div class="item-price">
-      //       ₫<p style="font-size: 20px">${item.price}</p>
-      //     </div>
-
-      //     <div class=sale-off>${item.sale_off}</div>
-
-      //     <div class="sold">
-      //       <span>${item.first_sold}</span>
-      //       <img src="./assets/image/product/48x48.png" alt="" />
-      //       <span class="next-sold">${item.next_sold}</span>
-      //     </div>
-      //     <div class="discription">${item.discription}</div>
-      //     <div class="shipping">Free shipping</div>
-      //     <div class="content-button"><button class="add-to-cart" id=${item.id}>Add To Cart 🛒</button></div>
-      //   </div>
-      // `;
-      //   content.appendChild(contentItem);
-      // }
-
-      // if (!item.sale_off && item.choice) {
-      //   contentItem.innerHTML = `
-      //   <img class="content-img" src="${item.image}" alt="" />
-      //   <div class="product-item">
-      //     <div class="item-price">
-      //       ₫<p style="font-size: 20px">${item.price}</p>
-      //     </div>
-
-      //     <div class="choice">
-      //       <img src=${item.choice[0]} alt="" />
-      //       <img src=${item.choice[1]} alt="" />
-      //     </div>
-
-      //     <div class="sold">
-      //       <span>${item.first_sold}</span>
-      //       <img src="./assets/image/product/48x48.png" alt="" />
-      //       <span class="next-sold">${item.next_sold}</span>
-      //     </div>
-      //     <div class="discription">${item.discription}</div>
-      //     <div class="shipping">Free shipping</div>
-      //     <div class="content-button"><button class="add-to-cart" id=${item.id}>Add To Cart 🛒</button></div>
-      //   </div>
-      // `;
-      //   content.appendChild(contentItem);
-      // }
     });
   });
 }
