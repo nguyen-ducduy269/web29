@@ -359,6 +359,7 @@ const products = [
     image:
       "https://ae01.alicdn.com/kf/Sc06a357efdfd4db18229f4de41ab97c8N/Luxury-Skull-Ring-for-Women-Men-Punk-Hip-Hop-Hollow-Skeleton-Adjustable-Opening-Rings-Halloween-Party.jpg_220x220xz.jpg_.webp",
     price: 37.129,
+    type: "ring",
     sale_off: "₫ 93,998 off every ₫ 704,984",
     first_sold: "3 sold",
     next_sold: "1.2",
@@ -679,6 +680,7 @@ const products = [
     image:
       "https://ae01.alicdn.com/kf/Sc06a357efdfd4db18229f4de41ab97c8N/Luxury-Skull-Ring-for-Women-Men-Punk-Hip-Hop-Hollow-Skeleton-Adjustable-Opening-Rings-Halloween-Party.jpg_220x220xz.jpg_.webp",
     price: 37.129,
+    type: "ring",
     sale_off: "₫ 93,998 off every ₫ 704,984",
     first_sold: "3 sold",
     next_sold: "1.2",
@@ -1106,6 +1108,7 @@ const products = [
     image:
       "https://ae01.alicdn.com/kf/Sc06a357efdfd4db18229f4de41ab97c8N/Luxury-Skull-Ring-for-Women-Men-Punk-Hip-Hop-Hollow-Skeleton-Adjustable-Opening-Rings-Halloween-Party.jpg_220x220xz.jpg_.webp",
     price: 37.129,
+    type: "ring",
     sale_off: "₫ 93,998 off every ₫ 704,984",
     first_sold: "3 sold",
     next_sold: "1.2",
