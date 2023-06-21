@@ -177,7 +177,7 @@ const products = [
   {
     id: 4,
     image:
-      "./assets/image/product/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_220x220xz.jpg_.webp",
+      "https://ae01.alicdn.com/kf/S1dacfcc879a94534a327e335e08c6cfcS/Delysia-King-Ring.jpg_220x220xz.jpg_.webp",
     price: 57.574,
     sale_off: "₫ 93,998 off every ₫ 704,984",
     choice: "./assets/image/product/limited-deals.png",
@@ -875,7 +875,7 @@ const products = [
   {
     id: 4,
     image:
-      "./assets/image/product/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_220x220xz.jpg_.webp",
+      "https://ae01.alicdn.com/kf/S1dacfcc879a94534a327e335e08c6cfcS/Delysia-King-Ring.jpg_220x220xz.jpg_.webp",
     price: 57.574,
     sale_off: "₫ 93,998 off every ₫ 704,984",
     choice: "./assets/image/product/limited-deals.png",
@@ -924,7 +924,7 @@ const products = [
   {
     id: 4,
     image:
-      "./assets/image/product/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_220x220xz.jpg_.webp",
+      "https://ae01.alicdn.com/kf/S1dacfcc879a94534a327e335e08c6cfcS/Delysia-King-Ring.jpg_220x220xz.jpg_.webp",
     price: 57.574,
     sale_off: "₫ 93,998 off every ₫ 704,984",
     choice: "./assets/image/product/limited-deals.png",
@@ -1115,7 +1115,7 @@ const products = [
   {
     id: 4,
     image:
-      "./assets/image/product/2023-New-Rings-For-Women-100-925-Sterling-Silver-Star-Moon-Colorful-Zircon-Rings-Fine-Wedding.jpg_220x220xz.jpg_.webp",
+      "https://ae01.alicdn.com/kf/S1dacfcc879a94534a327e335e08c6cfcS/Delysia-King-Ring.jpg_220x220xz.jpg_.webp",
     price: 57.574,
     sale_off: "₫ 93,998 off every ₫ 704,984",
     choice: "./assets/image/product/limited-deals.png",
