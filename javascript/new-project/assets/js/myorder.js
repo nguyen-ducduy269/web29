@@ -2,8 +2,6 @@ const shoppingItem = JSON.parse(localStorage.getItem("array"));
 
 const ordersH1 = document.querySelector(".orders h1");
 ordersH1.innerHTML = "Shopping Cart" + "(" + shoppingItem.length + ")";
-const summaryH1 = document.querySelector(".sum .submit");
-summaryH1.innerHTML = "Check Out " + "(" + shoppingItem.length + ")";
 
 shoppingItem.map((item) => {
   const myOrder = document.querySelector(".my-order");
@@ -14,11 +12,15 @@ shoppingItem.map((item) => {
   ${
     item.type == "ring" && item.after_price == null
       ? `
+    <label class="checkbox-inline">
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
     <img src=${item.image} alt="" />
     <div class="order-detail">
         <p>${item.discription}</p>
 
-        <div class="order-cost">VND ₫${item.price}</div>
+        <div class="order-cost">VND ₫<span>${item.price}</span></div>
         <div class="shipping">Free shipping</div>
 
         <div class="size-ring">
@@ -49,11 +51,15 @@ shoppingItem.map((item) => {
   ${
     item.type != "ring" && item.after_price == null
       ? `
+      <label class="checkbox-inline">
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
       <img src=${item.image} alt="" />
       <div class="order-detail">
           <p>${item.discription}</p>
   
-          <div class="order-cost">VND ₫${item.price}</div>
+          <div class="order-cost">VND ₫<span>${item.price}</span></div>
           <div class="shipping">Free shipping</div>
   
           <div class="to-summary">
@@ -75,11 +81,15 @@ shoppingItem.map((item) => {
   ${
     item.after_price && item.price == null
       ? `
+    <label class="checkbox-inline">
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
     <img src=${item.image} alt="" />
     <div class="order-detail">
         <p>${item.discription}</p>
 
-        <div class="order-cost">VND ₫${item.after_price}</div>
+        <div class="order-cost">VND ₫<span>${item.after_price}</span></div>
         <div class="shipping">Free shipping</div>
 
         <div class="to-summary">
@@ -102,49 +112,33 @@ shoppingItem.map((item) => {
 });
 
 function changeRingValue() {
-  const ringSize7 = document.querySelectorAll(".value-7");
-  const ringSize8 = document.querySelectorAll(".value-8");
-  const ringSize9 = document.querySelectorAll(".value-9");
+  const sizeRing = document.querySelectorAll(".size-ring");
 
-  ringSize7.forEach((item) => {
-    item.addEventListener("click", () => {
-      item.classList.add("size-ring-active");
-      ringSize8.forEach((ring8) => {
-        ring8.classList.remove("size-ring-active");
-      });
-      ringSize9.forEach((ring9) => {
-        ring9.classList.remove("size-ring-active");
-      });
-      const valueRing = document.querySelector(".size-ring p");
-      valueRing.innerHTML = "Choose size ring: " + item.value;
+  sizeRing.forEach((item) => {
+    const ringSize7 = item.querySelector(".value-7");
+    const ringSize8 = item.querySelector(".value-8");
+    const ringSize9 = item.querySelector(".value-9");
+    const valueRing = item.querySelector(".size-ring p");
+
+    ringSize7.addEventListener("click", () => {
+      ringSize7.classList.add("size-ring-active");
+      ringSize8.classList.remove("size-ring-active");
+      ringSize9.classList.remove("size-ring-active");
+      valueRing.innerHTML = "Choose size ring: " + ringSize7.value;
     });
-  });
 
-  ringSize8.forEach((item) => {
-    item.addEventListener("click", () => {
-      item.classList.add("size-ring-active");
-      ringSize7.forEach((ring7) => {
-        ring7.classList.remove("size-ring-active");
-      });
-      ringSize9.forEach((ring9) => {
-        ring9.classList.remove("size-ring-active");
-      });
-      const valueRing = document.querySelector(".size-ring p");
-      valueRing.innerHTML = "Choose size ring: " + item.value;
+    ringSize8.addEventListener("click", () => {
+      ringSize7.classList.remove("size-ring-active");
+      ringSize8.classList.add("size-ring-active");
+      ringSize9.classList.remove("size-ring-active");
+      valueRing.innerHTML = "Choose size ring: " + ringSize8.value;
     });
-  });
 
-  ringSize9.forEach((item) => {
-    item.addEventListener("click", () => {
-      item.classList.add("size-ring-active");
-      ringSize8.forEach((ring8) => {
-        ring8.classList.remove("size-ring-active");
-      });
-      ringSize7.forEach((ring7) => {
-        ring7.classList.remove("size-ring-active");
-      });
-      const valueRing = document.querySelector(".size-ring p");
-      valueRing.innerHTML = "Choose size ring: " + item.value;
+    ringSize9.addEventListener("click", () => {
+      ringSize7.classList.remove("size-ring-active");
+      ringSize8.classList.remove("size-ring-active");
+      ringSize9.classList.add("size-ring-active");
+      valueRing.innerHTML = "Choose size ring: " + ringSize9.value;
     });
   });
 }
@@ -154,27 +148,22 @@ function changeQuantities() {
   const decreaseBtn = document.querySelectorAll(".decrease");
   const quantityValue = document.querySelectorAll(".quantity");
   const increaseBtn = document.querySelectorAll(".increase");
-  const valuePrice = document.querySelectorAll(".order-cost");
   const deleteBtn = document.querySelectorAll(".delete");
 
   for (let i = 0; i < shoppingItem.length; i++) {
     if (shoppingItem[i].price && shoppingItem[i].after_price == null) {
       decreaseBtn[i].addEventListener("click", () => {
-        let newPrice = Number(shoppingItem[i].price);
         let quantities = Number(quantityValue[i].innerHTML);
         if (quantities > 1) {
           quantities -= 1;
           quantityValue[i].innerHTML = quantities;
-          updatePrice(newPrice, quantities, i);
         }
       });
 
       increaseBtn[i].addEventListener("click", () => {
-        let newPrice = Number(shoppingItem[i].price);
         let quantities = Number(quantityValue[i].innerHTML);
         quantities += 1;
         quantityValue[i].innerHTML = quantities;
-        updatePrice(newPrice, quantities, i);
       });
 
       deleteBtn[i].addEventListener("click", () => {
@@ -186,32 +175,73 @@ function changeQuantities() {
       });
     } else if (shoppingItem[i].price == null && shoppingItem[i].after_price) {
       decreaseBtn[i].addEventListener("click", () => {
-        let newPrice = Number(shoppingItem[i].after_price);
         let quantities = Number(quantityValue[i].innerHTML);
         if (quantities > 1) {
           quantities -= 1;
           quantityValue[i].innerHTML = quantities;
-          updatePrice(newPrice, quantities, i);
         }
       });
 
       increaseBtn[i].addEventListener("click", () => {
-        let newPrice = Number(shoppingItem[i].after_price);
         let quantities = Number(quantityValue[i].innerHTML);
         quantities += 1;
         quantityValue[i].innerHTML = quantities;
-        updatePrice(newPrice, quantities, i);
       });
     }
-  }
-
-  function updatePrice(newPrice, quantities, index) {
-    newPrice = newPrice * quantities;
-    valuePrice[index].innerHTML = "VND ₫" + newPrice.toFixed(3);
   }
 }
 changeQuantities();
 
 function totalPrice() {
-  const totalPrice = document.querySelector(".total .price");
+  const checkBox = document.querySelectorAll(".checkbox-inline input");
+  const summaryH1 = document.querySelector(".sum .submit");
+  const totalPriceElement = document.querySelector(".price span");
+  const prices = [];
+
+  checkBox.forEach((item) => {
+    item.addEventListener("click", () => {
+      const currentPrice = parseFloat(
+        item.parentElement.parentElement.querySelector(".order-cost span")
+          .innerHTML
+      );
+
+      const currentQuantity = parseInt(
+        item.parentElement.parentElement.querySelector(".quantities .quantity")
+          .innerHTML
+      );
+
+      let totalCurrentPrice = currentPrice * currentQuantity;
+      console.log("currentPrice", currentPrice);
+      console.log("currentQuantity", currentQuantity);
+      console.log("totalCurrentPrice", totalCurrentPrice);
+
+      const isChecked = item.checked;
+      if (isChecked) {
+        prices.push(totalCurrentPrice);
+      } else if (!isChecked) {
+        const indexPrice = prices.indexOf(totalCurrentPrice);
+        if (indexPrice > -1) {
+          prices.splice(indexPrice, 1);
+        }
+      }
+
+      let totalPrice = 0;
+      prices.forEach((price) => {
+        totalPrice += price;
+      });
+
+      console.log("totalPrice", totalPrice);
+
+      totalPriceElement.innerHTML = totalPrice.toFixed(3);
+    });
+  });
+
+  summaryH1.addEventListener("click", () => {
+    if (price == 0) {
+      alert("Bạn chưa chọn sản phẩm thanh toán!");
+      return false;
+    }
+  });
 }
+
+totalPrice();
