@@ -494,9 +494,78 @@ function filterProduct() {
 }
 
 function calcuTotalPrice() {
+  const address = document.querySelector(".address");
+  const exit = document.querySelector(".exit");
+  exit.addEventListener("click", () => {
+    address.classList.remove("address-active");
+  });
+}
+
+const items = [];
+function renderTotalProduct() {
+  const checkBox = document.querySelectorAll(".checkbox-inline input");
   const summaryH1 = document.querySelector(".sum .submit");
-  summaryH1.addEventListener("click", () => {
-    console.log("aaaaa");
+  const address = document.querySelector(".address");
+
+  checkBox.forEach((item) => {
+    item.addEventListener("click", () => {
+      const parentElement = item.parentNode.parentNode;
+      const isChecked = item.checked;
+
+      const nameItem = parentElement.querySelector(".order-detail p").innerHTML;
+
+      const imageItem = parentElement.querySelector("img");
+      const imageItemSrc = imageItem.src;
+
+      const unitPrice = Number(
+        parentElement.querySelector(".order-cost span").innerHTML
+      );
+
+      const quantity = parentElement.querySelector(".quantity").innerHTML;
+
+      const productPrice = unitPrice * quantity;
+
+      items.push({
+        imageItemSrc: imageItemSrc,
+        nameItem: nameItem,
+        unitPrice: unitPrice,
+        quantity: quantity,
+        productPrice: productPrice,
+      });
+
+      for (let i = 0; i < items.length; i++) {
+        summaryH1.addEventListener("click", () => {
+          address.classList.add("address-active");
+          const table = document.querySelector(".submit-item");
+          table.innerHTML = `
+          <thead>
+              <tr>
+                <th class="image">Image</th>
+                <th class="name">Name</th>
+                <th class="unit-price">Unit Price</th>
+                <th class="quantity">Quantity</th>
+                <th class="final-price">Final Price</th>
+              </tr>
+            </thead>
+      
+            <tbody>
+              <tr>
+                <td class="image">
+                  <img
+                    src=${items[i].imageItemSrc}  // Truy cập biến imageItemSrc thay vì items[i].imageItemSrc
+                    alt=""
+                  />
+                </td>
+                <td class="name">${items[i].nameItem}</td>
+                <td class="unit-price">${items[i].unitPrice}</td>
+                <td class="quantity">${items[i].quantity}</td>
+                <td class="final-price">${items[i].productPrice}</td>
+              </tr>
+            </tbody>
+          `;
+        });
+      }
+    });
   });
 }
 
@@ -507,5 +576,6 @@ function runWebsite() {
   totalPrice();
   filterProduct();
   calcuTotalPrice();
+  renderTotalProduct();
 }
 runWebsite();
