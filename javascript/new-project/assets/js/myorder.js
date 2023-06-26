@@ -3,113 +3,123 @@ const shoppingItem = JSON.parse(localStorage.getItem("array"));
 const ordersH1 = document.querySelector(".orders h1");
 ordersH1.innerHTML = "Shopping Cart" + "(" + shoppingItem.length + ")";
 
-shoppingItem.map((item) => {
+function renderProduct() {
   const myOrder = document.querySelector(".my-order");
-  const order = document.createElement("div");
-  order.classList.add("order");
+  if (shoppingItem.length == 0) {
+    myOrder.innerHTML = `
+    <div class="number-products">
+      <p>Hiện không có sản phẩm nào.</p>
+    </div>
+    `;
+  } else {
+    shoppingItem.map((item) => {
+      const order = document.createElement("div");
+      order.classList.add("order");
 
-  order.innerHTML += `
-  ${
-    item.type == "ring" && item.after_price == null
-      ? `
-    <label class="checkbox-inline">
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-    <img src=${item.image} alt="" />
-    <div class="order-detail">
-        <p>${item.discription}</p>
-
-        <div class="order-cost">VND ₫<span>${item.price}</span></div>
-        <div class="shipping">Free shipping</div>
-
-        <div class="size-ring">
-            <p>Choose size ring: 7</p>
-            <div>
-                <button value="7" class="value-7 size-ring-active">7</button>
-                <button value="8" class="value-8">8</button>
-                <button value="9" class="value-9">9</button>
+      order.innerHTML += `
+      ${
+        item.type == "ring" && item.after_price == null
+          ? `
+        <label class="checkbox-inline">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <img src=${item.image} alt="" />
+        <div class="order-detail">
+            <p>${item.discription}</p>
+    
+            <div class="order-cost">VND ₫<span>${item.price}</span></div>
+            <div class="shipping">Free shipping</div>
+    
+            <div class="size-ring">
+                <p>Choose size ring: 7</p>
+                <div>
+                    <button value="7" class="value-7 size-ring-active">7</button>
+                    <button value="8" class="value-8">8</button>
+                    <button value="9" class="value-9">9</button>
+                </div>
+            </div>
+    
+            <div class="to-summary">
+            <div class="quantities">
+                <button class="decrease">-</button>
+                <div class="quantity">1</div>
+                <button class="increase">+</button>
+            </div>
+    
+            <button class="delete">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
             </div>
         </div>
-
-        <div class="to-summary">
-        <div class="quantities">
-            <button class="decrease">-</button>
-            <div class="quantity">1</div>
-            <button class="increase">+</button>
-        </div>
-
-        <button class="delete">
-            <i class="fa-regular fa-trash-can"></i>
-        </button>
-        </div>
-    </div>
-  `
-      : ""
-  }
-
-  ${
-    item.type != "ring" && item.after_price == null
-      ? `
-      <label class="checkbox-inline">
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <img src=${item.image} alt="" />
-      <div class="order-detail">
-          <p>${item.discription}</p>
-  
-          <div class="order-cost">VND ₫<span>${item.price}</span></div>
-          <div class="shipping">Free shipping</div>
-  
-          <div class="to-summary">
-          <div class="quantities">
-              <button class="decrease">-</button>
-              <div class="quantity">1</div>
-              <button class="increase">+</button>
+      `
+          : ""
+      }
+    
+      ${
+        item.type != "ring" && item.after_price == null
+          ? `
+          <label class="checkbox-inline">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <img src=${item.image} alt="" />
+          <div class="order-detail">
+              <p>${item.discription}</p>
+      
+              <div class="order-cost">VND ₫<span>${item.price}</span></div>
+              <div class="shipping">Free shipping</div>
+      
+              <div class="to-summary">
+              <div class="quantities">
+                  <button class="decrease">-</button>
+                  <div class="quantity">1</div>
+                  <button class="increase">+</button>
+              </div>
+      
+              <button class="delete">
+                  <i class="fa-regular fa-trash-can"></i>
+              </button>
+              </div>
           </div>
-  
-          <button class="delete">
-              <i class="fa-regular fa-trash-can"></i>
-          </button>
-          </div>
-      </div>
-  `
-      : ""
-  }
-
-  ${
-    item.after_price && item.price == null
-      ? `
-    <label class="checkbox-inline">
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-    <img src=${item.image} alt="" />
-    <div class="order-detail">
-        <p>${item.discription}</p>
-
-        <div class="order-cost">VND ₫<span>${item.after_price}</span></div>
-        <div class="shipping">Free shipping</div>
-
-        <div class="to-summary">
-        <div class="quantities">
-            <button class="decrease">-</button>
-            <div class="quantity">1</div>
-            <button class="increase">+</button>
+      `
+          : ""
+      }
+    
+      ${
+        item.after_price && item.price == null
+          ? `
+        <label class="checkbox-inline">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <img src=${item.image} alt="" />
+        <div class="order-detail">
+            <p>${item.discription}</p>
+    
+            <div class="order-cost">VND ₫<span>${item.after_price}</span></div>
+            <div class="shipping">Free shipping</div>
+    
+            <div class="to-summary">
+            <div class="quantities">
+                <button class="decrease">-</button>
+                <div class="quantity">1</div>
+                <button class="increase">+</button>
+            </div>
+    
+            <button class="delete">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+            </div>
         </div>
-
-        <button class="delete">
-            <i class="fa-regular fa-trash-can"></i>
-        </button>
-        </div>
-    </div>
-    `
-      : ""
+        `
+          : ""
+      }
+      `;
+      myOrder.appendChild(order);
+    });
   }
-  `;
-  myOrder.appendChild(order);
-});
+}
 
 function changeRingValue() {
   const sizeRing = document.querySelectorAll(".size-ring");
@@ -142,13 +152,13 @@ function changeRingValue() {
     });
   });
 }
-changeRingValue();
 
 function changeQuantities() {
   const decreaseBtn = document.querySelectorAll(".decrease");
   const quantityValue = document.querySelectorAll(".quantity");
   const increaseBtn = document.querySelectorAll(".increase");
   const deleteBtn = document.querySelectorAll(".delete");
+  const shoppingItem = JSON.parse(localStorage.getItem("array"));
 
   for (let i = 0; i < shoppingItem.length; i++) {
     if (shoppingItem[i].price && shoppingItem[i].after_price == null) {
@@ -168,9 +178,10 @@ function changeQuantities() {
 
       deleteBtn[i].addEventListener("click", () => {
         if (confirm("Bạn chắc chắn muốn xóa sản phẩm này?")) {
-          let deleteItem = shoppingItem[i];
-          console.log("deleteItem", deleteItem);
-          localStorage.removeItem(shoppingItem[i]);
+          const listItem = JSON.parse(localStorage.getItem("array"));
+          listItem.splice(i, 1);
+          localStorage.setItem("array", JSON.stringify(listItem));
+          window.location.reload();
         }
       });
     } else if (shoppingItem[i].price == null && shoppingItem[i].after_price) {
@@ -187,14 +198,21 @@ function changeQuantities() {
         quantities += 1;
         quantityValue[i].innerHTML = quantities;
       });
+
+      deleteBtn[i].addEventListener("click", () => {
+        if (confirm("Bạn chắc chắn muốn xóa sản phẩm này?")) {
+          const listItem = JSON.parse(localStorage.getItem("array"));
+          listItem.splice(i, 1);
+          localStorage.setItem("array", JSON.stringify(listItem));
+          window.location.reload();
+        }
+      });
     }
   }
 }
-changeQuantities();
 
 function totalPrice() {
   const checkBox = document.querySelectorAll(".checkbox-inline input");
-  const summaryH1 = document.querySelector(".sum .submit");
   const totalPriceElement = document.querySelector(".price span");
   const prices = [];
 
@@ -235,13 +253,259 @@ function totalPrice() {
       totalPriceElement.innerHTML = totalPrice.toFixed(3);
     });
   });
+}
 
-  summaryH1.addEventListener("click", () => {
-    if (price == 0) {
-      alert("Bạn chưa chọn sản phẩm thanh toán!");
-      return false;
-    }
+function filterProduct() {
+  const searchInput = document.querySelector(".search input");
+  const searchBtn = document.querySelector(".search .find");
+  const myOrder = document.querySelector(".my-order");
+
+  searchBtn.addEventListener("click", () => {
+    let newValue = searchInput.value.toLowerCase();
+    let filteredProducts = shoppingItem.filter((item) =>
+      item.discription.toLowerCase().includes(newValue)
+    );
+
+    myOrder.innerHTML = "";
+
+    filteredProducts.forEach((item) => {
+      const order = document.createElement("div");
+      order.classList.add("order");
+
+      order.innerHTML = `
+      ${
+        item.type == "ring" && item.after_price == null
+          ? `
+        <label class="checkbox-inline">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <img src=${item.image} alt="" />
+        <div class="order-detail">
+            <p>${item.discription}</p>
+    
+            <div class="order-cost">VND ₫<span>${item.price}</span></div>
+            <div class="shipping">Free shipping</div>
+    
+            <div class="size-ring">
+                <p>Choose size ring: 7</p>
+                <div>
+                    <button value="7" class="value-7 size-ring-active">7</button>
+                    <button value="8" class="value-8">8</button>
+                    <button value="9" class="value-9">9</button>
+                </div>
+            </div>
+    
+            <div class="to-summary">
+            <div class="quantities">
+                <button class="decrease">-</button>
+                <div class="quantity">1</div>
+                <button class="increase">+</button>
+            </div>
+    
+            <button class="delete">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+            </div>
+        </div>
+      `
+          : ""
+      }
+    
+      ${
+        item.type != "ring" && item.after_price == null
+          ? `
+          <label class="checkbox-inline">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <img src=${item.image} alt="" />
+          <div class="order-detail">
+              <p>${item.discription}</p>
+      
+              <div class="order-cost">VND ₫<span>${item.price}</span></div>
+              <div class="shipping">Free shipping</div>
+      
+              <div class="to-summary">
+              <div class="quantities">
+                  <button class="decrease">-</button>
+                  <div class="quantity">1</div>
+                  <button class="increase">+</button>
+              </div>
+      
+              <button class="delete">
+                  <i class="fa-regular fa-trash-can"></i>
+              </button>
+              </div>
+          </div>
+      `
+          : ""
+      }
+    
+      ${
+        item.after_price && item.price == null
+          ? `
+        <label class="checkbox-inline">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <img src=${item.image} alt="" />
+        <div class="order-detail">
+            <p>${item.discription}</p>
+    
+            <div class="order-cost">VND ₫<span>${item.after_price}</span></div>
+            <div class="shipping">Free shipping</div>
+    
+            <div class="to-summary">
+            <div class="quantities">
+                <button class="decrease">-</button>
+                <div class="quantity">1</div>
+                <button class="increase">+</button>
+            </div>
+    
+            <button class="delete">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+            </div>
+        </div>
+        `
+          : ""
+      }
+      `;
+      myOrder.appendChild(order);
+    });
+  });
+
+  searchInput.addEventListener("change", () => {
+    let newValue = searchInput.value.toLowerCase();
+    let filteredProducts = shoppingItem.filter((item) =>
+      item.discription.toLowerCase().includes(newValue)
+    );
+
+    myOrder.innerHTML = "";
+
+    filteredProducts.forEach((item) => {
+      const order = document.createElement("div");
+      order.classList.add("order");
+
+      order.innerHTML = `
+      ${
+        item.type == "ring" && item.after_price == null
+          ? `
+        <label class="checkbox-inline">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <img src=${item.image} alt="" />
+        <div class="order-detail">
+            <p>${item.discription}</p>
+    
+            <div class="order-cost">VND ₫<span>${item.price}</span></div>
+            <div class="shipping">Free shipping</div>
+    
+            <div class="size-ring">
+                <p>Choose size ring: 7</p>
+                <div>
+                    <button value="7" class="value-7 size-ring-active">7</button>
+                    <button value="8" class="value-8">8</button>
+                    <button value="9" class="value-9">9</button>
+                </div>
+            </div>
+    
+            <div class="to-summary">
+            <div class="quantities">
+                <button class="decrease">-</button>
+                <div class="quantity">1</div>
+                <button class="increase">+</button>
+            </div>
+    
+            <button class="delete">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+            </div>
+        </div>
+      `
+          : ""
+      }
+    
+      ${
+        item.type != "ring" && item.after_price == null
+          ? `
+          <label class="checkbox-inline">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <img src=${item.image} alt="" />
+          <div class="order-detail">
+              <p>${item.discription}</p>
+      
+              <div class="order-cost">VND ₫<span>${item.price}</span></div>
+              <div class="shipping">Free shipping</div>
+      
+              <div class="to-summary">
+              <div class="quantities">
+                  <button class="decrease">-</button>
+                  <div class="quantity">1</div>
+                  <button class="increase">+</button>
+              </div>
+      
+              <button class="delete">
+                  <i class="fa-regular fa-trash-can"></i>
+              </button>
+              </div>
+          </div>
+      `
+          : ""
+      }
+    
+      ${
+        item.after_price && item.price == null
+          ? `
+        <label class="checkbox-inline">
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <img src=${item.image} alt="" />
+        <div class="order-detail">
+            <p>${item.discription}</p>
+    
+            <div class="order-cost">VND ₫<span>${item.after_price}</span></div>
+            <div class="shipping">Free shipping</div>
+    
+            <div class="to-summary">
+            <div class="quantities">
+                <button class="decrease">-</button>
+                <div class="quantity">1</div>
+                <button class="increase">+</button>
+            </div>
+    
+            <button class="delete">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+            </div>
+        </div>
+        `
+          : ""
+      }
+      `;
+      myOrder.appendChild(order);
+    });
   });
 }
 
-totalPrice();
+function calcuTotalPrice() {
+  const summaryH1 = document.querySelector(".sum .submit");
+  summaryH1.addEventListener("click", () => {
+    console.log("aaaaa");
+  });
+}
+
+function runWebsite() {
+  renderProduct();
+  changeRingValue();
+  changeQuantities();
+  totalPrice();
+  filterProduct();
+  calcuTotalPrice();
+}
+runWebsite();

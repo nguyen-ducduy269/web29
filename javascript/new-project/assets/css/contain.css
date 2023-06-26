@@ -358,7 +358,7 @@
 
 .account-sign-up .sign-up {
   width: 40%;
-  height: 70%;
+  height: 80%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -584,6 +584,7 @@
 
   .account-sign-up .sign-up {
     width: 50%;
+    height: 80%;
   }
 
   .account-sign-in .sign-in {
@@ -684,6 +685,7 @@
 
   .account-sign-up .sign-up {
     width: 60%;
+    height: 90%;
   }
 
   .account-sign-in .sign-in {
@@ -729,6 +731,7 @@
 
   .account-sign-up .sign-up {
     width: 75%;
+    height: 80%;
   }
 
   .account-sign-in .sign-in {

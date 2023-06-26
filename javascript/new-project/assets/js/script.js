@@ -239,6 +239,10 @@ function signUpForm() {
   passSignUp.addEventListener("click", (e) => {
     e.target.value = "";
   });
+  const reEnterPass = document.getElementById("password-re-enter");
+  reEnterPass.addEventListener("click", (e) => {
+    e.target.value = "";
+  });
 
   const accSignUp = document.querySelector(".account-sign-up");
   const createAcc = document.querySelector(".create-account");
@@ -246,27 +250,36 @@ function signUpForm() {
     let fullNameValue = fullName.value;
     let emailValue = emailSignUp.value;
     let passValue = passSignUp.value;
+    let reEnterPassValue = reEnterPass.value;
     console.log("1", fullNameValue);
     console.log("2", emailValue);
     console.log("3", passValue);
-    if (!fullNameValue && emailValue && passValue) {
+    console.log("4", reEnterPassValue);
+    if (!fullNameValue && emailValue && passValue && reEnterPassValue) {
       alert("Bạn chưa nhập họ tên");
     }
-    if (fullNameValue && !emailValue && passValue) {
+    if (fullNameValue && !emailValue && passValue && reEnterPassValue) {
       alert("Bạn phải đăng nhập tài khoản!");
     }
-    if (fullNameValue && emailValue && !passValue) {
+    if (fullNameValue && emailValue && !passValue && reEnterPassValue) {
       alert("Bạn phải đăng nhập mật khẩu!");
     }
-    if (fullNameValue && emailValue && passValue) {
-      const account = {
-        full_name: fullName.value,
-        email: emailSignUp.value,
-        password: passSignUp.value,
-      };
-      localStorage.setItem("account", JSON.stringify(account));
-      accSignUp.classList.remove("sign-active");
-      alert("Bạn đã đăng kí tài khoản thành công!");
+    if (fullNameValue && emailValue && passValue && !reEnterPassValue) {
+      alert("Nhập lại mật khẩu!");
+    }
+    if (fullNameValue && emailValue && passValue && reEnterPassValue) {
+      if (passValue != reEnterPassValue) {
+        alert("Mật khẩu nhập lại không đúng!");
+      } else if (passValue == reEnterPassValue) {
+        const account = {
+          full_name: fullName.value,
+          email: emailSignUp.value,
+          password: passSignUp.value,
+        };
+        localStorage.setItem("account", JSON.stringify(account));
+        accSignUp.classList.remove("sign-active");
+        alert("Bạn đã đăng kí tài khoản thành công!");
+      }
     }
   });
 }
@@ -446,7 +459,169 @@ function filterProduct() {
   const content = document.querySelector(".content");
 
   searchBtn.addEventListener("click", () => {
-    console.log("1", searchInput.value);
+    let newValue = searchInput.value.toLowerCase();
+    let filteredProducts = products.filter((item) =>
+      item.discription.toLowerCase().includes(newValue)
+    );
+
+    content.innerHTML = "";
+
+    filteredProducts.forEach((item) => {
+      let contentItem = document.createElement("div");
+      console.log(item.choice);
+      contentItem.classList.add("content-item");
+
+      contentItem.innerHTML = `
+      ${
+        item.sale_off == null && item.choice == null
+          ? `
+          <img
+            class="content-img"
+            src=${item.image}
+            alt=""
+          />
+          <div class="product-item">
+            <div class="item-price">
+              ₫
+              <p style="font-size: 20px">${item.price}</p>
+            </div>
+
+            <div class="sold">
+              <span>${item.first_sold}</span>
+              <img src="./assets/image/product/48x48.png" alt="" />
+              <span class="next-sold">${item.next_sold}</span>
+            </div>
+
+            <div class="discription">${item.discription}</div>
+
+            <div class="shipping">Free shipping</div>
+
+            <div class="content-button">
+              <button class="add-to-cart" id = ${item.id} >Add To Cart 🛒</button>
+            </div>
+          </div>
+        
+      `
+          : ""
+      }
+
+      ${
+        item.sale_off && item.choice == null
+          ? `
+                <img
+                  class="content-img"
+                  src=${item.image}
+                  alt=""
+                />
+                <div class="product-item">
+                  <div class="item-price">
+                    ₫
+                    <p style="font-size: 20px">${item.price}</p>
+                  </div>
+
+                  <div class="sale-off">${item.sale_off}</div>
+
+                  <div class="sold">
+                    <span>${item.first_sold}</span>
+                    <img src="./assets/image/product/48x48.png" alt="" />
+                    <span class="next-sold">${item.next_sold}</span>
+                  </div>
+
+                  <div class="discription">${item.discription}</div>
+
+                  <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
+                  </div>
+                </div>
+          `
+          : ""
+      }
+      
+      ${
+        item.sale_off == null && item.choice
+          ? `
+                <img
+                  class="content-img"
+                  src=${item.image}
+                  alt=""
+                />
+                <div class="product-item">
+                  <div class="item-price">
+                    <p class="after-price">₫${item.after_price}</p>
+                    <p class="befor-price">₫${item.before_price}</p>
+                  </div>
+
+                  <div class="choice">
+                    <img src=${item.choice[0]} alt="" />
+                    <img src=${item.choice[1]} alt="" />
+                  </div>
+
+                  <div class="sold">
+                    <span>${item.first_sold}</span>
+                    <img src="./assets/image/product/48x48.png" alt="" />
+                    <span class="next-sold">${item.next_sold}</span>
+                  </div>
+
+                  <div class="discription">${item.discription}</div>
+
+                  <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
+                  </div>
+                </div>
+      `
+          : ""
+      }
+
+      ${
+        item.sale_off && item.choice
+          ? `
+                <img
+                  class="content-img"
+                  src=${item.image}
+                  alt=""
+                />
+                <div class="product-item">
+                  <div class="item-price">
+                    ₫
+                    <p style="font-size: 20px">${item.price}</p>
+                  </div>
+
+                  <div class="sale-off">${item.sale_off}</div>
+                  <div class="choice">
+                    <img
+                      src=${item.choice}
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="sold">
+                    <span>${item.first_sold}</span>
+                    <img src="./assets/image/product/48x48.png" alt="" />
+                    <span class="next-sold">${item.next_sold}</span>
+                  </div>
+
+                  <div class="discription">${item.discription}</div>
+
+                  <div class="shipping">Free shipping</div>
+
+                  <div class="content-button">
+                    <button class="add-to-cart" id = ${item.id}>Add To Cart 🛒</button>
+                  </div>
+                </div>
+        `
+          : ""
+      }
+      `;
+      content.appendChild(contentItem);
+    });
+  });
+
+  searchInput.addEventListener("change", () => {
+    console.log(searchInput.value);
     let newValue = searchInput.value.toLowerCase();
     let filteredProducts = products.filter((item) =>
       item.discription.toLowerCase().includes(newValue)
