@@ -6,7 +6,7 @@
     <title>My Order</title>
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/order.css" />
+    <link rel="stylesheet" href="./assets/css/check-out.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -20,59 +20,108 @@
       <div class="container">
         <div class="header">
           <a href="index.html"><div class="header-favicon"></div></a>
-          <div class="shopping">
-            <div class="search">
-              <input type="text" placeholder="Search..." />
-              <button class="find">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
-          </div>
+          <div class="main">Check Out</div>
         </div>
       </div>
     </header>
 
-    <div class="main-content">
+    <div class="check-out">
       <div class="container">
-        <div class="order-summary">
-          <div class="orders">
-            <h1></h1>
-
-            <div class="cart-combine">
-              Welcome deal available on 1 item only
+        <div class="custom-item">
+          <div class="package">
+            <div class="shipping-address">
+              <i class="fa-solid fa-location-dot"></i>
+              Shipping Address
             </div>
 
-            <div class="my-order"></div>
+            <div class="address">+ Add New Address</div>
+
+            <div class="new-address">
+              <div class="new-addres">
+                <h3>New Address</h3>
+
+                <label for="">First and last name</label>
+                <input type="text" id="name" />
+                <label for="">Phone Number</label>
+                <input type="text" id="phone-number" />
+
+                <label for=""
+                  >Province/City, District/District, Ward/Commune</label
+                >
+                <div class="place">
+                  <select id="city"></select>
+
+                  <select id="district"></select>
+
+                  <select id="ward"></select>
+                </div>
+
+                <label for="">Add location</label>
+                <input type="text" id="location" />
+
+                <div>
+                  <button class="cancle">Cancle</button>
+                  <button class="complete">Complete</button>
+                </div>
+
+                <div class="exit">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="summary">
-            <div class="sum">
-              <h1>Summary</h1>
-              <div class="total">
-                <p>Total</p>
-                <div class="price">VND ₫<span>0.00</span></div>
+          <div class="payment-method">
+            <h3>Payment Methods</h3>
+
+            <p><i class="fa-regular fa-credit-card"></i> Add a new cart</p>
+            <div class="method">
+              <div class="first">
+                <img src="./assets/image/visa.png" alt="" /> 4221498695355439
               </div>
 
-              <a href="./check-out.html"
-                ><button class="submit">Check Out</button></a
-              >
+              <div class="change">Change</div>
             </div>
 
-            <div class="payment-method">
-              <h2>Payment Methods</h2>
+            <div class="add-new-cart">
+              <div class="new-cart">
+                <h3>Provide further information</h3>
 
-              <div class="image">
-                <img src="./assets/image/visa.png" alt="" />
-                <img src="./assets/image/master-cart.png" alt="" />
-                <img src="./assets/image/jcb.png" alt="" />
-                <img src="./assets/image/america.png" alt="" />
+                <div class="cart">
+                  <div>
+                    <label for="">Cart Number</label>
+                    <input type="text" id="cart-number" />
+                  </div>
+
+                  <div>
+                    <label for="">Cart Name</label>
+                    <input type="text" id="cart-name" />
+                  </div>
+                </div>
+
+                <div class="date">
+                  <div class="month">
+                    <label for="">MM</label>
+                    <input type="text" id="month" />
+                  </div>
+
+                  <div class="year">
+                    <label for="">YY</label>
+                    <input type="text" id="year" />
+                  </div>
+
+                  <div class="CVV">
+                    <label for="">CVV</label>
+                    <input type="text" id="CVV" />
+                  </div>
+                </div>
+
+                <button class="save">Save & Confirm</button>
+
+                <div class="close">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
               </div>
-
-              <h2>Buyer Protection</h2>
-              <p>
-                <img src="./assets/image/verified.png" alt="" /> Get full refund
-                if the item is not as described or if is not delivered
-              </p>
             </div>
           </div>
         </div>
@@ -182,6 +231,6 @@
         </div>
       </div>
     </footer>
-    <script src="./assets/js/myorder.js"></script>
+    <script type="module" src="./assets/js/check-out.js"></script>
   </body>
 </html>

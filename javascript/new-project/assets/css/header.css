@@ -21,6 +21,7 @@ header {
   position: fixed;
   z-index: 10;
   border-bottom: 5px solid #00000036;
+  top: 0;
 }
 
 .header {
