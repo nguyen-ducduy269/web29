@@ -256,20 +256,20 @@ function signUpForm() {
     console.log("3", passValue);
     console.log("4", reEnterPassValue);
     if (!fullNameValue && emailValue && passValue && reEnterPassValue) {
-      alert("Bạn chưa nhập họ tên");
+      alert("You have not entered your name!");
     }
     if (fullNameValue && !emailValue && passValue && reEnterPassValue) {
-      alert("Bạn phải đăng nhập tài khoản!");
+      alert("You must log in to your account!");
     }
     if (fullNameValue && emailValue && !passValue && reEnterPassValue) {
-      alert("Bạn phải đăng nhập mật khẩu!");
+      alert("You have not entered your password!");
     }
     if (fullNameValue && emailValue && passValue && !reEnterPassValue) {
-      alert("Nhập lại mật khẩu!");
+      alert("Please re-enter your password!");
     }
     if (fullNameValue && emailValue && passValue && reEnterPassValue) {
       if (passValue != reEnterPassValue) {
-        alert("Mật khẩu nhập lại không đúng!");
+        alert("Re-entered password is incorrect!");
       } else if (passValue == reEnterPassValue) {
         const account = {
           full_name: fullName.value,
@@ -278,7 +278,7 @@ function signUpForm() {
         };
         localStorage.setItem("account", JSON.stringify(account));
         accSignUp.classList.remove("sign-active");
-        alert("Bạn đã đăng kí tài khoản thành công!");
+        alert("You have successfully registered an account!");
       }
     }
   });
@@ -320,29 +320,29 @@ function signInForm() {
     let passSignInValue = passSignIn.value;
 
     if (emailSignInValue && !passSignInValue) {
-      alert("Bạn phải nhập tài khoản!");
+      alert("You must enter an account!");
     }
     if (emailSignInValue && !passSignInValue) {
-      alert("Bạn phải nhập mật khẩu!");
+      alert("You must enter a password!");
     }
     if (emailSignInValue && passSignInValue) {
       if (
         emailSignInValue != localAccount.email &&
         passSignInValue == localAccount.password
       ) {
-        alert("Sai tài khoản!");
+        alert("Wrong account!");
       }
       if (
         emailSignInValue == localAccount.email &&
         passSignInValue != localAccount.password
       ) {
-        alert("Sai mật khẩu!");
+        alert("Wrong password!");
       }
       if (
         emailSignInValue == localAccount.email &&
         passSignInValue == localAccount.password
       ) {
-        alert("Bạn đã đăng nhập thành công");
+        alert("Successful login!");
         accSignIn.classList.remove("sign-active");
 
         const main = document.querySelector(".main");

@@ -95,22 +95,20 @@ function addCart() {
     const year = document.getElementById("year").value;
     const CVV = document.getElementById("CVV").value;
 
-    console.log(cartNumber);
-    console.log(cartName);
-    console.log(month);
-    console.log(year);
-    console.log(CVV);
+    if (cartName && cartNumber && month && year && CVV) {
+      paymentP.classList.add("none");
+      method.classList.add("block");
+      const first = document.querySelector(".method .first");
+      first.innerHTML = `<img src="./assets/image/visa.png" alt="" /> ${cartNumber}`;
+      addNewCart.classList.remove("cart-active");
 
-    paymentP.classList.add("none");
-    method.classList.add("block");
-    const first = document.querySelector(".method .first");
-    first.innerHTML = `<img src="./assets/image/visa.png" alt="" /> ${cartNumber}`;
-    addNewCart.classList.remove("cart-active");
-
-    const change = document.querySelector(".change");
-    change.addEventListener("click", () => {
-      addNewCart.classList.add("cart-active");
-    });
+      const change = document.querySelector(".change");
+      change.addEventListener("click", () => {
+        addNewCart.classList.add("cart-active");
+      });
+    } else {
+      return false;
+    }
   });
 }
 
@@ -177,9 +175,25 @@ function renderSummary() {
 function placeOrder() {
   const btn = document.querySelector(".place-order");
   btn.addEventListener("click", () => {
-    console.log("aaaaa");
+    const addressText = document.querySelector(".address p");
+    console.log(addressText.innerHTML);
+    const methodText = document.querySelector(".payment-method p");
+    console.log(methodText.innerHTML);
+
+    if (
+      addressText.innerHTML != "+ Add New Address" &&
+      methodText.innerHTML !=
+        `<i class="fa-regular fa-credit-card"></i> Add a new cart`
+    ) {
+      console.log("aaaaaaa");
+    } else {
+      return false;
+    }
+    const listProducts = JSON.parse(localStorage.getItem("items"));
+    console.log(listProducts);
   });
 }
+
 function websiteRun() {
   openAndClose();
   renderPlace();

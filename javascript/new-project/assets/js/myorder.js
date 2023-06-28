@@ -8,7 +8,7 @@ function renderProduct() {
   if (shoppingItem.length == 0) {
     myOrder.innerHTML = `
     <div class="number-products">
-      <p>Hiện không có sản phẩm nào.</p>
+      <p>There are currently no products.</p>
     </div>
     `;
   } else {
@@ -177,7 +177,7 @@ function changeQuantities() {
       });
 
       deleteBtn[i].addEventListener("click", () => {
-        if (confirm("Bạn chắc chắn muốn xóa sản phẩm này?")) {
+        if (confirm("You definitely want to delete this product?")) {
           const listItem = JSON.parse(localStorage.getItem("array"));
           listItem.splice(i, 1);
           localStorage.setItem("array", JSON.stringify(listItem));
@@ -200,7 +200,7 @@ function changeQuantities() {
       });
 
       deleteBtn[i].addEventListener("click", () => {
-        if (confirm("Bạn chắc chắn muốn xóa sản phẩm này?")) {
+        if (confirm("There are currently no products?")) {
           const listItem = JSON.parse(localStorage.getItem("array"));
           listItem.splice(i, 1);
           localStorage.setItem("array", JSON.stringify(listItem));
@@ -276,39 +276,39 @@ function filterProduct() {
       ${
         item.type == "ring" && item.after_price == null
           ? `
-        <label class="checkbox-inline">
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <img src=${item.image} alt="" />
-        <div class="order-detail">
-            <p>${item.discription}</p>
-    
-            <div class="order-cost">VND ₫<span>${item.price}</span></div>
-            <div class="shipping">Free shipping</div>
-    
-            <div class="size-ring">
-                <p>Choose size ring: 7</p>
-                <div>
-                    <button value="7" class="value-7 size-ring-active">7</button>
-                    <button value="8" class="value-8">8</button>
-                    <button value="9" class="value-9">9</button>
+            <label class="checkbox-inline">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <img src=${item.image} alt="" />
+            <div class="order-detail">
+                <p>${item.discription}</p>
+        
+                <div class="order-cost">VND ₫<span>${item.price}</span></div>
+                <div class="shipping">Free shipping</div>
+        
+                <div class="size-ring">
+                    <p>Choose size ring: 7</p>
+                    <div>
+                        <button value="7" class="value-7 size-ring-active">7</button>
+                        <button value="8" class="value-8">8</button>
+                        <button value="9" class="value-9">9</button>
+                    </div>
+                </div>
+        
+                <div class="to-summary">
+                <div class="quantities">
+                    <button class="decrease">-</button>
+                    <div class="quantity">1</div>
+                    <button class="increase">+</button>
+                </div>
+        
+                <button class="delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
                 </div>
             </div>
-    
-            <div class="to-summary">
-            <div class="quantities">
-                <button class="decrease">-</button>
-                <div class="quantity">1</div>
-                <button class="increase">+</button>
-            </div>
-    
-            <button class="delete">
-                <i class="fa-regular fa-trash-can"></i>
-            </button>
-            </div>
-        </div>
-      `
+          `
           : ""
       }
     
