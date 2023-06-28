@@ -172,8 +172,13 @@ function renderSummary() {
       </div>
     `;
   });
+}
 
-  function placeOrder() {}
+function placeOrder() {
+  const btn = document.querySelector(".place-order");
+  btn.addEventListener("click", () => {
+    console.log("aaaaa");
+  });
 }
 function websiteRun() {
   openAndClose();
@@ -181,5 +186,6 @@ function websiteRun() {
   addCart();
   renderCustomProduct();
   renderSummary();
+  placeOrder();
 }
 websiteRun();
