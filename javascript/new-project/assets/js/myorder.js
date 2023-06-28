@@ -523,6 +523,7 @@ function renderTotalProduct() {
         productPrice: productPrice,
       });
 
+      summaryH1.innerHTML = "Check Out" + "(" + items.length + ")";
       for (let i = 0; i < items.length; i++) {
         summaryH1.addEventListener("click", () => {
           localStorage.setItem("items", JSON.stringify(items));

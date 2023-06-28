@@ -27,101 +27,117 @@
 
     <div class="check-out">
       <div class="container">
-        <div class="custom-item">
-          <div class="package">
-            <div class="shipping-address">
-              <i class="fa-solid fa-location-dot"></i>
-              Shipping Address
-            </div>
+        <div class="item">
+          <div class="custom-item">
+            <div class="package">
+              <div class="shipping-address">
+                <i class="fa-solid fa-location-dot"></i>
+                Shipping Address
+              </div>
 
-            <div class="address">+ Add New Address</div>
+              <div class="address">+ Add New Address</div>
 
-            <div class="new-address">
-              <div class="new-addres">
-                <h3>New Address</h3>
+              <div class="new-address">
+                <div class="new-addres">
+                  <h3>New Address</h3>
 
-                <label for="">First and last name</label>
-                <input type="text" id="name" />
-                <label for="">Phone Number</label>
-                <input type="text" id="phone-number" />
+                  <label for="">First and last name</label>
+                  <input type="text" id="name" />
+                  <label for="">Phone Number</label>
+                  <input type="text" id="phone-number" />
 
-                <label for=""
-                  >Province/City, District/District, Ward/Commune</label
-                >
-                <div class="place">
-                  <select id="city"></select>
+                  <label for=""
+                    >Province/City, District/District, Ward/Commune</label
+                  >
+                  <div class="place">
+                    <select id="city"></select>
 
-                  <select id="district"></select>
+                    <select id="district"></select>
 
-                  <select id="ward"></select>
-                </div>
+                    <select id="ward"></select>
+                  </div>
 
-                <label for="">Add location</label>
-                <input type="text" id="location" />
+                  <label for="">Add location</label>
+                  <input type="text" id="location" />
 
-                <div>
-                  <button class="cancle">Cancle</button>
-                  <button class="complete">Complete</button>
-                </div>
+                  <div class="button">
+                    <button class="cancle">Cancle</button>
+                    <button class="complete">Complete</button>
+                  </div>
 
-                <div class="exit">
-                  <i class="fa-solid fa-xmark"></i>
+                  <div class="exit">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <div class="payment-method">
+              <h3>Payment Methods</h3>
+
+              <p><i class="fa-regular fa-credit-card"></i> Add a new cart</p>
+              <div class="method">
+                <div class="methods">
+                  <div class="first"></div>
+
+                  <div class="change">Change</div>
+                </div>
+              </div>
+
+              <div class="add-new-cart">
+                <div class="new-cart">
+                  <h3>Provide further information</h3>
+
+                  <div class="cart">
+                    <div>
+                      <label for="">Cart Number</label>
+                      <input type="text" id="cart-number" />
+                    </div>
+
+                    <div>
+                      <label for="">Cart Name</label>
+                      <input type="text" id="cart-name" />
+                    </div>
+                  </div>
+
+                  <div class="date">
+                    <div class="month">
+                      <label for="">MM</label>
+                      <input type="text" id="month" />
+                    </div>
+
+                    <div class="year">
+                      <label for="">YY</label>
+                      <input type="text" id="year" />
+                    </div>
+
+                    <div class="CVV">
+                      <label for="">CVV</label>
+                      <input type="text" id="CVV" />
+                    </div>
+                  </div>
+
+                  <button class="save">Save & Confirm</button>
+
+                  <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="custom-products"></div>
           </div>
 
-          <div class="payment-method">
-            <h3>Payment Methods</h3>
+          <div class="custom">
+            <div class="summary"></div>
 
-            <p><i class="fa-regular fa-credit-card"></i> Add a new cart</p>
-            <div class="method">
-              <div class="first">
-                <img src="./assets/image/visa.png" alt="" /> 4221498695355439
-              </div>
+            <div class="keep-save">
+              <img src="./assets/image/aliexpress.webp" alt="" />
 
-              <div class="change">Change</div>
-            </div>
+              <p>AliExpress keeps your information and payment safe</p>
 
-            <div class="add-new-cart">
-              <div class="new-cart">
-                <h3>Provide further information</h3>
-
-                <div class="cart">
-                  <div>
-                    <label for="">Cart Number</label>
-                    <input type="text" id="cart-number" />
-                  </div>
-
-                  <div>
-                    <label for="">Cart Name</label>
-                    <input type="text" id="cart-name" />
-                  </div>
-                </div>
-
-                <div class="date">
-                  <div class="month">
-                    <label for="">MM</label>
-                    <input type="text" id="month" />
-                  </div>
-
-                  <div class="year">
-                    <label for="">YY</label>
-                    <input type="text" id="year" />
-                  </div>
-
-                  <div class="CVV">
-                    <label for="">CVV</label>
-                    <input type="text" id="CVV" />
-                  </div>
-                </div>
-
-                <button class="save">Save & Confirm</button>
-
-                <div class="close">
-                  <i class="fa-solid fa-xmark"></i>
-                </div>
-              </div>
+              <img src="./assets/image/keep-save.png" alt="" />
             </div>
           </div>
         </div>
