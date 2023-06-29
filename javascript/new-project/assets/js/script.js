@@ -383,10 +383,10 @@ function signInForm() {
   });
 }
 
+let array = [];
 function addToCart() {
   const btns = document.querySelectorAll(".add-to-cart");
   const btn = Array.prototype.slice.call(btns);
-  let array = [];
   btn.forEach((b) =>
     b.addEventListener("click", () => {
       const idProduct = b.getAttribute("id");
@@ -618,6 +618,22 @@ function filterProduct() {
       `;
       content.appendChild(contentItem);
     });
+
+    const btns = document.querySelectorAll(".add-to-cart");
+    const btn = Array.prototype.slice.call(btns);
+    array = JSON.parse(localStorage.getItem("array"));
+    btn.forEach((b) =>
+      b.addEventListener("click", () => {
+        const idProduct = b.getAttribute("id");
+        const productFind = products.find((el) => el.id === +idProduct);
+
+        array.push(productFind);
+        localStorage.setItem("array", JSON.stringify(array));
+
+        const numberItem = document.querySelector("header .number");
+        numberItem.innerHTML = array.length;
+      })
+    );
   });
 
   searchInput.addEventListener("change", () => {
@@ -781,6 +797,40 @@ function filterProduct() {
       `;
       content.appendChild(contentItem);
     });
+
+    const btns = document.querySelectorAll(".add-to-cart");
+    const btn = Array.prototype.slice.call(btns);
+    array = JSON.parse(localStorage.getItem("array"));
+    btn.forEach((b) =>
+      b.addEventListener("click", () => {
+        console.log("aaaaa");
+        const idProduct = b.getAttribute("id");
+        const productFind = products.find((el) => el.id === +idProduct);
+
+        array.push(productFind);
+        localStorage.setItem("array", JSON.stringify(array));
+
+        const numberItem = document.querySelector("header .number");
+        numberItem.innerHTML = array.length;
+      })
+    );
   });
+
+  // const btns = document.querySelectorAll(".add-to-cart");
+  // const btn = Array.prototype.slice.call(btns);
+  // let array = [];
+  // btn.forEach((b) =>
+  //   b.addEventListener("click", () => {
+  //     console.log("aaaaa");
+  //     const idProduct = b.getAttribute("id");
+  //     const productFind = products.find((el) => el.id === +idProduct);
+
+  //     array.push(productFind);
+  //     localStorage.setItem("array", JSON.stringify(array));
+
+  //     const numberItem = document.querySelector("header .number");
+  //     numberItem.innerHTML = array.length;
+  //   })
+  // );
 }
 filterProduct();

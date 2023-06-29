@@ -1,7 +1,7 @@
 const shoppingItem = JSON.parse(localStorage.getItem("array"));
 
-const ordersH1 = document.querySelector(".orders h1");
-ordersH1.innerHTML = "Shopping Cart" + "(" + shoppingItem.length + ")";
+const orderH1 = document.querySelector(".orders h1");
+orderH1.innerHTML = "Shopping Cart" + " " + "(" + shoppingItem.length + ")";
 
 function renderProduct() {
   const myOrder = document.querySelector(".my-order");
@@ -255,10 +255,50 @@ function totalPrice() {
   });
 }
 
+const items = [];
+function renderTotalProduct() {
+  const checkBox = document.querySelectorAll(".checkbox-inline input");
+  const summaryH1 = document.querySelector(".sum .submit");
+
+  checkBox.forEach((item) => {
+    item.addEventListener("click", () => {
+      const parentElement = item.parentNode.parentNode;
+
+      const nameItem = parentElement.querySelector(".order-detail p").innerHTML;
+
+      const imageItem = parentElement.querySelector("img");
+      const imageItemSrc = imageItem.src;
+
+      const unitPrice = Number(
+        parentElement.querySelector(".order-cost span").innerHTML
+      );
+
+      const quantity = parentElement.querySelector(".quantity").innerHTML;
+
+      const productPrice = unitPrice * quantity;
+
+      items.push({
+        imageItemSrc: imageItemSrc,
+        nameItem: nameItem,
+        unitPrice: unitPrice,
+        quantity: quantity,
+        productPrice: productPrice,
+      });
+
+      for (let i = 0; i < items.length; i++) {
+        summaryH1.addEventListener("click", () => {
+          localStorage.setItem("items", JSON.stringify(items));
+        });
+      }
+    });
+  });
+}
+
 function filterProduct() {
   const searchInput = document.querySelector(".search input");
   const searchBtn = document.querySelector(".search .find");
   const myOrder = document.querySelector(".my-order");
+  const shoppingItem = JSON.parse(localStorage.getItem("array"));
 
   searchBtn.addEventListener("click", () => {
     let newValue = searchInput.value.toLowerCase();
@@ -374,6 +414,47 @@ function filterProduct() {
       `;
       myOrder.appendChild(order);
     });
+
+    changeRingValue();
+
+    const decreaseBtn = document.querySelectorAll(".decrease");
+    const increaseBtn = document.querySelectorAll(".increase");
+    const deleteBtn = document.querySelectorAll(".delete");
+
+    decreaseBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        let quantity = Number(
+          item.parentNode.querySelector(".quantity").innerHTML
+        );
+        if (quantity > 1) {
+          quantity -= 1;
+          item.parentNode.querySelector(".quantity").innerHTML = quantity;
+        }
+      });
+    });
+
+    increaseBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        let quantity = Number(
+          item.parentNode.querySelector(".quantity").innerHTML
+        );
+        quantity += 1;
+        item.parentNode.querySelector(".quantity").innerHTML = quantity;
+      });
+    });
+
+    deleteBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        if (confirm("You definitely want to delete this product?")) {
+          const listItem = JSON.parse(localStorage.getItem("array"));
+          listItem.splice(item, 1);
+          localStorage.setItem("array", JSON.stringify(listItem));
+          window.location.reload();
+        }
+      });
+    });
+
+    totalPrice();
   });
 
   searchInput.addEventListener("change", () => {
@@ -490,46 +571,47 @@ function filterProduct() {
       `;
       myOrder.appendChild(order);
     });
-  });
-}
 
-const items = [];
-function renderTotalProduct() {
-  const checkBox = document.querySelectorAll(".checkbox-inline input");
-  const summaryH1 = document.querySelector(".sum .submit");
+    changeRingValue();
 
-  checkBox.forEach((item) => {
-    item.addEventListener("click", () => {
-      const parentElement = item.parentNode.parentNode;
+    const decreaseBtn = document.querySelectorAll(".decrease");
+    const increaseBtn = document.querySelectorAll(".increase");
+    const deleteBtn = document.querySelectorAll(".delete");
 
-      const nameItem = parentElement.querySelector(".order-detail p").innerHTML;
-
-      const imageItem = parentElement.querySelector("img");
-      const imageItemSrc = imageItem.src;
-
-      const unitPrice = Number(
-        parentElement.querySelector(".order-cost span").innerHTML
-      );
-
-      const quantity = parentElement.querySelector(".quantity").innerHTML;
-
-      const productPrice = unitPrice * quantity;
-
-      items.push({
-        imageItemSrc: imageItemSrc,
-        nameItem: nameItem,
-        unitPrice: unitPrice,
-        quantity: quantity,
-        productPrice: productPrice,
+    decreaseBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        let quantity = Number(
+          item.parentNode.querySelector(".quantity").innerHTML
+        );
+        if (quantity > 1) {
+          quantity -= 1;
+          item.parentNode.querySelector(".quantity").innerHTML = quantity;
+        }
       });
-
-      summaryH1.innerHTML = "Check Out" + "(" + items.length + ")";
-      for (let i = 0; i < items.length; i++) {
-        summaryH1.addEventListener("click", () => {
-          localStorage.setItem("items", JSON.stringify(items));
-        });
-      }
     });
+
+    increaseBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        let quantity = Number(
+          item.parentNode.querySelector(".quantity").innerHTML
+        );
+        quantity += 1;
+        item.parentNode.querySelector(".quantity").innerHTML = quantity;
+      });
+    });
+
+    deleteBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        if (confirm("You definitely want to delete this product?")) {
+          const listItem = JSON.parse(localStorage.getItem("array"));
+          listItem.splice(item, 1);
+          localStorage.setItem("array", JSON.stringify(listItem));
+          window.location.reload();
+        }
+      });
+    });
+
+    totalPrice();
   });
 }
 

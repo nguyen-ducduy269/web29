@@ -1,11 +1,15 @@
 import location from "./check-out-data.js";
 let { city, district, wart } = location;
+let checked = false;
+let check = false;
 
 function openAndClose() {
   const address = document.querySelector(".package .address");
   const newAddress = document.querySelector(".new-address");
   address.addEventListener("click", () => {
     newAddress.classList.add("address-active");
+    checked = true;
+    console.log(checked);
   });
 
   const exit = document.querySelector(".exit");
@@ -17,6 +21,8 @@ function openAndClose() {
   const paymentOpen = document.querySelector(".payment-method p");
   paymentOpen.addEventListener("click", () => {
     addNewCart.classList.add("cart-active");
+    check = true;
+    console.log(check);
   });
   const paymentClose = document.querySelector(".close");
   paymentClose.addEventListener("click", () => {
@@ -74,6 +80,7 @@ function renderPlace() {
       `<p>
       ${inputName}, ${inputNumber}, ${detailLocation}, ${wardValue},  ${districtValue}, ${cityValue}</p>` +
       `<div onclick=${changeLocation} style="color: blue">Change</div>`;
+    checked = true;
     newAddress.classList.remove("address-active");
   });
 
@@ -106,6 +113,7 @@ function addCart() {
       change.addEventListener("click", () => {
         addNewCart.classList.add("cart-active");
       });
+      check = true;
     } else {
       return false;
     }
@@ -126,7 +134,9 @@ function renderCustomProduct() {
         <div class="title">${product.nameItem}</div>
 
         <div class="infor">
-          <div class="price"><b>Price: ₫${product.productPrice}</b></div>
+          <div class="price"><b>Price: ₫${product.unitPrice.toFixed(
+            3
+          )}</b></div>
 
           <div class="quantity">Quantity: ${product.quantity}</div>
         </div>
@@ -140,12 +150,16 @@ function renderCustomProduct() {
 
 function renderSummary() {
   const summary = document.querySelector(".summary");
-  products.map((item) => {
+  let totalPrice = 0;
+  for (let i = 0; i < products.length; i++) {
+    console.log("products[i].unitPrice", products[i].productPrice);
+    totalPrice += products[i].productPrice;
+
     summary.innerHTML = `
       <h3>Summary</h3>
       <div class="total-item-cost">
         <p>Total item costs</p>
-        <div class="cost">₫${item.unitPrice}</div>
+        <div class="cost">₫${totalPrice.toFixed(3)}</div>
       </div>
 
       <div class="total-shipping">
@@ -155,7 +169,7 @@ function renderSummary() {
 
       <div class="sum">
         <p>Total</p>
-        <div class="sum-price">₫${item.unitPrice}</div>
+        <div class="sum-price">₫${totalPrice.toFixed(3)}</div>
       </div>
 
       <button class="place-order">Place Order</button>
@@ -169,28 +183,33 @@ function renderSummary() {
         >
       </div>
     `;
-  });
+  }
 }
 
 function placeOrder() {
   const btn = document.querySelector(".place-order");
+  const cost = document.querySelector(".cost");
+  const sumPrice = document.querySelector(".sum-price");
   btn.addEventListener("click", () => {
-    const addressText = document.querySelector(".address p");
-    console.log(addressText.innerHTML);
-    const methodText = document.querySelector(".payment-method p");
-    console.log(methodText.innerHTML);
+    if (checked == false && check == true) {
+      const newAddress = document.querySelector(".new-address");
+      newAddress.classList.add("address-active");
+    } else if (checked == true && check == false) {
+      const addNewCart = document.querySelector(".add-new-cart");
+      addNewCart.classList.add("cart-active");
+    } else if (checked == true && check == true) {
+      localStorage.removeItem("items");
+      const customProd = document.querySelector(".custom-products");
+      customProd.innerHTML = `
+      <p style="text-align: center">
+        You have successfully paid, please return to the
+        <a href="index.html">Homepage</a> to continue shopping!
+      </p>
+      `;
 
-    if (
-      addressText.innerHTML != "+ Add New Address" &&
-      methodText.innerHTML !=
-        `<i class="fa-regular fa-credit-card"></i> Add a new cart`
-    ) {
-      console.log("aaaaaaa");
-    } else {
-      return false;
+      cost.innerHTML = "₫0.000";
+      sumPrice.innerHTML = "₫0.000";
     }
-    const listProducts = JSON.parse(localStorage.getItem("items"));
-    console.log(listProducts);
   });
 }
 
