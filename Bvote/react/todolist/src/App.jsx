@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AddJob } from "./sceens/AddJob";
 import { EditJob } from "./sceens/EditJob";
 import styled from "styled-components";
@@ -26,13 +26,21 @@ function App() {
     setToggle(false);
   };
 
+  const itemToSet = localStorage.setItem("item", JSON.stringify(item));
+  const renderWork = () => {
+    const work = JSON.parse(localStorage.getItem("item"));
+    console.log(work);
+  };
+  renderWork();
+
   const onAdd = (aJob) => {
     const newJob = { ...aJob, id: array.length + 1 }; // Tăng id khi thêm công việc mới
     setArray([...array, newJob]);
     setItem([...item, newJob]);
-    localStorage.setItem("data1", JSON.stringify(array));
-    localStorage.setItem("data2", JSON.stringify(item));
   };
+  useEffect(() => {
+    itemToSet;
+  }, [onAdd]);
 
   return (
     <>

@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Arrange } from "./Arrange";
 import styled from "styled-components";
 
 export const More = ({ setArray, array }) => {
   const [searchValue, setSearchValue] = useState("");
+  const items = localStorage.getItem("item");
+  const itemss = items.split();
+  console.log("type", typeof itemss);
 
   const handleSearch = () => {
     console.log("array", array);
@@ -19,7 +22,7 @@ export const More = ({ setArray, array }) => {
       console.log("newArray", newArray);
     }
     if (searchValue == "" || searchValue == null) {
-      setArray(array);
+      setArray(items);
     }
   };
 
