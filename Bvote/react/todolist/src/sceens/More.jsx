@@ -6,13 +6,21 @@ export const More = ({ setArray, array }) => {
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearch = () => {
-    let newArray = [...array];
-    console.log("1", newArray);
-    const searched = searchValue.toUpperCase();
-    newArray = newArray.filter((item) => {
-      return item.name.toUpperCase().includes(searched);
-    });
-    setArray(newArray);
+    console.log("array", array);
+    const prevArray = [...array];
+    console.log("prevArray", prevArray);
+    if (searchValue != "" && searchValue != null) {
+      let newArray = [...array];
+      const searched = searchValue.toUpperCase();
+      newArray = newArray.filter((item) => {
+        return item.name.toUpperCase().includes(searched);
+      });
+      setArray(newArray);
+      console.log("newArray", newArray);
+    }
+    if (searchValue == "" || searchValue == null) {
+      setArray(array);
+    }
   };
 
   const [showArrange, setShowArrange] = useState(false);

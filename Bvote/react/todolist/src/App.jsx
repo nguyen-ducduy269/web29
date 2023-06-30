@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { AddJob } from "./sceens/AddJob";
 import { EditJob } from "./sceens/EditJob";
 import styled from "styled-components";
-import { Data } from "./Data";
 import { OnRightJob } from "./sceens/OnRightJob";
 
 function App() {
-  const [array, setArray] = useState(Data);
+  const [array, setArray] = useState([]);
+  const [item, setItem] = useState([]);
   const [display, setDisplay] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
 
   const showDisplay = () => {
@@ -18,9 +19,19 @@ function App() {
     setDisplay(false);
   };
 
+  const showToggle = () => {
+    setToggle(true);
+  };
+  const closeToggle = () => {
+    setToggle(false);
+  };
+
   const onAdd = (aJob) => {
     const newJob = { ...aJob, id: array.length + 1 }; // Tăng id khi thêm công việc mới
-    setArray((prevArray) => [...prevArray, newJob]);
+    setArray([...array, newJob]);
+    setItem([...item, newJob]);
+    localStorage.setItem("data1", JSON.stringify(array));
+    localStorage.setItem("data2", JSON.stringify(item));
   };
 
   return (
@@ -34,20 +45,25 @@ function App() {
             false
           )}
 
-          <EditJob
-            array={array}
-            setArray={setArray}
-            updateJob={updateJob}
-            setUpdateJob={setUpdateJob}
-          />
-
-          <AddButton onClick={showDisplay}>Thêm công việc</AddButton>
+          {toggle ? (
+            <EditJob
+              array={array}
+              setArray={setArray}
+              updateJob={updateJob}
+              setUpdateJob={setUpdateJob}
+              closeToggle={closeToggle}
+            />
+          ) : (
+            false
+          )}
         </LeftJob>
 
         <RightJob>
+          <AddButton onClick={showDisplay}>Thêm công việc</AddButton>
           <OnRightJob
             array={array}
             setArray={setArray}
+            showToggle={showToggle}
             setUpdateJob={setUpdateJob}
           />
         </RightJob>
@@ -80,6 +96,7 @@ const Container = styled.div`
   }
 
   .form {
+    display: block;
     height: 190px;
     border: 1px solid bisque;
     padding: 10px 10px;
@@ -128,8 +145,6 @@ const LeftJob = styled.div`
 
 const AddButton = styled.button`
   position: relative;
-  top: -100%;
-  right: -105%;
   width: 150px;
   height: 30px;
   background-color: blue;

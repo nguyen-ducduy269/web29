@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const Tr = ({ array, setArray, setUpdateJob, search }) => {
+export const Tr = ({ array, setArray, setUpdateJob, search, showToggle }) => {
   const onDelete = (id) => {
     setArray((prevArray) => prevArray.filter((newArray) => newArray.id !== id));
 
     const deleArr = array.filter((newArray) => newArray.id === id);
     console.log("deleArr", deleArr);
+  };
+
+  const editBtn = (e) => {
+    showToggle(true);
+    setUpdateJob({
+      id: e.id,
+      name: e.name,
+      status: e.status,
+    });
   };
   return (
     <>
@@ -23,16 +32,7 @@ export const Tr = ({ array, setArray, setUpdateJob, search }) => {
               <p className="status-active">{e.status}</p>
             </td>
             <td className="activity button">
-              <button
-                className="btn_edit"
-                onClick={() =>
-                  setUpdateJob({
-                    id: e.id,
-                    name: e.name,
-                    status: e.status,
-                  })
-                }
-              >
+              <button className="btn_edit" onClick={() => editBtn(e)}>
                 Sửa
               </button>
               <button className="btn_remove" onClick={() => onDelete(e.id)}>

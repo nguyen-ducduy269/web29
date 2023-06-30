@@ -1,6 +1,12 @@
 import React from "react";
 
-export const EditJob = ({ array, setArray, updateJob, setUpdateJob }) => {
+export const EditJob = ({
+  array,
+  setArray,
+  updateJob,
+  setUpdateJob,
+  closeToggle,
+}) => {
   const cancelUpdate = () => {
     setUpdateJob("");
   };
@@ -22,6 +28,15 @@ export const EditJob = ({ array, setArray, updateJob, setUpdateJob }) => {
     setUpdateJob("");
   };
 
+  const btnAdd = () => {
+    closeToggle();
+    updatingJob();
+  };
+
+  const btnRemove = () => {
+    closeToggle();
+    cancelUpdate();
+  };
   return (
     <>
       {
@@ -53,10 +68,10 @@ export const EditJob = ({ array, setArray, updateJob, setUpdateJob }) => {
             </select>
 
             <div className="button">
-              <button className="btn_add" onClick={updatingJob}>
+              <button className="btn_add" onClick={btnAdd}>
                 Sửa
               </button>
-              <button className="btn_remove" onClick={cancelUpdate}>
+              <button className="btn_remove" onClick={btnRemove}>
                 Hủy bỏ
               </button>
             </div>

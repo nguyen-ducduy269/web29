@@ -445,16 +445,7 @@ function decrLiterature(listStudent) {
 
 // sắp xếp học sinh theo thứ tự có tổng điểm toán văn từ thấp đến cao
 function incrSumScore(listStudent) {
-  listStudent.sort(function (a, b) {
-    if (a.sumScore > b.sumScore) {
-      return 1;
-    }
-    if (b.sumScore > a.sumScore) {
-      return -1;
-    }
-    return 0;
-  });
-
+  listStudent.sort((a, b) => (a.sumScore > b.sumScore ? 1 : -1));
   createTable();
 }
 
