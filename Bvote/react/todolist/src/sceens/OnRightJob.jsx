@@ -36,7 +36,7 @@ export const OnRightJob = ({ array, setArray, showToggle, setUpdateJob }) => {
               ></input>
             </td>
 
-            <Status array={array} setArray={setArray} />
+            <Status setArray={setArray} />
             <td className="activity"></td>
           </tr>
 

@@ -4,14 +4,9 @@ import styled from "styled-components";
 
 export const More = ({ setArray, array }) => {
   const [searchValue, setSearchValue] = useState("");
-  const items = localStorage.getItem("item");
-  const itemss = items.split();
-  console.log("type", typeof itemss);
+  const items = JSON.parse(localStorage.getItem("item"));
 
   const handleSearch = () => {
-    console.log("array", array);
-    const prevArray = [...array];
-    console.log("prevArray", prevArray);
     if (searchValue != "" && searchValue != null) {
       let newArray = [...array];
       const searched = searchValue.toUpperCase();
@@ -19,7 +14,6 @@ export const More = ({ setArray, array }) => {
         return item.name.toUpperCase().includes(searched);
       });
       setArray(newArray);
-      console.log("newArray", newArray);
     }
     if (searchValue == "" || searchValue == null) {
       setArray(items);
@@ -50,7 +44,7 @@ export const More = ({ setArray, array }) => {
           Sắp xếp
         </button>
         {showArrange ? (
-          <Arrange array={array} setArray={setArray} closeArrng={closeArrng} />
+          <Arrange setArray={setArray} closeArrng={closeArrng} />
         ) : (
           false
         )}

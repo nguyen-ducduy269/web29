@@ -27,20 +27,15 @@ function App() {
   };
 
   const itemToSet = localStorage.setItem("item", JSON.stringify(item));
-  const renderWork = () => {
-    const work = JSON.parse(localStorage.getItem("item"));
-    console.log(work);
-  };
-  renderWork();
-
   const onAdd = (aJob) => {
     const newJob = { ...aJob, id: array.length + 1 }; // Tăng id khi thêm công việc mới
     setArray([...array, newJob]);
     setItem([...item, newJob]);
+    localStorage.setItem("item", JSON.stringify(item));
   };
   useEffect(() => {
     itemToSet;
-  }, [onAdd]);
+  }, [item]);
 
   return (
     <>

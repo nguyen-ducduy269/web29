@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-export const Arrange = ({ setArray, array, closeArrng }) => {
+export const Arrange = ({ setArray, closeArrng }) => {
   const [arrange, setArrange] = useState("");
-  console.log(arrange);
+  const work = JSON.parse(localStorage.getItem("item"));
 
   const handleArrange = (value) => {
-    // setArrange(e.target.value);
-    console.log(value);
-
-    let newArray = [...array];
+    let newArray = [...work];
 
     newArray = newArray.filter((item) => {
       return item.status.includes(value);
@@ -20,7 +17,7 @@ export const Arrange = ({ setArray, array, closeArrng }) => {
   };
 
   const fromAToZ = () => {
-    let newArray = [...array];
+    let newArray = [...work];
 
     newArray = newArray.sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -30,7 +27,7 @@ export const Arrange = ({ setArray, array, closeArrng }) => {
   };
 
   const fromZToA = () => {
-    let newArray = [...array];
+    let newArray = [...work];
 
     newArray = newArray
       .sort((a, b) => {

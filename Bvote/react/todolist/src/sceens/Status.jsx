@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 
-export const Status = ({ array, setArray }) => {
+export const Status = ({ setArray }) => {
   const [stat, setStat] = useState("");
+  const work = JSON.parse(localStorage.getItem("item"));
 
-  const handleStat = () => {
-    let newStat = [...array];
-    console.log("newStat", newStat);
+  console.log("work", work);
 
-    const status = stat.toUpperCase();
+  const handleStat = (e) => {
+    if (e.target.value == "Tất cả") {
+      setArray(work);
+    } else {
+      let newStat = [...work];
+      console.log("newStat", newStat);
 
-    newStat = newStat.filter((item) => {
-      return item.status.toUpperCase().includes(status);
-    });
-    setArray(newStat);
+      const status = stat.toUpperCase();
+
+      newStat = newStat.filter((item) => {
+        return item.status.toUpperCase().includes(status);
+      });
+      setArray(newStat);
+    }
   };
 
   return (
