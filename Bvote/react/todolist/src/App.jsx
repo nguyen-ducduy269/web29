@@ -26,15 +26,13 @@ function App() {
     setToggle(false);
   };
 
-  const itemToSet = localStorage.setItem("item", JSON.stringify(item));
   const onAdd = (aJob) => {
     const newJob = { ...aJob, id: array.length + 1 }; // Tăng id khi thêm công việc mới
     setArray([...array, newJob]);
     setItem([...item, newJob]);
-    localStorage.setItem("item", JSON.stringify(item));
   };
   useEffect(() => {
-    itemToSet;
+    localStorage.setItem("item", JSON.stringify(item));
   }, [item]);
 
   return (
@@ -59,6 +57,8 @@ function App() {
           ) : (
             false
           )}
+
+          {display ? toggle : false}
         </LeftJob>
 
         <RightJob>

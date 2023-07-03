@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 export const Arrange = ({ setArray, closeArrng }) => {
-  const [arrange, setArrange] = useState("");
   const work = JSON.parse(localStorage.getItem("item"));
 
   const handleArrange = (value) => {

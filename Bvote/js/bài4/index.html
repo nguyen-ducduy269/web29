@@ -6,29 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div id="demo">
       <div class="calculator">
-        <div class="display">0</div>
-        <div class="calculator-button">
-          <button class="action" data-action="add">+</button>
-          <button class="action" data-action="subtract">-</button>
-          <button class="action" data-action="multiply">&times;</button>
-          <button class="action" data-action="divide">÷</button>
-          <button class="number">7</button>
-          <button class="number">8</button>
-          <button class="number">9</button>
-          <button class="number">4</button>
-          <button class="number">5</button>
-          <button class="number">6</button>
-          <button class="number">1</button>
-          <button class="number">2</button>
-          <button class="number">3</button>
-          <button class="number">0</button>
-          <button class="number" data-action="decimal">.</button>
-          <button class="number" data-action="clear">AC</button>
-          <button class="calculate" data-action="calculate">=</button>
+        <div class="expression">
+          <div class="calculation"></div>
+          <div class="result">0</div>
+        </div>
+
+        <div class="calculate">
+          <div class="first">
+            <div id="remainder" class="button">%</div>
+            <div id="square" class="button">
+              <img src="power.png" alt="" />
+            </div>
+            <div id="square-root" class="button">
+              <i class="fa-solid fa-square-root-variable"></i>
+            </div>
+            <div id="AC" class="button">AC</div>
+          </div>
+
+          <div style="display: flex">
+            <div class="second">
+              <div id="(" class="button">(</div>
+              <div id=")" class="button">)</div>
+              <div id="delete" class="button">
+                <img src="delete.png" alt="" />
+              </div>
+              <div id="7" class="button value">7</div>
+              <div id="8" class="button value">8</div>
+              <div id="9" class="button value">9</div>
+              <div id="4" class="button value">4</div>
+              <div id="5" class="button value">5</div>
+              <div id="6" class="button value">6</div>
+              <div id="3" class="button value">3</div>
+              <div id="2" class="button value">2</div>
+              <div id="1" class="button value">1</div>
+              <div
+                id="switch-btn"
+                class="button"
+                style="border-bottom-left-radius: 7px"
+              >
+                +/-
+              </div>
+              <div id="0" class="button value">0</div>
+              <div id="." class="button">.</div>
+            </div>
+
+            <div class="third">
+              <div id="divide" class="calculations button">
+                <i class="fa-solid fa-divide"></i>
+              </div>
+              <div id="multiplication" class="calculations button">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div id="minus" class="calculations button">
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <div id="plus" class="calculations button">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                id="equal"
+                class="equal button"
+                style="border-bottom-right-radius: 7px"
+              >
+                <i class="fa-solid fa-equals"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
