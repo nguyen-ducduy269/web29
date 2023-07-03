@@ -8,22 +8,13 @@ function App() {
   const [array, setArray] = useState([]);
   const [item, setItem] = useState([]);
   const [display, setDisplay] = useState(false);
-  const [toggle, setToggle] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
-
   const showDisplay = () => {
     setDisplay(true);
   };
 
   const closeDisplay = () => {
     setDisplay(false);
-  };
-
-  const showToggle = () => {
-    setToggle(true);
-  };
-  const closeToggle = () => {
-    setToggle(false);
   };
 
   const onAdd = (aJob) => {
@@ -41,24 +32,18 @@ function App() {
       <Container>
         <LeftJob>
           {display ? (
-            <AddJob onAdd={onAdd} closeDisplay={closeDisplay} />
-          ) : (
-            false
-          )}
-
-          {toggle ? (
-            <EditJob
+            <AddJob
               array={array}
-              setArray={setArray}
+              onAdd={onAdd}
+              closeDisplay={closeDisplay}
+              job={updateJob}
               updateJob={updateJob}
+              setArray={setArray}
               setUpdateJob={setUpdateJob}
-              closeToggle={closeToggle}
             />
           ) : (
             false
           )}
-
-          {display ? toggle : false}
         </LeftJob>
 
         <RightJob>
@@ -66,7 +51,7 @@ function App() {
           <OnRightJob
             array={array}
             setArray={setArray}
-            showToggle={showToggle}
+            showDisplay={showDisplay}
             setUpdateJob={setUpdateJob}
           />
         </RightJob>

@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 
-export const Tr = ({ array, setArray, setUpdateJob, search, showToggle }) => {
+export const Tr = ({ array, setArray, setUpdateJob, search, showDisplay }) => {
   const onDelete = (id) => {
     setArray((prevArray) => prevArray.filter((newArray) => newArray.id !== id));
-
-    const deleArr = array.filter((newArray) => newArray.id === id);
-    console.log("deleArr", deleArr);
   };
 
-  const editBtn = (e) => {
-    showToggle(true);
-    setUpdateJob({
+  const changeJob = (e) => {
+    let newEnterJob = {
       id: e.id,
       name: e.name,
       status: e.status,
-    });
+    };
+    setUpdateJob(newEnterJob);
+  };
+
+  const editBtn = (e) => {
+    showDisplay();
+    changeJob(e);
   };
   return (
     <>

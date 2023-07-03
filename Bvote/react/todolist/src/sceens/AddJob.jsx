@@ -1,21 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
-export const AddJob = ({ onAdd, closeDisplay }) => {
+export const AddJob = ({
+  array,
+  updateJob,
+  onAdd,
+  closeDisplay,
+  job,
+  setArray,
+  setUpdateJob,
+}) => {
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
+  const updatingJob = () => {
+    let indexToUpdate = array.findIndex((item) => item.id === job.id);
+    let newArray = [...array];
+    newArray[indexToUpdate] = { ...job, name, status };
+    setArray(newArray);
+    setUpdateJob("");
+  };
 
   const handleSubmit = () => {
-    console.log("name", name);
-    console.log("status", status);
-    onAdd({
-      name: name,
-      status: status,
-    });
+    if (!job) {
+      onAdd({
+        name: name,
+        status: status,
+      });
 
-    setName("");
-    closeDisplay();
+      setName("");
+      closeDisplay();
+    } else {
+      updatingJob();
+    }
   };
+
+  useEffect(() => {
+    console.log("job", job);
+    if (!job) {
+      setName("");
+      setStatus("Kích hoạt");
+    } else {
+      setName(job.name);
+      setStatus(job.status);
+    }
+  }, []);
 
   return (
     <>

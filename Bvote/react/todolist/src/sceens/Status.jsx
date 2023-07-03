@@ -4,8 +4,6 @@ export const Status = ({ setArray }) => {
   const [stat, setStat] = useState("");
   const work = JSON.parse(localStorage.getItem("item"));
 
-  console.log("work", work);
-
   const handleStat = (e) => {
     if (e.target.value == "Tất cả") {
       setArray(work);

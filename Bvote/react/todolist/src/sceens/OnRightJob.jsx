@@ -3,9 +3,8 @@ import { More } from "./More";
 import { Tr } from "./Tr";
 import { Status } from "./Status";
 
-export const OnRightJob = ({ array, setArray, showToggle, setUpdateJob }) => {
+export const OnRightJob = ({ array, setArray, showDisplay, setUpdateJob }) => {
   const [search, setSearch] = useState("");
-
   return (
     <>
       <More
@@ -45,7 +44,7 @@ export const OnRightJob = ({ array, setArray, showToggle, setUpdateJob }) => {
             setArray={setArray}
             setUpdateJob={setUpdateJob}
             search={search}
-            showToggle={showToggle}
+            showDisplay={showDisplay}
           />
         </tbody>
       </table>
