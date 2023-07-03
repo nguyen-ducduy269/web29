@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export const AddJob = ({
   array,
-  updateJob,
   onAdd,
   closeDisplay,
   job,
@@ -35,7 +34,6 @@ export const AddJob = ({
   };
 
   useEffect(() => {
-    console.log("job", job);
     if (!job) {
       setName("");
       setStatus("Kích hoạt");

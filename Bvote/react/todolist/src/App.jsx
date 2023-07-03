@@ -37,7 +37,6 @@ function App() {
               onAdd={onAdd}
               closeDisplay={closeDisplay}
               job={updateJob}
-              updateJob={updateJob}
               setArray={setArray}
               setUpdateJob={setUpdateJob}
             />
