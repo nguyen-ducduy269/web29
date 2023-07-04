@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { AddJob } from "./sceens/AddJob";
-import { EditJob } from "./sceens/EditJob";
+import { More } from "./sceens/More";
+import { Status } from "./sceens/Status";
 import styled from "styled-components";
-import { OnRightJob } from "./sceens/OnRightJob";
 
 function App() {
   const [array, setArray] = useState([]);
   const [item, setItem] = useState([]);
   const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
+  const [name, setName] = useState("");
+  const [status, setStatus] = useState("Kích hoạt");
+  const [search, setSearch] = useState("");
+
   const showDisplay = () => {
     setDisplay(true);
   };
@@ -17,14 +21,32 @@ function App() {
     setDisplay(false);
   };
 
+  const handleOpen = () => {
+    setDisplay(true);
+    setUpdateJob(null);
+    setName("");
+    setStatus("Kích hoạt");
+  };
+
   const onAdd = (aJob) => {
-    const newJob = { ...aJob, id: array.length + 1 }; // Tăng id khi thêm công việc mới
+    const newJob = { ...aJob, id: array.length + 1 };
     setArray([...array, newJob]);
     setItem([...item, newJob]);
   };
+
   useEffect(() => {
     localStorage.setItem("item", JSON.stringify(item));
   }, [item]);
+
+  const onDelete = (id) => {
+    setArray((prevArray) => prevArray.filter((newArray) => newArray.id !== id));
+  };
+
+  const editBtn = (e) => {
+    showDisplay();
+    setName(e.name);
+    setStatus(e.status);
+  };
 
   return (
     <>
@@ -39,6 +61,10 @@ function App() {
               job={updateJob}
               setArray={setArray}
               setUpdateJob={setUpdateJob}
+              name={name}
+              setName={setName}
+              status={status}
+              setStatus={setStatus}
             />
           ) : (
             false
@@ -46,13 +72,67 @@ function App() {
         </LeftJob>
 
         <RightJob>
-          <AddButton onClick={showDisplay}>Thêm công việc</AddButton>
-          <OnRightJob
+          <AddButton onClick={handleOpen}>Thêm công việc</AddButton>
+          <More
+            setArray={(v) => {
+              setArray(v);
+            }}
             array={array}
-            setArray={setArray}
-            showDisplay={showDisplay}
-            setUpdateJob={setUpdateJob}
           />
+
+          <table>
+            <thead>
+              <tr>
+                <td className="stt">STT</td>
+                <td className="name">Tên</td>
+                <td className="status">Trạng thái</td>
+                <td className="activity">Hành động</td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td className="stt"></td>
+                <td className="name">
+                  <input
+                    className="add-input"
+                    type="text"
+                    onChange={(e) => setSearch(e.target.value)}
+                  ></input>
+                </td>
+
+                <Status setArray={setArray} />
+                <td className="activity"></td>
+              </tr>
+
+              {array
+                ?.filter((item) => {
+                  return search.toLocaleLowerCase() === ""
+                    ? item
+                    : item.name.toLocaleLowerCase().includes(search);
+                })
+                .map((e, i) => (
+                  <tr key={i}>
+                    <td className="stt">{i + 1}</td>
+                    <td className="name">{e.name}</td>
+                    <td className="status">
+                      <p className="status-active">{e.status}</p>
+                    </td>
+                    <td className="activity button">
+                      <button className="btn_edit" onClick={() => editBtn(e)}>
+                        Sửa
+                      </button>
+                      <button
+                        className="btn_remove"
+                        onClick={() => onDelete(e.id)}
+                      >
+                        Xóa
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
         </RightJob>
       </Container>
     </>

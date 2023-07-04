@@ -8,15 +8,18 @@ export const AddJob = ({
   job,
   setArray,
   setUpdateJob,
+  name,
+  setName,
+  status,
+  setStatus,
 }) => {
-  const [name, setName] = useState("");
-  const [status, setStatus] = useState("Kích hoạt");
   const updatingJob = () => {
     let indexToUpdate = array.findIndex((item) => item.id === job.id);
     let newArray = [...array];
     newArray[indexToUpdate] = { ...job, name, status };
     setArray(newArray);
     setUpdateJob("");
+    closeDisplay();
   };
 
   const handleSubmit = () => {
@@ -25,7 +28,6 @@ export const AddJob = ({
         name: name,
         status: status,
       });
-
       setName("");
       closeDisplay();
     } else {
@@ -34,12 +36,12 @@ export const AddJob = ({
   };
 
   useEffect(() => {
-    if (!job) {
-      setName("");
-      setStatus("Kích hoạt");
-    } else {
+    if (job) {
       setName(job.name);
       setStatus(job.status);
+    } else {
+      setName("");
+      setStatus("Kích hoạt");
     }
   }, []);
 
