@@ -50,9 +50,10 @@ export const AddJob = ({
       <div className="left">
         <p className="add">Thêm công việc</p>
         <div className="form">
-          <label>Tên: </label>
+          <label htmlFor="name">Tên: </label>
           <br />
           <input
+            id="name"
             className="name"
             type="text"
             value={name}
