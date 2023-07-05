@@ -59,7 +59,7 @@ function App() {
       .catch((error) => console.log(error));
   };
 
-  const editBtn = (e) => {
+  const editBtn = async (e) => {
     showDisplay();
     let newEnterJob = {
       id: e.id,
@@ -69,23 +69,16 @@ function App() {
     setUpdateJob(newEnterJob);
     setName(e.name);
     setStatus(e.status);
-  };
 
-  const updateBtn = () => {
-    const updatedJob = {
-      id: updateJob.id,
-      name: name,
-      status: status,
-    };
-
-    axios
-      .put(`http://localhost:3000/data/${updateJob.id}`, updatedJob)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      const response = await axios.put(
+        `http://localhost:3000/data/${e.id}`,
+        newEnterJob
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

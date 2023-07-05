@@ -1,9 +1,9 @@
 {
   "data": [
     {
+      "id": 1,
       "name": "lau nha",
-      "status": "Kích hoạt",
-      "id": 1
+      "status": "Kích hoạt"
     },
     {
       "name": "quet nha",
