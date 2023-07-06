@@ -3,10 +3,20 @@ import { AddJob } from "./sceens/AddJob";
 import { More } from "./sceens/More";
 import { Status } from "./sceens/Status";
 import styled from "styled-components";
-import axios from "axios";
+// import axios from "axios";
 
+const Data = [
+  {
+    name: "a",
+    status: "Kích hoạt",
+  },
+  {
+    name: "b",
+    status: "Ẩn",
+  },
+];
 function App() {
-  const [array, setArray] = useState([]);
+  const [array, setArray] = useState(Data);
   const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");
@@ -28,38 +38,38 @@ function App() {
     setStatus("Kích hoạt");
   };
 
-  useEffect(() => {
-    fetch("http://localhost:3000/data")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log("data", data);
-        setArray(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/data")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       console.log("data", data);
+  //       setArray(data);
+  //     });
+  // }, []);
 
   const onAdd = (aJob) => {
     const newJob = { ...aJob };
     setArray([...array, newJob]);
-    axios
-      .post("http://localhost:3000/data", {
-        name: name,
-        status: status,
-      })
-      .then((response) => console.log(response.data))
-      .then((error) => console.log(error));
+    // axios
+    //   .post("http://localhost:3000/data", {
+    //     name: name,
+    //     status: status,
+    //   })
+    //   .then((response) => console.log(response.data))
+    //   .then((error) => console.log(error));
   };
 
   const onDelete = (id) => {
     setArray((prevArray) => prevArray.filter((newArray) => newArray.id !== id));
-    axios
-      .delete(`http://localhost:3000/data/${id}`)
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
+    // axios
+    //   .delete(`http://localhost:3000/data/${id}`)
+    //   .then((response) => console.log(response.data))
+    //   .catch((error) => console.log(error));
   };
 
-  const editBtn = async (e) => {
+  const editBtn = (e) => {
     showDisplay();
     let newEnterJob = {
       id: e.id,
@@ -69,16 +79,6 @@ function App() {
     setUpdateJob(newEnterJob);
     setName(e.name);
     setStatus(e.status);
-
-    try {
-      const response = await axios.put(
-        `http://localhost:3000/data/${e.id}`,
-        newEnterJob
-      );
-      console.log(response.data);
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   return (

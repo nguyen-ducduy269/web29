@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export const AddJob = ({
   array,
@@ -13,16 +13,18 @@ export const AddJob = ({
   status,
   setStatus,
 }) => {
-  const updatingJob = () => {
+  const updatingJob = (id) => {
     let indexToUpdate = array.findIndex((item) => item.id === job.id);
     let newArray = [...array];
     newArray[indexToUpdate] = { ...job, name, status };
     setArray(newArray);
     setUpdateJob("");
     closeDisplay();
+
+    // axios.put(`http://localhost:3000/data/${id}`, newArray);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     if (!job) {
       onAdd({
         name: name,
@@ -31,7 +33,7 @@ export const AddJob = ({
       setName("");
       closeDisplay();
     } else {
-      updatingJob();
+      updatingJob(e.id);
     }
   };
 
@@ -68,7 +70,7 @@ export const AddJob = ({
           </select>
 
           <div className="button">
-            <button className="btn_add" onClick={handleSubmit}>
+            <button className="btn_add" onClick={(e) => handleSubmit(e)}>
               Thêm
             </button>
             <button className="btn_remove" onClick={closeDisplay}>

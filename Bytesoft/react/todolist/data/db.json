@@ -1,24 +1,19 @@
 {
   "data": [
     {
-      "id": 1,
-      "name": "lau nha",
-      "status": "Kích hoạt"
+      "name": "a",
+      "status": "Kích hoạt",
+      "id": 1
     },
     {
-      "name": "quet nha",
+      "name": "b",
       "status": "Ẩn",
       "id": 2
     },
     {
-      "name": "rua bat",
+      "name": "aaa",
       "status": "Kích hoạt",
       "id": 3
-    },
-    {
-      "name": "giat quan ao",
-      "status": "Ẩn",
-      "id": 4
     }
   ]
 }
