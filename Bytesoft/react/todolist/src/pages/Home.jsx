@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import axios from "axios";
+
 import { AddJob } from "../sceens/AddJob";
 import { More } from "../sceens/More";
 import { Status } from "../sceens/Status";
-import styled from "styled-components";
-import axios from "axios";
 
 export const Home = () => {
   const [array, setArray] = useState([]);
@@ -34,7 +35,6 @@ export const Home = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("data", data);
         setArray(data);
       });
   }, []);
@@ -88,6 +88,7 @@ export const Home = () => {
               setName={setName}
               status={status}
               setStatus={setStatus}
+              showDisplay={showDisplay}
             />
           ) : (
             false
@@ -198,7 +199,7 @@ const Container = styled.div`
 const LeftJob = styled.div`
   width: 30%;
   position: relative;
-  .name {
+  #name {
     width: 97%;
     height: 40px;
     border-radius: 8px;

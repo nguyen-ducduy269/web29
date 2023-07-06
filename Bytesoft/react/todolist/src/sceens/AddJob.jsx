@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 import axios from "axios";
 
 export const AddJob = ({
@@ -12,7 +13,17 @@ export const AddJob = ({
   setName,
   status,
   setStatus,
+  showDisplay,
 }) => {
+  const {
+    register,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+    },
+  });
+
   const updatingJob = (id) => {
     let indexToUpdate = array.findIndex((item) => item.id === job.id);
     let newArray = [...array];
@@ -25,6 +36,9 @@ export const AddJob = ({
   };
 
   const handleSubmit = (e) => {
+    if (errors) {
+      showDisplay();
+    }
     if (!job) {
       onAdd({
         name: name,
@@ -45,22 +59,34 @@ export const AddJob = ({
       setName("");
       setStatus("Kích hoạt");
     }
-  }, []);
+  }, [job]);
 
   return (
     <>
       <div className="left">
         <p className="add">Thêm công việc</p>
-        <div className="form">
+        <form className="form">
           <label htmlFor="name">Tên: </label>
           <br />
-          <input
+          {/* <input
             id="name"
             className="name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
+          /> */}
+          <input
+            id="name"
+            {...register("name", {
+              required: "Required!",
+              minLength: {
+                value: 4,
+                message: "Min length is 4!",
+              },
+            })}
+            type="text"
           />
+          <p>{errors.name?.message}</p>
           <br />
 
           <label>Trạng thái: </label>
@@ -77,7 +103,7 @@ export const AddJob = ({
               Hủy bỏ
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );

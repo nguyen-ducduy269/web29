@@ -1,24 +1,14 @@
 {
   "data": [
     {
-      "name": "a",
+      "name": "aaaa",
       "status": "Kích hoạt",
       "id": 1
     },
     {
-      "name": "b",
-      "status": "Ẩn",
-      "id": 2
-    },
-    {
-      "name": "aaaa",
+      "name": "bbbbb",
       "status": "Kích hoạt",
-      "id": 3
-    },
-    {
-      "name": "bbbb",
-      "status": "Ẩn",
-      "id": 4
+      "id": 2
     }
   ]
 }
