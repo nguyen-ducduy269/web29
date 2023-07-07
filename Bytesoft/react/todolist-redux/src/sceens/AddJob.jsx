@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import axios from "axios";
+import { useForm } from "react-hook-form";
 
 export const AddJob = ({
   array,
@@ -13,18 +13,29 @@ export const AddJob = ({
   status,
   setStatus,
 }) => {
-  const updatingJob = (id) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+    },
+  });
+
+  console.log(job);
+  console.log(errors);
+
+  const updatingJob = () => {
     let indexToUpdate = array.findIndex((item) => item.id === job.id);
     let newArray = [...array];
     newArray[indexToUpdate] = { ...job, name, status };
     setArray(newArray);
     setUpdateJob("");
     closeDisplay();
-
-    // axios.put(`http://localhost:3000/data/${id}`, newArray);
   };
 
-  const handleSubmit = (e) => {
+  const handleRegister = (e) => {
     if (!job) {
       onAdd({
         name: name,
@@ -51,17 +62,20 @@ export const AddJob = ({
     <>
       <div className="left">
         <p className="add">Thêm công việc</p>
-        <div className="form">
+        <form className="form" onSubmit={handleSubmit(handleRegister)}>
           <label htmlFor="name">Tên: </label>
           <br />
           <input
             id="name"
-            className="name"
-            type="text"
+            {...register("name", {
+              required: "Bắt buộc, độ dài nhỏ nhất là 1!",
+              minLength: 1,
+            })}
             value={name}
             onChange={(e) => setName(e.target.value)}
+            type="text"
           />
-          <br />
+          <p>{errors.name?.message}</p>
 
           <label>Trạng thái: </label>
           <select value={status} onChange={(e) => setStatus(e.target.value)}>
@@ -70,14 +84,14 @@ export const AddJob = ({
           </select>
 
           <div className="button">
-            <button className="btn_add" onClick={(e) => handleSubmit(e)}>
+            <button className="btn_add" onClick={handleSubmit(handleRegister)}>
               Thêm
             </button>
             <button className="btn_remove" onClick={closeDisplay}>
               Hủy bỏ
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );

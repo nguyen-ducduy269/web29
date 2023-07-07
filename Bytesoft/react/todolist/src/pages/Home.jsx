@@ -88,7 +88,6 @@ export const Home = () => {
               setName={setName}
               status={status}
               setStatus={setStatus}
-              showDisplay={showDisplay}
             />
           ) : (
             false

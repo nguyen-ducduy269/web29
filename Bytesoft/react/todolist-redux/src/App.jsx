@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import { AddJob } from "./sceens/AddJob";
 import { More } from "./sceens/More";
 import { Status } from "./sceens/Status";
@@ -34,7 +35,6 @@ export const App = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("data", data);
         setArray(data);
       });
   }, []);
@@ -198,7 +198,7 @@ const Container = styled.div`
 const LeftJob = styled.div`
   width: 30%;
   position: relative;
-  .name {
+  #name {
     width: 97%;
     height: 40px;
     border-radius: 8px;
