@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+// 1 bài class component với 1 bài functional component
 import { AddJob } from "./sceens/AddJob";
 import { More } from "./sceens/More";
 import { Status } from "./sceens/Status";

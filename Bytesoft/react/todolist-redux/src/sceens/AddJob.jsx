@@ -22,8 +22,6 @@ export const AddJob = ({
       name: "",
     },
   });
-
-  console.log(job);
   console.log(errors);
 
   const updatingJob = () => {
