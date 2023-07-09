@@ -1,0 +1,23 @@
+table {
+  margin-top: 10px;
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+tr {
+  display: flex;
+  gap: 5px;
+}
+
+td {
+  width: 28px;
+  height: 28px;
+  background-color: yellow;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 28px;
+}
