@@ -1,0 +1,79 @@
+table {
+  border-collapse: collapse;
+}
+
+input {
+  margin: 3px 10px 3px 3px;
+  font-size: 12px;
+  height: 20px;
+  width: 100%;
+}
+input::placeholder {
+  font-size: 12px;
+}
+
+form {
+  width: 260px;
+}
+.user-name {
+  width: 320px;
+  border: 2px solid;
+  display: flex;
+}
+
+.password {
+  width: 320px;
+  border: 2px solid;
+  border-top: unset;
+  display: flex;
+}
+
+.log-in {
+  width: 320px;
+  border: 2px solid;
+  border-top: unset;
+  display: flex;
+  justify-content: center;
+}
+
+.user {
+  width: 30%;
+  border-right: 2px solid;
+  line-height: 30px;
+  text-align: center;
+}
+
+.notification {
+  width: 310px;
+  height: 25px;
+  background-color: yellow;
+  border: 2px solid;
+  border-top: unset;
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+.log-in button {
+  margin: 5px 0px 5px 5px;
+}
+
+.error {
+  background-color: red;
+}
+
+.error::placeholder {
+  color: white;
+}
+
+.user-text,
+.user-pass {
+  display: none;
+}
+
+.active {
+  display: block;
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+  width: 50%;
+}
