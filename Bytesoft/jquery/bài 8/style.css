@@ -19,6 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
+  align-items: center;
 }
 
 .summary {
@@ -46,4 +47,22 @@
   bottom: 10px;
   left: 50%;
   transform: translate(-50%);
+}
+
+.change {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.change button {
+  width: 30px;
+  height: 30px;
+}
+
+.add-to-cart {
+  width: 60px;
+  height: 40px;
+  font-size: 12px;
 }

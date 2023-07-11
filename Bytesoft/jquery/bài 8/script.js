@@ -1,77 +1,106 @@
 // Bỏ hàng vào giỏ
 
-$(document).ready(function () {
-  let count = 0;
-  let summaryPrice = 0;
+const data = [
+  {
+    id: 1,
+    name: "Bàn phím",
+    quantity: 1,
+    price: "100.059",
+  },
+  {
+    id: 2,
+    name: "Chuột",
+    quantity: 1,
+    price: "70.000",
+  },
+  {
+    id: 3,
+    name: "Lon Coca",
+    quantity: 1,
+    price: "10.000",
+  },
+];
 
+let listItem = data.map((item) => {
+  return `
+  <div class="product">
+    <div class="name">${item.name}</div>
+    <div class="change">
+      <button class="divide">-</button>
+      <div class="quantity">${item.quantity}</div>
+      <button class="plus">+</button>
+    </div>
+    <div class="price"><span>${item.price}</span>đ</div>
+
+    <button class="add-to-cart">Add To Cart</button>
+  </div>
+  `;
+});
+$(".products").html(listItem);
+
+$(document).ready(function () {
+  // $(".product").on("click", ".plus", function () {
+  //   let count = 1;
+  //   const quantities = $(this).parent().parent().find(".quantity").html();
+  //   const nameSp = $(this).parent().parent().find(".name").html();
+  //   const priceSp = $(this).parent().parent().find("span");
+
+  //   change(count, nameSp, priceSp, "+");
+  //   quantities.text(count);
+  // });
+
+  // function change(count, nameSp, priceSp, x) {
+  //   let chuoitemp = x;
+  //   for (let i = 0; i < data.length; i++) {
+  //     console.log("i", data[1].quantity);
+  //     if (data[i].name == nameSp) {
+  //       if (chuoitemp === "+") {
+  //         count = data[i].quantity + 1;
+  //       } else if (chuoitemp === "-") {
+  //         count = data[i].quantity - 1;
+  //       }
+  //       data[i].quantity = count;
+  //       if (count == 0) {
+  //         myCart.splice(i, 1);
+  //       }
+  //       break;
+  //     }
+  //   }
+  // }
+
+  let count = 1;
   $(".plus").click(function () {
     const quantity = $(this).parent().parent().find(".quantity");
-    count++;
-    quantity.text(count);
+    const nameSp = $(this).parent().parent().find(".name").html();
+    const priceSp = $(this).parent().parent().find("span");
 
-    const name = $(this).parent().parent().find(".name").html();
-    const price = $(this).parent().parent().find("span").text();
-    const totalPrice = price * count;
-
-    const order = $("<div>", { class: "order" })
-      .append($("<div>", { class: "name" }).text(name))
-      .append($("<div>", { class: "quantity" }).text(count))
-      .append($("<div>", { class: "total-cost" }).text(totalPrice.toFixed(3)))
-      .append($("<button>", { class: "delete" }).text("Delete"));
-
-    $(".summary .orders").append(order);
-
-    summaryPrice += totalPrice;
-    $(".total-price").text("Total Price: " + summaryPrice.toFixed(3) + "đ");
-
-    // const order = $("<div>", { class: "order" });
-    // if (!order) {
-    //   const quantity = $(this).parent().parent().find(".quantity");
-    //   count++;
-    //   quantity.text(count);
-    //   const name = $(this).parent().parent().find(".name").html();
-    //   const price = $(this).parent().parent().find("span").text();
-    //   const totalPrice = price * count;
-
-    //   order
-    //     .append($("<div>", { class: "name" }).text(name))
-    //     .append($("<div>", { class: "quantity" }).text(count))
-    //     .append(
-    //       $("<div>", { class: "total-cost" }).text(totalPrice.toFixed(3) + "đ")
-    //     )
-    //     .append($("<button>", { class: "delete" }).text("Delete"));
-
-    //   $(".summary .orders").append(order);
-
-    //   summaryPrice += totalPrice;
-    //   $(".total-price").text("Total Price: " + summaryPrice + "đ");
-    // } else {
-    //   const quantity = $(this).parent().parent().find(".quantity");
-    //   count++;
-    //   quantity.text(count);
-    // }
-
-    $(".delete").click(function () {
-      const totalCost = totalPrice.toFixed(3);
-      summaryPrice -= totalCost;
-      $(".total-price").text("Total Price: " + summaryPrice.toFixed(3) + "đ");
-
-      const order = $(this).parent();
-      $(".orders").remove(order);
-    });
-  });
-
-  $(".divide").click(function () {
-    const quantity = $(this).parent().parent().find(".quantity");
-    count = parseInt(count);
-
-    if (count > 1) {
-      count--;
-      quantity.text(count);
-
-      const price = $(this).parent().parent().find("span").text();
-      summaryPrice -= price;
-      $(".total-price").text("Total Price: " + summaryPrice.toFixed(3) + "đ");
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].name === nameSp) {
+        data[i].quantity = data[i].quantity + 1;
+        quantity.text(data[i].quantity);
+      } else {
+        data[i].quantity = quantity.html();
+        console.log("quantity", quantity.html());
+      }
     }
   });
+  // $(".plus").click(function () {
+  //   for (let i = 0; i < $(".product").length; i++) {
+  //     const quantity = $(".product")[i].parent().parent().find(".quantity");
+  //     console.log("before click", quantity);
+  //     count++;
+  //     quantity.text(count);
+  //     console.log("after click", quantity.html());
+  //   }
+  // });
+
+  // $(".divide").click(function () {
+  //   const quantity = $(this).parent().parent().find(".quantity");
+  //   count = parseInt(count);
+
+  //   if (count > 1) {
+  //     count--;
+  //     quantity.text(count);
+  //   }
+  // });
 });
