@@ -6,8 +6,18 @@ import { Status } from "./sceens/Status";
 import styled from "styled-components";
 import axios from "axios";
 
+const data = [
+  {
+    name: "a",
+    status: "Kích hoạt",
+  },
+  {
+    name: "b",
+    status: "Ẩn",
+  },
+];
 export const App = () => {
-  const [array, setArray] = useState([]);
+  const [array, setArray] = useState(data);
   const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");

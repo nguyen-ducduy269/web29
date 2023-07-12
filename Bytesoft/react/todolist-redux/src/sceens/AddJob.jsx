@@ -47,6 +47,7 @@ export const AddJob = ({
   };
 
   useEffect(() => {
+    console.log("job", job);
     if (job) {
       setName(job.name);
       setStatus(job.status);

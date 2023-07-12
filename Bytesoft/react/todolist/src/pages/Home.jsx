@@ -6,8 +6,18 @@ import { AddJob } from "../sceens/AddJob";
 import { More } from "../sceens/More";
 import { Status } from "../sceens/Status";
 
+const data = [
+  {
+    name: "a",
+    status: "Kích hoạt",
+  },
+  {
+    name: "b",
+    status: "Ẩn",
+  },
+];
 export const Home = () => {
-  const [array, setArray] = useState([]);
+  const [array, setArray] = useState(data);
   const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");
