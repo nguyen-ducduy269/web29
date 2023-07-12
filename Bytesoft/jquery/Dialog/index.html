@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h3>Dialog</h3>
+    <button class="error">Thông báo lỗi</button>
+    <button class="sign-in">Đăng nhập nhanh</button>
+    <button class="send-mail">Gửi mail</button>
+
+    <div id="error">
+      <div class="content">
+        <p>Đã xác nhận lỗi!</p>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+
+    <div id="sign-in">
+      <div class="content">
+        <div class="user-name">
+          <label for="username">Username: </label>
+          <input
+            type="email"
+            name=""
+            id="user-name"
+            placeholder="Nhập username"
+            value=""
+          />
+        </div>
+
+        <div class="password">
+          <label for="password">Password: </label>
+          <input
+            type="email"
+            name=""
+            id="password"
+            placeholder="Nhập password"
+            value=""
+          />
+        </div>
+
+        <div class="notification">thongbao</div>
+
+        <button id="log-in">Log in</button>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+
+    <div id="send-mail">
+      <div class="content">
+        <div class="name">
+          <label for="name">Tên người nhận:</label>
+          <input type="text" id="name" placeholder="abc@gmail.com" value="" />
+        </div>
+
+        <div class="content-mail">
+          <label for="content-mail">Nội dung mail</label>
+          <textarea
+            id="content-mail"
+            cols="57"
+            rows="10"
+            placeholder="Text..."
+          ></textarea>
+        </div>
+
+        <button id="send">Gửi thư</button>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

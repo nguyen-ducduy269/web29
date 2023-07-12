@@ -1,0 +1,35 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.contents {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background-color: white;
+  font-size: 24px;
+}
+
+.main-content {
+  display: none;
+}

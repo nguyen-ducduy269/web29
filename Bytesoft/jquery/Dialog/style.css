@@ -1,0 +1,143 @@
+/* error */
+#error {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000047;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#error .content {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  height: 70px;
+  border-radius: 10px;
+  margin-top: 10%;
+  position: relative;
+}
+
+#error .content p {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 70px;
+  padding-left: 20px;
+}
+
+#error .content i {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 20px;
+}
+
+/* sign in */
+#sign-in {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000047;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#sign-in .content {
+  width: 30%;
+  margin: 0 auto;
+  background-color: white;
+  height: 130px;
+  border-radius: 10px;
+  margin-top: 10%;
+  position: relative;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name,
+.password {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.notification {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  background-color: yellow;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#log-in {
+  font-size: 20px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+#sign-in .content i {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 20px;
+}
+
+.active {
+  background-color: red;
+}
+
+.active::placeholder {
+  color: white;
+}
+
+/* gửi mail */
+#send-mail {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000047;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#send-mail .content {
+  width: 30%;
+  margin: 0 auto;
+  background-color: white;
+  height: 270px;
+  border-radius: 10px;
+  margin-top: 5%;
+  position: relative;
+  padding: 10px;
+}
+
+#send-mail .content i {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 20px;
+}
+
+.name,
+.content-mail {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#name,
+#content-mail {
+  width: 95%;
+  padding-left: 10px;
+}

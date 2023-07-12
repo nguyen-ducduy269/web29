@@ -1,106 +1,111 @@
 // Bỏ hàng vào giỏ
-
-const data = [
+var product = {
+  ten: "",
+  price: "",
+  quantity: "",
+};
+const products = [
   {
-    id: 1,
-    name: "Bàn phím",
-    quantity: 1,
-    price: "100.059",
+    ten: "sách",
+    price: "100",
   },
   {
-    id: 2,
-    name: "Chuột",
-    quantity: 1,
-    price: "70.000",
+    ten: "phim",
+    price: "200",
   },
   {
-    id: 3,
-    name: "Lon Coca",
-    quantity: 1,
-    price: "10.000",
+    ten: "ảnh",
+    price: "300",
+  },
+  {
+    ten: "game",
+    price: "400",
   },
 ];
 
-let listItem = data.map((item) => {
+let cartList = products.map((v) => {
   return `
-  <div class="product">
-    <div class="name">${item.name}</div>
-    <div class="change">
-      <button class="divide">-</button>
-      <div class="quantity">${item.quantity}</div>
-      <button class="plus">+</button>
-    </div>
-    <div class="price"><span>${item.price}</span>đ</div>
-
-    <button class="add-to-cart">Add To Cart</button>
-  </div>
-  `;
+          <div class="items" >
+              <button class="addCart" >+</button>
+              <button class="minusCart" >-</button>
+              <p class="name">${v.ten}</p>
+              <p>Giá :<span class="price">${v.price}</span> </p>
+          </div>
+      `;
 });
-$(".products").html(listItem);
-
-$(document).ready(function () {
-  // $(".product").on("click", ".plus", function () {
-  //   let count = 1;
-  //   const quantities = $(this).parent().parent().find(".quantity").html();
-  //   const nameSp = $(this).parent().parent().find(".name").html();
-  //   const priceSp = $(this).parent().parent().find("span");
-
-  //   change(count, nameSp, priceSp, "+");
-  //   quantities.text(count);
-  // });
-
-  // function change(count, nameSp, priceSp, x) {
-  //   let chuoitemp = x;
-  //   for (let i = 0; i < data.length; i++) {
-  //     console.log("i", data[1].quantity);
-  //     if (data[i].name == nameSp) {
-  //       if (chuoitemp === "+") {
-  //         count = data[i].quantity + 1;
-  //       } else if (chuoitemp === "-") {
-  //         count = data[i].quantity - 1;
-  //       }
-  //       data[i].quantity = count;
-  //       if (count == 0) {
-  //         myCart.splice(i, 1);
-  //       }
-  //       break;
-  //     }
-  //   }
-  // }
-
-  let count = 1;
-  $(".plus").click(function () {
-    const quantity = $(this).parent().parent().find(".quantity");
-    const nameSp = $(this).parent().parent().find(".name").html();
-    const priceSp = $(this).parent().parent().find("span");
-
-    for (let i = 0; i < data.length; i++) {
-      if (data[i].name === nameSp) {
-        data[i].quantity = data[i].quantity + 1;
-        quantity.text(data[i].quantity);
-      } else {
-        data[i].quantity = quantity.html();
-        console.log("quantity", quantity.html());
+$(".product").html(cartList);
+var myCart = [];
+function change(soluong, curr, tensp, giasp, x) {
+  let chuoitemp = x;
+  for (let i = 0; i < myCart.length; i++) {
+    if (myCart[i].ten == tensp) {
+      if (chuoitemp === "+") {
+        soluong = myCart[i].quantity + 1;
+      } else if (chuoitemp === "-") {
+        soluong = myCart[i].quantity - 1;
       }
+      myCart[i].quantity = soluong;
+      if (soluong == 0) {
+        myCart.splice(i, 1);
+      }
+      break;
     }
-  });
-  // $(".plus").click(function () {
-  //   for (let i = 0; i < $(".product").length; i++) {
-  //     const quantity = $(".product")[i].parent().parent().find(".quantity");
-  //     console.log("before click", quantity);
-  //     count++;
-  //     quantity.text(count);
-  //     console.log("after click", quantity.html());
-  //   }
-  // });
+  }
+  if (soluong == 1 && chuoitemp === "+") {
+    product = {
+      ten: tensp,
+      price: giasp,
+      quantity: soluong,
+    };
+    myCart.push(product);
+  }
 
-  // $(".divide").click(function () {
-  //   const quantity = $(this).parent().parent().find(".quantity");
-  //   count = parseInt(count);
-
-  //   if (count > 1) {
-  //     count--;
-  //     quantity.text(count);
-  //   }
-  // });
+  showCart();
+  showTotal();
+}
+$(".product").on("click", ".addCart", function () {
+  var soluong = 1;
+  var curr = $(this).parent();
+  var tensp = curr.children(".name").eq(0).text();
+  var giasp = curr.children().children(".price").eq(0).text();
+  change(soluong, curr, tensp, giasp, "+");
 });
+$(".product").on("click", ".minusCart", function () {
+  var soluong = 1;
+  var curr = $(this).parent();
+  var tensp = curr.children(".name").eq(0).text();
+  var giasp = curr.children().children(".price").eq(0).text();
+  change(soluong, curr, tensp, giasp, "-");
+});
+function showCart() {
+  var str = "";
+  for (let i = 0; i < myCart.length; i++) {
+    str +=
+      "<tr><td>" +
+      myCart[i].ten +
+      "</td>" +
+      "<td>" +
+      myCart[i].price +
+      "</td>" +
+      "<td>" +
+      myCart[i].quantity +
+      "</td>" +
+      "<td><button class='deltcart'> xóa</button></td></tr>";
+  }
+  $("#myCart").html(str);
+}
+$("#myCart").on("click", ".deltcart", function () {
+  for (let i = 0; i < myCart.length; i++) {
+    myCart.splice(i, 1);
+    break;
+  }
+  showCart();
+  showTotal();
+});
+function showTotal() {
+  var total = 0;
+  for (let i = 0; i < myCart.length; i++) {
+    total += parseFloat(myCart[i].price) * parseFloat(myCart[i].quantity);
+  }
+  $("#total").text(total);
+}
