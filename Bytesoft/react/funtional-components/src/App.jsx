@@ -1,23 +1,12 @@
 import React, { useEffect, useState } from "react";
-// 1 bài class component với 1 bài functional component
 import { AddJob } from "./sceens/AddJob";
 import { More } from "./sceens/More";
 import { Status } from "./sceens/Status";
 import styled from "styled-components";
 import axios from "axios";
 
-const data = [
-  {
-    name: "a",
-    status: "Kích hoạt",
-  },
-  {
-    name: "b",
-    status: "Ẩn",
-  },
-];
 export const App = () => {
-  const [array, setArray] = useState(data);
+  const [array, setArray] = useState([]);
   const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");
@@ -59,6 +48,7 @@ export const App = () => {
       })
       .then((response) => console.log(response.data))
       .then((error) => console.log(error));
+    localStorage.setItem("item", JSON.stringify(array));
   };
 
   const onDelete = (id) => {
@@ -256,7 +246,7 @@ const RightJob = styled.div`
     background-color: #0000ffc7;
     font-size: 14px;
     text-align: center;
-    height: 30px;
+    height: 35px;
     line-height: 30px;
     color: white;
     padding: 0 5px;
@@ -271,6 +261,9 @@ const RightJob = styled.div`
     height: 30px;
   }
 
+  table {
+    margin-top: 10px;
+  }
   table,
   tr,
   td {

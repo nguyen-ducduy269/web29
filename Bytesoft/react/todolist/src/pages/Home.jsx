@@ -6,18 +6,8 @@ import { AddJob } from "../sceens/AddJob";
 import { More } from "../sceens/More";
 import { Status } from "../sceens/Status";
 
-const data = [
-  {
-    name: "a",
-    status: "Kích hoạt",
-  },
-  {
-    name: "b",
-    status: "Ẩn",
-  },
-];
 export const Home = () => {
-  const [array, setArray] = useState(data);
+  const [array, setArray] = useState([]);
   const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");
@@ -59,6 +49,7 @@ export const Home = () => {
       })
       .then((response) => console.log(response.data))
       .then((error) => console.log(error));
+    localStorage.setItem("item", JSON.stringify(array));
   };
 
   const onDelete = (id) => {
