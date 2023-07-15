@@ -12,8 +12,8 @@ class App extends React.Component {
 
     this.state = {
       tasks: [],
-      isDisplay: false, // đóng mở các task
-      taskEditing: null, // xác định task nào đang sửa
+      isDisplay: false,
+      taskEditing: null,
       filter: {
         name: "",
         status: -1,
@@ -24,7 +24,6 @@ class App extends React.Component {
     };
   }
 
-  // hiển thị thành phần đang được tải từ localStorage
   componentWillMount() {
     if (localStorage && localStorage.getItem("tasks")) {
       const tasks = JSON.parse(localStorage.getItem("tasks"));
@@ -57,7 +56,6 @@ class App extends React.Component {
     );
   }
 
-  // mở task thêm công việc
   onToggleForm = () => {
     if (this.state.isDisplay && this.state.taskEditing !== null) {
       this.setState({
@@ -72,14 +70,12 @@ class App extends React.Component {
     }
   };
 
-  // đóng task
   onCloseForm = () => {
     this.setState({
       isDisplay: false,
     });
   };
 
-  // thêm công việc
   onSubmit = (data) => {
     var { tasks } = this.state;
     if (data.id === "") {
@@ -98,7 +94,6 @@ class App extends React.Component {
     console.log("data", data);
   };
 
-  // update status
   onUpdateStatus = (id) => {
     var { tasks } = this.state;
     var index = this.findIndex(id);
@@ -112,7 +107,6 @@ class App extends React.Component {
     }
   };
 
-  // xóa
   onDelete = (id) => {
     var { tasks } = this.state;
     var index = this.findIndex(id);
@@ -127,7 +121,6 @@ class App extends React.Component {
     this.onCloseForm();
   };
 
-  // update công việc
   onUpdate = (id) => {
     var { tasks } = this.state;
     var index = this.findIndex(id);
