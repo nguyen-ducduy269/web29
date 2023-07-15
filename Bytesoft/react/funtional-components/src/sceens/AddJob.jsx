@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
 
 export const AddJob = ({
   array,
@@ -13,17 +12,6 @@ export const AddJob = ({
   status,
   setStatus,
 }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-      name: "",
-    },
-  });
-  console.log(errors);
-
   const updatingJob = () => {
     let indexToUpdate = array.findIndex((item) => item.id === job.id);
     let newArray = [...array];
@@ -34,8 +22,10 @@ export const AddJob = ({
   };
 
   const handleRegister = (e) => {
+    e.preventDefault();
     if (!job) {
       onAdd({
+        id: Math.random(),
         name: name,
         status: status,
       });
@@ -47,7 +37,6 @@ export const AddJob = ({
   };
 
   useEffect(() => {
-    console.log("job", job);
     if (job) {
       setName(job.name);
       setStatus(job.status);
@@ -61,20 +50,15 @@ export const AddJob = ({
     <>
       <div className="left">
         <p className="add">Thêm công việc</p>
-        <form className="form" onSubmit={handleSubmit(handleRegister)}>
+        <form className="form">
           <label htmlFor="name">Tên: </label>
           <br />
           <input
             id="name"
-            {...register("name", {
-              required: "Bắt buộc, độ dài nhỏ nhất là 1!",
-              minLength: 1,
-            })}
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
           />
-          <p>{errors.name?.message}</p>
 
           <label>Trạng thái: </label>
           <select value={status} onChange={(e) => setStatus(e.target.value)}>
@@ -83,7 +67,11 @@ export const AddJob = ({
           </select>
 
           <div className="button">
-            <button className="btn_add" onClick={handleSubmit(handleRegister)}>
+            <button
+              type="submit"
+              className="btn_add"
+              onClick={(e) => handleRegister(e)}
+            >
               Thêm
             </button>
             <button className="btn_remove" onClick={closeDisplay}>

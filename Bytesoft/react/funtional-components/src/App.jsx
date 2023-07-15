@@ -3,7 +3,6 @@ import { AddJob } from "./sceens/AddJob";
 import { More } from "./sceens/More";
 import { Status } from "./sceens/Status";
 import styled from "styled-components";
-import axios from "axios";
 
 export const App = () => {
   const [array, setArray] = useState([]);
@@ -29,34 +28,25 @@ export const App = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/data")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setArray(data);
-      });
+    const work = JSON.parse(localStorage.getItem("item"));
+    setArray(work ? work : []);
   }, []);
 
   const onAdd = (aJob) => {
-    const newJob = { ...aJob };
-    setArray([...array, newJob]);
-    axios
-      .post("http://localhost:3000/data", {
-        name: name,
-        status: status,
-      })
-      .then((response) => console.log(response.data))
-      .then((error) => console.log(error));
-    localStorage.setItem("item", JSON.stringify(array));
+    const result = [...array];
+    result.push(aJob);
+    setArray(result);
+    localStorage.setItem("item", JSON.stringify(result));
   };
 
   const onDelete = (id) => {
-    setArray((prevArray) => prevArray.filter((newArray) => newArray.id !== id));
-    axios
-      .delete(`http://localhost:3000/data/${id}`)
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
+    const work = JSON.parse(localStorage.getItem("item"));
+
+    const newArray = work.filter((item) => {
+      item.id != id;
+    });
+    setArray(newArray);
+    localStorage.setItem("item", JSON.stringify(newArray));
   };
 
   const editBtn = (e) => {

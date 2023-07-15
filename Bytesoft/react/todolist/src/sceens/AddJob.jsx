@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useForm } from "react-hook-form";
 
 export const AddJob = ({
   array,
@@ -12,7 +13,18 @@ export const AddJob = ({
   status,
   setStatus,
 }) => {
-  const updatingJob = (id) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+    },
+  });
+  console.log(errors);
+
+  const updatingJob = () => {
     let indexToUpdate = array.findIndex((item) => item.id === job.id);
     let newArray = [...array];
     newArray[indexToUpdate] = { ...job, name, status };
@@ -21,7 +33,7 @@ export const AddJob = ({
     closeDisplay();
   };
 
-  const handleSubmit = (e) => {
+  const handleRegister = (e) => {
     if (!job) {
       onAdd({
         name: name,
@@ -35,6 +47,7 @@ export const AddJob = ({
   };
 
   useEffect(() => {
+    console.log("job", job);
     if (job) {
       setName(job.name);
       setStatus(job.status);
@@ -42,23 +55,26 @@ export const AddJob = ({
       setName("");
       setStatus("Kích hoạt");
     }
-  }, [job]);
+  }, []);
 
   return (
     <>
       <div className="left">
         <p className="add">Thêm công việc</p>
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit(handleRegister)}>
           <label htmlFor="name">Tên: </label>
           <br />
           <input
             id="name"
-            className="name"
-            type="text"
+            {...register("name", {
+              required: "Bắt buộc, độ dài nhỏ nhất là 1!",
+              minLength: 1,
+            })}
             value={name}
             onChange={(e) => setName(e.target.value)}
+            type="text"
           />
-          <br />
+          <p>{errors.name?.message}</p>
 
           <label>Trạng thái: </label>
           <select value={status} onChange={(e) => setStatus(e.target.value)}>
@@ -67,7 +83,7 @@ export const AddJob = ({
           </select>
 
           <div className="button">
-            <button className="btn_add" onClick={(e) => handleSubmit(e)}>
+            <button className="btn_add" onClick={handleSubmit(handleRegister)}>
               Thêm
             </button>
             <button className="btn_remove" onClick={closeDisplay}>
