@@ -5,13 +5,14 @@ import styled from "styled-components";
 import TaskForm from "./components/TaskForm";
 import Control from "./components/Control";
 import TaskList from "./components/TaskList";
+import { connect } from "react-redux";
+import * as action from "./actions/index";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isDisplay: false,
       taskEditing: null,
       filter: {
         name: "",
@@ -24,41 +25,25 @@ class App extends React.Component {
   }
 
   onToggleForm = () => {
-    if (this.state.isDisplay && this.state.taskEditing !== null) {
-      this.setState({
-        isDisplay: true,
-        taskEditing: null,
-      });
-    } else {
-      this.setState({
-        isDisplay: !this.state.isDisplay,
-        taskEditing: null,
-      });
-    }
+    // if (this.state.isDisplay && this.state.taskEditing !== null) {
+    //   this.setState({
+    //     isDisplay: true,
+    //     taskEditing: null,
+    //   });
+    // } else {
+    //   this.setState({
+    //     isDisplay: !this.state.isDisplay,
+    //     taskEditing: null,
+    //   });
+    // }
+
+    this.props.onToggleForm();
   };
 
   onCloseForm = () => {
     this.setState({
       isDisplay: false,
     });
-  };
-
-  onSubmit = (data) => {
-    var { tasks } = this.state;
-    if (data.id === "") {
-      data.id = this.generateID();
-      tasks.push(data);
-    } else {
-      var index = this.findIndex(data.id);
-      tasks[index] = data;
-    }
-    this.setState({
-      tasks: tasks,
-      taskEditing: null,
-    });
-
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    console.log("data", data);
   };
 
   onUpdateStatus = (id) => {
@@ -140,9 +125,8 @@ class App extends React.Component {
   };
 
   render() {
-    var { isDisplay, taskEditing, filter, keyword, sortBy, sortValue } =
-      this.state;
-
+    var { taskEditing, filter, keyword, sortBy, sortValue } = this.state;
+    var { isDisplay } = this.props;
     // if (filter) {
     //   if (filter.name) {
     //     tasks = tasks.filter((task) => {
@@ -179,11 +163,7 @@ class App extends React.Component {
     // }
 
     var elmTaskForm = isDisplay ? (
-      <TaskForm
-        onCloseForm={this.onCloseForm}
-        onSubmit={this.onSubmit}
-        task={taskEditing}
-      />
+      <TaskForm onCloseForm={this.onCloseForm} task={taskEditing} />
     ) : (
       ""
     );
@@ -215,7 +195,21 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+
+const mapStateToProps = (state) => {
+  return {
+    isDisplay: state.isDisplay,
+  };
+};
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onToggleForm: () => {
+      dispatch(action.toggleForm());
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 const Header = styled.h1`
   width: 100%;
