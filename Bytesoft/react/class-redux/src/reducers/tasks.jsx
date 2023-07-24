@@ -22,6 +22,17 @@ var generateID = () => {
     s4()
   );
 };
+
+var findIndex = (tasks, id) => {
+  let result = -1;
+  tasks.forEach((task, index) => {
+    if (task.id === id) {
+      result = index;
+    }
+  });
+  return result;
+};
+
 const data = JSON.parse(localStorage.getItem("tasks"));
 var initialState = data ? data : [];
 
@@ -36,6 +47,12 @@ var myReducers = (state = initialState, action) => {
         status: action.task.status,
       };
       state.push(newTask);
+      localStorage.setItem("tasks", JSON.stringify(state));
+      return [...state];
+    case types.DELETE_TASK:
+      var id = action.id;
+      var index = findIndex(state, id);
+      state.splice(index, 1);
       localStorage.setItem("tasks", JSON.stringify(state));
       return [...state];
     default:

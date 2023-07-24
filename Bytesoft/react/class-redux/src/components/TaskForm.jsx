@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import * as action from "./../actions/index";
 
-class TaskForm extends React.Component {
+class itemEditingForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -14,26 +14,26 @@ class TaskForm extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.task) {
+    if (this.props.itemEditing) {
       this.setState({
-        id: this.props.task.id,
-        name: this.props.task.name,
-        status: this.props.task.status,
+        id: this.props.itemEditing.id,
+        name: this.props.itemEditing.name,
+        status: this.props.itemEditing.status,
       });
       console.log(this.state);
     }
   }
 
-  // chuyển task và thay đổi nội dung task ứng với button tương ứng
+  // chuyển itemEditing và thay đổi nội dung itemEditing ứng với button tương ứng
   componentWillReceiveProps(nextProps) {
-    if (nextProps && nextProps.task) {
+    if (nextProps && nextProps.itemEditing) {
       this.setState({
-        id: nextProps.task.id,
-        name: nextProps.task.name,
-        status: nextProps.task.status,
+        id: nextProps.itemEditing.id,
+        name: nextProps.itemEditing.name,
+        status: nextProps.itemEditing.status,
       });
       console.log(this.state);
-    } else if (nextProps && nextProps.task === null) {
+    } else if (nextProps && nextProps.itemEditing === null) {
       this.setState({
         id: "",
         name: "",
@@ -60,7 +60,7 @@ class TaskForm extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.onAddTask(this.state);
+    this.props.onAdditemEditing(this.state);
 
     this.onClear();
     this.onCloseForm();
@@ -122,13 +122,16 @@ class TaskForm extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    isDisplay: state.isDisplay,
+    itemEditing: state.itemEditing,
+  };
 };
 
 const mapDispatchToProps = (dispatch, props) => {
   return {
-    onAddTask: (task) => {
-      dispatch(action.addTask(task));
+    onAdditemEditing: (itemEditing) => {
+      dispatch(action.additemEditing(itemEditing));
     },
 
     onCloseForm: () => {
@@ -136,4 +139,4 @@ const mapDispatchToProps = (dispatch, props) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(TaskForm);
+export default connect(mapStateToProps, mapDispatchToProps)(itemEditingForm);

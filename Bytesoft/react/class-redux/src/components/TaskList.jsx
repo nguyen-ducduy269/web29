@@ -29,16 +29,7 @@ class TaskList extends React.Component {
     var { tasks } = this.props;
     var { filterName, filterStatus } = this.state;
     var elmTasks = tasks.map((task, index) => {
-      return (
-        <TaskItem
-          key={task.id}
-          index={index}
-          task={task}
-          onUpdateStatus={this.props.onUpdateStatus}
-          onDelete={this.props.onDelete}
-          onUpdate={this.props.onUpdate}
-        />
-      );
+      return <TaskItem key={task.id} index={index} task={task} />;
     });
     return (
       <>
