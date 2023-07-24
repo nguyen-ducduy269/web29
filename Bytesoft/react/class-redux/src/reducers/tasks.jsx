@@ -40,6 +40,7 @@ var myReducers = (state = initialState, action) => {
   switch (action.type) {
     case types.LIST_ALL:
       return state;
+
     case types.ADD_TASK:
       var newTask = {
         id: generateID(),
@@ -49,12 +50,14 @@ var myReducers = (state = initialState, action) => {
       state.push(newTask);
       localStorage.setItem("tasks", JSON.stringify(state));
       return [...state];
+
     case types.DELETE_TASK:
       var id = action.id;
       var index = findIndex(state, id);
       state.splice(index, 1);
       localStorage.setItem("tasks", JSON.stringify(state));
       return [...state];
+
     default:
       return state;
   }

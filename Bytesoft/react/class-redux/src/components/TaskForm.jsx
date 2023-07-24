@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import * as action from "./../actions/index";
 
-class itemEditingForm extends React.Component {
+class TaskForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -14,13 +14,14 @@ class itemEditingForm extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.itemEditing) {
+    if (this.props.itemEditing && this.props.itemEditing.id !== null) {
       this.setState({
         id: this.props.itemEditing.id,
         name: this.props.itemEditing.name,
         status: this.props.itemEditing.status,
       });
-      console.log(this.state);
+    } else {
+      this.onClear();
     }
   }
 
@@ -60,7 +61,7 @@ class itemEditingForm extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.onAdditemEditing(this.state);
+    this.props.onAddTask(this.state);
 
     this.onClear();
     this.onCloseForm();
@@ -130,8 +131,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, props) => {
   return {
-    onAdditemEditing: (itemEditing) => {
-      dispatch(action.additemEditing(itemEditing));
+    onAddTask: (task) => {
+      dispatch(action.addTask(task));
     },
 
     onCloseForm: () => {
@@ -139,4 +140,4 @@ const mapDispatchToProps = (dispatch, props) => {
     },
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(itemEditingForm);
+export default connect(mapStateToProps, mapDispatchToProps)(TaskForm);

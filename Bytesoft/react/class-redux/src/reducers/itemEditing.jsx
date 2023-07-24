@@ -2,29 +2,31 @@ import * as types from "../constants/ActionTypes";
 
 var initialState = {};
 
-var findIndex = (tasks, id) => {
-  let result = -1;
-  tasks.forEach((task, index) => {
-    if (task.id === id) {
-      result = index;
-    }
-  });
-  return result;
-};
-
 var myReducers = (state = initialState, action) => {
   switch (action.type) {
     case types.EDIT_TASK:
-      console.log(action);
-      var tasks = state;
-      var id = action.id;
-      var index = findIndex(tasks, id);
-      var taskEditing = tasks[index];
+      // const tasks = JSON.parse(localStorage.getItem("tasks"));
+      // console.log("tasks", tasks);
+      // tasks.filter((task) => {
+      //   if (task.id == action.task.id) {
+      //     console.log("action.task", action.task);
+      //     console.log("action.task.id", action.task.id);
 
-      this.setState({
-        taskEditing: taskEditing,
-      });
-      return !state;
+      //     var products = {
+      //       id: action.task.id,
+      //       name: action.task.name,
+      //       status: action.task.status,
+      //     };
+      //     console.log("products", products);
+
+      //     this.setState({
+      //       id: action.task.id,
+      //       name: action.task.name,
+      //       status: action.task.status,
+      //     });
+      //   }
+      // });
+      return action.task;
     default:
       return state;
   }
