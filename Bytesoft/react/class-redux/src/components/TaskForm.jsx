@@ -33,7 +33,6 @@ class TaskForm extends React.Component {
         name: nextProps.itemEditing.name,
         status: nextProps.itemEditing.status,
       });
-      console.log(this.state);
     } else if (nextProps && nextProps.itemEditing === null) {
       this.setState({
         id: "",
@@ -61,7 +60,7 @@ class TaskForm extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.onAddTask(this.state);
+    this.props.onSaveTask(this.state);
 
     this.onClear();
     this.onCloseForm();
@@ -103,6 +102,7 @@ class TaskForm extends React.Component {
               value={this.state.status}
               onChange={this.onChange}
             >
+              <option value={null}></option>
               <option value={true}>Kích hoạt</option>
               <option value={false}>Ẩn</option>
             </select>
@@ -131,8 +131,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, props) => {
   return {
-    onAddTask: (task) => {
-      dispatch(action.addTask(task));
+    onSaveTask: (task) => {
+      dispatch(action.saveTask(task));
     },
 
     onCloseForm: () => {
