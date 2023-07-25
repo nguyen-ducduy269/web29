@@ -10,7 +10,7 @@ class Control extends React.Component {
       <>
         <Mored>
           {/* Search */}
-          <Search onSearch={this.props.onSearch} />
+          <Search />
           {/* Sort */}
           <Sort
             onSort={this.props.onSort}

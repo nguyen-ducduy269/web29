@@ -1,6 +1,8 @@
 import React from "react";
-import TaskItem from "./TaskItem";
 import { connect } from "react-redux";
+import * as action from "../actions/index";
+
+import TaskItem from "./TaskItem";
 
 class TaskList extends React.Component {
   constructor(props) {
@@ -8,7 +10,7 @@ class TaskList extends React.Component {
 
     this.state = {
       filterName: "",
-      filterStatus: -1, // Tất cả : -1, Kích hoạt : 1, Ẩn : 0
+      filterStatus: -1, // Tất cả : -1, Kích hoạt : 0, Ẩn : 1
     };
   }
 
@@ -16,18 +18,42 @@ class TaskList extends React.Component {
     var target = event.target;
     var name = target.name;
     var value = target.value;
-    this.props.onFilter(
-      name === "filterName" ? value : this.state.filterName,
-      name === "filterStatus" ? value : this.state.filterStatus
-    );
+    const filter = {
+      name: name === "filterName" ? value : this.state.filterName,
+      status: name === "filterStatus" ? value : this.state.filterStatus,
+    };
+    this.props.onFilter(filter);
     this.setState({
       [name]: value,
     });
   };
 
   render() {
-    var { tasks } = this.props;
-    var { filterName, filterStatus } = this.state;
+    var { tasks, filterTable, keyword } = this.props;
+
+    /////
+    if (filterTable.name) {
+      tasks = tasks.filter((task) => {
+        return (
+          task.name.toLowerCase().indexOf(filterTable.name.toLowerCase()) !== -1
+        );
+      });
+    }
+    tasks = tasks.filter((task) => {
+      if (filterTable.status === -1) {
+        return task;
+      } else {
+        return task.status === (filterTable.status === 1 ? true : false);
+      }
+    });
+
+    // search
+    if (keyword) {
+      tasks = tasks.filter((task) => {
+        return task.name.toLowerCase().indexOf(keyword.toLowerCase()) !== -1;
+      });
+    }
+
     var elmTasks = tasks.map((task, index) => {
       return <TaskItem key={task.id} index={index} task={task} />;
     });
@@ -51,7 +77,7 @@ class TaskList extends React.Component {
                   className="add-input"
                   type="text"
                   name="filterName"
-                  value={filterName}
+                  value={this.state.filterName}
                   onChange={this.onChange}
                 ></input>
               </td>
@@ -59,7 +85,7 @@ class TaskList extends React.Component {
               <td className="status">
                 <select
                   name="filterStatus"
-                  value={filterStatus}
+                  value={this.state.filterStatus}
                   onChange={this.onChange}
                 >
                   <option value={-1}>Tất cả</option>
@@ -81,6 +107,16 @@ class TaskList extends React.Component {
 const mapStateToProps = (state) => {
   return {
     tasks: state.tasks,
+    filterTable: state.filterTable,
+    keyword: state.search,
   };
 };
-export default connect(mapStateToProps, null)(TaskList);
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onFilter: (filter) => {
+      dispatch(action.filterTable(filter));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(TaskList);

@@ -9,7 +9,7 @@ class TaskForm extends React.Component {
     this.state = {
       id: "",
       name: "",
-      status: true,
+      status: false,
     };
   }
 
@@ -102,9 +102,8 @@ class TaskForm extends React.Component {
               value={this.state.status}
               onChange={this.onChange}
             >
-              <option value={null}></option>
-              <option value={true}>Kích hoạt</option>
               <option value={false}>Ẩn</option>
+              <option value={true}>Kích hoạt</option>
             </select>
 
             <div className="button">
