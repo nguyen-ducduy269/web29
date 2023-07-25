@@ -12,11 +12,7 @@ class Control extends React.Component {
           {/* Search */}
           <Search />
           {/* Sort */}
-          <Sort
-            onSort={this.props.onSort}
-            sortBy={this.props.sortBy}
-            sortValue={this.props.sortValue}
-          />
+          <Sort />
         </Mored>
       </>
     );

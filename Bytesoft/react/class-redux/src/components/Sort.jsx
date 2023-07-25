@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
+import * as action from "../actions/index";
 
 class Sort extends React.Component {
   constructor(props) {
@@ -23,7 +25,10 @@ class Sort extends React.Component {
   };
 
   onClick = (sortBy, sortValue) => {
-    this.props.onSort(sortBy, sortValue);
+    this.props.onSort({
+      by: sortBy,
+      value: sortValue,
+    });
     this.onClose();
   };
   render() {
@@ -67,7 +72,18 @@ class Sort extends React.Component {
   }
 }
 
-export default Sort;
+// const mapStateToProps = (state) => {
+//   return {};
+// };
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onSort: (sort) => {
+      dispatch(action.sortTask(sort));
+    },
+  };
+};
+export default connect(null, mapDispatchToProps)(Sort);
 
 const Arranged = styled.div`
   min-width: 160px;

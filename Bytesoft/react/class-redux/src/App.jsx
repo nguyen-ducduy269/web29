@@ -13,12 +13,6 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      taskEditing: null,
-      filter: {
-        name: "",
-        status: -1,
-      },
-      keyword: "",
       sortBy: "name",
       sortValue: 1,
     };
@@ -84,11 +78,7 @@ class App extends React.Component {
           <RightJob>
             <AddButton onClick={this.onToggleForm}>Thêm công việc</AddButton>
             {/* Search-Sort */}
-            <Control
-              onSort={this.onSort}
-              sortBy={sortBy}
-              sortValue={sortValue}
-            />
+            <Control />
             {/* Table */}
             <TaskList onFilter={this.onFilter} />
           </RightJob>

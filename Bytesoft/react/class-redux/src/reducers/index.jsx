@@ -4,6 +4,7 @@ import isDisplay from "./isDisplay";
 import itemEditing from "./itemEditing";
 import filterTable from "./filterTable";
 import search from "./search";
+import sort from "./sort";
 
 const myReducers = combineReducers({
   tasks,
@@ -11,6 +12,7 @@ const myReducers = combineReducers({
   itemEditing,
   filterTable,
   search,
+  sort,
 });
 
 export default myReducers;

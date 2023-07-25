@@ -1,16 +1,16 @@
 import * as types from "../constants/ActionTypes";
 
 var initialState = {
-  name: "",
-  status: -1,
+  by: "",
+  value: 1,
 };
 
 var myReducers = (state = initialState, action) => {
   switch (action.type) {
-    case types.FILTER_TABLE:
+    case types.SORT:
       return {
-        name: action.filter.name,
-        status: parseInt(action.filter.status, 10),
+        by: action.sort.by,
+        value: action.sort.value,
       };
     default:
       return state;
