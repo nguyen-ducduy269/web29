@@ -57,7 +57,7 @@ class App extends React.Component {
   };
 
   render() {
-    var { taskEditing, filter, keyword, sortBy, sortValue } = this.state;
+    var { sortBy, sortValue } = this.state;
     var { isDisplay } = this.props;
 
     // if (sortBy === "name") {
@@ -85,7 +85,6 @@ class App extends React.Component {
             <AddButton onClick={this.onToggleForm}>Thêm công việc</AddButton>
             {/* Search-Sort */}
             <Control
-              onSearch={this.onSearch}
               onSort={this.onSort}
               sortBy={sortBy}
               sortValue={sortValue}
