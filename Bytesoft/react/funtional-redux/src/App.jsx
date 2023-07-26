@@ -1,27 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { AddJob } from "./sceens/AddJob";
-import { More } from "./sceens/More";
-import { Status } from "./sceens/Status";
 import styled from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "./store/action/indexAction";
+
+// import components
+import { AddJob } from "./components/AddJob";
+import { More } from "./components/More";
+import { Table } from "./components/Table";
 
 export const App = () => {
   const [array, setArray] = useState([]);
-  const [display, setDisplay] = useState(false);
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
-  const [search, setSearch] = useState("");
 
-  const showDisplay = () => {
-    setDisplay(true);
-  };
-
-  const closeDisplay = () => {
-    setDisplay(false);
-  };
+  const isDisplay = useSelector((state) => state.isDisplay);
+  const dispatch = useDispatch();
 
   const handleOpen = () => {
-    setDisplay(true);
+    dispatch(actions.openForm());
     setUpdateJob(null);
     setName("");
     setStatus("Kích hoạt");
@@ -39,38 +36,15 @@ export const App = () => {
     localStorage.setItem("item", JSON.stringify(result));
   };
 
-  const onDelete = (id) => {
-    const work = JSON.parse(localStorage.getItem("item"));
-
-    const newArray = work.filter((item) => {
-      item.id != id;
-    });
-    setArray(newArray);
-    localStorage.setItem("item", JSON.stringify(newArray));
-  };
-
-  const editBtn = (e) => {
-    showDisplay();
-    let newEnterJob = {
-      id: e.id,
-      name: e.name,
-      status: e.status,
-    };
-    setUpdateJob(newEnterJob);
-    setName(e.name);
-    setStatus(e.status);
-  };
-
   return (
     <>
       <Header>Quản lý công việc</Header>
       <Container>
         <LeftJob>
-          {display ? (
+          {isDisplay ? (
             <AddJob
               array={array}
               onAdd={onAdd}
-              closeDisplay={closeDisplay}
               job={updateJob}
               setArray={setArray}
               setUpdateJob={setUpdateJob}
@@ -85,7 +59,7 @@ export const App = () => {
         </LeftJob>
 
         <RightJob>
-          <AddButton onClick={handleOpen}>Thêm công việc</AddButton>
+          <AddButton onClick={() => handleOpen()}>Thêm công việc</AddButton>
           <More
             setArray={(v) => {
               setArray(v);
@@ -93,59 +67,13 @@ export const App = () => {
             array={array}
           />
 
-          <table>
-            <thead>
-              <tr>
-                <td className="stt">STT</td>
-                <td className="name">Tên</td>
-                <td className="status">Trạng thái</td>
-                <td className="activity">Hành động</td>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td className="stt"></td>
-                <td className="name">
-                  <input
-                    className="add-input"
-                    type="text"
-                    onChange={(e) => setSearch(e.target.value)}
-                  ></input>
-                </td>
-
-                <Status setArray={setArray} />
-                <td className="activity"></td>
-              </tr>
-
-              {array
-                ?.filter((item) => {
-                  return search.toLocaleLowerCase() === ""
-                    ? item
-                    : item.name.toLocaleLowerCase().includes(search);
-                })
-                .map((e, i) => (
-                  <tr key={i}>
-                    <td className="stt">{i + 1}</td>
-                    <td className="name">{e.name}</td>
-                    <td className="status">
-                      <p className="status-active">{e.status}</p>
-                    </td>
-                    <td className="activity button">
-                      <button className="btn_edit" onClick={() => editBtn(e)}>
-                        Sửa
-                      </button>
-                      <button
-                        className="btn_remove"
-                        onClick={() => onDelete(e.id)}
-                      >
-                        Xóa
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+          <Table
+            array={array}
+            setArray={setArray}
+            setUpdateJob={setUpdateJob}
+            setName={setName}
+            setStatus={setStatus}
+          />
         </RightJob>
       </Container>
     </>

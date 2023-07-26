@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "../store/action/indexAction";
 
 export const AddJob = ({
   array,
   onAdd,
-  closeDisplay,
   job,
   setArray,
   setUpdateJob,
@@ -12,13 +13,16 @@ export const AddJob = ({
   status,
   setStatus,
 }) => {
+  const addTask = useSelector((state) => state.addTask);
+  const dispatch = useDispatch();
+
   const updatingJob = () => {
     let indexToUpdate = array.findIndex((item) => item.id === job.id);
     let newArray = [...array];
     newArray[indexToUpdate] = { ...job, name, status };
     setArray(newArray);
     setUpdateJob("");
-    closeDisplay();
+    dispatch(actions.closeForm());
   };
 
   const handleRegister = (e) => {
@@ -30,7 +34,7 @@ export const AddJob = ({
         status: status,
       });
       setName("");
-      closeDisplay();
+      dispatch(actions.closeForm());
     } else {
       updatingJob(e.id);
     }
@@ -74,7 +78,10 @@ export const AddJob = ({
             >
               Thêm
             </button>
-            <button className="btn_remove" onClick={closeDisplay}>
+            <button
+              className="btn_remove"
+              onClick={() => dispatch(actions.closeForm())}
+            >
               Hủy bỏ
             </button>
           </div>
