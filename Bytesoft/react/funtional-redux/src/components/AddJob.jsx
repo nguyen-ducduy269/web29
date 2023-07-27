@@ -4,7 +4,6 @@ import * as actions from "../store/action/indexAction";
 
 export const AddJob = ({
   array,
-  onAdd,
   job,
   setArray,
   setUpdateJob,
@@ -13,31 +12,24 @@ export const AddJob = ({
   status,
   setStatus,
 }) => {
-  const addTask = useSelector((state) => state.addTask);
   const dispatch = useDispatch();
 
-  const updatingJob = () => {
-    let indexToUpdate = array.findIndex((item) => item.id === job.id);
-    let newArray = [...array];
-    newArray[indexToUpdate] = { ...job, name, status };
-    setArray(newArray);
-    setUpdateJob("");
-    dispatch(actions.closeForm());
-  };
+  // const updatingJob = () => {
+  //   const data = dispatch(actions.saveTask({ name, status }));
+  //   let indexToUpdate = array.findIndex((item) => item.id === data.payload.id);
+  //   let newArray = [...array];
+  //   newArray[indexToUpdate] = { ...data.payload, name, status };
+  //   setArray(newArray);
+  //   setUpdateJob("");
+  //   dispatch(actions.closeForm());
+  // };
 
   const handleRegister = (e) => {
     e.preventDefault();
-    if (!job) {
-      onAdd({
-        id: Math.random(),
-        name: name,
-        status: status,
-      });
-      setName("");
-      dispatch(actions.closeForm());
-    } else {
-      updatingJob(e.id);
-    }
+    dispatch(actions.saveTask({ id: job?.id, name, status }));
+    const item = JSON.parse(localStorage.getItem("item"));
+    setArray(item);
+    dispatch(actions.closeForm());
   };
 
   useEffect(() => {

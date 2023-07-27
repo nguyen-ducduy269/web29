@@ -1,10 +1,10 @@
 import isDisplay from "./isDisplay";
-import addTask from "./addTask";
+import saveTask from "./saveTask";
 import { combineReducers } from "redux";
 
 const myReducers = combineReducers({
   isDisplay,
-  addTask,
+  saveTask,
 });
 
 export default myReducers;

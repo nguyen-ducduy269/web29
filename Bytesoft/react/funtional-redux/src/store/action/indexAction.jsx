@@ -10,8 +10,9 @@ export const closeForm = () => {
   };
 };
 
-export const addTask = () => {
+export const saveTask = (data) => {
   return {
-    type: "ADD_TASK",
+    type: "SAVE_TASK",
+    payload: data,
   };
 };

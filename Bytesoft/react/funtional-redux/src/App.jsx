@@ -29,13 +29,6 @@ export const App = () => {
     setArray(work ? work : []);
   }, []);
 
-  const onAdd = (aJob) => {
-    const result = [...array];
-    result.push(aJob);
-    setArray(result);
-    localStorage.setItem("item", JSON.stringify(result));
-  };
-
   return (
     <>
       <Header>Quản lý công việc</Header>
@@ -44,7 +37,6 @@ export const App = () => {
           {isDisplay ? (
             <AddJob
               array={array}
-              onAdd={onAdd}
               job={updateJob}
               setArray={setArray}
               setUpdateJob={setUpdateJob}
