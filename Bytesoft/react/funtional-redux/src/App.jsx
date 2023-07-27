@@ -36,10 +36,8 @@ export const App = () => {
         <LeftJob>
           {isDisplay ? (
             <AddJob
-              array={array}
               job={updateJob}
               setArray={setArray}
-              setUpdateJob={setUpdateJob}
               name={name}
               setName={setName}
               status={status}

@@ -2,27 +2,8 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 
-export const AddJob = ({
-  array,
-  job,
-  setArray,
-  setUpdateJob,
-  name,
-  setName,
-  status,
-  setStatus,
-}) => {
+export const AddJob = ({ job, setArray, name, setName, status, setStatus }) => {
   const dispatch = useDispatch();
-
-  // const updatingJob = () => {
-  //   const data = dispatch(actions.saveTask({ name, status }));
-  //   let indexToUpdate = array.findIndex((item) => item.id === data.payload.id);
-  //   let newArray = [...array];
-  //   newArray[indexToUpdate] = { ...data.payload, name, status };
-  //   setArray(newArray);
-  //   setUpdateJob("");
-  //   dispatch(actions.closeForm());
-  // };
 
   const handleRegister = (e) => {
     e.preventDefault();
