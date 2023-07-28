@@ -19,7 +19,6 @@ const saveTask = (state = initialState, action) => {
         name: action.payload.name,
         status: action.payload.status,
       };
-      console.log(action.payload.id);
       if (!action.payload.id) {
         newTask.id = Math.random();
         state.push(newTask);
@@ -27,7 +26,6 @@ const saveTask = (state = initialState, action) => {
         var index = findIndex(state, action.payload.id);
         state[index] = newTask;
       }
-
       localStorage.setItem("item", JSON.stringify(state));
       return state;
     default:

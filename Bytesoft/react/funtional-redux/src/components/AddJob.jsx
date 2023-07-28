@@ -20,6 +20,7 @@ export const AddJob = ({
     setArray(item);
     dispatch(actions.closeForm());
     refresh();
+    window.location.reload();
   };
 
   useEffect(() => {

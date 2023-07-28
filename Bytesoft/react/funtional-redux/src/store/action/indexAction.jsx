@@ -35,3 +35,17 @@ export const closeArrng = () => {
     type: "CLOSE_ARRANGE",
   };
 };
+
+export const filterTask = (filter) => {
+  return {
+    type: "FILTER_TASK",
+    filter,
+  };
+};
+
+export const handleArrange = (value) => {
+  return {
+    type: "HANDLE_ARRANGE",
+    value,
+  };
+};

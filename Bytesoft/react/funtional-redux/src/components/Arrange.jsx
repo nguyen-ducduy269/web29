@@ -7,17 +7,6 @@ export const Arrange = ({ setArray }) => {
   const work = JSON.parse(localStorage.getItem("item"));
   const dispatch = useDispatch();
 
-  const handleArrange = (value) => {
-    let newArray = [...work];
-
-    newArray = newArray.filter((item) => {
-      return item.status.includes(value);
-    });
-
-    setArray(newArray);
-    dispatch(actions.closeArrng());
-  };
-
   const fromAToZ = () => {
     let newArray = [...work];
 
@@ -58,13 +47,23 @@ export const Arrange = ({ setArray }) => {
             <a
               type="button"
               value="Kích hoạt"
-              onClick={() => handleArrange("Kích hoạt")}
+              onClick={() => {
+                dispatch(actions.handleArrange("Kích hoạt"));
+                dispatch(actions.closeArrng());
+              }}
             >
               <span>Trạng thái Kích hoạt</span>
             </a>
           </li>
           <li>
-            <a type="button" value="Ẩn" onClick={() => handleArrange("Ẩn")}>
+            <a
+              type="button"
+              value="Ẩn"
+              onClick={() => {
+                dispatch(actions.handleArrange("Ẩn"));
+                dispatch(actions.closeArrng());
+              }}
+            >
               <span>Trạng thái Ẩn</span>
             </a>
           </li>

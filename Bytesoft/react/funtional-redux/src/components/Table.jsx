@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 import { Status } from "../components/Status";
 
@@ -13,6 +13,8 @@ export const Table = ({
   refresh,
 }) => {
   const [search, setSearch] = useState("");
+  const filterTask = useSelector((state) => state.filterTask);
+  const handleArrange = useSelector((state) => state.handleArrange);
   const dispatch = useDispatch();
 
   const editBtn = (e) => {

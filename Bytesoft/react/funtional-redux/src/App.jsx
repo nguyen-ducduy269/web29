@@ -59,7 +59,6 @@ export const App = () => {
             setArray={(v) => {
               setArray(v);
             }}
-            array={array}
           />
 
           <Table
