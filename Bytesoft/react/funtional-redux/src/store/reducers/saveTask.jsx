@@ -11,7 +11,7 @@ var findIndex = (tasks, id) => {
   return result;
 };
 
-const addTask = (state = initialState, action) => {
+const saveTask = (state = initialState, action) => {
   switch (action.type) {
     case "SAVE_TASK":
       var newTask = {
@@ -19,6 +19,7 @@ const addTask = (state = initialState, action) => {
         name: action.payload.name,
         status: action.payload.status,
       };
+      console.log(action.payload.id);
       if (!action.payload.id) {
         newTask.id = Math.random();
         state.push(newTask);
@@ -34,4 +35,4 @@ const addTask = (state = initialState, action) => {
   }
 };
 
-export default addTask;
+export default saveTask;

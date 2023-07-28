@@ -10,19 +10,10 @@ export const Table = ({
   setUpdateJob,
   setName,
   setStatus,
+  refresh,
 }) => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
-
-  const onDelete = (id) => {
-    const work = JSON.parse(localStorage.getItem("item"));
-
-    const newArray = work.filter((item) => {
-      item.id != id;
-    });
-    setArray(newArray);
-    localStorage.setItem("item", JSON.stringify(newArray));
-  };
 
   const editBtn = (e) => {
     dispatch(actions.openForm());
@@ -35,6 +26,7 @@ export const Table = ({
     setName(e.name);
     setStatus(e.status);
   };
+
   return (
     <>
       <table>
@@ -79,7 +71,13 @@ export const Table = ({
                   <button className="btn_edit" onClick={() => editBtn(e)}>
                     Sửa
                   </button>
-                  <button className="btn_remove" onClick={() => onDelete(e.id)}>
+                  <button
+                    className="btn_remove"
+                    onClick={() => {
+                      dispatch(actions.deleteTask(e.id));
+                      refresh();
+                    }}
+                  >
                     Xóa
                   </button>
                 </td>

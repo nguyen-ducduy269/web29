@@ -16,3 +16,22 @@ export const saveTask = (data) => {
     payload: data,
   };
 };
+
+export const deleteTask = (id) => {
+  return {
+    type: "DELETE_TASK",
+    id,
+  };
+};
+
+export const showArrng = () => {
+  return {
+    type: "SHOW_ARRANGE",
+  };
+};
+
+export const closeArrng = () => {
+  return {
+    type: "CLOSE_ARRANGE",
+  };
+};

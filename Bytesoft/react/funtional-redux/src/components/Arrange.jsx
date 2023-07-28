@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import * as actions from "../store/action/indexAction";
 
-export const Arrange = ({ setArray, closeArrng }) => {
+export const Arrange = ({ setArray }) => {
   const work = JSON.parse(localStorage.getItem("item"));
+  const dispatch = useDispatch();
 
   const handleArrange = (value) => {
     let newArray = [...work];
@@ -12,7 +15,7 @@ export const Arrange = ({ setArray, closeArrng }) => {
     });
 
     setArray(newArray);
-    closeArrng();
+    dispatch(actions.closeArrng());
   };
 
   const fromAToZ = () => {
@@ -22,7 +25,7 @@ export const Arrange = ({ setArray, closeArrng }) => {
       return a.name.localeCompare(b.name);
     });
     setArray(newArray);
-    closeArrng();
+    dispatch(actions.closeArrng());
   };
 
   const fromZToA = () => {
@@ -34,7 +37,7 @@ export const Arrange = ({ setArray, closeArrng }) => {
       })
       .reverse();
     setArray(newArray);
-    closeArrng();
+    dispatch(actions.closeArrng());
   };
 
   return (

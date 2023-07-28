@@ -13,9 +13,13 @@ export const App = () => {
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
-
+  const [nonce, setNonce] = useState(0);
   const isDisplay = useSelector((state) => state.isDisplay);
   const dispatch = useDispatch();
+
+  const refresh = () => {
+    setNonce(nonce + 1);
+  };
 
   const handleOpen = () => {
     dispatch(actions.openForm());
@@ -27,7 +31,7 @@ export const App = () => {
   useEffect(() => {
     const work = JSON.parse(localStorage.getItem("item"));
     setArray(work ? work : []);
-  }, []);
+  }, [nonce]);
 
   return (
     <>
@@ -42,6 +46,7 @@ export const App = () => {
               setName={setName}
               status={status}
               setStatus={setStatus}
+              refresh={refresh}
             />
           ) : (
             false
@@ -63,6 +68,7 @@ export const App = () => {
             setUpdateJob={setUpdateJob}
             setName={setName}
             setStatus={setStatus}
+            refresh={refresh}
           />
         </RightJob>
       </Container>

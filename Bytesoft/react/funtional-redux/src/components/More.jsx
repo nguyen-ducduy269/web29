@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Arrange } from "./Arrange";
 import styled from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "../store/action/indexAction";
 
 export const More = ({ setArray, array }) => {
   const [searchValue, setSearchValue] = useState("");
   const items = JSON.parse(localStorage.getItem("item"));
+
+  const arrange = useSelector((state) => state.arrange);
+  const dispatch = useDispatch();
 
   const handleSearch = () => {
     if (searchValue != "" && searchValue != null) {
@@ -20,15 +25,6 @@ export const More = ({ setArray, array }) => {
     }
   };
 
-  const [showArrange, setShowArrange] = useState(false);
-  const closeArrng = () => {
-    setShowArrange(false);
-  };
-
-  const showArrng = () => {
-    setShowArrange(true);
-  };
-
   return (
     <>
       <Mored>
@@ -40,14 +36,13 @@ export const More = ({ setArray, array }) => {
           onChange={(e) => setSearchValue(e.target.value)}
         ></input>
         <button onClick={handleSearch}>Tìm</button>
-        <button className="reduce" onClick={showArrng}>
+        <button
+          className="reduce"
+          onClick={() => dispatch(actions.showArrng())}
+        >
           Sắp xếp
         </button>
-        {showArrange ? (
-          <Arrange setArray={setArray} closeArrng={closeArrng} />
-        ) : (
-          false
-        )}
+        {arrange ? <Arrange setArray={setArray} /> : false}
       </Mored>
     </>
   );

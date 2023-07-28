@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 
-export const AddJob = ({ job, setArray, name, setName, status, setStatus }) => {
+export const AddJob = ({
+  job,
+  setArray,
+  name,
+  setName,
+  status,
+  setStatus,
+  refresh,
+}) => {
   const dispatch = useDispatch();
 
   const handleRegister = (e) => {
@@ -11,6 +19,7 @@ export const AddJob = ({ job, setArray, name, setName, status, setStatus }) => {
     const item = JSON.parse(localStorage.getItem("item"));
     setArray(item);
     dispatch(actions.closeForm());
+    refresh();
   };
 
   useEffect(() => {
