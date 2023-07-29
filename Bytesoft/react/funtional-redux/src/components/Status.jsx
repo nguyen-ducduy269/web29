@@ -1,32 +1,22 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
-export const Status = ({ setArray }) => {
+export const Status = () => {
   const [stat, setStat] = useState("");
-  const work = JSON.parse(localStorage.getItem("item"));
-
-  const handleStat = (e) => {
-    if (e.target.value == "Tất cả") {
-      setArray(work);
-    } else {
-      let newStat = [...work];
-      console.log("newStat", newStat);
-
-      const status = stat.toUpperCase();
-
-      newStat = newStat.filter((item) => {
-        return item.status.toUpperCase().includes(status);
-      });
-      setArray(newStat);
-    }
-  };
+  const dispatch = useDispatch();
 
   return (
     <>
       <td className="status">
-        <select onChange={(e) => setStat(e.target.value)} onClick={handleStat}>
-          <option>Tất cả</option>
-          <option>Kích hoạt</option>
-          <option>Ẩn</option>
+        <select
+          onChange={(e) => setStat(e.target.value)}
+          onClick={(e) =>
+            dispatch({ type: "FILTER_TABLE", payload: e.target.value })
+          }
+        >
+          <option value={"Tất cả"}>Tất cả</option>
+          <option value={"Kích hoạt"}>Kích hoạt</option>
+          <option value={"Ẩn"}>Ẩn</option>
         </select>
       </td>
     </>

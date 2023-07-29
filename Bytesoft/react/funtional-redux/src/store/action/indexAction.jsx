@@ -49,3 +49,24 @@ export const handleArrange = (value) => {
     value,
   };
 };
+
+export const sortFromAToZ = (value) => {
+  return {
+    type: "FROM_A_TO_Z",
+    value,
+  };
+};
+
+export const sortFromZToA = (value) => {
+  return {
+    type: "FROM_Z_TO_A",
+    value,
+  };
+};
+
+export const filterTable = (filter) => {
+  return {
+    type: "FILTER_TABLE",
+    filter,
+  };
+};

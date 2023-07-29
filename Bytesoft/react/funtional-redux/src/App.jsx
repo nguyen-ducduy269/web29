@@ -55,15 +55,9 @@ export const App = () => {
 
         <RightJob>
           <AddButton onClick={() => handleOpen()}>Thêm công việc</AddButton>
-          <More
-            setArray={(v) => {
-              setArray(v);
-            }}
-          />
+          <More />
 
           <Table
-            array={array}
-            setArray={setArray}
             setUpdateJob={setUpdateJob}
             setName={setName}
             setStatus={setStatus}

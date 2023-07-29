@@ -3,43 +3,32 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 
-export const Arrange = ({ setArray }) => {
+export const Arrange = () => {
   const work = JSON.parse(localStorage.getItem("item"));
   const dispatch = useDispatch();
-
-  const fromAToZ = () => {
-    let newArray = [...work];
-
-    newArray = newArray.sort((a, b) => {
-      return a.name.localeCompare(b.name);
-    });
-    setArray(newArray);
-    dispatch(actions.closeArrng());
-  };
-
-  const fromZToA = () => {
-    let newArray = [...work];
-
-    newArray = newArray
-      .sort((a, b) => {
-        return a.name.localeCompare(b.name);
-      })
-      .reverse();
-    setArray(newArray);
-    dispatch(actions.closeArrng());
-  };
-
   return (
     <>
       <Arranged>
         <ul>
           <li>
-            <a type="button" onClick={() => fromAToZ()}>
+            <a
+              type="button"
+              onClick={() => {
+                dispatch({ type: "FROM_A_TO_Z", payload: work });
+                dispatch(actions.closeArrng());
+              }}
+            >
               <span>Từ A - Z</span>
             </a>
           </li>
           <li>
-            <a type="button" onClick={() => fromZToA()}>
+            <a
+              type="button"
+              onClick={() => {
+                dispatch({ type: "FROM_Z_TO_A", payload: work });
+                dispatch(actions.closeArrng());
+              }}
+            >
               <span>Từ Z - A</span>
             </a>
           </li>
@@ -48,7 +37,7 @@ export const Arrange = ({ setArray }) => {
               type="button"
               value="Kích hoạt"
               onClick={() => {
-                dispatch(actions.handleArrange("Kích hoạt"));
+                dispatch({ type: "HANDLE_ARRANGE", payload: "Kích hoạt" });
                 dispatch(actions.closeArrng());
               }}
             >
@@ -60,7 +49,7 @@ export const Arrange = ({ setArray }) => {
               type="button"
               value="Ẩn"
               onClick={() => {
-                dispatch(actions.handleArrange("Ẩn"));
+                dispatch({ type: "HANDLE_ARRANGE", payload: "Ẩn" });
                 dispatch(actions.closeArrng());
               }}
             >

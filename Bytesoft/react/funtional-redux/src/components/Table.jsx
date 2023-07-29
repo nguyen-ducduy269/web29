@@ -1,21 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 import { Status } from "../components/Status";
 
-export const Table = ({
-  array,
-  setArray,
-  setUpdateJob,
-  setName,
-  setStatus,
-  refresh,
-}) => {
-  const [search, setSearch] = useState("");
-  const filterTask = useSelector((state) => state.filterTask);
-  const handleArrange = useSelector((state) => state.handleArrange);
+export const Table = ({ setUpdateJob, setName, setStatus, refresh }) => {
   const dispatch = useDispatch();
+  const tasks = useSelector((state) => state.saveTask);
 
   const editBtn = (e) => {
     dispatch(actions.openForm());
@@ -48,43 +38,39 @@ export const Table = ({
               <input
                 className="add-input"
                 type="text"
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) =>
+                  dispatch({ type: "FILTER_TASK", payload: e.target.value })
+                }
               ></input>
             </td>
 
-            <Status setArray={setArray} />
+            <Status />
             <td className="activity"></td>
           </tr>
 
-          {array
-            ?.filter((item) => {
-              return search.toLocaleLowerCase() === ""
-                ? item
-                : item.name.toLocaleLowerCase().includes(search);
-            })
-            .map((e, i) => (
-              <tr key={i}>
-                <td className="stt">{i + 1}</td>
-                <td className="name">{e.name}</td>
-                <td className="status">
-                  <p className="status-active">{e.status}</p>
-                </td>
-                <td className="activity button">
-                  <button className="btn_edit" onClick={() => editBtn(e)}>
-                    Sửa
-                  </button>
-                  <button
-                    className="btn_remove"
-                    onClick={() => {
-                      dispatch(actions.deleteTask(e.id));
-                      refresh();
-                    }}
-                  >
-                    Xóa
-                  </button>
-                </td>
-              </tr>
-            ))}
+          {tasks.map((e, i) => (
+            <tr key={i}>
+              <td className="stt">{i + 1}</td>
+              <td className="name">{e.name}</td>
+              <td className="status">
+                <p className="status-active">{e.status}</p>
+              </td>
+              <td className="activity button">
+                <button className="btn_edit" onClick={() => editBtn(e)}>
+                  Sửa
+                </button>
+                <button
+                  className="btn_remove"
+                  onClick={() => {
+                    dispatch({ type: "DELETE_TASK", payload: e.id });
+                    refresh();
+                  }}
+                >
+                  Xóa
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>

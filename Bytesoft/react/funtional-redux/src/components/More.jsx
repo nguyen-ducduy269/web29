@@ -4,9 +4,8 @@ import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 
-export const More = ({ setArray }) => {
+export const More = () => {
   const [searchValue, setSearchValue] = useState("");
-
   const arrange = useSelector((state) => state.arrange);
   const dispatch = useDispatch();
 
@@ -20,7 +19,11 @@ export const More = ({ setArray }) => {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         ></input>
-        <button onClick={() => dispatch(actions.filterTask(searchValue))}>
+        <button
+          onClick={() => {
+            dispatch({ type: "FILTER_TASK", payload: searchValue });
+          }}
+        >
           Tìm
         </button>
         <button
@@ -29,7 +32,7 @@ export const More = ({ setArray }) => {
         >
           Sắp xếp
         </button>
-        {arrange ? <Arrange setArray={setArray} /> : false}
+        {arrange ? <Arrange /> : false}
       </Mored>
     </>
   );
