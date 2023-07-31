@@ -17,6 +17,7 @@ export const AddJob = ({
     let newArray = [...array];
     newArray[indexToUpdate] = { ...job, name, status };
     setArray(newArray);
+    localStorage.setItem("item", JSON.stringify(newArray));
     setUpdateJob("");
     closeDisplay();
   };

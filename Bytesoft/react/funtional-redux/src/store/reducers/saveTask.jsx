@@ -24,7 +24,7 @@ const saveTask = (state = initialState, action) => {
       localStorage.setItem("item", JSON.stringify(state));
       return state;
     case "DELETE_TASK":
-      var id = action.payload.id;
+      var id = action.payload;
       var index = findIndex(state, id);
       state.splice(index, 1);
       localStorage.setItem("item", JSON.stringify(state));

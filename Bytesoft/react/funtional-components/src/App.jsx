@@ -41,10 +41,7 @@ export const App = () => {
 
   const onDelete = (id) => {
     const work = JSON.parse(localStorage.getItem("item"));
-
-    const newArray = work.filter((item) => {
-      item.id != id;
-    });
+    const newArray = work.filter((item) => item.id != id);
     setArray(newArray);
     localStorage.setItem("item", JSON.stringify(newArray));
   };

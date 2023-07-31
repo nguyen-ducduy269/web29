@@ -9,10 +9,7 @@ export const Status = ({ setArray }) => {
       setArray(work);
     } else {
       let newStat = [...work];
-      console.log("newStat", newStat);
-
       const status = stat.toUpperCase();
-
       newStat = newStat.filter((item) => {
         return item.status.toUpperCase().includes(status);
       });
