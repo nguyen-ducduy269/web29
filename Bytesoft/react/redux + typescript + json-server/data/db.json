@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "a",
+      "status": "Kích hoạt",
+      "id": 1
+    },
+    {
+      "name": "b",
+      "status": "Ẩn",
+      "id": 2
+    },
+    {
+      "name": "c",
+      "status": "Kích hoạt",
+      "id": 3
+    },
+    {
+      "name": "d",
+      "status": "Ẩn",
+      "id": 4
+    }
+  ]
+}

@@ -1,31 +1,81 @@
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "./store/action/indexAction";
 
 // import components
 import { AddJob } from "./components/AddJob";
 import { More } from "./components/More";
 import { Table } from "./components/Table";
 
-function App() {
+export const App = () => {
+  const [array, setArray] = useState([]);
+  const [updateJob, setUpdateJob] = useState("");
+  const [name, setName] = useState("");
+  const [status, setStatus] = useState("Kích hoạt");
+  const [nonce, setNonce] = useState(0);
+  const isDisplay = useSelector((state) => state.isDisplay);
+  const dispatch = useDispatch();
+
+  const refresh = () => {
+    setNonce(nonce + 1);
+  };
+
+  const handleOpen = () => {
+    dispatch(actions.openForm());
+    setUpdateJob(null);
+    setName("");
+    setStatus("Kích hoạt");
+  };
+
+  // useEffect(() => {
+  //   const work = JSON.parse(localStorage.getItem("item"));
+  //   setArray(work ? work : []);
+  // }, [nonce]);
+
+  fetch("http://localhost:3000/data")
+    .then((response) => {
+      response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
+
   return (
     <>
       <Header>Quản lý công việc</Header>
       <Container>
         <LeftJob>
-          <AddJob />
+          {isDisplay ? (
+            <AddJob
+              job={updateJob}
+              setArray={setArray}
+              name={name}
+              setName={setName}
+              status={status}
+              setStatus={setStatus}
+              refresh={refresh}
+            />
+          ) : (
+            false
+          )}
         </LeftJob>
 
         <RightJob>
-          <AddButton>Thêm công việc</AddButton>
+          <AddButton onClick={() => handleOpen()}>Thêm công việc</AddButton>
           <More />
 
-          <Table />
+          <Table
+            setUpdateJob={setUpdateJob}
+            setName={setName}
+            setStatus={setStatus}
+            refresh={refresh}
+          />
         </RightJob>
       </Container>
     </>
   );
-}
-
-export default App;
+};
 
 const Header = styled.h1`
   width: 100%;
