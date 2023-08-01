@@ -30,7 +30,7 @@ export const Table = () => {
 
           <tr>
             <td className="stt">1</td>
-            <td className="name">lau nha</td>
+            <td className="name">a</td>
             <td className="status">
               <p className="status-active">Kích hoạt</p>
             </td>
