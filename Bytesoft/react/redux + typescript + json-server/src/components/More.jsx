@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Arrange } from "./Arrange";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 
-export const More = () => {
-  const [searchValue, setSearchValue] = useState("");
+export const More = ({ filter, setFilter }) => {
   const arrange = useSelector((state) => state.arrange);
   const dispatch = useDispatch();
 
@@ -16,12 +15,15 @@ export const More = () => {
           className="main-input"
           type="text"
           placeholder="Nhập từ khóa..."
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
+          value={filter.name}
+          onChange={(e) => setFilter({ ...filter, name: e.target.value })}
         ></input>
         <button
           onClick={() => {
-            dispatch({ type: "FILTER_TASK", payload: searchValue });
+            dispatch({
+              type: "FILTER_TASK",
+              payload: filter.name,
+            });
           }}
         >
           Tìm
@@ -32,7 +34,7 @@ export const More = () => {
         >
           Sắp xếp
         </button>
-        {arrange ? <Arrange /> : false}
+        {arrange ? <Arrange filter={filter} /> : false}
       </Mored>
     </>
   );

@@ -19,6 +19,16 @@
       "name": "d",
       "status": "Ẩn",
       "id": 4
+    },
+    {
+      "name": "da",
+      "status": "Kích hoạt",
+      "id": 5
+    },
+    {
+      "name": "mọi",
+      "status": "Ẩn",
+      "id": 6
     }
   ]
 }

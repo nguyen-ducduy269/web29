@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
+import data from "../../data/db.json";
 
-export const Arrange = () => {
-  const work = JSON.parse(localStorage.getItem("item"));
+export const Arrange = ({ filter }) => {
   const dispatch = useDispatch();
   return (
     <>
@@ -13,8 +13,9 @@ export const Arrange = () => {
           <li>
             <a
               type="button"
+              value={filter.name}
               onClick={() => {
-                dispatch({ type: "FROM_A_TO_Z", payload: work });
+                dispatch({ type: "FROM_A_TO_Z", payload: data });
                 dispatch(actions.closeArrng());
               }}
             >
@@ -24,8 +25,9 @@ export const Arrange = () => {
           <li>
             <a
               type="button"
+              value={filter.name}
               onClick={() => {
-                dispatch({ type: "FROM_Z_TO_A", payload: work });
+                dispatch({ type: "FROM_Z_TO_A", payload: data });
                 dispatch(actions.closeArrng());
               }}
             >
@@ -35,9 +37,9 @@ export const Arrange = () => {
           <li>
             <a
               type="button"
-              value="Kích hoạt"
+              value={filter.status}
               onClick={() => {
-                dispatch({ type: "HANDLE_ARRANGE", payload: "Kích hoạt" });
+                dispatch({ type: "HANDLE_ARRANGE", payload: data });
                 dispatch(actions.closeArrng());
               }}
             >

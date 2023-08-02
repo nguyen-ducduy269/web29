@@ -13,6 +13,10 @@ export const App = () => {
   const [updateJob, setUpdateJob] = useState("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
+  const [filter, setFilter] = useState({ name: "", status: "" });
+
+  const [searchValue, setSearchValue] = useState("");
+
   const [nonce, setNonce] = useState(0);
   const isDisplay = useSelector((state) => state.isDisplay);
   const dispatch = useDispatch();
@@ -28,18 +32,29 @@ export const App = () => {
     setStatus("Kích hoạt");
   };
 
-  // useEffect(() => {
-  //   const work = JSON.parse(localStorage.getItem("item"));
-  //   setArray(work ? work : []);
-  // }, [nonce]);
+  const removePropertiesEmpty = (object) => {
+    let objectToProcess = { ...object };
+    for (let i in objectToProcess) {
+      if (objectToProcess[i] === "") {
+        delete objectToProcess[i];
+      }
+    }
+    return objectToProcess;
+  };
 
-  fetch("http://localhost:3000/data")
-    .then((response) => {
-      response.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
+  useEffect(() => {
+    const queryParams = new URLSearchParams(
+      removePropertiesEmpty(filter)
+    ).toString();
+
+    fetch(`http://localhost:3000/data?${queryParams}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setArray(data);
+      });
+  }, [filter]);
 
   return (
     <>
@@ -49,7 +64,6 @@ export const App = () => {
           {isDisplay ? (
             <AddJob
               job={updateJob}
-              setArray={setArray}
               name={name}
               setName={setName}
               status={status}
@@ -63,13 +77,15 @@ export const App = () => {
 
         <RightJob>
           <AddButton onClick={() => handleOpen()}>Thêm công việc</AddButton>
-          <More />
+          <More filter={filter} setFilter={setFilter} />
 
           <Table
             setUpdateJob={setUpdateJob}
             setName={setName}
             setStatus={setStatus}
             refresh={refresh}
+            filter={filter}
+            setFilter={setFilter}
           />
         </RightJob>
       </Container>

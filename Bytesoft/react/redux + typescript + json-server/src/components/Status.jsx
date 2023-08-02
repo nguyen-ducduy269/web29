@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-export const Status = () => {
+export const Status = ({ filter, setFilter }) => {
   const [stat, setStat] = useState("");
   const dispatch = useDispatch();
 
@@ -9,10 +9,14 @@ export const Status = () => {
     <>
       <td className="status">
         <select
-          onChange={(e) => setStat(e.target.value)}
-          onClick={(e) =>
-            dispatch({ type: "FILTER_TABLE", payload: e.target.value })
-          }
+          value={filter.status}
+          onChange={(e) => {
+            dispatch({
+              type: "FILTER_TABLE",
+              payload: e.target.value,
+            });
+            setFilter({ ...filter, status: e.target.value });
+          }}
         >
           <option value={"Tất cả"}>Tất cả</option>
           <option value={"Kích hoạt"}>Kích hoạt</option>

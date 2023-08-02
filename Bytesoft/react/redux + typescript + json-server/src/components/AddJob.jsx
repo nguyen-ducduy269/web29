@@ -2,22 +2,12 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as actions from "../store/action/indexAction";
 
-export const AddJob = ({
-  job,
-  setArray,
-  name,
-  setName,
-  status,
-  setStatus,
-  refresh,
-}) => {
+export const AddJob = ({ job, name, setName, status, setStatus, refresh }) => {
   const dispatch = useDispatch();
 
   const handleRegister = (e) => {
     e.preventDefault();
     dispatch(actions.saveTask({ id: job?.id, name, status }));
-    const item = JSON.parse(localStorage.getItem("item"));
-    setArray(item);
     dispatch(actions.closeForm());
     refresh();
   };
