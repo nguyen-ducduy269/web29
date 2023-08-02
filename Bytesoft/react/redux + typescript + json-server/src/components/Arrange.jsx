@@ -37,9 +37,9 @@ export const Arrange = ({ filter }) => {
           <li>
             <a
               type="button"
-              value={filter.status}
+              value="Kích hoạt"
               onClick={() => {
-                dispatch({ type: "HANDLE_ARRANGE", payload: data });
+                dispatch({ type: "HANDLE_ARRANGE", payload: "Kích hoạt" });
                 dispatch(actions.closeArrng());
               }}
             >

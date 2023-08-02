@@ -58,15 +58,10 @@ const saveTask = (state = initialState, action) => {
       }
       return state;
     case "HANDLE_ARRANGE":
-      console.log(action.payload.data);
-      console.log(state.data);
       let newObject = [...state.data];
       newObject = newObject.filter((props) => {
-        console.log(props.status);
-        console.log(action.payload.data);
         return props.status.includes(action.payload);
       });
-      console.log(newObject);
       state.data = newObject;
       return state;
     case "FROM_A_TO_Z":
@@ -98,7 +93,6 @@ const saveTask = (state = initialState, action) => {
             return response.json();
           })
           .then((data) => {
-            console.log(data);
             state.data = data;
           });
       }
