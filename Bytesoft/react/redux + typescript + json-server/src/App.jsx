@@ -14,9 +14,6 @@ export const App = () => {
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
   const [filter, setFilter] = useState({ name: "", status: "" });
-
-  const [searchValue, setSearchValue] = useState("");
-
   const [nonce, setNonce] = useState(0);
   const isDisplay = useSelector((state) => state.isDisplay);
   const dispatch = useDispatch();
