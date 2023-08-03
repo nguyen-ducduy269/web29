@@ -1,16 +1,49 @@
 // import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../store/actions/indexActions.tsx";
+import axios from "axios";
 
 import Status from "./Status";
 
-const Table = () => {
+type props = {
+  array: any;
+  setArray: (value: object) => void;
+  name: string;
+  setName: (value: string) => void;
+  status: string;
+  setStatus: (value: string) => void;
+};
+const Table = ({
+  array,
+  setArray,
+  name,
+  setName,
+  status,
+  setStatus,
+}: props) => {
   const dispatch = useDispatch();
   const tasks = useSelector((state: any) => state.Task.data.data);
 
   const editBtn = (e: any) => {
-    console.log(e);
     dispatch(actions.openForm());
+    let indexFilter = array.findIndex((item: any) => item.id === e);
+    setName(array[indexFilter].name);
+    setStatus(array[indexFilter].status);
+  };
+
+  const deleteBtn = (e: any) => {
+    console.log(e);
+
+    let indexFilter = array.findIndex((item: any) => item.id === e);
+    const newArray = array.filter((item: any) => {
+      return item != array[indexFilter];
+    });
+
+    axios
+      .delete(`http://localhost:3000/data/${e}`)
+      .then((response) => console.log(response.data))
+      .catch((error) => console.log(error));
+    setArray(newArray);
   };
   return (
     <>
@@ -46,7 +79,9 @@ const Table = () => {
                 <button className="btn_edit" onClick={() => editBtn(e.id)}>
                   Sửa
                 </button>
-                <button className="btn_remove">Xóa</button>
+                <button className="btn_remove" onClick={() => deleteBtn(e.id)}>
+                  Xóa
+                </button>
               </td>
             </tr>
           ))}

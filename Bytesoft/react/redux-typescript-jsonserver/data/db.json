@@ -11,24 +11,19 @@
       "id": 2
     },
     {
-      "name": "c",
-      "status": "Kích hoạt",
-      "id": 3
+      "id": 0.8837680156741199,
+      "name": "e",
+      "status": "Kích hoạt"
     },
     {
-      "name": "d",
-      "status": "Ẩn",
-      "id": 4
+      "id": 0.7305303955693256,
+      "name": "f",
+      "status": "Ẩn"
     },
     {
-      "name": "da",
-      "status": "Kích hoạt",
-      "id": 5
-    },
-    {
-      "name": "mọi",
-      "status": "Ẩn",
-      "id": 6
+      "id": 0.43775519798028917,
+      "name": "a1",
+      "status": "Kích hoạt"
     }
   ]
 }

@@ -8,7 +8,10 @@ import More from "./components/More";
 import Table from "./components/Table";
 
 function App() {
-  const [array, setArray] = useState("");
+  const [array, setArray] = useState<any>("");
+  const [name, setName] = useState("");
+  const [status, setStatus] = useState("Kích hoạt");
+
   const isDisplay = useSelector((state: any) => state.isDisplay);
   const dispatch = useDispatch();
 
@@ -30,13 +33,32 @@ function App() {
     <>
       <Header>Quản lý công việc</Header>
       <Container>
-        <LeftJob>{isDisplay ? <AddJob /> : false}</LeftJob>
+        <LeftJob>
+          {isDisplay ? (
+            <AddJob
+              setArray={setArray}
+              name={name}
+              setName={setName}
+              status={status}
+              setStatus={setStatus}
+            />
+          ) : (
+            false
+          )}
+        </LeftJob>
 
         <RightJob>
           <AddButton onClick={() => handleOpen()}>Thêm công việc</AddButton>
           <More />
 
-          <Table />
+          <Table
+            array={array}
+            setArray={setArray}
+            name={name}
+            setName={setName}
+            status={status}
+            setStatus={setStatus}
+          />
         </RightJob>
       </Container>
     </>
