@@ -76,7 +76,11 @@ const Table = ({
                 <p className="status-active">{e.status}</p>
               </td>
               <td className="activity button">
-                <button className="btn_edit" onClick={() => editBtn(e.id)}>
+                <button
+                  className="btn_edit"
+                  data-action="edit"
+                  onClick={() => editBtn(e.id)}
+                >
                   Sửa
                 </button>
                 <button className="btn_remove" onClick={() => deleteBtn(e.id)}>

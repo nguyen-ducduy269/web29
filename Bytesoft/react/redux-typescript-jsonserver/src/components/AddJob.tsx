@@ -60,6 +60,7 @@ const AddJob = ({ setArray, name, setName, status, setStatus }: props) => {
               type="submit"
               className="btn_add"
               onClick={(e) => handleSubmit(e)}
+              data-action="add"
             >
               Thêm
             </button>
