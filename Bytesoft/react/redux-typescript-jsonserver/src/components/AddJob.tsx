@@ -1,39 +1,16 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import * as actions from "../store/actions/indexActions";
-import axios from "axios";
 
 type props = {
-  setArray: (value: object) => void;
   name: string;
   setName: (value: string) => void;
   status: string;
   setStatus: (value: string) => void;
+  handleBtn: (value: any) => void;
 };
 
-const AddJob = ({ setArray, name, setName, status, setStatus }: props) => {
+const AddJob = ({ name, setName, status, setStatus, handleBtn }: props) => {
   const dispatch = useDispatch();
-  const tasks = useSelector((state: any) => state.Task.data.data);
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    dispatch(actions.Task({ name: name, status: status }));
-    const newItem = {
-      id: Math.random(),
-      name: name,
-      status: status,
-    };
-    axios
-      .post("http://localhost:3000/data", newItem)
-      .then((response) => console.log(response.data))
-      .then((error) => console.log(error));
-
-    setArray(newItem);
-    tasks.push(newItem);
-    dispatch(actions.closeForm());
-
-    setName("");
-    setStatus("Kích hoạt");
-  };
 
   return (
     <>
@@ -50,7 +27,11 @@ const AddJob = ({ setArray, name, setName, status, setStatus }: props) => {
           />
 
           <label>Trạng thái: </label>
-          <select value={status} onChange={(e) => setStatus(e.target.value)}>
+          <select
+            id="status"
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+          >
             <option value="Kích hoạt">Kích hoạt</option>
             <option value="Ẩn">Ẩn</option>
           </select>
@@ -59,8 +40,8 @@ const AddJob = ({ setArray, name, setName, status, setStatus }: props) => {
             <button
               type="submit"
               className="btn_add"
-              onClick={(e) => handleSubmit(e)}
-              data-action="add"
+              onClick={(e) => handleBtn(e)}
+              data-id="add"
             >
               Thêm
             </button>

@@ -2,23 +2,21 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "./store/actions/indexActions.tsx";
+import axios from "axios";
+
 // import components
-import AddJob from "./components/AddJob";
-import More from "./components/More";
-import Table from "./components/Table";
+import AddJob from "./components/AddJob.tsx";
+import More from "./components/More.tsx";
+import Table from "./components/Table.tsx";
 
 function App() {
   const [array, setArray] = useState<any>("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
+  const tasks = useSelector((state: any) => state.Task.data.data);
 
   const isDisplay = useSelector((state: any) => state.isDisplay);
   const dispatch = useDispatch();
-
-  const handleOpen = () => {
-    dispatch(actions.openForm());
-  };
-
   useEffect(() => {
     fetch(`http://localhost:3000/data?`)
       .then((response) => {
@@ -29,6 +27,118 @@ function App() {
       });
   }, []);
 
+  // const handleBtn = (e: any) => {
+  //   const addBtn = document.querySelector(
+  //     '[data-id="add"]'
+  //   ) as HTMLButtonElement | null;
+
+  //   const editBtn = document.querySelector(
+  //     '[data-id="edit"]'
+  //   ) as HTMLButtonElement | null;
+
+  //   if (addBtn != null) {
+  //     e.preventDefault();
+  //     dispatch(actions.Task({ id: Math.random(), name: name, status: status }));
+  //     const newItem = {
+  //       id: Math.random(),
+  //       name: name,
+  //       status: status,
+  //     };
+  //     // axios
+  //     //   .post("http://localhost:3000/data", newItem)
+  //     //   .then((response) => console.log(response.data))
+  //     //   .then((error) => console.log(error));
+
+  //     setArray(newItem);
+  //     tasks.push(newItem);
+  //     dispatch(actions.closeForm());
+
+  //     setName("");
+  //     setStatus("Kích hoạt");
+
+  //     console.log("array", array);
+  //   }
+  //   if (editBtn != null) {
+  //     dispatch(actions.openForm());
+  //     let indexFilter = array?.findIndex((item: any) => item.id === e);
+  //     setName(array[indexFilter].name);
+  //     setStatus(array[indexFilter].status);
+
+  //     const newArray = {
+  //       id: array[indexFilter].id,
+  //       name: array[indexFilter].name,
+  //       status: status,
+  //     };
+
+  //     array.splice(indexFilter, 1, newArray);
+  //     // axios
+  //     //   .put("http://localhost:3000/data", array)
+  //     //   .then((response) => console.log(response.data))
+  //     //   .then((error) => console.log(error));
+  //     setArray(array);
+  //     console.log(array);
+  //     console.log("newArray", newArray);
+  //   }
+  // };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    dispatch(actions.Task({ id: Math.random(), name: name, status: status }));
+    const newItem = {
+      id: Math.random(),
+      name: name,
+      status: status,
+    };
+    // axios
+    //   .post("http://localhost:3000/data", newItem)
+    //   .then((response) => console.log(response.data))
+    //   .then((error) => console.log(error));
+
+    setArray(newItem);
+    tasks.push(newItem);
+    dispatch(actions.closeForm());
+    setName("");
+    setStatus("Kích hoạt");
+    console.log("array", array);
+  };
+
+  const editBtn = (e: any) => {
+    dispatch(actions.openForm());
+    let indexFilter = array?.findIndex((item: any) => item.id === e);
+    setName(array[indexFilter].name);
+    setStatus(array[indexFilter].status);
+
+    const newArray = {
+      id: array[indexFilter].id,
+      name: array[indexFilter].name,
+      status: array[indexFilter].status,
+    };
+
+    array.splice(indexFilter, 1, newArray);
+    // axios
+    //   .put("http://localhost:3000/data", array)
+    //   .then((response) => console.log(response.data))
+    //   .then((error) => console.log(error));
+    setArray(array);
+    console.log(array);
+    console.log("newArray", newArray);
+  };
+
+  const deleteBtn = (e: any) => {
+    console.log(e);
+
+    let indexFilter = array.findIndex((item: any) => item.id === e);
+    const newArray = array.filter((item: any) => {
+      return item != array[indexFilter];
+    });
+
+    axios
+      .delete(`http://localhost:3000/data/${e}`)
+      .then((response) => console.log(response.data))
+      .catch((error) => console.log(error));
+    setArray(newArray);
+  };
+
   return (
     <>
       <Header>Quản lý công việc</Header>
@@ -36,11 +146,11 @@ function App() {
         <LeftJob>
           {isDisplay ? (
             <AddJob
-              setArray={setArray}
               name={name}
               setName={setName}
               status={status}
               setStatus={setStatus}
+              handleBtn={handleSubmit}
             />
           ) : (
             false
@@ -48,17 +158,12 @@ function App() {
         </LeftJob>
 
         <RightJob>
-          <AddButton onClick={() => handleOpen()}>Thêm công việc</AddButton>
+          <AddButton onClick={() => dispatch(actions.openForm())}>
+            Thêm công việc
+          </AddButton>
           <More />
 
-          <Table
-            array={array}
-            setArray={setArray}
-            name={name}
-            setName={setName}
-            status={status}
-            setStatus={setStatus}
-          />
+          <Table handleBtn={editBtn} deleteBtn={deleteBtn} />
         </RightJob>
       </Container>
     </>
