@@ -1,26 +1,45 @@
 import styled from "styled-components";
 
-const Arrange = () => {
+type Props = {
+  setArrange: (value: any) => void;
+};
+const Arrange = ({ setArrange }: Props) => {
   return (
     <>
       <Arranged>
         <ul>
-          <li>
+          <li
+            onClick={() => {
+              setArrange(false);
+            }}
+          >
             <a type="button">
               <span>Từ A - Z</span>
             </a>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              setArrange(false);
+            }}
+          >
             <a type="button">
               <span>Từ Z - A</span>
             </a>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              setArrange(false);
+            }}
+          >
             <a type="button">
               <span>Trạng thái Kích hoạt</span>
             </a>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              setArrange(false);
+            }}
+          >
             <a type="button">
               <span>Trạng thái Ẩn</span>
             </a>

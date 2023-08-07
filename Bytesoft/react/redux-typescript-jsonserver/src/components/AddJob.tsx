@@ -1,17 +1,20 @@
-import { useDispatch } from "react-redux";
-import * as actions from "../store/actions/indexActions";
-
 type props = {
   name: string;
   setName: (value: string) => void;
   status: string;
   setStatus: (value: string) => void;
   handleBtn: (value: any) => void;
+  setIsDisplay: (value: any) => void;
 };
 
-const AddJob = ({ name, setName, status, setStatus, handleBtn }: props) => {
-  const dispatch = useDispatch();
-
+const AddJob = ({
+  name,
+  setName,
+  status,
+  setStatus,
+  handleBtn,
+  setIsDisplay,
+}: props) => {
   return (
     <>
       <div className="left">
@@ -48,7 +51,7 @@ const AddJob = ({ name, setName, status, setStatus, handleBtn }: props) => {
             <button
               className="btn_remove"
               onClick={() => {
-                dispatch(actions.closeForm());
+                setIsDisplay(false);
                 setName("");
                 setStatus("Kích hoạt");
               }}

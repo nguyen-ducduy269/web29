@@ -7,7 +7,7 @@ type props = {
   deleteBtn: (value: any) => void;
 };
 const Table = ({ handleBtn, deleteBtn }: props) => {
-  const tasks = useSelector((state: any) => state.Task.data.data);
+  const tasks = useSelector((state: any) => state.Task.data) || [];
 
   return (
     <>

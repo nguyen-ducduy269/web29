@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
-import * as actions from "./store/actions/indexActions.tsx";
+// import * as actions from "./store/actions/indexActions.tsx";
 import axios from "axios";
 
 // import components
@@ -10,133 +10,138 @@ import More from "./components/More.tsx";
 import Table from "./components/Table.tsx";
 
 function App() {
-  const [array, setArray] = useState<any>("");
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Kích hoạt");
-  const tasks = useSelector((state: any) => state.Task.data.data);
-
-  const isDisplay = useSelector((state: any) => state.isDisplay);
+  const [isDisplay, setIsDisplay] = useState(false);
+  const tasks = useSelector((state: any) => state.Task.data);
   const dispatch = useDispatch();
+
   useEffect(() => {
     fetch(`http://localhost:3000/data?`)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        setArray(data);
+        // console.log("data", data);
+        dispatch({ type: "TASK", payload: data });
       });
   }, []);
 
-  // const handleBtn = (e: any) => {
-  //   const addBtn = document.querySelector(
-  //     '[data-id="add"]'
-  //   ) as HTMLButtonElement | null;
+  // const handleSubmit = (e: any) => {
+  //   const findID = tasks.find((el: any) => el.id === e);
+  //   console.log("findID", findID);
 
-  //   const editBtn = document.querySelector(
-  //     '[data-id="edit"]'
-  //   ) as HTMLButtonElement | null;
-
-  //   if (addBtn != null) {
-  //     e.preventDefault();
-  //     dispatch(actions.Task({ id: Math.random(), name: name, status: status }));
+  //   if (!findID) {
   //     const newItem = {
   //       id: Math.random(),
   //       name: name,
   //       status: status,
   //     };
-  //     // axios
-  //     //   .post("http://localhost:3000/data", newItem)
-  //     //   .then((response) => console.log(response.data))
-  //     //   .then((error) => console.log(error));
 
-  //     setArray(newItem);
   //     tasks.push(newItem);
-  //     dispatch(actions.closeForm());
+  //     dispatch({ type: "TASK", payload: tasks });
 
+  //     axios
+  //       .post("http://localhost:3000/data", newItem)
+  //       .then((response) => console.log(response.data))
+  //       .then((error) => console.log(error));
+
+  //     setIsDisplay(false);
   //     setName("");
   //     setStatus("Kích hoạt");
+  //   } else {
+  //     setIsDisplay(true);
 
-  //     console.log("array", array);
-  //   }
-  //   if (editBtn != null) {
-  //     dispatch(actions.openForm());
-  //     let indexFilter = array?.findIndex((item: any) => item.id === e);
-  //     setName(array[indexFilter].name);
-  //     setStatus(array[indexFilter].status);
+  //     setName(findID.name);
+  //     setStatus(findID.status);
 
   //     const newArray = {
-  //       id: array[indexFilter].id,
-  //       name: array[indexFilter].name,
-  //       status: status,
+  //       id: findID.id,
+  //       name: findID.name,
+  //       status: findID.status,
   //     };
 
-  //     array.splice(indexFilter, 1, newArray);
+  //     // const newArray = {
+  //     //   id: findID.id,
+  //     //   name: name,
+  //     //   status: status,
+  //     // };
+  //     const index = tasks.findIndex((t: any) => t.id == findID.id);
+  //     const temp = tasks.slice(0);
+  //     temp[index] = newArray;
+
+  //     dispatch({ type: "TASK", payload: temp });
+
   //     // axios
   //     //   .put("http://localhost:3000/data", array)
   //     //   .then((response) => console.log(response.data))
   //     //   .then((error) => console.log(error));
-  //     setArray(array);
-  //     console.log(array);
-  //     console.log("newArray", newArray);
   //   }
   // };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    dispatch(actions.Task({ id: Math.random(), name: name, status: status }));
     const newItem = {
       id: Math.random(),
       name: name,
       status: status,
     };
+
+    tasks.push(newItem);
+    dispatch({ type: "TASK", payload: tasks });
+
     // axios
     //   .post("http://localhost:3000/data", newItem)
     //   .then((response) => console.log(response.data))
     //   .then((error) => console.log(error));
 
-    setArray(newItem);
-    tasks.push(newItem);
-    dispatch(actions.closeForm());
+    setIsDisplay(false);
     setName("");
     setStatus("Kích hoạt");
-    console.log("array", array);
   };
 
   const editBtn = (e: any) => {
-    dispatch(actions.openForm());
-    let indexFilter = array?.findIndex((item: any) => item.id === e);
-    setName(array[indexFilter].name);
-    setStatus(array[indexFilter].status);
+    const findID = tasks.find((el: any) => el.id === e);
+    setIsDisplay(true);
+
+    setName(findID.name);
+    setStatus(findID.status);
 
     const newArray = {
-      id: array[indexFilter].id,
-      name: array[indexFilter].name,
-      status: array[indexFilter].status,
+      id: findID.id,
+      name: findID.name,
+      status: findID.status,
     };
 
-    array.splice(indexFilter, 1, newArray);
+    // const newArray = {
+    //   id: findID.id,
+    //   name: name,
+    //   status: status,
+    // };
+    const index = tasks.findIndex((t: any) => t.id == findID.id);
+    const temp = tasks.slice(0);
+    temp[index] = newArray;
+
+    dispatch({ type: "TASK", payload: temp });
+
     // axios
     //   .put("http://localhost:3000/data", array)
     //   .then((response) => console.log(response.data))
     //   .then((error) => console.log(error));
-    setArray(array);
-    console.log(array);
-    console.log("newArray", newArray);
   };
 
   const deleteBtn = (e: any) => {
-    console.log(e);
-
-    let indexFilter = array.findIndex((item: any) => item.id === e);
-    const newArray = array.filter((item: any) => {
-      return item != array[indexFilter];
+    // console.log(e);
+    let indexFilter = tasks.findIndex((item: any) => item.id === e);
+    const newArray = tasks.filter((item: any) => {
+      return item != tasks[indexFilter];
     });
 
     axios
       .delete(`http://localhost:3000/data/${e}`)
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error));
-    setArray(newArray);
+    dispatch({ type: "TASK", payload: newArray });
   };
 
   return (
@@ -151,6 +156,7 @@ function App() {
               status={status}
               setStatus={setStatus}
               handleBtn={handleSubmit}
+              setIsDisplay={setIsDisplay}
             />
           ) : (
             false
@@ -158,7 +164,13 @@ function App() {
         </LeftJob>
 
         <RightJob>
-          <AddButton onClick={() => dispatch(actions.openForm())}>
+          <AddButton
+            onClick={() => {
+              setName("");
+              setStatus("Kích hoạt");
+              setIsDisplay(true);
+            }}
+          >
             Thêm công việc
           </AddButton>
           <More />
