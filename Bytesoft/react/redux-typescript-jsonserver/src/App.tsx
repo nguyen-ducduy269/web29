@@ -27,58 +27,6 @@ function App() {
       });
   }, []);
 
-  // const handleSubmit = (e: any) => {
-  //   const findID = tasks.find((el: any) => el.id === e);
-  //   console.log("findID", findID);
-
-  //   if (!findID) {
-  //     const newItem = {
-  //       id: Math.random(),
-  //       name: name,
-  //       status: status,
-  //     };
-
-  //     tasks.push(newItem);
-  //     dispatch({ type: "TASK", payload: tasks });
-
-  //     axios
-  //       .post("http://localhost:3000/data", newItem)
-  //       .then((response) => console.log(response.data))
-  //       .then((error) => console.log(error));
-
-  //     setIsDisplay(false);
-  //     setName("");
-  //     setStatus("Kích hoạt");
-  //   } else {
-  //     setIsDisplay(true);
-
-  //     setName(findID.name);
-  //     setStatus(findID.status);
-
-  //     const newArray = {
-  //       id: findID.id,
-  //       name: findID.name,
-  //       status: findID.status,
-  //     };
-
-  //     // const newArray = {
-  //     //   id: findID.id,
-  //     //   name: name,
-  //     //   status: status,
-  //     // };
-  //     const index = tasks.findIndex((t: any) => t.id == findID.id);
-  //     const temp = tasks.slice(0);
-  //     temp[index] = newArray;
-
-  //     dispatch({ type: "TASK", payload: temp });
-
-  //     // axios
-  //     //   .put("http://localhost:3000/data", array)
-  //     //   .then((response) => console.log(response.data))
-  //     //   .then((error) => console.log(error));
-  //   }
-  // };
-
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const newItem = {
@@ -90,39 +38,57 @@ function App() {
     tasks.push(newItem);
     dispatch({ type: "TASK", payload: tasks });
 
-    // axios
-    //   .post("http://localhost:3000/data", newItem)
-    //   .then((response) => console.log(response.data))
-    //   .then((error) => console.log(error));
+    axios
+      .post("http://localhost:3000/data", newItem)
+      .then((response) => console.log("response.data", response.data))
+      .then((error) => console.log("error", error));
 
     setIsDisplay(false);
     setName("");
     setStatus("Kích hoạt");
   };
 
+  // const handleEdit = (e: any) => {
+  //   const findID = tasks.find((el: any) => el.id === e);
+  //   console.log("findID", findID);
+
+  //   console.log("e", e);
+  //   console.log("name", name);
+  //   console.log("status", status);
+
+  //   const newArray = {
+  //     id: findID.id,
+  //     name: name,
+  //     status: status,
+  //   };
+  //   console.log("newArray", newArray);
+
+  //   const temp = tasks.slice(0);
+  //   const index = tasks.findIndex((task: any) => {
+  //     task.id === e;
+  //   });
+
+  //   temp[index] = newArray;
+  //   console.log("temp", temp);
+  //   console.log("index", index);
+  // };
+
   const editBtn = (e: any) => {
     const findID = tasks.find((el: any) => el.id === e);
-    setIsDisplay(true);
 
+    setIsDisplay(true);
     setName(findID.name);
     setStatus(findID.status);
-
-    const newArray = {
-      id: findID.id,
-      name: findID.name,
-      status: findID.status,
-    };
-
     // const newArray = {
     //   id: findID.id,
     //   name: name,
     //   status: status,
     // };
-    const index = tasks.findIndex((t: any) => t.id == findID.id);
-    const temp = tasks.slice(0);
-    temp[index] = newArray;
+    // const index = tasks.findIndex((t: any) => t.id == findID.id);
+    // const temp = tasks.slice(0);
+    // temp[index] = newArray;
 
-    dispatch({ type: "TASK", payload: temp });
+    // dispatch({ type: "TASK", payload: temp });
 
     // axios
     //   .put("http://localhost:3000/data", array)
@@ -156,6 +122,7 @@ function App() {
               status={status}
               setStatus={setStatus}
               handleBtn={handleSubmit}
+              // handleEdit={handleEdit}
               setIsDisplay={setIsDisplay}
             />
           ) : (

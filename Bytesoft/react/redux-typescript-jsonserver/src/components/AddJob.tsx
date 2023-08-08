@@ -4,6 +4,7 @@ type props = {
   status: string;
   setStatus: (value: string) => void;
   handleBtn: (value: any) => void;
+  // handleEdit : (value: any) => void;
   setIsDisplay: (value: any) => void;
 };
 
@@ -14,7 +15,8 @@ const AddJob = ({
   setStatus,
   handleBtn,
   setIsDisplay,
-}: props) => {
+}: // handleEdit,
+props) => {
   return (
     <>
       <div className="left">
@@ -43,7 +45,10 @@ const AddJob = ({
             <button
               type="submit"
               className="btn_add"
-              onClick={(e) => handleBtn(e)}
+              onClick={(e) => {
+                handleBtn(e);
+                // handleEdit()
+              }}
               data-id="add"
             >
               Thêm
