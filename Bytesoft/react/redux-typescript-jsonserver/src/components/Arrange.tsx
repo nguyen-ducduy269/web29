@@ -1,9 +1,51 @@
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
 
 type Props = {
   setArrange: (value: any) => void;
+  initValue: any;
 };
-const Arrange = ({ setArrange }: Props) => {
+const Arrange = ({ setArrange, initValue }: Props) => {
+  const dispatch = useDispatch();
+
+  const handleStatus = (value: string) => {
+    let filterValue = [...initValue];
+    // console.log("filterValue", typeof filterValue);
+
+    filterValue = filterValue.filter((filter: any) => {
+      console.log("status", filter.status);
+      console.log("filter value", value);
+
+      return filter.status.includes(value);
+    });
+    console.log("filterValue", filterValue);
+    dispatch({ type: "TASK", payload: filterValue });
+  };
+
+  const fromAToZ = () => {
+    let filterValue = [...initValue];
+    console.log(filterValue);
+
+    filterValue = filterValue.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+    console.log(filterValue);
+    dispatch({ type: "TASK", payload: filterValue });
+  };
+
+  const fromZToA = () => {
+    let filterValue = [...initValue];
+    console.log(filterValue);
+
+    filterValue = filterValue
+      .sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      })
+      .reverse();
+    console.log(filterValue);
+    dispatch({ type: "TASK", payload: filterValue });
+  };
+
   return (
     <>
       <Arranged>
@@ -11,6 +53,7 @@ const Arrange = ({ setArrange }: Props) => {
           <li
             onClick={() => {
               setArrange(false);
+              fromAToZ();
             }}
           >
             <a type="button">
@@ -20,6 +63,7 @@ const Arrange = ({ setArrange }: Props) => {
           <li
             onClick={() => {
               setArrange(false);
+              fromZToA();
             }}
           >
             <a type="button">
@@ -27,8 +71,10 @@ const Arrange = ({ setArrange }: Props) => {
             </a>
           </li>
           <li
+            value={"Kích hoạt"}
             onClick={() => {
               setArrange(false);
+              handleStatus("Kích hoạt");
             }}
           >
             <a type="button">
@@ -36,8 +82,10 @@ const Arrange = ({ setArrange }: Props) => {
             </a>
           </li>
           <li
+            value={"Ẩn"}
             onClick={() => {
               setArrange(false);
+              handleStatus("Ẩn");
             }}
           >
             <a type="button">
