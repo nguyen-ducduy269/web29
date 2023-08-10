@@ -5,17 +5,16 @@ const initValue = data.data;
 
 const Status = () => {
   const dispatch = useDispatch();
-  const [statusChange, setStatusChange] = useState("Tất cả");
+  const [statusChange, setStatusChange] = useState("All");
 
   const handleStatus = () => {
-    if (statusChange == "Tất cả") {
+    if (statusChange == "All") {
       dispatch({ type: "TASK", payload: initValue });
     } else {
       let array = [...initValue];
       array = array.filter((arr: any) => {
         return arr.status.toLowerCase().includes(statusChange.toLowerCase());
       });
-      // console.log("array", array);
       dispatch({ type: "TASK", payload: array });
     }
   };
@@ -27,9 +26,9 @@ const Status = () => {
           onChange={(e) => setStatusChange(e.target.value)}
           onClick={handleStatus}
         >
-          <option value={"Tất cả"}>Tất cả</option>
-          <option value={"Kích hoạt"}>Kích hoạt</option>
-          <option value={"Ẩn"}>Ẩn</option>
+          <option value={"All"}>Tất cả</option>
+          <option value={"Active"}>Kích hoạt</option>
+          <option value={"Hide"}>Ẩn</option>
         </select>
       </td>
     </>

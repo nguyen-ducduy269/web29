@@ -1,4 +1,3 @@
-// import React from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Status from "./Status";
@@ -52,11 +51,7 @@ const Table = ({ handleBtn, deleteBtn }: props) => {
                   <p className="status-active">{e.status}</p>
                 </td>
                 <td className="activity button">
-                  <button
-                    className="btn_edit"
-                    data-id="edit"
-                    onClick={() => handleBtn(e)}
-                  >
+                  <button className="btn_edit" onClick={() => handleBtn(e)}>
                     Sửa
                   </button>
                   <button
