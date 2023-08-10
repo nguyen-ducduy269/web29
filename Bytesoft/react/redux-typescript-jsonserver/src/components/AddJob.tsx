@@ -1,22 +1,30 @@
-type props = {
+type Props = {
   name: string;
   setName: (value: string) => void;
   status: string;
   setStatus: (value: string) => void;
   handleBtn: (value: any) => void;
-  // handleEdit : (value: any) => void;
+  // handleEdit: (value: any) => void;
   setIsDisplay: (value: any) => void;
 };
 
-const AddJob = ({
-  name,
-  setName,
-  status,
-  setStatus,
-  handleBtn,
-  setIsDisplay,
-}: // handleEdit,
-props) => {
+const AddJob = (props: Props) => {
+  const {
+    name,
+    setName,
+    status,
+    setStatus,
+    handleBtn,
+    setIsDisplay,
+    // handleEdit,
+  } = props;
+
+  const closeForm = () => {
+    setIsDisplay(false);
+    setName("");
+    setStatus("Kích hoạt");
+  };
+
   return (
     <>
       <div className="left">
@@ -47,20 +55,13 @@ props) => {
               className="btn_add"
               onClick={(e) => {
                 handleBtn(e);
-                // handleEdit()
+                // handleEdit(e);
               }}
               data-id="add"
             >
               Thêm
             </button>
-            <button
-              className="btn_remove"
-              onClick={() => {
-                setIsDisplay(false);
-                setName("");
-                setStatus("Kích hoạt");
-              }}
-            >
+            <button className="btn_remove" onClick={() => closeForm()}>
               Hủy bỏ
             </button>
           </div>

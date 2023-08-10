@@ -11,38 +11,36 @@ const Arrange = ({ setArrange, initValue }: Props) => {
   const handleStatus = (value: string) => {
     let filterValue = [...initValue];
     // console.log("filterValue", typeof filterValue);
-
     filterValue = filterValue.filter((filter: any) => {
-      console.log("status", filter.status);
-      console.log("filter value", value);
-
+      // console.log("status", filter.status);
+      // console.log("filter value", value);
       return filter.status.includes(value);
     });
-    console.log("filterValue", filterValue);
+    // console.log("filterValue", filterValue);
     dispatch({ type: "TASK", payload: filterValue });
   };
 
   const fromAToZ = () => {
     let filterValue = [...initValue];
-    console.log(filterValue);
+    // console.log(filterValue);
 
     filterValue = filterValue.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
-    console.log(filterValue);
+    // console.log(filterValue);
     dispatch({ type: "TASK", payload: filterValue });
   };
 
   const fromZToA = () => {
     let filterValue = [...initValue];
-    console.log(filterValue);
+    // console.log(filterValue);
 
     filterValue = filterValue
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
       })
       .reverse();
-    console.log(filterValue);
+    // console.log(filterValue);
     dispatch({ type: "TASK", payload: filterValue });
   };
 
@@ -50,45 +48,47 @@ const Arrange = ({ setArrange, initValue }: Props) => {
     <>
       <Arranged>
         <ul>
-          <li
-            onClick={() => {
-              setArrange(false);
-              fromAToZ();
-            }}
-          >
-            <a type="button">
+          <li>
+            <a
+              type="button"
+              onClick={() => {
+                setArrange(false);
+                fromAToZ();
+              }}
+            >
               <span>Từ A - Z</span>
             </a>
           </li>
-          <li
-            onClick={() => {
-              setArrange(false);
-              fromZToA();
-            }}
-          >
-            <a type="button">
+          <li>
+            <a
+              type="button"
+              onClick={() => {
+                setArrange(false);
+                fromZToA();
+              }}
+            >
               <span>Từ Z - A</span>
             </a>
           </li>
-          <li
-            value={"Kích hoạt"}
-            onClick={() => {
-              setArrange(false);
-              handleStatus("Kích hoạt");
-            }}
-          >
-            <a type="button">
+          <li>
+            <a
+              type="button"
+              onClick={() => {
+                setArrange(false);
+                handleStatus("Kích hoạt");
+              }}
+            >
               <span>Trạng thái Kích hoạt</span>
             </a>
           </li>
-          <li
-            value={"Ẩn"}
-            onClick={() => {
-              setArrange(false);
-              handleStatus("Ẩn");
-            }}
-          >
-            <a type="button">
+          <li>
+            <a
+              type="button"
+              onClick={() => {
+                setArrange(false);
+                handleStatus("Ẩn");
+              }}
+            >
               <span>Trạng thái Ẩn</span>
             </a>
           </li>

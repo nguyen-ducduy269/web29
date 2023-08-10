@@ -55,7 +55,7 @@ const Table = ({ handleBtn, deleteBtn }: props) => {
                   <button
                     className="btn_edit"
                     data-id="edit"
-                    onClick={() => handleBtn(e.id)}
+                    onClick={() => handleBtn(e)}
                   >
                     Sửa
                   </button>

@@ -22,7 +22,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        // console.log("data", data);
         dispatch({ type: "TASK", payload: data });
       });
   }, []);
@@ -49,55 +48,51 @@ function App() {
   };
 
   // const handleEdit = (e: any) => {
-  //   const findID = tasks.find((el: any) => el.id === e);
+  //   console.log(e);
+
+  //   const findID = tasks.find((el: any) => el.id === e.id);
   //   console.log("findID", findID);
 
-  //   console.log("e", e);
-  //   console.log("name", name);
-  //   console.log("status", status);
+  //   const indexOfTasks = tasks.indexOf(findID);
+  //   console.log("indexOfTasks", indexOfTasks);
 
-  //   const newArray = {
-  //     id: findID.id,
-  //     name: name,
-  //     status: status,
-  //   };
-  //   console.log("newArray", newArray);
+  //   const tempData = { ...tasks };
+  //   console.log("tempData", tempData);
 
-  //   const temp = tasks.slice(0);
-  //   const index = tasks.findIndex((task: any) => {
-  //     task.id === e;
-  //   });
+  //   tempData[indexOfTasks] = e;
+  //   // dispatch({ type: "TASK", payload: tempData });
 
-  //   temp[index] = newArray;
-  //   console.log("temp", temp);
-  //   console.log("index", index);
+  //   axios
+  //     .put("http://localhost:3000/data", tempData)
+  //     .then((response) => console.log(response.data))
+  //     .then((error) => console.log(error));
   // };
 
   const editBtn = (e: any) => {
-    const findID = tasks.find((el: any) => el.id === e);
-
+    const findID = tasks.find((el: any) => el.id === e.id);
     setIsDisplay(true);
     setName(findID.name);
     setStatus(findID.status);
-    // const newArray = {
-    //   id: findID.id,
-    //   name: name,
-    //   status: status,
-    // };
-    // const index = tasks.findIndex((t: any) => t.id == findID.id);
-    // const temp = tasks.slice(0);
-    // temp[index] = newArray;
 
-    // dispatch({ type: "TASK", payload: temp });
+    // const findID = tasks.find((el: any) => el.id === e.id);
+    console.log("findID", findID);
+
+    const indexOfTasks = tasks.indexOf(findID);
+    console.log("indexOfTasks", indexOfTasks);
+
+    const tempData = [...tasks];
+    console.log("tempData", tempData);
+
+    tempData[indexOfTasks] = e;
+    dispatch({ type: "TASK", payload: tempData });
 
     // axios
-    //   .put("http://localhost:3000/data", array)
+    //   .put("http://localhost:3000/data", tempData)
     //   .then((response) => console.log(response.data))
     //   .then((error) => console.log(error));
   };
 
   const deleteBtn = (e: any) => {
-    // console.log(e);
     let indexFilter = tasks.findIndex((item: any) => item.id === e);
     const newArray = tasks.filter((item: any) => {
       return item != tasks[indexFilter];
