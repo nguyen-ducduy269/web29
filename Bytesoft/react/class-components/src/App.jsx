@@ -217,6 +217,7 @@ class App extends React.Component {
         else return 0;
       });
     }
+
     var elmTaskForm = isDisplay ? (
       <TaskForm
         onCloseForm={this.onCloseForm}
@@ -230,9 +231,19 @@ class App extends React.Component {
       <>
         <Header>Quản lý công việc</Header>
         <Container>
-          <LeftJob>{elmTaskForm}</LeftJob>
+          <LeftJob
+            className={isDisplay ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : ""}
+          >
+            {elmTaskForm}
+          </LeftJob>
 
-          <RightJob>
+          <RightJob
+            className={
+              isDisplay
+                ? "col-xs-8 col-sm-8 col-md-8 col-lg-8"
+                : "col-xs-12 col-sm-12 col-md-12 col-lg-12"
+            }
+          >
             <AddButton onClick={this.onToggleForm}>Thêm công việc</AddButton>
             {/* Search-Sort */}
             <Control
@@ -291,7 +302,6 @@ const Container = styled.div`
 `;
 
 const LeftJob = styled.div`
-  width: 30%;
   position: relative;
   #name {
     width: 97%;
@@ -335,7 +345,6 @@ const AddButton = styled.button`
 `;
 
 const RightJob = styled.div`
-  width: 60%;
   height: 276.6px;
   button {
     background-color: #0000ffc7;
@@ -355,10 +364,11 @@ const RightJob = styled.div`
 
   .main-input {
     width: 300px;
-    height: 30px;
+    height: 34px;
   }
 
   table {
+    width: 100%;
     margin-top: 10px;
   }
   table,
@@ -413,6 +423,7 @@ const RightJob = styled.div`
     font-size: 12px;
     background-color: #4caf50;
     color: white;
+    margin-top: 16px;
   }
 
   tbody .button button {

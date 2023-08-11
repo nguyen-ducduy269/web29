@@ -22,7 +22,11 @@ const AddJob = ({ selectedItem, setIsDisplay }: any) => {
   const handleBtn = () => {
     if (selectedItem) {
       const index = tasks.findIndex((t: any) => t.id == selectedItem.id);
+      console.log("index", index);
+
       const temp = [...tasks];
+      console.log("temp", temp);
+
       temp[index] = { id: selectedItem.id, name, status };
       dp({ type: "TASK", payload: temp });
 
@@ -50,7 +54,9 @@ const AddJob = ({ selectedItem, setIsDisplay }: any) => {
   return (
     <>
       <div className="left">
-        <p className="add">Thêm công việc</p>
+        <p className="add">
+          {selectedItem ? "Sửa công việc" : "Thêm công việc"}
+        </p>
         <form className="form">
           <label htmlFor="name">Tên: </label>
           <br />
