@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { AddJob } from "./sceens/AddJob";
 import { More } from "./sceens/More";
 import { Status } from "./sceens/Status";
 import styled from "styled-components";
@@ -30,6 +29,14 @@ export const App = () => {
   useEffect(() => {
     const work = JSON.parse(localStorage.getItem("item"));
     setArray(work ? work : []);
+
+    if (updateJob) {
+      setName(updateJob.name);
+      setStatus(updateJob.status);
+    } else {
+      setName("");
+      setStatus("Kích hoạt");
+    }
   }, []);
 
   const onAdd = (aJob) => {
@@ -37,6 +44,31 @@ export const App = () => {
     result.push(aJob);
     setArray(result);
     localStorage.setItem("item", JSON.stringify(result));
+  };
+
+  const updatingJob = () => {
+    let indexToUpdate = array.findIndex((item) => item.id === updateJob.id);
+    let newArray = [...array];
+    newArray[indexToUpdate] = { ...updateJob, name, status };
+    setArray(newArray);
+    localStorage.setItem("item", JSON.stringify(newArray));
+    setUpdateJob("");
+    closeDisplay();
+  };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    if (!updateJob) {
+      onAdd({
+        id: Math.random(),
+        name: name,
+        status: status,
+      });
+      setName("");
+      closeDisplay();
+    } else {
+      updatingJob(e.id);
+    }
   };
 
   const onDelete = (id) => {
@@ -66,18 +98,43 @@ export const App = () => {
           className={display ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : ""}
         >
           {display ? (
-            <AddJob
-              array={array}
-              onAdd={onAdd}
-              closeDisplay={closeDisplay}
-              job={updateJob}
-              setArray={setArray}
-              setUpdateJob={setUpdateJob}
-              name={name}
-              setName={setName}
-              status={status}
-              setStatus={setStatus}
-            />
+            <div className="left">
+              <p className="add">
+                {updateJob ? "Sửa công việc" : "Thêm công việc"}
+              </p>
+              <form className="form">
+                <label htmlFor="name">Tên: </label>
+                <br />
+                <input
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  type="text"
+                />
+
+                <label>Trạng thái: </label>
+                <select
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
+                >
+                  <option value="Kích hoạt">Kích hoạt</option>
+                  <option value="Ẩn">Ẩn</option>
+                </select>
+
+                <div className="button">
+                  <button
+                    type="submit"
+                    className="btn_add"
+                    onClick={(e) => handleRegister(e)}
+                  >
+                    {updateJob ? "Sửa" : "Thêm"}
+                  </button>
+                  <button className="btn_remove" onClick={closeDisplay}>
+                    Hủy bỏ
+                  </button>
+                </div>
+              </form>
+            </div>
           ) : (
             false
           )}

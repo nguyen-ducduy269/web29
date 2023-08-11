@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import * as actions from "./store/action/indexAction";
 
 // import components
-import { AddJob } from "./components/AddJob";
 import { More } from "./components/More";
 import { Table } from "./components/Table";
 
@@ -28,9 +27,26 @@ export const App = () => {
     setStatus("Kích hoạt");
   };
 
+  const handleRegister = (e) => {
+    e.preventDefault();
+    dispatch(actions.saveTask({ id: updateJob?.id, name, status }));
+    const item = JSON.parse(localStorage.getItem("item"));
+    setArray(item);
+    dispatch(actions.closeForm());
+    refresh();
+  };
+
   useEffect(() => {
     const work = JSON.parse(localStorage.getItem("item"));
     setArray(work ? work : []);
+
+    if (updateJob) {
+      setName(updateJob.name);
+      setStatus(updateJob.status);
+    } else {
+      setName("");
+      setStatus("Kích hoạt");
+    }
   }, [nonce]);
 
   return (
@@ -41,15 +57,46 @@ export const App = () => {
           className={isDisplay ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : ""}
         >
           {isDisplay ? (
-            <AddJob
-              job={updateJob}
-              setArray={setArray}
-              name={name}
-              setName={setName}
-              status={status}
-              setStatus={setStatus}
-              refresh={refresh}
-            />
+            <div className="left">
+              <p className="add">
+                {updateJob ? "Sửa công việc" : "Thêm công việc"}
+              </p>
+              <form className="form">
+                <label htmlFor="name">Tên: </label>
+                <br />
+                <input
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  type="text"
+                />
+
+                <label>Trạng thái: </label>
+                <select
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
+                >
+                  <option value="Kích hoạt">Kích hoạt</option>
+                  <option value="Ẩn">Ẩn</option>
+                </select>
+
+                <div className="button">
+                  <button
+                    type="submit"
+                    className="btn_add"
+                    onClick={(e) => handleRegister(e)}
+                  >
+                    {updateJob ? "Sửa" : "Thêm"}
+                  </button>
+                  <button
+                    className="btn_remove"
+                    onClick={() => dispatch(actions.closeForm())}
+                  >
+                    Hủy bỏ
+                  </button>
+                </div>
+              </form>
+            </div>
           ) : (
             false
           )}

@@ -15,7 +15,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/data?`)
+    fetch(`http://localhost:3000/data`)
       .then((response) => {
         return response.json();
       })

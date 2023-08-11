@@ -22,16 +22,12 @@ const AddJob = ({ selectedItem, setIsDisplay }: any) => {
   const handleBtn = () => {
     if (selectedItem) {
       const index = tasks.findIndex((t: any) => t.id == selectedItem.id);
-      console.log("index", index);
-
       const temp = [...tasks];
-      console.log("temp", temp);
-
       temp[index] = { id: selectedItem.id, name, status };
       dp({ type: "TASK", payload: temp });
 
       axios
-        .put("http://localhost:3000/data", tasks)
+        .put(`http://localhost:3000/data/${selectedItem.id}`, temp)
         .then((response) => console.log(response.data))
         .then((error) => console.log(error));
     } else {
