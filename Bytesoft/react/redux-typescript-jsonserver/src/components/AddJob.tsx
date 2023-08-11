@@ -27,7 +27,7 @@ const AddJob = ({ selectedItem, setIsDisplay }: any) => {
       dp({ type: "TASK", payload: temp });
 
       axios
-        .put(`http://localhost:3000/data/${selectedItem.id}`, temp)
+        .put(`http://localhost:3000/data`, temp)
         .then((response) => console.log(response.data))
         .then((error) => console.log(error));
     } else {
