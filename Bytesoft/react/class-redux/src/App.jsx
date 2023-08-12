@@ -127,7 +127,7 @@ const Container = styled.div`
 
   .form {
     display: block;
-    height: 190px;
+    height: 220px;
     border: 1px solid bisque;
     padding: 10px 10px;
   }
