@@ -91,7 +91,7 @@ const Arranged = styled.div`
   background-color: white;
   border: 1px solid black;
   position: absolute;
-  left: 48%;
+  left: 30%;
   display: flex;
   align-items: center;
   ul {
