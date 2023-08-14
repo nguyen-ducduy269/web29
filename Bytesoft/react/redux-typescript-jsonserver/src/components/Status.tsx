@@ -26,9 +26,9 @@ const Status = () => {
           onChange={(e) => setStatusChange(e.target.value)}
           onClick={handleStatus}
         >
-          <option value={"All"}>Tất cả</option>
-          <option value={"Active"}>Kích hoạt</option>
-          <option value={"Hide"}>Ẩn</option>
+          <option value={"All"}>All</option>
+          <option value={"Active"}>Active</option>
+          <option value={"Hide"}>Hide</option>
         </select>
       </td>
     </>
