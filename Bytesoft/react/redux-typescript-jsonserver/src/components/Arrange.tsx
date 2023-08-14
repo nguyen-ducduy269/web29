@@ -1,15 +1,22 @@
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 
-type Props = {
-  setArrange: (value: any) => void;
+// type Props = {
+//   setArrange: (value: any) => void;
+//   initValue: any;
+// };
+
+interface Props {
+  setArrange: (value: boolean) => void;
   initValue: any;
-};
-const Arrange = ({ setArrange, initValue }: Props) => {
+}
+
+const Arrange = (prop: Props) => {
   const dispatch = useDispatch();
 
   const handleStatus = (value: string) => {
-    let filterValue = [...initValue];
+    let filterValue = [...prop.initValue];
+    // let filterValue = [...initValue];
     filterValue = filterValue.filter((filter: any) => {
       return filter.status.includes(value);
     });
@@ -17,7 +24,8 @@ const Arrange = ({ setArrange, initValue }: Props) => {
   };
 
   const fromAToZ = () => {
-    let filterValue = [...initValue];
+    let filterValue = [...prop.initValue];
+    // let filterValue = [...initValue];
     filterValue = filterValue.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
@@ -25,7 +33,8 @@ const Arrange = ({ setArrange, initValue }: Props) => {
   };
 
   const fromZToA = () => {
-    let filterValue = [...initValue];
+    let filterValue = [...prop.initValue];
+    // let filterValue = [...initValue];
     filterValue = filterValue
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
@@ -42,7 +51,8 @@ const Arrange = ({ setArrange, initValue }: Props) => {
             <a
               type="button"
               onClick={() => {
-                setArrange(false);
+                prop.setArrange(false);
+                // setArrange(false);
                 fromAToZ();
               }}
             >
@@ -53,7 +63,8 @@ const Arrange = ({ setArrange, initValue }: Props) => {
             <a
               type="button"
               onClick={() => {
-                setArrange(false);
+                prop.setArrange(false);
+                // setArrange(false);
                 fromZToA();
               }}
             >
@@ -64,7 +75,8 @@ const Arrange = ({ setArrange, initValue }: Props) => {
             <a
               type="button"
               onClick={() => {
-                setArrange(false);
+                prop.setArrange(false);
+                // setArrange(false);
                 handleStatus("Active");
               }}
             >
@@ -75,7 +87,8 @@ const Arrange = ({ setArrange, initValue }: Props) => {
             <a
               type="button"
               onClick={() => {
-                setArrange(false);
+                prop.setArrange(false);
+                // setArrange(false);
                 handleStatus("Hide");
               }}
             >

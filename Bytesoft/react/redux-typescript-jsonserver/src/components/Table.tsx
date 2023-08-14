@@ -6,6 +6,7 @@ type props = {
   handleBtn: (value: any) => void;
   deleteBtn: (value: any) => void;
 };
+
 const Table = ({ handleBtn, deleteBtn }: props) => {
   const tasks = useSelector((state: any) => state.Task.data) || [];
   const [searchValue, setSearchValue] = useState("");

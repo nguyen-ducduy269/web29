@@ -2,32 +2,37 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 
-const AddJob = ({ selectedItem, setIsDisplay }: any) => {
+interface Props {
+  selectedItem: any;
+  setIsDisplay: (value: boolean) => void;
+}
+
+const AddJob = (props: Props) => {
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Active");
-  const dp = useDispatch();
+  const dispatch = useDispatch();
   const tasks = useSelector((state: any) => state.Task.data);
 
   useEffect(() => {
-    setName(selectedItem?.name || "");
-    setStatus(selectedItem?.status || "Active");
-  }, [selectedItem]);
+    setName(props.selectedItem?.name || "");
+    setStatus(props.selectedItem?.status || "Active");
+  }, [props.selectedItem]);
 
   const closeForm = () => {
-    setIsDisplay(false);
+    props.setIsDisplay(false);
     setName("");
     setStatus("Active");
   };
 
   const handleBtn = () => {
-    if (selectedItem) {
-      const index = tasks.findIndex((t: any) => t.id == selectedItem.id);
+    if (props.selectedItem) {
+      const index = tasks.findIndex((t: any) => t.id == props.selectedItem.id);
       const temp = [...tasks];
-      temp[index] = { id: selectedItem.id, name, status };
-      dp({ type: "TASK", payload: temp });
+      temp[index] = { id: props.selectedItem.id, name, status };
+      dispatch({ type: "TASK", payload: temp });
 
       axios
-        .put(`http://localhost:3000/data/${selectedItem.id}`, temp[index])
+        .put(`http://localhost:3000/data/${props.selectedItem.id}`, temp[index])
         .then((response) => console.log(response.data))
         .then((error) => console.log(error));
     } else {
@@ -37,21 +42,21 @@ const AddJob = ({ selectedItem, setIsDisplay }: any) => {
         status: status,
       };
       tasks.push(temp);
-      dp({ type: "TASK", payload: tasks });
+      dispatch({ type: "TASK", payload: tasks });
 
       axios
         .post("http://localhost:3000/data", temp)
         .then((response) => console.log("response.data", response.data))
         .then((error) => console.log("error", error));
     }
-    setIsDisplay(false);
+    props.setIsDisplay(false);
   };
 
   return (
     <>
       <div className="left">
         <p className="add">
-          {selectedItem ? "Sửa công việc" : "Thêm công việc"}
+          {props.selectedItem ? "Sửa công việc" : "Thêm công việc"}
         </p>
         <form className="form">
           <label htmlFor="name">Tên: </label>
@@ -81,7 +86,7 @@ const AddJob = ({ selectedItem, setIsDisplay }: any) => {
                 handleBtn();
               }}
             >
-              {selectedItem ? "Sửa" : "Thêm"}
+              {props.selectedItem ? "Sửa" : "Thêm"}
             </button>
             <button className="btn_remove" onClick={() => closeForm()}>
               Hủy bỏ
