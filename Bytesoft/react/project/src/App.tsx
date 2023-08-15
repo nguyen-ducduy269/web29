@@ -162,18 +162,18 @@ function App() {
             </div>
           </HeaderNav>
 
-          <div className="head-banner">
-            <div className="bs-container">
-              <div className="banner">
-                <div className="title">FROM CONCEPT TO CREATION.</div>
-                <div className="description">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content.
-                </div>
-                <button>XEM THÊM</button>
+          <HeaderBanner className="header-banner">
+            <div className="banner">
+              <div className="title">
+                <b>FROM CONCEPT TO CREATION.</b>
               </div>
+              <div className="description">
+                It is a long established fact that a reader will be distracted
+                by the readable content.
+              </div>
+              <button>XEM THÊM</button>
             </div>
-          </div>
+          </HeaderBanner>
         </Container>
       </Header>
 
@@ -1289,7 +1289,7 @@ function App() {
 export default App;
 
 const Container = styled.div`
-  max-width: 990px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-left: 7%;
 `;
@@ -1303,7 +1303,6 @@ const Header = styled.div`
   background-size: contain;
 `;
 
-/// Header Top
 const HeaderTop = styled.div`
   display: flex;
   justify-content: space-between;
@@ -1403,13 +1402,22 @@ const HeaderRight = styled.div`
   }
 `;
 
-////// Header Nav
 const HeaderNav = styled.div`
   height: 63px;
   .nav-content {
     display: flex;
-    justify-content: space-between;
+    margin-top: 6px;
+    .logo {
+      width: 19%;
+      margin-top: 7px;
+      img {
+        width: 100%;
+      }
+    }
+
     .nav {
+      width: 65%;
+      margin-left: 7%;
       .menu {
         .menu-list {
           display: flex;
@@ -1444,7 +1452,7 @@ const HeaderNav = styled.div`
               background-color: #1bcd8d;
               height: 27px;
               text-align: center;
-              line-height: 27px;
+              line-height: 30px;
             }
           }
         }
@@ -1453,6 +1461,30 @@ const HeaderNav = styled.div`
     #show-menu {
       display: none;
     }
+  }
+`;
+
+const HeaderBanner = styled.div`
+  min-height: 700px;
+  transform: translateY(26%);
+  width: 40%;
+  .title {
+    font-size: 46px;
+    color: #1d3d82;
+    margin-bottom: 26px;
+  }
+  .description {
+    font-size: 22px;
+    color: #1d3d82;
+    margin-bottom: 28px;
+  }
+  button {
+    background-color: #1ac667;
+    color: white;
+    border: unset;
+    width: 123px;
+    height: 30px;
+    font-size: 12px;
   }
 `;
 /////////// Main
