@@ -74,38 +74,38 @@ function App() {
                 <div className="menu">
                   <ul className="menu-list clearfix">
                     <li className="menu-list__item">
-                      <a href="index.html" className="menu-list__link">
+                      <a href="#" className="menu-list__link">
                         <div className="active">TRANG CHỦ</div>
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="introduce.html" className="menu-list__link">
-                        GIỚI THIỆU
+                      <a href="" className="menu-list__link">
+                        <div className="list-active">GIỚI THIỆU</div>
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="service.html" className="menu-list__link">
-                        LĨNH VỰC
+                      <a href="" className="menu-list__link">
+                        <div className="list-active">LĨNH VỰC</div>
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="product.html" className="menu-list__link">
-                        DỰ ÁN
+                      <a href="" className="menu-list__link">
+                        <div className="list-active">DỰ ÁN</div>
                       </a>
                     </li>
                     <li className="menu-list__item list-active">
-                      <a href="new.html" className="menu-list__link active">
-                        TIN TỨC
+                      <a href="" className="menu-list__link active">
+                        <div className="list-active">TIN TỨC</div>
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="#" className="menu-list__link">
-                        TUYỂN DỤNG
+                      <a href="" className="menu-list__link">
+                        <div className="list-active">TUYỂN DỤNG</div>
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="contact.html" className="menu-list__link">
-                        LIÊN HỆ
+                      <a href="" className="menu-list__link">
+                        <div className="list-active">LIÊN HỆ</div>
                       </a>
                     </li>
                   </ul>
@@ -1420,14 +1420,25 @@ const HeaderNav = styled.div`
             width: 81px;
             text-decoration: none;
             color: #fff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 600;
             display: block;
             white-space: nowrap;
             height: 27px;
-            line-height: 27px;
+            line-height: 30px;
             text-align: center;
             .active {
+              display: block;
+              width: 81px;
+              background-color: #1bcd8d;
+              height: 27px;
+              text-align: center;
+              line-height: 27px;
+            }
+          }
+
+          a:hover {
+            .list-active {
               display: block;
               width: 81px;
               background-color: #1bcd8d;
