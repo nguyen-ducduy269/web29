@@ -11,58 +11,57 @@ function App() {
 
   return (
     <>
-      <Header id="header">
-        <Container>
-          <HeaderTop className="header-top">
-            <HeaderLeft className="header-left">
-              <i className="fa-solid fa-phone-flip"></i>
-              <div className="hotline">HOTLINE:1900 2863</div>
-            </HeaderLeft>
-
-            <HeaderRight className="header-right">
-              <div className="search">
+      <Head>
+        <HeaderTop>
+          <Container>
+            <div className="main-content">
+              <div className="head-left">
+                <i className="fa-solid fa-phone-flip"></i>
+                <div className="hotline">HOTLINE:1900 2863</div>
+              </div>
+              <div className="head-right">
                 <input type="search" placeholder="Search..." />
                 <div className="icon">
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </div>
-              </div>
 
-              <div className="country">
-                <div className="option" onClick={() => setIsDisplay(true)}>
-                  <a href="">
+                <div className="country">
+                  <div onClick={() => setIsDisplay(true)}>
                     <img src={isOpen} alt="" />
-                  </a>
-                  <i className="fa-solid fa-chevron-down"></i>
-                </div>
-
-                {isDisplay ? (
-                  <div className="country-scoll">
-                    <div
-                      onClick={() => {
-                        setIsOpen(coVietNam);
-                        setIsDisplay(false);
-                      }}
-                    >
-                      <img src={coVietNam} alt="" />
-                    </div>
-
-                    <div
-                      onClick={() => {
-                        setIsOpen(coMeo);
-                        setIsDisplay(false);
-                      }}
-                    >
-                      <img src={coMeo} alt="" />
-                    </div>
+                    <i className="fa-solid fa-chevron-down"></i>
                   </div>
-                ) : (
-                  ""
-                )}
-              </div>
-            </HeaderRight>
-          </HeaderTop>
 
-          <HeaderNav className="header-nav">
+                  {isDisplay ? (
+                    <div className="country-scoll">
+                      <div
+                        onClick={() => {
+                          setIsOpen(coVietNam);
+                          setIsDisplay(false);
+                        }}
+                      >
+                        <img src={coVietNam} alt="" />
+                      </div>
+
+                      <div
+                        onClick={() => {
+                          setIsOpen(coMeo);
+                          setIsDisplay(false);
+                        }}
+                      >
+                        <img src={coMeo} alt="" />
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            </div>
+          </Container>
+        </HeaderTop>
+
+        <HeaderNav>
+          <Container>
             <div className="nav-content clearfix">
               <div className="logo">
                 <a href="#">
@@ -71,51 +70,48 @@ function App() {
               </div>
 
               <div className="nav">
+                <span className="show__menu">
+                  <i className="fa-solid fa-bars"></i>
+                </span>
                 <div className="menu">
                   <ul className="menu-list clearfix">
-                    <li className="menu-list__item">
-                      <a href="#" className="menu-list__link">
+                    <li className="menu-list__item list-active">
+                      <a href="index.html" className="menu-list__link">
                         <div className="active">TRANG CHỦ</div>
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="" className="menu-list__link">
-                        <div className="list-active">GIỚI THIỆU</div>
+                      <a href="introduce.html" className="menu-list__link">
+                        GIỚI THIỆU
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="" className="menu-list__link">
-                        <div className="list-active">LĨNH VỰC</div>
+                      <a href="service.html" className="menu-list__link">
+                        LĨNH VỰC
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="" className="menu-list__link">
-                        <div className="list-active">DỰ ÁN</div>
-                      </a>
-                    </li>
-                    <li className="menu-list__item list-active">
-                      <a href="" className="menu-list__link active">
-                        <div className="list-active">TIN TỨC</div>
+                      <a href="product.html" className="menu-list__link">
+                        DỰ ÁN
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="" className="menu-list__link">
-                        <div className="list-active">TUYỂN DỤNG</div>
+                      <a href="new.html" className="menu-list__link">
+                        TIN TỨC
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="" className="menu-list__link">
-                        <div className="list-active">LIÊN HỆ</div>
+                      <a href="#" className="menu-list__link">
+                        TUYỂN DỤNG
+                      </a>
+                    </li>
+                    <li className="menu-list__item">
+                      <a href="contact.html" className="menu-list__link">
+                        LIÊN HỆ
                       </a>
                     </li>
                   </ul>
                 </div>
-              </div>
-
-              <div id="show-menu">
-                <span className="show__menu">
-                  <i className="fa-solid fa-bars"></i>
-                </span>
                 <div className="menu-respon">
                   <span className="close__menu">
                     <i className="fa-solid fa-xmark"></i>
@@ -160,1128 +156,22 @@ function App() {
                 </div>
               </div>
             </div>
-          </HeaderNav>
+          </Container>
+        </HeaderNav>
 
-          <HeaderBanner className="header-banner">
+        <HeaderBanner>
+          <Container>
             <div className="banner">
-              <div className="title">
-                <b>FROM CONCEPT TO CREATION.</b>
-              </div>
+              <div className="title">FROM CONCEPT TO CREATION.</div>
               <div className="description">
                 It is a long established fact that a reader will be distracted
                 by the readable content.
               </div>
               <button>XEM THÊM</button>
             </div>
-          </HeaderBanner>
-        </Container>
-      </Header>
-
-      <Container>
-        <main id="main">
-          <AboutUs>
-            <div className="outside">
-              <img className="maytrai" src="../src/image//maytrai.png" alt="" />
-              <img
-                className="cautruc1"
-                src="../src/image/cautruc1.png"
-                alt=""
-              />
-              <img
-                className="cautruc2"
-                src="../src/image/cautruc2.png"
-                alt=""
-              />
-              <img className="mayphai" src="../src/image/mayphai.png" alt="" />
-            </div>
-            <div className="bs-container">
-              <div className="bs-row">
-                <div className="bs-col">
-                  <div className="module module-index">
-                    <div className="about-img">
-                      <a href="">
-                        <img src="../src/image/Untitled-1.png" alt="" />
-                      </a>
-                    </div>
-                    <div className="content">
-                      <div className="about-header">
-                        <h2 className="title">
-                          <b>VỀ CHÚNG TÔI</b>
-                        </h2>
-                        <div className="more">
-                          <img src="../src/image/Rectangle 247.png" alt="" />
-                          <div className="line"></div>
-                        </div>
-                        <div className="other">
-                          <div className="line"></div>
-                          <img src="../src/image/Rectangle 247.png" alt="" />
-                          <div className="line"></div>
-                        </div>
-                      </div>
-                      <div className="about-content">
-                        <div className="text">
-                          Scarcely on striking packages by so property in
-                          delicate. Up or well must less rent read walk so be.
-                          Easy sold at do hour sing spot. Any meant has cease
-                          too the decay. Since party burst am it match. By or
-                          blushes between besides offices noisier as. Sending do
-                          brought windng compass in. Paid day till shed only
-                          fact age its end.
-                        </div>
-                        <button>Xem thêm</button>
-                        <h1>
-                          <b>ABOUT US</b>
-                        </h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </AboutUs>
-
-          <Activity>
-            <div className="bs-container">
-              <div className="bs-row">
-                <div className="bs-col">
-                  <div className="module-activity">
-                    <div className="act-title">
-                      <h2>
-                        <b>LĨNH VỰC HOẠT ĐỘNG</b>
-                      </h2>
-                      <div className="more">
-                        <img src=".../src/image/Rectangle 247.png" alt="" />
-                        <div className="line"></div>
-                      </div>
-                      <div className="other">
-                        <div className="line"></div>
-                        <img src="../src/image/Rectangle 247.png" alt="" />
-                        <div className="line"></div>
-                      </div>
-                    </div>
-                    <div className="act-content">
-                      <div className="main-content">
-                        <div className="design">
-                          <img src="../src/image/01.png" alt="" />
-                          <div className="title">
-                            <b>THIẾT KẾ KIẾN TRÚC</b>
-                          </div>
-                          <div className="text">
-                            <p>
-                              <a href="">
-                                Scarcely on striking packages by so property in
-                                delicate. Up or well must less rent read walk so
-                                be. Easy sold at do hour sing spot.
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="design">
-                          <img src="../src/image/02.png" alt="" />
-                          <div className="title">
-                            <b>THIẾT KẾ KIẾN TRÚC</b>
-                          </div>
-                          <div className="text">
-                            <p>
-                              <a href="">
-                                Scarcely on striking packages by so property in
-                                delicate. Up or well must less rent read walk so
-                                be. Easy sold at do hour sing spot.
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="design">
-                          <img src="../src/image/03.png" alt="" />
-                          <div className="title">
-                            <b>THIẾT KẾ KIẾN TRÚC</b>
-                          </div>
-                          <div className="text">
-                            <p>
-                              <a href="">
-                                Scarcely on striking packages by so property in
-                                delicate. Up or well must less rent read walk so
-                                be. Easy sold at do hour sing spot.
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="design">
-                          <img src="../src/image/04.png" alt="" />
-                          <div className="title">
-                            <b>THIẾT KẾ KIẾN TRÚC</b>
-                          </div>
-                          <div className="text">
-                            <p>
-                              <a href="">
-                                Scarcely on striking packages by so property in
-                                delicate. Up or well must less rent read walk so
-                                be. Easy sold at do hour sing spot.
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="content-img">
-                        <div className="activity-img">
-                          <img
-                            className="main-round"
-                            src="../src/image/main_round.gif"
-                            alt=""
-                          />
-                          <div className="layer layer1">
-                            <div className="layer layer1-1">
-                              <img
-                                src="../src/image/main_personal2.gif"
-                                alt=""
-                              />
-                            </div>
-                            <div className="layer layer1-2">
-                              <img
-                                src="../src/image/main_personal2_1.gif"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-
-                          <div className="layer layer2">
-                            <div className="layer layer2-1">
-                              <img
-                                src="../src/image/main_personal3.gif"
-                                alt=""
-                              />
-                            </div>
-                            <div className="layer layer2-2">
-                              <img
-                                src="../src/image/main_personal3_1.gif"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-
-                          <div className="layer layer3">
-                            <div className="layer layer3-1">
-                              <img
-                                src="../src/image/main_personal4.gif"
-                                alt=""
-                              />
-                            </div>
-                            <div className="layer layer3-2">
-                              <img
-                                src="../src/image/main_personal4_1.gif"
-                                alt=""
-                              />
-                            </div>
-                            <div className="layer main-center">
-                              <img src="../src/image/main_center.gif" alt="" />
-                            </div>
-
-                            <div className="tower1">
-                              <img src="../src/image/tower1.gif" alt="" />
-                            </div>
-
-                            <div className="tower2">
-                              <img src="../src/image/tower2.gif" alt="" />
-                            </div>
-
-                            <div className="tower3">
-                              <img src="../src/image/tower3.gif" alt="" />
-                            </div>
-
-                            <img
-                              src="../src/image/main_personal.gif"
-                              alt=""
-                              className="personal"
-                            />
-
-                            <div className="house">
-                              <img src="../src/image/home.gif" alt="" />
-                            </div>
-
-                            <div className="tree">
-                              <img src="../src/image/tree.gif" alt="" />
-                            </div>
-
-                            <div className="tree1">
-                              <img src="../src/image/tree (1).gif" alt="" />
-                            </div>
-
-                            <div className="tree2">
-                              <img src="../src/image/tree (2).gif" alt="" />
-                            </div>
-
-                            <div className="coint">
-                              <img src="../src/image/coin.gif" alt="" />
-                            </div>
-
-                            <img
-                              src="../src/image/layer6.gif"
-                              alt=""
-                              className="layer6"
-                            />
-                            <img
-                              src="../src/image/layer5.gif"
-                              alt=""
-                              className="layer5"
-                            />
-                            <img
-                              className="layer5_1"
-                              src="../src/image/layer5_1.gif"
-                              alt=""
-                            />
-                          </div>
-
-                          <div className="layer layer4">
-                            <img
-                              className="line1"
-                              src="../src/image/line1.gif"
-                              alt=""
-                            />
-                            <img
-                              className="line2"
-                              src="../src/image/line2.gif"
-                              alt=""
-                            />
-                            <img
-                              className="line3"
-                              src="../src/image/line3.gif"
-                              alt=""
-                            />
-                            <img
-                              className="line4"
-                              src="../src/image/line4.gif"
-                              alt=""
-                            />
-                          </div>
-
-                          <div className="layer layer5">
-                            <img
-                              src="../src/image/layer1.gif"
-                              alt=""
-                              className="lay1"
-                            />
-
-                            <img
-                              src="../src/image/layer2.gif"
-                              alt=""
-                              className="lay2"
-                            />
-
-                            <img
-                              src="../src/image/layer3.gif"
-                              alt=""
-                              className="lay3"
-                            />
-
-                            <img
-                              src="../src/image/layer4.gif"
-                              alt=""
-                              className="lay4"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="act-bonus">
-                      <b>MARKET</b>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Activity>
-
-          <Project>
-            <div className="bs-container">
-              <div className="bs-tab tab-left">
-                <div className="tab-container">
-                  <div className="tab-control">
-                    <h4>DỰ ÁN MỚI NHẤT</h4>
-                    <h1>DỰ ÁN NỔI BẬT</h1>
-                    <div className="more">
-                      <img src="../src/image/Rectangle 247.png" alt="" />
-                      <div className="line"></div>
-                    </div>
-                    <span className="control__show">TẤT CẢ</span>
-                    <ul className="control-list">
-                      <li
-                        className="control-list__item active"
-                        tab-show="#tatca"
-                      >
-                        TẤT CẢ
-                      </li>
-                      <li className="control-list__item" tab-show="#thuongmai">
-                        THƯƠNG MẠI
-                      </li>
-                      <li className="control-list__item" tab-show="#giaoduc">
-                        GIÁO DỤC
-                      </li>
-                      <li className="control-list__item" tab-show="#benhvien">
-                        BỆNH VIỆN
-                      </li>
-                      <li className="control-list__item" tab-show="#thuongtru">
-                        THƯỜNG TRÚ
-                      </li>
-                      <li className="control-list__item" tab-show="#vanphong">
-                        VĂN PHÒNG
-                      </li>
-                      <li className="control-list__item" tab-show="#taithiet">
-                        TÁI THIẾT
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="tab-content">
-                    <div className="tab-item active" id="tatca">
-                      <div className="multiple-items owl-carousel owl-theme">
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building1.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thương mại</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Giáo dục</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building3.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Bệnh viện</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thường trú</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building4.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Văn phòng</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building5.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Tái thiết</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-item" id="thuongmai">
-                      <div className="multiple-items">
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building1.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thương mại</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thương mại</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building3.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thương mại</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thương mại</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building4.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thương mại</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building5.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thương mại</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-item" id="giaoduc">
-                      <div className="multiple-items">
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building1.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Giáo dục</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building3.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Giáo dục</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building4.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Giáo dục</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building5.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Giáo dục</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-item" id="benhvien">
-                      <div className="multiple-items">
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Bệnh viện</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building3.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Bệnh viện</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Bệnh viện</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building4.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Bệnh viện</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-item" id="thuongtru">
-                      <div className="multiple-items">
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building3.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thường trú</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Thường trú</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-item" id="vanphong">
-                      <div className="multiple-items">
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building1.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Văn phòng</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building4.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Văn phòng</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building5.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Văn phòng</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-item" id="taithiet">
-                      <div className="multiple-items">
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building5.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Tái thiết</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building1.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Tái thiết</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building3.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Tái thiết</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building2.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Tái thiết</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <img
-                            className="project-img"
-                            src="../src/image/building3.png"
-                            alt=""
-                          />
-                          <div className="discription">
-                            <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                            <div className="more">Tái thiết</div>
-                            <button className="mutiple-button">+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="popup">
-                  <div className="main-pop">
-                    <img src="../src/image/popup.png" alt="" />
-                    <div className="title">
-                      <b>DỰ ÁN N04B - NGOẠI GIAO ĐOÀN</b>
-                    </div>
-                    <div className="main-content">
-                      <div className="content">
-                        <div className="name">Tên dự án</div>
-                        <div className="dis">
-                          : Tổ hợp chung cư cao tầng N04B - Khu đoàn Ngoại giao
-                          tại Hà Nội
-                        </div>
-                      </div>
-                      <div className="content">
-                        <div className="name">Chủ đầu tư</div>
-                        <div className="dis">
-                          : Công ty Cổ phần Đầu tư Xây dựng Bất động sản Lanmak
-                        </div>
-                      </div>
-                      <div className="content">
-                        <div className="name">Hạng mục</div>
-                        <div className="dis">
-                          : Phần kết cấu thân nhà/ Phần hoàn thiện kiến trúc
-                        </div>
-                      </div>
-                      <div className="content">
-                        <div className="name">Địa điểm</div>
-                        <div className="dis">
-                          : Khu đoàn Ngoại giao, Xuân Tảo, Bắc Từ Liêm, Hà Nội
-                        </div>
-                      </div>
-                      <div className="content">
-                        <div className="name">Loại công trình</div>
-                        <div className="dis">: Dân dụng, căn hộ chung cư</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">Cấp công trình</div>
-                        <div className="dis">: Cấp 1</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">Thời gian thực hiện</div>
-                        <div className="dis">: 2013-2015</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="layout"></div>
-                  <div className="close-pop">
-                    <i className="fa-regular fa-circle-xmark"></i>
-                  </div>
-                </div>
-                <div className="button">
-                  <div className="icon">
-                    <a href="">
-                      <i className="fa-solid fa-arrow-left"></i>
-                    </a>
-                  </div>
-                  <div className="icon">
-                    <a href="">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="bonus">
-                <b>PROJECTS</b>
-              </div>
-              <div className="left-img">
-                <img src="../src/image/Untitled-4.png" alt="" />
-              </div>
-              <div className="right-img">
-                <img src="../src/image/cautruc2.png" alt="" />
-              </div>
-            </div>
-          </Project>
-
-          <Recruiment>
-            <div className="bs-container">
-              <div className="bs-col">
-                <div className="bs-row">
-                  <div className="main-img">
-                    <div className="main">
-                      <img src="../src/image/main.gif" alt="" />
-                    </div>
-
-                    <div className="layer-personal">
-                      <div className="personal">
-                        <img src="../src/image/main_personal (1).gif" alt="" />
-                      </div>
-                      <div className="personal1">
-                        <img src="../src/image/main_personal_1.gif" alt="" />
-                      </div>
-
-                      <div className="personal2">
-                        <img src="../src/image/main_personal_2.gif" alt="" />
-                      </div>
-                    </div>
-
-                    <div className="layer1">
-                      <div className="layer1_2">
-                        <img src="../src/image/layer1_2.gif" alt="" />
-                      </div>
-
-                      <div className="layer1-1">
-                        <img src="../src/image/layer1_1.gif" alt="" />
-                      </div>
-
-                      <div className="lay1">
-                        <img src="../src/image/layer1 (1).gif" alt="" />
-                      </div>
-
-                      <div className="layer1_3">
-                        <img src="../src/image/layer1_3.gif" alt="" />
-                      </div>
-
-                      <div className="layer1_4">
-                        <img src="../src/image/layer1_4.gif" alt="" />
-                      </div>
-
-                      <div className="layway">
-                        <div className="layer151">
-                          <img src="../src/image/layer1_5_1.gif" alt="" />
-                        </div>
-                        <div className="layer152">
-                          <img src="../src/image/layer1_5_2.gif" alt="" />
-                        </div>
-                        <div className="layer153">
-                          <img src="../src/image/layer1_5_3.gif" alt="" />
-                        </div>
-                        <div className="layer154">
-                          <img src="../src/image/layer1_5_4.gif" alt="" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="layer2">
-                      <div className="background-layer">
-                        <div className="one">
-                          <img src="../src/image/layer2_4 (1).gif" alt="" />
-                        </div>
-
-                        <div className="two">
-                          <img src="../src/image/layer2_4.gif" alt="" />
-                        </div>
-
-                        <div className="broad">
-                          <img src="../src/image/layer2 (1).gif" alt="" />
-                        </div>
-
-                        <div className="broad-news">
-                          <div className="new1">
-                            <img src="../src/image/layer2_3 (1).gif" alt="" />
-                          </div>
-                          <div className="new2">
-                            <img src="../src/image/layer2_2.gif" alt="" />
-                          </div>
-                          <div className="new3">
-                            <img src="../src/image/layer2_3.gif" alt="" />
-                          </div>
-
-                          <div className="new4">
-                            <img src="../src/image/layer2_1.gif" alt="" />
-                          </div>
-                        </div>
-
-                        <div className="stars">
-                          <div className="star1">
-                            <img src="../src/image/layer_2_star.gif" alt="" />
-                          </div>
-
-                          <div className="star2">
-                            <img src="../src/image/layer_2_star1.gif" alt="" />
-                          </div>
-
-                          <div className="star3">
-                            <img src="../src/image/layer_2_star2.gif" alt="" />
-                          </div>
-
-                          <div className="star4">
-                            <img src="../src/image/layer_2_star3.gif" alt="" />
-                          </div>
-
-                          <div className="star5">
-                            <img src="../src/image/layer_2_star4.gif" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="layer3">
-                      <div className="under1">
-                        <img src="../src/image/layer_main.gif" alt="" />
-                      </div>
-
-                      <div className="under2">
-                        <img src="../src/image/layer_main.gif" alt="" />
-                      </div>
-
-                      <div className="under3">
-                        <img src="../src/image/layer_main.gif" alt="" />
-                      </div>
-
-                      <div className="under4">
-                        <img src="../src/image/layer_main.gif" alt="" />
-                      </div>
-
-                      <div className="layway">
-                        <div className="layer151">
-                          <img src="../src/image/layer1_5_1.gif" alt="" />
-                        </div>
-                        <div className="layer152">
-                          <img src="../src/image/layer1_5_2.gif" alt="" />
-                        </div>
-                        <div className="layer153">
-                          <img src="../src/image/layer1_5_3.gif" alt="" />
-                        </div>
-                        <div className="layer154">
-                          <img src="../src/image/layer1_5_4.gif" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="content">
-                    <h1>
-                      <b>TUYỂN DỤNG</b>
-                    </h1>
-                    <div className="more">
-                      <img src="../src/image/Rectangle 247.png" alt="" />
-                      <div className="line"></div>
-                    </div>
-                    <div className="other">
-                      <div className="line"></div>
-                      <img src="../src/image/Rectangle 247.png" alt="" />
-                      <div className="line"></div>
-                    </div>
-                    <div className="text">
-                      Resources exquisite set arranging moonlight sem him
-                      household had. Months had too ham cousin remove far
-                      spirit. She procuring the why performed continual
-                      improving.
-                    </div>
-                    <button>NỘP ĐƠN </button>
-                    <div className="bonus">
-                      <b>RECRUITMENT</b>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Recruiment>
-
-          <LastestNew>
-            <div className="bs-container">
-              <div className="bs-col">
-                <div className="bs-row">
-                  <div className="news_module">
-                    <div className="title">
-                      <b>TIN MỚI NHẤT</b>
-                    </div>
-                    <div className="more">
-                      <div className="line"></div>
-                      <img src="../src/image/Rectangle 247.png" alt="" />
-                      <div className="line"></div>
-                    </div>
-                    <div className="main-content">
-                      <div className="content">
-                        <img src="../src/image/news1.png" alt="" />
-                        <div className="discription">
-                          <div className="heading">
-                            <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
-                            </div>
-                            <div className="text">5.december.2020</div>
-                            <div className="block">|</div>
-                            <div className="eye">
-                              <i className="fa-regular fa-eye"></i>
-                            </div>
-                            <div className="view">328</div>
-                          </div>
-                          <div className="text">
-                            Lorem ipsum dolor sit amet aenean nisi sociis
-                            ipsum...
-                          </div>
-                          <div className="button">
-                            <h4>Xem thêm</h4>
-                            <button>+</button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="content">
-                        <img src="../src/image/news1.png" alt="" />
-                        <div className="discription">
-                          <div className="heading">
-                            <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
-                            </div>
-                            <div className="text">5.december.2020</div>
-                            <div className="block">|</div>
-                            <div className="eye">
-                              <i className="fa-regular fa-eye"></i>
-                            </div>
-                            <div className="view">328</div>
-                          </div>
-                          <div className="text">
-                            Lorem ipsum dolor sit amet aenean nisi sociis
-                            ipsum...
-                          </div>
-                          <div className="button">
-                            <h4>Xem thêm</h4>
-                            <button>+</button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="content">
-                        <img src="../src/image/news1.png" alt="" />
-                        <div className="discription">
-                          <div className="heading">
-                            <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
-                            </div>
-                            <div className="text">5.december.2020</div>
-                            <div className="block">|</div>
-                            <div className="eye">
-                              <i className="fa-regular fa-eye"></i>
-                            </div>
-                            <div className="view">328</div>
-                          </div>
-                          <div className="text">
-                            Lorem ipsum dolor sit amet aenean nisi sociis
-                            ipsum...
-                          </div>
-                          <div className="button">
-                            <h4>Xem thêm</h4>
-                            <button>+</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="news-img">
-                    <img src="../src/image/world.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </LastestNew>
-
-          <Last>
-            <button className="xemthem">XEM TIẾP</button>
-            <div className="bonus">
-              <b>LATEST NEWS</b>
-            </div>
-          </Last>
-        </main>
-      </Container>
+          </Container>
+        </HeaderBanner>
+      </Head>
     </>
   );
 }
@@ -1291,200 +181,1636 @@ export default App;
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 7%;
+  @media only screen and (max-width: 1350px) {
+    width: 1170px;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    width: 970px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    width: 750px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 /////// Header
-const Header = styled.div`
+const Head = styled.div`
   min-height: 810px;
   background-image: url(../src/image/slide1.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  @media only screen and (max-width: 767px) {
+    min-height: 700px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    min-height: 645px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    min-height: 625px;
+  }
+
+  @media only screen and (max-width: 425px) {
+    min-height: 587px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    min-height: 540px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    min-height: 540px;
+  }
 `;
 
 const HeaderTop = styled.div`
-  display: flex;
-  justify-content: space-between;
   height: 33px;
-  line-height: 33px;
-`;
-
-const HeaderLeft = styled.div`
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  i {
-    color: #1ac667;
-    font-size: 8px;
-  }
-  .hotline {
-    font-size: 11px;
-    color: #1d3d82;
-    font-style: italic;
-  }
-`;
-
-const HeaderRight = styled.div`
-  width: 30%;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  .search {
-    margin-left: 10px;
-    width: 47%;
-    position: relative;
-    input {
-      border-color: unset;
-      border-radius: 10px;
-      width: 100%;
-    }
-    input::placeholder {
-      padding-left: 10px;
-      font-size: 10px;
-      color: #1d3d82;
-      font-style: italic;
-    }
-    .icon {
-      position: absolute;
-      top: 0;
-      right: 5px;
-      font-size: 8px;
-      color: #1ac667;
-    }
-  }
-
-  .country {
-    width: 36px;
-    height: 20px;
-    margin-top: 0px;
+  .main-content {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: white;
-    img {
-      width: 20px;
-      height: 14px;
-    }
-    .option {
-      height: 100%;
+    .head-left {
+      width: 50%;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 2px;
+      margin-top: 13px;
       i {
         font-size: 8px;
-        color: #1d3d82;
+        color: #1ac667;
+        margin-left: 23%;
+        margin-right: 4px;
+      }
+      .hotline {
+        font-size: 10px;
+        font-style: italic;
+        color: #2c4d86;
+        line-height: 9px;
       }
     }
-    .country-scoll {
-      padding-top: 4px;
-      width: 36px;
-      height: 40px;
-      position: absolute;
-      bottom: -46px;
-      background-color: white;
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 3px;
-      div {
-        width: 100%;
-        height: 50%;
+    .head-right {
+      width: 50%;
+      position: relative;
+      top: 13px;
+      input {
+        width: 160px;
+        height: 20px;
+        border-radius: 20px;
+        left: 50%;
+        position: absolute;
+        background-color: #fff;
+        color: #fff;
+        transform: translateX(-19%);
+        top: -6px;
+        border: unset;
+      }
+      input::placeholder {
+        padding-left: 5px;
+        font-size: 10px;
+        font-style: italic;
+        color: #2c4d86;
+      }
+      .icon {
+        position: absolute;
+        right: 31%;
+        top: -4px;
+        width: 10px;
+        i {
+          margin-left: 0;
+          margin-right: 0;
+          color: #1ac667;
+        }
+      }
+      .country {
+        width: 34px;
+        height: 22px;
+        background: white;
+        position: absolute;
+        right: 21%;
+        top: -7px;
+        z-index: 2;
         display: flex;
         justify-content: center;
+        align-items: center;
+        img {
+          height: 11px;
+          width: 15px;
+          margin-top: 0px;
+          padding-left: 0px;
+        }
+        i {
+          margin-left: 0px;
+          font-size: 9px;
+          color: black;
+        }
+        .country-scoll {
+          background: white;
+          background: white;
+          width: 34px;
+          height: 40px;
+          position: absolute;
+          top: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1350px) {
+    .main-content {
+      width: 100%;
+      display: flex;
+      .head-left {
+        i {
+          margin-left: 8%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    background-color: #1d407d;
+    .main-content {
+      .head-left {
+        i {
+          margin-left: 10%;
+        }
+        .hotline {
+          color: white;
+          white-space: nowrap;
+        }
+      }
+      .head-right {
+        input {
+          width: 147px;
+          transform: translateX(45%);
+        }
+        .icon {
+          right: 10%;
+        }
+        .country {
+          right: -2%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    background-color: #1d407d;
+    .main-content {
+      .head-left {
+        i {
+          margin-left: 10%;
+        }
+        .hotline {
+          color: white;
+          white-space: nowrap;
+        }
+      }
+      .head-right {
+        input {
+          transform: translateX(-32%);
+        }
+        .country {
+          right: 12%;
+        }
+        .icon {
+          right: 29%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    background-color: #1d407d;
+    .main-content {
+      .head-left {
+        i {
+          margin-left: 10%;
+        }
+        .hotline {
+          color: white;
+          white-space: nowrap;
+        }
+      }
+      .head-right {
+        input {
+          transform: translateX(-55%);
+        }
+        .country {
+          right: 17%;
+        }
+        .icon {
+          right: 37%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-color: #1d407d;
+    .main-content {
+      .head-left {
+        i {
+          margin-left: 10%;
+        }
+        .hotline {
+          color: white;
+          white-space: nowrap;
+        }
+      }
+      .head-right {
+        input {
+          width: 170px;
+          transform: translateX(-70%);
+        }
+        .country {
+          right: 17%;
+        }
+        .icon {
+          right: 37%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    background-color: #1d407d;
+    .main-content {
+      .head-left {
+        i {
+          margin-left: 10%;
+        }
+        .hotline {
+          color: white;
+          white-space: nowrap;
+        }
+      }
+      .head-right {
+        input {
+          width: 130px;
+          transform: translateX(-76%);
+          width: 125px;
+        }
+        .country {
+          right: 17%;
+        }
+        .icon {
+          right: 45%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    background-color: #1d407d;
+    .main-content {
+      .head-left {
+        i {
+          margin-left: 10%;
+        }
+        .hotline {
+          color: white;
+          white-space: nowrap;
+        }
+      }
+      .head-right {
+        input {
+          transform: translateX(-83%);
+          width: 120px;
+        }
+        .country {
+          right: 17%;
+        }
+        .icon {
+          right: 45%;
+          font-size: 12px;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    background-color: #1d407d;
+    .main-content {
+      .head-left {
+        i {
+          margin-left: 10%;
+        }
+        .hotline {
+          color: white;
+          white-space: nowrap;
+        }
+      }
+      .head-right {
+        input {
+          transform: translateX(-83%);
+          width: 112px;
+        }
+        .country {
+          right: 10%;
+        }
+        .icon {
+          right: 45%;
+        }
       }
     }
   }
 `;
 
 const HeaderNav = styled.div`
-  height: 63px;
+  box-shadow: none;
   .nav-content {
     display: flex;
-    margin-top: 6px;
     .logo {
-      width: 19%;
-      margin-top: 7px;
+      width: 30%;
       img {
-        width: 100%;
+        height: 46px;
+        width: 188px;
+        margin-left: 122px;
+        margin-top: 13px;
       }
     }
-
     .nav {
-      width: 65%;
-      margin-left: 7%;
+      width: 70%;
+      .show__menu {
+        display: none;
+      }
       .menu {
+        margin-left: 53px;
         .menu-list {
           display: flex;
-          justify-content: space-between;
-          list-style: none;
-          gap: 10px;
-          a {
-            width: 81px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 10px;
-            font-weight: 600;
-            display: block;
-            white-space: nowrap;
-            height: 27px;
-            line-height: 30px;
-            text-align: center;
-            .active {
-              display: block;
+          margin-left: 22px;
+          margin-top: 18px;
+          width: 642px;
+          gap: 2px;
+          .menu-list__item {
+            position: relative;
+            width: 90px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            &:hover {
+              a {
+                color: #f0fcf7;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  bottom: -80px;
+                  left: 0px;
+                  width: 0.5px;
+                  height: 40px;
+                  background-color: #1bcd8d;
+                  animation: leftmove 1.5s infinite;
+                }
+                @keyframes leftmove {
+                  from {
+                    bottom: -80px;
+                  }
+                  to {
+                    bottom: 40px;
+                  }
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: -80px;
+                  right: 0px;
+                  width: 0.5px;
+                  height: 40px;
+                  background-color: #1bcd8d;
+                  animation: rightmove 1.5s infinite;
+                  animation-delay: 0.5s;
+                }
+                @keyframes rightmove {
+                  from {
+                    top: -80px;
+                  }
+                  to {
+                    top: 35px;
+                  }
+                }
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: -40px;
+                width: 40px;
+                height: 1px;
+                background-color: #1bcd8d;
+                animation: topmove 1.5s infinite;
+              }
+              @keyframes topmove {
+                from {
+                  left: -40px;
+                }
+                to {
+                  left: 90px;
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                right: -60px;
+                width: 60px;
+                height: 1px;
+                background-color: #1bcd8d;
+                animation: bottom-move 1.5s infinite;
+                animation-delay: 1s;
+              }
+              @keyframes bottom-move {
+                from {
+                  right: -60px;
+                }
+                to {
+                  right: 90px;
+                }
+              }
+            }
+            a {
               width: 81px;
-              background-color: #1bcd8d;
+              text-decoration: none;
+              color: #fff;
+              font-size: 11px;
+              font-weight: 600;
+              display: block;
+              white-space: nowrap;
               height: 27px;
-              text-align: center;
               line-height: 27px;
+              text-align: center;
+              &:hover {
+                background-color: #1bcd8d;
+                height: 27px;
+                width: 81px;
+              }
+              .active {
+                display: block;
+                width: 81px;
+                background-color: #1bcd8d;
+                height: 27px;
+                text-align: center;
+                line-height: 27px;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0px;
+                  left: -40px;
+                  width: 40px;
+                  height: 1px;
+                  background-color: #1bcd8d;
+                  animation: topmove 1.5s infinite;
+                }
+                @keyframes topmove {
+                  from {
+                    left: -40px;
+                  }
+                  to {
+                    left: 90px;
+                  }
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0px;
+                  right: -60px;
+                  width: 60px;
+                  height: 1px;
+                  background-color: #1bcd8d;
+                  animation: bottom-move 1.8s infinite;
+                  // animation-delay: 2s;
+                }
+                @keyframes bottom-move {
+                  from {
+                    right: -60px;
+                  }
+                  to {
+                    right: 90px;
+                  }
+                }
+              }
             }
           }
-
-          a:hover {
-            .list-active {
-              display: block;
-              width: 81px;
+          .list-active {
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -80px;
+              left: 0px;
+              width: 0.5px;
+              height: 40px;
               background-color: #1bcd8d;
-              height: 27px;
-              text-align: center;
-              line-height: 30px;
+              animation: leftmove 1.75s infinite;
+              // animation-delay: 1s;
+            }
+            @keyframes leftmove {
+              from {
+                bottom: -80px;
+              }
+              to {
+                bottom: 35px;
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: -80px;
+              right: 0px;
+              width: 0.5px;
+              height: 40px;
+              background-color: #1bcd8d;
+              animation: rightmove 1.5s infinite;
+              animation-delay: 0.35s;
+            }
+            @keyframes rightmove {
+              from {
+                top: -80px;
+              }
+              to {
+                top: 35px;
+              }
+            }
+          }
+        }
+      }
+      .menu-respon {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1350px) {
+    .nav-content {
+      .logo {
+        img {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    background-color: white;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    height: 70px;
+    .nav-content {
+      .logo {
+        img {
+          margin-left: 40px;
+        }
+      }
+      .nav {
+        .menu {
+          margin-left: 0;
+          .menu-list {
+            margin-left: 0;
+            .menu-list__item {
+              position: relative;
+              width: 90px;
+              height: 35px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+              &:hover {
+                a {
+                  color: #f0fcf7;
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -80px;
+                    left: 0px;
+                    width: 0.5px;
+                    height: 40px;
+                    background-color: #1bcd8d;
+                    animation: leftmove 1.5s infinite;
+                  }
+                  @keyframes leftmove {
+                    from {
+                      bottom: -80px;
+                    }
+                    to {
+                      bottom: 40px;
+                    }
+                  }
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: -80px;
+                    right: 0px;
+                    width: 0.5px;
+                    height: 40px;
+                    background-color: #1bcd8d;
+                    animation: rightmove 1.5s infinite;
+                    animation-delay: 0.5s;
+                  }
+                  @keyframes rightmove {
+                    from {
+                      top: -80px;
+                    }
+                    to {
+                      top: 35px;
+                    }
+                  }
+                }
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0px;
+                  left: -40px;
+                  width: 40px;
+                  height: 1px;
+                  background-color: #1bcd8d;
+                  animation: topmove 1.5s infinite;
+                }
+                @keyframes topmove {
+                  from {
+                    left: -40px;
+                  }
+                  to {
+                    left: 90px;
+                  }
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0px;
+                  right: -60px;
+                  width: 60px;
+                  height: 1px;
+                  background-color: #1bcd8d;
+                  animation: bottom-move 1.5s infinite;
+                  animation-delay: 1s;
+                }
+                @keyframes bottom-move {
+                  from {
+                    right: -60px;
+                  }
+                  to {
+                    right: 90px;
+                  }
+                }
+              }
+              a {
+                width: 81px;
+                text-decoration: none;
+                color: black;
+                font-size: 11px;
+                font-weight: 600;
+                display: block;
+                white-space: nowrap;
+                height: 27px;
+                line-height: 27px;
+                text-align: center;
+                &:hover {
+                  background-color: #1bcd8d;
+                  height: 27px;
+                  width: 81px;
+                }
+                .active {
+                  display: block;
+                  width: 81px;
+                  background-color: #1bcd8d;
+                  height: 27px;
+                  text-align: center;
+                  color: white;
+                  line-height: 27px;
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: -40px;
+                    width: 40px;
+                    height: 1px;
+                    background-color: #1bcd8d;
+                    animation: topmove 1.5s infinite;
+                  }
+                  @keyframes topmove {
+                    from {
+                      left: -40px;
+                    }
+                    to {
+                      left: 90px;
+                    }
+                  }
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    right: -60px;
+                    width: 60px;
+                    height: 1px;
+                    background-color: #1bcd8d;
+                    animation: bottom-move 1.8s infinite;
+                    // animation-delay: 2s;
+                  }
+                  @keyframes bottom-move {
+                    from {
+                      right: -60px;
+                    }
+                    to {
+                      right: 90px;
+                    }
+                  }
+                }
+              }
+            }
+            .list-active {
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -80px;
+                left: 0px;
+                width: 0.5px;
+                height: 40px;
+                background-color: #1bcd8d;
+                animation: leftmove 1.75s infinite;
+                // animation-delay: 1s;
+              }
+              @keyframes leftmove {
+                from {
+                  bottom: -80px;
+                }
+                to {
+                  bottom: 35px;
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                top: -80px;
+                right: 0px;
+                width: 0.5px;
+                height: 40px;
+                background-color: #1bcd8d;
+                animation: rightmove 1.5s infinite;
+                animation-delay: 0.35s;
+              }
+              @keyframes rightmove {
+                from {
+                  top: -80px;
+                }
+                to {
+                  top: 35px;
+                }
+              }
             }
           }
         }
       }
     }
-    #show-menu {
-      display: none;
+  }
+
+  @media only screen and (max-width: 991px) {
+    background-color: white;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    height: 70px;
+    .nav-content {
+      .logo {
+        img {
+          margin-left: 40px;
+          height: 35px;
+          width: 130px;
+          margin-top: 15px;
+        }
+      }
+      .nav {
+        .menu {
+          margin-left: 40px;
+          .menu-list {
+            margin-left: -55px;
+            padding-left: 0;
+            gap: 5px;
+            width: 520px;
+            .menu-list__item {
+              position: relative;
+              width: 90px;
+              height: 35px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+              &:hover {
+                a {
+                  color: #f0fcf7;
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -80px;
+                    left: 0px;
+                    width: 0.5px;
+                    height: 40px;
+                    background-color: #1bcd8d;
+                    animation: leftmove 1.5s infinite;
+                  }
+                  @keyframes leftmove {
+                    from {
+                      bottom: -80px;
+                    }
+                    to {
+                      bottom: 40px;
+                    }
+                  }
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: -80px;
+                    right: 0px;
+                    width: 0.5px;
+                    height: 40px;
+                    background-color: #1bcd8d;
+                    animation: rightmove 1.5s infinite;
+                    animation-delay: 0.5s;
+                  }
+                  @keyframes rightmove {
+                    from {
+                      top: -80px;
+                    }
+                    to {
+                      top: 35px;
+                    }
+                  }
+                }
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0px;
+                  left: -40px;
+                  width: 40px;
+                  height: 1px;
+                  background-color: #1bcd8d;
+                  animation: topmove 1.5s infinite;
+                }
+                @keyframes topmove {
+                  from {
+                    left: -40px;
+                  }
+                  to {
+                    left: 90px;
+                  }
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0px;
+                  right: -60px;
+                  width: 60px;
+                  height: 1px;
+                  background-color: #1bcd8d;
+                  animation: bottom-move 1.5s infinite;
+                  animation-delay: 1s;
+                }
+                @keyframes bottom-move {
+                  from {
+                    right: -60px;
+                  }
+                  to {
+                    right: 90px;
+                  }
+                }
+              }
+              a {
+                width: 81px;
+                text-decoration: none;
+                color: black;
+                font-size: 11px;
+                font-weight: 600;
+                display: block;
+                white-space: nowrap;
+                height: 27px;
+                line-height: 27px;
+                text-align: center;
+                &:hover {
+                  background-color: #1bcd8d;
+                  height: 27px;
+                  width: 81px;
+                }
+                .active {
+                  display: block;
+                  width: 81px;
+                  background-color: #1bcd8d;
+                  height: 27px;
+                  text-align: center;
+                  color: white;
+                  line-height: 27px;
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: -40px;
+                    width: 40px;
+                    height: 1px;
+                    background-color: #1bcd8d;
+                    animation: topmove 1.5s infinite;
+                  }
+                  @keyframes topmove {
+                    from {
+                      left: -40px;
+                    }
+                    to {
+                      left: 90px;
+                    }
+                  }
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    right: -60px;
+                    width: 60px;
+                    height: 1px;
+                    background-color: #1bcd8d;
+                    animation: bottom-move 1.8s infinite;
+                    // animation-delay: 2s;
+                  }
+                  @keyframes bottom-move {
+                    from {
+                      right: -60px;
+                    }
+                    to {
+                      right: 90px;
+                    }
+                  }
+                }
+              }
+            }
+            .list-active {
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -80px;
+                left: 0px;
+                width: 0.5px;
+                height: 40px;
+                background-color: #1bcd8d;
+                animation: leftmove 1.75s infinite;
+                // animation-delay: 1s;
+              }
+              @keyframes leftmove {
+                from {
+                  bottom: -80px;
+                }
+                to {
+                  bottom: 35px;
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                top: -80px;
+                right: 0px;
+                width: 0.5px;
+                height: 40px;
+                background-color: #1bcd8d;
+                animation: rightmove 1.5s infinite;
+                animation-delay: 0.35s;
+              }
+              @keyframes rightmove {
+                from {
+                  top: -80px;
+                }
+                to {
+                  top: 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    .nav-content {
+      .logo {
+        width: 50%;
+        img {
+          height: 45px;
+          width: 140px;
+          margin-left: 11%;
+          margin-top: 20px;
+        }
+      }
+      .nav {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        .menu {
+          display: none;
+        }
+        .show__menu {
+          display: block;
+          font-size: 25px;
+          margin-right: 17%;
+        }
+        .show__menu {
+          display: flex;
+          align-items: center;
+        }
+        .menu-respon {
+          display: block;
+        }
+        .menu-respon {
+          position: fixed;
+          width: 50%;
+          height: 100%;
+          background-color: white;
+          top: 0;
+          left: 0;
+          animation: 5s;
+          z-index: 20;
+          .close__menu {
+            position: absolute;
+            right: 19px;
+            top: 4px;
+            font-size: 25px;
+          }
+          .menu-list {
+            width: 100%;
+            margin-top: 50px;
+            list-style: none;
+            padding-left: 20px;
+            .menu-list__item {
+              margin-bottom: 20px;
+              a {
+                font-size: 16px;
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    .nav-content {
+      .logo {
+        width: 50%;
+        img {
+          height: 45px;
+          width: 140px;
+          margin-left: 11%;
+          margin-top: 20px;
+        }
+      }
+      .nav {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        .menu {
+          display: none;
+        }
+        .show__menu {
+          display: block;
+          font-size: 25px;
+          margin-right: 17%;
+        }
+        .show__menu {
+          display: flex;
+          align-items: center;
+        }
+        .menu-respon {
+          display: block;
+        }
+        .menu-respon {
+          position: fixed;
+          width: 50%;
+          height: 100%;
+          background-color: white;
+          top: 0;
+          left: 0;
+          animation: 5s;
+          z-index: 20;
+          .close__menu {
+            position: absolute;
+            right: 19px;
+            top: 4px;
+            font-size: 25px;
+          }
+          .menu-list {
+            width: 100%;
+            margin-top: 50px;
+            list-style: none;
+            padding-left: 20px;
+            .menu-list__item {
+              margin-bottom: 20px;
+              a {
+                font-size: 16px;
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    .nav-content {
+      .logo {
+        width: 50%;
+        img {
+          height: 40px;
+          width: 140px;
+          margin-left: 11%;
+          margin-top: 25px;
+        }
+      }
+      .nav {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        .menu {
+          display: none;
+        }
+        .show__menu {
+          display: block;
+          font-size: 25px;
+          margin-right: 17%;
+        }
+        .show__menu {
+          display: flex;
+          align-items: center;
+        }
+        .menu-respon {
+          display: block;
+        }
+        .menu-respon {
+          position: fixed;
+          width: 50%;
+          height: 100%;
+          background-color: white;
+          top: 0;
+          left: 0;
+          animation: 5s;
+          z-index: 20;
+          .close__menu {
+            position: absolute;
+            right: 19px;
+            top: 4px;
+            font-size: 25px;
+          }
+          .menu-list {
+            width: 100%;
+            margin-top: 50px;
+            list-style: none;
+            padding-left: 20px;
+            .menu-list__item {
+              margin-bottom: 20px;
+              a {
+                font-size: 16px;
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    .nav-content {
+      .logo {
+        width: 50%;
+        img {
+          height: 40px;
+          width: 140px;
+          margin-left: 11%;
+          margin-top: 25px;
+        }
+      }
+      .nav {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        .menu {
+          display: none;
+        }
+        .show__menu {
+          display: block;
+          font-size: 25px;
+          margin-right: 17%;
+        }
+        .show__menu {
+          display: flex;
+          align-items: center;
+        }
+        .menu-respon {
+          display: block;
+        }
+        .menu-respon {
+          position: fixed;
+          width: 50%;
+          height: 100%;
+          background-color: white;
+          top: 0;
+          left: 0;
+          animation: 5s;
+          z-index: 20;
+          .close__menu {
+            position: absolute;
+            right: 19px;
+            top: 4px;
+            font-size: 25px;
+          }
+          .menu-list {
+            width: 100%;
+            margin-top: 50px;
+            list-style: none;
+            padding-left: 20px;
+            .menu-list__item {
+              margin-bottom: 20px;
+              a {
+                font-size: 16px;
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    .nav-content {
+      .logo {
+        width: 50%;
+        img {
+          height: 40px;
+          width: 140px;
+          margin-left: 11%;
+          margin-top: 25px;
+        }
+      }
+      .nav {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        .menu {
+          display: none;
+        }
+        .show__menu {
+          display: block;
+          font-size: 25px;
+          margin-right: 17%;
+        }
+        .show__menu {
+          display: flex;
+          align-items: center;
+        }
+        .menu-respon {
+          display: block;
+        }
+        .menu-respon {
+          position: fixed;
+          width: 50%;
+          height: 100%;
+          background-color: white;
+          top: 0;
+          left: 0;
+          animation: 5s;
+          z-index: 20;
+          .close__menu {
+            position: absolute;
+            right: 19px;
+            top: 4px;
+            font-size: 25px;
+          }
+          .menu-list {
+            width: 100%;
+            margin-top: 50px;
+            list-style: none;
+            padding-left: 20px;
+            .menu-list__item {
+              margin-bottom: 20px;
+              a {
+                font-size: 16px;
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 3px 5px 3px rgb(131, 151, 185, 0.18),
+      0px 6px 2px rgb(131, 151, 185, 0.18);
+    .nav-content {
+      .logo {
+        width: 50%;
+        img {
+          height: 40px;
+          width: 140px;
+          margin-left: 11%;
+          margin-top: 25px;
+        }
+      }
+      .nav {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        .menu {
+          display: none;
+        }
+        .show__menu {
+          display: block;
+          font-size: 25px;
+          margin-right: 17%;
+        }
+        .show__menu {
+          display: flex;
+          align-items: center;
+        }
+        .menu-respon {
+          display: block;
+        }
+        .menu-respon {
+          position: fixed;
+          width: 50%;
+          height: 100%;
+          background-color: white;
+          top: 0;
+          left: 0;
+          animation: 5s;
+          z-index: 20;
+          .close__menu {
+            position: absolute;
+            right: 19px;
+            top: 4px;
+            font-size: 25px;
+          }
+          .menu-list {
+            width: 100%;
+            margin-top: 50px;
+            list-style: none;
+            padding-left: 20px;
+            .menu-list__item {
+              margin-bottom: 20px;
+              a {
+                font-size: 16px;
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;
 
 const HeaderBanner = styled.div`
-  min-height: 700px;
-  transform: translateY(26%);
-  width: 40%;
-  .title {
-    font-size: 46px;
-    color: #1d3d82;
-    margin-bottom: 26px;
+  .banner {
+    width: 35%;
+    margin-left: 10%;
+    margin-top: 13%;
+    .title {
+      width: 100%;
+      text-align: unset;
+      padding-top: 35px;
+      font-size: 50px;
+      font-weight: 600;
+      padding-left: 10px;
+      line-height: 1;
+      color: #1d407d;
+    }
+    .description {
+      font-size: 19px;
+      font-weight: 500;
+      padding-left: 9px;
+      word-spacing: 3px;
+      margin-top: 28px;
+      width: 100%;
+      text-align: unset;
+      word-spacing: 3.6px;
+      color: #1d407d;
+    }
+    button {
+      margin-top: 28px;
+      margin-left: 14px;
+      width: 124px;
+      height: 34px;
+      font-size: 12px;
+      color: white;
+      background-color: #1bcd8d;
+      border: unset;
+    }
   }
-  .description {
-    font-size: 22px;
-    color: #1d3d82;
-    margin-bottom: 28px;
+
+  @media only screen and (max-width: 1350px) {
+    .banner {
+      width: 30%;
+      margin-left: 3%;
+      margin-top: 13%;
+      .title {
+        font-size: 40px;
+      }
+      .description {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+    }
   }
-  button {
-    background-color: #1ac667;
-    color: white;
-    border: unset;
-    width: 123px;
-    height: 30px;
-    font-size: 12px;
+
+  @media only screen and (max-width: 1199px) {
+    .banner {
+      width: 50%;
+      margin-left: 33%;
+      margin-top: 10%;
+      .title {
+        color: white;
+      }
+      .description {
+        color: white;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .banner {
+      width: 60%;
+      margin-left: 33%;
+      margin-top: 10%;
+      .title {
+        color: white;
+      }
+      .description {
+        color: white;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .banner {
+      width: 70%;
+      margin-left: 22%;
+      margin-top: 10%;
+      .title {
+        color: #fff;
+        font-size: 35px;
+      }
+      .description {
+        color: #fff;
+      }
+      button {
+        width: 150px;
+        height: 50px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .banner {
+      width: 70%;
+      margin-left: 22%;
+      margin-top: 9%;
+      .title {
+        color: #fff;
+        font-size: 35px;
+      }
+      .description {
+        color: #fff;
+      }
+      button {
+        width: 150px;
+        height: 50px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .banner {
+      width: 65%;
+      margin-left: 23%;
+      margin-top: 30px;
+      .title {
+        color: #fff;
+        font-size: 30px;
+      }
+      .description {
+        color: #fff;
+      }
+      button {
+        width: 150px;
+        height: 50px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .banner {
+      width: 72%;
+      margin-left: 22%;
+      margin-top: 5px;
+      .title {
+        color: #fff;
+        font-size: 30px;
+      }
+      .description {
+        font-size: 16px;
+        color: #fff;
+      }
+      button {
+        width: 120px;
+        height: 50px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .banner {
+      width: 70%;
+      margin-left: 23%;
+      margin-top: -3px;
+      .title {
+        color: #fff;
+        font-size: 27px;
+      }
+      .description {
+        color: #fff;
+        font-size: 14px;
+      }
+      button {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .banner {
+      width: 70%;
+      margin-left: 23%;
+      margin-top: -3px;
+      .title {
+        color: #fff;
+        font-size: 24px;
+      }
+      .description {
+        color: #fff;
+        font-size: 14px;
+      }
+      button {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+      }
+    }
   }
 `;
 /////////// Main
