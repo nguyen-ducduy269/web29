@@ -97,7 +97,7 @@ export const Contact = () => {
                         DỰ ÁN
                       </a>
                     </li>
-                    <li className="menu-list__item list-active">
+                    <li className="menu-list__item">
                       <a href="/news" className="menu-list__link">
                         TIN TỨC
                       </a>
@@ -107,7 +107,7 @@ export const Contact = () => {
                         TUYỂN DỤNG
                       </a>
                     </li>
-                    <li className="menu-list__item">
+                    <li className="menu-list__item list-active">
                       <a href="/contact" className="menu-list__link active">
                         LIÊN HỆ
                       </a>

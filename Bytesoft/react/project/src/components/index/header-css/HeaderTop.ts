@@ -176,7 +176,7 @@ export const HeaderTop = styled.div`
           transform: translateX(-55%);
         }
         .country {
-          right: 17%;
+          right: 6%;
         }
         .icon {
           right: 37%;

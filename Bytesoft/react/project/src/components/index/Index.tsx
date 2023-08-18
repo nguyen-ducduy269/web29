@@ -6,10 +6,12 @@ import coMeo from "../../image/istockphoto-1144423641-612x612.jpg";
 
 // import components
 import { Container } from "../Container";
-import { Head } from "./css/Head";
-import { HeaderTop } from "./css/HeaderTop";
-import { HeaderNav } from "./css/HeaderNav";
-import { HeaderBanner } from "./css/HeaderBanner";
+import { Head } from "./header-css/Head";
+import { HeaderTop } from "./header-css/HeaderTop";
+import { HeaderNav } from "./header-css/HeaderNav";
+import { HeaderBanner } from "./header-css/HeaderBanner";
+
+import { Main } from "./main";
 
 export const Index = () => {
   const [isDisplay, setIsDisplay] = useState(false);
@@ -189,6 +191,8 @@ export const Index = () => {
           </Container>
         </HeaderBanner>
       </Head>
+
+      <Main />
     </>
   );
 };

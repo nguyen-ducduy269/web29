@@ -123,13 +123,14 @@ export const HeaderBanner = styled.div`
     .banner {
       width: 65%;
       margin-left: 23%;
-      margin-top: 30px;
+      margin-top: -5px;
       .title {
         color: #fff;
-        font-size: 30px;
+        font-size: 28px;
       }
       .description {
         color: #fff;
+        font-size: 16px;
       }
       button {
         width: 150px;
@@ -140,12 +141,12 @@ export const HeaderBanner = styled.div`
 
   @media only screen and (max-width: 425px) {
     .banner {
-      width: 72%;
+      width: 70%;
       margin-left: 22%;
       margin-top: 5px;
       .title {
         color: #fff;
-        font-size: 30px;
+        font-size: 28px;
       }
       .description {
         font-size: 16px;
@@ -160,15 +161,18 @@ export const HeaderBanner = styled.div`
 
   @media only screen and (max-width: 375px) {
     .banner {
-      width: 70%;
-      margin-left: 23%;
-      margin-top: -3px;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .title {
-        color: #fff;
+        color: #1d407d;
         font-size: 27px;
+        text-align: center;
       }
       .description {
-        color: #fff;
+        color: #1d407d;
         font-size: 14px;
       }
       button {
@@ -181,15 +185,18 @@ export const HeaderBanner = styled.div`
 
   @media only screen and (max-width: 320px) {
     .banner {
-      width: 70%;
-      margin-left: 23%;
-      margin-top: -3px;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .title {
-        color: #fff;
+        color: #1d407d;
         font-size: 24px;
+        text-align: center;
       }
       .description {
-        color: #fff;
+        color: #1d407d;
         font-size: 14px;
       }
       button {

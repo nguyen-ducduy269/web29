@@ -23,10 +23,12 @@ export const Head = styled.div`
   }
 
   @media only screen and (max-width: 375px) {
-    min-height: 540px;
+    min-height: 100%;
+    background-image: unset;
   }
 
   @media only screen and (max-width: 320px) {
-    min-height: 540px;
+    min-height: 100%;
+    background-image: unset;
   }
 `;

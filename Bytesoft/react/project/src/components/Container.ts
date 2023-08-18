@@ -16,6 +16,10 @@ export const Container = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 600px) {
     width: 100%;
   }
 `;
