@@ -1606,6 +1606,7 @@ export const Activity = styled.section`
       }
       .act-bonus {
         position: absolute;
+        top: unset;
       }
     }
   }
