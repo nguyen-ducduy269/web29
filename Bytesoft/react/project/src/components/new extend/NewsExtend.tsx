@@ -1,8 +1,8 @@
-import { NewsHeader } from "./NewsHeader";
+import { NewsHeader } from "../new/NewsHeader";
+import { NewsFooter } from "../new/NewsFooter";
 import { NewsMain } from "./NewsMain";
-import { NewsFooter } from "./NewsFooter";
 
-export const News = () => {
+export const NewsExtend = () => {
   return (
     <>
       <NewsHeader />

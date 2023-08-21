@@ -253,6 +253,7 @@ export const NewsNav = styled.div`
           .menu-list {
             width: 100%;
             margin-left: 0;
+            padding: 0;
             .menu-list__item {
               .active {
                 width: 75px;
