@@ -26,6 +26,7 @@ export const NewsNav = styled.div`
           display: flex;
           .menu-list__item {
             position: relative;
+            font-family: sans-serif;
             width: 90px;
             height: 35px;
             display: flex;

@@ -25,6 +25,7 @@ export const ContactNav = styled.div`
           margin-top: 20px;
           display: flex;
           .menu-list__item {
+            font-family: sans-serif;
             position: relative;
             width: 90px;
             height: 35px;

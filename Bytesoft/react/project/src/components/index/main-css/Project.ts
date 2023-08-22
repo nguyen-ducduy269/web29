@@ -50,6 +50,7 @@ export const Project = styled.section`
           font-size: 16px;
           font-family: OpenSans;
           color: rgba(106, 226, 182);
+          font-family: sans-serif;
         }
         h1 {
           font-size: 35px;
@@ -57,6 +58,7 @@ export const Project = styled.section`
           margin-bottom: 15px;
           line-height: 46px;
           color: rgba(29, 64, 125);
+          font-family: sans-serif;
         }
 
         .more {
@@ -81,8 +83,8 @@ export const Project = styled.section`
           flex-direction: column;
           align-items: flex-start;
           .control-list__item {
+            font-family: sans-serif;
             width: 90%;
-            font-family: OpenSans;
             height: 46px;
             margin-bottom: 8px;
             font-size: 18px;
@@ -136,11 +138,13 @@ export const Project = styled.section`
               color: #72dcb6;
               width: unset;
               height: unset;
+              font-family: sans-serif;
             }
             .more {
               position: absolute;
               bottom: 4px;
               left: 11px;
+              font-family: sans-serif;
             }
             button {
               position: absolute;
@@ -277,6 +281,7 @@ export const Project = styled.section`
     letter-spacing: 4.2px;
     color: #fff;
     text-shadow: 1px 1px 1px rgb(46 214 153), 0 0 3px rgb(46 214 153);
+    font-family: sans-serif;
     @keyframes bons {
       from {
         bottom: -65px;

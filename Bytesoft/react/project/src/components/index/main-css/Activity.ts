@@ -11,6 +11,7 @@ export const Activity = styled.section`
       height: 100px;
       margin-top: 45px;
       margin-left: 120px;
+      font-family: sans-serif;
       h2 {
         font-size: 36px;
         margin-bottom: 14px;
@@ -60,6 +61,7 @@ export const Activity = styled.section`
             margin-top: 32px;
             word-spacing: -2px;
             color: #1d407d;
+            font-family: sans-serif;
           }
           .text {
             margin-left: 34px;
@@ -1446,6 +1448,7 @@ export const Activity = styled.section`
       left: 43%;
       top: 20px;
       transform: translateX(-16%);
+      font-family: sans-serif;
     }
     @keyframes bonus {
       from {

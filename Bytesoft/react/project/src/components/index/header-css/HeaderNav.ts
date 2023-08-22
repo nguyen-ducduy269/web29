@@ -26,6 +26,8 @@ export const HeaderNav = styled.div`
           margin-top: 18px;
           width: 642px;
           gap: 2px;
+          font-family: sans-serif;
+          font-weight: 100;
           .menu-list__item {
             position: relative;
             width: 90px;

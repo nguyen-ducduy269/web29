@@ -23,6 +23,7 @@ export const AboutUs = styled.section`
           padding-left: 32px;
           padding-top: 29px;
           color: #1d407d;
+          font-family: sans-serif;
         }
         .more {
           width: 100%;
@@ -72,6 +73,7 @@ export const AboutUs = styled.section`
           margin-bottom: unset;
           color: white;
           text-shadow: 1px 1px 1px green, 0px 0px green;
+          font-family: sans-serif;
         }
         @keyframes nut {
           from {

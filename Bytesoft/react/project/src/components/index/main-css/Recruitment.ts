@@ -680,6 +680,7 @@ export const Recruitment = styled.section`
         margin-top: 18px;
         word-spacing: -7.8px;
         color: rgba(29, 64, 125);
+        font-family: sans-serif;
       }
       .more {
         display: flex;
@@ -703,7 +704,7 @@ export const Recruitment = styled.section`
       }
       .text {
         font-size: 12px;
-        font-family: "OpenSans";
+        font-family: sans-serif;
         color: #1d619f;
         margin-left: 15px;
         width: 65%;
@@ -717,7 +718,7 @@ export const Recruitment = styled.section`
         font-size: 12px;
         color: #fff;
         border-radius: 20px;
-        font-family: "OpenSans";
+        font-family: sans-serif;
         background-color: rgba(31, 211, 146);
         border: none;
         box-shadow: 15px 10px 35px rgba(31, 211, 146, 0.45);
@@ -730,6 +731,7 @@ export const Recruitment = styled.section`
         color: #fff;
         text-shadow: 1px 1px 1px rgba(31, 211, 146),
           0px 1px 0px rgba(31, 211, 146);
+        font-family: sans-serif;
       }
     }
   }

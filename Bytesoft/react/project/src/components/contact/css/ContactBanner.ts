@@ -13,6 +13,7 @@ export const ContactBanner = styled.div`
     font-weight: 600;
     padding-left: 9px;
     position: absolute;
+    font-family: sans-serif;
     z-index: 1;
   }
   .description {
@@ -23,6 +24,7 @@ export const ContactBanner = styled.div`
     z-index: 1;
     padding-left: 5px;
     width: 100%;
+    font-family: sans-serif;
     top: 76px;
   }
   .layout {

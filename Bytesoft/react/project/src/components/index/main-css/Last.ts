@@ -14,7 +14,7 @@ export const Last = styled.section`
     font-size: 12px;
     line-height: 22px;
     color: #fff;
-    font-family: "OpenSans";
+    font-family: sans-serif;
     background-color: rgba(27, 205, 141);
     border: none;
   }
@@ -23,6 +23,7 @@ export const Last = styled.section`
     right: 214px;
     bottom: -51px;
     font-size: 64px;
+    font-family: sans-serif;
     color: #fff;
     text-shadow: 1px 1px 1px rgb(31 211 146), 1px 0 1px rgb(31 211 146);
   }

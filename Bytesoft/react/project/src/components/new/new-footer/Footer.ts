@@ -49,6 +49,7 @@ export const Footer = styled.div`
               font-size: 14px;
               color: #fff;
               line-height: 19px;
+              font-family: sans-serif;
             }
           }
         }
@@ -70,6 +71,7 @@ export const Footer = styled.div`
                 font-size: 20px;
                 font-weight: 600;
                 color: white;
+                font-family: sans-serif;
               }
               .detail {
                 margin-top: 25px;
@@ -77,6 +79,7 @@ export const Footer = styled.div`
                   font-size: 14px;
                   margin-bottom: 13px;
                   color: white;
+                  font-family: sans-serif;
                 }
               }
             }
@@ -88,6 +91,7 @@ export const Footer = styled.div`
                 font-size: 20px;
                 font-weight: 600;
                 color: white;
+                font-family: sans-serif;
               }
               .detail {
                 margin-top: 25px;
@@ -95,6 +99,7 @@ export const Footer = styled.div`
                   font-size: 12px;
                   margin-bottom: 13px;
                   color: white;
+                  font-family: sans-serif;
                 }
               }
             }
@@ -112,6 +117,7 @@ export const Footer = styled.div`
       font-size: 12px;
       line-height: 41px;
       color: white;
+      font-family: sans-serif;
     }
   }
 

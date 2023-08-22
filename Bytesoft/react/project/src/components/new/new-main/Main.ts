@@ -42,6 +42,7 @@ export const Main = styled.div`
             font-size: 18px;
             margin-top: 8px;
             line-height: 22px;
+            font-family: sans-serif;
           }
           .text {
             margin-left: 7px;
@@ -49,6 +50,7 @@ export const Main = styled.div`
             font-size: 12px;
             line-height: 20px;
             color: rgba(29, 64, 125);
+            font-family: sans-serif;
           }
         }
       }
@@ -93,6 +95,7 @@ export const Main = styled.div`
             font-size: 13px;
             margin-left: 4px;
             padding-top: 10px;
+            font-family: sans-serif;
           }
           .line {
             width: 90%;

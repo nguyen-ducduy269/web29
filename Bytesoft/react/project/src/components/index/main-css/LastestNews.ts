@@ -14,6 +14,7 @@ export const LastestNews = styled.section`
         text-align: center;
         margin-top: 60px;
         color: #1d407d;
+        font-family: sans-serif;
       }
       .more {
         display: flex;
@@ -68,6 +69,7 @@ export const LastestNews = styled.section`
               .text {
                 font-size: 11px;
                 margin-right: 11px;
+                font-family: sans-serif;
               }
               .block {
                 margin-right: 15px;
@@ -94,6 +96,7 @@ export const LastestNews = styled.section`
               h4 {
                 font-size: 12px;
                 margin: 8px 10px 0px 4px; //top right bottom left
+                font-family: sans-serif;
               }
               button {
                 width: 32px;

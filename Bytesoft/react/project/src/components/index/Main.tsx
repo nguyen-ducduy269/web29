@@ -28,9 +28,7 @@ export const Main = () => {
               </div>
               <div className="content">
                 <div className="about-header">
-                  <h2 className="title">
-                    <b>VỀ CHÚNG TÔI</b>
-                  </h2>
+                  <h2 className="title">VỀ CHÚNG TÔI</h2>
                   <div className="more">
                     <img src="../src/image/Rectangle 247.png" alt="" />
                     <div className="line"></div>

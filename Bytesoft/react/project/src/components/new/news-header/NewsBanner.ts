@@ -14,6 +14,7 @@ export const NewsBanner = styled.div`
     padding-left: 9px;
     position: absolute;
     z-index: 1;
+    font-family: sans-serif;
   }
   .description {
     text-align: center;
@@ -24,6 +25,7 @@ export const NewsBanner = styled.div`
     padding-left: 5px;
     width: 100%;
     top: 76px;
+    font-family: sans-serif;
   }
   .layout {
     width: 100%;

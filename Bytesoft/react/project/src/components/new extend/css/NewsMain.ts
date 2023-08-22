@@ -17,10 +17,11 @@ export const SectionIndex = styled.section`
             padding-right: 20px;
             margin-left: 130px;
             .title {
-              font-size: 18px;
+              font-size: 14px;
               padding-top: 23px;
               font-weight: 600;
               word-spacing: 7px;
+              font-family: sans-serif;
               color: #2366e1;
             }
             .about {
@@ -52,11 +53,12 @@ export const SectionIndex = styled.section`
               }
               .text {
                 width: 100%;
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 300;
                 margin-bottom: 20px;
                 line-height: 18px;
                 color: #0000008f;
+                font-family: sans-serif;
               }
             }
           }
@@ -104,7 +106,8 @@ export const SectionIndex = styled.section`
             .heading {
               font-size: 14px;
               padding-top: 10px;
-              font-weight: 600;
+              font-weight: 500;
+              font-family: sans-serif;
             }
             .line {
               width: 166px;

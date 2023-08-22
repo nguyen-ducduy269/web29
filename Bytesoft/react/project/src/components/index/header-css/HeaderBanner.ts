@@ -10,10 +10,11 @@ export const HeaderBanner = styled.div`
       text-align: unset;
       padding-top: 35px;
       font-size: 50px;
-      font-weight: 600;
+      font-weight: 500;
       padding-left: 10px;
       line-height: 1;
       color: #1d407d;
+      font-family: sans-serif;
     }
     .description {
       font-size: 19px;
@@ -25,6 +26,7 @@ export const HeaderBanner = styled.div`
       text-align: unset;
       word-spacing: 3.6px;
       color: #1d407d;
+      font-family: sans-serif;
     }
     button {
       margin-top: 28px;

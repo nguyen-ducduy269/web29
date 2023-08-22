@@ -32,12 +32,14 @@ export const Foot = styled.div`
             font-size: 11px;
             width: 317px;
             color: #fff;
+            font-family: sans-serif;
           }
           .note {
             margin-left: 47px;
             margin-top: 26px;
             font-size: 12px;
             color: #fff;
+            font-family: sans-serif;
           }
         }
       }
@@ -60,12 +62,14 @@ export const Foot = styled.div`
             text-decoration: underline;
             margin-bottom: 29px;
             color: #fff;
+            font-family: sans-serif;
           }
           .noidung {
             margin-top: 15px;
             font-size: 12px;
             color: #fff;
             margin-left: 4px;
+            font-family: sans-serif;
           }
         }
       }
@@ -86,12 +90,14 @@ export const Foot = styled.div`
             padding-top: 44px;
             text-decoration: underline;
             margin-bottom: 29px;
+            font-family: sans-serif;
             color: #fff;
           }
           .noidung {
             margin-top: 15px;
             font-size: 12px;
             color: #fff;
+            font-family: sans-serif;
           }
         }
       }
