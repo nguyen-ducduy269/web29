@@ -195,7 +195,7 @@ export const Project = styled.section`
       height: 100%;
       top: 0;
       left: 0;
-      z-index: 2;
+      z-index: 10;
       .main-pop {
         position: relative;
         width: 646px;
@@ -504,8 +504,9 @@ export const Project = styled.section`
       }
       .popup {
         .main-pop {
-          width: 90%;
+          width: 77%;
           height: 530px;
+          left: 48%;
           .title {
             top: 55%;
           }
@@ -517,8 +518,11 @@ export const Project = styled.section`
         .close-pop {
           position: absolute;
           top: 6px;
-          right: 6%;
+          right: 14%;
           z-index: 10;
+          i {
+            font-size: 30px;
+          }
         }
       }
     }
@@ -615,10 +619,12 @@ export const Project = styled.section`
       }
       .popup {
         .main-pop {
-          width: 90%;
+          width: 77%;
           height: 530px;
+          left: 48%;
           .title {
             top: 55%;
+            font-size: 16px;
           }
           img {
             width: 100%;
@@ -628,8 +634,11 @@ export const Project = styled.section`
         .close-pop {
           position: absolute;
           top: 6px;
-          right: 6%;
+          right: 14%;
           z-index: 10;
+          i {
+            font-size: 30px;
+          }
         }
       }
     }
@@ -726,10 +735,12 @@ export const Project = styled.section`
       }
       .popup {
         .main-pop {
-          width: 90%;
+          width: 77%;
           height: 530px;
+          left: 48%;
           .title {
             top: 55%;
+            font-size: 16px;
           }
           img {
             width: 100%;
@@ -738,9 +749,12 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 6px;
-          right: 6%;
+          top: 10px;
+          right: 14%;
           z-index: 10;
+          i {
+            font-size: 27px;
+          }
         }
       }
     }
@@ -837,10 +851,12 @@ export const Project = styled.section`
       }
       .popup {
         .main-pop {
-          width: 90%;
-          height: 530px;
+          width: 77%;
+          height: 550px;
+          left: 48%;
           .title {
             top: 55%;
+            font-size: 16px;
           }
           img {
             width: 100%;
@@ -850,8 +866,11 @@ export const Project = styled.section`
         .close-pop {
           position: absolute;
           top: 6px;
-          right: 6%;
+          right: 14%;
           z-index: 10;
+          i {
+            font-size: 26px;
+          }
         }
       }
     }
@@ -949,10 +968,20 @@ export const Project = styled.section`
       }
       .popup {
         .main-pop {
-          width: 90%;
-          height: 530px;
+          width: 77%;
+          height: 570px;
+          left: 48%;
           .title {
-            top: 55%;
+            top: 50%;
+            font-size: 14px;
+          }
+          .main-content {
+            .content {
+              margin-bottom: 5px;
+              .name {
+                width: 45%;
+              }
+            }
           }
           img {
             width: 100%;
@@ -962,8 +991,11 @@ export const Project = styled.section`
         .close-pop {
           position: absolute;
           top: 6px;
-          right: 6%;
+          right: 14%;
           z-index: 10;
+          i {
+            font-size: 24px;
+          }
         }
       }
     }
@@ -1060,10 +1092,23 @@ export const Project = styled.section`
       }
       .popup {
         .main-pop {
-          width: 90%;
-          height: 530px;
+          width: 77%;
+          height: 520px;
+          left: 51%;
+          img {
+            height: 200px !important;
+          }
+          .main-content {
+            .content {
+              margin-bottom: 5px;
+              .name {
+                width: 50%;
+              }
+            }
+          }
           .title {
-            top: 55%;
+            top: 35%;
+            font-size: 12px;
           }
           img {
             width: 100%;
@@ -1072,9 +1117,12 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 6px;
-          right: 6%;
+          top: 15px;
+          right: 11%;
           z-index: 10;
+          i {
+            font-size: 24px;
+          }
         }
       }
     }

@@ -1,4 +1,4 @@
-export const Task = (data: String) => {
+export const Task = (data: any) => {
   return {
     type: "TASK",
     payload: data,

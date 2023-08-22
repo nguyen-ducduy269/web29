@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 
+// import components
+import { Task } from "../store/actions/indexActions";
+
 interface Props {
   selectedItem: any;
   setIsDisplay: (value: boolean) => void;
@@ -29,7 +32,7 @@ const AddJob = (props: Props) => {
       const index = tasks.findIndex((t: any) => t.id == props.selectedItem.id);
       const temp = [...tasks];
       temp[index] = { id: props.selectedItem.id, name, status };
-      dispatch({ type: "TASK", payload: temp });
+      dispatch(Task(temp));
 
       axios
         .put(`http://localhost:3000/data/${props.selectedItem.id}`, temp[index])
@@ -42,7 +45,7 @@ const AddJob = (props: Props) => {
         status: status,
       };
       tasks.push(temp);
-      dispatch({ type: "TASK", payload: tasks });
+      dispatch(Task(tasks));
 
       axios
         .post("http://localhost:3000/data", temp)

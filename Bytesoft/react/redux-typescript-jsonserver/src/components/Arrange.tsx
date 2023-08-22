@@ -1,46 +1,61 @@
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
+import axios from "axios";
+
+// import components
+import { Task } from "../store/actions/indexActions";
 
 // type Props = {
 //   setArrange: (value: any) => void;
-//   initValue: any;
 // };
 
 interface Props {
   setArrange: (value: boolean) => void;
-  initValue: any;
 }
 
 const Arrange = (prop: Props) => {
   const dispatch = useDispatch();
 
-  const handleStatus = (value: string) => {
-    let filterValue = [...prop.initValue];
+  const dispactchValue = (value: any) => {
+    dispatch(Task(value));
+  };
+
+  const handleStatus = async (value: string) => {
+    const data = await axios.get("http://localhost:3000/data");
+    const initValue = data.data;
+
+    let filterValue = [...initValue];
     // let filterValue = [...initValue];
     filterValue = filterValue.filter((filter: any) => {
       return filter.status.includes(value);
     });
-    dispatch({ type: "TASK", payload: filterValue });
+    dispactchValue(filterValue);
   };
 
-  const fromAToZ = () => {
-    let filterValue = [...prop.initValue];
+  const fromAToZ = async () => {
+    const data = await axios.get("http://localhost:3000/data");
+    const initValue = data.data;
+
+    let filterValue = [...initValue];
     // let filterValue = [...initValue];
     filterValue = filterValue.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
-    dispatch({ type: "TASK", payload: filterValue });
+    dispactchValue(filterValue);
   };
 
-  const fromZToA = () => {
-    let filterValue = [...prop.initValue];
+  const fromZToA = async () => {
+    const data = await axios.get("http://localhost:3000/data");
+    const initValue = data.data;
+
+    let filterValue = [...initValue];
     // let filterValue = [...initValue];
     filterValue = filterValue
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
       })
       .reverse();
-    dispatch({ type: "TASK", payload: filterValue });
+    dispactchValue(filterValue);
   };
 
   return (

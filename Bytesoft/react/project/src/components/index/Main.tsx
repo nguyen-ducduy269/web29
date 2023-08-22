@@ -330,6 +330,7 @@ export const Main = () => {
                           <button className="mutiple-button">+</button>
                         </div>
                       </div>
+
                       <div className="item">
                         <img
                           className="project-img"
@@ -342,6 +343,7 @@ export const Main = () => {
                           <button className="mutiple-button">+</button>
                         </div>
                       </div>
+
                       <div className="item">
                         <img
                           className="project-img"
@@ -354,6 +356,7 @@ export const Main = () => {
                           <button className="mutiple-button">+</button>
                         </div>
                       </div>
+
                       <div className="item">
                         <img
                           className="project-img"
@@ -366,6 +369,7 @@ export const Main = () => {
                           <button className="mutiple-button">+</button>
                         </div>
                       </div>
+
                       <div className="item">
                         <img
                           className="project-img"
@@ -378,6 +382,7 @@ export const Main = () => {
                           <button className="mutiple-button">+</button>
                         </div>
                       </div>
+
                       <div className="item">
                         <img
                           className="project-img"
