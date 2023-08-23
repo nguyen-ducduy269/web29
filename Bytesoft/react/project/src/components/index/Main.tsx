@@ -79,7 +79,14 @@ export const Main = () => {
   const [openItem, setOpenItem] = useState(false);
   const [allProducts, setAllProducts] = useState(true);
   const [status, setStatus] = useState(false);
+  const [newValue, setNewValue] = useState("");
 
+  const addText = () => {
+    setNewValue(
+      newValue +
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempore, ea recusandae, porro aliquid inventore eos fugiat voluptate laborum corporis doloremque sed suscipit, delectus nulla perferendis vero nostrum blanditiis aspernatur."
+    );
+  };
   return (
     <>
       <main id="main">
@@ -118,9 +125,9 @@ export const Main = () => {
                     sing spot. Any meant has cease too the decay. Since party
                     burst am it match. By or blushes between besides offices
                     noisier as. Sending do brought windng compass in. Paid day
-                    till shed only fact age its end.
+                    till shed only fact age its end. {newValue}
                   </div>
-                  <button>Xem thêm</button>
+                  <button onClick={() => addText()}>Xem thêm</button>
                   <h1>
                     <b>ABOUT US</b>
                   </h1>
@@ -129,7 +136,6 @@ export const Main = () => {
             </div>
           </Container>
         </AboutUs>
-
         <Activity>
           <Container>
             <div className="module-activity">
@@ -362,7 +368,6 @@ export const Main = () => {
             </div>
           </Container>
         </Activity>
-
         <Project>
           <Container>
             <div className="bs-tab tab-left">
@@ -575,7 +580,6 @@ export const Main = () => {
             </div>
           </Container>
         </Project>
-
         <Recruitment>
           <Container>
             <div className="bs-row">
@@ -747,7 +751,6 @@ export const Main = () => {
             </div>
           </Container>
         </Recruitment>
-
         <LastestNews>
           <Container>
             <div className="bs-row">
@@ -840,7 +843,6 @@ export const Main = () => {
             </div>
           </Container>
         </LastestNews>
-
         <Last>
           <button className="xemthem">XEM TIẾP</button>
           <div className="bonus">

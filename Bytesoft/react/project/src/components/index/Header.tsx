@@ -15,9 +15,7 @@ export const Header = () => {
   const [isDisplay, setIsDisplay] = useState(false);
   const [isOpen, setIsOpen] = useState(coVietNam);
   const [display, setDisplay] = useState(false);
-  const [newValue, setNewValue] = useState(
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-  );
+  const [newValue, setNewValue] = useState("");
 
   const addText = () => {
     setNewValue(
