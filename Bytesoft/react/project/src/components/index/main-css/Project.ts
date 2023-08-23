@@ -163,8 +163,10 @@ export const Project = styled.section`
         }
         .item:hover {
           transform: translateY(-10px);
+          transition: 1s;
           .discription {
             left: 5px;
+            transition: 1.5s;
             button {
               border: none;
             }
@@ -193,7 +195,6 @@ export const Project = styled.section`
       }
     }
     .popup {
-      display: none;
       position: fixed;
       width: 100%;
       height: 100%;

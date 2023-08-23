@@ -15,6 +15,15 @@ export const Header = () => {
   const [isDisplay, setIsDisplay] = useState(false);
   const [isOpen, setIsOpen] = useState(coVietNam);
   const [display, setDisplay] = useState(false);
+  const [newValue, setNewValue] = useState(
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
+  );
+
+  const addText = () => {
+    setNewValue(
+      newValue + "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
+    );
+  };
 
   return (
     <>
@@ -182,9 +191,9 @@ export const Header = () => {
               <div className="title">FROM CONCEPT TO CREATION.</div>
               <div className="description">
                 It is a long established fact that a reader will be distracted
-                by the readable content.
+                by the readable content. {newValue}
               </div>
-              <button>XEM THÊM</button>
+              <button onClick={() => addText()}>XEM THÊM</button>
             </div>
           </Container>
         </HeaderBanner>

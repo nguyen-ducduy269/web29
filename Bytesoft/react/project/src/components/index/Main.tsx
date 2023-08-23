@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 ///// import components
 import { Container } from "../Container";
 import { AboutUs } from "./main-css/AboutUs";
@@ -7,7 +9,77 @@ import { Recruitment } from "./main-css/Recruitment";
 import { LastestNews } from "./main-css/LastestNews";
 import { Last } from "./main-css/Last";
 
+const products = [
+  {
+    id: 1,
+    image: "../src/image/building1.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Thương mại",
+  },
+  {
+    id: 2,
+    image: "../src/image/building2.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Giáo dục",
+  },
+  {
+    id: 3,
+    image: "../src/image/building3.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Bệnh viện",
+  },
+  {
+    id: 4,
+    image: "../src/image/building2.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Thường trú",
+  },
+  {
+    id: 5,
+    image: "../src/image/building4.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Văn phòng",
+  },
+  {
+    id: 6,
+    image: "../src/image/building5.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Tái thiết",
+  },
+];
+
+const items = [
+  {
+    id: 1,
+    image: "../src/image/building2.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Giáo dục",
+  },
+  {
+    id: 2,
+    image: "../src/image/building3.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Bệnh viện",
+  },
+  {
+    id: 3,
+    image: "../src/image/building2.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Thường trú",
+  },
+  {
+    id: 4,
+    image: "../src/image/building4.png",
+    title: "TÒA NHÀ THÀNH PHỐ",
+    name: "Văn phòng",
+  },
+];
+
 export const Main = () => {
+  const [openItem, setOpenItem] = useState(false);
+  const [allProducts, setAllProducts] = useState(true);
+  const [status, setStatus] = useState(false);
+
   return (
     <>
       <main id="main">
@@ -304,150 +376,179 @@ export const Main = () => {
                   </div>
                   <span className="control__show">TẤT CẢ</span>
                   <ul className="control-list">
-                    <li className="control-list__item active">TẤT CẢ</li>
-                    <li className="control-list__item">THƯƠNG MẠI</li>
-                    <li className="control-list__item">GIÁO DỤC</li>
-                    <li className="control-list__item">BỆNH VIỆN</li>
-                    <li className="control-list__item">THƯỜNG TRÚ</li>
-                    <li className="control-list__item">VĂN PHÒNG</li>
-                    <li className="control-list__item">TÁI THIẾT</li>
+                    {status ? (
+                      <li
+                        className="control-list__item active"
+                        onClick={() => {
+                          setAllProducts(true);
+                          setStatus(true);
+                        }}
+                      >
+                        TẤT CẢ
+                      </li>
+                    ) : (
+                      <li
+                        className="control-list__item"
+                        onClick={() => {
+                          setAllProducts(true);
+                          setStatus(false);
+                        }}
+                      >
+                        TẤT CẢ
+                      </li>
+                    )}
+
+                    <li
+                      className="control-list__item"
+                      onClick={() => setAllProducts(false)}
+                    >
+                      THƯƠNG MẠI
+                    </li>
+
+                    <li
+                      className="control-list__item"
+                      onClick={() => setAllProducts(true)}
+                    >
+                      GIÁO DỤC
+                    </li>
+
+                    <li
+                      className="control-list__item"
+                      onClick={() => setAllProducts(false)}
+                    >
+                      BỆNH VIỆN
+                    </li>
+
+                    <li
+                      className="control-list__item"
+                      onClick={() => setAllProducts(true)}
+                    >
+                      THƯỜNG TRÚ
+                    </li>
+
+                    <li
+                      className="control-list__item"
+                      onClick={() => setAllProducts(false)}
+                    >
+                      VĂN PHÒNG
+                    </li>
+
+                    <li
+                      className="control-list__item"
+                      onClick={() => setAllProducts(true)}
+                    >
+                      TÁI THIẾT
+                    </li>
                   </ul>
                 </div>
+
                 <div className="tab-content">
                   <div className="tab-item">
-                    <div className="multiple-items owl-carousel owl-theme">
-                      <div className="item">
-                        <img
-                          className="project-img"
-                          src="../src/image/building1.png"
-                          alt=""
-                        />
-                        <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Thương mại</div>
-                          <button className="mutiple-button">+</button>
-                        </div>
-                      </div>
-
-                      <div className="item">
-                        <img
-                          className="project-img"
-                          src="../src/image/building2.png"
-                          alt=""
-                        />
-                        <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Giáo dục</div>
-                          <button className="mutiple-button">+</button>
-                        </div>
-                      </div>
-
-                      <div className="item">
-                        <img
-                          className="project-img"
-                          src="../src/image/building3.png"
-                          alt=""
-                        />
-                        <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Bệnh viện</div>
-                          <button className="mutiple-button">+</button>
-                        </div>
-                      </div>
-
-                      <div className="item">
-                        <img
-                          className="project-img"
-                          src="../src/image/building2.png"
-                          alt=""
-                        />
-                        <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Thường trú</div>
-                          <button className="mutiple-button">+</button>
-                        </div>
-                      </div>
-
-                      <div className="item">
-                        <img
-                          className="project-img"
-                          src="../src/image/building4.png"
-                          alt=""
-                        />
-                        <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Văn phòng</div>
-                          <button className="mutiple-button">+</button>
-                        </div>
-                      </div>
-
-                      <div className="item">
-                        <img
-                          className="project-img"
-                          src="../src/image/building5.png"
-                          alt=""
-                        />
-                        <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Tái thiết</div>
-                          <button className="mutiple-button">+</button>
-                        </div>
-                      </div>
+                    <div className="multiple-items">
+                      {allProducts
+                        ? products.map((item: any) => {
+                            return (
+                              <div className="item">
+                                <img
+                                  className="project-img"
+                                  src={item.image}
+                                  alt=""
+                                />
+                                <div className="discription">
+                                  <div className="title">{item.title}</div>
+                                  <div className="more">{item.name}</div>
+                                  <button
+                                    className="mutiple-button"
+                                    onClick={() => setOpenItem(true)}
+                                  >
+                                    +
+                                  </button>
+                                </div>
+                              </div>
+                            );
+                          })
+                        : items.map((item: any) => {
+                            return (
+                              <div className="item">
+                                <img
+                                  className="project-img"
+                                  src={item.image}
+                                  alt=""
+                                />
+                                <div className="discription">
+                                  <div className="title">{item.title}</div>
+                                  <div className="more">{item.name}</div>
+                                  <button
+                                    className="mutiple-button"
+                                    onClick={() => setOpenItem(true)}
+                                  >
+                                    +
+                                  </button>
+                                </div>
+                              </div>
+                            );
+                          })}
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="popup">
-                <div className="main-pop">
-                  <img src="../src/image/popup.png" alt="" />
-                  <div className="title">
-                    <b>DỰ ÁN N04B - NGOẠI GIAO ĐOÀN</b>
+
+              {openItem ? (
+                <div className="popup">
+                  <div className="main-pop">
+                    <img src="../src/image/popup.png" alt="" />
+                    <div className="title">
+                      <b>DỰ ÁN N04B - NGOẠI GIAO ĐOÀN</b>
+                    </div>
+                    <div className="main-content">
+                      <div className="content">
+                        <div className="name">Tên dự án</div>
+                        <div className="dis">
+                          : Tổ hợp chung cư cao tầng N04B - Khu đoàn Ngoại giao
+                          tại Hà Nội
+                        </div>
+                      </div>
+                      <div className="content">
+                        <div className="name">Chủ đầu tư</div>
+                        <div className="dis">
+                          : Công ty Cổ phần Đầu tư Xây dựng Bất động sản Lanmak
+                        </div>
+                      </div>
+                      <div className="content">
+                        <div className="name">Hạng mục</div>
+                        <div className="dis">
+                          : Phần kết cấu thân nhà/ Phần hoàn thiện kiến trúc
+                        </div>
+                      </div>
+                      <div className="content">
+                        <div className="name">Địa điểm</div>
+                        <div className="dis">
+                          : Khu đoàn Ngoại giao, Xuân Tảo, Bắc Từ Liêm, Hà Nội
+                        </div>
+                      </div>
+                      <div className="content">
+                        <div className="name">Loại công trình</div>
+                        <div className="dis">: Dân dụng, căn hộ chung cư</div>
+                      </div>
+                      <div className="content">
+                        <div className="name">Cấp công trình</div>
+                        <div className="dis">: Cấp 1</div>
+                      </div>
+                      <div className="content">
+                        <div className="name">Thời gian thực hiện</div>
+                        <div className="dis">: 2013-2015</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="main-content">
-                    <div className="content">
-                      <div className="name">Tên dự án</div>
-                      <div className="dis">
-                        : Tổ hợp chung cư cao tầng N04B - Khu đoàn Ngoại giao
-                        tại Hà Nội
-                      </div>
-                    </div>
-                    <div className="content">
-                      <div className="name">Chủ đầu tư</div>
-                      <div className="dis">
-                        : Công ty Cổ phần Đầu tư Xây dựng Bất động sản Lanmak
-                      </div>
-                    </div>
-                    <div className="content">
-                      <div className="name">Hạng mục</div>
-                      <div className="dis">
-                        : Phần kết cấu thân nhà/ Phần hoàn thiện kiến trúc
-                      </div>
-                    </div>
-                    <div className="content">
-                      <div className="name">Địa điểm</div>
-                      <div className="dis">
-                        : Khu đoàn Ngoại giao, Xuân Tảo, Bắc Từ Liêm, Hà Nội
-                      </div>
-                    </div>
-                    <div className="content">
-                      <div className="name">Loại công trình</div>
-                      <div className="dis">: Dân dụng, căn hộ chung cư</div>
-                    </div>
-                    <div className="content">
-                      <div className="name">Cấp công trình</div>
-                      <div className="dis">: Cấp 1</div>
-                    </div>
-                    <div className="content">
-                      <div className="name">Thời gian thực hiện</div>
-                      <div className="dis">: 2013-2015</div>
-                    </div>
+                  <div className="layout"></div>
+                  <div className="close-pop" onClick={() => setOpenItem(false)}>
+                    <i className="fa-regular fa-circle-xmark"></i>
                   </div>
                 </div>
-                <div className="layout"></div>
-                <div className="close-pop">
-                  <i className="fa-regular fa-circle-xmark"></i>
-                </div>
-              </div>
+              ) : (
+                ""
+              )}
+
               <div className="button">
                 <div className="icon">
                   <a href="">
@@ -461,9 +562,11 @@ export const Main = () => {
                 </div>
               </div>
             </div>
+
             <div className="bonus">
               <b>PROJECTS</b>
             </div>
+
             <div className="left-img">
               <img src="../src/image/Untitled-4.png" alt="" />
             </div>
