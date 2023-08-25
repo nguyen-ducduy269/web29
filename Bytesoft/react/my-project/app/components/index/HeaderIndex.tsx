@@ -1,17 +1,33 @@
-import { useState } from "react";
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// import image
-import coVietNam from "../../image/icon-co-viet-nam.jpg";
-import coMeo from "../../image/istockphoto-1144423641-612x612.jpg";
+import {
+  faPhone,
+  faMagnifyingGlass,
+  faChevronDown,
+  faBars,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+
+// import image/
+import coVietNam from "@/app/image/icon-co-viet-nam.jpg";
+import coMeo from "@/app/image/istockphoto-1144423641-612x612.jpg";
+import LogoImage from "@/app/image/logo.png";
+import img from "@/app/image/slide1.png";
+const styling = {
+  backgroundImage: `url('${img.src}')`,
+};
 
 // import components
-import { Container } from "../Container";
 import { Head } from "./header-css/Head";
 import { HeaderTop } from "./header-css/HeaderTop";
 import { HeaderNav } from "./header-css/HeaderNav";
 import { HeaderBanner } from "./header-css/HeaderBanner";
+import { Container } from "../Container";
 
-export const Header = () => {
+const HeaderIndex = () => {
   const [isDisplay, setIsDisplay] = useState(false);
   const [isOpen, setIsOpen] = useState(coVietNam);
   const [display, setDisplay] = useState(false);
@@ -25,24 +41,47 @@ export const Header = () => {
 
   return (
     <>
-      <Head>
+      <Head style={styling}>
         <HeaderTop>
           <Container>
             <div className="main-content">
               <div className="head-left">
-                <i className="fa-solid fa-phone-flip"></i>
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  style={{
+                    fontSize: "8px",
+                    color: "#1ac667",
+                    marginLeft: "23%",
+                    marginRight: "4px",
+                  }}
+                />
                 <div className="hotline">HOTLINE:1900 2863</div>
               </div>
               <div className="head-right">
                 <input type="search" placeholder="Search..." />
                 <div className="icon">
-                  <i className="fa-solid fa-magnifying-glass"></i>
+                  <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    style={{
+                      marginLeft: "0",
+                      marginRight: "0",
+                      color: "#1ac667",
+                      fontSize: "12px",
+                    }}
+                  />
                 </div>
 
                 <div className="country">
                   <div onClick={() => setIsDisplay(true)}>
-                    <img src={isOpen} alt="" />
-                    <i className="fa-solid fa-chevron-down"></i>
+                    <Image src={isOpen} alt="" />
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      style={{
+                        marginLeft: "0px",
+                        fontSize: "9px",
+                        color: "black",
+                      }}
+                    />
                   </div>
 
                   {isDisplay ? (
@@ -53,7 +92,7 @@ export const Header = () => {
                           setIsDisplay(false);
                         }}
                       >
-                        <img src={coVietNam} alt="" />
+                        <Image src={coVietNam} alt="" />
                       </div>
 
                       <div
@@ -62,7 +101,7 @@ export const Header = () => {
                           setIsDisplay(false);
                         }}
                       >
-                        <img src={coMeo} alt="" />
+                        <Image src={coMeo} alt="" />
                       </div>
                     </div>
                   ) : (
@@ -79,13 +118,18 @@ export const Header = () => {
             <div className="nav-content clearfix">
               <div className="logo">
                 <a href="#">
-                  <img src="../src/image/logo.png" alt="" />
+                  <Image
+                    src={LogoImage}
+                    width={188}
+                    height={46}
+                    alt="logo header"
+                  />
                 </a>
               </div>
 
               <div className="nav">
                 <span className="show__menu" onClick={() => setDisplay(true)}>
-                  <i className="fa-solid fa-bars"></i>
+                  <FontAwesomeIcon icon={faBars} />
                 </span>
 
                 <div className="menu">
@@ -140,7 +184,7 @@ export const Header = () => {
                       className="close__menu"
                       onClick={() => setDisplay(false)}
                     >
-                      <i className="fa-solid fa-xmark"></i>
+                      <FontAwesomeIcon icon={faXmark} />
                     </span>
 
                     <ul className="menu-list clearfix">
@@ -149,31 +193,37 @@ export const Header = () => {
                           TRANG CHỦ
                         </a>
                       </li>
+
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           GIỚI THIỆU
                         </a>
                       </li>
+
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           LĨNH VỰC
                         </a>
                       </li>
+
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           DỰ ÁN
                         </a>
                       </li>
+
                       <li className="menu-list__item">
                         <a href="/news" className="menu-list__link">
                           TIN TỨC
                         </a>
                       </li>
+
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           TUYỂN DỤNG
                         </a>
                       </li>
+
                       <li className="menu-list__item">
                         <a href="/contact" className="menu-list__link">
                           LIÊN HỆ
@@ -205,3 +255,5 @@ export const Header = () => {
     </>
   );
 };
+
+export default HeaderIndex;
