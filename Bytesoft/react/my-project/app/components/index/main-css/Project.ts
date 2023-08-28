@@ -174,6 +174,7 @@ export const Project = styled.section`
         }
       }
     }
+
     .button {
       position: absolute;
       right: -84px;
@@ -189,11 +190,9 @@ export const Project = styled.section`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        a {
-          color: #fff;
-        }
       }
     }
+
     .popup {
       position: fixed;
       width: 100%;
@@ -267,10 +266,6 @@ export const Project = styled.section`
         top: 15px;
         right: 25%;
         z-index: 10;
-        i {
-          font-size: 40px;
-          color: white;
-        }
       }
     }
   }
@@ -526,9 +521,6 @@ export const Project = styled.section`
           top: 6px;
           right: 14%;
           z-index: 10;
-          i {
-            font-size: 30px;
-          }
         }
       }
     }
@@ -642,9 +634,6 @@ export const Project = styled.section`
           top: 6px;
           right: 14%;
           z-index: 10;
-          i {
-            font-size: 30px;
-          }
         }
       }
     }
@@ -758,9 +747,6 @@ export const Project = styled.section`
           top: 10px;
           right: 14%;
           z-index: 10;
-          i {
-            font-size: 27px;
-          }
         }
       }
     }
@@ -874,9 +860,6 @@ export const Project = styled.section`
           top: 6px;
           right: 14%;
           z-index: 10;
-          i {
-            font-size: 26px;
-          }
         }
       }
     }
@@ -999,9 +982,6 @@ export const Project = styled.section`
           top: 6px;
           right: 14%;
           z-index: 10;
-          i {
-            font-size: 24px;
-          }
         }
       }
     }
@@ -1126,9 +1106,6 @@ export const Project = styled.section`
           top: 15px;
           right: 11%;
           z-index: 10;
-          i {
-            font-size: 24px;
-          }
         }
       }
     }

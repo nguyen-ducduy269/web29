@@ -6,8 +6,6 @@ export const AboutUs = styled.section`
     display: flex;
     .about-img {
       img {
-        width: 500px;
-        height: 353px;
         margin-left: 114px;
         margin-top: 45px;
         position: relative;
@@ -30,10 +28,6 @@ export const AboutUs = styled.section`
           display: flex;
           margin-left: 55px;
           margin-top: 18px;
-          img {
-            width: 11px;
-            height: 11px;
-          }
           .line {
             width: 79px;
             height: 2px;

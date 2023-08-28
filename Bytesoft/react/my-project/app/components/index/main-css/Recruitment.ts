@@ -1274,7 +1274,7 @@ export const Recruitment = styled.section`
           }
         }
         .text {
-          width: 100%;
+          width: 85%;
           margin: 0 auto;
           text-align: center;
           margin-top: 20px;
@@ -1293,60 +1293,7 @@ export const Recruitment = styled.section`
         }
       }
       .main-img {
-        width: 100%;
-        margin-top: 100px;
-        .main {
-          width: 90%;
-          height: 127px;
-          bottom: 3%;
-          right: left;
-          left: 50%;
-          transform: translateX(-50%);
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        .layer-personal {
-          right: 20%;
-          .personal {
-            position: absolute;
-            width: 64px;
-            height: 139px;
-            bottom: 10%;
-            right: 20px;
-            z-index: 1;
-          }
-          .personal1 {
-            width: 80px;
-          }
-          .personal2 {
-            width: 26px;
-            height: 26px;
-            left: 31%;
-            top: 23%;
-          }
-        }
-        .layer1 {
-          right: -2%;
-          width: 75px;
-        }
-        .layer2 {
-          .background-layer {
-            left: -45%;
-          }
-        }
-        .layer3 {
-          position: absolute;
-          width: 248px;
-          height: 134px;
-          bottom: 4%;
-          left: 11%;
-          .layway {
-            left: 0%;
-            top: 25%;
-          }
-        }
+        display: none;
       }
     }
   }
@@ -1389,7 +1336,7 @@ export const Recruitment = styled.section`
           }
         }
         .text {
-          width: 100%;
+          width: 85%;
           margin: 0 auto;
           text-align: center;
           margin-top: 20px;

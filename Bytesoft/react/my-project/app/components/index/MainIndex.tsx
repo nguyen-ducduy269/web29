@@ -1,6 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faArrowLeft,
+  faArrowRight,
+  faCircleXmark,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
 
 //// import components
 import { AboutUs } from "./main-css/AboutUs";
@@ -11,83 +19,97 @@ import { LastestNews } from "./main-css/LastestNews";
 import { Last } from "./main-css/Last";
 import { Container } from "../Container";
 
-//// import images
+//// about us images
 import mayTrai from "@/app/image/maytrai.png";
 import cauTruc1 from "@/app/image/cautruc1.png";
 import cauTruc2 from "@/app/image/cautruc2.png";
 import mayPhai from "@/app/image/mayphai.png";
 import United1 from "@/app/image/Untitled-1.png";
+import AboutUsImage from "@/app/image/Rectangle 247.png";
 
-const products = [
-  {
-    id: 1,
-    image: "@/app/image/building1.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Thương mại",
-  },
-  {
-    id: 2,
-    image: "@/app/image/building2.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Giáo dục",
-  },
-  {
-    id: 3,
-    image: "@/app/image/building3.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Bệnh viện",
-  },
-  {
-    id: 4,
-    image: "@/app/image/building2.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Thường trú",
-  },
-  {
-    id: 5,
-    image: "@/app/image/building4.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Văn phòng",
-  },
-  {
-    id: 6,
-    image: "@/app/image/building5.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Tái thiết",
-  },
-];
+////// activity images
+import rectangleImg from "@/app/image/Rectangle 247.png";
+import number01 from "@/app/image/01.png";
+import number02 from "@/app/image/02.png";
+import number03 from "@/app/image/03.png";
+import number04 from "@/app/image/04.png";
+import mainround from "@/app/image/main_round.gif";
+import mainpersonal1 from "@/app/image/main_personal2.gif";
+import mainpersonal2 from "@/app/image/main_personal2_1.gif";
+import mainpersonal3 from "@/app/image/main_personal3.gif";
+import mainpersonal4 from "@/app/image/main_personal3_1.gif";
+import mainpersonal5 from "@/app/image/main_personal4.gif";
+import mainpersonal6 from "@/app/image/main_personal4_1.gif";
+import maincenter from "@/app/image/main_center.gif";
+import tower1 from "@/app/image/tower1.gif";
+import tower2 from "@/app/image/tower2.gif";
+import tower3 from "@/app/image/tower3.gif";
+import main_personal from "@/app/image/main_personal.gif";
+import homeImg from "@/app/image/home.gif";
+import tree from "@/app/image/tree.gif";
+import tree1 from "@/app/image/tree (1).gif";
+import tree2 from "@/app/image/tree (2).gif";
+import coin from "@/app/image/coin.gif";
+import layer6 from "@/app/image/layer6.gif";
+import layer5 from "@/app/image/layer5.gif";
+import layer5_1 from "@/app/image/layer5_1.gif";
+import line1 from "@/app/image/line1.gif";
+import line2 from "@/app/image/line2.gif";
+import line3 from "@/app/image/line3.gif";
+import line4 from "@/app/image/line4.gif";
+import layer1 from "@/app/image/layer1.gif";
+import layer2 from "@/app/image/layer2.gif";
+import layer3 from "@/app/image/layer3.gif";
+import layer4 from "@/app/image/layer4.gif";
 
-const items = [
-  {
-    id: 1,
-    image: "@/app/image/building2.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Giáo dục",
-  },
-  {
-    id: 2,
-    image: "@/app/image/building3.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Bệnh viện",
-  },
-  {
-    id: 3,
-    image: "@/app/image/building2.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Thường trú",
-  },
-  {
-    id: 4,
-    image: "@/app/image/building4.png",
-    title: "TÒA NHÀ THÀNH PHỐ",
-    name: "Văn phòng",
-  },
-];
+////// project image
+import popupImage from "@/app/image/popup.png";
+import leftImg from "@/app/image/Untitled-4.png";
+import rightImg from "@/app/image/cautruc2.png";
+import thuongmai from "@/app/image/building1.png";
+import giaoduc from "@/app/image/building2.png";
+import benhvien from "@/app/image/building3.png";
+import thuongtru from "@/app/image/building2.png";
+import vanphong from "@/app/image/building4.png";
+import taithiet from "@/app/image/building5.png";
+
+//// recruitment image
+import mainImg from "@/app/image/main.gif";
+import mainPersonal from "@/app/image/main_personal (1).gif";
+import main_personal1 from "@/app/image/main_personal_1.gif";
+import main_personal2 from "@/app/image/main_personal_2.gif";
+import layer1_1 from "@/app/image/layer1_1.gif";
+import layer1_2 from "@/app/image/layer1_2.gif";
+import layer1_3 from "@/app/image/layer1_3.gif";
+import layer1_4 from "@/app/image/layer1_4.gif";
+import lay from "@/app/image/layer1 (1).gif";
+import layer1_5_1 from "@/app/image/layer1_5_1.gif";
+import layer1_5_2 from "@/app/image/layer1_5_2.gif";
+import layer1_5_3 from "@/app/image/layer1_5_3.gif";
+import layer1_5_4 from "@/app/image/layer1_5_4.gif";
+import one from "@/app/image/layer2_4 (1).gif";
+import two from "@/app/image/layer2_4.gif";
+import broad from "@/app/image/layer2 (1).gif";
+import new1 from "@/app/image/layer2_3 (1).gif";
+import new2 from "@/app/image/layer2_2.gif";
+import new3 from "@/app/image/layer2_3.gif";
+import new4 from "@/app/image/layer2_1.gif";
+import star1 from "@/app/image/layer_2_star.gif";
+import star2 from "@/app/image/layer_2_star1.gif";
+import star3 from "@/app/image/layer_2_star2.gif";
+import star4 from "@/app/image/layer_2_star3.gif";
+import star5 from "@/app/image/layer_2_star4.gif";
+import layerMain from "@/app/image/layer_main.gif";
+import layer151 from "@/app/image/layer1_5_1.gif";
+import layer152 from "@/app/image/layer1_5_2.gif";
+import layer153 from "@/app/image/layer1_5_3.gif";
+import layer154 from "@/app/image/layer1_5_4.gif";
+
+///// lastest image
+import contentImg from "@/app/image/news1.png";
 
 const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
-  const [allProducts, setAllProducts] = useState(true);
-  const [status, setStatus] = useState(false);
   const [newValue, setNewValue] = useState("");
 
   const addText = () => {
@@ -117,19 +139,19 @@ const MainIndex = () => {
             <div className="module module-index">
               <div className="about-img">
                 <a href="">
-                  <Image src={United1} alt="" />
+                  <Image src={United1} width={500} height={353} alt="" />
                 </a>
               </div>
               <div className="content">
                 <div className="about-header">
                   <h2 className="title">VỀ CHÚNG TÔI</h2>
                   <div className="more">
-                    <img src="@/app/image/Rectangle 247.png" alt="" />
+                    <Image src={AboutUsImage} width={11} height={11} alt="" />
                     <div className="line"></div>
                   </div>
                   <div className="other">
                     <div className="line"></div>
-                    <img src="@/app/image/Rectangle 247.png" alt="" />
+                    <Image src={AboutUsImage} width={11} height={11} alt="" />
                     <div className="line"></div>
                   </div>
                 </div>
@@ -160,19 +182,20 @@ const MainIndex = () => {
                   <b>LĨNH VỰC HOẠT ĐỘNG</b>
                 </h2>
                 <div className="more">
-                  <img src="@/app/image/Rectangle 247.png" alt="" />
+                  <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
+
                 <div className="other">
                   <div className="line"></div>
-                  <img src="@/app/image/Rectangle 247.png" alt="" />
+                  <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
               </div>
               <div className="act-content">
                 <div className="main-content">
                   <div className="design">
-                    <img src="@/app/image/01.png" alt="" />
+                    <Image src={number01} alt="" width={32} height={32} />
                     <div className="title">
                       <b>THIẾT KẾ KIẾN TRÚC</b>
                     </div>
@@ -188,7 +211,7 @@ const MainIndex = () => {
                   </div>
 
                   <div className="design">
-                    <img src="@/app/image/02.png" alt="" />
+                    <Image src={number02} alt="" width={32} height={32} />
                     <div className="title">
                       <b>THIẾT KẾ KIẾN TRÚC</b>
                     </div>
@@ -204,7 +227,7 @@ const MainIndex = () => {
                   </div>
 
                   <div className="design">
-                    <img src="@/app/image/03.png" alt="" />
+                    <Image src={number03} alt="" width={32} height={32} />
                     <div className="title">
                       <b>THIẾT KẾ KIẾN TRÚC</b>
                     </div>
@@ -220,7 +243,7 @@ const MainIndex = () => {
                   </div>
 
                   <div className="design">
-                    <img src="@/app/image/04.png" alt="" />
+                    <Image src={number04} alt="" width={32} height={32} />
                     <div className="title">
                       <b>THIẾT KẾ KIẾN TRÚC</b>
                     </div>
@@ -238,141 +261,167 @@ const MainIndex = () => {
 
                 <div className="content-img">
                   <div className="activity-img">
-                    <img
-                      className="main-round"
-                      src="@/app/image/main_round.gif"
-                      alt=""
-                    />
+                    <Image className="main-round" src={mainround} alt="" />
                     <div className="layer layer1">
                       <div className="layer layer1-1">
-                        <img src="@/app/image/main_personal2.gif" alt="" />
+                        <Image src={mainpersonal1} alt="" width={53} />
                       </div>
                       <div className="layer layer1-2">
-                        <img src="@/app/image/main_personal2_1.gif" alt="" />
+                        <Image
+                          src={mainpersonal2}
+                          alt=""
+                          width={8}
+                          height={47}
+                        />
                       </div>
                     </div>
 
                     <div className="layer layer2">
                       <div className="layer layer2-1">
-                        <img src="@/app/image/main_personal3.gif" alt="" />
+                        <Image
+                          src={mainpersonal3}
+                          alt=""
+                          width={64}
+                          height={42}
+                        />
                       </div>
                       <div className="layer layer2-2">
-                        <img src="@/app/image/main_personal3_1.gif" alt="" />
+                        <Image
+                          src={mainpersonal4}
+                          alt=""
+                          width={32}
+                          height={-23}
+                        />
                       </div>
                     </div>
 
                     <div className="layer layer3">
                       <div className="layer layer3-1">
-                        <img src="@/app/image/main_personal4.gif" alt="" />
+                        <Image
+                          src={mainpersonal5}
+                          alt=""
+                          width={22}
+                          height={50}
+                        />
                       </div>
                       <div className="layer layer3-2">
-                        <img src="@/app/image/main_personal4_1.gif" alt="" />
+                        <Image
+                          src={mainpersonal6}
+                          alt=""
+                          width={23}
+                          height={59}
+                        />
                       </div>
                       <div className="layer main-center">
-                        <img src="@/app/image/main_center.gif" alt="" />
+                        <Image
+                          src={maincenter}
+                          alt=""
+                          width={194}
+                          height={121}
+                        />
                       </div>
 
                       <div className="tower1">
-                        <img src="@/app/image/tower1.gif" alt="" />
+                        <Image src={tower1} alt="" width={38} height={72} />
                       </div>
 
                       <div className="tower2">
-                        <img src="@/app/image/tower2.gif" alt="" />
+                        <Image src={tower2} alt="" width={41} height={91} />
                       </div>
 
                       <div className="tower3">
-                        <img src="@/app/image/tower3.gif" alt="" />
+                        <Image src={tower3} alt="" width={66} height={92} />
                       </div>
 
-                      <img
-                        src="@/app/image/main_personal.gif"
+                      <Image
+                        src={main_personal}
                         alt=""
                         className="personal"
+                        width={50}
+                        height={50}
                       />
 
                       <div className="house">
-                        <img src="@/app/image/home.gif" alt="" />
+                        <Image src={homeImg} alt="" width={46} height={40} />
                       </div>
 
                       <div className="tree">
-                        <img src="@/app/image/tree.gif" alt="" />
+                        <Image src={tree} alt="" width={7} height={17} />
                       </div>
 
                       <div className="tree1">
-                        <img src="@/app/image/tree (1).gif" alt="" />
+                        <Image src={tree1} alt="" width={5} height={12} />
                       </div>
 
                       <div className="tree2">
-                        <img src="@/app/image/tree (2).gif" alt="" />
+                        <Image src={tree2} alt="" width={5} height={12} />
                       </div>
 
                       <div className="coint">
-                        <img src="@/app/image/coin.gif" alt="" />
+                        <Image src={coin} alt="" width={20} height={20} />
                       </div>
 
-                      <img
-                        src="@/app/image/layer6.gif"
+                      <Image
+                        src={layer6}
                         alt=""
                         className="layer6"
+                        width={35}
+                        height={35}
                       />
-                      <img
-                        src="@/app/image/layer5.gif"
+                      <Image
+                        src={layer5}
                         alt=""
                         className="layer5"
+                        width={90}
+                        height={29}
                       />
-                      <img
+                      <Image
                         className="layer5_1"
-                        src="@/app/image/layer5_1.gif"
+                        src={layer5_1}
                         alt=""
+                        width={17}
+                        height={12}
                       />
                     </div>
 
                     <div className="layer layer4">
-                      <img
-                        className="line1"
-                        src="@/app/image/line1.gif"
-                        alt=""
-                      />
-                      <img
-                        className="line2"
-                        src="@/app/image/line2.gif"
-                        alt=""
-                      />
-                      <img
-                        className="line3"
-                        src="@/app/image/line3.gif"
-                        alt=""
-                      />
-                      <img
-                        className="line4"
-                        src="@/app/image/line4.gif"
-                        alt=""
-                      />
+                      <Image className="line1" src={line1} alt="" />
+                      <Image className="line2" src={line2} alt="" />
+                      <Image className="line3" src={line3} alt="" />
+                      <Image className="line4" src={line4} alt="" />
                     </div>
 
                     <div className="layer layer5">
-                      <img
-                        src="@/app/image/layer1.gif"
+                      <Image
+                        src={layer1}
                         alt=""
                         className="lay1"
+                        width={90}
+                        height={92}
                       />
 
-                      <img
-                        src="@/app/image/layer2.gif"
+                      <Image
+                        src={layer2}
                         alt=""
                         className="lay2"
+                        width={90}
+                        height={92}
                       />
 
-                      <img
-                        src="@/app/image/layer3.gif"
+                      <Image
+                        src={layer3}
                         alt=""
                         className="lay3"
+                        width={90}
+                        height={100}
                       />
 
-                      <img
-                        src="@/app/image/layer4.gif"
+                      <Image
+                        src={layer4}
                         alt=""
                         className="lay4"
+                        width={90}
+                        height={104}
                       />
                     </div>
                   </div>
@@ -393,123 +442,149 @@ const MainIndex = () => {
                   <h4>DỰ ÁN MỚI NHẤT</h4>
                   <h1>DỰ ÁN NỔI BẬT</h1>
                   <div className="more">
-                    <img src="@/app/image/Rectangle 247.png" alt="" />
+                    <Image src={rectangleImg} alt="" />
                     <div className="line"></div>
                   </div>
                   <span className="control__show">TẤT CẢ</span>
                   <ul className="control-list">
-                    {status ? (
-                      <li
-                        className="control-list__item active"
-                        onClick={() => {
-                          setAllProducts(true);
-                          setStatus(true);
-                        }}
-                      >
-                        TẤT CẢ
-                      </li>
-                    ) : (
-                      <li
-                        className="control-list__item"
-                        onClick={() => {
-                          setAllProducts(true);
-                          setStatus(false);
-                        }}
-                      >
-                        TẤT CẢ
-                      </li>
-                    )}
+                    <li className="control-list__item">TẤT CẢ</li>
 
-                    <li
-                      className="control-list__item"
-                      onClick={() => setAllProducts(false)}
-                    >
-                      THƯƠNG MẠI
-                    </li>
+                    <li className="control-list__item">THƯƠNG MẠI</li>
 
-                    <li
-                      className="control-list__item"
-                      onClick={() => setAllProducts(true)}
-                    >
-                      GIÁO DỤC
-                    </li>
+                    <li className="control-list__item">GIÁO DỤC</li>
 
-                    <li
-                      className="control-list__item"
-                      onClick={() => setAllProducts(false)}
-                    >
-                      BỆNH VIỆN
-                    </li>
+                    <li className="control-list__item">BỆNH VIỆN</li>
 
-                    <li
-                      className="control-list__item"
-                      onClick={() => setAllProducts(true)}
-                    >
-                      THƯỜNG TRÚ
-                    </li>
+                    <li className="control-list__item">THƯỜNG TRÚ</li>
 
-                    <li
-                      className="control-list__item"
-                      onClick={() => setAllProducts(false)}
-                    >
-                      VĂN PHÒNG
-                    </li>
+                    <li className="control-list__item">VĂN PHÒNG</li>
 
-                    <li
-                      className="control-list__item"
-                      onClick={() => setAllProducts(true)}
-                    >
-                      TÁI THIẾT
-                    </li>
+                    <li className="control-list__item">TÁI THIẾT</li>
                   </ul>
                 </div>
 
                 <div className="tab-content">
                   <div className="tab-item">
                     <div className="multiple-items">
-                      {allProducts
-                        ? products.map((item: any) => {
-                            return (
-                              <div className="item">
-                                <img
-                                  className="project-img"
-                                  src={item.image}
-                                  alt=""
-                                />
-                                <div className="discription">
-                                  <div className="title">{item.title}</div>
-                                  <div className="more">{item.name}</div>
-                                  <button
-                                    className="mutiple-button"
-                                    onClick={() => setOpenItem(true)}
-                                  >
-                                    +
-                                  </button>
-                                </div>
-                              </div>
-                            );
-                          })
-                        : items.map((item: any) => {
-                            return (
-                              <div className="item">
-                                <img
-                                  className="project-img"
-                                  src={item.image}
-                                  alt=""
-                                />
-                                <div className="discription">
-                                  <div className="title">{item.title}</div>
-                                  <div className="more">{item.name}</div>
-                                  <button
-                                    className="mutiple-button"
-                                    onClick={() => setOpenItem(true)}
-                                  >
-                                    +
-                                  </button>
-                                </div>
-                              </div>
-                            );
-                          })}
+                      <div className="item">
+                        <Image
+                          className="project-img"
+                          src={thuongmai}
+                          alt=""
+                          width={237}
+                          height={266}
+                        />
+                        <div className="discription">
+                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
+                          <div className="more">Thương mại</div>
+                          <button
+                            className="mutiple-button"
+                            onClick={() => setOpenItem(true)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="item">
+                        <Image
+                          className="project-img"
+                          src={giaoduc}
+                          alt=""
+                          width={237}
+                          height={266}
+                        />
+                        <div className="discription">
+                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
+                          <div className="more">Giáo dục</div>
+                          <button
+                            className="mutiple-button"
+                            onClick={() => setOpenItem(true)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="item">
+                        <Image
+                          className="project-img"
+                          src={benhvien}
+                          alt=""
+                          width={237}
+                          height={266}
+                        />
+                        <div className="discription">
+                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
+                          <div className="more">Bệnh viện</div>
+                          <button
+                            className="mutiple-button"
+                            onClick={() => setOpenItem(true)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="item">
+                        <Image
+                          className="project-img"
+                          src={thuongtru}
+                          alt=""
+                          width={237}
+                          height={266}
+                        />
+                        <div className="discription">
+                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
+                          <div className="more">Thường trú</div>
+                          <button
+                            className="mutiple-button"
+                            onClick={() => setOpenItem(true)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="item">
+                        <Image
+                          className="project-img"
+                          src={vanphong}
+                          alt=""
+                          width={237}
+                          height={266}
+                        />
+                        <div className="discription">
+                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
+                          <div className="more">Văn phòng</div>
+                          <button
+                            className="mutiple-button"
+                            onClick={() => setOpenItem(true)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+
+                      <div className="item">
+                        <Image
+                          className="project-img"
+                          src={taithiet}
+                          alt=""
+                          width={237}
+                          height={266}
+                        />
+                        <div className="discription">
+                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
+                          <div className="more">Tái thiết</div>
+                          <button
+                            className="mutiple-button"
+                            onClick={() => setOpenItem(true)}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -518,7 +593,7 @@ const MainIndex = () => {
               {openItem ? (
                 <div className="popup">
                   <div className="main-pop">
-                    <img src="@/app/image/popup.png" alt="" />
+                    <Image src={popupImage} alt="" />
                     <div className="title">
                       <b>DỰ ÁN N04B - NGOẠI GIAO ĐOÀN</b>
                     </div>
@@ -564,7 +639,10 @@ const MainIndex = () => {
                   </div>
                   <div className="layout"></div>
                   <div className="close-pop" onClick={() => setOpenItem(false)}>
-                    <i className="fa-regular fa-circle-xmark"></i>
+                    <FontAwesomeIcon
+                      icon={faCircleXmark}
+                      style={{ fontSize: 40, color: "white" }}
+                    />
                   </div>
                 </div>
               ) : (
@@ -574,12 +652,18 @@ const MainIndex = () => {
               <div className="button">
                 <div className="icon">
                   <a href="">
-                    <i className="fa-solid fa-arrow-left"></i>
+                    <FontAwesomeIcon
+                      icon={faArrowLeft}
+                      style={{ color: "#fff" }}
+                    />
                   </a>
                 </div>
                 <div className="icon">
                   <a href="">
-                    <i className="fa-solid fa-arrow-right"></i>
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      style={{ color: "#fff" }}
+                    />
                   </a>
                 </div>
               </div>
@@ -590,10 +674,10 @@ const MainIndex = () => {
             </div>
 
             <div className="left-img">
-              <img src="@/app/image/Untitled-4.png" alt="" />
+              <Image src={leftImg} alt="" />
             </div>
             <div className="right-img">
-              <img src="@/app/image/cautruc2.png" alt="" />
+              <Image src={rightImg} alt="" />
             </div>
           </Container>
         </Project>
@@ -603,55 +687,55 @@ const MainIndex = () => {
             <div className="bs-row">
               <div className="main-img">
                 <div className="main">
-                  <img src="@/app/image/main.gif" alt="" />
+                  <Image src={mainImg} alt="" />
                 </div>
 
                 <div className="layer-personal">
                   <div className="personal">
-                    <img src="@/app/image/main_personal (1).gif" alt="" />
+                    <Image src={mainPersonal} alt="" />
                   </div>
                   <div className="personal1">
-                    <img src="@/app/image/main_personal_1.gif" alt="" />
+                    <Image src={main_personal1} alt="" />
                   </div>
 
                   <div className="personal2">
-                    <img src="@/app/image/main_personal_2.gif" alt="" />
+                    <Image src={main_personal2} alt="" />
                   </div>
                 </div>
 
                 <div className="layer1">
                   <div className="layer1_2">
-                    <img src="@/app/image/layer1_2.gif" alt="" />
+                    <Image src={layer1_2} alt="" />
                   </div>
 
                   <div className="layer1-1">
-                    <img src="@/app/image/layer1_1.gif" alt="" />
+                    <Image src={layer1_1} alt="" />
                   </div>
 
                   <div className="lay1">
-                    <img src="@/app/image/layer1 (1).gif" alt="" />
+                    <Image src={lay} alt="" />
                   </div>
 
                   <div className="layer1_3">
-                    <img src="@/app/image/layer1_3.gif" alt="" />
+                    <Image src={layer1_3} alt="" />
                   </div>
 
                   <div className="layer1_4">
-                    <img src="@/app/image/layer1_4.gif" alt="" />
+                    <Image src={layer1_4} alt="" />
                   </div>
 
                   <div className="layway">
                     <div className="layer151">
-                      <img src="@/app/image/layer1_5_1.gif" alt="" />
+                      <Image src={layer1_5_1} alt="" />
                     </div>
                     <div className="layer152">
-                      <img src="@/app/image/layer1_5_2.gif" alt="" />
+                      <Image src={layer1_5_2} alt="" />
                     </div>
                     <div className="layer153">
-                      <img src="@/app/image/layer1_5_3.gif" alt="" />
+                      <Image src={layer1_5_3} alt="" />
                     </div>
                     <div className="layer154">
-                      <img src="@/app/image/layer1_5_4.gif" alt="" />
+                      <Image src={layer1_5_4} alt="" />
                     </div>
                   </div>
                 </div>
@@ -659,52 +743,52 @@ const MainIndex = () => {
                 <div className="layer2">
                   <div className="background-layer">
                     <div className="one">
-                      <img src="@/app/image/layer2_4 (1).gif" alt="" />
+                      <Image src={one} alt="" />
                     </div>
 
                     <div className="two">
-                      <img src="@/app/image/layer2_4.gif" alt="" />
+                      <Image src={two} alt="" />
                     </div>
 
                     <div className="broad">
-                      <img src="@/app/image/layer2 (1).gif" alt="" />
+                      <Image src={broad} alt="" />
                     </div>
 
                     <div className="broad-news">
                       <div className="new1">
-                        <img src="@/app/image/layer2_3 (1).gif" alt="" />
+                        <Image src={new1} alt="" />
                       </div>
                       <div className="new2">
-                        <img src="@/app/image/layer2_2.gif" alt="" />
+                        <Image src={new2} alt="" />
                       </div>
                       <div className="new3">
-                        <img src="@/app/image/layer2_3.gif" alt="" />
+                        <Image src={new3} alt="" />
                       </div>
 
                       <div className="new4">
-                        <img src="@/app/image/layer2_1.gif" alt="" />
+                        <Image src={new4} alt="" />
                       </div>
                     </div>
 
                     <div className="stars">
                       <div className="star1">
-                        <img src="@/app/image/layer_2_star.gif" alt="" />
+                        <Image src={star1} alt="" />
                       </div>
 
                       <div className="star2">
-                        <img src="@/app/image/layer_2_star1.gif" alt="" />
+                        <Image src={star2} alt="" />
                       </div>
 
                       <div className="star3">
-                        <img src="@/app/image/layer_2_star2.gif" alt="" />
+                        <Image src={star3} alt="" />
                       </div>
 
                       <div className="star4">
-                        <img src="@/app/image/layer_2_star3.gif" alt="" />
+                        <Image src={star4} alt="" />
                       </div>
 
                       <div className="star5">
-                        <img src="@/app/image/layer_2_star4.gif" alt="" />
+                        <Image src={star5} alt="" />
                       </div>
                     </div>
                   </div>
@@ -712,33 +796,33 @@ const MainIndex = () => {
 
                 <div className="layer3">
                   <div className="under1">
-                    <img src="@/app/image/layer_main.gif" alt="" />
+                    <Image src={layerMain} alt="" />
                   </div>
 
                   <div className="under2">
-                    <img src="@/app/image/layer_main.gif" alt="" />
+                    <Image src={layerMain} alt="" />
                   </div>
 
                   <div className="under3">
-                    <img src="@/app/image/layer_main.gif" alt="" />
+                    <Image src={layerMain} alt="" />
                   </div>
 
                   <div className="under4">
-                    <img src="@/app/image/layer_main.gif" alt="" />
+                    <Image src={layerMain} alt="" />
                   </div>
 
                   <div className="layway">
                     <div className="layer151">
-                      <img src="@/app/image/layer1_5_1.gif" alt="" />
+                      <Image src={layer151} alt="" />
                     </div>
                     <div className="layer152">
-                      <img src="@/app/image/layer1_5_2.gif" alt="" />
+                      <Image src={layer152} alt="" />
                     </div>
                     <div className="layer153">
-                      <img src="@/app/image/layer1_5_3.gif" alt="" />
+                      <Image src={layer153} alt="" />
                     </div>
                     <div className="layer154">
-                      <img src="@/app/image/layer1_5_4.gif" alt="" />
+                      <Image src={layer154} alt="" />
                     </div>
                   </div>
                 </div>
@@ -748,12 +832,12 @@ const MainIndex = () => {
                   <b>TUYỂN DỤNG</b>
                 </h1>
                 <div className="more">
-                  <img src="@/app/image/Rectangle 247.png" alt="" />
+                  <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
                 <div className="other">
                   <div className="line"></div>
-                  <img src="@/app/image/Rectangle 247.png" alt="" />
+                  <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
                 <div className="text">
@@ -779,16 +863,19 @@ const MainIndex = () => {
                 </div>
                 <div className="more">
                   <div className="line"></div>
-                  <img src="@/app/image/Rectangle 247.png" alt="" />
+                  <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
                 <div className="main-content">
                   <div className="content">
-                    <img src="@/app/image/news1.png" alt="" />
+                    <Image src={contentImg} alt="" width={287} height={234} />
                     <div className="discription">
                       <div className="heading">
                         <div className="clock">
-                          <i className="fa-regular fa-clock"></i>
+                          <FontAwesomeIcon
+                            icon={faClock}
+                            style={{ width: 10, height: 10 }}
+                          />
                         </div>
                         <div className="text">5.december.2020</div>
                         <div className="block">|</div>
@@ -808,11 +895,14 @@ const MainIndex = () => {
                   </div>
 
                   <div className="content">
-                    <img src="@/app/image/news1.png" alt="" />
+                    <Image src={contentImg} alt="" width={287} height={234} />
                     <div className="discription">
                       <div className="heading">
                         <div className="clock">
-                          <i className="fa-regular fa-clock"></i>
+                          <FontAwesomeIcon
+                            icon={faClock}
+                            style={{ width: 10, height: 10 }}
+                          />
                         </div>
                         <div className="text">5.december.2020</div>
                         <div className="block">|</div>
@@ -832,11 +922,14 @@ const MainIndex = () => {
                   </div>
 
                   <div className="content">
-                    <img src="@/app/image/news1.png" alt="" />
+                    <Image src={contentImg} alt="" width={287} height={234} />
                     <div className="discription">
                       <div className="heading">
                         <div className="clock">
-                          <i className="fa-regular fa-clock"></i>
+                          <FontAwesomeIcon
+                            icon={faClock}
+                            style={{ width: 10, height: 10 }}
+                          />
                         </div>
                         <div className="text">5.december.2020</div>
                         <div className="block">|</div>

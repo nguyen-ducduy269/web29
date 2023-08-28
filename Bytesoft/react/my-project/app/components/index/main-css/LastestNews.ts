@@ -47,10 +47,6 @@ export const LastestNews = styled.section`
           display: flex;
           flex-direction: column;
           align-items: center;
-          img {
-            width: 287px;
-            height: 234px;
-          }
           .discription {
             position: absolute;
             background-color: #fff;

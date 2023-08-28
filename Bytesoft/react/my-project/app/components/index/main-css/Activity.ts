@@ -21,8 +21,6 @@ export const Activity = styled.section`
       .more {
         display: flex;
         img {
-          width: 12px;
-          height: 12px;
           margin-left: 13px;
           margin-top: 4px;
           margin-right: 11px;
@@ -51,7 +49,6 @@ export const Activity = styled.section`
           img {
             position: absolute;
             top: -12px;
-            width: 37px;
             left: 14px;
             z-index: -1;
           }
@@ -163,7 +160,6 @@ export const Activity = styled.section`
               width: 100%;
               height: 100%;
               img {
-                width: 53px;
                 position: absolute;
                 height: 100%;
                 margin-left: 4px;
@@ -209,9 +205,7 @@ export const Activity = styled.section`
             overflow: hidden;
             .layer2-1 {
               img {
-                width: 64px;
                 position: absolute;
-                height: 42px;
                 margin-left: 21px;
                 top: 18px;
                 animation: layer2-1 5s infinite alternate;
@@ -324,6 +318,7 @@ export const Activity = styled.section`
                 transform: scale(1);
               }
             }
+
             .tower2 {
               position: absolute;
               width: 41px;
@@ -349,6 +344,7 @@ export const Activity = styled.section`
                 transform: scale(1);
               }
             }
+
             .tower3 {
               position: absolute;
               width: 66px;
@@ -377,6 +373,7 @@ export const Activity = styled.section`
                 }
               }
             }
+
             .personal {
               position: absolute;
               width: 50px;
@@ -396,6 +393,7 @@ export const Activity = styled.section`
                 opacity: 1;
               }
             }
+
             .house {
               position: absolute;
               width: 46px;
@@ -424,6 +422,7 @@ export const Activity = styled.section`
                 transform: scale(1);
               }
             }
+
             .tree {
               position: absolute;
               height: 17px;
@@ -452,6 +451,7 @@ export const Activity = styled.section`
                 transform: scale(1);
               }
             }
+
             .tree1 {
               position: absolute;
               height: 12px;
@@ -480,6 +480,7 @@ export const Activity = styled.section`
                 transform: scale(1);
               }
             }
+
             .tree2 {
               position: absolute;
               height: 12px;
@@ -508,6 +509,7 @@ export const Activity = styled.section`
                 transform: scale(1);
               }
             }
+
             .coint {
               position: absolute;
               width: 20px;
@@ -534,6 +536,7 @@ export const Activity = styled.section`
                 transform: scale(1);
               }
             }
+
             .layer6 {
               position: absolute;
               width: 35px;
@@ -587,6 +590,7 @@ export const Activity = styled.section`
               z-index: -1;
             }
           }
+
           .layer5 {
             position: absolute;
             width: 490px;
@@ -803,6 +807,7 @@ export const Activity = styled.section`
                 left: 6%;
               }
             }
+
             .lay2 {
               position: absolute;
               bottom: 13.8%;
@@ -1224,6 +1229,7 @@ export const Activity = styled.section`
                 left: 62.3%;
               }
             }
+
             .lay4 {
               position: absolute;
               width: 92px;
@@ -1495,8 +1501,6 @@ export const Activity = styled.section`
           width: 230px;
           margin: 0 auto;
           img {
-            width: 12px;
-            height: 12px;
             margin: 0 10px;
           }
           .line {
@@ -1568,8 +1572,6 @@ export const Activity = styled.section`
           width: 230px;
           margin: 0 auto;
           img {
-            width: 12px;
-            height: 12px;
             margin: 0 10px;
           }
           .line {
@@ -1634,8 +1636,6 @@ export const Activity = styled.section`
           width: 230px;
           margin: 0 auto;
           img {
-            width: 12px;
-            height: 12px;
             margin: 0 10px;
           }
           .line {
@@ -1699,8 +1699,6 @@ export const Activity = styled.section`
           width: 230px;
           margin: 0 auto;
           img {
-            width: 12px;
-            height: 12px;
             margin: 0 10px;
           }
           .line {
@@ -1765,8 +1763,6 @@ export const Activity = styled.section`
           width: 230px;
           margin: 0 auto;
           img {
-            width: 12px;
-            height: 12px;
             margin: 0 10px;
           }
           .line {
@@ -1834,8 +1830,6 @@ export const Activity = styled.section`
           width: 230px;
           margin: 0 auto;
           img {
-            width: 12px;
-            height: 12px;
             margin: 0 10px;
           }
           .line {
@@ -1901,8 +1895,6 @@ export const Activity = styled.section`
           width: 230px;
           margin: 0 auto;
           img {
-            width: 12px;
-            height: 12px;
             margin: 0 10px;
           }
           .line {
@@ -1923,7 +1915,7 @@ export const Activity = styled.section`
             margin: 0 auto;
             img {
               width: 25px;
-              top: 0;
+              top: -14px;
             }
             .title {
               font-size: 14px;

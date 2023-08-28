@@ -12,41 +12,29 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import image/
+// import images
 import coVietNam from "@/app/image/icon-co-viet-nam.jpg";
 import coMeo from "@/app/image/istockphoto-1144423641-612x612.jpg";
 import LogoImage from "@/app/image/logo.png";
-import img from "@/app/image/slide1.png";
-const styling = {
-  backgroundImage: `url('${img.src}')`,
-};
 
-// import components
-import { Head } from "./header-css/Head";
-import { HeaderTop } from "./header-css/HeaderTop";
-import { HeaderNav } from "./header-css/HeaderNav";
-import { HeaderBanner } from "./header-css/HeaderBanner";
+//// import components
 import { Container } from "../Container";
+import { NewsTop } from "./header-news-css/NewsTop";
+import { NewsNav } from "./header-news-css/NewsNav";
+import { NewsBanner } from "./header-news-css/NewsBanner";
 
-const HeaderIndex = () => {
-  const [isDisplay, setIsDisplay] = useState(false);
-  const [isOpen, setIsOpen] = useState(coVietNam);
+const HeaderNews = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [changeFlag, setChangeFlag] = useState(coVietNam);
   const [display, setDisplay] = useState(false);
-  const [newValue, setNewValue] = useState("");
-
-  const addText = () => {
-    setNewValue(
-      newValue + "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-    );
-  };
 
   return (
     <>
-      <Head style={styling}>
-        <HeaderTop>
+      <header id="header">
+        <NewsTop>
           <Container>
-            <div className="main-content">
-              <div className="head-left">
+            <div className="top">
+              <div className="header-left">
                 <FontAwesomeIcon
                   icon={faPhone}
                   style={{
@@ -58,7 +46,7 @@ const HeaderIndex = () => {
                 />
                 <div className="hotline">HOTLINE:1900 2863</div>
               </div>
-              <div className="head-right">
+              <div className="header-right">
                 <input type="search" placeholder="Search..." />
                 <div className="icon">
                   <FontAwesomeIcon
@@ -73,24 +61,24 @@ const HeaderIndex = () => {
                 </div>
 
                 <div className="country">
-                  <div onClick={() => setIsDisplay(true)}>
-                    <Image src={isOpen} alt="" />
+                  <div className="change" onClick={() => setIsOpen(true)}>
+                    <Image src={changeFlag} alt="" />
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       style={{
                         marginLeft: "0px",
                         fontSize: "9px",
-                        color: "black",
+                        color: "white",
                       }}
                     />
                   </div>
 
-                  {isDisplay ? (
+                  {isOpen ? (
                     <div className="country-scoll">
                       <div
                         onClick={() => {
-                          setIsOpen(coVietNam);
-                          setIsDisplay(false);
+                          setChangeFlag(coVietNam);
+                          setIsOpen(false);
                         }}
                       >
                         <Image src={coVietNam} alt="" />
@@ -98,8 +86,8 @@ const HeaderIndex = () => {
 
                       <div
                         onClick={() => {
-                          setIsOpen(coMeo);
-                          setIsDisplay(false);
+                          setChangeFlag(coMeo);
+                          setIsOpen(false);
                         }}
                       >
                         <Image src={coMeo} alt="" />
@@ -112,9 +100,9 @@ const HeaderIndex = () => {
               </div>
             </div>
           </Container>
-        </HeaderTop>
+        </NewsTop>
 
-        <HeaderNav>
+        <NewsNav>
           <Container>
             <div className="nav-content clearfix">
               <div className="logo">
@@ -129,48 +117,38 @@ const HeaderIndex = () => {
               </div>
 
               <div className="nav">
-                <span className="show__menu" onClick={() => setDisplay(true)}>
-                  <FontAwesomeIcon icon={faBars} />
-                </span>
-
                 <div className="menu">
                   <ul className="menu-list clearfix">
-                    <li className="menu-list__item list-active">
+                    <li className="menu-list__item">
                       <Link href="/" className="menu-list__link">
-                        <div className="active">TRANG CHỦ</div>
+                        TRANG CHỦ
                       </Link>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         GIỚI THIỆU
                       </a>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         LĨNH VỰC
                       </a>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         DỰ ÁN
                       </a>
                     </li>
-
-                    <li className="menu-list__item">
+                    <li className="menu-list__item list-active">
                       <Link href="/news" className="menu-list__link">
-                        TIN TỨC
+                        <div className="active">TIN TỨC</div>
                       </Link>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         TUYỂN DỤNG
                       </a>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/contact" className="menu-list__link">
                         LIÊN HỆ
@@ -178,6 +156,12 @@ const HeaderIndex = () => {
                     </li>
                   </ul>
                 </div>
+              </div>
+
+              <div id="show-menu">
+                <span className="show__menu" onClick={() => setDisplay(true)}>
+                  <FontAwesomeIcon icon={faBars} />
+                </span>
 
                 {display ? (
                   <div className="menu-respon">
@@ -190,41 +174,35 @@ const HeaderIndex = () => {
 
                     <ul className="menu-list clearfix">
                       <li className="menu-list__item">
-                        <Link href="/" className="menu-list__link">
-                          <div className="active">TRANG CHỦ</div>
+                        <Link href="/" className="menu-list__link active">
+                          TRANG CHỦ
                         </Link>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           GIỚI THIỆU
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           LĨNH VỰC
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           DỰ ÁN
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <Link href="/news" className="menu-list__link">
-                          TIN TỨC
+                          <div className="active">TIN TỨC</div>
                         </Link>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           TUYỂN DỤNG
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/contact" className="menu-list__link">
                           LIÊN HỆ
@@ -238,23 +216,16 @@ const HeaderIndex = () => {
               </div>
             </div>
           </Container>
-        </HeaderNav>
+        </NewsNav>
 
-        <HeaderBanner>
-          <Container>
-            <div className="banner">
-              <div className="title">FROM CONCEPT TO CREATION.</div>
-              <div className="description">
-                It is a long established fact that a reader will be distracted
-                by the readable content. {newValue}
-              </div>
-              <button onClick={() => addText()}>XEM THÊM</button>
-            </div>
-          </Container>
-        </HeaderBanner>
-      </Head>
+        <NewsBanner>
+          <div className="title">TIN TỨC</div>
+          <div className="description">Trang chủ / Tin tức</div>
+          <div className="layout"></div>
+        </NewsBanner>
+      </header>
     </>
   );
 };
 
-export default HeaderIndex;
+export default HeaderNews;

@@ -1,4 +1,4 @@
-import Index from "./components/index/Index";
+import Index from "./index/page";
 
 export default function Home() {
   return (
