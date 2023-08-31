@@ -150,9 +150,9 @@ const HeaderNews = () => {
                       </a>
                     </li>
                     <li className="menu-list__item">
-                      <a href="/contact" className="menu-list__link">
+                      <Link href="/contact" className="menu-list__link">
                         LIÊN HỆ
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -204,9 +204,9 @@ const HeaderNews = () => {
                         </a>
                       </li>
                       <li className="menu-list__item">
-                        <a href="/contact" className="menu-list__link">
+                        <Link href="/contact" className="menu-list__link">
                           LIÊN HỆ
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
