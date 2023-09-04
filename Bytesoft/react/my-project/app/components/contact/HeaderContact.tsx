@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import type { RootState } from "@/app/GolbalRedux/store";
+import { useSelector } from "react-redux";
 
 import {
-  faPhone,
+  faPhoneFlip,
   faMagnifyingGlass,
   faChevronDown,
   faBars,
@@ -28,6 +30,23 @@ const HeaderContact = () => {
   const [changeFlag, setChangeFlag] = useState(coVietNam);
   const [display, setDisplay] = useState(false);
 
+  const hotline = useSelector((state: RootState) => state.counter.hotline);
+  const home = useSelector((state: RootState) => state.counter.home);
+  const details = useSelector((state: RootState) => state.counter.details);
+  const area = useSelector((state: RootState) => state.counter.area);
+  const project = useSelector((state: RootState) => state.counter.project);
+  const newBtn = useSelector((state: RootState) => state.counter.new);
+  const recruitment = useSelector(
+    (state: RootState) => state.counter.recruitment
+  );
+  const contact = useSelector((state: RootState) => state.counter.contact);
+  const contactHeaderTitle = useSelector(
+    (state: RootState) => state.counter.contactHeaderTitle
+  );
+  const contactHeaderDescription = useSelector(
+    (state: RootState) => state.counter.contactHeaderDescription
+  );
+
   return (
     <>
       <header id="header">
@@ -36,7 +55,7 @@ const HeaderContact = () => {
             <div className="top">
               <div className="header-left">
                 <FontAwesomeIcon
-                  icon={faPhone}
+                  icon={faPhoneFlip}
                   style={{
                     fontSize: "8px",
                     color: "#1ac667",
@@ -44,7 +63,7 @@ const HeaderContact = () => {
                     marginRight: "4px",
                   }}
                 />
-                <div className="hotline">HOTLINE:1900 2863</div>
+                <div className="hotline">{hotline}</div>
               </div>
               <div className="header-right">
                 <input type="search" placeholder="Search..." />
@@ -121,37 +140,37 @@ const HeaderContact = () => {
                   <ul className="menu-list clearfix">
                     <li className="menu-list__item">
                       <Link href="/" className="menu-list__link">
-                        TRANG CHỦ
+                        {home}
                       </Link>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        GIỚI THIỆU
+                        {details}
                       </a>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        LĨNH VỰC
+                        {area}
                       </a>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        DỰ ÁN
+                        {project}
                       </a>
                     </li>
                     <li className="menu-list__item">
                       <Link href="/news" className="menu-list__link">
-                        TIN TỨC
+                        {newBtn}
                       </Link>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        TUYỂN DỤNG
+                        {recruitment}
                       </a>
                     </li>
                     <li className="menu-list__item list-active">
                       <Link href="/contact" className="menu-list__link">
-                        <div className="active">LIÊN HỆ</div>
+                        <div className="active">{contact}</div>
                       </Link>
                     </li>
                   </ul>
@@ -175,37 +194,37 @@ const HeaderContact = () => {
                     <ul className="menu-list clearfix">
                       <li className="menu-list__item">
                         <Link href="/" className="menu-list__link active">
-                          TRANG CHỦ
+                          {home}
                         </Link>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          GIỚI THIỆU
+                          {details}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          LĨNH VỰC
+                          {area}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          DỰ ÁN
+                          {project}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <Link href="/news" className="menu-list__link">
-                          TIN TỨC
+                          {newBtn}
                         </Link>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          TUYỂN DỤNG
+                          {recruitment}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <Link href="/contact" className="menu-list__link">
-                          <div className="active">LIÊN HỆ</div>
+                          <div className="active">{contact}</div>
                         </Link>
                       </li>
                     </ul>
@@ -219,8 +238,8 @@ const HeaderContact = () => {
         </ContactNav>
 
         <ContactBanner>
-          <div className="title">LIÊN HỆ</div>
-          <div className="description">Trang chủ / Liên hệ</div>
+          <div className="title">{contactHeaderTitle}</div>
+          <div className="description">{contactHeaderDescription}</div>
           <div className="layout"></div>
         </ContactBanner>
       </header>

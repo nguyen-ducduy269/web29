@@ -20,7 +20,7 @@ export const Last = styled.section`
   }
   .bonus {
     position: absolute;
-    right: 214px;
+    right: 170px;
     bottom: -51px;
     font-size: 64px;
     font-family: sans-serif;

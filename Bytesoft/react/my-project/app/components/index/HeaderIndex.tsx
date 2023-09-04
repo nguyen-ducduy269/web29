@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import type { RootState } from "@/app/GolbalRedux/store";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import {
   faMagnifyingGlass,
@@ -42,10 +42,25 @@ const HeaderIndex = () => {
     );
   };
 
-  const count = useSelector((state: RootState) => state.counter.title);
-  console.log("count", count);
-
-  const dispatch = useDispatch();
+  const hotline = useSelector((state: RootState) => state.counter.hotline);
+  const home = useSelector((state: RootState) => state.counter.home);
+  const details = useSelector((state: RootState) => state.counter.details);
+  const area = useSelector((state: RootState) => state.counter.area);
+  const project = useSelector((state: RootState) => state.counter.project);
+  const newBtn = useSelector((state: RootState) => state.counter.new);
+  const recruitment = useSelector(
+    (state: RootState) => state.counter.recruitment
+  );
+  const contact = useSelector((state: RootState) => state.counter.contact);
+  const indexBannerTitle = useSelector(
+    (state: RootState) => state.counter.indexBannerTitle
+  );
+  const indexBannerDescription = useSelector(
+    (state: RootState) => state.counter.indexBannerDescription
+  );
+  const seeMoreBtn = useSelector(
+    (state: RootState) => state.counter.seeMoreBtn
+  );
 
   return (
     <>
@@ -63,7 +78,7 @@ const HeaderIndex = () => {
                     marginRight: "4px",
                   }}
                 />
-                <div className="hotline">HOTLINE:1900 2863</div>
+                <div className="hotline">{hotline}</div>
               </div>
 
               <div className="head-right">
@@ -145,43 +160,43 @@ const HeaderIndex = () => {
                   <ul className="menu-list clearfix">
                     <li className="menu-list__item list-active">
                       <Link href="/" className="menu-list__link">
-                        <div className="active">TRANG CHỦ</div>
+                        <div className="active">{home}</div>
                       </Link>
                     </li>
 
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        GIỚI THIỆU
+                        {details}
                       </a>
                     </li>
 
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        LĨNH VỰC
+                        {area}
                       </a>
                     </li>
 
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        DỰ ÁN
+                        {project}
                       </a>
                     </li>
 
                     <li className="menu-list__item">
                       <Link href="/news" className="menu-list__link">
-                        TIN TỨC
+                        {newBtn}
                       </Link>
                     </li>
 
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        TUYỂN DỤNG
+                        {recruitment}
                       </a>
                     </li>
 
                     <li className="menu-list__item">
                       <Link href="/contact" className="menu-list__link">
-                        LIÊN HỆ
+                        {contact}
                       </Link>
                     </li>
                   </ul>
@@ -199,43 +214,43 @@ const HeaderIndex = () => {
                     <ul className="menu-list clearfix">
                       <li className="menu-list__item">
                         <Link href="/" className="menu-list__link">
-                          <div className="active">TRANG CHỦ</div>
+                          <div className="active">{home}</div>
                         </Link>
                       </li>
 
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          GIỚI THIỆU
+                          {details}
                         </a>
                       </li>
 
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          LĨNH VỰC
+                          {area}
                         </a>
                       </li>
 
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          DỰ ÁN
+                          {project}
                         </a>
                       </li>
 
                       <li className="menu-list__item">
                         <Link href="/news" className="menu-list__link">
-                          TIN TỨC
+                          {newBtn}
                         </Link>
                       </li>
 
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          TUYỂN DỤNG
+                          {recruitment}
                         </a>
                       </li>
 
                       <li className="menu-list__item">
                         <Link href="/contact" className="menu-list__link">
-                          LIÊN HỆ
+                          {contact}
                         </Link>
                       </li>
                     </ul>
@@ -251,12 +266,11 @@ const HeaderIndex = () => {
         <HeaderBanner>
           <Container>
             <div className="banner">
-              <div className="title">FROM CONCEPT TO CREATION.</div>
+              <div className="title">{indexBannerTitle}</div>
               <div className="description">
-                It is a long established fact that a reader will be distracted
-                by the readable content. {newValue}
+                {indexBannerDescription} {newValue}
               </div>
-              <button onClick={() => addText()}>XEM THÊM</button>
+              <button onClick={() => addText()}>{seeMoreBtn}</button>
             </div>
           </Container>
         </HeaderBanner>

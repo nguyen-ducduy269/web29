@@ -2,6 +2,8 @@
 import { Foot } from "./footer-css/Foot";
 import { Container } from "../Container";
 import Image from "next/image";
+import type { RootState } from "@/app/GolbalRedux/store";
+import { useSelector } from "react-redux";
 
 import footerMainImg from "@/app/image/footer-main.png";
 import vingroupImg from "@/app/image/vingroup.png";
@@ -9,6 +11,43 @@ import lanmarkImg from "@/app/image/lanmark.png";
 import hancorkImg from "@/app/image/hancork.png";
 
 const FooterIndex = () => {
+  const footerMainText = useSelector(
+    (state: RootState) => state.counter.footerMainText
+  );
+  const footerNote = useSelector(
+    (state: RootState) => state.counter.footerNote
+  );
+  const serviceTitle = useSelector(
+    (state: RootState) => state.counter.serviceTitle
+  );
+  const privacyPolicy = useSelector(
+    (state: RootState) => state.counter.privacyPolicy
+  );
+  const termsAndConditions = useSelector(
+    (state: RootState) => state.counter.termsAndConditions
+  );
+  const copyRightPolicy = useSelector(
+    (state: RootState) => state.counter.copyRightPolicy
+  );
+  const codeOfConduct = useSelector(
+    (state: RootState) => state.counter.codeOfConduct
+  );
+  const chemicalEngineeringProject = useSelector(
+    (state: RootState) => state.counter.chemicalEngineeringProject
+  );
+  const miningEngineeringConstruction = useSelector(
+    (state: RootState) => state.counter.miningEngineeringConstruction
+  );
+  const engineeringWeldingEngineering = useSelector(
+    (state: RootState) => state.counter.engineeringWeldingEngineering
+  );
+  const weldingEngineering = useSelector(
+    (state: RootState) => state.counter.weldingEngineering
+  );
+  const partnersCustomers = useSelector(
+    (state: RootState) => state.counter.partnersCustomers
+  );
+
   return (
     <>
       <Foot>
@@ -20,20 +59,9 @@ const FooterIndex = () => {
                   <div className="main-content">
                     <Image src={footerMainImg} alt="" />
                     <div className="text">
-                      <i>
-                        ACEFIC5 là Nhà thầu chính thi công tại các dự án lớn tại
-                        Hà Nội, Đà Nẵng và nhiều tỉnh thành thành phố trên cả
-                        nước. Công ty Cổ phần Đầu tư và Xây dựng ACE5 Thái Bình
-                        Dương luôn đáp ứng được các yêu cầu khắt khe của các Chủ
-                        đầu tư, luôn đem đến cho khách hàng và xã hội các sản
-                        phẩm với chất lượng tốt nhất, tiến độ nhanh nhất mà vẫn
-                        đảm bảo tính an toàn và hiệu quả đầu tư trên mỗi công
-                        trình.....
-                      </i>
+                      <i>{footerMainText}</i>
                     </div>
-                    <div className="note">
-                      Copyright 2019 Acefic5. All Rights Reserved
-                    </div>
+                    <div className="note">{footerNote}</div>
                   </div>
                 </div>
               </div>
@@ -41,12 +69,12 @@ const FooterIndex = () => {
                 <div className="item">
                   <div className="service">
                     <div className="title">
-                      <b>DỊCH VỤ</b>
+                      <b>{serviceTitle}</b>
                     </div>
-                    <div className="noidung">Privacy Policy</div>
-                    <div className="noidung">Terms and Conditions</div>
-                    <div className="noidung">Copyright Policy</div>
-                    <div className="noidung">Code of Conduct</div>
+                    <div className="noidung">{privacyPolicy}</div>
+                    <div className="noidung">{termsAndConditions}</div>
+                    <div className="noidung">{copyRightPolicy}</div>
+                    <div className="noidung">{codeOfConduct}</div>
                   </div>
                 </div>
               </div>
@@ -54,16 +82,16 @@ const FooterIndex = () => {
                 <div className="item">
                   <div className="service2">
                     <div className="title">
-                      <b>DỊCH VỤ</b>
+                      <b>{serviceTitle}</b>
                     </div>
-                    <div className="noidung">Chemical Engineering Projects</div>
+                    <div className="noidung">{chemicalEngineeringProject}</div>
                     <div className="noidung">
-                      Mining Engineering Construction
+                      {miningEngineeringConstruction}
                     </div>
                     <div className="noidung">
-                      Engineering Welding Engineering
+                      {engineeringWeldingEngineering}
                     </div>
-                    <div className="noidung">Welding Engineering</div>
+                    <div className="noidung">{weldingEngineering}</div>
                   </div>
                 </div>
               </div>
@@ -72,7 +100,7 @@ const FooterIndex = () => {
             <div className="footer-details">
               <div className="content">
                 <div className="title">
-                  <b>ĐỐI TÁC KHÁCH HÀNG</b>
+                  <b>{partnersCustomers}</b>
                 </div>
                 <div id="footer-details">
                   <div className="item">

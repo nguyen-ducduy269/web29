@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { RootState } from "@/app/GolbalRedux/store";
+import { useSelector } from "react-redux";
 
 import {
   faArrowLeft,
@@ -107,10 +109,139 @@ import layer154 from "@/app/image/layer1_5_4.gif";
 
 ///// lastest image
 import contentImg from "@/app/image/news1.png";
+import newsImg from "@/app/image/world.png";
 
 const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
+
+  ///// about us
+  const aboutUsTitle = useSelector(
+    (state: RootState) => state.counter.aboutUsTitle
+  );
+  const aboutContent = useSelector(
+    (state: RootState) => state.counter.aboutContent
+  );
+  const aboutH1 = useSelector((state: RootState) => state.counter.aboutH1);
+  const xemThemBtn = useSelector(
+    (state: RootState) => state.counter.xemThemBtn
+  );
+
+  ///// activyty
+  const actTitle = useSelector((state: RootState) => state.counter.actTitle);
+  const designTitle = useSelector(
+    (state: RootState) => state.counter.designTitle
+  );
+  const designText = useSelector(
+    (state: RootState) => state.counter.designText
+  );
+  const actBonusBtn = useSelector(
+    (state: RootState) => state.counter.actBonusBtn
+  );
+
+  ///// project
+  const projectH4 = useSelector((state: RootState) => state.counter.projectH4);
+  const projectH1 = useSelector((state: RootState) => state.counter.projectH1);
+  const all = useSelector((state: RootState) => state.counter.all);
+  const commerce = useSelector((state: RootState) => state.counter.commerce);
+  const education = useSelector((state: RootState) => state.counter.education);
+  const hospital = useSelector((state: RootState) => state.counter.hospital);
+  const resident = useSelector((state: RootState) => state.counter.resident);
+  const offical = useSelector((state: RootState) => state.counter.offical);
+  const reconstruction = useSelector(
+    (state: RootState) => state.counter.reconstruction
+  );
+  const discriptionTitle = useSelector(
+    (state: RootState) => state.counter.discriptionTitle
+  );
+  const disCommerce = useSelector(
+    (state: RootState) => state.counter.disCommerce
+  );
+  const disEducation = useSelector(
+    (state: RootState) => state.counter.disEducation
+  );
+  const disHospital = useSelector(
+    (state: RootState) => state.counter.disHospital
+  );
+  const disResident = useSelector(
+    (state: RootState) => state.counter.disResident
+  );
+  const disOffical = useSelector(
+    (state: RootState) => state.counter.disOffical
+  );
+  const disReconstruction = useSelector(
+    (state: RootState) => state.counter.disReconstruction
+  );
+  const popUpTitle = useSelector(
+    (state: RootState) => state.counter.popUpTitle
+  );
+  const nameProject = useSelector(
+    (state: RootState) => state.counter.nameProject
+  );
+  const disProject1 = useSelector(
+    (state: RootState) => state.counter.disProject1
+  );
+  const investor = useSelector((state: RootState) => state.counter.investor);
+  const disProject2 = useSelector(
+    (state: RootState) => state.counter.disProject2
+  );
+  const category = useSelector((state: RootState) => state.counter.category);
+  const disProject3 = useSelector(
+    (state: RootState) => state.counter.disProject3
+  );
+  const location = useSelector((state: RootState) => state.counter.location);
+  const disProject4 = useSelector(
+    (state: RootState) => state.counter.disProject4
+  );
+  const typeOfConstruction = useSelector(
+    (state: RootState) => state.counter.typeOfConstruction
+  );
+  const disProject5 = useSelector(
+    (state: RootState) => state.counter.disProject5
+  );
+  const levelOfConstruction = useSelector(
+    (state: RootState) => state.counter.levelOfConstruction
+  );
+  const disProject6 = useSelector(
+    (state: RootState) => state.counter.disProject6
+  );
+  const executionTime = useSelector(
+    (state: RootState) => state.counter.executionTime
+  );
+  const time = useSelector((state: RootState) => state.counter.time);
+  const projectBonus = useSelector(
+    (state: RootState) => state.counter.projectBonus
+  );
+
+  //// recruitment
+  const recruitmentContent = useSelector(
+    (state: RootState) => state.counter.recruitmentContent
+  );
+  const recruitmentText = useSelector(
+    (state: RootState) => state.counter.recruitmentText
+  );
+  const recruitmentBtn = useSelector(
+    (state: RootState) => state.counter.recruitmentBtn
+  );
+  const recruitmentBonus = useSelector(
+    (state: RootState) => state.counter.recruitmentBonus
+  );
+
+  //// lastest news
+  const lastestNewsTitle = useSelector(
+    (state: RootState) => state.counter.lastestNewsTitle
+  );
+  const mainContentText = useSelector(
+    (state: RootState) => state.counter.mainContentText
+  );
+  const mainView = useSelector((state: RootState) => state.counter.mainView);
+  const disscriptionText = useSelector(
+    (state: RootState) => state.counter.disscriptionText
+  );
+
+  ///// last
+  const lastBtn = useSelector((state: RootState) => state.counter.lastBtn);
+  const lastBonus = useSelector((state: RootState) => state.counter.lastBonus);
 
   const addText = () => {
     setNewValue(
@@ -162,7 +293,7 @@ const MainIndex = () => {
               </div>
               <div className="content">
                 <div className="about-header">
-                  <h2 className="title">VỀ CHÚNG TÔI</h2>
+                  <h2 className="title">{aboutUsTitle}</h2>
                   <div className="more">
                     <Image src={AboutUsImage} width={11} height={11} alt="" />
                     <div className="line"></div>
@@ -175,16 +306,11 @@ const MainIndex = () => {
                 </div>
                 <div className="about-content">
                   <div className="text">
-                    Scarcely on striking packages by so property in delicate. Up
-                    or well must less rent read walk so be. Easy sold at do hour
-                    sing spot. Any meant has cease too the decay. Since party
-                    burst am it match. By or blushes between besides offices
-                    noisier as. Sending do brought windng compass in. Paid day
-                    till shed only fact age its end. {newValue}
+                    {aboutContent} {newValue}
                   </div>
-                  <button onClick={() => addText()}>Xem thêm</button>
+                  <button onClick={() => addText()}>{xemThemBtn}</button>
                   <h1>
-                    <b>ABOUT US</b>
+                    <b>{aboutH1}</b>
                   </h1>
                 </div>
               </div>
@@ -197,7 +323,7 @@ const MainIndex = () => {
             <div className="module-activity">
               <div className="act-title">
                 <h2>
-                  <b>LĨNH VỰC HOẠT ĐỘNG</b>
+                  <b>{actTitle}</b>
                 </h2>
                 <div className="more">
                   <Image src={rectangleImg} alt="" width={12} height={12} />
@@ -215,15 +341,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number01} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>THIẾT KẾ KIẾN TRÚC</b>
+                      <b>{designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">
-                          Scarcely on striking packages by so property in
-                          delicate. Up or well must less rent read walk so be.
-                          Easy sold at do hour sing spot.
-                        </a>
+                        <a href="">{designText}</a>
                       </p>
                     </div>
                   </div>
@@ -231,15 +353,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number02} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>THIẾT KẾ KIẾN TRÚC</b>
+                      <b>{designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">
-                          Scarcely on striking packages by so property in
-                          delicate. Up or well must less rent read walk so be.
-                          Easy sold at do hour sing spot.
-                        </a>
+                        <a href="">{designText}</a>
                       </p>
                     </div>
                   </div>
@@ -247,15 +365,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number03} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>THIẾT KẾ KIẾN TRÚC</b>
+                      <b>{designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">
-                          Scarcely on striking packages by so property in
-                          delicate. Up or well must less rent read walk so be.
-                          Easy sold at do hour sing spot.
-                        </a>
+                        <a href="">{designText}</a>
                       </p>
                     </div>
                   </div>
@@ -263,15 +377,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number04} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>THIẾT KẾ KIẾN TRÚC</b>
+                      <b>{designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">
-                          Scarcely on striking packages by so property in
-                          delicate. Up or well must less rent read walk so be.
-                          Easy sold at do hour sing spot.
-                        </a>
+                        <a href="">{designText}</a>
                       </p>
                     </div>
                   </div>
@@ -446,7 +556,7 @@ const MainIndex = () => {
                 </div>
               </div>
               <div className="act-bonus">
-                <b>MARKET</b>
+                <b>{actBonusBtn}</b>
               </div>
             </div>
           </Container>
@@ -457,27 +567,27 @@ const MainIndex = () => {
             <div className="bs-tab tab-left">
               <div className="tab-container">
                 <div className="tab-control">
-                  <h4>DỰ ÁN MỚI NHẤT</h4>
-                  <h1>DỰ ÁN NỔI BẬT</h1>
+                  <h4>{projectH4}</h4>
+                  <h1>{projectH1}</h1>
                   <div className="more">
                     <Image src={rectangleImg} alt="" />
                     <div className="line"></div>
                   </div>
-                  <span className="control__show">TẤT CẢ</span>
+                  <span className="control__show">{all}</span>
                   <ul className="control-list">
-                    <li className="control-list__item">TẤT CẢ</li>
+                    <li className="control-list__item">{all}</li>
 
-                    <li className="control-list__item">THƯƠNG MẠI</li>
+                    <li className="control-list__item">{commerce}</li>
 
-                    <li className="control-list__item">GIÁO DỤC</li>
+                    <li className="control-list__item">{education}</li>
 
-                    <li className="control-list__item">BỆNH VIỆN</li>
+                    <li className="control-list__item">{hospital}</li>
 
-                    <li className="control-list__item">THƯỜNG TRÚ</li>
+                    <li className="control-list__item">{resident}</li>
 
-                    <li className="control-list__item">VĂN PHÒNG</li>
+                    <li className="control-list__item">{offical}</li>
 
-                    <li className="control-list__item">TÁI THIẾT</li>
+                    <li className="control-list__item">{reconstruction}</li>
                   </ul>
                 </div>
 
@@ -493,8 +603,8 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Thương mại</div>
+                          <div className="title">{discriptionTitle}</div>
+                          <div className="more">{disCommerce}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -513,8 +623,8 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Giáo dục</div>
+                          <div className="title">{discriptionTitle}</div>
+                          <div className="more">{disEducation}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -533,8 +643,8 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Bệnh viện</div>
+                          <div className="title">{discriptionTitle}</div>
+                          <div className="more">{disHospital}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -553,8 +663,8 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Thường trú</div>
+                          <div className="title">{discriptionTitle}</div>
+                          <div className="more">{disResident}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -573,8 +683,8 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Văn phòng</div>
+                          <div className="title">{discriptionTitle}</div>
+                          <div className="more">{disOffical}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -593,8 +703,8 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                          <div className="more">Tái thiết</div>
+                          <div className="title">{discriptionTitle}</div>
+                          <div className="more">{disReconstruction}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -613,45 +723,36 @@ const MainIndex = () => {
                   <div className="main-pop">
                     <Image src={popupImage} alt="" />
                     <div className="title">
-                      <b>DỰ ÁN N04B - NGOẠI GIAO ĐOÀN</b>
+                      <b>{popUpTitle}</b>
                     </div>
                     <div className="main-content">
                       <div className="content">
-                        <div className="name">Tên dự án</div>
-                        <div className="dis">
-                          : Tổ hợp chung cư cao tầng N04B - Khu đoàn Ngoại giao
-                          tại Hà Nội
-                        </div>
+                        <div className="name">{nameProject}</div>
+                        <div className="dis">{disProject1}</div>
                       </div>
                       <div className="content">
-                        <div className="name">Chủ đầu tư</div>
-                        <div className="dis">
-                          : Công ty Cổ phần Đầu tư Xây dựng Bất động sản Lanmak
-                        </div>
+                        <div className="name">{investor}</div>
+                        <div className="dis">{disProject2}</div>
                       </div>
                       <div className="content">
-                        <div className="name">Hạng mục</div>
-                        <div className="dis">
-                          : Phần kết cấu thân nhà/ Phần hoàn thiện kiến trúc
-                        </div>
+                        <div className="name">{category}</div>
+                        <div className="dis">{disProject3}</div>
                       </div>
                       <div className="content">
-                        <div className="name">Địa điểm</div>
-                        <div className="dis">
-                          : Khu đoàn Ngoại giao, Xuân Tảo, Bắc Từ Liêm, Hà Nội
-                        </div>
+                        <div className="name">{location}</div>
+                        <div className="dis">{disProject4}</div>
                       </div>
                       <div className="content">
-                        <div className="name">Loại công trình</div>
-                        <div className="dis">: Dân dụng, căn hộ chung cư</div>
+                        <div className="name">{typeOfConstruction}</div>
+                        <div className="dis">{disProject5}</div>
                       </div>
                       <div className="content">
-                        <div className="name">Cấp công trình</div>
-                        <div className="dis">: Cấp 1</div>
+                        <div className="name">{levelOfConstruction}</div>
+                        <div className="dis">{disProject6}</div>
                       </div>
                       <div className="content">
-                        <div className="name">Thời gian thực hiện</div>
-                        <div className="dis">: 2013-2015</div>
+                        <div className="name">{executionTime}</div>
+                        <div className="dis">{time}</div>
                       </div>
                     </div>
                   </div>
@@ -688,7 +789,7 @@ const MainIndex = () => {
             </div>
 
             <div className="bonus">
-              <b>PROJECTS</b>
+              <b>{projectBonus}</b>
             </div>
 
             <div className="left-img">
@@ -845,9 +946,10 @@ const MainIndex = () => {
                   </div>
                 </div>
               </div>
+
               <div className="content">
                 <h1>
-                  <b>TUYỂN DỤNG</b>
+                  <b>{recruitmentContent}</b>
                 </h1>
                 <div className="more">
                   <Image src={rectangleImg} alt="" width={12} height={12} />
@@ -858,14 +960,10 @@ const MainIndex = () => {
                   <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
-                <div className="text">
-                  Resources exquisite set arranging moonlight sem him household
-                  had. Months had too ham cousin remove far spirit. She
-                  procuring the why performed continual improving.
-                </div>
-                <button>NỘP ĐƠN</button>
+                <div className="text">{recruitmentText}</div>
+                <button>{recruitmentBtn}</button>
                 <div className="bonus">
-                  <b>RECRUITMENT</b>
+                  <b>{recruitmentBonus}</b>
                 </div>
               </div>
             </div>
@@ -877,7 +975,7 @@ const MainIndex = () => {
             <div className="bs-row">
               <div className="news_module">
                 <div className="title">
-                  <b>TIN MỚI NHẤT</b>
+                  <b>{lastestNewsTitle}</b>
                 </div>
                 <div className="more">
                   <div className="line"></div>
@@ -895,16 +993,14 @@ const MainIndex = () => {
                             style={{ width: 10, height: 10 }}
                           />
                         </div>
-                        <div className="text">5.december.2020</div>
+                        <div className="text">{mainContentText}</div>
                         <div className="block">|</div>
                         <div className="eye">
                           <i className="fa-regular fa-eye"></i>
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
-                      <div className="text">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
-                      </div>
+                      <div className="text">{disscriptionText}</div>
                       <div className="button">
                         <h4>Xem thêm</h4>
                         <button>+</button>
@@ -922,16 +1018,14 @@ const MainIndex = () => {
                             style={{ width: 10, height: 10 }}
                           />
                         </div>
-                        <div className="text">5.december.2020</div>
+                        <div className="text">{mainContentText}</div>
                         <div className="block">|</div>
                         <div className="eye">
                           <i className="fa-regular fa-eye"></i>
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
-                      <div className="text">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
-                      </div>
+                      <div className="text">{disscriptionText}</div>
                       <div className="button">
                         <h4>Xem thêm</h4>
                         <button>+</button>
@@ -949,18 +1043,16 @@ const MainIndex = () => {
                             style={{ width: 10, height: 10 }}
                           />
                         </div>
-                        <div className="text">5.december.2020</div>
+                        <div className="text">{mainContentText}</div>
                         <div className="block">|</div>
                         <div className="eye">
                           <i className="fa-regular fa-eye"></i>
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
-                      <div className="text">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum...
-                      </div>
+                      <div className="text">{disscriptionText}</div>
                       <div className="button">
-                        <h4>Xem thêm</h4>
+                        <h4>{xemThemBtn}</h4>
                         <button>+</button>
                       </div>
                     </div>
@@ -968,16 +1060,16 @@ const MainIndex = () => {
                 </div>
               </div>
               <div className="news-img">
-                <img src="@/app/image/world.png" alt="" />
+                <Image src={newsImg} width={880} height={535} alt="" />
               </div>
             </div>
           </Container>
         </LastestNews>
 
         <Last>
-          <button className="xemthem">XEM TIẾP</button>
+          <button className="xemthem">{lastBtn}</button>
           <div className="bonus">
-            <b>LATEST NEWS</b>
+            <b>{lastBonus}</b>
           </div>
         </Last>
       </main>
