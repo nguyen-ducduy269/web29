@@ -669,6 +669,7 @@ export const Recruitment = styled.section`
         }
       }
     }
+
     .content {
       width: 50%;
       position: relative;

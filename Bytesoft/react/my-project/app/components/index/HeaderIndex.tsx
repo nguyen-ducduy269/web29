@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 import {
-  faPhone,
   faMagnifyingGlass,
   faChevronDown,
   faBars,
   faXmark,
+  faPhoneFlip,
 } from "@fortawesome/free-solid-svg-icons";
 
 // import image/
@@ -48,7 +48,7 @@ const HeaderIndex = () => {
             <div className="main-content">
               <div className="head-left">
                 <FontAwesomeIcon
-                  icon={faPhone}
+                  icon={faPhoneFlip}
                   style={{
                     fontSize: "8px",
                     color: "#1ac667",
@@ -58,6 +58,7 @@ const HeaderIndex = () => {
                 />
                 <div className="hotline">HOTLINE:1900 2863</div>
               </div>
+
               <div className="head-right">
                 <input type="search" placeholder="Search..." />
                 <div className="icon">
@@ -67,7 +68,7 @@ const HeaderIndex = () => {
                       marginLeft: "0",
                       marginRight: "0",
                       color: "#1ac667",
-                      fontSize: "12px",
+                      fontSize: "10px",
                     }}
                   />
                 </div>
