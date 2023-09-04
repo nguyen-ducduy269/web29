@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Providers } from "./GolbalRedux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
         className={inter.className}
         style={{ margin: 0, overflowX: "hidden" }}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

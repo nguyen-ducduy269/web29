@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import type { RootState } from "@/app/GolbalRedux/store";
+import { useSelector, useDispatch } from "react-redux";
 
 import {
   faMagnifyingGlass,
@@ -39,6 +41,11 @@ const HeaderIndex = () => {
       newValue + "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
     );
   };
+
+  const count = useSelector((state: RootState) => state.counter.title);
+  console.log("count", count);
+
+  const dispatch = useDispatch();
 
   return (
     <>

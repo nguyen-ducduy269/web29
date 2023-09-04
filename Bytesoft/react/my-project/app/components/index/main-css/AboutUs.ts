@@ -97,14 +97,13 @@ export const AboutUs = styled.section`
         left: -30px;
       }
     }
+
     .cautruc1 {
       position: absolute;
       position: absolute;
       top: -100px;
       left: 36%;
-      width: 428px;
       z-index: -1;
-      height: 250px;
       animation: cautruc1 3s infinite alternate;
     }
     @keyframes cautruc1 {
@@ -115,10 +114,10 @@ export const AboutUs = styled.section`
         transform: rotate(-10deg);
       }
     }
+
     .cautruc2 {
       position: absolute;
       top: 193px;
-      width: 300px;
       z-index: -1;
       left: 187px;
       animation: cautruc2 3s infinite alternate;
@@ -131,10 +130,10 @@ export const AboutUs = styled.section`
         transform: rotate(5deg);
       }
     }
+
     .mayphai {
       position: absolute;
       right: -150px;
-      width: 403px;
       top: 62%;
       z-index: -1;
       animation: mayphai 4s infinite alternate;

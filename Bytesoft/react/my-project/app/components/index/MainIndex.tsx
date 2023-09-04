@@ -130,9 +130,27 @@ const MainIndex = () => {
               height={454}
               alt=""
             />
-            <Image className="cautruc1" src={cauTruc1} alt="" />
-            <Image className="cautruc2" src={cauTruc2} alt="" />
-            <Image className="mayphai" src={mayPhai} alt="" />
+            <Image
+              className="cautruc1"
+              src={cauTruc1}
+              width={428}
+              height={250}
+              alt=""
+            />
+            <Image
+              className="cautruc2"
+              src={cauTruc2}
+              width={300}
+              height={255}
+              alt=""
+            />
+            <Image
+              className="mayphai"
+              src={mayPhai}
+              width={403}
+              height={772}
+              alt=""
+            />
           </div>
 
           <Container>
