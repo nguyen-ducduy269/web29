@@ -4,6 +4,8 @@ import { Container } from "../Container";
 import { SectionContact } from "./contact-css/SectionContact";
 import { SectionInfor } from "./contact-css/SectionInfor";
 import Image from "next/image";
+import type { RootState } from "@/app/GolbalRedux/store";
+import { useSelector } from "react-redux";
 
 import locationImg from "@/app/image/location.png";
 import callImg from "@/app/image/call.png";
@@ -11,6 +13,20 @@ import mailImg from "@/app/image/mail.png";
 import point from "@/app/image/point.png";
 
 const ContactMain = () => {
+  const locationText = useSelector(
+    (state: RootState) => state.counter.locationText
+  );
+  const callNumber = useSelector(
+    (state: RootState) => state.counter.callNumber
+  );
+  const contactMail = useSelector(
+    (state: RootState) => state.counter.contactMail
+  );
+  const help = useSelector((state: RootState) => state.counter.help);
+  const contactHeaderTitle = useSelector(
+    (state: RootState) => state.counter.contactHeaderTitle
+  );
+
   return (
     <>
       <SectionContact>
@@ -22,10 +38,7 @@ const ContactMain = () => {
                   <div className="main-img">
                     <Image src={locationImg} width={22} height={22} alt="" />
                   </div>
-                  <div className="text">
-                    Tầng 2, Lô 8 + 15 NV, Khu HH1 Ô16 Tây Hồ Tây, P.Xuân La,
-                    Q.Tây Hồ, TP.Hà Nội.
-                  </div>
+                  <div className="text">{locationText}</div>
                 </div>
               </a>
             </div>
@@ -35,7 +48,7 @@ const ContactMain = () => {
                   <div className="main-img active">
                     <Image src={callImg} width={22} height={22} alt="" />
                   </div>
-                  <div className="number">024.6666.7069</div>
+                  <div className="number">{callNumber}</div>
                 </div>
               </a>
             </div>
@@ -45,7 +58,7 @@ const ContactMain = () => {
                   <div className="main-img">
                     <Image src={mailImg} width={22} height={18} alt="" />
                   </div>
-                  <div className="gmail">vanphongace5.ace@gmail.com</div>
+                  <div className="gmail">{contactMail}</div>
                 </div>
               </a>
             </div>
@@ -68,11 +81,9 @@ const ContactMain = () => {
 
         <div className="contact-us">
           <div className="title">
-            <b>LIÊN HỆ</b>
+            <b>{contactHeaderTitle}</b>
           </div>
-          <div className="help">
-            Cung cấp thông tin để chúng tôi có thể hỗ trợ bạn
-          </div>
+          <div className="help">{help}</div>
           <div className="form">
             <input type="text" placeholder="Họ và tên" />
             <input type="text" placeholder="Tổ chức" />

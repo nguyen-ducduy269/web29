@@ -32,6 +32,7 @@ export const LastestNews = styled.section`
           background-color: rgba(131, 151, 185);
         }
       }
+
       .main-content {
         max-width: 90%;
         margin: 0 auto;
@@ -47,6 +48,7 @@ export const LastestNews = styled.section`
           display: flex;
           flex-direction: column;
           align-items: center;
+          z-index: 2;
           .discription {
             position: absolute;
             background-color: #fff;

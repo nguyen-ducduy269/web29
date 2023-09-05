@@ -9,8 +9,8 @@ import {
   faArrowLeft,
   faArrowRight,
   faCircleXmark,
-  faClock,
 } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 //// import components
 import { AboutUs } from "./main-css/AboutUs";

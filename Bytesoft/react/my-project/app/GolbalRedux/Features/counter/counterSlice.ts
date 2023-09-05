@@ -90,7 +90,17 @@ export interface CounterState {
   page3: number;
   finalPage: number;
   final: string;
-  footerFinal:string,
+  footerFinal: string;
+  denote: string;
+  unpacked: string;
+  yourSelf: string;
+  bodyMeet: string;
+  smilling: string;
+  moduleNews: string;
+  locationText: string;
+  callNumber: string;
+  contactMail: string;
+  help: string;
 }
 
 const initialState: CounterState = {
@@ -106,8 +116,6 @@ const initialState: CounterState = {
   indexBannerDescription:
     "It is a long established fact that a reader will be distracted by the readable content.",
   seeMoreBtn: "XEM THÊM",
-  contactHeaderTitle: "LIÊN HỆ",
-  contactHeaderDescription: "Trang chủ / Liên hệ",
 
   ////// index main
   //// about us
@@ -211,7 +219,28 @@ const initialState: CounterState = {
   final: "Next",
 
   ///// news footer
-  footerFinal:"Bản quyền © 2019 bởi Công ty Cổ phần Đầu tư và Xây dựng ACE5 Thái Bình Dương",
+  footerFinal:
+    "Bản quyền © 2019 bởi Công ty Cổ phần Đầu tư và Xây dựng ACE5 Thái Bình Dương",
+  denote:
+    "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgance one own you inquietude sympathize.",
+  unpacked:
+    "Unpacked reserved sir offering bed judgment mat and quitting speaking, is do be improved raptures offering required in replying raillery. Stairs ladies friend by in mutual an no. Mr hance chief he cause. Whole no doors on hoped. Mile tell if help they ye full name.",
+  yourSelf:
+    "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
+  bodyMeet:
+    "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
+  smilling:
+    "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr.",
+  moduleNews: "Far concluded not his something extremily",
+
+  //// contact
+  contactHeaderTitle: "LIÊN HỆ",
+  contactHeaderDescription: "Trang chủ / Liên hệ",
+  locationText:
+    "Tầng 2, Lô 8 + 15 NV, Khu HH1 Ô16 Tây Hồ Tây, P.Xuân La, Q.Tây Hồ, TP.Hà Nội.",
+  callNumber: "024.6666.7069",
+  contactMail: "vanphongace5.ace@gmail.com",
+  help: "Cung cấp thông tin để chúng tôi có thể hỗ trợ bạn",
 };
 
 export const counterSlice = createSlice({

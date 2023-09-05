@@ -3,11 +3,8 @@ import React from "react";
 import Image from "next/image";
 import contentImg from "@/app/image/content-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClock,
-  faEye,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
 import type { RootState } from "@/app/GolbalRedux/store";
 import { useSelector } from "react-redux";
@@ -368,6 +365,7 @@ const MainNews = () => {
                   </div>
                 </div>
               </div>
+
               <div className="switch">
                 <button className="prev">{switchOption}</button>
                 <div className="page">
