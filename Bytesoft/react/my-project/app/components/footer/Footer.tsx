@@ -1,12 +1,48 @@
 "use client";
 import React from "react";
 import { Foot } from "./Foot";
+import type { RootState } from "@/app/GolbalRedux/store";
+import { useSelector } from "react-redux";
 
 import Image from "next/image";
 import footerImg from "@/app/image/footer-img.png";
 import footImg from "@/app/image/footer.png";
 
 const Footer = () => {
+  const footerMainText = useSelector(
+    (state: RootState) => state.counter.footerMainText
+  );
+  const serviceTitle = useSelector(
+    (state: RootState) => state.counter.serviceTitle
+  );
+  const privacyPolicy = useSelector(
+    (state: RootState) => state.counter.privacyPolicy
+  );
+  const termsAndConditions = useSelector(
+    (state: RootState) => state.counter.termsAndConditions
+  );
+  const copyRightPolicy = useSelector(
+    (state: RootState) => state.counter.copyRightPolicy
+  );
+  const codeOfConduct = useSelector(
+    (state: RootState) => state.counter.codeOfConduct
+  );
+  const chemicalEngineeringProject = useSelector(
+    (state: RootState) => state.counter.chemicalEngineeringProject
+  );
+  const miningEngineeringConstruction = useSelector(
+    (state: RootState) => state.counter.miningEngineeringConstruction
+  );
+  const engineeringWeldingEngineering = useSelector(
+    (state: RootState) => state.counter.engineeringWeldingEngineering
+  );
+  const weldingEngineering = useSelector(
+    (state: RootState) => state.counter.weldingEngineering
+  );
+  const footerFinal = useSelector(
+    (state: RootState) => state.counter.footerFinal
+  );
+
   return (
     <>
       <Foot>
@@ -22,15 +58,7 @@ const Footer = () => {
               <div className="item">
                 <div className="noidung">
                   <Image src={footImg} width={233} height={59} alt="" />
-                  <div className="text">
-                    ACEFIC5 là Nhà thầu chính thi công tại các dự án lớn tại Hà
-                    Nội, Đà Nẵng và nhiều tỉnh thành thành phố trên cả nước.
-                    Công ty Cổ phần Đầu tư và Xây dựng ACE5 Thái Bình Dương luôn
-                    đáp ứng được các yêu cầu khắt khe của các Chủ đầu tư, luôn
-                    đem đến cho khách hàng và xã hội các sản phẩm với chất lượng
-                    tốt nhất, tiến độ nhanh nhất mà vẫn đảm bảo tính an toàn và
-                    hiệu quả đầu tư trên mỗi công trình....
-                  </div>
+                  <div className="text">{footerMainText}</div>
                 </div>
               </div>
             </div>
@@ -39,36 +67,33 @@ const Footer = () => {
               <div className="item">
                 <div className="bs-right">
                   <div className="service">
-                    <div className="title">DỊCH VỤ</div>
+                    <div className="title">{serviceTitle}</div>
                     <div className="detail">
-                      <div className="infor">Privacy Policy</div>
-                      <div className="infor">Terms and Conditions</div>
-                      <div className="infor">Copyright Policy</div>
-                      <div className="infor">Code of Conduct</div>
+                      <div className="infor">{privacyPolicy}</div>
+                      <div className="infor">{termsAndConditions}</div>
+                      <div className="infor">{copyRightPolicy}</div>
+                      <div className="infor">{codeOfConduct}</div>
                     </div>
                   </div>
 
                   <div className="services">
-                    <div className="title">DỊCH VỤ</div>
+                    <div className="title">{serviceTitle}</div>
                     <div className="detail">
-                      <div className="infor">Chemical Engineering Projects</div>
+                      <div className="infor">{chemicalEngineeringProject}</div>
                       <div className="infor">
-                        Mining Engineering Construction
+                        {miningEngineeringConstruction}
                       </div>
                       <div className="infor">
-                        Engineering Welding Engineering
+                        {engineeringWeldingEngineering}
                       </div>
-                      <div className="infor">Welding Engineering</div>
+                      <div className="infor">{weldingEngineering}</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="final">
-            Bản quyền © 2019 bởi Công ty Cổ phần Đầu tư và Xây dựng ACE5 Thái
-            Bình Dương
-          </div>
+          <div className="final">{footerFinal}</div>
         </div>
       </Foot>
     </>

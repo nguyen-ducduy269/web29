@@ -73,13 +73,6 @@ export const Main = styled.div`
             padding-left: 10px;
             font-style: italic;
           }
-          i {
-            position: absolute;
-            right: 21%;
-            font-size: 14px;
-            top: 15px;
-            color: rgba(26, 198, 103);
-          }
         }
         .news {
           width: 207px;

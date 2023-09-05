@@ -5,7 +5,7 @@ import MainNews from "../components/news/MainNews";
 export default function News() {
   return (
     <>
-      <HeaderNews title="TIN TỨC" description="Tin tức"/>
+      <HeaderNews />
       <MainNews />
       <Footer />
     </>

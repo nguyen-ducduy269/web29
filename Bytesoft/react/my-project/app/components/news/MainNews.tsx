@@ -3,14 +3,41 @@ import React from "react";
 import Image from "next/image";
 import contentImg from "@/app/image/content-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faEye } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClock,
+  faEye,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import type { RootState } from "@/app/GolbalRedux/store";
+import { useSelector } from "react-redux";
 
 ///// import components
 import { Container } from "../Container";
 import { Main } from "./main-news-css/Main";
 
 const MainNews = () => {
+  const mainContentText = useSelector(
+    (state: RootState) => state.counter.mainContentText
+  );
+  const mainView = useSelector((state: RootState) => state.counter.mainView);
+  const moduleTitle = useSelector(
+    (state: RootState) => state.counter.moduleTitle
+  );
+  const moduleNewText = useSelector(
+    (state: RootState) => state.counter.moduleNewText
+  );
+  const newHeading = useSelector(
+    (state: RootState) => state.counter.newHeading
+  );
+  const newsTitle = useSelector((state: RootState) => state.counter.newsTitle);
+  const switchOption = useSelector((state: RootState) => state.counter.switch);
+  const page1 = useSelector((state: RootState) => state.counter.page1);
+  const page2 = useSelector((state: RootState) => state.counter.page2);
+  const page3 = useSelector((state: RootState) => state.counter.page3);
+  const finalPage = useSelector((state: RootState) => state.counter.finalPage);
+  const final = useSelector((state: RootState) => state.counter.final);
+
   return (
     <>
       <Main>
@@ -33,7 +60,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">5.december.2020</div>
+                        <div className="date">{mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -44,19 +71,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
 
-                      <div className="title">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum sit
-                        amet aenean...
-                      </div>
+                      <div className="title">{moduleTitle}</div>
 
-                      <div className="text">
-                        Far concluded not his something extremity. Want four we
-                        face an he gate. On he of played he ladies answer little
-                        though nature. Blessing oh do pleasure as so formerly.
-                      </div>
+                      <div className="text">{moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -74,7 +94,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">5.december.2020</div>
+                        <div className="date">{mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -85,19 +105,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
 
-                      <div className="title">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum sit
-                        amet aenean...
-                      </div>
+                      <div className="title">{moduleTitle}</div>
 
-                      <div className="text">
-                        Far concluded not his something extremity. Want four we
-                        face an he gate. On he of played he ladies answer little
-                        though nature. Blessing oh do pleasure as so formerly.
-                      </div>
+                      <div className="text">{moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -115,7 +128,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">5.december.2020</div>
+                        <div className="date">{mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -126,19 +139,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
 
-                      <div className="title">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum sit
-                        amet aenean...
-                      </div>
+                      <div className="title">{moduleTitle}</div>
 
-                      <div className="text">
-                        Far concluded not his something extremity. Want four we
-                        face an he gate. On he of played he ladies answer little
-                        though nature. Blessing oh do pleasure as so formerly.
-                      </div>
+                      <div className="text">{moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -156,7 +162,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">5.december.2020</div>
+                        <div className="date">{mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -167,19 +173,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
 
-                      <div className="title">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum sit
-                        amet aenean...
-                      </div>
+                      <div className="title">{moduleTitle}</div>
 
-                      <div className="text">
-                        Far concluded not his something extremity. Want four we
-                        face an he gate. On he of played he ladies answer little
-                        though nature. Blessing oh do pleasure as so formerly.
-                      </div>
+                      <div className="text">{moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -197,7 +196,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">5.december.2020</div>
+                        <div className="date">{mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -208,19 +207,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
 
-                      <div className="title">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum sit
-                        amet aenean...
-                      </div>
+                      <div className="title">{moduleTitle}</div>
 
-                      <div className="text">
-                        Far concluded not his something extremity. Want four we
-                        face an he gate. On he of played he ladies answer little
-                        though nature. Blessing oh do pleasure as so formerly.
-                      </div>
+                      <div className="text">{moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -238,7 +230,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">5.december.2020</div>
+                        <div className="date">{mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -249,19 +241,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">328</div>
+                        <div className="view">{mainView}</div>
                       </div>
 
-                      <div className="title">
-                        Lorem ipsum dolor sit amet aenean nisi sociis ipsum sit
-                        amet aenean...
-                      </div>
+                      <div className="title">{moduleTitle}</div>
 
-                      <div className="text">
-                        Far concluded not his something extremity. Want four we
-                        face an he gate. On he of played he ladies answer little
-                        though nature. Blessing oh do pleasure as so formerly.
-                      </div>
+                      <div className="text">{moduleNewText}</div>
                     </Link>
                   </div>
                 </div>
@@ -269,80 +254,113 @@ const MainNews = () => {
                 <div className="outstand-new">
                   <div className="search">
                     <input type="text" placeholder="Tìm kiếm" />
-                    <i className="fa-solid fa-magnifying-glass"></i>
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlass}
+                      style={{
+                        position: "absolute",
+                        right: "21%",
+                        fontSize: 14,
+                        top: 15,
+                        color: "rgba(26, 198, 103)",
+                      }}
+                    />
                   </div>
 
                   <div className="news">
-                    <div className="heading">TIN NỔI BẬT</div>
+                    <div className="heading">{newHeading}</div>
                     <div className="line"></div>
                     <div className="new">
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">
-                            Far concluded not his something extremily
-                          </div>
+                          <div className="title">{newsTitle}</div>
                           <div className="more">
                             <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
+                              <FontAwesomeIcon
+                                icon={faClock}
+                                style={{
+                                  fontSize: 12,
+                                  marginRight: 7,
+                                }}
+                              />
                             </div>
-                            <div className="day">5.december.2020</div>
+                            <div className="day">{mainContentText}</div>
                           </div>
                         </div>
                       </div>
+
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">
-                            Far concluded not his something extremily
-                          </div>
+                          <div className="title">{newsTitle}</div>
                           <div className="more">
                             <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
+                              <FontAwesomeIcon
+                                icon={faClock}
+                                style={{
+                                  fontSize: 12,
+                                  marginRight: 7,
+                                }}
+                              />
                             </div>
-                            <div className="day">5.december.2020</div>
+                            <div className="day">{mainContentText}</div>
                           </div>
                         </div>
                       </div>
+
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">
-                            Far concluded not his something extremily
-                          </div>
+                          <div className="title">{newsTitle}</div>
                           <div className="more">
                             <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
+                              <FontAwesomeIcon
+                                icon={faClock}
+                                style={{
+                                  fontSize: 12,
+                                  marginRight: 7,
+                                }}
+                              />
                             </div>
-                            <div className="day">5.december.2020</div>
+                            <div className="day">{mainContentText}</div>
                           </div>
                         </div>
                       </div>
+
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">
-                            Far concluded not his something extremily
-                          </div>
+                          <div className="title">{newsTitle}</div>
                           <div className="more">
                             <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
+                              <FontAwesomeIcon
+                                icon={faClock}
+                                style={{
+                                  fontSize: 12,
+                                  marginRight: 7,
+                                }}
+                              />
                             </div>
-                            <div className="day">5.december.2020</div>
+                            <div className="day">{mainContentText}</div>
                           </div>
                         </div>
                       </div>
+
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">
-                            Far concluded not his something extremily
-                          </div>
+                          <div className="title">{newsTitle}</div>
                           <div className="more">
                             <div className="clock">
-                              <i className="fa-regular fa-clock"></i>
+                              <FontAwesomeIcon
+                                icon={faClock}
+                                style={{
+                                  fontSize: 12,
+                                  marginRight: 7,
+                                }}
+                              />
                             </div>
-                            <div className="day">5.december.2020</div>
+                            <div className="day">{mainContentText}</div>
                           </div>
                         </div>
                       </div>
@@ -351,20 +369,20 @@ const MainNews = () => {
                 </div>
               </div>
               <div className="switch">
-                <button className="prev">Prev</button>
+                <button className="prev">{switchOption}</button>
                 <div className="page">
-                  <a href="">1</a>
+                  <a href="">{page1}</a>
                 </div>
                 <div className="page">
-                  <a href="">2</a>
+                  <a href="">{page2}</a>
                 </div>
                 <div className="page">
-                  <a href="">3</a>
+                  <a href="">{page3}</a>
                 </div>
                 <div className="page">
-                  <a href="">60</a>
+                  <a href="">{finalPage}</a>
                 </div>
-                <button className="next">Next</button>
+                <button className="next">{final}</button>
               </div>
             </div>
           </Container>

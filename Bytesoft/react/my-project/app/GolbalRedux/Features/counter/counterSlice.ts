@@ -80,6 +80,17 @@ export interface CounterState {
   engineeringWeldingEngineering: string;
   weldingEngineering: string;
   partnersCustomers: string;
+  moduleTitle: string;
+  moduleNewText: string;
+  newsTitle: string;
+  newHeading: string;
+  switch: string;
+  page1: number;
+  page2: number;
+  page3: number;
+  finalPage: number;
+  final: string;
+  footerFinal:string,
 }
 
 const initialState: CounterState = {
@@ -95,8 +106,6 @@ const initialState: CounterState = {
   indexBannerDescription:
     "It is a long established fact that a reader will be distracted by the readable content.",
   seeMoreBtn: "XEM THÊM",
-  newsHeaderTitle: "TIN TỨC",
-  newsHeaderDescription: "Trang chủ / Tin tức",
   contactHeaderTitle: "LIÊN HỆ",
   contactHeaderDescription: "Trang chủ / Liên hệ",
 
@@ -181,6 +190,28 @@ const initialState: CounterState = {
   engineeringWeldingEngineering: "Engineering Welding Engineering",
   weldingEngineering: "Welding Engineering",
   partnersCustomers: "ĐỐI TÁC KHÁCH HÀNG",
+
+  /////// news
+  //// header news
+  newsHeaderTitle: "TIN TỨC",
+  newsHeaderDescription: "Trang chủ / Tin tức",
+
+  //// news main
+  moduleTitle:
+    "Lorem ipsum dolor sit amet aenean nisi sociis ipsum sit amet aenean...",
+  moduleNewText:
+    "Far concluded not his something extremity. Want four we face an he gate. On he of played he ladies answer little though nature. Blessing oh do pleasure as so formerly.",
+  newsTitle: "Far concluded not his something extremily",
+  newHeading: "TIN NỔI BẬT",
+  switch: "Prev",
+  page1: 1,
+  page2: 2,
+  page3: 3,
+  finalPage: 60,
+  final: "Next",
+
+  ///// news footer
+  footerFinal:"Bản quyền © 2019 bởi Công ty Cổ phần Đầu tư và Xây dựng ACE5 Thái Bình Dương",
 };
 
 export const counterSlice = createSlice({
