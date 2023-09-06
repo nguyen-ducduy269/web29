@@ -1,5 +1,5 @@
 "use client";
-
+////// json server => redux
 import { createSlice } from "@reduxjs/toolkit";
 
 export interface CounterState {
