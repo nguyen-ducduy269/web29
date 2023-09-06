@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Head = styled.div`
-  min-height: 810px;
+  min-height: 760px;
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;

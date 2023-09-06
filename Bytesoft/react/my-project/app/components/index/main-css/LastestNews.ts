@@ -124,6 +124,7 @@ export const LastestNews = styled.section`
     }
     .news-img {
       position: absolute;
+      z-index: -1;
       img {
         width: 71%;
         margin-top: -31px;

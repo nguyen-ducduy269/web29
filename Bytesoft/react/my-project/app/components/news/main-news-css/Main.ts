@@ -121,7 +121,6 @@ export const Main = styled.div`
                   color: rgba(131, 151, 185);
                   .clock {
                     font-size: 12px;
-                    margin-right: 7px;
                   }
                   .day {
                     font-size: 12px;
