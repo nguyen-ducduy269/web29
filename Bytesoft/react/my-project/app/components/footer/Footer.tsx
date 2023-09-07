@@ -1,47 +1,20 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Foot } from "./Foot";
-import type { RootState } from "@/app/GolbalRedux/store";
-import { useSelector } from "react-redux";
+import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
 
 import Image from "next/image";
 import footerImg from "@/app/image/footer-img.png";
 import footImg from "@/app/image/footer.png";
 
 const Footer = () => {
-  const footerMainText = useSelector(
-    (state: RootState) => state.counter.footerMainText
-  );
-  const serviceTitle = useSelector(
-    (state: RootState) => state.counter.serviceTitle
-  );
-  const privacyPolicy = useSelector(
-    (state: RootState) => state.counter.privacyPolicy
-  );
-  const termsAndConditions = useSelector(
-    (state: RootState) => state.counter.termsAndConditions
-  );
-  const copyRightPolicy = useSelector(
-    (state: RootState) => state.counter.copyRightPolicy
-  );
-  const codeOfConduct = useSelector(
-    (state: RootState) => state.counter.codeOfConduct
-  );
-  const chemicalEngineeringProject = useSelector(
-    (state: RootState) => state.counter.chemicalEngineeringProject
-  );
-  const miningEngineeringConstruction = useSelector(
-    (state: RootState) => state.counter.miningEngineeringConstruction
-  );
-  const engineeringWeldingEngineering = useSelector(
-    (state: RootState) => state.counter.engineeringWeldingEngineering
-  );
-  const weldingEngineering = useSelector(
-    (state: RootState) => state.counter.weldingEngineering
-  );
-  const footerFinal = useSelector(
-    (state: RootState) => state.counter.footerFinal
-  );
+  const { entities } = useSelector((state: RootState) => state.counter);
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
 
   return (
     <>
@@ -58,7 +31,7 @@ const Footer = () => {
               <div className="item">
                 <div className="noidung">
                   <Image src={footImg} width={233} height={59} alt="" />
-                  <div className="text">{footerMainText}</div>
+                  <div className="text">{entities.footerMainText}</div>
                 </div>
               </div>
             </div>
@@ -67,33 +40,35 @@ const Footer = () => {
               <div className="item">
                 <div className="bs-right">
                   <div className="service">
-                    <div className="title">{serviceTitle}</div>
+                    <div className="title">{entities.serviceTitle}</div>
                     <div className="detail">
-                      <div className="infor">{privacyPolicy}</div>
-                      <div className="infor">{termsAndConditions}</div>
-                      <div className="infor">{copyRightPolicy}</div>
-                      <div className="infor">{codeOfConduct}</div>
+                      <div className="infor">{entities.privacyPolicy}</div>
+                      <div className="infor">{entities.termsAndConditions}</div>
+                      <div className="infor">{entities.copyRightPolicy}</div>
+                      <div className="infor">{entities.codeOfConduct}</div>
                     </div>
                   </div>
 
                   <div className="services">
-                    <div className="title">{serviceTitle}</div>
+                    <div className="title">{entities.serviceTitle}</div>
                     <div className="detail">
-                      <div className="infor">{chemicalEngineeringProject}</div>
                       <div className="infor">
-                        {miningEngineeringConstruction}
+                        {entities.chemicalEngineeringProject}
                       </div>
                       <div className="infor">
-                        {engineeringWeldingEngineering}
+                        {entities.miningEngineeringConstruction}
                       </div>
-                      <div className="infor">{weldingEngineering}</div>
+                      <div className="infor">
+                        {entities.engineeringWeldingEngineering}
+                      </div>
+                      <div className="infor">{entities.weldingEngineering}</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="final">{footerFinal}</div>
+          <div className="final">{entities.footerFinal}</div>
         </div>
       </Foot>
     </>

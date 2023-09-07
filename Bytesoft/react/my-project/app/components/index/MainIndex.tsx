@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { RootState } from "@/app/GolbalRedux/store";
-import { useSelector } from "react-redux";
+import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
 
 import {
   faArrowLeft,
@@ -115,133 +116,11 @@ const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
 
-  ///// about us
-  const aboutUsTitle = useSelector(
-    (state: RootState) => state.counter.aboutUsTitle
-  );
-  const aboutContent = useSelector(
-    (state: RootState) => state.counter.aboutContent
-  );
-  const aboutH1 = useSelector((state: RootState) => state.counter.aboutH1);
-  const xemThemBtn = useSelector(
-    (state: RootState) => state.counter.xemThemBtn
-  );
-
-  ///// activyty
-  const actTitle = useSelector((state: RootState) => state.counter.actTitle);
-  const designTitle = useSelector(
-    (state: RootState) => state.counter.designTitle
-  );
-  const designText = useSelector(
-    (state: RootState) => state.counter.designText
-  );
-  const actBonusBtn = useSelector(
-    (state: RootState) => state.counter.actBonusBtn
-  );
-
-  ///// project
-  const projectH4 = useSelector((state: RootState) => state.counter.projectH4);
-  const projectH1 = useSelector((state: RootState) => state.counter.projectH1);
-  const all = useSelector((state: RootState) => state.counter.all);
-  const commerce = useSelector((state: RootState) => state.counter.commerce);
-  const education = useSelector((state: RootState) => state.counter.education);
-  const hospital = useSelector((state: RootState) => state.counter.hospital);
-  const resident = useSelector((state: RootState) => state.counter.resident);
-  const offical = useSelector((state: RootState) => state.counter.offical);
-  const reconstruction = useSelector(
-    (state: RootState) => state.counter.reconstruction
-  );
-  const discriptionTitle = useSelector(
-    (state: RootState) => state.counter.discriptionTitle
-  );
-  const disCommerce = useSelector(
-    (state: RootState) => state.counter.disCommerce
-  );
-  const disEducation = useSelector(
-    (state: RootState) => state.counter.disEducation
-  );
-  const disHospital = useSelector(
-    (state: RootState) => state.counter.disHospital
-  );
-  const disResident = useSelector(
-    (state: RootState) => state.counter.disResident
-  );
-  const disOffical = useSelector(
-    (state: RootState) => state.counter.disOffical
-  );
-  const disReconstruction = useSelector(
-    (state: RootState) => state.counter.disReconstruction
-  );
-  const popUpTitle = useSelector(
-    (state: RootState) => state.counter.popUpTitle
-  );
-  const nameProject = useSelector(
-    (state: RootState) => state.counter.nameProject
-  );
-  const disProject1 = useSelector(
-    (state: RootState) => state.counter.disProject1
-  );
-  const investor = useSelector((state: RootState) => state.counter.investor);
-  const disProject2 = useSelector(
-    (state: RootState) => state.counter.disProject2
-  );
-  const category = useSelector((state: RootState) => state.counter.category);
-  const disProject3 = useSelector(
-    (state: RootState) => state.counter.disProject3
-  );
-  const location = useSelector((state: RootState) => state.counter.location);
-  const disProject4 = useSelector(
-    (state: RootState) => state.counter.disProject4
-  );
-  const typeOfConstruction = useSelector(
-    (state: RootState) => state.counter.typeOfConstruction
-  );
-  const disProject5 = useSelector(
-    (state: RootState) => state.counter.disProject5
-  );
-  const levelOfConstruction = useSelector(
-    (state: RootState) => state.counter.levelOfConstruction
-  );
-  const disProject6 = useSelector(
-    (state: RootState) => state.counter.disProject6
-  );
-  const executionTime = useSelector(
-    (state: RootState) => state.counter.executionTime
-  );
-  const time = useSelector((state: RootState) => state.counter.time);
-  const projectBonus = useSelector(
-    (state: RootState) => state.counter.projectBonus
-  );
-
-  //// recruitment
-  const recruitmentContent = useSelector(
-    (state: RootState) => state.counter.recruitmentContent
-  );
-  const recruitmentText = useSelector(
-    (state: RootState) => state.counter.recruitmentText
-  );
-  const recruitmentBtn = useSelector(
-    (state: RootState) => state.counter.recruitmentBtn
-  );
-  const recruitmentBonus = useSelector(
-    (state: RootState) => state.counter.recruitmentBonus
-  );
-
-  //// lastest news
-  const lastestNewsTitle = useSelector(
-    (state: RootState) => state.counter.lastestNewsTitle
-  );
-  const mainContentText = useSelector(
-    (state: RootState) => state.counter.mainContentText
-  );
-  const mainView = useSelector((state: RootState) => state.counter.mainView);
-  const disscriptionText = useSelector(
-    (state: RootState) => state.counter.disscriptionText
-  );
-
-  ///// last
-  const lastBtn = useSelector((state: RootState) => state.counter.lastBtn);
-  const lastBonus = useSelector((state: RootState) => state.counter.lastBonus);
+  const { entities } = useSelector((state: RootState) => state.counter);
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
 
   const addText = () => {
     setNewValue(
@@ -293,7 +172,7 @@ const MainIndex = () => {
               </div>
               <div className="content">
                 <div className="about-header">
-                  <h2 className="title">{aboutUsTitle}</h2>
+                  <h2 className="title">{entities.aboutUsTitle}</h2>
                   <div className="more">
                     <Image src={AboutUsImage} width={11} height={11} alt="" />
                     <div className="line"></div>
@@ -306,11 +185,13 @@ const MainIndex = () => {
                 </div>
                 <div className="about-content">
                   <div className="text">
-                    {aboutContent} {newValue}
+                    {entities.aboutContent} {newValue}
                   </div>
-                  <button onClick={() => addText()}>{xemThemBtn}</button>
+                  <button onClick={() => addText()}>
+                    {entities.xemThemBtn}
+                  </button>
                   <h1>
-                    <b>{aboutH1}</b>
+                    <b>{entities.aboutH1}</b>
                   </h1>
                 </div>
               </div>
@@ -323,7 +204,7 @@ const MainIndex = () => {
             <div className="module-activity">
               <div className="act-title">
                 <h2>
-                  <b>{actTitle}</b>
+                  <b>{entities.actTitle}</b>
                 </h2>
                 <div className="more">
                   <Image src={rectangleImg} alt="" width={12} height={12} />
@@ -341,11 +222,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number01} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>{designTitle}</b>
+                      <b>{entities.designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">{designText}</a>
+                        <a href="">{entities.designText}</a>
                       </p>
                     </div>
                   </div>
@@ -353,11 +234,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number02} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>{designTitle}</b>
+                      <b>{entities.designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">{designText}</a>
+                        <a href="">{entities.designText}</a>
                       </p>
                     </div>
                   </div>
@@ -365,11 +246,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number03} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>{designTitle}</b>
+                      <b>{entities.designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">{designText}</a>
+                        <a href="">{entities.designText}</a>
                       </p>
                     </div>
                   </div>
@@ -377,11 +258,11 @@ const MainIndex = () => {
                   <div className="design">
                     <Image src={number04} alt="" width={32} height={32} />
                     <div className="title">
-                      <b>{designTitle}</b>
+                      <b>{entities.designTitle}</b>
                     </div>
                     <div className="text">
                       <p>
-                        <a href="">{designText}</a>
+                        <a href="">{entities.designText}</a>
                       </p>
                     </div>
                   </div>
@@ -556,7 +437,7 @@ const MainIndex = () => {
                 </div>
               </div>
               <div className="act-bonus">
-                <b>{actBonusBtn}</b>
+                <b>{entities.actBonusBtn}</b>
               </div>
             </div>
           </Container>
@@ -567,27 +448,29 @@ const MainIndex = () => {
             <div className="bs-tab tab-left">
               <div className="tab-container">
                 <div className="tab-control">
-                  <h4>{projectH4}</h4>
-                  <h1>{projectH1}</h1>
+                  <h4>{entities.projectH4}</h4>
+                  <h1>{entities.projectH1}</h1>
                   <div className="more">
                     <Image src={rectangleImg} alt="" />
                     <div className="line"></div>
                   </div>
-                  <span className="control__show">{all}</span>
+                  <span className="control__show">{entities.all}</span>
                   <ul className="control-list">
-                    <li className="control-list__item">{all}</li>
+                    <li className="control-list__item">{entities.all}</li>
 
-                    <li className="control-list__item">{commerce}</li>
+                    <li className="control-list__item">{entities.commerce}</li>
 
-                    <li className="control-list__item">{education}</li>
+                    <li className="control-list__item">{entities.education}</li>
 
-                    <li className="control-list__item">{hospital}</li>
+                    <li className="control-list__item">{entities.hospital}</li>
 
-                    <li className="control-list__item">{resident}</li>
+                    <li className="control-list__item">{entities.resident}</li>
 
-                    <li className="control-list__item">{offical}</li>
+                    <li className="control-list__item">{entities.offical}</li>
 
-                    <li className="control-list__item">{reconstruction}</li>
+                    <li className="control-list__item">
+                      {entities.reconstruction}
+                    </li>
                   </ul>
                 </div>
 
@@ -603,8 +486,10 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">{discriptionTitle}</div>
-                          <div className="more">{disCommerce}</div>
+                          <div className="title">
+                            {entities.discriptionTitle}
+                          </div>
+                          <div className="more">{entities.disCommerce}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -623,8 +508,10 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">{discriptionTitle}</div>
-                          <div className="more">{disEducation}</div>
+                          <div className="title">
+                            {entities.discriptionTitle}
+                          </div>
+                          <div className="more">{entities.disEducation}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -643,8 +530,10 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">{discriptionTitle}</div>
-                          <div className="more">{disHospital}</div>
+                          <div className="title">
+                            {entities.discriptionTitle}
+                          </div>
+                          <div className="more">{entities.disHospital}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -663,8 +552,10 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">{discriptionTitle}</div>
-                          <div className="more">{disResident}</div>
+                          <div className="title">
+                            {entities.discriptionTitle}
+                          </div>
+                          <div className="more">{entities.disResident}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -683,8 +574,10 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">{discriptionTitle}</div>
-                          <div className="more">{disOffical}</div>
+                          <div className="title">
+                            {entities.discriptionTitle}
+                          </div>
+                          <div className="more">{entities.disOffical}</div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -703,8 +596,12 @@ const MainIndex = () => {
                           height={266}
                         />
                         <div className="discription">
-                          <div className="title">{discriptionTitle}</div>
-                          <div className="more">{disReconstruction}</div>
+                          <div className="title">
+                            {entities.discriptionTitle}
+                          </div>
+                          <div className="more">
+                            {entities.disReconstruction}
+                          </div>
                           <button
                             className="mutiple-button"
                             onClick={() => setOpenItem(true)}
@@ -723,36 +620,40 @@ const MainIndex = () => {
                   <div className="main-pop">
                     <Image src={popupImage} alt="" />
                     <div className="title">
-                      <b>{popUpTitle}</b>
+                      <b>{entities.popUpTitle}</b>
                     </div>
                     <div className="main-content">
                       <div className="content">
-                        <div className="name">{nameProject}</div>
-                        <div className="dis">{disProject1}</div>
+                        <div className="name">{entities.nameProject}</div>
+                        <div className="dis">{entities.disProject1}</div>
                       </div>
                       <div className="content">
-                        <div className="name">{investor}</div>
-                        <div className="dis">{disProject2}</div>
+                        <div className="name">{entities.investor}</div>
+                        <div className="dis">{entities.disProject2}</div>
                       </div>
                       <div className="content">
-                        <div className="name">{category}</div>
-                        <div className="dis">{disProject3}</div>
+                        <div className="name">{entities.category}</div>
+                        <div className="dis">{entities.disProject3}</div>
                       </div>
                       <div className="content">
-                        <div className="name">{location}</div>
-                        <div className="dis">{disProject4}</div>
+                        <div className="name">{entities.location}</div>
+                        <div className="dis">{entities.disProject4}</div>
                       </div>
                       <div className="content">
-                        <div className="name">{typeOfConstruction}</div>
-                        <div className="dis">{disProject5}</div>
+                        <div className="name">
+                          {entities.typeOfConstruction}
+                        </div>
+                        <div className="dis">{entities.disProject5}</div>
                       </div>
                       <div className="content">
-                        <div className="name">{levelOfConstruction}</div>
-                        <div className="dis">{disProject6}</div>
+                        <div className="name">
+                          {entities.levelOfConstruction}
+                        </div>
+                        <div className="dis">{entities.disProject6}</div>
                       </div>
                       <div className="content">
-                        <div className="name">{executionTime}</div>
-                        <div className="dis">{time}</div>
+                        <div className="name">{entities.executionTime}</div>
+                        <div className="dis">{entities.time}</div>
                       </div>
                     </div>
                   </div>
@@ -789,7 +690,7 @@ const MainIndex = () => {
             </div>
 
             <div className="bonus">
-              <b>{projectBonus}</b>
+              <b>{entities.projectBonus}</b>
             </div>
 
             <div className="left-img">
@@ -949,7 +850,7 @@ const MainIndex = () => {
 
               <div className="content">
                 <h1>
-                  <b>{recruitmentContent}</b>
+                  <b>{entities.recruitmentContent}</b>
                 </h1>
                 <div className="more">
                   <Image src={rectangleImg} alt="" width={12} height={12} />
@@ -960,10 +861,10 @@ const MainIndex = () => {
                   <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
-                <div className="text">{recruitmentText}</div>
-                <button>{recruitmentBtn}</button>
+                <div className="text">{entities.recruitmentText}</div>
+                <button>{entities.recruitmentBtn}</button>
                 <div className="bonus">
-                  <b>{recruitmentBonus}</b>
+                  <b>{entities.recruitmentBonus}</b>
                 </div>
               </div>
             </div>
@@ -975,7 +876,7 @@ const MainIndex = () => {
             <div className="bs-row">
               <div className="news_module">
                 <div className="title">
-                  <b>{lastestNewsTitle}</b>
+                  <b>{entities.lastestNewsTitle}</b>
                 </div>
                 <div className="more">
                   <div className="line"></div>
@@ -993,14 +894,14 @@ const MainIndex = () => {
                             style={{ width: 10, height: 10 }}
                           />
                         </div>
-                        <div className="text">{mainContentText}</div>
+                        <div className="text">{entities.mainContentText}</div>
                         <div className="block">|</div>
                         <div className="eye">
                           <i className="fa-regular fa-eye"></i>
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
-                      <div className="text">{disscriptionText}</div>
+                      <div className="text">{entities.disscriptionText}</div>
                       <div className="button">
                         <h4>Xem thêm</h4>
                         <button>+</button>
@@ -1018,16 +919,16 @@ const MainIndex = () => {
                             style={{ width: 10, height: 10 }}
                           />
                         </div>
-                        <div className="text">{mainContentText}</div>
+                        <div className="text">{entities.mainContentText}</div>
                         <div className="block">|</div>
                         <div className="eye">
                           <i className="fa-regular fa-eye"></i>
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
-                      <div className="text">{disscriptionText}</div>
+                      <div className="text">{entities.disscriptionText}</div>
                       <div className="button">
-                        <h4>Xem thêm</h4>
+                        <h4>{entities.xemThemBtn}</h4>
                         <button>+</button>
                       </div>
                     </div>
@@ -1043,16 +944,16 @@ const MainIndex = () => {
                             style={{ width: 10, height: 10 }}
                           />
                         </div>
-                        <div className="text">{mainContentText}</div>
+                        <div className="text">{entities.mainContentText}</div>
                         <div className="block">|</div>
                         <div className="eye">
                           <i className="fa-regular fa-eye"></i>
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
-                      <div className="text">{disscriptionText}</div>
+                      <div className="text">{entities.disscriptionText}</div>
                       <div className="button">
-                        <h4>{xemThemBtn}</h4>
+                        <h4>{entities.xemThemBtn}</h4>
                         <button>+</button>
                       </div>
                     </div>
@@ -1067,9 +968,9 @@ const MainIndex = () => {
         </LastestNews>
 
         <Last>
-          <button className="xemthem">{lastBtn}</button>
+          <button className="xemthem">{entities.lastBtn}</button>
           <div className="bonus">
-            <b>{lastBonus}</b>
+            <b>{entities.lastBonus}</b>
           </div>
         </Last>
       </main>

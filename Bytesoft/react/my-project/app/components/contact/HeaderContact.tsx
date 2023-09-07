@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import type { RootState } from "@/app/GolbalRedux/store";
-import { useSelector } from "react-redux";
+import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
 
 import {
   faPhoneFlip,
@@ -30,22 +31,11 @@ const HeaderContact = () => {
   const [changeFlag, setChangeFlag] = useState(coVietNam);
   const [display, setDisplay] = useState(false);
 
-  const hotline = useSelector((state: RootState) => state.counter.hotline);
-  const home = useSelector((state: RootState) => state.counter.home);
-  const details = useSelector((state: RootState) => state.counter.details);
-  const area = useSelector((state: RootState) => state.counter.area);
-  const project = useSelector((state: RootState) => state.counter.project);
-  const newBtn = useSelector((state: RootState) => state.counter.new);
-  const recruitment = useSelector(
-    (state: RootState) => state.counter.recruitment
-  );
-  const contact = useSelector((state: RootState) => state.counter.contact);
-  const contactHeaderTitle = useSelector(
-    (state: RootState) => state.counter.contactHeaderTitle
-  );
-  const contactHeaderDescription = useSelector(
-    (state: RootState) => state.counter.contactHeaderDescription
-  );
+  const { entities } = useSelector((state: RootState) => state.counter);
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
 
   return (
     <>
@@ -63,7 +53,7 @@ const HeaderContact = () => {
                     marginRight: "4px",
                   }}
                 />
-                <div className="hotline">{hotline}</div>
+                <div className="hotline">{entities.hotline}</div>
               </div>
               <div className="header-right">
                 <input type="search" placeholder="Search..." />
@@ -140,37 +130,37 @@ const HeaderContact = () => {
                   <ul className="menu-list clearfix">
                     <li className="menu-list__item">
                       <Link href="/" className="menu-list__link">
-                        {home}
+                        {entities.home}
                       </Link>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        {details}
+                        {entities.details}
                       </a>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        {area}
+                        {entities.area}
                       </a>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        {project}
+                        {entities.project}
                       </a>
                     </li>
                     <li className="menu-list__item">
                       <Link href="/news" className="menu-list__link">
-                        {newBtn}
+                        {entities.new}
                       </Link>
                     </li>
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
-                        {recruitment}
+                        {entities.recruitment}
                       </a>
                     </li>
                     <li className="menu-list__item list-active">
                       <Link href="/contact" className="menu-list__link">
-                        <div className="active">{contact}</div>
+                        <div className="active">{entities.contact}</div>
                       </Link>
                     </li>
                   </ul>
@@ -194,37 +184,37 @@ const HeaderContact = () => {
                     <ul className="menu-list clearfix">
                       <li className="menu-list__item">
                         <Link href="/" className="menu-list__link active">
-                          {home}
+                          {entities.home}
                         </Link>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          {details}
+                          {entities.details}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          {area}
+                          {entities.area}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          {project}
+                          {entities.project}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <Link href="/news" className="menu-list__link">
-                          {newBtn}
+                          {entities.new}
                         </Link>
                       </li>
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
-                          {recruitment}
+                          {entities.recruitment}
                         </a>
                       </li>
                       <li className="menu-list__item">
                         <Link href="/contact" className="menu-list__link">
-                          <div className="active">{contact}</div>
+                          <div className="active">{entities.contact}</div>
                         </Link>
                       </li>
                     </ul>
@@ -238,8 +228,8 @@ const HeaderContact = () => {
         </ContactNav>
 
         <ContactBanner>
-          <div className="title">{contactHeaderTitle}</div>
-          <div className="description">{contactHeaderDescription}</div>
+          <div className="title">{entities.contactHeaderTitle}</div>
+          <div className="description">{entities.contactHeaderDescription}</div>
           <div className="layout"></div>
         </ContactBanner>
       </header>

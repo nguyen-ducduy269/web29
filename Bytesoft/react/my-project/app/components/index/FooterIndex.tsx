@@ -1,9 +1,11 @@
 "use client";
+import { useEffect } from "react";
 import { Foot } from "./footer-css/Foot";
 import { Container } from "../Container";
 import Image from "next/image";
-import type { RootState } from "@/app/GolbalRedux/store";
-import { useSelector } from "react-redux";
+import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
 
 import footerMainImg from "@/app/image/footer-main.png";
 import vingroupImg from "@/app/image/vingroup.png";
@@ -11,42 +13,11 @@ import lanmarkImg from "@/app/image/lanmark.png";
 import hancorkImg from "@/app/image/hancork.png";
 
 const FooterIndex = () => {
-  const footerMainText = useSelector(
-    (state: RootState) => state.counter.footerMainText
-  );
-  const footerNote = useSelector(
-    (state: RootState) => state.counter.footerNote
-  );
-  const serviceTitle = useSelector(
-    (state: RootState) => state.counter.serviceTitle
-  );
-  const privacyPolicy = useSelector(
-    (state: RootState) => state.counter.privacyPolicy
-  );
-  const termsAndConditions = useSelector(
-    (state: RootState) => state.counter.termsAndConditions
-  );
-  const copyRightPolicy = useSelector(
-    (state: RootState) => state.counter.copyRightPolicy
-  );
-  const codeOfConduct = useSelector(
-    (state: RootState) => state.counter.codeOfConduct
-  );
-  const chemicalEngineeringProject = useSelector(
-    (state: RootState) => state.counter.chemicalEngineeringProject
-  );
-  const miningEngineeringConstruction = useSelector(
-    (state: RootState) => state.counter.miningEngineeringConstruction
-  );
-  const engineeringWeldingEngineering = useSelector(
-    (state: RootState) => state.counter.engineeringWeldingEngineering
-  );
-  const weldingEngineering = useSelector(
-    (state: RootState) => state.counter.weldingEngineering
-  );
-  const partnersCustomers = useSelector(
-    (state: RootState) => state.counter.partnersCustomers
-  );
+  const { entities } = useSelector((state: RootState) => state.counter);
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
 
   return (
     <>
@@ -59,9 +30,9 @@ const FooterIndex = () => {
                   <div className="main-content">
                     <Image src={footerMainImg} alt="" />
                     <div className="text">
-                      <i>{footerMainText}</i>
+                      <i>{entities.footerMainText}</i>
                     </div>
-                    <div className="note">{footerNote}</div>
+                    <div className="note">{entities.footerNote}</div>
                   </div>
                 </div>
               </div>
@@ -69,12 +40,12 @@ const FooterIndex = () => {
                 <div className="item">
                   <div className="service">
                     <div className="title">
-                      <b>{serviceTitle}</b>
+                      <b>{entities.serviceTitle}</b>
                     </div>
-                    <div className="noidung">{privacyPolicy}</div>
-                    <div className="noidung">{termsAndConditions}</div>
-                    <div className="noidung">{copyRightPolicy}</div>
-                    <div className="noidung">{codeOfConduct}</div>
+                    <div className="noidung">{entities.privacyPolicy}</div>
+                    <div className="noidung">{entities.termsAndConditions}</div>
+                    <div className="noidung">{entities.copyRightPolicy}</div>
+                    <div className="noidung">{entities.codeOfConduct}</div>
                   </div>
                 </div>
               </div>
@@ -82,16 +53,18 @@ const FooterIndex = () => {
                 <div className="item">
                   <div className="service2">
                     <div className="title">
-                      <b>{serviceTitle}</b>
-                    </div>
-                    <div className="noidung">{chemicalEngineeringProject}</div>
-                    <div className="noidung">
-                      {miningEngineeringConstruction}
+                      <b>{entities.serviceTitle}</b>
                     </div>
                     <div className="noidung">
-                      {engineeringWeldingEngineering}
+                      {entities.chemicalEngineeringProject}
                     </div>
-                    <div className="noidung">{weldingEngineering}</div>
+                    <div className="noidung">
+                      {entities.miningEngineeringConstruction}
+                    </div>
+                    <div className="noidung">
+                      {entities.engineeringWeldingEngineering}
+                    </div>
+                    <div className="noidung">{entities.weldingEngineering}</div>
                   </div>
                 </div>
               </div>
@@ -100,7 +73,7 @@ const FooterIndex = () => {
             <div className="footer-details">
               <div className="content">
                 <div className="title">
-                  <b>{partnersCustomers}</b>
+                  <b>{entities.partnersCustomers}</b>
                 </div>
                 <div id="footer-details">
                   <div className="item">

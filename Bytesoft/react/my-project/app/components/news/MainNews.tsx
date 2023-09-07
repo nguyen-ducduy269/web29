@@ -1,39 +1,24 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import contentImg from "@/app/image/content-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
-import type { RootState } from "@/app/GolbalRedux/store";
-import { useSelector } from "react-redux";
-
+import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
 ///// import components
 import { Container } from "../Container";
 import { Main } from "./main-news-css/Main";
 
 const MainNews = () => {
-  const mainContentText = useSelector(
-    (state: RootState) => state.counter.mainContentText
-  );
-  const mainView = useSelector((state: RootState) => state.counter.mainView);
-  const moduleTitle = useSelector(
-    (state: RootState) => state.counter.moduleTitle
-  );
-  const moduleNewText = useSelector(
-    (state: RootState) => state.counter.moduleNewText
-  );
-  const newHeading = useSelector(
-    (state: RootState) => state.counter.newHeading
-  );
-  const newsTitle = useSelector((state: RootState) => state.counter.newsTitle);
-  const switchOption = useSelector((state: RootState) => state.counter.switch);
-  const page1 = useSelector((state: RootState) => state.counter.page1);
-  const page2 = useSelector((state: RootState) => state.counter.page2);
-  const page3 = useSelector((state: RootState) => state.counter.page3);
-  const finalPage = useSelector((state: RootState) => state.counter.finalPage);
-  const final = useSelector((state: RootState) => state.counter.final);
+  const { entities } = useSelector((state: RootState) => state.counter);
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
 
   return (
     <>
@@ -57,7 +42,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">{mainContentText}</div>
+                        <div className="date">{entities.mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -68,12 +53,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
 
-                      <div className="title">{moduleTitle}</div>
+                      <div className="title">{entities.moduleTitle}</div>
 
-                      <div className="text">{moduleNewText}</div>
+                      <div className="text">{entities.moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -91,7 +76,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">{mainContentText}</div>
+                        <div className="date">{entities.mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -102,12 +87,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
 
-                      <div className="title">{moduleTitle}</div>
+                      <div className="title">{entities.moduleTitle}</div>
 
-                      <div className="text">{moduleNewText}</div>
+                      <div className="text">{entities.moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -125,7 +110,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">{mainContentText}</div>
+                        <div className="date">{entities.mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -136,12 +121,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
 
-                      <div className="title">{moduleTitle}</div>
+                      <div className="title">{entities.moduleTitle}</div>
 
-                      <div className="text">{moduleNewText}</div>
+                      <div className="text">{entities.moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -159,7 +144,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">{mainContentText}</div>
+                        <div className="date">{entities.mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -170,12 +155,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
 
-                      <div className="title">{moduleTitle}</div>
+                      <div className="title">{entities.moduleTitle}</div>
 
-                      <div className="text">{moduleNewText}</div>
+                      <div className="text">{entities.moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -193,7 +178,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">{mainContentText}</div>
+                        <div className="date">{entities.mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -204,12 +189,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
 
-                      <div className="title">{moduleTitle}</div>
+                      <div className="title">{entities.moduleTitle}</div>
 
-                      <div className="text">{moduleNewText}</div>
+                      <div className="text">{entities.moduleNewText}</div>
                     </Link>
                   </div>
 
@@ -227,7 +212,7 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="date">{mainContentText}</div>
+                        <div className="date">{entities.mainContentText}</div>
                         <div className="line">|</div>
                         <div className="eye">
                           <FontAwesomeIcon
@@ -238,12 +223,12 @@ const MainNews = () => {
                             }}
                           />
                         </div>
-                        <div className="view">{mainView}</div>
+                        <div className="view">{entities.mainView}</div>
                       </div>
 
-                      <div className="title">{moduleTitle}</div>
+                      <div className="title">{entities.moduleTitle}</div>
 
-                      <div className="text">{moduleNewText}</div>
+                      <div className="text">{entities.moduleNewText}</div>
                     </Link>
                   </div>
                 </div>
@@ -264,13 +249,13 @@ const MainNews = () => {
                   </div>
 
                   <div className="news">
-                    <div className="heading">{newHeading}</div>
+                    <div className="heading">{entities.newHeading}</div>
                     <div className="line"></div>
                     <div className="new">
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">{newsTitle}</div>
+                          <div className="title">{entities.newsTitle}</div>
                           <div className="more">
                             <div className="clock">
                               <FontAwesomeIcon
@@ -281,7 +266,9 @@ const MainNews = () => {
                                 }}
                               />
                             </div>
-                            <div className="day">{mainContentText}</div>
+                            <div className="day">
+                              {entities.mainContentText}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -289,7 +276,7 @@ const MainNews = () => {
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">{newsTitle}</div>
+                          <div className="title">{entities.newsTitle}</div>
                           <div className="more">
                             <div className="clock">
                               <FontAwesomeIcon
@@ -300,7 +287,9 @@ const MainNews = () => {
                                 }}
                               />
                             </div>
-                            <div className="day">{mainContentText}</div>
+                            <div className="day">
+                              {entities.mainContentText}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -308,7 +297,7 @@ const MainNews = () => {
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">{newsTitle}</div>
+                          <div className="title">{entities.newsTitle}</div>
                           <div className="more">
                             <div className="clock">
                               <FontAwesomeIcon
@@ -319,7 +308,9 @@ const MainNews = () => {
                                 }}
                               />
                             </div>
-                            <div className="day">{mainContentText}</div>
+                            <div className="day">
+                              {entities.mainContentText}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -327,7 +318,7 @@ const MainNews = () => {
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">{newsTitle}</div>
+                          <div className="title">{entities.newsTitle}</div>
                           <div className="more">
                             <div className="clock">
                               <FontAwesomeIcon
@@ -338,7 +329,9 @@ const MainNews = () => {
                                 }}
                               />
                             </div>
-                            <div className="day">{mainContentText}</div>
+                            <div className="day">
+                              {entities.mainContentText}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -346,7 +339,7 @@ const MainNews = () => {
                       <div className="content">
                         <div className="img"></div>
                         <div className="detail">
-                          <div className="title">{newsTitle}</div>
+                          <div className="title">{entities.newsTitle}</div>
                           <div className="more">
                             <div className="clock">
                               <FontAwesomeIcon
@@ -357,7 +350,9 @@ const MainNews = () => {
                                 }}
                               />
                             </div>
-                            <div className="day">{mainContentText}</div>
+                            <div className="day">
+                              {entities.mainContentText}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -367,20 +362,20 @@ const MainNews = () => {
               </div>
 
               <div className="switch">
-                <button className="prev">{switchOption}</button>
+                <button className="prev">{entities.switch}</button>
                 <div className="page">
-                  <a href="">{page1}</a>
+                  <a href="">{entities.page1}</a>
                 </div>
                 <div className="page">
-                  <a href="">{page2}</a>
+                  <a href="">{entities.page2}</a>
                 </div>
                 <div className="page">
-                  <a href="">{page3}</a>
+                  <a href="">{entities.page3}</a>
                 </div>
                 <div className="page">
-                  <a href="">{finalPage}</a>
+                  <a href="">{entities.finalPage}</a>
                 </div>
-                <button className="next">{final}</button>
+                <button className="next">{entities.final}</button>
               </div>
             </div>
           </Container>
