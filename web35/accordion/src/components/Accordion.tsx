@@ -1,8 +1,4 @@
-import React from "react";
-import { Accordion } from "react-bootstrap";
-import AccordionItem from "react-bootstrap/esm/AccordionItem";
-import AccordionHeader from "react-bootstrap/esm/AccordionHeader";
-import AccordionBody from "react-bootstrap/esm/AccordionBody";
+import React, { useState } from "react";
 const AccordionPage = () => {
   const data = [
     {
@@ -30,18 +26,34 @@ const AccordionPage = () => {
     },
   ];
 
+  const [myData, setMyData] = useState(false);
+
   return (
     <>
       <div className="accordion">
         {data.map((item) => {
           return (
-            <Accordion id="accordionExample">
-              <AccordionItem eventKey={""}>
-                <AccordionHeader>{item.title}</AccordionHeader>
+            <div className="accordion-page">
+              <div className="item">
+                <div
+                  className="header-accordion"
+                  onClick={() => setMyData(!myData)}
+                >
+                  {item.title}{" "}
+                  {myData ? (
+                    <i className="fa-solid fa-caret-up"></i>
+                  ) : (
+                    <i className="fa-solid fa-caret-down"></i>
+                  )}
+                </div>
 
-                <AccordionBody>{item.description}</AccordionBody>
-              </AccordionItem>
-            </Accordion>
+                {myData ? (
+                  <div className="body-accordion">{item.description}</div>
+                ) : (
+                  ""
+                )}
+              </div>
+            </div>
           );
         })}
       </div>
