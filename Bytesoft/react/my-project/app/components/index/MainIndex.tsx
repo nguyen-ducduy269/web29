@@ -1,10 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
+import useFetchData from "@/app/useFetchData";
 
 import {
   faArrowLeft,
@@ -116,11 +114,8 @@ const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
 
-  const { entities } = useSelector((state: RootState) => state.counter);
-  const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
+  const entitiesItem = useFetchData();
+  const entities = entitiesItem.entities;
 
   const addText = () => {
     setNewValue(

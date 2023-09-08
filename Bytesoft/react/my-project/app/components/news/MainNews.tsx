@@ -1,24 +1,20 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import contentImg from "@/app/image/content-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
-import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
+import useFetchData from "@/app/useFetchData";
+
 ///// import components
 import { Container } from "../Container";
 import { Main } from "./main-news-css/Main";
 
 const MainNews = () => {
-  const { entities } = useSelector((state: RootState) => state.counter);
-  const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
+  const entitiesItem = useFetchData();
+  const entities = entitiesItem.entities;
 
   return (
     <>

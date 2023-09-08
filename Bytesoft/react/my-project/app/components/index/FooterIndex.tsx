@@ -1,11 +1,8 @@
 "use client";
-import { useEffect } from "react";
 import { Foot } from "./footer-css/Foot";
 import { Container } from "../Container";
 import Image from "next/image";
-import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
+import useFetchData from "@/app/useFetchData";
 
 import footerMainImg from "@/app/image/footer-main.png";
 import vingroupImg from "@/app/image/vingroup.png";
@@ -13,11 +10,8 @@ import lanmarkImg from "@/app/image/lanmark.png";
 import hancorkImg from "@/app/image/hancork.png";
 
 const FooterIndex = () => {
-  const { entities } = useSelector((state: RootState) => state.counter);
-  const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
+  const entitiesItem = useFetchData();
+  const entities = entitiesItem.entities;
 
   return (
     <>

@@ -1,11 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
+import useFetchData from "@/app/useFetchData";
 
 import {
   faMagnifyingGlass,
@@ -43,11 +41,8 @@ const HeaderIndex = () => {
     );
   };
 
-  const { entities } = useSelector((state: RootState) => state.counter);
-  const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
+  const entitiesItem = useFetchData();
+  const entities = entitiesItem.entities;
 
   return (
     <>

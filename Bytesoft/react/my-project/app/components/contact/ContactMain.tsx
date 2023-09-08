@@ -1,12 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Container } from "../Container";
 import { SectionContact } from "./contact-css/SectionContact";
 import { SectionInfor } from "./contact-css/SectionInfor";
 import Image from "next/image";
-import { AppDispatch, type RootState } from "@/app/GolbalRedux/store";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "@/app/GolbalRedux/Features/counter/counterSlice";
+import useFetchData from "@/app/useFetchData";
 
 import locationImg from "@/app/image/location.png";
 import callImg from "@/app/image/call.png";
@@ -14,11 +12,8 @@ import mailImg from "@/app/image/mail.png";
 import point from "@/app/image/point.png";
 
 const ContactMain = () => {
-  const { entities } = useSelector((state: RootState) => state.counter);
-  const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
+  const entitiesItem = useFetchData();
+  const entities = entitiesItem.entities;
 
   return (
     <>
