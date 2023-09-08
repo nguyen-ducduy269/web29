@@ -64,7 +64,6 @@ export const Activity = styled.section`
             margin-left: 34px;
             margin-top: 5px;
             height: 20px;
-            padding-top: 3px;
             padding-left: 8px;
             font-size: 11px;
             border-top-left-radius: 3px;
@@ -80,7 +79,7 @@ export const Activity = styled.section`
               right: 0;
               left: 0px;
               top: 0px;
-              height: 43px;
+              height: 55px;
               width: 100%;
               border-radius: 5px;
               background: linear-gradient(
@@ -95,8 +94,8 @@ export const Activity = styled.section`
               position: absolute;
               right: 0px;
               left: 2px;
-              bottom: -21px;
-              height: 40px;
+              bottom: -32px;
+              height: 50px;
               width: 100%;
               background-color: #fff;
               border-top: none;
@@ -112,7 +111,7 @@ export const Activity = styled.section`
               }
             }
             &:hover {
-              height: 43px;
+              height: 55px;
               border-radius: 5px;
               position: relative;
               animation: mymove 1s infinite;
