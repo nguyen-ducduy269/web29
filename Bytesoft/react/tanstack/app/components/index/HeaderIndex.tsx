@@ -3,7 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import useFetchData from "@/app/useFetchData";
 
 import {
   faMagnifyingGlass,
@@ -28,6 +27,7 @@ import { HeaderTop } from "./header-css/HeaderTop";
 import { HeaderNav } from "./header-css/HeaderNav";
 import { HeaderBanner } from "./header-css/HeaderBanner";
 import { Container } from "../Container";
+import useFetchingData from "@/app/useFetchingData";
 
 const HeaderIndex = () => {
   const [isDisplay, setIsDisplay] = useState(false);
@@ -41,8 +41,8 @@ const HeaderIndex = () => {
     );
   };
 
-  const entitiesItem = useFetchData();
-  const entities = entitiesItem.entities;
+  const { data: entities } = useFetchingData();
+  if (!entities) return;
 
   return (
     <>

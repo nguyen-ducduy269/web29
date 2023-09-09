@@ -1,56 +1,44 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import useFetchData from "@/app/useFetchData";
 
 import {
+  faPhoneFlip,
   faMagnifyingGlass,
   faChevronDown,
   faBars,
   faXmark,
-  faPhoneFlip,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import image/
+// import images
 import coVietNam from "@/app/image/icon-co-viet-nam.jpg";
 import coMeo from "@/app/image/istockphoto-1144423641-612x612.jpg";
 import LogoImage from "@/app/image/logo.png";
-import img from "@/app/image/slide1.png";
-const styling = {
-  backgroundImage: `url('${img.src}')`,
-};
 
-// import components
-import { Head } from "./header-css/Head";
-import { HeaderTop } from "./header-css/HeaderTop";
-import { HeaderNav } from "./header-css/HeaderNav";
-import { HeaderBanner } from "./header-css/HeaderBanner";
+//// import components
 import { Container } from "../Container";
+import { NewsTop } from "./header-news-css/NewsTop";
+import { NewsNav } from "./header-news-css/NewsNav";
+import { NewsBanner } from "./header-news-css/NewsBanner";
+import useFetchingData from "@/app/useFetchingData";
 
-const HeaderIndex = () => {
-  const [isDisplay, setIsDisplay] = useState(false);
-  const [isOpen, setIsOpen] = useState(coVietNam);
+const HeaderNews = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [changeFlag, setChangeFlag] = useState(coVietNam);
   const [display, setDisplay] = useState(false);
-  const [newValue, setNewValue] = useState("");
 
-  const addText = () => {
-    setNewValue(
-      newValue + "Lorem ipsum dolor, sit amet consectetur adipisicing elit. "
-    );
-  };
-
-  const entitiesItem = useFetchData();
-  const entities = entitiesItem.entities;
+  const { data: entities } = useFetchingData();
+  if (!entities) return;
 
   return (
     <>
-      <Head style={styling}>
-        <HeaderTop>
+      <header id="header">
+        <NewsTop>
           <Container>
-            <div className="main-content">
-              <div className="head-left">
+            <div className="top">
+              <div className="header-left">
                 <FontAwesomeIcon
                   icon={faPhoneFlip}
                   style={{
@@ -62,8 +50,7 @@ const HeaderIndex = () => {
                 />
                 <div className="hotline">{entities.hotline}</div>
               </div>
-
-              <div className="head-right">
+              <div className="header-right">
                 <input type="search" placeholder="Search..." />
                 <div className="icon">
                   <FontAwesomeIcon
@@ -72,30 +59,30 @@ const HeaderIndex = () => {
                       marginLeft: "0",
                       marginRight: "0",
                       color: "#1ac667",
-                      fontSize: "10px",
+                      fontSize: "12px",
                     }}
                   />
                 </div>
 
                 <div className="country">
-                  <div onClick={() => setIsDisplay(true)}>
-                    <Image src={isOpen} alt="" />
+                  <div className="change" onClick={() => setIsOpen(true)}>
+                    <Image src={changeFlag} alt="" />
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       style={{
                         marginLeft: "0px",
                         fontSize: "9px",
-                        color: "black",
+                        color: "white",
                       }}
                     />
                   </div>
 
-                  {isDisplay ? (
+                  {isOpen ? (
                     <div className="country-scoll">
                       <div
                         onClick={() => {
-                          setIsOpen(coVietNam);
-                          setIsDisplay(false);
+                          setChangeFlag(coVietNam);
+                          setIsOpen(false);
                         }}
                       >
                         <Image src={coVietNam} alt="" />
@@ -103,8 +90,8 @@ const HeaderIndex = () => {
 
                       <div
                         onClick={() => {
-                          setIsOpen(coMeo);
-                          setIsDisplay(false);
+                          setChangeFlag(coMeo);
+                          setIsOpen(false);
                         }}
                       >
                         <Image src={coMeo} alt="" />
@@ -117,9 +104,9 @@ const HeaderIndex = () => {
               </div>
             </div>
           </Container>
-        </HeaderTop>
+        </NewsTop>
 
-        <HeaderNav>
+        <NewsNav>
           <Container>
             <div className="nav-content clearfix">
               <div className="logo">
@@ -134,48 +121,38 @@ const HeaderIndex = () => {
               </div>
 
               <div className="nav">
-                <span className="show__menu" onClick={() => setDisplay(true)}>
-                  <FontAwesomeIcon icon={faBars} />
-                </span>
-
                 <div className="menu">
                   <ul className="menu-list clearfix">
-                    <li className="menu-list__item list-active">
+                    <li className="menu-list__item">
                       <Link href="/" className="menu-list__link">
-                        <div className="active">{entities.home}</div>
+                        {entities.home}
                       </Link>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         {entities.details}
                       </a>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         {entities.area}
                       </a>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         {entities.project}
                       </a>
                     </li>
-
-                    <li className="menu-list__item">
+                    <li className="menu-list__item list-active">
                       <Link href="/news" className="menu-list__link">
-                        {entities.new}
+                        <div className="active">{entities.new}</div>
                       </Link>
                     </li>
-
                     <li className="menu-list__item">
                       <a href="/" className="menu-list__link">
                         {entities.recruitment}
                       </a>
                     </li>
-
                     <li className="menu-list__item">
                       <Link href="/contact" className="menu-list__link">
                         {entities.contact}
@@ -183,6 +160,12 @@ const HeaderIndex = () => {
                     </li>
                   </ul>
                 </div>
+              </div>
+
+              <div id="show-menu">
+                <span className="show__menu" onClick={() => setDisplay(true)}>
+                  <FontAwesomeIcon icon={faBars} />
+                </span>
 
                 {display ? (
                   <div className="menu-respon">
@@ -195,41 +178,35 @@ const HeaderIndex = () => {
 
                     <ul className="menu-list clearfix">
                       <li className="menu-list__item">
-                        <Link href="/" className="menu-list__link">
-                          <div className="active">{entities.home}</div>
+                        <Link href="/" className="menu-list__link active">
+                          {entities.home}
                         </Link>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           {entities.details}
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           {entities.area}
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           {entities.project}
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <Link href="/news" className="menu-list__link">
-                          {entities.new}
+                          <div className="active">{entities.new}</div>
                         </Link>
                       </li>
-
                       <li className="menu-list__item">
                         <a href="/" className="menu-list__link">
                           {entities.recruitment}
                         </a>
                       </li>
-
                       <li className="menu-list__item">
                         <Link href="/contact" className="menu-list__link">
                           {entities.contact}
@@ -243,22 +220,16 @@ const HeaderIndex = () => {
               </div>
             </div>
           </Container>
-        </HeaderNav>
+        </NewsNav>
 
-        <HeaderBanner>
-          <Container>
-            <div className="banner">
-              <div className="title">{entities.indexBannerTitle}</div>
-              <div className="description">
-                {entities.indexBannerDescription} {newValue}
-              </div>
-              <button onClick={() => addText()}>{entities.seeMoreBtn}</button>
-            </div>
-          </Container>
-        </HeaderBanner>
-      </Head>
+        <NewsBanner>
+          <div className="title">{entities.newsHeaderTitle}</div>
+          <div className="description">{entities.newsHeaderDescription}</div>
+          <div className="layout"></div>
+        </NewsBanner>
+      </header>
     </>
   );
 };
 
-export default HeaderIndex;
+export default HeaderNews;
