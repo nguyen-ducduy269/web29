@@ -10,14 +10,12 @@ const FilterForm = ({ filterValue, onFilterValueChange }) => {
         checked={filterValue === "all"}
         onChange={onFilterValueChange}
       />
-
       <FilterOption
         label="Hoàn thành"
         value="done"
         checked={filterValue === "done"}
         onChange={onFilterValueChange}
       />
-      
       <FilterOption
         label="Chưa hoàn thành"
         value="doing"

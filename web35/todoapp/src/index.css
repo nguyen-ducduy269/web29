@@ -21,15 +21,11 @@
 
 .create-task-form {
   display: flex;
-  margin-bottom: 10px;
-  gap: 10px;
 }
 
 .filter-task-form {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  margin-bottom: 10px;
 }
 
 .task-input {
@@ -40,9 +36,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.task-list {
-  margin-bottom: 10px;
-  list-style: none;
 }

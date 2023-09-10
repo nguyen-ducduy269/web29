@@ -1,7 +1,7 @@
 import React from "react";
 import TaskItem from "./TaskItem";
 
-const TaskList = ({ tasks = [], deleteTask, toggleBtn }) => {
+const TaskList = ({ tasks = [], abc, onToggle }) => {
   const isEmpty = tasks.length === 0;
 
   if (isEmpty)
@@ -14,12 +14,7 @@ const TaskList = ({ tasks = [], deleteTask, toggleBtn }) => {
   return (
     <ul className="task-list">
       {tasks.map((task) => (
-        <TaskItem
-          key={task.id}
-          {...task}
-          deleteTask={deleteTask}
-          toggleBtn={toggleBtn}
-        />
+        <TaskItem key={task.id} {...task} onToggle={onToggle} />
       ))}
     </ul>
   );

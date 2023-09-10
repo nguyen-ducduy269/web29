@@ -4,6 +4,10 @@ import Button from "./Button";
 const CreateTaskForm = ({ onSubmit }) => {
   const [title, setTitle] = useState("");
 
+  const handleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(title);
@@ -16,9 +20,8 @@ const CreateTaskForm = ({ onSubmit }) => {
         type="text"
         className="task-input"
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={handleChange}
       />
-
       <Button variant="primary">Create</Button>
     </form>
   );

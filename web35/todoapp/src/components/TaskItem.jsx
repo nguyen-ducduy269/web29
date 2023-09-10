@@ -1,28 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import Button from "./Button";
 
-const TaskItem = ({ id, title, completed, deleteTask, toggleBtn }) => {
-  const deleteFunc = () => {
-    if (confirm("Xoa?")) {
-      deleteTask(id);
-    }
+const TaskItem = ({ id, title, completed, xyz, onToggle }) => {
+  const handleDelete = () => {
+    xyz(id);
   };
 
-  const handleChangeCheck = () => {
-    toggleBtn(id);
+  const handleChange = () => {
+    onToggle(id);
   };
 
   return (
     <li className="task-item">
       <label>
-        <input
-          type="checkbox"
-          checked={completed}
-          onClick={handleChangeCheck}
-        />
+        <input type="checkbox" checked={completed} onChange={handleChange} />
         <span className="task-title">{title}</span>
-        <Button onClick={deleteFunc}>
+        <Button onClick={handleDelete}>
           <AiOutlineDelete />
         </Button>
       </label>

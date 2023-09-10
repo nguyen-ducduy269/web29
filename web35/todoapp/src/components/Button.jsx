@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
  * @typedef ButtonProps
  *
  * @property {"primary" | "danger"} variant Biến thể của nút
- * @property {function} onClick
+ * @property {function} onClick Sự kiện khi click chuột
  */
 
 /**
@@ -13,16 +13,13 @@ import PropTypes from "prop-types";
  *
  * @param {React.PropsWithChildren<ButtonProps>} props
  */
-
 const Button = ({ variant, children, onClick }) => {
   const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
+    if (onClick) onClick();
   };
 
   return (
-    <button className={`btn btn-${variant}`} onClick={handleClick}>
+    <button onClick={handleClick} className={`btn btn-${variant}`}>
       {children}
     </button>
   );

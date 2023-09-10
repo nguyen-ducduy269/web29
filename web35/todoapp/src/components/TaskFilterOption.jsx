@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 /**
@@ -22,7 +22,7 @@ const FilterOption = ({ label, value, checked, onChange }) => {
   return (
     <label className="task-filter-option">
       <input
-        type="checkbox"
+        type="radio"
         name="task-filter-option"
         value={value}
         checked={checked}
