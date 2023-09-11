@@ -48,33 +48,39 @@ function App() {
     setTasks([...tasks, newTask]);
   };
 
-  const toggle = (id) => {
-    setTasks(
-      tasks.map((task) => {
-        const index = tasks.findIndex((t) => t.id == id);
-        const temp = [...tasks];
-
-        if (task.id === id) {
-          return {
-            ...task,
-            completed: !task.completed,
-          };
-        }
-        axios.put(
-          `"https://jsonserver-fhn2.onrender.com/api/todos"${id}`,
-          temp[index]
-        );
-        return task;
-      })
+  const toggle = async (id, completed) => {
+    const res = await axios.put(
+      `https://jsonserver-fhn2.onrender.com/api/todos/${id}`,
+      { completed }
     );
+
+    if (res.status < 400) {
+      const index = tasks.findIndex((t) => t.id == id);
+      const task = tasks[index];
+
+      task.completed = completed;
+
+      setTasks((prev) => [
+        ...prev.slice(0, index),
+        task,
+        ...prev.slice(index + 1),
+      ]);
+    }
   };
 
-  const deleteTask = (id) => {
-    if (confirm("Are you sure you want to delete this fucking task?"))
-      setTasks(tasks.filter((task) => task.id !== id));
+  const deleteTask = async (id) => {
+    const res = await axios.delete(
+      `https://jsonserver-fhn2.onrender.com/api/todos/${id}`,
+      { tasks }
+    );
+
+    if (res.status < 400) {
+      if (confirm("Are you sure you want to delete this fucking task?"))
+        setTasks(tasks.filter((task) => task.id !== id));
+    }
   };
 
-  const clear = () => {
+  const clear = async () => {
     if (confirm("Are you sure you want to clear tasks?")) {
       setTasks([]);
     }

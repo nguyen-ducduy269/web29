@@ -14,7 +14,7 @@ const TaskList = ({ tasks = [], abc, onToggle }) => {
   return (
     <ul className="task-list">
       {tasks.map((task) => (
-        <TaskItem key={task.id} {...task} onToggle={onToggle} />
+        <TaskItem key={task.id} {...task} xyz={abc} onToggle={onToggle} />
       ))}
     </ul>
   );

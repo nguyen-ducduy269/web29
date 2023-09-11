@@ -8,7 +8,7 @@ const TaskItem = ({ id, title, completed, xyz, onToggle }) => {
   };
 
   const handleChange = () => {
-    onToggle(id);
+    onToggle(id, !completed);
   };
 
   return (
