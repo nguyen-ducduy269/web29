@@ -100,14 +100,6 @@ function App() {
     setCurrentSongIndex((currentIndex) => (currentIndex + 1) % song.length);
   };
 
-  // const selectSong = (id) => {
-  //   const songIndex = song.findIndex((item) => (item.id = id));
-
-  //   if (songIndex !== -1) {
-  //     setCurrentSongIndex(songIndex);
-  //   }
-  // };
-
   useEffect(() => {
     if (currentSongIndex !== -1) {
       const currentSong = song[currentSongIndex];

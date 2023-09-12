@@ -9,25 +9,21 @@ const PlayMusic = ({ currentSong, song }) => {
             <b>Playing</b>
           </h4>
           {currentSong ? (
-            <div className="music-name">{currentSong.title}</div>
+            <>
+              <div className="music-name">{currentSong.title}</div>
+              <div className="music-artist">{currentSong.owner.name}</div>
+              <div className="music-image">
+                <img src={currentSong.cover} />
+              </div>
+            </>
           ) : (
-            <div className="music-name">{song[0].title}</div>
-          )}
-
-          {currentSong ? (
-            <div className="music-artist">{currentSong.owner.name}</div>
-          ) : (
-            <div className="music-artist">{song[0].owner.name}</div>
-          )}
-
-          {currentSong ? (
-            <div className="music-image">
-              <img src={currentSong.cover} />
-            </div>
-          ) : (
-            <div className="music-image">
-              <img src={song[0].cover} />
-            </div>
+            <>
+              <div className="music-name">{song[0].title}</div>
+              <div className="music-artist">{song[0].owner.name}</div>
+              <div className="music-image">
+                <img src={song[0].cover} />
+              </div>
+            </>
           )}
         </div>
 

@@ -13,7 +13,6 @@ import {
 
 const PLayer = ({ isPlaying, onToggle, onPrev, onNext, currentSong, song }) => {
   const [fillHeart, setFillHeart] = useState(false);
-
   return (
     <>
       <div className="music">
@@ -103,14 +102,14 @@ const PLayer = ({ isPlaying, onToggle, onPrev, onNext, currentSong, song }) => {
               <div className="progress"></div>
             </div>
 
-            <div className="time-end">04:17</div>
+            <div className="time-end">00:00</div>
           </div>
         </div>
 
         <div className="music-volumn">
           <BsFillVolumeUpFill style={{ color: "white", fontSize: "20px" }} />
           <div className="volume-duration">
-            <input type="range" name="" id="" max={1} min={0} />
+            <input type="range" name="" id="" max={100} min={1} />
             <div className="volume-progress"></div>
           </div>
         </div>
