@@ -103,7 +103,7 @@ const PLayer = ({ isPlaying, onToggle, onPrev, onNext, currentSong, song }) => {
               <div className="progress"></div>
             </div>
 
-            <div className="time-end">04.17</div>
+            <div className="time-end">04:17</div>
           </div>
         </div>
 
