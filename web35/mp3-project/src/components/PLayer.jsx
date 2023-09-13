@@ -11,33 +11,62 @@ import {
   BsHeartFill,
 } from "react-icons/bs";
 
-const PLayer = ({ isPlaying, onToggle, onPrev, onNext, currentSong, song }) => {
+const PLayer = ({
+  isPlaying,
+  onToggle,
+  onPrev,
+  onNext,
+  currentSong,
+  song,
+  currentPercentage,
+  currentTime,
+  duration,
+}) => {
   const [fillHeart, setFillHeart] = useState(false);
+
+  const calcuTime = (s) => {
+    let seconds = Math.floor(s);
+    let minutes = parseInt(seconds / 60);
+
+    seconds = seconds % 60;
+    minutes = seconds >= 60 ? minutes + 1 : minutes;
+
+    minutes = minutes % 60;
+
+    return `${minutes.toString().padStart(2, "0")}:${seconds
+      .toString()
+      .padStart(2, "0")}`;
+  };
+
   return (
     <>
       <div className="music">
         <div className="music-infor">
-          <div className="music-infor-img">
-            {currentSong ? (
-              <img src={currentSong.cover} alt="" />
-            ) : (
-              <img src={song[0].cover} alt="" />
-            )}
-          </div>
+          {currentSong ? (
+            <>
+              <div className="music-infor-img">
+                <img src={currentSong.cover} alt="" />
+              </div>
 
-          <div className="music-infor-des">
-            {currentSong ? (
-              <div className="music-name">{currentSong.title}</div>
-            ) : (
-              <div className="music-name">{song[0].title}</div>
-            )}
+              <div className="music-infor-des">
+                <div className="music-name">{currentSong.title}</div>
 
-            {currentSong ? (
-              <div className="music-author">{currentSong.owner.name}</div>
-            ) : (
-              <div className="music-author">{song[0].owner.name}</div>
-            )}
-          </div>
+                <div className="music-author">{currentSong.owner.name}</div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="music-infor-img">
+                <img src={song[0].cover} alt="" />
+              </div>
+
+              <div className="music-infor-des">
+                <div className="music-name">{song[0].title}</div>
+
+                <div className="music-author">{song[0].owner.name}</div>
+              </div>
+            </>
+          )}
 
           <div
             className="music-infor-favorite"
@@ -95,14 +124,21 @@ const PLayer = ({ isPlaying, onToggle, onPrev, onNext, currentSong, song }) => {
           </div>
 
           <div className="music-player-time">
-            <div className="time-start">00:00</div>
+            <div className="time-start">{calcuTime(currentTime)}</div>
 
             <div className="time-duration">
-              <input type="range" name="" id="" max={257} min={0} />
+              <input
+                type="range"
+                name=""
+                id=""
+                max={257}
+                min={0}
+                value={currentPercentage}
+              />
               <div className="progress"></div>
             </div>
 
-            <div className="time-end">00:00</div>
+            <div className="time-end">{duration}</div>
           </div>
         </div>
 

@@ -82,10 +82,29 @@ function App() {
   const [currentSongIndex, setCurrentSongIndex] = useState(-1);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio());
+  const [trackProgress, setTrackProgress] = useState(0);
+  const { duration } = audioRef.current;
+  const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
+  const intervalRef = useRef();
+
+  const { currentTime } = audioRef.current;
+
+  const startTime = () => {
+    clearInterval(intervalRef.current);
+
+    intervalRef.current = setInterval(() => {
+      if (audioRef.current.ended) {
+        handleNext();
+      } else {
+        setTrackProgress(audioRef.current.currentTime);
+      }
+    }, [1000]);
+  };
 
   const togglePlay = () => {
     if (currentSongIndex === -1) {
       setCurrentSongIndex(0);
+      startTime();
     }
     setIsPlaying(!isPlaying);
   };
@@ -130,6 +149,9 @@ function App() {
         onNext={handleNext}
         currentSong={currentSong}
         song={song}
+        currentPercentage={currentPercentage}
+        currentTime={currentTime}
+        duration={duration}
       />
     </>
   );
