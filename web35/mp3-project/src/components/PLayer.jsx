@@ -9,6 +9,7 @@ import {
   BsHeart,
   BsFillVolumeUpFill,
   BsHeartFill,
+  BsFillVolumeMuteFill,
 } from "react-icons/bs";
 
 const PLayer = ({
@@ -21,6 +22,8 @@ const PLayer = ({
   currentPercentage,
   currentTime,
   duration,
+  MAX,
+  handleVolume,
 }) => {
   const [fillHeart, setFillHeart] = useState(false);
 
@@ -138,14 +141,23 @@ const PLayer = ({
               <div className="progress"></div>
             </div>
 
-            <div className="time-end">{duration}</div>
+            <div className="time-end">
+              {duration ? calcuTime(duration) : "--:--"}
+            </div>
           </div>
         </div>
 
-        <div className="music-volumn">
+        <div className="music-volumn" onClick={() => changeMute()}>
           <BsFillVolumeUpFill style={{ color: "white", fontSize: "20px" }} />
           <div className="volume-duration">
-            <input type="range" name="" id="" max={100} min={1} />
+            <input
+              type="range"
+              name=""
+              id=""
+              max={MAX}
+              min={1}
+              onChange={(e) => handleVolume(e)}
+            />
             <div className="volume-progress"></div>
           </div>
         </div>
