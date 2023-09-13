@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
+import { useTodo } from "../hooks/useTodo";
 
 /**
  * @typedef FilterOptionProps
@@ -14,9 +15,11 @@ import PropTypes from "prop-types";
  *
  * @param {FilterOptionProps} props
  */
-const FilterOption = ({ label, value, checked, onChange }) => {
+const FilterOption = ({ label, value, checked }) => {
+  const handleFilterValueChange = useTodo().handleFilterValueChange;
+
   const handleChange = () => {
-    onChange(value);
+    handleFilterValueChange(value);
   };
 
   return (

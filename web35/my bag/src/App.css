@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header {
+  height: 80px;
+  background-color: #645cff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-title {
+  font-size: 24px;
+  color: white;
+}
+
+.shopping {
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+
+.shopping i {
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  color: white;
+}
+
+.shopping .number {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  color: white;
+  background-color: gray;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.main-bag {
+  margin-top: 20%;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}

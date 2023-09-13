@@ -1,8 +1,10 @@
 import React from "react";
 import TaskItem from "./TaskItem";
+import { useTodo } from "../hooks/useTodo";
 
-const TaskList = ({ tasks = [], abc, onToggle }) => {
-  const isEmpty = tasks.length === 0;
+const TaskList = () => {
+  const filteredTasks = useTodo().filteredTasks;
+  const isEmpty = filteredTasks.length === 0;
 
   if (isEmpty)
     return (
@@ -13,8 +15,8 @@ const TaskList = ({ tasks = [], abc, onToggle }) => {
 
   return (
     <ul className="task-list">
-      {tasks.map((task) => (
-        <TaskItem key={task.id} {...task} xyz={abc} onToggle={onToggle} />
+      {filteredTasks.map((task) => (
+        <TaskItem key={task.id} {...task} />
       ))}
     </ul>
   );

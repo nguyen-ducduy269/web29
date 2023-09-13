@@ -1,14 +1,17 @@
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import Button from "./Button";
+import { useTodo } from "../hooks/useTodo";
 
-const TaskItem = ({ id, title, completed, xyz, onToggle }) => {
+const TaskItem = ({ id, completed, title }) => {
+  const deleteTask = useTodo().deleteTask;
+  const toggle = useTodo().toggle;
   const handleDelete = () => {
-    xyz(id);
+    deleteTask(id);
   };
 
   const handleChange = () => {
-    onToggle(id, !completed);
+    toggle(id, !completed);
   };
 
   return (

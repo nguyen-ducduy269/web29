@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { useTodo } from "../hooks/useTodo";
 
-const CreateTaskForm = ({ onSubmit }) => {
+const CreateTaskForm = () => {
   const [title, setTitle] = useState("");
+  const addTask = useTodo().addTask;
 
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -10,7 +12,7 @@ const CreateTaskForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(title);
+    addTask(title);
     setTitle("");
   };
 

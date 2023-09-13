@@ -5,6 +5,7 @@ import FilterForm from "./components/FilterTaskForm";
 import TaskList from "./components/TaskList";
 import { createTask } from "./services/todos.service";
 import axios from "axios";
+import { TodoContext } from "./context/TodoContext";
 
 function App() {
   const [filterValue, setFilterValue] = useState("all");
@@ -98,42 +99,47 @@ function App() {
       : tasks.filter((task) => !task.completed);
 
   return (
-    <div className="container">
-      <div className="todo-app">
-        <h1 className="heading">Todo App</h1>
+    <TodoContext.Provider
+      value={{
+        addTask,
+        filterValue,
+        handleFilterValueChange,
+        filteredTasks,
+        deleteTask,
+        toggle,
+      }}
+    >
+      <div className="container">
+        <div className="todo-app">
+          <h1 className="heading">Todo App</h1>
+          
 
-        <CreateTaskForm onSubmit={addTask} />
+          <CreateTaskForm />
 
-        <FilterForm
-          filterValue={filterValue}
-          onFilterValueChange={handleFilterValueChange}
-        />
+          <FilterForm />
 
-        {loading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>Lỗi khi tải dữ liệu</div>
-        ) : (
-          <>
-            <TaskList
-              tasks={filteredTasks}
-              abc={deleteTask}
-              onToggle={toggle}
-            />
+          {loading ? (
+            <div>Loading...</div>
+          ) : error ? (
+            <div>Lỗi khi tải dữ liệu</div>
+          ) : (
+            <>
+              <TaskList />
 
-            <div className="task-summary">
-              <p className="task-summary-count">
-                You have {tasks.length} pending task
-              </p>
+              <div className="task-summary">
+                <p className="task-summary-count">
+                  You have {tasks.length} pending task
+                </p>
 
-              <Button onClick={clear} variant="danger">
-                Clear
-              </Button>
-            </div>
-          </>
-        )}
+                <Button onClick={clear} variant="danger">
+                  Clear
+                </Button>
+              </div>
+            </>
+          )}
+        </div>
       </div>
-    </div>
+    </TodoContext.Provider>
   );
 }
 
