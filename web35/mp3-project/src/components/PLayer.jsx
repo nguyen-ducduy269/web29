@@ -147,7 +147,7 @@ const PLayer = ({
           </div>
         </div>
 
-        <div className="music-volumn" onClick={() => changeMute()}>
+        <div className="music-volumn">
           <BsFillVolumeUpFill style={{ color: "white", fontSize: "20px" }} />
           <div className="volume-duration">
             <input
