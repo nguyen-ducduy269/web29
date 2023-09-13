@@ -155,7 +155,8 @@ const PLayer = ({
               name=""
               id=""
               max={MAX}
-              min={1}
+              min={0}
+              step={0.1}
               onChange={(e) => handleVolume(e)}
             />
             <div className="volume-progress"></div>

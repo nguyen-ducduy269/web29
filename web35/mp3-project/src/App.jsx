@@ -112,7 +112,7 @@ function App() {
     }, [1000]);
   };
 
-  const MAX = 20;
+  const MAX = 1;
   const handleVolume = (e) => {
     const { value } = e.target;
     const volume = Number(value) / MAX;
