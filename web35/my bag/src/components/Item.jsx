@@ -15,6 +15,8 @@ const Item = ({ item }) => {
     const product = data[index];
 
     product.price = product.price * (quantity + 1);
+    product.quantity = quantity + 1;
+    console.log(product);
   };
 
   return (

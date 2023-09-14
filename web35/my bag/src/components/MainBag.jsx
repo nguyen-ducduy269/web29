@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useMyBag } from "../hooks/useMyBag";
 import TotalPrice from "./TotalPrice";
 import Item from "./Item";
 
 const MainBag = () => {
   const data = useMyBag().data;
-  // const [priceTotal, setPriceTotal] = useState(0);
   let priceTotal = 0;
 
   return (
