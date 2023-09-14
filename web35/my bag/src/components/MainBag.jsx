@@ -1,34 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMyBag } from "../hooks/useMyBag";
+import TotalPrice from "./TotalPrice";
+import Item from "./Item";
 
 const MainBag = () => {
+  const data = useMyBag().data;
+  // const [priceTotal, setPriceTotal] = useState(0);
+  let priceTotal = 0;
+
   return (
     <>
       <div className="main-bag">
         <h1>My Bag</h1>
 
         <div className="my-products">
-          <div className="product">
-            <div className="product-img">
-              <img
-                src="https://www.course-api.com/images/cart/phone-1.png"
-                alt=""
-              />
-            </div>
-
-            <div className="product-detail">
-              <div className="title">Samsung Galaxy S8</div>
-              <div className="price">$399.99</div>
-              <button>Remove</button>
-            </div>
-
-            <div className="number-product">
-              <button className="divide">-</button>
-              <div className="quantity">1</div>
-              <div className="plus">+</div>
-            </div>
-          </div>
+          {data.map((item) => {
+            priceTotal += item.price;
+            return (
+              <>
+                <Item item={item} />
+              </>
+            );
+          })}
         </div>
       </div>
+
+      <TotalPrice priceTotal={priceTotal} />
     </>
   );
 };
