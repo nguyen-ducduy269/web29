@@ -3,8 +3,8 @@ import TaskItem from "./TaskItem";
 import { useTodo } from "../hooks/useTodo";
 
 const TaskList = () => {
-  const filteredTasks = useTodo().filteredTasks;
-  const isEmpty = filteredTasks.length === 0;
+  const { tasks } = useTodo();
+  const isEmpty = tasks.length === 0;
 
   if (isEmpty)
     return (
@@ -15,7 +15,7 @@ const TaskList = () => {
 
   return (
     <ul className="task-list">
-      {filteredTasks.map((task) => (
+      {tasks.map((task) => (
         <TaskItem key={task.id} {...task} />
       ))}
     </ul>

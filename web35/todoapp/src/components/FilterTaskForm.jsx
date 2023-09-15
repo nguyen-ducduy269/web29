@@ -4,6 +4,7 @@ import { useTodo } from "../hooks/useTodo";
 
 const FilterForm = () => {
   const filterValue = useTodo().filterValue;
+
   return (
     <form className="filter-task-form">
       <FilterOption
