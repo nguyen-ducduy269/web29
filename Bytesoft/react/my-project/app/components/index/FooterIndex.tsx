@@ -2,7 +2,8 @@
 import { Foot } from "./footer-css/Foot";
 import { Container } from "../Container";
 import Image from "next/image";
-import useFetchData from "@/app/useFetchData";
+// import useFetchData from "@/app/useFetchData";
+import { useFetch } from "@/app/core/useFetch";
 
 import footerMainImg from "@/app/image/footer-main.png";
 import vingroupImg from "@/app/image/vingroup.png";
@@ -10,8 +11,11 @@ import lanmarkImg from "@/app/image/lanmark.png";
 import hancorkImg from "@/app/image/hancork.png";
 
 const FooterIndex = () => {
-  const entitiesItem = useFetchData();
-  const entities = entitiesItem.entities;
+  // const entitiesItem = useFetchData();
+  // const entities = entitiesItem.entities;
+
+  let entities: any = {};
+  entities = useFetch();
 
   return (
     <>

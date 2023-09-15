@@ -1,15 +1,19 @@
 "use client";
 import React from "react";
 import { Foot } from "./Foot";
-import useFetchData from "@/app/useFetchData";
+// import useFetchData from "@/app/useFetchData";
+import { useFetch } from "@/app/core/useFetch";
 
 import Image from "next/image";
 import footerImg from "@/app/image/footer-img.png";
 import footImg from "@/app/image/footer.png";
 
 const Footer = () => {
-  const entitiesItem = useFetchData();
-  const entities = entitiesItem.entities;
+  // const entitiesItem = useFetchData();
+  // const entities = entitiesItem.entities;
+
+  let entities: any = {};
+  entities = useFetch();
 
   return (
     <>

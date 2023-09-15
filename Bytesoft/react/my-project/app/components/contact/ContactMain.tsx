@@ -4,7 +4,8 @@ import { Container } from "../Container";
 import { SectionContact } from "./contact-css/SectionContact";
 import { SectionInfor } from "./contact-css/SectionInfor";
 import Image from "next/image";
-import useFetchData from "@/app/useFetchData";
+// import useFetchData from "@/app/useFetchData";
+import { useFetch } from "@/app/core/useFetch";
 
 import locationImg from "@/app/image/location.png";
 import callImg from "@/app/image/call.png";
@@ -12,8 +13,11 @@ import mailImg from "@/app/image/mail.png";
 import point from "@/app/image/point.png";
 
 const ContactMain = () => {
-  const entitiesItem = useFetchData();
-  const entities = entitiesItem.entities;
+  // const entitiesItem = useFetchData();
+  // const entities = entitiesItem.entities;
+
+  let entities: any = {};
+  entities = useFetch();
 
   return (
     <>

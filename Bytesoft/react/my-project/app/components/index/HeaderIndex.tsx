@@ -3,7 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import useFetchData from "@/app/useFetchData";
+// import useFetchData from "@/app/useFetchData";
+import { useFetch } from "@/app/core/useFetch";
 
 import {
   faMagnifyingGlass,
@@ -41,8 +42,11 @@ const HeaderIndex = () => {
     );
   };
 
-  const entitiesItem = useFetchData();
-  const entities = entitiesItem.entities;
+  // const entitiesItem = useFetchData();
+  // const entities = entitiesItem.entities;
+
+  let entities: any = {};
+  entities = useFetch();
 
   return (
     <>

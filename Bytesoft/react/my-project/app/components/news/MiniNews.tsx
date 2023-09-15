@@ -4,7 +4,8 @@ import { Container } from "../Container";
 import { News } from "./news-css/News";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useFetchData from "@/app/useFetchData";
+// import useFetchData from "@/app/useFetchData";
+import { useFetch } from "@/app/core/useFetch";
 
 import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
@@ -12,8 +13,11 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 import detailNewsImg from "@/app/image/chitiettin-big.png";
 
 const MiniNews = () => {
-  const entitiesItem = useFetchData();
-  const entities = entitiesItem.entities;
+  // const entitiesItem = useFetchData();
+  // const entities = entitiesItem.entities;
+
+  let entities: any = {};
+  entities = useFetch();
 
   return (
     <>
