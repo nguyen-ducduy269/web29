@@ -23,7 +23,7 @@ const Section = () => {
                   img={product.thumbnail}
                   title={product.title}
                   price={product.price}
-                  pricesale={product.discountPercentage}
+                  discountPercent={product.discountPercentage}
                   vote={product.rating}
                 />
               </div>

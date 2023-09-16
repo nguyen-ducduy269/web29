@@ -10,17 +10,17 @@ import { useShopping } from "../hooks/useShopping";
  * @param {*} param0
  * @returns
  */
-const Card = ({ title, price, img, vote, pricesale }) => {
+const Card = ({ title, price, img, vote, discountPercent }) => {
   const addTask = useShopping().addTask;
 
   return (
     <div className="col mb-5">
       <div className="card h-100">
-        <CardSale pricesale={pricesale} />
+        <CardSale discountPercent={discountPercent} />
         <CardImg img={img} alt={title} />
         <CardBody
           price={price}
-          pricesale={pricesale}
+          discountPercent={discountPercent}
           vote={vote}
           title={title}
         />

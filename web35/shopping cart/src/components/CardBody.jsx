@@ -2,7 +2,10 @@ import React from "react";
 import ListStar from "./ListStar";
 import PropTypes from "prop-types";
 
-const CardBody = ({ price, pricesale, vote, title }) => {
+const CardBody = ({ price, discountPercent, vote, title }) => {
+  const priceDiscount = (price * discountPercent) / 100;
+  const priceAfterDiscount = (price - priceDiscount).toFixed(2);
+
   return (
     <div className="card-body p-4">
       <div className="text-center">
@@ -11,7 +14,7 @@ const CardBody = ({ price, pricesale, vote, title }) => {
         <span className="text-muted text-decoration-line-through">
           $ {price}
         </span>
-        $ {pricesale}
+        $ {priceAfterDiscount}
       </div>
     </div>
   );
