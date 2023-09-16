@@ -1,6 +1,13 @@
 import React from "react";
 import Card from "./Card";
-const Section = ({ products, loading, error }) => {
+import { useShopping } from "../hooks/useShopping";
+
+const Section = () => {
+  const { products } = useShopping();
+  const loading = useShopping().loading;
+  const error = useShopping().error;
+  const myProducts = products.products;
+
   return (
     <section className="py-5">
       <div className="container px-4 px-lg-5 mt-5">
@@ -10,7 +17,7 @@ const Section = ({ products, loading, error }) => {
           ) : error ? (
             <div>Lỗi khi tải dữ liệu</div>
           ) : (
-            products.map((product) => (
+            myProducts.map((product) => (
               <div className="col mb-5">
                 <Card
                   img={product.thumbnail}

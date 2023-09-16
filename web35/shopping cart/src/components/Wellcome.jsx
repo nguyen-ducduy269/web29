@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Wellcome = ({info}) => {
-  return (
-    <div>Wellcome,{info.name}</div>
-  )
-}
+const Wellcome = ({ info }) => {
+  return <div>Wellcome,{info.name}</div>;
+};
 
-export default Wellcome
+export default Wellcome;
