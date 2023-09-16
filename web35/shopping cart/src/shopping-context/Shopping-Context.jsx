@@ -30,6 +30,7 @@ export const ShoppingProvider = ({ children }) => {
 
   useEffect(() => {
     let ignored = false;
+
     const getProducts = async () => {
       try {
         const res = await fetch("https://dummyjson.com/products");
@@ -42,6 +43,7 @@ export const ShoppingProvider = ({ children }) => {
         if (!ignored) dispatch({ type: "LOAD_DATA_FAIL", payload: error });
       }
     };
+
     getProducts();
 
     return () => {

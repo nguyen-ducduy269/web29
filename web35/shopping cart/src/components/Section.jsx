@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import { useShopping } from "../hooks/useShopping";
+import Cart from "./Cart";
 
 const Section = () => {
   const { products } = useShopping();
@@ -30,6 +31,8 @@ const Section = () => {
             ))
           )}
         </div>
+
+        <Cart />
       </div>
     </section>
   );

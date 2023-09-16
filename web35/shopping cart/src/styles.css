@@ -11167,3 +11167,19 @@ fieldset:disabled .btn {
   border-bottom: 2px solid gray;
   box-shadow: 5px 10px 18px #888888;
 }
+
+table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+th,
+td {
+  width: calc(100% / 5);
+  text-align: center;
+}
+
+tr {
+  height: 50px;
+  border: 2px solid black;
+}
