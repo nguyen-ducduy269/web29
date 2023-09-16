@@ -2,7 +2,7 @@ import React from "react";
 import { useShopping } from "../hooks/useShopping";
 
 const CartBtn = () => {
-  const { count } = useShopping();
+  const count = useShopping().count;
 
   return (
     <form className="d-flex">

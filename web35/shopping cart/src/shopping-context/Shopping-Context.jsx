@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 export const ShoppingContext = createContext();
 
@@ -51,8 +51,7 @@ export const ShoppingProvider = ({ children }) => {
 
   const addTask = (e) => {
     e.preventDefault();
-    dispatch({ type: "ADD_TO_CART" });
-    console.log("aaaaa");
+    dispatch({ type: "ADD_TO_CART", payload: state.count });
   };
 
   return (
