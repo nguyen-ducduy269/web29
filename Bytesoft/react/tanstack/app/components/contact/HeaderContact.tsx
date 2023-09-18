@@ -99,23 +99,6 @@ const HeaderContact = () => {
                           </div>
                         );
                       })}
-                      {/* <div
-                        onClick={() => {
-                          setChangeFlag("vi");
-                          setIsOpen(false);
-                        }}
-                      >
-                        <Image src={`/images/icon_${changeFlag}_flag.png`} alt="" />
-                      </div>
-
-                      <div
-                        onClick={() => {
-                          setChangeFlag(coMeo);
-                          setIsOpen(false);
-                        }}
-                      >
-                        <Image src={coMeo} alt="" />
-                      </div> */}
                     </div>
                   ) : (
                     ""

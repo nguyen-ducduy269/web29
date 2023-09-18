@@ -13,8 +13,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import image/
-import coVietNam from "@/app/image/icon-co-viet-nam.jpg";
-import coMeo from "@/app/image/istockphoto-1144423641-612x612.jpg";
 import LogoImage from "@/app/image/logo.png";
 import img from "@/app/image/slide1.png";
 const styling = {
@@ -31,7 +29,7 @@ import useFetchingData from "@/app/useFetchingData";
 
 const HeaderIndex = () => {
   const [isDisplay, setIsDisplay] = useState(false);
-  const [isOpen, setIsOpen] = useState(coVietNam);
+  const [isOpen, setIsOpen] = useState("vi");
   const [display, setDisplay] = useState(false);
   const [newValue, setNewValue] = useState("");
 
@@ -43,6 +41,8 @@ const HeaderIndex = () => {
 
   const { data: entities } = useFetchingData();
   if (!entities) return;
+
+  const language = ["vi", "usa"];
 
   return (
     <>
@@ -79,7 +79,12 @@ const HeaderIndex = () => {
 
                 <div className="country">
                   <div onClick={() => setIsDisplay(true)}>
-                    <Image src={isOpen} alt="" />
+                    <Image
+                      src={`/images/icon_${isOpen}_flag.jpg`}
+                      width={20}
+                      height={20}
+                      alt=""
+                    />
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       style={{
@@ -92,23 +97,24 @@ const HeaderIndex = () => {
 
                   {isDisplay ? (
                     <div className="country-scoll">
-                      <div
-                        onClick={() => {
-                          setIsOpen(coVietNam);
-                          setIsDisplay(false);
-                        }}
-                      >
-                        <Image src={coVietNam} alt="" />
-                      </div>
-
-                      <div
-                        onClick={() => {
-                          setIsOpen(coMeo);
-                          setIsDisplay(false);
-                        }}
-                      >
-                        <Image src={coMeo} alt="" />
-                      </div>
+                      {language.map((item: string, index: number) => {
+                        return (
+                          <div
+                            key={index}
+                            onClick={() => {
+                              setIsOpen(item);
+                              setIsDisplay(false);
+                            }}
+                          >
+                            <Image
+                              width={30}
+                              height={20}
+                              src={`/images/icon_${item}_flag.jpg`}
+                              alt=""
+                            />
+                          </div>
+                        );
+                      })}
                     </div>
                   ) : (
                     ""

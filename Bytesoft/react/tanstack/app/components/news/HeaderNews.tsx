@@ -13,8 +13,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import images
-import coVietNam from "@/app/image/icon-co-viet-nam.jpg";
-import coMeo from "@/app/image/istockphoto-1144423641-612x612.jpg";
 import LogoImage from "@/app/image/logo.png";
 
 //// import components
@@ -26,11 +24,13 @@ import useFetchingData from "@/app/useFetchingData";
 
 const HeaderNews = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [changeFlag, setChangeFlag] = useState(coVietNam);
+  const [changeFlag, setChangeFlag] = useState("vi");
   const [display, setDisplay] = useState(false);
 
   const { data: entities } = useFetchingData();
   if (!entities) return;
+
+  const language = ["vi", "usa"];
 
   return (
     <>
@@ -66,7 +66,12 @@ const HeaderNews = () => {
 
                 <div className="country">
                   <div className="change" onClick={() => setIsOpen(true)}>
-                    <Image src={changeFlag} alt="" />
+                    <Image
+                      src={`/images/icon_${changeFlag}_flag.jpg`}
+                      width={20}
+                      height={20}
+                      alt=""
+                    />
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       style={{
@@ -79,23 +84,24 @@ const HeaderNews = () => {
 
                   {isOpen ? (
                     <div className="country-scoll">
-                      <div
-                        onClick={() => {
-                          setChangeFlag(coVietNam);
-                          setIsOpen(false);
-                        }}
-                      >
-                        <Image src={coVietNam} alt="" />
-                      </div>
-
-                      <div
-                        onClick={() => {
-                          setChangeFlag(coMeo);
-                          setIsOpen(false);
-                        }}
-                      >
-                        <Image src={coMeo} alt="" />
-                      </div>
+                      {language.map((item: string, index: number) => {
+                        return (
+                          <div
+                            key={index}
+                            onClick={() => {
+                              setChangeFlag(item);
+                              setIsOpen(false);
+                            }}
+                          >
+                            <Image
+                              width={30}
+                              height={20}
+                              src={`/images/icon_${item}_flag.jpg`}
+                              alt=""
+                            />
+                          </div>
+                        );
+                      })}
                     </div>
                   ) : (
                     ""
