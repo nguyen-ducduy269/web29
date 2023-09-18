@@ -10,7 +10,9 @@ const Button = ({ children }) => {
         <a
           className="btn btn-outline-dark mt-auto"
           href="#"
-          onClick={(e) => addTask(e)}
+          onClick={(e) => {
+            addTask(e);
+          }}
         >
           {children}
         </a>
