@@ -13,8 +13,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import images
-import coVietNam from "@/app/image/icon-co-viet-nam.jpg";
-import coMeo from "@/app/image/istockphoto-1144423641-612x612.jpg";
 import LogoImage from "@/app/image/logo.png";
 
 //// import components
@@ -26,7 +24,7 @@ import useFetchingData from "@/app/useFetchingData";
 
 const HeaderContact = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [changeFlag, setChangeFlag] = useState(coVietNam);
+  const [changeFlag, setChangeFlag] = useState("vi");
   const [display, setDisplay] = useState(false);
   const { data: entities } = useFetchingData();
   if (!entities) return;
@@ -65,7 +63,12 @@ const HeaderContact = () => {
 
                 <div className="country">
                   <div className="change" onClick={() => setIsOpen(true)}>
-                    <Image src={changeFlag} alt="" />
+                    <Image
+                      src={`/images/icon_${changeFlag}_flag.jpg`}
+                      width={20}
+                      height={20}
+                      alt=""
+                    />
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       style={{
@@ -78,13 +81,31 @@ const HeaderContact = () => {
 
                   {isOpen ? (
                     <div className="country-scoll">
-                      <div
+                      {language.map((item: string, index: number) => {
+                        return (
+                          <div
+                            key={index}
+                            onClick={() => {
+                              setChangeFlag(item);
+                              setIsOpen(false);
+                            }}
+                          >
+                            <Image
+                              width={30}
+                              height={20}
+                              src={`/images/icon_${item}_flag.jpg`}
+                              alt=""
+                            />
+                          </div>
+                        );
+                      })}
+                      {/* <div
                         onClick={() => {
-                          setChangeFlag(coVietNam);
+                          setChangeFlag("vi");
                           setIsOpen(false);
                         }}
                       >
-                        <Image src={coVietNam} alt="" />
+                        <Image src={`/images/icon_${changeFlag}_flag.png`} alt="" />
                       </div>
 
                       <div
@@ -94,7 +115,7 @@ const HeaderContact = () => {
                         }}
                       >
                         <Image src={coMeo} alt="" />
-                      </div>
+                      </div> */}
                     </div>
                   ) : (
                     ""
@@ -232,3 +253,5 @@ const HeaderContact = () => {
 };
 
 export default HeaderContact;
+
+const language = ["vi", "usa"];

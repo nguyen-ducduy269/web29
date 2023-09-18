@@ -40,6 +40,7 @@ export const Project = styled.section`
       position: relative;
       margin-top: 30%;
       display: flex;
+      gap: 20px;
       .tab-control {
         width: 25%;
         border-right: none;
@@ -99,76 +100,77 @@ export const Project = styled.section`
           }
         }
       }
-    }
-    .tab-content {
-      width: 100%;
-      height: 100%;
-      .multiple-items {
-        margin-top: 72px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        .item {
-          position: relative;
-          width: 85%;
-          height: 233px;
-          margin-bottom: 60px;
-          overflow: hidden;
-          .project-img {
-            position: absolute;
-            height: 266px;
-            width: 237px;
-            left: -17px;
-            top: -12px;
-            z-index: 0;
+
+      .tab-content {
+        width: 100%;
+        height: 100%;
+        .multiple-items {
+          margin-top: 72px;
+          display: grid !important;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          .item {
+            position: relative;
+            width: 75%;
+            height: 233px;
+            margin-bottom: 60px;
+            overflow: hidden;
+            .project-img {
+              position: absolute;
+              height: 266px;
+              width: 237px;
+              left: -17px;
+              top: -12px;
+              z-index: 0;
+            }
+            .discription {
+              position: absolute;
+              width: 95%;
+              height: 40px;
+              background-color: #fff;
+              z-index: 1;
+              bottom: 5px;
+              left: -190px;
+              .title {
+                position: absolute;
+                left: 9px;
+                font-size: 12px;
+                top: 5px;
+                color: #72dcb6;
+                width: unset;
+                height: unset;
+                font-family: sans-serif;
+              }
+              .more {
+                position: absolute;
+                bottom: 4px;
+                left: 11px;
+                font-family: sans-serif;
+              }
+              button {
+                position: absolute;
+                right: 9px;
+                top: 9px;
+                width: 24px;
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 0;
+                height: 24px;
+                font-size: 15px;
+                background-color: #72dcb6;
+                color: white;
+              }
+            }
           }
-          .discription {
-            position: absolute;
-            width: 95%;
-            height: 40px;
-            background-color: #fff;
-            z-index: 1;
-            bottom: 5px;
-            left: -190px;
-            .title {
-              position: absolute;
-              left: 9px;
-              font-size: 12px;
-              top: 5px;
-              color: #72dcb6;
-              width: unset;
-              height: unset;
-              font-family: sans-serif;
-            }
-            .more {
-              position: absolute;
-              bottom: 4px;
-              left: 11px;
-              font-family: sans-serif;
-            }
-            button {
-              position: absolute;
-              right: 9px;
-              top: 9px;
-              width: 24px;
-              padding-left: 0;
-              padding-right: 0;
-              padding-top: 0;
-              height: 24px;
-              font-size: 15px;
-              background-color: #72dcb6;
-              color: white;
-            }
-          }
-        }
-        .item:hover {
-          transform: translateY(-10px);
-          transition: 1s;
-          .discription {
-            left: 5px;
-            transition: 1.5s;
-            button {
-              border: none;
+          .item:hover {
+            transform: translateY(-10px);
+            transition: 1s;
+            .discription {
+              left: 5px;
+              transition: 1.5s;
+              button {
+                border: none;
+              }
             }
           }
         }
