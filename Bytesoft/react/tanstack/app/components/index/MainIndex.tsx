@@ -6,6 +6,7 @@ import useFetchingData from "@/app/useFetchingData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 import {
   faArrowLeft,
@@ -141,6 +142,8 @@ const MainIndex = () => {
     nextArrow: <SampleArrow />,
     prevArrow: <SampleArrow />,
   };
+
+  const projectDetail = entities.projectDetail;
 
   return (
     <>
@@ -470,21 +473,13 @@ const MainIndex = () => {
                   </div>
                   <span className="control__show">{entities.all}</span>
                   <ul className="control-list">
-                    <li className="control-list__item">{entities.all}</li>
-
-                    <li className="control-list__item">{entities.commerce}</li>
-
-                    <li className="control-list__item">{entities.education}</li>
-
-                    <li className="control-list__item">{entities.hospital}</li>
-
-                    <li className="control-list__item">{entities.resident}</li>
-
-                    <li className="control-list__item">{entities.offical}</li>
-
-                    <li className="control-list__item">
-                      {entities.reconstruction}
-                    </li>
+                    {projectDetail.map((item: any) => {
+                      return (
+                        <li className="control-list__item">
+                          <Link href="">{item.mainTitle}</Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
 

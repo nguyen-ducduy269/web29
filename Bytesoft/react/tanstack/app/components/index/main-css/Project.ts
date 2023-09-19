@@ -98,6 +98,10 @@ export const Project = styled.section`
             border-bottom-left-radius: unset;
             color: #1d407d;
           }
+          .control-list__item a {
+            text-decoration: none !important;
+            color: rgba(29, 64, 125) !important;
+          }
         }
       }
 

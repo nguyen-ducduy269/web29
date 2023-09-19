@@ -22,60 +22,66 @@
     "projectH4": "DỰ ÁN MỚI NHẤT",
     "projectH1": "DỰ ÁN NỔI BẬT",
     "all": "TÁT CẢ",
-    "commerce": "THƯƠNG MẠI",
-    "education": "GIÁO DỤC",
-    "hospital": "BỆNH VIỆN",
-    "resident": "THƯỜNG TRÚ",
-    "offical": "VĂN PHÒNG",
-    "reconstruction": "TÁI THIẾT",
-    "commerceDis": {
-      "title": "Thương mại",
-      "imagine": "/images/building1.png",
-      "popUp": {
-        "title": "DỰ ÁN N04B - THƯƠNG MẠI",
-        "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    "projectDetail": [
+      {
+        "mainTitle": "TẤT CẢ",
+        "title": "Tất cả"
+      },
+      {
+        "mainTitle": "THƯƠNG MẠI",
+        "title": "Thương mại",
+        "imagine": "/images/building1.png",
+        "popUp": {
+          "title": "DỰ ÁN N04B - THƯƠNG MẠI",
+          "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+        }
+      },
+      {
+        "mainTitle": "GIÁO DỤC",
+        "title": "Giáo dục",
+        "imagine": "/images/building2.png",
+        "popUp": {
+          "title": "DỰ ÁN N04B - GIÁO DỤC",
+          "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+        }
+      },
+      {
+        "mainTitle": "BỆNH VIỆN",
+        "title": "Bệnh viện",
+        "imagine": "/images/building3.png",
+        "popUp": {
+          "title": "DỰ ÁN N04B - BỆNH VIỆN",
+          "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+        }
+      },
+      {
+        "mainTitle": "THƯỜNG TRÚ",
+        "title": "Thường trú",
+        "imagine": "/images/building2.png",
+        "popUp": {
+          "title": "DỰ ÁN N04B - THƯỜNG TRÚ",
+          "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+        }
+      },
+      {
+        "mainTitle": "VĂN PHÒNG",
+        "title": "Văn phòng",
+        "imagine": "/images/building4.png",
+        "popUp": {
+          "title": "DỰ ÁN N04B - VĂN PHÒNG",
+          "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+        }
+      },
+      {
+        "mainTitle": "TÁI THIẾT",
+        "title": "Tái thiết",
+        "imagine": "/images/building5.png",
+        "popUp": {
+          "title": "DỰ ÁN N04B - TÁI THIẾT",
+          "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+        }
       }
-    },
-    "educationDis": {
-      "title": "Giáo dục",
-      "imagine": "/images/building2.png",
-      "popUp": {
-        "title": "DỰ ÁN N04B - GIÁO DỤC",
-        "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
-      }
-    },
-    "hospitalDis": {
-      "title": "Bệnh viện",
-      "imagine": "/images/building3.png",
-      "popUp": {
-        "title": "DỰ ÁN N04B - BỆNH VIỆN",
-        "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
-      }
-    },
-    "residentDis": {
-      "title": "Thường trú",
-      "imagine": "/images/building2.png",
-      "popUp": {
-        "title": "DỰ ÁN N04B - THƯỜNG TRÚ",
-        "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
-      }
-    },
-    "officalDis": {
-      "title": "Văn phòng",
-      "imagine": "/images/building4.png",
-      "popUp": {
-        "title": "DỰ ÁN N04B - VĂN PHÒNG",
-        "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
-      }
-    },
-    "reconstructionDis": {
-      "title": "Tái thiết",
-      "imagine": "/images/building5.png",
-      "popUp": {
-        "title": "DỰ ÁN N04B - TÁI THIẾT",
-        "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
-      }
-    },
+    ],
     "discriptionTitle": "TÒA NHÀ THÀNH PHỐ",
     "disCommerce": "Thương mại",
     "disEducation": "Giáo dục",
