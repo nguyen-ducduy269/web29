@@ -3,10 +3,12 @@ import { Foot } from "./footer-css/Foot";
 import { Container } from "../Container";
 import Image from "next/image";
 
-import footerMainImg from "@/app/image/footer-main.png";
-import vingroupImg from "@/app/image/vingroup.png";
-import lanmarkImg from "@/app/image/lanmark.png";
-import hancorkImg from "@/app/image/hancork.png";
+import {
+  footerMainImg,
+  vingroupImg,
+  lanmarkImg,
+  hancorkImg,
+} from "../ImportImage";
 import useFetchingData from "@/app/useFetchingData";
 
 const FooterIndex = () => {

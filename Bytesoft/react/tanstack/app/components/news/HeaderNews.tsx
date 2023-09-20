@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import images
-import LogoImage from "@/app/image/logo.png";
+import { LogoImage } from "../ImportImage";
 
 //// import components
 import { Container } from "../Container";

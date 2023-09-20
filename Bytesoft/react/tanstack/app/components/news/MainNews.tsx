@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import contentImg from "@/app/image/content-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
+
+import { contentImg2 } from "../ImportImage";
 
 ///// import components
 import { Container } from "../Container";
@@ -26,7 +27,12 @@ const MainNews = () => {
                 <div className="main-content">
                   <div className="content">
                     <Link href="/news/100">
-                      <Image src={contentImg} width={330} height={253} alt="" />
+                      <Image
+                        src={contentImg2}
+                        width={330}
+                        height={253}
+                        alt=""
+                      />
 
                       <div className="more">
                         <div className="clock">
@@ -60,7 +66,12 @@ const MainNews = () => {
 
                   <div className="content">
                     <Link href="/news/100">
-                      <Image src={contentImg} width={330} height={253} alt="" />
+                      <Image
+                        src={contentImg2}
+                        width={330}
+                        height={253}
+                        alt=""
+                      />
 
                       <div className="more">
                         <div className="clock">
@@ -94,7 +105,12 @@ const MainNews = () => {
 
                   <div className="content">
                     <Link href="/news/100">
-                      <Image src={contentImg} width={330} height={253} alt="" />
+                      <Image
+                        src={contentImg2}
+                        width={330}
+                        height={253}
+                        alt=""
+                      />
 
                       <div className="more">
                         <div className="clock">
@@ -128,7 +144,12 @@ const MainNews = () => {
 
                   <div className="content">
                     <Link href="/news/100">
-                      <Image src={contentImg} width={330} height={253} alt="" />
+                      <Image
+                        src={contentImg2}
+                        width={330}
+                        height={253}
+                        alt=""
+                      />
 
                       <div className="more">
                         <div className="clock">
@@ -162,7 +183,12 @@ const MainNews = () => {
 
                   <div className="content">
                     <Link href="/news/100">
-                      <Image src={contentImg} width={330} height={253} alt="" />
+                      <Image
+                        src={contentImg2}
+                        width={330}
+                        height={253}
+                        alt=""
+                      />
 
                       <div className="more">
                         <div className="clock">
@@ -196,7 +222,12 @@ const MainNews = () => {
 
                   <div className="content">
                     <Link href="/news/100">
-                      <Image src={contentImg} width={330} height={253} alt="" />
+                      <Image
+                        src={contentImg2}
+                        width={330}
+                        height={253}
+                        alt=""
+                      />
 
                       <div className="more">
                         <div className="clock">

@@ -5,10 +5,7 @@ import { SectionContact } from "./contact-css/SectionContact";
 import { SectionInfor } from "./contact-css/SectionInfor";
 import Image from "next/image";
 
-import locationImg from "@/app/image/location.png";
-import callImg from "@/app/image/call.png";
-import mailImg from "@/app/image/mail.png";
-import point from "@/app/image/point.png";
+import { locationImg, callImg, mailImg, point } from "../ImportImage";
 import useFetchingData from "@/app/useFetchingData";
 
 const ContactMain = () => {

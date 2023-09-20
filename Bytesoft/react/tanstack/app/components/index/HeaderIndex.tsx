@@ -13,8 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import image/
-import LogoImage from "@/app/image/logo.png";
-import img from "@/app/image/slide1.png";
+import { LogoImage, img } from "../ImportImage";
 const styling = {
   backgroundImage: `url('${img.src}')`,
 };

@@ -4,8 +4,7 @@ import { Foot } from "./Foot";
 import useFetchingData from "@/app/useFetchingData";
 
 import Image from "next/image";
-import footerImg from "@/app/image/footer-img.png";
-import footImg from "@/app/image/footer.png";
+import { footerImg, footImg } from "../ImportImage";
 
 const Footer = () => {
   const { data: entities } = useFetchingData();

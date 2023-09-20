@@ -3,10 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useFetchingData from "@/app/useFetchingData";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Link from "next/link";
 
 import {
   faArrowLeft,
@@ -106,7 +104,8 @@ import {
   layer154,
   contentImg,
   newsImg,
-} from "./ImportImage";
+} from "../ImportImage";
+import AllProducts from "./AllProducts";
 
 const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
@@ -120,27 +119,6 @@ const MainIndex = () => {
       newValue +
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempore, ea recusandae, porro aliquid inventore eos fugiat voluptate laborum corporis doloremque sed suscipit, delectus nulla perferendis vero nostrum blanditiis aspernatur."
     );
-  };
-
-  function SampleArrow(props: any) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "none", background: "black" }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 2,
-    nextArrow: <SampleArrow />,
-    prevArrow: <SampleArrow />,
   };
 
   const projectDetail = entities.projectDetail;
@@ -473,291 +451,29 @@ const MainIndex = () => {
                   </div>
                   <span className="control__show">{entities.all}</span>
                   <ul className="control-list">
-                    {projectDetail.map((item: any) => {
-                      return (
-                        <li className="control-list__item">
-                          <Link href="">{item.mainTitle}</Link>
-                        </li>
-                      );
-                    })}
+                    <li className="control-list__item active">
+                      {entities.all}
+                    </li>
+
+                    <li className="control-list__item">{entities.commerce}</li>
+
+                    <li className="control-list__item">{entities.education}</li>
+
+                    <li className="control-list__item">{entities.hospital}</li>
+
+                    <li className="control-list__item">{entities.resident}</li>
+
+                    <li className="control-list__item">{entities.offical}</li>
+
+                    <li className="control-list__item">
+                      {entities.reconstruction}
+                    </li>
                   </ul>
                 </div>
 
                 <div className="tab-content">
                   <div className="tab-item">
-                    <Slider {...settings}>
-                      <div className="multiple-items">
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongmai}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disCommerce}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={giaoduc}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disEducation}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={benhvien}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disHospital}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongtru}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disResident}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={vanphong}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disOffical}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={taithiet}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">
-                              {entities.disReconstruction}
-                            </div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="multiple-items">
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongmai}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disCommerce}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={giaoduc}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disEducation}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={benhvien}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disHospital}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongtru}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disResident}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={vanphong}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disOffical}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={taithiet}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">
-                              {entities.disReconstruction}
-                            </div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </Slider>
+                    <AllProducts setOpenItem={setOpenItem} />
                   </div>
                 </div>
               </div>
@@ -815,6 +531,7 @@ const MainIndex = () => {
               ) : (
                 ""
               )}
+
               <div className="button">
                 <div className="icon">
                   <a href="">
