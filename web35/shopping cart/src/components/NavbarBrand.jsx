@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavbarBrand = () => {
   return (
-    <a className="navbar-brand" href="#!">
-      Start Bootstrap
-    </a>
+    <Link to="/" className="navbar-brand">
+      Start Bootstap
+    </Link>
   );
 };
 

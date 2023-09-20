@@ -4,6 +4,7 @@ import CardImg from "./CardImg";
 import CardBody from "./CardBody";
 import Button from "./Button";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 /**
  *
  * @param {*} param0
@@ -21,6 +22,18 @@ const Card = ({ title, price, img, vote, discountPercent }) => {
           vote={vote}
           title={title}
         />
+
+        <Button>
+          <Link
+            to="/detail-product"
+            style={{
+              color: "black",
+              textDecoration: "unset",
+            }}
+          >
+            Detail Product
+          </Link>
+        </Button>
         <Button>Add to cart</Button>
       </div>
     </div>

@@ -11183,3 +11183,91 @@ tr {
   height: 50px;
   border: 2px solid black;
 }
+
+.add-to-card a {
+  color: black;
+  text-decoration: unset;
+}
+
+.add-to-card a i {
+  color: black;
+}
+
+.add-to-card:hover a {
+  color: white;
+}
+
+.add-to-card:hover a i {
+  color: white;
+}
+
+.your-order {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.detail-product-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.detail-product-container h2 {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.detail-product-container h2 .discount-precent {
+  color: red;
+  font-size: 18px;
+}
+
+.detail-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.price {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.before-discount {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.add-quantity {
+  display: flex;
+  gap: 10px;
+}
+
+.add-quantity button {
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+}
+
+.quantity {
+  line-height: 30px;
+}
+
+.add-card {
+  width: 90%;
+  margin: 0 auto;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.add-card:hover {
+  color: white;
+  background-color: black;
+}
