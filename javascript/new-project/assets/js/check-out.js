@@ -206,7 +206,15 @@ function placeOrder() {
         <a href="index.html">Homepage</a> to continue shopping!
       </p>
       `;
+      const address = document.querySelector(".address");
+      address.innerHTML = "+ Add New Address";
 
+      const paymentMethod = document.querySelector(".payment-method");
+      paymentMethod.innerHTML = `
+      <h3>Payment Methods</h3>
+
+      <p><i class="fa-regular fa-credit-card"></i> Add a new cart</p>
+      `;
       cost.innerHTML = "₫0.000";
       sumPrice.innerHTML = "₫0.000";
     }
