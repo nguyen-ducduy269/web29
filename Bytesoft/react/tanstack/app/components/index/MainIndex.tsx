@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useFetchingData from "@/app/useFetchingData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 //// import components
@@ -16,6 +15,9 @@ import { Recruitment } from "./main-css/Recruitment";
 import { LastestNews } from "./main-css/LastestNews";
 import { Last } from "./main-css/Last";
 import { Container } from "../Container";
+import AllProducts from "./AllProducts";
+import Products from "./Products";
+import MainContent from "./MainContent";
 
 //// about us images
 import {
@@ -93,9 +95,6 @@ import {
   layer154,
   newsImg,
 } from "../ImportImage";
-import AllProducts from "./AllProducts";
-import Products from "./Products";
-import MainContent from "./MainContent";
 
 const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
@@ -104,6 +103,7 @@ const MainIndex = () => {
 
   const { data: entities } = useFetchingData();
   if (!entities) return;
+  const projectDetail = entities.projectDetail;
 
   const addText = () => {
     setNewValue(
@@ -111,8 +111,6 @@ const MainIndex = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempore, ea recusandae, porro aliquid inventore eos fugiat voluptate laborum corporis doloremque sed suscipit, delectus nulla perferendis vero nostrum blanditiis aspernatur."
     );
   };
-
-  const projectDetail = entities.projectDetail;
 
   const tabToggle = (value: number) => {
     setToggleTab(value);
@@ -1081,11 +1079,13 @@ const MainIndex = () => {
                 <div className="title">
                   <b>{entities.lastestNewsTitle}</b>
                 </div>
+
                 <div className="more">
                   <div className="line"></div>
                   <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
+
                 <MainContent />
               </div>
               <div className="news-img">
