@@ -30,10 +30,6 @@
     "reconstruction": "TÁI THIẾT",
     "projectDetail": [
       {
-        "mainTitle": "TẤT CẢ",
-        "title": "Tất cả"
-      },
-      {
         "mainTitle": "THƯƠNG MẠI",
         "title": "Thương mại",
         "imagine": "/images/building1.png",
@@ -108,7 +104,7 @@
     "disProject5": ": Dân dụng, căn hộ chung cư",
     "levelOfConstruction": "Cấp công trình",
     "disProject6": " Cấp 1",
-    "executionTime": "Thời gian thực hiện",
+    "executionTime": "Thời gian thực hiện: ",
     "time": "2013-2015",
     "projectBonus": "PROJECTS",
     "recruitmentContent": "TUYỂN DỤNG",

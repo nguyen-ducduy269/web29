@@ -37,7 +37,7 @@ export const LastestNews = styled.section`
         max-width: 90%;
         margin: 0 auto;
         height: 310px;
-        display: flex;
+        display: flex !important;
         margin-top: 75px;
         justify-content: center;
         margin-bottom: 62px;

@@ -11,21 +11,13 @@ import {
 } from "../ImportImage";
 import useFetchingData from "@/app/useFetchingData";
 
-const AllProducts = ({ setOpenItem }: any) => {
+const Products = ({ setOpenItem, content }: any) => {
   function SampleArrow(props: any) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "rgba(31, 211, 146)",
-          top: "3%",
-          color: "white",
-          borderRadius: "100%",
-          zIndex: 10,
-        }}
+        style={{ ...style, display: "none", background: "black" }}
         onClick={onClick}
       />
     );
@@ -57,7 +49,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disCommerce}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -77,7 +69,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disEducation}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -97,7 +89,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disHospital}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -117,7 +109,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disResident}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -137,7 +129,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disOffical}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -157,7 +149,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disReconstruction}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -179,7 +171,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disCommerce}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -199,7 +191,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disEducation}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -219,7 +211,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disHospital}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -239,7 +231,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disResident}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -259,7 +251,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disOffical}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -279,7 +271,7 @@ const AllProducts = ({ setOpenItem }: any) => {
           />
           <div className="discription">
             <div className="title">{entities.discriptionTitle}</div>
-            <div className="more">{entities.disReconstruction}</div>
+            <div className="more">{content}</div>
             <button
               className="mutiple-button"
               onClick={() => setOpenItem(true)}
@@ -293,4 +285,4 @@ const AllProducts = ({ setOpenItem }: any) => {
   );
 };
 
-export default AllProducts;
+export default Products;

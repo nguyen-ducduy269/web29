@@ -6,12 +6,7 @@ import useFetchingData from "@/app/useFetchingData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import {
-  faArrowLeft,
-  faArrowRight,
-  faCircleXmark,
-} from "@fortawesome/free-solid-svg-icons";
-import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 //// import components
 import { AboutUs } from "./main-css/AboutUs";
@@ -66,12 +61,6 @@ import {
   popupImage,
   leftImg,
   rightImg,
-  thuongmai,
-  thuongtru,
-  giaoduc,
-  benhvien,
-  vanphong,
-  taithiet,
   mainImg,
   mainPersonal,
   main_personal1,
@@ -102,14 +91,16 @@ import {
   layer152,
   layer153,
   layer154,
-  contentImg,
   newsImg,
 } from "../ImportImage";
 import AllProducts from "./AllProducts";
+import Products from "./Products";
+import MainContent from "./MainContent";
 
 const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
+  const [toggleTab, setToggleTab] = useState(1);
 
   const { data: entities } = useFetchingData();
   if (!entities) return;
@@ -122,6 +113,10 @@ const MainIndex = () => {
   };
 
   const projectDetail = entities.projectDetail;
+
+  const tabToggle = (value: number) => {
+    setToggleTab(value);
+  };
 
   return (
     <>
@@ -451,21 +446,80 @@ const MainIndex = () => {
                   </div>
                   <span className="control__show">{entities.all}</span>
                   <ul className="control-list">
-                    <li className="control-list__item active">
+                    <li
+                      className={
+                        toggleTab === 1
+                          ? "control-list__item active"
+                          : "control-list__item"
+                      }
+                      onClick={() => tabToggle(1)}
+                    >
                       {entities.all}
                     </li>
 
-                    <li className="control-list__item">{entities.commerce}</li>
+                    <li
+                      className={
+                        toggleTab === 2
+                          ? "control-list__item active"
+                          : "control-list__item"
+                      }
+                      onClick={() => tabToggle(2)}
+                    >
+                      {entities.commerce}
+                    </li>
 
-                    <li className="control-list__item">{entities.education}</li>
+                    <li
+                      className={
+                        toggleTab === 3
+                          ? "control-list__item active"
+                          : "control-list__item"
+                      }
+                      onClick={() => tabToggle(3)}
+                    >
+                      {entities.education}
+                    </li>
 
-                    <li className="control-list__item">{entities.hospital}</li>
+                    <li
+                      className={
+                        toggleTab === 4
+                          ? "control-list__item active"
+                          : "control-list__item"
+                      }
+                      onClick={() => tabToggle(4)}
+                    >
+                      {entities.hospital}
+                    </li>
 
-                    <li className="control-list__item">{entities.resident}</li>
+                    <li
+                      className={
+                        toggleTab === 5
+                          ? "control-list__item active"
+                          : "control-list__item"
+                      }
+                      onClick={() => tabToggle(5)}
+                    >
+                      {entities.resident}
+                    </li>
 
-                    <li className="control-list__item">{entities.offical}</li>
+                    <li
+                      className={
+                        toggleTab === 6
+                          ? "control-list__item active"
+                          : "control-list__item"
+                      }
+                      onClick={() => tabToggle(6)}
+                    >
+                      {entities.offical}
+                    </li>
 
-                    <li className="control-list__item">
+                    <li
+                      className={
+                        toggleTab === 7
+                          ? "control-list__item active"
+                          : "control-list__item"
+                      }
+                      onClick={() => tabToggle(7)}
+                    >
                       {entities.reconstruction}
                     </li>
                   </ul>
@@ -473,83 +527,369 @@ const MainIndex = () => {
 
                 <div className="tab-content">
                   <div className="tab-item">
-                    <AllProducts setOpenItem={setOpenItem} />
+                    {toggleTab === 1 ? (
+                      <AllProducts setOpenItem={setOpenItem} />
+                    ) : (
+                      ""
+                    )}
+
+                    {toggleTab === 2 ? (
+                      <Products
+                        setOpenItem={setOpenItem}
+                        content={entities.disCommerce}
+                      />
+                    ) : (
+                      ""
+                    )}
+
+                    {toggleTab === 3 ? (
+                      <Products
+                        setOpenItem={setOpenItem}
+                        content={entities.disEducation}
+                      />
+                    ) : (
+                      ""
+                    )}
+
+                    {toggleTab === 4 ? (
+                      <Products
+                        setOpenItem={setOpenItem}
+                        content={entities.disHospital}
+                      />
+                    ) : (
+                      ""
+                    )}
+
+                    {toggleTab === 5 ? (
+                      <Products
+                        setOpenItem={setOpenItem}
+                        content={entities.disResident}
+                      />
+                    ) : (
+                      ""
+                    )}
+
+                    {toggleTab === 6 ? (
+                      <Products
+                        setOpenItem={setOpenItem}
+                        content={entities.disOffical}
+                      />
+                    ) : (
+                      ""
+                    )}
+
+                    {toggleTab === 7 ? (
+                      <Products
+                        setOpenItem={setOpenItem}
+                        content={entities.disReconstruction}
+                      />
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
               </div>
 
               {openItem ? (
-                <div className="popup">
-                  <div className="main-pop">
-                    <Image src={popupImage} alt="" />
-                    <div className="title">
-                      <b>{entities.popUpTitle}</b>
+                toggleTab === 1 ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image src={popupImage} alt="" />
+                      <div className="title">
+                        <b>{entities.popUpTitle}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">{entities.nameProject}</div>
+                          <div className="dis">{entities.disProject1}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.investor}</div>
+                          <div className="dis">{entities.disProject2}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.category}</div>
+                          <div className="dis">{entities.disProject3}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.location}</div>
+                          <div className="dis">{entities.disProject4}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">
+                            {entities.typeOfConstruction}
+                          </div>
+                          <div className="dis">{entities.disProject5}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">
+                            {entities.levelOfConstruction}
+                          </div>
+                          <div className="dis">{entities.disProject6}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="main-content">
-                      <div className="content">
-                        <div className="name">{entities.nameProject}</div>
-                        <div className="dis">{entities.disProject1}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">{entities.investor}</div>
-                        <div className="dis">{entities.disProject2}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">{entities.category}</div>
-                        <div className="dis">{entities.disProject3}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">{entities.location}</div>
-                        <div className="dis">{entities.disProject4}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">
-                          {entities.typeOfConstruction}
-                        </div>
-                        <div className="dis">{entities.disProject5}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">
-                          {entities.levelOfConstruction}
-                        </div>
-                        <div className="dis">{entities.disProject6}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">{entities.executionTime}</div>
-                        <div className="dis">{entities.time}</div>
-                      </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
                     </div>
                   </div>
-                  <div className="layout"></div>
-                  <div className="close-pop" onClick={() => setOpenItem(false)}>
-                    <FontAwesomeIcon
-                      icon={faCircleXmark}
-                      style={{ fontSize: 40, color: "white" }}
-                    />
+                ) : toggleTab === 2 ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={projectDetail[0].imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{projectDetail[0].popUp.title}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Type: </div>
+                          <div className="dis">{projectDetail[0].title}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">Discription: </div>
+                          <div className="dis">
+                            {projectDetail[0].popUp.disscriptionText}
+                          </div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
                   </div>
-                </div>
+                ) : toggleTab === 3 ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={projectDetail[1].imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{projectDetail[1].popUp.title}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Type: </div>
+                          <div className="dis">{projectDetail[1].title}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">Discription: </div>
+                          <div className="dis">
+                            {projectDetail[1].popUp.disscriptionText}
+                          </div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
+                  </div>
+                ) : toggleTab === 4 ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={projectDetail[2].imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{projectDetail[2].popUp.title}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Type: </div>
+                          <div className="dis">{projectDetail[2].title}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">Discription: </div>
+                          <div className="dis">
+                            {projectDetail[2].popUp.disscriptionText}
+                          </div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
+                  </div>
+                ) : toggleTab === 5 ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={projectDetail[3].imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{projectDetail[3].popUp.title}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Type: </div>
+                          <div className="dis">{projectDetail[3].title}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">Discription: </div>
+                          <div className="dis">
+                            {projectDetail[3].popUp.disscriptionText}
+                          </div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
+                  </div>
+                ) : toggleTab === 6 ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={projectDetail[4].imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{projectDetail[4].popUp.title}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Type: </div>
+                          <div className="dis">{projectDetail[4].title}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">Discription: </div>
+                          <div className="dis">
+                            {projectDetail[4].popUp.disscriptionText}
+                          </div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
+                  </div>
+                ) : toggleTab === 7 ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={projectDetail[5].imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{projectDetail[5].popUp.title}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Type: </div>
+                          <div className="dis">{projectDetail[5].title}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">Discription: </div>
+                          <div className="dis">
+                            {projectDetail[5].popUp.disscriptionText}
+                          </div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )}
-
-              <div className="button">
-                <div className="icon">
-                  <a href="">
-                    <FontAwesomeIcon
-                      icon={faArrowLeft}
-                      style={{ color: "#fff" }}
-                    />
-                  </a>
-                </div>
-                <div className="icon">
-                  <a href="">
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      style={{ color: "#fff" }}
-                    />
-                  </a>
-                </div>
-              </div>
             </div>
 
             <div className="bonus">
@@ -746,82 +1086,7 @@ const MainIndex = () => {
                   <Image src={rectangleImg} alt="" width={12} height={12} />
                   <div className="line"></div>
                 </div>
-                <div className="main-content">
-                  <div className="content">
-                    <Image src={contentImg} alt="" width={287} height={234} />
-                    <div className="discription">
-                      <div className="heading">
-                        <div className="clock">
-                          <FontAwesomeIcon
-                            icon={faClock}
-                            style={{ width: 10, height: 10 }}
-                          />
-                        </div>
-                        <div className="text">{entities.mainContentText}</div>
-                        <div className="block">|</div>
-                        <div className="eye">
-                          <i className="fa-regular fa-eye"></i>
-                        </div>
-                        <div className="view">{entities.mainView}</div>
-                      </div>
-                      <div className="text">{entities.disscriptionText}</div>
-                      <div className="button">
-                        <h4>Xem thêm</h4>
-                        <button>+</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="content">
-                    <Image src={contentImg} alt="" width={287} height={234} />
-                    <div className="discription">
-                      <div className="heading">
-                        <div className="clock">
-                          <FontAwesomeIcon
-                            icon={faClock}
-                            style={{ width: 10, height: 10 }}
-                          />
-                        </div>
-                        <div className="text">{entities.mainContentText}</div>
-                        <div className="block">|</div>
-                        <div className="eye">
-                          <i className="fa-regular fa-eye"></i>
-                        </div>
-                        <div className="view">{entities.mainView}</div>
-                      </div>
-                      <div className="text">{entities.disscriptionText}</div>
-                      <div className="button">
-                        <h4>{entities.xemThemBtn}</h4>
-                        <button>+</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="content">
-                    <Image src={contentImg} alt="" width={287} height={234} />
-                    <div className="discription">
-                      <div className="heading">
-                        <div className="clock">
-                          <FontAwesomeIcon
-                            icon={faClock}
-                            style={{ width: 10, height: 10 }}
-                          />
-                        </div>
-                        <div className="text">{entities.mainContentText}</div>
-                        <div className="block">|</div>
-                        <div className="eye">
-                          <i className="fa-regular fa-eye"></i>
-                        </div>
-                        <div className="view">{entities.mainView}</div>
-                      </div>
-                      <div className="text">{entities.disscriptionText}</div>
-                      <div className="button">
-                        <h4>{entities.xemThemBtn}</h4>
-                        <button>+</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <MainContent />
               </div>
               <div className="news-img">
                 <Image src={newsImg} width={880} height={535} alt="" />

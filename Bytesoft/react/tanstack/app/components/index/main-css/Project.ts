@@ -333,6 +333,12 @@ export const Project = styled.section`
       }
     }
   }
+  .slick-prev {
+    left: 76% !important;
+  }
+  .slick-next {
+    right: 17% !important;
+  }
 
   @media only screen and (max-width: 1440px) and (min-width: 1350px) {
     .bs-tab {
@@ -367,6 +373,13 @@ export const Project = styled.section`
         position: relative;
         margin-top: 30%;
         margin-left: -15%;
+        .tab-content {
+          .multiple-items {
+            .item {
+              width: 70%;
+            }
+          }
+        }
       }
       .popup {
         .close-pop {
@@ -551,6 +564,12 @@ export const Project = styled.section`
     .right-img {
       display: none;
     }
+    .slick-prev {
+      display: none !important;
+    }
+    .slick-next {
+      display: none !important;
+    }
   }
 
   @media only screen and (max-width: 600px) and (min-width: 500px) {
@@ -663,6 +682,12 @@ export const Project = styled.section`
     }
     .right-img {
       display: none;
+    }
+    .slick-prev {
+      display: none !important;
+    }
+    .slick-next {
+      display: none !important;
     }
   }
 
@@ -777,6 +802,12 @@ export const Project = styled.section`
     .right-img {
       display: none;
     }
+    .slick-prev {
+      display: none !important;
+    }
+    .slick-next {
+      display: none !important;
+    }
   }
 
   @media only screen and (max-width: 480px) and (min-width: 425px) {
@@ -889,6 +920,12 @@ export const Project = styled.section`
     }
     .right-img {
       display: none;
+    }
+    .slick-prev {
+      display: none !important;
+    }
+    .slick-next {
+      display: none !important;
     }
   }
 
@@ -1011,6 +1048,12 @@ export const Project = styled.section`
     }
     .right-img {
       display: none;
+    }
+    .slick-prev {
+      display: none !important;
+    }
+    .slick-next {
+      display: none !important;
     }
   }
 
@@ -1135,6 +1178,12 @@ export const Project = styled.section`
     }
     .right-img {
       display: none;
+    }
+    .slick-prev {
+      display: none !important;
+    }
+    .slick-next {
+      display: none !important;
     }
   }
 `;
