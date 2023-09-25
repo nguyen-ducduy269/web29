@@ -446,77 +446,77 @@ const MainIndex = () => {
                   <ul className="control-list">
                     <li
                       className={
-                        toggleTab === 1
+                        toggleTab === projectDetail[0].id
                           ? "control-list__item active"
                           : "control-list__item"
                       }
-                      onClick={() => tabToggle(1)}
+                      onClick={() => tabToggle(projectDetail[0].id)}
                     >
                       {entities.all}
                     </li>
 
                     <li
                       className={
-                        toggleTab === 2
+                        toggleTab === projectDetail[1].id
                           ? "control-list__item active"
                           : "control-list__item"
                       }
-                      onClick={() => tabToggle(2)}
+                      onClick={() => tabToggle(projectDetail[1].id)}
                     >
                       {entities.commerce}
                     </li>
 
                     <li
                       className={
-                        toggleTab === 3
+                        toggleTab === projectDetail[2].id
                           ? "control-list__item active"
                           : "control-list__item"
                       }
-                      onClick={() => tabToggle(3)}
+                      onClick={() => tabToggle(projectDetail[2].id)}
                     >
                       {entities.education}
                     </li>
 
                     <li
                       className={
-                        toggleTab === 4
+                        toggleTab === projectDetail[3].id
                           ? "control-list__item active"
                           : "control-list__item"
                       }
-                      onClick={() => tabToggle(4)}
+                      onClick={() => tabToggle(projectDetail[3].id)}
                     >
                       {entities.hospital}
                     </li>
 
                     <li
                       className={
-                        toggleTab === 5
+                        toggleTab === projectDetail[4].id
                           ? "control-list__item active"
                           : "control-list__item"
                       }
-                      onClick={() => tabToggle(5)}
+                      onClick={() => tabToggle(projectDetail[4].id)}
                     >
                       {entities.resident}
                     </li>
 
                     <li
                       className={
-                        toggleTab === 6
+                        toggleTab === projectDetail[5].id
                           ? "control-list__item active"
                           : "control-list__item"
                       }
-                      onClick={() => tabToggle(6)}
+                      onClick={() => tabToggle(projectDetail[5].id)}
                     >
                       {entities.offical}
                     </li>
 
                     <li
                       className={
-                        toggleTab === 7
+                        toggleTab === projectDetail[6].id
                           ? "control-list__item active"
                           : "control-list__item"
                       }
-                      onClick={() => tabToggle(7)}
+                      onClick={() => tabToggle(projectDetail[6].id)}
                     >
                       {entities.reconstruction}
                     </li>
@@ -525,13 +525,13 @@ const MainIndex = () => {
 
                 <div className="tab-content">
                   <div className="tab-item">
-                    {toggleTab === 1 ? (
+                    {toggleTab === projectDetail[0].id ? (
                       <AllProducts setOpenItem={setOpenItem} />
                     ) : (
                       ""
                     )}
 
-                    {toggleTab === 2 ? (
+                    {toggleTab === projectDetail[1].id ? (
                       <Products
                         setOpenItem={setOpenItem}
                         content={entities.disCommerce}
@@ -540,7 +540,7 @@ const MainIndex = () => {
                       ""
                     )}
 
-                    {toggleTab === 3 ? (
+                    {toggleTab === projectDetail[2].id ? (
                       <Products
                         setOpenItem={setOpenItem}
                         content={entities.disEducation}
@@ -549,7 +549,7 @@ const MainIndex = () => {
                       ""
                     )}
 
-                    {toggleTab === 4 ? (
+                    {toggleTab === projectDetail[3].id ? (
                       <Products
                         setOpenItem={setOpenItem}
                         content={entities.disHospital}
@@ -558,7 +558,7 @@ const MainIndex = () => {
                       ""
                     )}
 
-                    {toggleTab === 5 ? (
+                    {toggleTab === projectDetail[4].id ? (
                       <Products
                         setOpenItem={setOpenItem}
                         content={entities.disResident}
@@ -567,7 +567,7 @@ const MainIndex = () => {
                       ""
                     )}
 
-                    {toggleTab === 6 ? (
+                    {toggleTab === projectDetail[5].id ? (
                       <Products
                         setOpenItem={setOpenItem}
                         content={entities.disOffical}
@@ -576,7 +576,7 @@ const MainIndex = () => {
                       ""
                     )}
 
-                    {toggleTab === 7 ? (
+                    {toggleTab === projectDetail[6].id ? (
                       <Products
                         setOpenItem={setOpenItem}
                         content={entities.disReconstruction}
@@ -589,7 +589,7 @@ const MainIndex = () => {
               </div>
 
               {openItem ? (
-                toggleTab === 1 ? (
+                toggleTab === projectDetail[0].id ? (
                   <div className="popup">
                     <div className="main-pop">
                       <Image src={popupImage} alt="" />
@@ -631,7 +631,8 @@ const MainIndex = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="layout"></div>
+                    <div className="layout"></div>ư
+                    
                     <div
                       className="close-pop"
                       onClick={() => setOpenItem(false)}
@@ -642,47 +643,7 @@ const MainIndex = () => {
                       />
                     </div>
                   </div>
-                ) : toggleTab === 2 ? (
-                  <div className="popup">
-                    <div className="main-pop">
-                      <Image
-                        src={projectDetail[0].imagine}
-                        width={575}
-                        height={409}
-                        alt=""
-                      />
-                      <div className="title">
-                        <b>{projectDetail[0].popUp.title}</b>
-                      </div>
-                      <div className="main-content">
-                        <div className="content">
-                          <div className="name">Type: </div>
-                          <div className="dis">{projectDetail[0].title}</div>
-                        </div>
-                        <div className="content">
-                          <div className="name">Discription: </div>
-                          <div className="dis">
-                            {projectDetail[0].popUp.disscriptionText}
-                          </div>
-                        </div>
-                        <div className="content">
-                          <div className="name">{entities.executionTime}</div>
-                          <div className="dis">{entities.time}</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="layout"></div>
-                    <div
-                      className="close-pop"
-                      onClick={() => setOpenItem(false)}
-                    >
-                      <FontAwesomeIcon
-                        icon={faCircleXmark}
-                        style={{ fontSize: 40, color: "white" }}
-                      />
-                    </div>
-                  </div>
-                ) : toggleTab === 3 ? (
+                ) : toggleTab === projectDetail[1].id ? (
                   <div className="popup">
                     <div className="main-pop">
                       <Image
@@ -722,7 +683,7 @@ const MainIndex = () => {
                       />
                     </div>
                   </div>
-                ) : toggleTab === 4 ? (
+                ) : toggleTab === projectDetail[2].id ? (
                   <div className="popup">
                     <div className="main-pop">
                       <Image
@@ -762,7 +723,7 @@ const MainIndex = () => {
                       />
                     </div>
                   </div>
-                ) : toggleTab === 5 ? (
+                ) : toggleTab === projectDetail[3].id ? (
                   <div className="popup">
                     <div className="main-pop">
                       <Image
@@ -802,7 +763,7 @@ const MainIndex = () => {
                       />
                     </div>
                   </div>
-                ) : toggleTab === 6 ? (
+                ) : toggleTab === projectDetail[4].id ? (
                   <div className="popup">
                     <div className="main-pop">
                       <Image
@@ -842,7 +803,47 @@ const MainIndex = () => {
                       />
                     </div>
                   </div>
-                ) : toggleTab === 7 ? (
+                ) : toggleTab === projectDetail[5].id ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={projectDetail[4].imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{projectDetail[4].popUp.title}</b>
+                      </div>
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Type: </div>
+                          <div className="dis">{projectDetail[4].title}</div>
+                        </div>
+                        <div className="content">
+                          <div className="name">Discription: </div>
+                          <div className="dis">
+                            {projectDetail[4].popUp.disscriptionText}
+                          </div>
+                        </div>
+                        <div className="content">
+                          <div className="name">{entities.executionTime}</div>
+                          <div className="dis">{entities.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
+                  </div>
+                ) : toggleTab === projectDetail[6].id ? (
                   <div className="popup">
                     <div className="main-pop">
                       <Image

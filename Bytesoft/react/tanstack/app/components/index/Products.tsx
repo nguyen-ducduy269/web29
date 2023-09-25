@@ -17,7 +17,15 @@ const Products = ({ setOpenItem, content }: any) => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "none", background: "black" }}
+        style={{
+          ...style,
+          display: "block",
+          background: "rgba(31, 211, 146)",
+          top: "3%",
+          color: "white",
+          borderRadius: "100%",
+          zIndex: 10,
+        }}
         onClick={onClick}
       />
     );

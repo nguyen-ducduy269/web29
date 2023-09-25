@@ -30,6 +30,11 @@
     "reconstruction": "TÁI THIẾT",
     "projectDetail": [
       {
+        "id": 1,
+        "mainTitle": "TẤT CẢ"
+      },
+      {
+        "id": 2,
         "mainTitle": "THƯƠNG MẠI",
         "title": "Thương mại",
         "imagine": "/images/building1.png",
@@ -39,6 +44,7 @@
         }
       },
       {
+        "id": 3,
         "mainTitle": "GIÁO DỤC",
         "title": "Giáo dục",
         "imagine": "/images/building2.png",
@@ -48,6 +54,7 @@
         }
       },
       {
+        "id": 4,
         "mainTitle": "BỆNH VIỆN",
         "title": "Bệnh viện",
         "imagine": "/images/building3.png",
@@ -57,6 +64,7 @@
         }
       },
       {
+        "id": 5,
         "mainTitle": "THƯỜNG TRÚ",
         "title": "Thường trú",
         "imagine": "/images/building2.png",
@@ -66,6 +74,7 @@
         }
       },
       {
+        "id": 6,
         "mainTitle": "VĂN PHÒNG",
         "title": "Văn phòng",
         "imagine": "/images/building4.png",
@@ -75,6 +84,7 @@
         }
       },
       {
+        "id": 7,
         "mainTitle": "TÁI THIẾT",
         "title": "Tái thiết",
         "imagine": "/images/building5.png",
