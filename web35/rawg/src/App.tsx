@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Grid, Flex } from "@chakra-ui/react";
+import { Grid, GridItem, Flex } from "@chakra-ui/react";
 // import useFetchData from "./useFetchData";
 
 const navBar = [
@@ -223,6 +223,37 @@ function App() {
                   return <option value="">Order by:{item.name}</option>;
                 })}
               </select>
+            </div>
+
+            <div className="genres">
+              <Grid templateColumns={"1fr 1fr 1fr 1fr"}>
+                <GridItem>
+                  <div className="genres-item">
+                    <div className="genres-img">
+                      <img
+                        src="https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div className="genres-vote">
+                      <div className="icon">
+                        <i className="fa-brands fa-windows"></i>
+                        <i className="fa-brands fa-xbox"></i>
+                        <i className="fa-brands fa-apple"></i>
+                      </div>
+
+                      <div className="vote">86</div>
+                    </div>
+
+                    <div className="title">Grand Theft Auto V</div>
+                    <img
+                      src="https://felstar.com/demo/gamehub/assets/bulls-eye-d37f7fe5.webp"
+                      alt=""
+                    />
+                  </div>
+                </GridItem>
+              </Grid>
             </div>
           </div>
         </Flex>

@@ -71,6 +71,10 @@ main {
   font-size: 24px;
 }
 
+.nav .title:hover {
+  text-decoration: underline;
+}
+
 .item-img img {
   width: 100%;
   height: 100%;
@@ -121,4 +125,8 @@ main {
   color: white;
   background-color: #80808069;
   width: 224px;
+}
+
+.genres {
+  margin-top: 30px;
 }
