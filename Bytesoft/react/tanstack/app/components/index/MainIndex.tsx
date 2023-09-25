@@ -104,16 +104,16 @@ import Slider from "react-slick";
 const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
-  const [toggleTab, setToggleTab] = useState(1);
+  const [toggleTab, setToggleTab] = useState(false);
 
-  const [dataModal, setDataModal] = useState(null);
-  const [openModal, setOpenModal] = useState(false);
-  const [dataProject, setdataProject] = useState([]);
+  // const [dataModal, setDataModal] = useState(null);
+  // const [openModal, setOpenModal] = useState(false);
+  // const [dataProject, setdataProject] = useState([]);
 
-  const openModalFunc = (item: any) => {
-    setDataModal(item);
-    setOpenModal(true);
-  };
+  // const openModalFunc = (item: any) => {
+  //   setDataModal(item);
+  //   setOpenModal(true);
+  // };
 
   function SampleArrow(props: any) {
     const { className, style, onClick } = props;
