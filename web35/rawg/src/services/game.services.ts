@@ -1,6 +1,6 @@
-import queryString from 'query-string';
-import { QueryGameParams } from '../lib/types';
-import { endOfYear, format, startOfYear } from 'date-fns';
+import queryString from "query-string";
+import { QueryGameParams } from "../lib/types";
+import { endOfYear, format, startOfYear } from "date-fns";
 
 export interface QueryGameResponse {
   count: number;
@@ -53,7 +53,7 @@ export interface AddedByStatus {
 }
 
 export enum Color {
-  The0F0F0F = '0f0f0f',
+  The0F0F0F = "0f0f0f",
 }
 
 export interface EsrbRating {
@@ -82,10 +82,10 @@ export interface Rating {
 }
 
 export enum Title {
-  Exceptional = 'exceptional',
-  Meh = 'meh',
-  Recommended = 'recommended',
-  Skip = 'skip',
+  Exceptional = "exceptional",
+  Meh = "meh",
+  Recommended = "recommended",
+  Skip = "skip",
 }
 
 export interface ShortScreenshot {
@@ -107,8 +107,8 @@ export interface Tag {
 }
 
 export enum Language {
-  Eng = 'eng',
-  Rus = 'rus',
+  Eng = "eng",
+  Rus = "rus",
 }
 
 export type GameData = Result;
@@ -123,8 +123,8 @@ export const getGames = async (params: QueryGameParams) => {
       },
     },
     {
-      arrayFormat: 'comma',
-    },
+      arrayFormat: "comma",
+    }
   );
 
   const res = await fetch(url);
@@ -141,9 +141,15 @@ export const getTrending = () => {
 
   return getGames({
     dates: [
-      format(firstDayOfYear, 'yyyy-MM-dd'),
-      format(lastDayOfYear, 'yyyy-MM-dd'),
+      format(firstDayOfYear, "yyyy-MM-dd"),
+      format(lastDayOfYear, "yyyy-MM-dd"),
     ],
-    ordering: '-rating',
+    ordering: "-rating",
   });
+};
+
+export const useFetchData = async (url: string) => {
+  const response = await fetch(url);
+  const json = await response.json();
+  return json;
 };
