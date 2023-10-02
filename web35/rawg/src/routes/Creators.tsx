@@ -41,7 +41,7 @@ const Creators = () => {
               <AiOutlineRight color={"gray"} />
             </Box>
 
-            <Grid gridTemplateColumns={"1fr 1fr 1fr 1fr"}>
+            <Grid gridTemplateColumns={"1fr 1fr 1fr 1fr"} rowGap={"20px"}>
               <GridItem
                 backgroundImage={
                   "linear-gradient(rgba(32, 32,32,0.5), rgb(32,32,32)70%), url(https://media.rawg.io/media/resize/640/-/games/8cc/8cce7c0e99dcc43d66c8efd42f9d03e3.jpg)"

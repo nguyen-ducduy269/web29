@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start-data": "json-server --watch --port 3001 data/db.json",
+    "data": "json-server --watch --port 4000 data/project.json",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

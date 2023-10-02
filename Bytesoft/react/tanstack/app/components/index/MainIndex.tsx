@@ -146,7 +146,6 @@ const MainIndex = () => {
 
   const { data: entities } = useFetchingData();
   if (!entities) return;
-  const projectDetail = entities.projectDetail;
 
   const addText = () => {
     setNewValue(
