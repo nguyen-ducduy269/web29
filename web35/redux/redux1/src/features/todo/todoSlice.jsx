@@ -4,8 +4,8 @@ const initialState = {
     { id: 1, text: "Learn Java", completed: true, color: "purple" },
   ],
   filters: {
-    status: "Active",
-    color: ["red", "blue"],
+    status: ["All", "Active", "Complete"],
+    color: ["Green", "Blue", "Orange", "Purple", "Red"],
   },
 };
 
@@ -18,18 +18,18 @@ export default function todoReducer(state = initialState, action) {
           ...state.todos,
           {
             id: Date.now(),
-            text: action.payload.text,
+            text: action.payload,
             completed: false,
           },
         ],
       };
     }
 
-    case "toggle": {
+    case "todos/toggle": {
       return {
         ...state,
         todos: state.todos.map((todo) => {
-          todo.id === action.payload.id
+          todo.id === action.payload
             ? {
                 ...todo,
                 completed: !todo.completed,
@@ -38,11 +38,12 @@ export default function todoReducer(state = initialState, action) {
         }),
       };
     }
-    case "changeColor": {
+
+    case "todos/change-color": {
       return {
         ...state,
         todos: state.todos.map((todo) => {
-          todo.id === action.payload.id
+          todo.id === action.payload
             ? {
                 ...todo,
                 color: action.payload.color,
@@ -51,11 +52,12 @@ export default function todoReducer(state = initialState, action) {
         }),
       };
     }
+
     case "deleteTask": {
       return {
         ...state,
         todos: state.todos.map((todo) => {
-          todo.id !== action.payload.id;
+          todo.id !== action.payload;
         }),
       };
     }
