@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const Status = () => {
   const [indexValue, setIndexValue] = useState(null);
-  const status = useSelector((state) => state.filters.status);
+  const status = useSelector((state) => state.todos.filters.status);
 
   const toggleStatus = (params) => {
     setIndexValue(params);

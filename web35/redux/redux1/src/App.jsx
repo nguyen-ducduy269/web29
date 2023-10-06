@@ -11,7 +11,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 function App() {
-  const todo = useSelector((state) => state.todos);
+  const todo = useSelector((state) => state.todos.items);
   const [todoText, setTodoText] = useState("");
   const dispatch = useDispatch();
 

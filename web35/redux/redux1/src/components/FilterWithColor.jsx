@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
+import { TodoContext } from "../context/TodoContext";
 
 const FilterWithColor = () => {
-  const color = useSelector((state) => state.filters.color);
+  const color = useSelector((state) => state.todos.filters.color);
   const [filterColor, setFilterColor] = useState(null);
+  const { dispatch } = useContext(TodoContext);
 
   const toggleChangeColor = (params) => {
     setFilterColor(params);

@@ -1,21 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import { AiOutlineClose } from "react-icons/ai";
 import { TodoContext } from "../context/TodoContext";
+import { todoSlice } from "../features/todo/todoSlice";
+
+const colors = ["Green", "Blue", "Orange", "Purple", "Red"];
 
 const Main = () => {
   const { todo, dispatch } = useContext(TodoContext);
+  const [changColor, setChangColor] = useState(null);
 
   const changeChecked = (params) => {
-    dispatch({ type: "todos/toggle", payload: params });
+    dispatch(
+      todoSlice.actions.toggle({ id: params.id, completed: !params.completed })
+    );
   };
 
-  const changeColor = (params) => {
-    dispatch({ type: "todos/change-color", payload: params });
+  const changeColor = () => {
+    dispatch(todoSlice.actions.changeColor(changColor));
   };
 
   const deleteItem = (params) => {
-    dispatch({ type: "deleteTask", payload: params });
+    dispatch(todoSlice.actions.delete(params));
   };
 
   return (
@@ -34,59 +40,41 @@ const Main = () => {
               justifyContent={"center"}
               alignItems={"center"}
             >
-              {item.completed ? (
-                <input
-                  type="checkbox"
-                  checked
-                  name=""
-                  id=""
-                  onChange={() => changeChecked(item.id)}
-                />
-              ) : (
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  onChange={() => changeChecked(item.id)}
-                />
-              )}
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                onChange={() => changeChecked(item)}
+              />
             </Box>
 
             <p style={{ width: "80%" }}>{item.text}</p>
 
-            {item.color ? (
-              <select
-                name=""
-                id=""
-                style={{
-                  width: "10%",
-                }}
-                onChange={() => changeColor(item.id)}
-              >
-                <option value="">{item.color}</option>
-                <option value="">Green</option>
-                <option value="">Blue</option>
-                <option value="">Orange</option>
-                <option value="">Purple</option>
-                <option value="">Red</option>
-              </select>
-            ) : (
-              <select
-                name=""
-                id=""
-                style={{
-                  width: "10%",
-                }}
-                onChange={() => changeColor(item.id)}
-              >
-                <option value=""></option>
-                <option value="">Green</option>
-                <option value="">Blue</option>
-                <option value="">Orange</option>
-                <option value="">Purple</option>
-                <option value="">Red</option>
-              </select>
-            )}
+            <select
+              name=""
+              id=""
+              style={{
+                width: "10%",
+              }}
+              onChange={() => {
+                changeColor();
+              }}
+            >
+              <option value=""></option>
+              {colors.map((color) => {
+                return (
+                  <option
+                    value=""
+                    key={""}
+                    onChange={() => {
+                      setChangColor(color);
+                    }}
+                  >
+                    {color}
+                  </option>
+                );
+              })}
+            </select>
 
             <AiOutlineClose
               width={"5%"}

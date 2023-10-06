@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { Input, Box, Button } from "@chakra-ui/react";
 import { TodoContext } from "../context/TodoContext";
+import { todoSlice } from "../features/todo/todoSlice";
 
 const HeaderInput = () => {
   const { todoText, setTodoText, dispatch } = useContext(TodoContext);
 
   const handleAddText = () => {
-    dispatch({ type: "todos/added", payload: todoText });
+    dispatch(todoSlice.actions.add(todoText));
   };
 
   return (
