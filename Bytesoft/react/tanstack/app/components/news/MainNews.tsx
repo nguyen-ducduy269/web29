@@ -11,7 +11,7 @@ import { contentImg2 } from "../ImportImage";
 ///// import components
 import { Container } from "../Container";
 import { Main } from "./main-news-css/Main";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 const MainNews = () => {
   const { data: entities } = useFetchingData();

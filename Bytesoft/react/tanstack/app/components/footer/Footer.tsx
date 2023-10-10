@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Foot } from "./Foot";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 import Image from "next/image";
 import { footerImg, footImg } from "../ImportImage";

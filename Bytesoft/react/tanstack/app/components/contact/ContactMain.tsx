@@ -6,7 +6,7 @@ import { SectionInfor } from "./contact-css/SectionInfor";
 import Image from "next/image";
 
 import { locationImg, callImg, mailImg, point } from "../ImportImage";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 const ContactMain = () => {
   const { data: entities } = useFetchingData();

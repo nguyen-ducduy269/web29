@@ -9,7 +9,7 @@ import {
   lanmarkImg,
   hancorkImg,
 } from "../ImportImage";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 const FooterIndex = () => {
   const { data: entities } = useFetchingData();

@@ -24,7 +24,7 @@ import { HeaderTop } from "./header-css/HeaderTop";
 import { HeaderNav } from "./header-css/HeaderNav";
 import { HeaderBanner } from "./header-css/HeaderBanner";
 import { Container } from "../Container";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 const HeaderIndex = () => {
   const [isDisplay, setIsDisplay] = useState(false);

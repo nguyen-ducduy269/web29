@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData, useFetchingProjectData } from "@/app/useFetchingData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
@@ -146,6 +146,10 @@ const MainIndex = () => {
 
   const { data: entities } = useFetchingData();
   if (!entities) return;
+
+  // const { project: projectData } = useFetchingProjectData();
+  // if (!projectData) return;
+  // console.log(projectData);
 
   const addText = () => {
     setNewValue(

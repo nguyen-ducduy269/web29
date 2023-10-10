@@ -9,7 +9,7 @@ import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 import { detailNewsImg } from "../ImportImage";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 const MiniNews = () => {
   const { data: entities } = useFetchingData();

@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 import { contentImg } from "../ImportImage";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";

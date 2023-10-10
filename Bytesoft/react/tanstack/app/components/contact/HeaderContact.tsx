@@ -20,7 +20,7 @@ import { Container } from "../Container";
 import { ContactTop } from "./header-contact-css/ContactTop";
 import { ContactNav } from "./header-contact-css/ContactNav";
 import { ContactBanner } from "./header-contact-css/ContactBanner";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 const HeaderContact = () => {
   const [isOpen, setIsOpen] = useState(false);

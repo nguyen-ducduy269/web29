@@ -20,7 +20,7 @@ import { Container } from "../Container";
 import { NewsTop } from "./header-news-css/NewsTop";
 import { NewsNav } from "./header-news-css/NewsNav";
 import { NewsBanner } from "./header-news-css/NewsBanner";
-import useFetchingData from "@/app/useFetchingData";
+import { useFetchingData } from "@/app/useFetchingData";
 
 const HeaderNews = () => {
   const [isOpen, setIsOpen] = useState(false);
