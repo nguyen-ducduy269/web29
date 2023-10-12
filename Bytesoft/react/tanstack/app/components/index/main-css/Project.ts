@@ -54,7 +54,7 @@ export const Project = styled.section`
           font-family: sans-serif;
         }
         h1 {
-          font-size: 35px;
+          font-size: 25px;
           width: 100%;
           margin-bottom: 15px;
           line-height: 46px;
@@ -209,11 +209,11 @@ export const Project = styled.section`
       .main-pop {
         position: relative;
         width: 646px;
-        height: 600px;
+        height: 530px;
         left: 51%;
         transform: translateX(-50%);
         background-color: #fff;
-        margin-top: 50px;
+        top: 12%;
         z-index: 10;
         img {
           width: 575px;
@@ -224,14 +224,14 @@ export const Project = styled.section`
           margin-top: 18px;
         }
         .title {
-          width: 80%;
+          width: 65%;
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
           background-color: white;
           height: 50px;
           text-align: center;
-          top: 65%;
+          bottom: 25%;
           z-index: 1;
           border-radius: 10px;
           line-height: 64px;
@@ -242,7 +242,6 @@ export const Project = styled.section`
           position: relative;
           width: 90%;
           margin: 0 auto;
-          margin-top: 30px;
           .content {
             display: flex;
             justify-content: space-around;
@@ -269,7 +268,7 @@ export const Project = styled.section`
       }
       .close-pop {
         position: absolute;
-        top: 15px;
+        top: 5%;
         right: 25%;
         z-index: 10;
       }
@@ -345,7 +344,7 @@ export const Project = styled.section`
       .popup {
         .close-pop {
           position: absolute;
-          top: 8px;
+          top: 5%;
           right: 23%;
           z-index: 10;
         }
@@ -358,7 +357,7 @@ export const Project = styled.section`
       .popup {
         .close-pop {
           position: absolute;
-          top: 6px;
+          top: 5%;
           right: 22%;
           z-index: 10;
         }
@@ -383,7 +382,7 @@ export const Project = styled.section`
       }
       .popup {
         .close-pop {
-          top: 8px;
+          top: 5%;
           right: 17%;
           z-index: 10;
         }
@@ -428,7 +427,7 @@ export const Project = styled.section`
       }
       .popup {
         .close-pop {
-          top: 8px;
+          top: 5%;
           right: 17%;
           z-index: 10;
         }
@@ -537,7 +536,7 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 6px;
+          top: 5%;
           right: 14%;
           z-index: 10;
         }
@@ -656,7 +655,7 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 6px;
+          top: 5%;
           right: 14%;
           z-index: 10;
         }
@@ -775,7 +774,7 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 10px;
+          top: 6%;
           right: 14%;
           z-index: 10;
         }
@@ -894,7 +893,7 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 6px;
+          top: 5%;
           right: 14%;
           z-index: 10;
         }
@@ -1022,7 +1021,7 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 6px;
+          top: 5%;
           right: 14%;
           z-index: 10;
         }
@@ -1152,7 +1151,7 @@ export const Project = styled.section`
         }
         .close-pop {
           position: absolute;
-          top: 15px;
+          top: 7%;
           right: 11%;
           z-index: 10;
         }

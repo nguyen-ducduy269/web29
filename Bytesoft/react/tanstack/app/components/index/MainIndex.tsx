@@ -2,12 +2,18 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useFetchingData, useFetchingProjectData } from "@/app/useFetchingData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import Slider from "react-slick";
 
-//// import components
+/////// import hooks
+import { useFetchingData } from "@/app/useFetchingData";
+
+///// import components
+import ControlList from "./ControlList";
+
+//// import components css
 import { AboutUs } from "./main-css/AboutUs";
 import { Activity } from "./main-css/Activity";
 import { Project } from "./main-css/Project";
@@ -99,12 +105,13 @@ import {
   vanphong,
   taithiet,
 } from "../ImportImage";
-import Slider from "react-slick";
+import MultipleItems from "./MultipleItems";
 
 const MainIndex = () => {
+  const [indexItem, setIndexItem] = useState(0);
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
-  const [toggleTab, setToggleTab] = useState(false);
+  const [openPopUp, setOpenPopUp] = useState(null);
 
   // const [dataModal, setDataModal] = useState(null);
   // const [openModal, setOpenModal] = useState(false);
@@ -144,11 +151,15 @@ const MainIndex = () => {
     prevArrow: <SampleArrow />,
   };
 
-  const { data: entities } = useFetchingData();
+  const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
 
-  // const { project: projectData } = useFetchingProjectData();
-  // if (!projectData) return;
+  // const { data: projectData } = useQuery({
+  //   queryKey: ["/project"],
+  //   queryFn: () =>
+  //     axios.get("http://localhost:4000/project").then((res) => res.data),
+  // });
+
   // console.log(projectData);
 
   const addText = () => {
@@ -157,6 +168,8 @@ const MainIndex = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempore, ea recusandae, porro aliquid inventore eos fugiat voluptate laborum corporis doloremque sed suscipit, delectus nulla perferendis vero nostrum blanditiis aspernatur."
     );
   };
+
+  console.log(openPopUp);
 
   return (
     <>
@@ -485,355 +498,65 @@ const MainIndex = () => {
                     <div className="line"></div>
                   </div>
                   <span className="control__show">{entities.all}</span>
-                  <ul className="control-list">
-                    <li className="control-list__item active">
-                      {entities.all}
-                    </li>
-                    <li className="control-list__item">{entities.commerce}</li>
 
-                    <li className="control-list__item">{entities.education}</li>
-
-                    <li className="control-list__item">{entities.hospital}</li>
-
-                    <li className="control-list__item">{entities.resident}</li>
-
-                    <li className="control-list__item">{entities.offical}</li>
-
-                    <li className="control-list__item">
-                      {entities.reconstruction}
-                    </li>
-                  </ul>
+                  <ControlList
+                    indexItem={indexItem}
+                    setIndexItem={setIndexItem}
+                  />
                 </div>
 
                 <div className="tab-content">
                   <div className="tab-item">
-                    <Slider {...settings}>
-                      <div className="multiple-items">
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongmai}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disCommerce}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={giaoduc}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disEducation}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={benhvien}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disHospital}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongtru}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disResident}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={vanphong}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disOffical}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={taithiet}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">
-                              {entities.disReconstruction}
-                            </div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="multiple-items">
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongmai}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disCommerce}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={giaoduc}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disEducation}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={benhvien}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disHospital}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={thuongtru}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disResident}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={vanphong}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">{entities.disOffical}</div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="item">
-                          <Image
-                            className="project-img"
-                            src={taithiet}
-                            alt=""
-                            width={237}
-                            height={266}
-                          />
-                          <div className="discription">
-                            <div className="title">
-                              {entities.discriptionTitle}
-                            </div>
-                            <div className="more">
-                              {entities.disReconstruction}
-                            </div>
-                            <button
-                              className="mutiple-button"
-                              onClick={() => setOpenItem(true)}
-                            >
-                              +
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </Slider>
+                    <MultipleItems
+                      indexItem={indexItem}
+                      setOpenItem={setOpenItem}
+                      setOpenPopUp={setOpenPopUp}
+                    />
                   </div>
                 </div>
               </div>
 
               {openItem ? (
-                <div className="popup">
-                  <div className="main-pop">
-                    <Image src={popupImage} alt="" />
-                    <div className="title">
-                      <b>{entities.popUpTitle}</b>
-                    </div>
-                    <div className="main-content">
-                      <div className="content">
-                        <div className="name">{entities.nameProject}</div>
-                        <div className="dis">{entities.disProject1}</div>
+                openPopUp !== null ? (
+                  <div className="popup">
+                    <div className="main-pop">
+                      <Image
+                        src={openPopUp.popUp.imagine}
+                        width={575}
+                        height={409}
+                        alt=""
+                      />
+                      <div className="title">
+                        <b>{openPopUp.popUp.title}</b>
                       </div>
-                      <div className="content">
-                        <div className="name">{entities.investor}</div>
-                        <div className="dis">{entities.disProject2}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">{entities.category}</div>
-                        <div className="dis">{entities.disProject3}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">{entities.location}</div>
-                        <div className="dis">{entities.disProject4}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">
-                          {entities.typeOfConstruction}
+                      <div className="main-content">
+                        <div className="content">
+                          <div className="name">Details about project:</div>
+                          <div className="dis">
+                            {openPopUp.popUp.disscriptionText}
+                          </div>
                         </div>
-                        <div className="dis">{entities.disProject5}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">
-                          {entities.levelOfConstruction}
+
+                        <div className="content">
+                          <div className="name">Details about time:</div>
+                          <div className="dis">{openPopUp.popUp.time}</div>
                         </div>
-                        <div className="dis">{entities.disProject6}</div>
-                      </div>
-                      <div className="content">
-                        <div className="name">{entities.executionTime}</div>
-                        <div className="dis">{entities.time}</div>
                       </div>
                     </div>
+                    <div className="layout"></div>
+                    <div
+                      className="close-pop"
+                      onClick={() => setOpenItem(false)}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircleXmark}
+                        style={{ fontSize: 40, color: "white" }}
+                      />
+                    </div>
                   </div>
-                  <div className="layout"></div>ư
-                  <div className="close-pop" onClick={() => setOpenItem(false)}>
-                    <FontAwesomeIcon
-                      icon={faCircleXmark}
-                      style={{ fontSize: 40, color: "white" }}
-                    />
-                  </div>
-                </div>
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )}

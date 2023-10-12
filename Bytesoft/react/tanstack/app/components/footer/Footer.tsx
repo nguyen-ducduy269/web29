@@ -7,7 +7,7 @@ import Image from "next/image";
 import { footerImg, footImg } from "../ImportImage";
 
 const Footer = () => {
-  const { data: entities } = useFetchingData();
+  const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
 
   return (

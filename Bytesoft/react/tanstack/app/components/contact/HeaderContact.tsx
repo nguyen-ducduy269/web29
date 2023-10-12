@@ -26,7 +26,7 @@ const HeaderContact = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [changeFlag, setChangeFlag] = useState("vi");
   const [display, setDisplay] = useState(false);
-  const { data: entities } = useFetchingData();
+  const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
 
   return (

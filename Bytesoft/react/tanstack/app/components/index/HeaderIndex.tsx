@@ -38,7 +38,7 @@ const HeaderIndex = () => {
     );
   };
 
-  const { data: entities } = useFetchingData();
+  const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
 
   const language = ["vi", "usa"];

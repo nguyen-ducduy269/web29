@@ -14,7 +14,7 @@ import { Main } from "./main-news-css/Main";
 import { useFetchingData } from "@/app/useFetchingData";
 
 const MainNews = () => {
-  const { data: entities } = useFetchingData();
+  const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
 
   return (
