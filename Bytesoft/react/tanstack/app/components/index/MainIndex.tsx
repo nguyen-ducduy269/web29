@@ -1,11 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import Slider from "react-slick";
 
 /////// import hooks
 import { useFetchingData } from "@/app/useFetchingData";
@@ -64,7 +63,6 @@ import {
   layer2,
   layer3,
   layer4,
-  popupImage,
   leftImg,
   rightImg,
   mainImg,
@@ -98,12 +96,6 @@ import {
   layer153,
   layer154,
   newsImg,
-  thuongmai,
-  thuongtru,
-  giaoduc,
-  benhvien,
-  vanphong,
-  taithiet,
 } from "../ImportImage";
 import MultipleItems from "./MultipleItems";
 
@@ -113,54 +105,8 @@ const MainIndex = () => {
   const [newValue, setNewValue] = useState("");
   const [openPopUp, setOpenPopUp] = useState(null);
 
-  // const [dataModal, setDataModal] = useState(null);
-  // const [openModal, setOpenModal] = useState(false);
-  // const [dataProject, setdataProject] = useState([]);
-
-  // const openModalFunc = (item: any) => {
-  //   setDataModal(item);
-  //   setOpenModal(true);
-  // };
-
-  function SampleArrow(props: any) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "rgba(31, 211, 146)",
-          top: "3%",
-          color: "white",
-          borderRadius: "100%",
-          zIndex: 10,
-        }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 2,
-    nextArrow: <SampleArrow />,
-    prevArrow: <SampleArrow />,
-  };
-
   const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
-
-  // const { data: projectData } = useQuery({
-  //   queryKey: ["/project"],
-  //   queryFn: () =>
-  //     axios.get("http://localhost:4000/project").then((res) => res.data),
-  // });
-
-  // console.log(projectData);
 
   const addText = () => {
     setNewValue(
@@ -168,8 +114,6 @@ const MainIndex = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempore, ea recusandae, porro aliquid inventore eos fugiat voluptate laborum corporis doloremque sed suscipit, delectus nulla perferendis vero nostrum blanditiis aspernatur."
     );
   };
-
-  console.log(openPopUp);
 
   return (
     <>
@@ -779,34 +723,3 @@ const MainIndex = () => {
 };
 
 export default MainIndex;
-
-const ModalData = ({ item }: { item: any }) => {
-  const [dataDetails, setDataDetails] = useState<any>(null);
-  useEffect(() => {
-    // get data item from id
-  });
-  return (
-    <div className="popup">
-      <div className="main-pop">
-        <Image src={dataDetails?.imagine} width={575} height={409} alt="" />
-        <div className="title">
-          <b>{dataDetails?.popUp.title}</b>
-        </div>
-        <div className="main-content">
-          <div className="content">
-            <div className="name">Type: </div>
-            <div className="dis">{dataDetails?.title}</div>
-          </div>
-          <div className="content">
-            <div className="name">Discription: </div>
-            <div className="dis">{dataDetails?.popUp.disscriptionText}</div>
-          </div>
-          <div className="content">
-            <div className="name">{dataDetails?.executionTime}</div>
-            <div className="dis">{dataDetails?.time}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
