@@ -100,17 +100,17 @@ const MainContent = () => {
 
               <div className="button">
                 <h4>Xem thêm</h4>
-                <Link href="/index/100">
-                  <button
-                    style={{ cursor: "pointer" }}
-                    onClick={() => {
-                      setDetailIndex(item);
-                      handleClick();
-                    }}
-                  >
-                    +
-                  </button>
-                </Link>
+                {/* <Link href="/index/100"> */}
+                <button
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    setDetailIndex(item);
+                    handleClick();
+                  }}
+                >
+                  +
+                </button>
+                {/* </Link> */}
               </div>
             </div>
           </div>
