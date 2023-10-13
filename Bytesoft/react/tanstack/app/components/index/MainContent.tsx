@@ -63,8 +63,9 @@ const MainContent = () => {
   );
   if (!lastestNews) return;
 
-  const handleClick = () => {
-    console.log("aaaaa", detailIndex);
+  const handleClick = (params: any) => {
+    setDetailIndex(params);
+    console.log("aaaaa", params);
   };
 
   return (
@@ -100,17 +101,16 @@ const MainContent = () => {
 
               <div className="button">
                 <h4>Xem thêm</h4>
-                {/* <Link href="/index/100"> */}
-                <button
-                  style={{ cursor: "pointer" }}
-                  onClick={() => {
-                    setDetailIndex(item);
-                    handleClick();
-                  }}
-                >
-                  +
-                </button>
-                {/* </Link> */}
+                <Link href="/index/100">
+                  <button
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      handleClick(item);
+                    }}
+                  >
+                    +
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
