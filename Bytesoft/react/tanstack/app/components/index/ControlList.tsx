@@ -1,7 +1,12 @@
 import React from "react";
 import { useFetchingData } from "@/app/useFetchingData";
 
-const ControlList = ({ indexItem, setIndexItem }: any) => {
+interface Props {
+  indexItem: number;
+  setIndexItem: (value: number) => void;
+}
+
+const ControlList = (props: Props) => {
   const { data: projectData } = useFetchingData(
     "http://localhost:4000/project"
   );
@@ -14,11 +19,11 @@ const ControlList = ({ indexItem, setIndexItem }: any) => {
           return (
             <li
               className={
-                indexItem == index
+                props.indexItem == index
                   ? "control-list__item active"
                   : "control-list__item"
               }
-              onClick={() => setIndexItem(index)}
+              onClick={() => props.setIndexItem(index)}
             >
               {project.mainTitle}
             </li>

@@ -4,7 +4,7 @@
       "mainTitle": "TẤT CẢ",
       "details": [
         {
-          "id": "tatca1",
+          "id": 1,
           "mainTitle": "THƯƠNG MẠI",
           "title": "Thương mại",
           "imagine": "/images/building1.png",
@@ -327,7 +327,7 @@
           "id": 5,
           "mainTitle": "THƯỜNG TRÚ 5",
           "title": "Thường trú 5",
-          "imagine": "/images/building4.png",
+          "imagine": "/images/building5.png",
           "popUp": {
             "title": "DỰ ÁN N04B - THƯỜNG TRÚ 5",
             "imagine": "/images/building5.png",

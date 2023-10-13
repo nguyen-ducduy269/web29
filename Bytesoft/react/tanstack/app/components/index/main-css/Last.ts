@@ -4,6 +4,7 @@ export const Last = styled.section`
   width: 100%;
   height: 100%;
   position: relative;
+  margin-top: 30px;
   .xemthem {
     width: 125px;
     height: 33px;

@@ -1,16 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 /////// import hooks
 import { useFetchingData } from "@/app/useFetchingData";
 
 ///// import components
 import ControlList from "./ControlList";
+import MultipleItems from "./MultipleItems";
+import PopUp from "./PopUp";
 
 //// import components css
 import { AboutUs } from "./main-css/AboutUs";
@@ -97,13 +97,12 @@ import {
   layer154,
   newsImg,
 } from "../ImportImage";
-import MultipleItems from "./MultipleItems";
 
 const MainIndex = () => {
   const [indexItem, setIndexItem] = useState(0);
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
-  const [openPopUp, setOpenPopUp] = useState(null);
+  const [openPopUp, setOpenPopUp] = useState(0);
 
   const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
@@ -462,42 +461,11 @@ const MainIndex = () => {
 
               {openItem ? (
                 openPopUp !== null ? (
-                  <div className="popup">
-                    <div className="main-pop">
-                      <Image
-                        src={openPopUp.popUp.imagine}
-                        width={575}
-                        height={409}
-                        alt=""
-                      />
-                      <div className="title">
-                        <b>{openPopUp.popUp.title}</b>
-                      </div>
-                      <div className="main-content">
-                        <div className="content">
-                          <div className="name">Details about project:</div>
-                          <div className="dis">
-                            {openPopUp.popUp.disscriptionText}
-                          </div>
-                        </div>
-
-                        <div className="content">
-                          <div className="name">Details about time:</div>
-                          <div className="dis">{openPopUp.popUp.time}</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="layout"></div>
-                    <div
-                      className="close-pop"
-                      onClick={() => setOpenItem(false)}
-                    >
-                      <FontAwesomeIcon
-                        icon={faCircleXmark}
-                        style={{ fontSize: 40, color: "white" }}
-                      />
-                    </div>
-                  </div>
+                  <PopUp
+                    setOpenItem={setOpenItem}
+                    openPopUp={openPopUp}
+                    indexItem={indexItem}
+                  />
                 ) : (
                   ""
                 )

@@ -133,9 +133,15 @@ export const Foot = styled.div`
       width: 797px;
       z-index: 0;
     }
+
+    .slick-slider {
+      width: 90%;
+      margin: 0 auto;
+    }
+
     .content {
       position: absolute;
-      z-index: 1;
+      z-index: 10;
       width: 100%;
       height: 100%;
       .title {
@@ -145,29 +151,6 @@ export const Foot = styled.div`
         margin-left: -16px;
         margin-top: 20px;
         color: rgba(80, 80, 99);
-      }
-      #footer-details {
-        overflow-x: hidden;
-        display: flex;
-        justify-content: space-around;
-        .owl-stage-outer {
-          width: 690px;
-          margin: 0 auto;
-          height: 70px;
-          margin-top: 25px;
-          .item {
-            width: 160px;
-            height: 90px;
-            background-color: #fff;
-            box-shadow: 10px 1px 10px rgb(23 48 92 / 20%),
-              0px 0px 8px rgb(23 48 92 / 20%);
-
-            img {
-              height: 100%;
-              object-fit: contain;
-            }
-          }
-        }
       }
     }
   }
@@ -605,13 +588,6 @@ export const Foot = styled.div`
       &::before {
         width: 294px;
         height: 239px;
-      }
-
-      #footer-details {
-        flex-wrap: wrap;
-        .item {
-          width: 50%;
-        }
       }
     }
   }

@@ -16,11 +16,13 @@ export const LastestNews = styled.section`
         color: #1d407d;
         font-family: sans-serif;
       }
+
       .more {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 10px;
+        margin-bottom: 75px;
         img {
           width: 14px;
           height: 14px;
@@ -33,90 +35,60 @@ export const LastestNews = styled.section`
         }
       }
 
-      .main-content {
-        max-width: 90%;
-        margin: 0 auto;
+      .content {
+        width: 100%;
         height: 310px;
         display: flex !important;
-        margin-top: 75px;
-        justify-content: center;
-        margin-bottom: 62px;
-        .content {
-          width: 30%;
-          height: 100%;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          z-index: 2;
-          .discription {
-            position: absolute;
-            background-color: #fff;
-            width: 73%;
-            height: 150px;
-            bottom: -10px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        img {
+          width: 90%;
+        }
+
+        .discription {
+          width: 60%;
+          background-color: white;
+          position: absolute;
+          bottom: 3%;
+          padding: 10px;
+          .heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: rgba(139, 158, 189);
+            font-family: "OpenSans";
+          }
+
+          .discription-text {
+            font-size: 24px;
+            font-family: "OpenSans";
+          }
+
+          .button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            font-family: "OpenSans";
+            button {
+              width: 32px;
+              height: 32px;
+              background-color: rgba(31, 211, 146);
+              color: white;
+              border: none;
+            }
+          }
+          &:hover {
+            box-shadow: 0px 0 40px rgb(131 151 185),
+              0px 0px 0px rgb(131 151 185);
             .heading {
-              display: flex;
-              margin-top: 7px;
-              margin-left: 20px;
-              color: rgba(139, 158, 189);
-              .clock {
-                margin-right: 6px;
-                margin-top: 3px;
-              }
               .text {
-                font-size: 11px;
-                margin-right: 11px;
-                font-family: sans-serif;
-              }
-              .block {
-                margin-right: 15px;
-              }
-              .eye {
-                margin-top: 2px;
-                margin-right: 8px;
-              }
-              .view {
-                font-size: 10px;
-                margin-top: 2px;
+                color: rgba(139, 158, 189);
               }
             }
             .text {
-              font-size: 18px;
-              margin-left: 15px;
-              line-height: 22px;
-              font-family: "OpenSans";
-            }
-            .button {
-              display: flex;
-              margin-left: 10px;
-              margin-top: 17px;
-              h4 {
-                font-size: 12px;
-                margin: 8px 10px 0px 4px; //top right bottom left
-                font-family: sans-serif;
-              }
-              button {
-                width: 32px;
-                padding: 0;
-                height: 32px;
-                font-size: 11px;
-                color: #fff;
-                border: none;
-                background-color: rgba(31, 211, 146);
-              }
-            }
-            &:hover {
-              box-shadow: 0px 0 40px rgb(131 151 185),
-                0px 0px 0px rgb(131 151 185);
-              .heading {
-                .text {
-                  color: rgba(139, 158, 189);
-                }
-              }
-              .text {
-                color: rgba(19, 97, 232);
-              }
+              color: rgba(19, 97, 232);
             }
           }
         }
@@ -136,24 +108,10 @@ export const LastestNews = styled.section`
   @media only screen and (max-width: 1199px) and (min-width: 992px) {
     .bs-row {
       .news_module {
-        .main-content {
-          margin-top: 50px;
-          .content {
-            width: 100%;
-            .discription {
-              .heading {
-                margin-left: 30px;
-                .clock {
-                  margin-right: -6px;
-                }
-              }
-              .button {
-                button {
-                  font-size: 24px;
-                  width: 35px;
-                  height: 35px;
-                }
-              }
+        .content {
+          .discription {
+            .discription-text {
+              font-size: 18px;
             }
           }
         }
@@ -165,39 +123,12 @@ export const LastestNews = styled.section`
     .bs-row {
       .news_module {
         max-width: 100%;
-        .main-content {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-          margin-top: 50px;
-          gap: 10px;
-          height: 100%;
-          .content {
-            width: 100%;
-            height: 250px;
-            img {
-              max-width: 100%;
-              height: 180px;
-            }
-            .discription {
-              position: absolute;
-              background-color: #fff;
-              width: 80%;
-              height: 140px;
-              bottom: 0%;
-              .heading {
-                margin-left: 10px;
-                .clock {
-                  margin-right: -5px;
-                }
-                .text {
-                  margin-left: 10px;
-                }
-              }
-              .text {
-                font-size: 14px;
-                margin-left: 10px;
-              }
+
+        .content {
+          .discription {
+            width: 70%;
+            .discription-text {
+              font-size: 18px;
             }
           }
         }
@@ -211,44 +142,15 @@ export const LastestNews = styled.section`
     .bs-row {
       .news_module {
         max-width: 100%;
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          margin-top: 22px;
-          gap: 25px;
-          height: 100%;
-          .content {
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            z-index: 5;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-            .discription {
-              position: absolute;
-              background-color: #fff;
-              width: 87%;
-              height: 130px;
-              bottom: -35px;
-              box-shadow: 0 0 40px rgb(131 151 185), 0 0 0 rgb(131 151 185);
-              .heading {
-                margin-left: 10px;
-                .clock {
-                  margin-right: -5px;
-                }
-                .text {
-                  margin-left: 10px;
-                }
-              }
-              .text {
-                font-size: 14px;
-                margin-left: 10px;
-              }
+        .content {
+          .discription {
+            width: 70%;
+            .discription-text {
+              font-size: 16px;
             }
           }
         }
+
         button {
           width: 150px;
           height: 40px;
@@ -271,44 +173,15 @@ export const LastestNews = styled.section`
     .bs-row {
       .news_module {
         max-width: 100%;
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          margin-top: 22px;
-          gap: 20px;
-          height: 100%;
-          .content {
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            z-index: 5;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-            .discription {
-              position: absolute;
-              background-color: #fff;
-              width: 87%;
-              height: 130px;
-              bottom: -50px;
-              box-shadow: 0 0 40px rgb(131 151 185), 0 0 0 rgb(131 151 185);
-              .heading {
-                margin-left: 10px;
-                .clock {
-                  margin-right: -5px;
-                }
-                .text {
-                  margin-left: 10px;
-                }
-              }
-              .text {
-                font-size: 14px;
-                margin-left: 10px;
-              }
+        .content {
+          .discription {
+            width: 70%;
+            .discription-text {
+              font-size: 16px;
             }
           }
         }
+
         button {
           width: 150px;
           height: 40px;
@@ -331,44 +204,15 @@ export const LastestNews = styled.section`
     .bs-row {
       .news_module {
         max-width: 100%;
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          margin-top: 22px;
-          gap: 20px;
-          height: 100%;
-          .content {
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            z-index: 5;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-            .discription {
-              position: absolute;
-              background-color: #fff;
-              width: 87%;
-              height: 130px;
-              bottom: -50px;
-              box-shadow: 0 0 40px rgb(131 151 185), 0 0 0 rgb(131 151 185);
-              .heading {
-                margin-left: 10px;
-                .clock {
-                  margin-right: -5px;
-                }
-                .text {
-                  margin-left: 10px;
-                }
-              }
-              .text {
-                font-size: 14px;
-                margin-left: 10px;
-              }
+        .content {
+          .discription {
+            width: 70%;
+            .discription-text {
+              font-size: 14px;
             }
           }
         }
+
         button {
           width: 150px;
           height: 40px;
@@ -391,44 +235,15 @@ export const LastestNews = styled.section`
     .bs-row {
       .news_module {
         max-width: 100%;
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          margin-top: 22px;
-          gap: 20px;
-          height: 100%;
-          .content {
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            z-index: 5;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-            .discription {
-              position: absolute;
-              background-color: #fff;
-              width: 87%;
-              height: 130px;
-              bottom: -50px;
-              box-shadow: 0 0 40px rgb(131 151 185), 0 0 0 rgb(131 151 185);
-              .heading {
-                margin-left: 10px;
-                .clock {
-                  margin-right: -5px;
-                }
-                .text {
-                  margin-left: 10px;
-                }
-              }
-              .text {
-                font-size: 14px;
-                margin-left: 10px;
-              }
+        .content {
+          .discription {
+            width: 70%;
+            .discription-text {
+              font-size: 18px;
             }
           }
         }
+
         button {
           width: 150px;
           height: 40px;
@@ -451,44 +266,15 @@ export const LastestNews = styled.section`
     .bs-row {
       .news_module {
         max-width: 100%;
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          margin-top: 22px;
-          gap: 20px;
-          height: 100%;
-          .content {
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            z-index: 0;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-            .discription {
-              position: absolute;
-              background-color: #fff;
-              width: 87%;
-              height: 130px;
-              bottom: -50px;
-              box-shadow: 0 0 40px rgb(131 151 185), 0 0 0 rgb(131 151 185);
-              .heading {
-                margin-left: 10px;
-                .clock {
-                  margin-right: -5px;
-                }
-                .text {
-                  margin-left: 10px;
-                }
-              }
-              .text {
-                font-size: 14px;
-                margin-left: 10px;
-              }
+        .content {
+          .discription {
+            width: 70%;
+            .discription-text {
+              font-size: 16px;
             }
           }
         }
+
         button {
           width: 150px;
           height: 40px;
@@ -511,44 +297,15 @@ export const LastestNews = styled.section`
     .bs-row {
       .news_module {
         max-width: 100%;
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          margin-top: 22px;
-          gap: 50px;
-          height: 100%;
-          .content {
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            z-index: 5;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-            .discription {
-              position: absolute;
-              background-color: #fff;
-              width: 90%;
-              height: 150px;
-              bottom: -89px;
-              box-shadow: 0 0 40px rgb(131 151 185), 0 0 0 rgb(131 151 185);
-              .heading {
-                margin-left: 10px;
-                .clock {
-                  margin-right: -5px;
-                }
-                .text {
-                  margin-left: 10px;
-                }
-              }
-              .text {
-                font-size: 14px;
-                margin-left: 10px;
-              }
+        .content {
+          .discription {
+            width: 70%;
+            .discription-text {
+              font-size: 16px;
             }
           }
         }
+
         button {
           width: 150px;
           height: 40px;

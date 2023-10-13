@@ -1,15 +1,16 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
-import { contentImg } from "../ImportImage";
 import { useFetchingData } from "@/app/useFetchingData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { faClock, faEye } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";
 
 const MainContent = () => {
-  function ContentArrow(props: any) {
-    const { className, style, onClick } = props;
+  const [detailIndex, setDetailIndex] = useState(null);
+
+  function SampleArrow(props: any) {
+    const { className, style } = props;
     return (
       <div
         className={className}
@@ -17,7 +18,6 @@ const MainContent = () => {
           ...style,
           display: "none",
         }}
-        onClick={onClick}
       />
     );
   }
@@ -26,182 +26,96 @@ const MainContent = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 2,
-    nextArrow: <ContentArrow />,
-    prevArrow: <ContentArrow />,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleArrow />,
+    prevArrow: <SampleArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
-  if (!entities) return;
+  const { data: lastestNews } = useFetchingData(
+    "http://localhost:5000/lastest-new"
+  );
+  if (!lastestNews) return;
+
+  const handleClick = () => {
+    console.log("aaaaa", detailIndex);
+  };
 
   return (
     <Slider {...contentSettings}>
-      <div className="main-content">
-        <div className="content">
-          <Image src={contentImg} alt="" width={287} height={234} />
-          <div className="discription">
-            <div className="heading">
-              <div className="clock">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  style={{ width: 10, height: 10 }}
-                />
-              </div>
-              <div className="text">{entities.mainContentText}</div>
-              <div className="block">|</div>
-              <div className="eye">
-                <i className="fa-regular fa-eye"></i>
-              </div>
-              <div className="view">{entities.mainView}</div>
-            </div>
-            <div className="text">{entities.disscriptionText}</div>
-            <div className="button">
-              <h4>Xem thêm</h4>
-              <Link href="/news/100">
-                <button>+</button>
-              </Link>
-            </div>
-          </div>
-        </div>
+      {lastestNews.map((item: any) => {
+        return (
+          <div className="content">
+            <Image src={item.images} alt="" width={287} height={234} />
 
-        <div className="content">
-          <Image src={contentImg} alt="" width={287} height={234} />
-          <div className="discription">
-            <div className="heading">
-              <div className="clock">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  style={{ width: 10, height: 10 }}
-                />
-              </div>
-              <div className="text">{entities.mainContentText}</div>
-              <div className="block">|</div>
-              <div className="eye">
-                <i className="fa-regular fa-eye"></i>
-              </div>
-              <div className="view">{entities.mainView}</div>
-            </div>
-            <div className="text">{entities.disscriptionText}</div>
-            <div className="button">
-              <h4>Xem thêm</h4>
-              <Link href="/news/100">
-                <button>+</button>
-              </Link>
-            </div>
-          </div>
-        </div>
+            <div className="discription">
+              <div className="heading">
+                <div className="clock">
+                  <FontAwesomeIcon
+                    icon={faClock}
+                    style={{ width: 10, height: 10 }}
+                  />
+                </div>
 
-        <div className="content">
-          <Image src={contentImg} alt="" width={287} height={234} />
-          <div className="discription">
-            <div className="heading">
-              <div className="clock">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  style={{ width: 10, height: 10 }}
-                />
-              </div>
-              <div className="text">{entities.mainContentText}</div>
-              <div className="block">|</div>
-              <div className="eye">
-                <i className="fa-regular fa-eye"></i>
-              </div>
-              <div className="view">{entities.mainView}</div>
-            </div>
-            <div className="text">{entities.disscriptionText}</div>
-            <div className="button">
-              <h4>Xem thêm</h4>
-              <Link href="/news/100">
-                <button>+</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+                <div className="text">{item.mainContentText}</div>
 
-      <div className="main-content">
-        <div className="content">
-          <Image src={contentImg} alt="" width={287} height={234} />
-          <div className="discription">
-            <div className="heading">
-              <div className="clock">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  style={{ width: 10, height: 10 }}
-                />
-              </div>
-              <div className="text">{entities.mainContentText}</div>
-              <div className="block">|</div>
-              <div className="eye">
-                <i className="fa-regular fa-eye"></i>
-              </div>
-              <div className="view">{entities.mainView}</div>
-            </div>
-            <div className="text">{entities.disscriptionText}</div>
-            <div className="button">
-              <h4>Xem thêm</h4>
-              <Link href="/news/100">
-                <button>+</button>
-              </Link>
-            </div>
-          </div>
-        </div>
+                <div className="block">|</div>
 
-        <div className="content">
-          <Image src={contentImg} alt="" width={287} height={234} />
-          <div className="discription">
-            <div className="heading">
-              <div className="clock">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  style={{ width: 10, height: 10 }}
-                />
+                <div className="eye">
+                  <FontAwesomeIcon
+                    icon={faEye}
+                    style={{ width: 10, height: 10 }}
+                  />
+                </div>
+                <div className="view">{item.mainView}</div>
               </div>
-              <div className="text">{entities.mainContentText}</div>
-              <div className="block">|</div>
-              <div className="eye">
-                <i className="fa-regular fa-eye"></i>
-              </div>
-              <div className="view">{entities.mainView}</div>
-            </div>
-            <div className="text">{entities.disscriptionText}</div>
-            <div className="button">
-              <h4>Xem thêm</h4>
-              <Link href="/news/100">
-                <button>+</button>
-              </Link>
-            </div>
-          </div>
-        </div>
 
-        <div className="content">
-          <Image src={contentImg} alt="" width={287} height={234} />
-          <div className="discription">
-            <div className="heading">
-              <div className="clock">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  style={{ width: 10, height: 10 }}
-                />
+              <div className="discription-text">{item.disscriptionText}</div>
+
+              <div className="button">
+                <h4>Xem thêm</h4>
+                <Link href="/index/100">
+                  <button
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      setDetailIndex(item);
+                      handleClick();
+                    }}
+                  >
+                    +
+                  </button>
+                </Link>
               </div>
-              <div className="text">{entities.mainContentText}</div>
-              <div className="block">|</div>
-              <div className="eye">
-                <i className="fa-regular fa-eye"></i>
-              </div>
-              <div className="view">{entities.mainView}</div>
-            </div>
-            <div className="text">{entities.disscriptionText}</div>
-            <div className="button">
-              <h4>Xem thêm</h4>
-              <Link href="/news/100">
-                <button>+</button>
-              </Link>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
     </Slider>
   );
 };

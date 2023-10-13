@@ -11,6 +11,7 @@ export const Project = styled.section`
         list-style: none;
         .control-list__item {
           border-top-left-radius: unset;
+          cursor: pointer;
         }
         .active {
           background: linear-gradient(
@@ -163,6 +164,7 @@ export const Project = styled.section`
                 font-size: 15px;
                 background-color: #72dcb6;
                 color: white;
+                cursor: pointer;
               }
             }
           }
@@ -231,7 +233,7 @@ export const Project = styled.section`
           background-color: white;
           height: 50px;
           text-align: center;
-          bottom: 25%;
+          bottom: 23%;
           z-index: 1;
           border-radius: 10px;
           line-height: 64px;

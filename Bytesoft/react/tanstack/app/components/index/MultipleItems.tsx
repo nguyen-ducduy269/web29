@@ -3,7 +3,13 @@ import Slider from "react-slick";
 import Image from "next/image";
 import { useFetchingData } from "@/app/useFetchingData";
 
-const MultipleItems = ({ indexItem, setOpenItem, setOpenPopUp }: any) => {
+interface Props {
+  indexItem: number;
+  setOpenItem: (value: boolean) => void;
+  setOpenPopUp: (value: number) => void;
+}
+
+const MultipleItems = (props: Props) => {
   function SampleArrow(props: any) {
     const { className, style, onClick } = props;
     return (
@@ -41,7 +47,7 @@ const MultipleItems = ({ indexItem, setOpenItem, setOpenPopUp }: any) => {
   return (
     <Slider {...settings}>
       <div className="multiple-items">
-        {projectData[indexItem].details.map((project: any) => {
+        {projectData[props.indexItem].details.map((project: any) => {
           return (
             <div className="item">
               <Image
@@ -57,8 +63,8 @@ const MultipleItems = ({ indexItem, setOpenItem, setOpenPopUp }: any) => {
                 <button
                   className="mutiple-button"
                   onClick={() => {
-                    setOpenItem(true);
-                    setOpenPopUp(project);
+                    props.setOpenItem(true);
+                    props.setOpenPopUp(project.id);
                   }}
                 >
                   +
@@ -70,7 +76,7 @@ const MultipleItems = ({ indexItem, setOpenItem, setOpenPopUp }: any) => {
       </div>
 
       <div className="multiple-items">
-        {projectData[indexItem].details.map((project: any) => {
+        {projectData[props.indexItem].details.map((project: any) => {
           return (
             <div className="item">
               <Image
@@ -86,7 +92,8 @@ const MultipleItems = ({ indexItem, setOpenItem, setOpenPopUp }: any) => {
                 <button
                   className="mutiple-button"
                   onClick={() => {
-                    setOpenItem(true);
+                    props.setOpenItem(true);
+                    props.setOpenPopUp(project.id);
                   }}
                 >
                   +

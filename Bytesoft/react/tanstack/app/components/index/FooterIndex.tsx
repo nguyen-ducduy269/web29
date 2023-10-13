@@ -10,10 +10,60 @@ import {
   hancorkImg,
 } from "../ImportImage";
 import { useFetchingData } from "@/app/useFetchingData";
+import Slider from "react-slick";
 
 const FooterIndex = () => {
   const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
+
+  function SampleArrow(props: any) {
+    const { className, style } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "none",
+        }}
+      />
+    );
+  }
+
+  const contentSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleArrow />,
+    prevArrow: <SampleArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -72,21 +122,19 @@ const FooterIndex = () => {
                   <b>{entities.partnersCustomers}</b>
                 </div>
                 <div id="footer-details">
-                  <div className="item">
-                    <a href="">
-                      <Image src={vingroupImg} alt="" width={160} height={90} />
-                    </a>
-                  </div>
-                  <div className="item">
-                    <a href="">
-                      <Image src={lanmarkImg} alt="" width={160} height={90} />
-                    </a>
-                  </div>
-                  <div className="item">
-                    <a href="">
-                      <Image src={hancorkImg} alt="" width={160} height={90} />
-                    </a>
-                  </div>
+                  <Slider {...contentSettings}>
+                    <Image src={vingroupImg} alt="" width={100} height={120} />
+
+                    <Image src={lanmarkImg} alt="" width={100} height={120} />
+
+                    <Image src={hancorkImg} alt="" width={100} height={120} />
+
+                    <Image src={vingroupImg} alt="" width={100} height={120} />
+
+                    <Image src={lanmarkImg} alt="" width={100} height={120} />
+
+                    <Image src={hancorkImg} alt="" width={100} height={120} />
+                  </Slider>
                 </div>
               </div>
             </div>
