@@ -1,8 +1,7 @@
-import HeaderIndex from "../components/index/HeaderIndex";
-import MainIndex from "../components/index/MainIndex";
-import FooterIndex from "../components/index/FooterIndex";
+import FooterIndex from "../_components/index/FooterIndex";
+import HeaderIndex from "../_components/index/HeaderIndex";
+import MainIndex from "../_components/index/MainIndex";
 
-////// useContext
 export default function Index() {
   return (
     <>

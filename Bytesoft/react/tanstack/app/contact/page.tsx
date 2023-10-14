@@ -1,7 +1,7 @@
 import React from "react";
-import HeaderContact from "../components/contact/HeaderContact";
-import ContactMain from "../components/contact/ContactMain";
-import Footer from "../components/footer/Footer";
+import HeaderContact from "../_components/contact/HeaderContact";
+import ContactMain from "../_components/contact/ContactMain";
+import Footer from "../_components/footer/Footer";
 
 const page = () => {
   return (

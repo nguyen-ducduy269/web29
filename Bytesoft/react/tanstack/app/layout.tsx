@@ -1,4 +1,4 @@
-import QueryWapper from "./components/QueryWapper";
+import QueryWapper from "./_components/QueryWapper";
 
 export const metadata = {
   title: "Create Next App",

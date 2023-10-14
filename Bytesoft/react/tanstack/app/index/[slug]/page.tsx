@@ -1,7 +1,7 @@
+import Footer from "@/app/_components/footer/Footer";
+import IndexDetail from "@/app/_components/index/IndexDetail";
+import HeaderNews from "@/app/_components/news/HeaderNews";
 import React from "react";
-import HeaderNews from "@/app/components/news/HeaderNews";
-import Footer from "@/app/components/footer/Footer";
-import IndexDetail from "@/app/components/index/IndexDetail";
 
 const DetailIndex = () => {
   return (
