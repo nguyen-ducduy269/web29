@@ -110,10 +110,10 @@ export const Project = styled.section`
         width: 100%;
         height: 100%;
         .multiple-items {
-          margin-top: 72px;
-          display: grid !important;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
+          .slick-track {
+            margin-top: 72px;
+          }
+
           .item {
             position: relative;
             width: 75%;
@@ -130,7 +130,7 @@ export const Project = styled.section`
             }
             .discription {
               position: absolute;
-              width: 95%;
+              width: 70%;
               height: 40px;
               background-color: #fff;
               z-index: 1;
@@ -165,6 +165,7 @@ export const Project = styled.section`
                 background-color: #72dcb6;
                 color: white;
                 cursor: pointer;
+                border: none;
               }
             }
           }
