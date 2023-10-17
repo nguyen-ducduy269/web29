@@ -4,6 +4,9 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+///// import icons
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+
 ///// import hooks
 import { useFetchingData } from "@/app/_hooks/useFetchingData";
 
@@ -97,11 +100,13 @@ import {
   layer154,
   newsImg,
 } from "../ImportImage";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MainIndex = () => {
   const [indexItem, setIndexItem] = useState(0);
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
+  const [typeItem, setTypeItem] = useState("");
   const [openPopUp, setOpenPopUp] = useState(0);
 
   const { data: entities } = useFetchingData("http://localhost:3001/data");
@@ -445,30 +450,58 @@ const MainIndex = () => {
                   <ControlList
                     indexItem={indexItem}
                     setIndexItem={setIndexItem}
+                    setTypeItem={setTypeItem}
                   />
                 </div>
 
                 <div className="tab-content">
                   <div className="tab-item">
                     <MultipleItems
-                      indexItem={indexItem}
                       setOpenItem={setOpenItem}
-                      setOpenPopUp={setOpenPopUp}
+                      typeItem={typeItem}
                     />
                   </div>
                 </div>
               </div>
 
               {openItem ? (
-                openPopUp !== null ? (
-                  <PopUp
-                    setOpenItem={setOpenItem}
-                    openPopUp={openPopUp}
-                    indexItem={indexItem}
-                  />
-                ) : (
-                  ""
-                )
+                <div className="popup">
+                  <div className="main-pop">
+                    <Image
+                      src="/images/building1.png"
+                      width={575}
+                      height={409}
+                      alt=""
+                    />
+                    <div className="title">
+                      <b>DỰ ÁN N04B - THƯƠNG MẠI</b>
+                    </div>
+                    <div className="main-content">
+                      <div className="content">
+                        <div className="name">Details about project:</div>
+                        <div className="dis">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Sapiente, maiores! Expedita nesciunt assumenda,
+                          vel fugiat amet quam velit voluptatum commodi iusto in
+                          delectus ipsa fugit perferendis consectetur atque
+                          eveniet eaque!
+                        </div>
+                      </div>
+
+                      <div className="content">
+                        <div className="name">Details about time:</div>
+                        <div className="dis">01/01/2023</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="layout"></div>
+                  <div className="close-pop" onClick={() => setOpenItem(false)}>
+                    <FontAwesomeIcon
+                      icon={faCircleXmark}
+                      style={{ fontSize: 40, color: "white" }}
+                    />
+                  </div>
+                </div>
               ) : (
                 ""
               )}
