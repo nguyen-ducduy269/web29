@@ -17,6 +17,10 @@ const MainNews = () => {
   const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
 
+  const handleContent = (params: string) => {
+    localStorage.setItem("newsContent", JSON.stringify(params));
+  };
+
   return (
     <>
       <Main>
@@ -27,7 +31,11 @@ const MainNews = () => {
                 <div className="main-content">
                   {entities.mainContent.map((item: any) => {
                     return (
-                      <div className="content" key={item.id}>
+                      <div
+                        className="content"
+                        key={item.id}
+                        onClick={() => handleContent(item.id)}
+                      >
                         <Link href={`/news/${item.id}`}>
                           <Image
                             src={item.image}

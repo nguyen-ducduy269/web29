@@ -12,6 +12,7 @@ import { useFetchingData } from "@/app/_hooks/useFetchingData";
 
 ///// import components
 import ControlList from "./ControlList";
+import TabItem from "./TabItem";
 import MultipleItems from "./MultipleItems";
 import PopUp from "./PopUp";
 
@@ -107,7 +108,7 @@ const MainIndex = () => {
   const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
   const [typeItem, setTypeItem] = useState("");
-  const [openPopUp, setOpenPopUp] = useState(0);
+  const [openPopUp, setOpenPopUp] = useState<any>();
 
   const { data: entities } = useFetchingData("http://localhost:3001/data");
   if (!entities) return;
@@ -455,12 +456,11 @@ const MainIndex = () => {
                 </div>
 
                 <div className="tab-content">
-                  <div className="tab-item">
-                    <MultipleItems
-                      setOpenItem={setOpenItem}
-                      typeItem={typeItem}
-                    />
-                  </div>
+                  <TabItem
+                    setOpenItem={setOpenItem}
+                    typeItem={typeItem}
+                    setOpenPopUp={setOpenPopUp}
+                  />
                 </div>
               </div>
 
@@ -468,29 +468,23 @@ const MainIndex = () => {
                 <div className="popup">
                   <div className="main-pop">
                     <Image
-                      src="/images/building1.png"
+                      src={openPopUp.imagine}
                       width={575}
                       height={409}
                       alt=""
                     />
                     <div className="title">
-                      <b>DỰ ÁN N04B - THƯƠNG MẠI</b>
+                      <b>{openPopUp.popUpTitle}</b>
                     </div>
                     <div className="main-content">
                       <div className="content">
                         <div className="name">Details about project:</div>
-                        <div className="dis">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Sapiente, maiores! Expedita nesciunt assumenda,
-                          vel fugiat amet quam velit voluptatum commodi iusto in
-                          delectus ipsa fugit perferendis consectetur atque
-                          eveniet eaque!
-                        </div>
+                        <div className="dis">{openPopUp.disscriptionText}</div>
                       </div>
 
                       <div className="content">
                         <div className="name">Details about time:</div>
-                        <div className="dis">01/01/2023</div>
+                        <div className="dis">{openPopUp.time}</div>
                       </div>
                     </div>
                   </div>

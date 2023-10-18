@@ -12,14 +12,14 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { useFetchingData } from "@/app/_hooks/useFetchingData";
 
 const IndexDetail = () => {
+  const detailId: any = localStorage.getItem("content");
+  const mainId = JSON.parse(detailId);
   const { data: indexDetail } = useFetchingData(
-    "http://localhost:5000/lastest-new"
+    `http://localhost:5000/lastest-new?id=${mainId}`
   );
   if (!indexDetail) return;
 
-  const detailId: any = localStorage.getItem("content");
-  const mainId = JSON.parse(detailId);
-  const item = indexDetail.find((t: any) => t.id === mainId);
+  const detailProduct = indexDetail[0].detail;
 
   return (
     <>
@@ -34,7 +34,7 @@ const IndexDetail = () => {
               <div className="main-infor">
                 <div className="item">
                   <div className="all">
-                    <div className="title">{item.detail.title}</div>
+                    <div className="title">{detailProduct.title}</div>
 
                     <div className="about">
                       <div className="clock">
@@ -46,7 +46,9 @@ const IndexDetail = () => {
                           }}
                         />
                       </div>
-                      <div className="day">{item.mainContentText}</div>
+                      <div className="day">
+                        {indexDetail[0].mainContentText}
+                      </div>
                       <div className="line">|</div>
                       <div className="eye">
                         <FontAwesomeIcon
@@ -58,21 +60,21 @@ const IndexDetail = () => {
                           }}
                         />
                       </div>
-                      <div className="view">{item.mainView}</div>
+                      <div className="view">{indexDetail[0].mainView}</div>
                     </div>
 
                     <div className="content">
                       <Image
-                        src={item.detail.image}
+                        src={detailProduct.image}
                         width={668}
                         height={372}
                         alt=""
                       />
-                      <div className="text">{item.detail.denote}</div>
-                      <div className="text">{item.detail.unpacked}</div>
-                      <div className="text">{item.detail.yourSelf}</div>
-                      <div className="text">{item.detail.bodyMeet}</div>
-                      <div className="text">{item.detail.smilling}</div>
+                      <div className="text">{detailProduct.denote}</div>
+                      <div className="text">{detailProduct.unpacked}</div>
+                      <div className="text">{detailProduct.yourSelf}</div>
+                      <div className="text">{detailProduct.bodyMeet}</div>
+                      <div className="text">{detailProduct.smilling}</div>
                     </div>
                   </div>
                 </div>
@@ -95,10 +97,10 @@ const IndexDetail = () => {
                   </div>
 
                   <div className="news">
-                    <div className="heading">{item.newHeading}</div>
+                    <div className="heading">{indexDetail[0].newHeading}</div>
                     <div className="line"></div>
                     <div className="new">
-                      {item.mainContent.map((i: any) => {
+                      {indexDetail[0].mainContent.map((i: any) => {
                         return (
                           <div className="bs-row" key={i.id}>
                             <div className="col-md-4">
@@ -117,7 +119,7 @@ const IndexDetail = () => {
                                     />
                                   </div>
                                   <div className="day">
-                                    {item.mainContentText}
+                                    {indexDetail[0].mainContentText}
                                   </div>
                                 </div>
                               </div>

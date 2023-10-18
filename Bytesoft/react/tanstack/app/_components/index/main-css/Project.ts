@@ -378,7 +378,10 @@ export const Project = styled.section`
         .tab-content {
           .multiple-items {
             .item {
-              width: 70%;
+              width: 70% !important;
+              .discription {
+                width: 95%;
+              }
             }
           }
         }
@@ -425,6 +428,10 @@ export const Project = styled.section`
               width: 89%;
               left: -205px;
             }
+          }
+
+          .slick-next {
+            right: 10% !important;
           }
         }
       }
@@ -502,7 +509,7 @@ export const Project = styled.section`
             grid-template-rows: 1fr 1fr 1fr;
             justify-items: center;
             .item {
-              width: 83%;
+              width: 83% !important;
               .discription {
                 width: 190px;
                 left: -234px;

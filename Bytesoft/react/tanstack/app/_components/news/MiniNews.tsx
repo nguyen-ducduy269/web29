@@ -2,7 +2,6 @@
 import React from "react";
 import { Container } from "../Container";
 import { News } from "./news-css/News";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 ///// import hooks
@@ -14,10 +13,17 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 ///// import images
 import { detailNewsImg } from "../ImportImage";
+import Image from "next/image";
 
 const MiniNews = () => {
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const detailId: any = localStorage.getItem("newsContent");
+  const mainId = JSON.parse(detailId);
+  const { data: entities } = useFetchingData(
+    `http://localhost:3001/newsDetail?id=${mainId}`
+  );
   if (!entities) return;
+
+  const data = entities[0];
 
   return (
     <>
@@ -32,7 +38,9 @@ const MiniNews = () => {
               <div className="main-infor">
                 <div className="item">
                   <div className="all">
-                    <div className="title">{entities.moduleTitle}</div>
+                    <div className="title">
+                      {data.mainTitle}, {data.moduleTitle}
+                    </div>
 
                     <div className="about">
                       <div className="clock">
@@ -44,7 +52,7 @@ const MiniNews = () => {
                           }}
                         />
                       </div>
-                      <div className="day">{entities.mainContentText}</div>
+                      <div className="day">{data.mainContentText}</div>
                       <div className="line">|</div>
                       <div className="eye">
                         <FontAwesomeIcon
@@ -56,7 +64,7 @@ const MiniNews = () => {
                           }}
                         />
                       </div>
-                      <div className="view">{entities.mainView}</div>
+                      <div className="view">{data.mainView}</div>
                     </div>
 
                     <div className="content">
@@ -66,11 +74,11 @@ const MiniNews = () => {
                         height={372}
                         alt=""
                       />
-                      <div className="text">{entities.denote}</div>
-                      <div className="text">{entities.unpacked}</div>
-                      <div className="text">{entities.yourSelf}</div>
-                      <div className="text">{entities.bodyMeet}</div>
-                      <div className="text">{entities.smilling}</div>
+                      <div className="text">{data.denote}</div>
+                      <div className="text">{data.unpacked}</div>
+                      <div className="text">{data.yourSelf}</div>
+                      <div className="text">{data.bodyMeet}</div>
+                      <div className="text">{data.smilling}</div>
                     </div>
                   </div>
                 </div>
@@ -93,7 +101,7 @@ const MiniNews = () => {
                   </div>
 
                   <div className="news">
-                    <div className="heading">{entities.newHeading}</div>
+                    <div className="heading">TIN NỔI BẬT</div>
                     <div className="line"></div>
                     <div className="new">
                       <div className="bs-row">
@@ -102,7 +110,7 @@ const MiniNews = () => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{entities.moduleNews}</div>
+                            <div className="title">{data.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -112,9 +120,7 @@ const MiniNews = () => {
                                   }}
                                 />
                               </div>
-                              <div className="day">
-                                {entities.mainContentText}
-                              </div>
+                              <div className="day">{data.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -126,7 +132,7 @@ const MiniNews = () => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{entities.moduleNews}</div>
+                            <div className="title">{data.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -136,9 +142,7 @@ const MiniNews = () => {
                                   }}
                                 />
                               </div>
-                              <div className="day">
-                                {entities.mainContentText}
-                              </div>
+                              <div className="day">{data.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -150,7 +154,7 @@ const MiniNews = () => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{entities.moduleNews}</div>
+                            <div className="title">{data.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -160,9 +164,7 @@ const MiniNews = () => {
                                   }}
                                 />
                               </div>
-                              <div className="day">
-                                {entities.mainContentText}
-                              </div>
+                              <div className="day">{data.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -174,7 +176,7 @@ const MiniNews = () => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{entities.moduleNews}</div>
+                            <div className="title">{data.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -184,9 +186,7 @@ const MiniNews = () => {
                                   }}
                                 />
                               </div>
-                              <div className="day">
-                                {entities.mainContentText}
-                              </div>
+                              <div className="day">{data.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -198,7 +198,7 @@ const MiniNews = () => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{entities.moduleNews}</div>
+                            <div className="title">{data.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -208,9 +208,7 @@ const MiniNews = () => {
                                   }}
                                 />
                               </div>
-                              <div className="day">
-                                {entities.mainContentText}
-                              </div>
+                              <div className="day">{data.mainContentText}</div>
                             </div>
                           </div>
                         </div>

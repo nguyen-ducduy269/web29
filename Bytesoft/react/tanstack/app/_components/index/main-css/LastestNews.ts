@@ -92,6 +92,10 @@ export const LastestNews = styled.section`
             }
           }
         }
+
+        :focus-visible {
+          border: none;
+        }
       }
     }
     .news-img {
