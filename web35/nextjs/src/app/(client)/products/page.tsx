@@ -1,4 +1,5 @@
 import ProductList from "@/app/_shared/_components/ProductList";
+import Search from "@/app/_shared/_components/Search";
 import { getProducts } from "@/app/_shared/product/Service";
 import Link from "next/link";
 
@@ -36,6 +37,8 @@ export default async function Product({
       <Link href="/card">
         <button>Card</button>
       </Link>
+
+      <Search />
 
       <ProductList product={product} />
 

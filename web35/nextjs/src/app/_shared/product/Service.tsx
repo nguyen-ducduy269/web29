@@ -29,3 +29,15 @@ export const getProductById = async (props: Props) => {
 
   if (res.ok) return res.json();
 };
+
+interface Filter {
+  title: string;
+}
+
+export const filterProduct = async (props: Filter) => {
+  const res = await fetch(
+    `https://dummyjson.com/products?title=${props.title}`
+  );
+
+  if (res.ok) return res.json();
+};
