@@ -10,7 +10,7 @@ interface Props {
 
 const TabItem = (props: Props) => {
   const { data: data } = useFetchingData(
-    `http://localhost:4000/project?type=${props.typeItem}`
+    `http://localhost:3001/project?type=${props.typeItem}`
   );
   if (!data) return;
 

@@ -136,6 +136,7 @@
     "contactMail": "vanphongace5.ace@gmail.com",
     "help": "Cung cấp thông tin để chúng tôi có thể hỗ trợ bạn"
   },
+
   "newsDetail": [
     {
       "id": "main_1",
@@ -220,6 +221,577 @@
       "yourSelf": "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
       "bodyMeet": "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
       "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
+    }
+  ],
+
+  "projectType": [
+    {
+      "type": "",
+      "name": "TẤT CẢ"
+    },
+    {
+      "type": "commerce",
+      "name": "THƯƠNG MẠI"
+    },
+    {
+      "type": "education",
+      "name": "GIÁO DỤC"
+    },
+    {
+      "type": "hospital",
+      "name": "BỆNH VIỆN"
+    },
+    {
+      "type": "resident",
+      "name": "THƯỜNG TRÚ"
+    },
+    {
+      "type": "office",
+      "name": "VĂN PHÒNG"
+    },
+    {
+      "type": "reconstruction",
+      "name": "TÁI THIẾT"
+    }
+  ],
+
+  "project": [
+    {
+      "id": "thuongmai",
+      "mainTitle": "THƯƠNG MẠI",
+      "type": "commerce",
+      "title": "Thương mại",
+      "popUpTitle": "DỰ ÁN N04B - THƯƠNG MẠI",
+      "imagine": "/images/building1.png",
+      "time": "01/01/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "giaoduc",
+      "mainTitle": "GIÁO DỤC",
+      "type": "education",
+      "title": "Giáo dục",
+      "popUpTitle": "DỰ ÁN N04B - GIÁO DỤC",
+      "imagine": "/images/building2.png",
+      "time": "10/02/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "benhvien",
+      "mainTitle": "BỆNH VIỆN",
+      "type": "hospital",
+      "title": "Bệnh viện",
+      "popUpTitle": "DỰ ÁN N04B - BỆNH VIỆN",
+      "imagine": "/images/building3.png",
+      "time": "15/03/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongtru",
+      "mainTitle": "THƯỜNG TRÚ",
+      "type": "resident",
+      "title": "Thường trú",
+      "popUpTitle": "DỰ ÁN N04B - THƯỜNG TRÚ",
+      "imagine": "/images/building2.png",
+      "time": "15/04/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "vanphong",
+      "mainTitle": "VĂN PHÒNG",
+      "type": "office",
+      "title": "Văn phòng",
+      "popUpTitle": "DỰ ÁN N04B - VĂN PHÒNG",
+      "imagine": "/images/building4.png",
+      "time": "30/06/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "taithiet",
+      "mainTitle": "TÁI THIẾT",
+      "type": "reconstruction",
+      "title": "Tái thiết",
+      "popUpTitle": "DỰ ÁN N04B - TÁI THIẾT",
+      "imagine": "/images/building5.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongtru5",
+      "mainTitle": "THƯỜNG TRÚ 5",
+      "type": "resident",
+      "title": "Thường trú 5",
+      "popUpTitle": "DỰ ÁN N04B - THƯỜNG TRÚ 5",
+      "imagine": "/images/building2.png",
+      "time": "15/04/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "giaoduc2",
+      "mainTitle": "GIÁO DỤC 2",
+      "type": "education",
+      "title": "Giáo dục 2",
+      "popUpTitle": "DỰ ÁN N04B - GIÁO DỤC 2",
+      "imagine": "/images/building5.png",
+      "time": "30/09/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongmai1",
+      "mainTitle": "THƯƠNG MẠI 1",
+      "type": "commerce",
+      "title": "Thương mại 1",
+      "popUpTitle": "DỰ ÁN N04B - THƯƠNG MẠI 1",
+      "imagine": "/images/building5.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "vanphong1",
+      "mainTitle": "VĂN PHÒNG 1",
+      "title": "Văn phòng 1",
+      "type": "office",
+      "popUpTitle": "DỰ ÁN N04B - VĂN PHÒNG 1",
+      "imagine": "/images/building1.png",
+      "time": "11/08/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "benhvien1",
+      "mainTitle": "BỆNH VIỆN 1",
+      "title": "Bệnh viện 1",
+      "type": "hospital",
+      "popUpTitle": "DỰ ÁN N04B - BỆNH VIỆN 1",
+      "imagine": "/images/building1.png",
+      "time": "30/11/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "taithiet5",
+      "mainTitle": "TÁI THIẾT 5",
+      "type": "reconstruction",
+      "title": "Tái thiết 5",
+      "popUpTitle": "DỰ ÁN N04B - TÁI THIẾT 5",
+      "imagine": "/images/building5.png",
+      "time": "26/09/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongmai2",
+      "mainTitle": "THƯƠNG MẠI 2",
+      "type": "commerce",
+      "title": "Thương mại 2",
+      "popUpTitle": "DỰ ÁN N04B - THƯƠNG MẠI 2",
+      "imagine": "/images/building3.png",
+      "time": "30/11/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "vanphong3",
+      "mainTitle": "VĂN PHÒNG 3",
+      "title": "Văn phòng 3",
+      "type": "office",
+      "popUpTitle": "DỰ ÁN N04B - VĂN PHÒNG 3",
+      "imagine": "/images/building5.png",
+      "time": "11/02/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongmai3",
+      "mainTitle": "THƯƠNG MẠI 3",
+      "type": "commerce",
+      "title": "Thương mại 3",
+      "popUpTitle": "DỰ ÁN N04B - THƯƠNG MẠI 3",
+      "imagine": "/images/building1.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "taithiet3",
+      "mainTitle": "TÁI THIẾT 3",
+      "type": "reconstruction",
+      "title": "Tái thiết 3",
+      "popUpTitle": "DỰ ÁN N04B - TÁI THIẾT 3",
+      "imagine": "/images/building5.png",
+      "time": "27/04/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongmai4",
+      "mainTitle": "THƯƠNG MẠI 4",
+      "type": "commerce",
+      "title": "Thương mại 4",
+      "popUpTitle": "DỰ ÁN N04B - THƯƠNG MẠI 4",
+      "imagine": "/images/building4.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "taithiet2",
+      "mainTitle": "TÁI THIẾT 2",
+      "type": "reconstruction",
+      "title": "Tái thiết 2",
+      "popUpTitle": "DỰ ÁN N04B - TÁI THIẾT 2",
+      "imagine": "/images/building2.png",
+      "time": "26/08/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongmai5",
+      "mainTitle": "THƯƠNG MẠI 5",
+      "type": "commerce",
+      "title": "Thương mại 5",
+      "popUpTitle": "DỰ ÁN N04B - THƯƠNG MẠI 5",
+      "imagine": "/images/building2.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongmai6",
+      "mainTitle": "THƯƠNG MẠI 6",
+      "type": "commerce",
+      "title": "Thương mại 6",
+      "popUpTitle": "DỰ ÁN N04B - THƯƠNG MẠI 6",
+      "imagine": "/images/building1.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "giaoduc1",
+      "mainTitle": "GIÁO DỤC 1",
+      "type": "education",
+      "title": "Giáo dục 1",
+      "popUpTitle": "DỰ ÁN N04B - GIÁO DỤC 1",
+      "imagine": "/images/building3.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongtru2",
+      "mainTitle": "THƯỜNG TRÚ 2",
+      "type": "resident",
+      "title": "Thường trú 2",
+      "popUpTitle": "DỰ ÁN N04B - THƯỜNG TRÚ 2",
+      "imagine": "/images/building2.png",
+      "time": "30/12/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "giaoduc3",
+      "mainTitle": "GIÁO DỤC 3",
+      "type": "education",
+      "title": "Giáo dục 3",
+      "popUpTitle": "DỰ ÁN N04B - GIÁO DỤC 3",
+      "imagine": "/images/building1.png",
+      "time": "22/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "taithiet1",
+      "mainTitle": "TÁI THIẾT 1",
+      "title": "Tái thiết 1",
+      "type": "reconstruction",
+      "popUpTitle": "DỰ ÁN N04B - TÁI THIẾT 1",
+      "imagine": "/images/building4.png",
+      "time": "11/07/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "giaoduc4",
+      "mainTitle": "GIÁO DỤC 4",
+      "type": "education",
+      "title": "Giáo dục 4",
+      "popUpTitle": "DỰ ÁN N04B - GIÁO DỤC 4",
+      "imagine": "/images/building1.png",
+      "time": "30/02/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "vanphong4",
+      "mainTitle": "VĂN PHÒNG 4",
+      "title": "Văn phòng 4",
+      "type": "office",
+      "popUpTitle": "DỰ ÁN N04B - VĂN PHÒNG 4",
+      "imagine": "/images/building3.png",
+      "time": "11/03/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "giaoduc5",
+      "mainTitle": "GIÁO DỤC 5",
+      "type": "education",
+      "title": "Giáo dục 1",
+      "popUpTitle": "DỰ ÁN N04B - GIÁO DỤC 5",
+      "imagine": "/images/building2.png",
+      "time": "22/06/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "benhvien2",
+      "mainTitle": "BỆNH VIỆN 2",
+      "title": "Bệnh viện 2",
+      "type": "hospital",
+      "popUpTitle": "DỰ ÁN N04B - BỆNH VIỆN 2",
+      "imagine": "/images/building3.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongtru1",
+      "mainTitle": "THƯỜNG TRÚ 1",
+      "type": "resident",
+      "title": "Thường trú 1",
+      "popUpTitle": "DỰ ÁN N04B - THƯỜNG TRÚ 1",
+      "imagine": "/images/building3.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "benhvien3",
+      "mainTitle": "BỆNH VIỆN 3",
+      "title": "Bệnh viện 3",
+      "type": "hospital",
+      "popUpTitle": "DỰ ÁN N04B - BỆNH VIỆN 3",
+      "imagine": "/images/building5.png",
+      "time": "25/9/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "thuongtru3",
+      "mainTitle": "THƯỜNG TRÚ 3",
+      "type": "resident",
+      "title": "Thường trú 3",
+      "popUpTitle": "DỰ ÁN N04B - THƯỜNG TRÚ 3",
+      "imagine": "/images/building4.png",
+      "time": "30/12/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "benhvien4",
+      "mainTitle": "BỆNH VIỆN 4",
+      "title": "Bệnh viện 4",
+      "type": "hospital",
+      "popUpTitle": "DỰ ÁN N04B - BỆNH VIỆN 4",
+      "imagine": "/images/building4.png",
+      "time": "01/06/2024",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    },
+    {
+      "id": "vanphong2",
+      "mainTitle": "VĂN PHÒNG 2",
+      "title": "Văn phòng 2",
+      "type": "office",
+      "popUpTitle": "DỰ ÁN N04B - VĂN PHÒNG 2",
+      "imagine": "/images/building4.png",
+      "time": "11/05/2023",
+      "disscriptionText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, maiores! Expedita nesciunt assumenda, vel fugiat amet quam velit voluptatum commodi iusto in delectus ipsa fugit perferendis consectetur atque eveniet eaque!"
+    }
+  ],
+
+  "lastest-new": [
+    {
+      "id": 1,
+      "images": "/images/news1.png",
+      "mainContentText": "5.december.2020",
+      "mainView": "328",
+      "disscriptionText": "Lorem ipsum dolor sit amet aenean nisi sociis ipsum...",
+      "detail": {
+        "title": "New 1 detail informations",
+        "image": "/images/chitiettin-big.png",
+        "denote": "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgance one own you inquietude sympathize.",
+        "unpacked": "Unpacked reserved sir offering bed judgment mat and quitting speaking, is do be improved raptures offering required in replying raillery. Stairs ladies friend by in mutual an no. Mr hance chief he cause. Whole no doors on hoped. Mile tell if help they ye full name.",
+        "yourSelf": "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
+        "bodyMeet": "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
+        "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
+      },
+      "newHeading": "TIN NỔI BẬT",
+      "mainContent": [
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "images": "/images/lastest_new1.jpg",
+      "mainContentText": "5.december.2020",
+      "mainView": "328",
+      "disscriptionText": "Lorem ipsum dolor sit amet aenean nisi sociis ipsum...",
+      "detail": {
+        "title": "New 2 detail informations",
+        "image": "/images/lastest_new1.jpg",
+        "denote": "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgance one own you inquietude sympathize.",
+        "unpacked": "Unpacked reserved sir offering bed judgment mat and quitting speaking, is do be improved raptures offering required in replying raillery. Stairs ladies friend by in mutual an no. Mr hance chief he cause. Whole no doors on hoped. Mile tell if help they ye full name.",
+        "yourSelf": "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
+        "bodyMeet": "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
+        "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
+      },
+      "newHeading": "TIN NỔI BẬT",
+      "mainContent": [
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "images": "/images/lastest_new2.jpg",
+      "mainContentText": "5.december.2020",
+      "mainView": "328",
+      "disscriptionText": "Lorem ipsum dolor sit amet aenean nisi sociis ipsum...",
+      "detail": {
+        "title": "New 3 detail informations",
+        "image": "/images/lastest_new2.jpg",
+        "denote": "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgance one own you inquietude sympathize.",
+        "unpacked": "Unpacked reserved sir offering bed judgment mat and quitting speaking, is do be improved raptures offering required in replying raillery. Stairs ladies friend by in mutual an no. Mr hance chief he cause. Whole no doors on hoped. Mile tell if help they ye full name.",
+        "yourSelf": "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
+        "bodyMeet": "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
+        "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
+      },
+      "newHeading": "TIN NỔI BẬT",
+      "mainContent": [
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "images": "/images/news1.png",
+      "mainContentText": "5.december.2020",
+      "mainView": "328",
+      "disscriptionText": "Lorem ipsum dolor sit amet aenean nisi sociis ipsum...",
+      "detail": {
+        "title": "New 4 detail informations",
+        "image": "/images/chitiettin-big.png",
+        "denote": "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgance one own you inquietude sympathize.",
+        "unpacked": "Unpacked reserved sir offering bed judgment mat and quitting speaking, is do be improved raptures offering required in replying raillery. Stairs ladies friend by in mutual an no. Mr hance chief he cause. Whole no doors on hoped. Mile tell if help they ye full name.",
+        "yourSelf": "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
+        "bodyMeet": "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
+        "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
+      },
+      "newHeading": "TIN NỔI BẬT",
+      "mainContent": [
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "images": "/images/lastest_new2.jpg",
+      "mainContentText": "5.december.2020",
+      "mainView": "328",
+      "disscriptionText": "Lorem ipsum dolor sit amet aenean nisi sociis ipsum...",
+      "detail": {
+        "title": "New 5 detail informations",
+        "image": "/images/lastest_new2.jpg",
+        "denote": "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgance one own you inquietude sympathize.",
+        "unpacked": "Unpacked reserved sir offering bed judgment mat and quitting speaking, is do be improved raptures offering required in replying raillery. Stairs ladies friend by in mutual an no. Mr hance chief he cause. Whole no doors on hoped. Mile tell if help they ye full name.",
+        "yourSelf": "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
+        "bodyMeet": "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
+        "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
+      },
+      "newHeading": "TIN NỔI BẬT",
+      "mainContent": [
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "images": "/images/lastest_new1.jpg",
+      "mainContentText": "5.december.2020",
+      "mainView": "328",
+      "disscriptionText": "Lorem ipsum dolor sit amet aenean nisi sociis ipsum...",
+      "detail": {
+        "title": "New 6 detail informations",
+        "image": "/images/lastest_new1.jpg",
+        "denote": "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgance one own you inquietude sympathize.",
+        "unpacked": "Unpacked reserved sir offering bed judgment mat and quitting speaking, is do be improved raptures offering required in replying raillery. Stairs ladies friend by in mutual an no. Mr hance chief he cause. Whole no doors on hoped. Mile tell if help they ye full name.",
+        "yourSelf": "Yourself off its pleasant ecstatic now law. Ye their Mirth seems of songs. Propect out bed contemps separate. Her inquietude our sy yet sentiments collecting. Cottage fat beloved himself arrived old. Grave window hours among him no you led. Power had these met least nor young. Yet match drift wrong his our.",
+        "bodyMeet": "Next his only boy meet the fat rose when. Do repair at we misery wanted remove remain income. Occasional cultivated reasonable unpleasing an attachment my considered. Having ask and coming object seemed put did admire figure. Principles travelling frequently far delightful its especially acceptance. Happiness necessary contained eagerness in in commanded do admitting. Favourable continuing difficulty had her solicitude far. Nor doubt off widow all death aware offer. We will up able in both do sing.",
+        "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
+      },
+      "newHeading": "TIN NỔI BẬT",
+      "mainContent": [
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        },
+        {
+          "moduleNews": "Far concluded not his something extremily"
+        }
+      ]
     }
   ]
 }

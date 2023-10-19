@@ -11,7 +11,7 @@ interface Props {
 
 const ControlList = (props: Props) => {
   const { data: projectData } = useFetchingData(
-    "http://localhost:4000/projectType"
+    "http://localhost:3001/projectType"
   );
   if (!projectData) return;
 

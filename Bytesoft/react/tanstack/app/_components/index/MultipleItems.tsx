@@ -55,7 +55,7 @@ const MultipleItems = (props: Props) => {
   };
 
   const { data: projectData } = useFetchingData(
-    "http://localhost:4000/project"
+    "http://localhost:3001/project"
   );
   if (!projectData) return;
 

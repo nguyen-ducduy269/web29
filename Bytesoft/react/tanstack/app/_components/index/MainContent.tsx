@@ -59,7 +59,7 @@ const MainContent = () => {
   };
 
   const { data: lastestNews } = useFetchingData(
-    "http://localhost:5000/lastest-new"
+    "http://localhost:3001/lastest-new"
   );
   if (!lastestNews) return;
 

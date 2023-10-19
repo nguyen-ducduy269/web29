@@ -15,7 +15,7 @@ const IndexDetail = () => {
   const detailId: any = localStorage.getItem("content");
   const mainId = JSON.parse(detailId);
   const { data: indexDetail } = useFetchingData(
-    `http://localhost:5000/lastest-new?id=${mainId}`
+    `http://localhost:3001/lastest-new?id=${mainId}`
   );
   if (!indexDetail) return;
 
