@@ -102,6 +102,7 @@ import {
   newsImg,
 } from "../ImportImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const MainIndex = () => {
   const [indexItem, setIndexItem] = useState(0);
@@ -707,7 +708,11 @@ const MainIndex = () => {
         </LastestNews>
 
         <Last>
-          <button className="xemthem">{entities.lastBtn}</button>
+          <Link href="/news">
+            <button className="xemthem" style={{ cursor: "pointer" }}>
+              {entities.lastBtn}
+            </button>
+          </Link>
           <div className="bonus">
             <b>{entities.lastBonus}</b>
           </div>
