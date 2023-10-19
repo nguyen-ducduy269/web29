@@ -1,48 +1,41 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import React from "react";
+import React, { Dispatch } from "react";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataDetailsProject } from "@/app/_hooks/useGetDataDetailsProject";
 
-interface Props {
-  indexItem: number;
-  setOpenItem: (value: boolean) => void;
-  openPopUp: number;
-}
-
-const PopUp = (props: Props) => {
-  const { data: projectData } = useFetchingData(
-    "http://localhost:3001/project"
-  );
-  if (!projectData) return;
-
-  const popUpItem = projectData[props.indexItem].details.find(
-    (t: any) => t.id === props.openPopUp
-  );
+const PopUp = ({
+  id,
+  setOpenPopUp,
+}: {
+  id: string;
+  setOpenPopUp: Dispatch<string | null>;
+}) => {
+  const { data: details } = useGetDataDetailsProject(id);
 
   return (
     <div className="popup">
       <div className="main-pop">
-        <Image src={popUpItem.popUp.imagine} width={575} height={409} alt="" />
+        <Image src={details?.[0]?.imagine} width={575} height={409} alt="" />
         <div className="title">
-          <b>{popUpItem.popUp.title}</b>
+          <b>{details?.[0]?.popUpTitle}</b>
         </div>
         <div className="main-content">
           <div className="content">
             <div className="name">Details about project:</div>
-            <div className="dis">{popUpItem.popUp.disscriptionText}</div>
+            <div className="dis">{details?.[0]?.disscriptionText}</div>
           </div>
 
           <div className="content">
             <div className="name">Details about time:</div>
-            <div className="dis">{popUpItem.popUp.time}</div>
+            <div className="dis">{details?.[0]?.time}</div>
           </div>
         </div>
       </div>
       <div className="layout"></div>
-      <div className="close-pop" onClick={() => props.setOpenItem(false)}>
+      <div className="close-pop" onClick={() => setOpenPopUp(null)}>
         <FontAwesomeIcon
           icon={faCircleXmark}
           style={{ fontSize: 40, color: "white" }}

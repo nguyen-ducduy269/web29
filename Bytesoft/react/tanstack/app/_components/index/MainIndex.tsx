@@ -4,16 +4,9 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-///// import icons
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-
-///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
-
 ///// import components
 import ControlList from "./ControlList";
 import TabItem from "./TabItem";
-import MultipleItems from "./MultipleItems";
 import PopUp from "./PopUp";
 
 //// import components css
@@ -26,7 +19,7 @@ import { Last } from "./main-css/Last";
 import { Container } from "../Container";
 import MainContent from "./MainContent";
 
-//// about us images
+////import images
 import {
   mayTrai,
   mayPhai,
@@ -101,17 +94,16 @@ import {
   layer154,
   newsImg,
 } from "../ImportImage";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 const MainIndex = () => {
   const [indexItem, setIndexItem] = useState(0);
-  const [openItem, setOpenItem] = useState(false);
   const [newValue, setNewValue] = useState("");
   const [typeItem, setTypeItem] = useState("");
-  const [openPopUp, setOpenPopUp] = useState<any>();
+  const [openPopUp, setOpenPopUp] = useState<string | null>();
 
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   const addText = () => {
@@ -457,46 +449,12 @@ const MainIndex = () => {
                 </div>
 
                 <div className="tab-content">
-                  <TabItem
-                    setOpenItem={setOpenItem}
-                    typeItem={typeItem}
-                    setOpenPopUp={setOpenPopUp}
-                  />
+                  <TabItem setOpenPopUp={setOpenPopUp} typeItem={typeItem} />
                 </div>
               </div>
 
-              {openItem ? (
-                <div className="popup">
-                  <div className="main-pop">
-                    <Image
-                      src={openPopUp.imagine}
-                      width={575}
-                      height={409}
-                      alt=""
-                    />
-                    <div className="title">
-                      <b>{openPopUp.popUpTitle}</b>
-                    </div>
-                    <div className="main-content">
-                      <div className="content">
-                        <div className="name">Details about project:</div>
-                        <div className="dis">{openPopUp.disscriptionText}</div>
-                      </div>
-
-                      <div className="content">
-                        <div className="name">Details about time:</div>
-                        <div className="dis">{openPopUp.time}</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="layout"></div>
-                  <div className="close-pop" onClick={() => setOpenItem(false)}>
-                    <FontAwesomeIcon
-                      icon={faCircleXmark}
-                      style={{ fontSize: 40, color: "white" }}
-                    />
-                  </div>
-                </div>
+              {openPopUp ? (
+                <PopUp id={openPopUp} setOpenPopUp={setOpenPopUp} />
               ) : (
                 ""
               )}

@@ -115,14 +115,14 @@ const HeaderContact = () => {
           <Container>
             <div className="nav-content clearfix">
               <div className="logo">
-                <a href="#">
+                <Link href="/">
                   <Image
                     src={LogoImage}
                     width={188}
                     height={46}
                     alt="logo header"
                   />
-                </a>
+                </Link>
               </div>
 
               <div className="nav">

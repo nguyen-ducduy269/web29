@@ -3,17 +3,16 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useFetchingDataProject } from "@/app/_hooks/useGetDataProject";
 import MulipleButton from "./MulipleButton";
 
 interface Props {
-  typeItem: string;
-  setOpenItem: (value: boolean) => void;
-  data: any;
   setOpenPopUp: (value: any) => void;
+  typeItem: string;
 }
 
 const MultipleItems = (props: Props) => {
+  const { data: project, isLoading } = useFetchingDataProject(props.typeItem);
   function SampleArrow(props: any) {
     const { className, style, onClick } = props;
     return (
@@ -54,60 +53,35 @@ const MultipleItems = (props: Props) => {
     ],
   };
 
-  const { data: projectData } = useFetchingData(
-    "http://localhost:3001/project"
-  );
-  if (!projectData) return;
-
   return (
     <div className="multiple-items">
-      <Slider {...settings}>
-        {props.typeItem == ""
-          ? projectData.map((item: any) => {
-              return (
-                <div className="item" key={item.id}>
-                  <Image
-                    className="project-img"
-                    src={item.imagine}
-                    alt=""
-                    width={237}
-                    height={266}
+      {isLoading ? (
+        "loading"
+      ) : (
+        <Slider {...settings}>
+          {project?.map((item: any) => {
+            return (
+              <div className="item" key={item.id}>
+                <Image
+                  className="project-img"
+                  src={item.imagine}
+                  alt=""
+                  width={237}
+                  height={266}
+                />
+                <div className="discription">
+                  <div className="title">TÒA NHÀ THÀNH PHỐ</div>
+                  <div className="more">{item.title}</div>
+                  <MulipleButton
+                    id={item.id}
+                    setOpenPopUp={props.setOpenPopUp}
                   />
-                  <div className="discription">
-                    <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div className="more">{item.title}</div>
-                    <MulipleButton
-                      setOpenItem={props.setOpenItem}
-                      id={item.id}
-                      setOpenPopUp={props.setOpenPopUp}
-                    />
-                  </div>
                 </div>
-              );
-            })
-          : props.data.map((item: any) => {
-              return (
-                <div className="item" key={item.id}>
-                  <Image
-                    className="project-img"
-                    src={item.imagine}
-                    alt=""
-                    width={237}
-                    height={266}
-                  />
-                  <div className="discription">
-                    <div className="title">TÒA NHÀ THÀNH PHỐ</div>
-                    <div className="more">{item.title}</div>
-                    <MulipleButton
-                      setOpenItem={props.setOpenItem}
-                      id={item.id}
-                      setOpenPopUp={props.setOpenPopUp}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-      </Slider>
+              </div>
+            );
+          })}
+        </Slider>
+      )}
     </div>
   );
 };

@@ -100,7 +100,7 @@ const MainContent = () => {
 
               <div className="button">
                 <h4>Xem thêm</h4>
-                <Link href={`/index/${item.id}`}>
+                <Link href={`/news/${item.id}`}>
                   <button
                     style={{ cursor: "pointer" }}
                     onClick={() => {

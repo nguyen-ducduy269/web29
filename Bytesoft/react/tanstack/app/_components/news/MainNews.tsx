@@ -11,10 +11,10 @@ import { Container } from "../Container";
 import { Main } from "./main-news-css/Main";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 const MainNews = () => {
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   const handleContent = (params: string) => {

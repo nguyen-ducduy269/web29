@@ -139,7 +139,7 @@
 
   "newsDetail": [
     {
-      "id": "main_1",
+      "id": 1,
       "image": "/images/chitiettin-big.png",
       "mainTitle": "News 1",
       "mainContentText": "5.december.2020",
@@ -153,7 +153,7 @@
       "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
     },
     {
-      "id": "main_2",
+      "id": 2,
       "image": "/images/chitiettin-big.png",
       "mainTitle": "News 2",
       "mainContentText": "5.december.2020",
@@ -167,7 +167,7 @@
       "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
     },
     {
-      "id": "main_3",
+      "id": 3,
       "image": "/images/chitiettin-big.png",
       "mainTitle": "News 3",
       "mainContentText": "5.december.2020",
@@ -181,7 +181,7 @@
       "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
     },
     {
-      "id": "main_4",
+      "id": 4,
       "image": "/images/chitiettin-big.png",
       "mainTitle": "News 4",
       "mainContentText": "5.december.2020",
@@ -195,7 +195,7 @@
       "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
     },
     {
-      "id": "main_5",
+      "id": 5,
       "image": "/images/chitiettin-big.png",
       "mainTitle": "News 5",
       "mainContentText": "5.december.2020",
@@ -209,7 +209,7 @@
       "smilling": "But why smilling man her imagine married. Chiefly can man her out believe manners cottage coloned unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr."
     },
     {
-      "id": "main_6",
+      "id": 6,
       "image": "/images/chitiettin-big.png",
       "mainTitle": "News 6",
       "mainContentText": "5.december.2020",

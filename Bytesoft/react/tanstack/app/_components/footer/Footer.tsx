@@ -3,13 +3,13 @@ import React from "react";
 import { Foot } from "./Foot";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 import Image from "next/image";
 import { footerImg, footImg } from "../ImportImage";
 
 const Footer = () => {
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   return (

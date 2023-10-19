@@ -22,14 +22,14 @@ import { NewsNav } from "./header-news-css/NewsNav";
 import { NewsBanner } from "./header-news-css/NewsBanner";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 const HeaderNews = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [changeFlag, setChangeFlag] = useState("vi");
   const [display, setDisplay] = useState(false);
 
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   const language = ["vi", "usa"];
@@ -118,14 +118,14 @@ const HeaderNews = () => {
           <Container>
             <div className="nav-content clearfix">
               <div className="logo">
-                <a href="#">
+                <Link href="/">
                   <Image
                     src={LogoImage}
                     width={188}
                     height={46}
                     alt="logo header"
                   />
-                </a>
+                </Link>
               </div>
 
               <div className="nav">

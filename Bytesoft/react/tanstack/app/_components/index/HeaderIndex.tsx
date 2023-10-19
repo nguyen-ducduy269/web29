@@ -26,7 +26,7 @@ import { HeaderBanner } from "./header-css/HeaderBanner";
 import { Container } from "../Container";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 const HeaderIndex = () => {
   const [isDisplay, setIsDisplay] = useState(false);
@@ -40,7 +40,7 @@ const HeaderIndex = () => {
     );
   };
 
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   const language = ["vi", "usa"];
@@ -130,14 +130,14 @@ const HeaderIndex = () => {
           <Container>
             <div className="nav-content clearfix">
               <div className="logo">
-                <a href="#">
+                <Link href="/">
                   <Image
                     src={LogoImage}
                     width={188}
                     height={46}
                     alt="logo header"
                   />
-                </a>
+                </Link>
               </div>
 
               <div className="nav">

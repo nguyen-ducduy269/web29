@@ -4,7 +4,7 @@ import { Container } from "../Container";
 import Image from "next/image";
 
 ////// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 import {
   footerMainImg,
@@ -15,7 +15,7 @@ import {
 import Slider from "react-slick";
 
 const FooterIndex = () => {
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   function SampleArrow(props: any) {

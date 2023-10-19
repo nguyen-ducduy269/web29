@@ -16,7 +16,7 @@ import { detailNewsImg } from "../ImportImage";
 import Image from "next/image";
 
 const MiniNews = () => {
-  const detailId: any = localStorage.getItem("newsContent");
+  const detailId: any = localStorage.getItem("content");
   const mainId = JSON.parse(detailId);
   const { data: entities } = useFetchingData(
     `http://localhost:3001/newsDetail?id=${mainId}`
