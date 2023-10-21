@@ -56,7 +56,7 @@ const MultipleItems = (props: Props) => {
   return (
     <div className="multiple-items">
       {isLoading ? (
-        "loading"
+        "Loading..."
       ) : (
         <Slider {...settings}>
           {project?.map((item: any) => {
