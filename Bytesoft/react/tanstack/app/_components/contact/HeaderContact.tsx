@@ -22,13 +22,14 @@ import { ContactNav } from "./header-contact-css/ContactNav";
 import { ContactBanner } from "./header-contact-css/ContactBanner";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 const HeaderContact = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [changeFlag, setChangeFlag] = useState("vi");
   const [display, setDisplay] = useState(false);
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   return (

@@ -6,12 +6,12 @@ import { SectionInfor } from "./contact-css/SectionInfor";
 import Image from "next/image";
 
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataData } from "@/app/_hooks/useGetDataData";
 
 import { locationImg, callImg, mailImg, point } from "../ImportImage";
 
 const ContactMain = () => {
-  const { data: entities } = useFetchingData("http://localhost:3001/data");
+  const { data: entities } = useGetDataData();
   if (!entities) return;
 
   return (

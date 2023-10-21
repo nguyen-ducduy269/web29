@@ -1,28 +1,28 @@
 "use client";
 import React from "react";
-import { Container } from "../Container";
-import { News } from "./news-css/News";
+import { useRouter } from "next/router";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+///// import components
+import { Container } from "../Container";
+import { News } from "./news-css/News";
+
 ///// import hooks
-import { useFetchingData } from "@/app/_hooks/useFetchingData";
+import { useGetDataDetailsProject } from "@/app/_hooks/useGetDataDetailsProject";
 
 //// import icons
 import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
-///// import images
-import { detailNewsImg } from "../ImportImage";
-import Image from "next/image";
+interface Props {
+  params: string;
+}
 
-const MiniNews = () => {
-  const detailId: any = localStorage.getItem("content");
-  const mainId = JSON.parse(detailId);
-  const { data: entities } = useFetchingData(
-    `http://localhost:3001/newsDetail?id=${mainId}`
-  );
+const MiniNews = (props: Props) => {
+  const id = parseInt(props.params);
+  const { data: entities } = useGetDataDetailsProject(id);
   if (!entities) return;
-
   const data = entities[0];
 
   return (
@@ -68,12 +68,7 @@ const MiniNews = () => {
                     </div>
 
                     <div className="content">
-                      <Image
-                        src={detailNewsImg}
-                        width={668}
-                        height={372}
-                        alt=""
-                      />
+                      <Image src={data.image} width={668} height={372} alt="" />
                       <div className="text">{data.denote}</div>
                       <div className="text">{data.unpacked}</div>
                       <div className="text">{data.yourSelf}</div>

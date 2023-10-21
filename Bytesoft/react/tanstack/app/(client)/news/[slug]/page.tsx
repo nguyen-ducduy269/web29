@@ -2,11 +2,11 @@ import HeaderNews from "@/app/_components/news/HeaderNews";
 import MiniNews from "@/app/_components/news/MiniNews";
 import React from "react";
 
-const DetailNew = () => {
+const DetailNew = ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <HeaderNews />
-      <MiniNews />
+      <MiniNews params={params.slug} />
     </>
   );
 };

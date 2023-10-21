@@ -63,10 +63,6 @@ const MainContent = () => {
   );
   if (!lastestNews) return;
 
-  const handleClick = (params: number) => {
-    localStorage.setItem("content", JSON.stringify(params));
-  };
-
   return (
     <Slider {...contentSettings}>
       {lastestNews.map((item: any) => {
@@ -101,14 +97,7 @@ const MainContent = () => {
               <div className="button">
                 <h4>Xem thêm</h4>
                 <Link href={`/news/${item.id}`}>
-                  <button
-                    style={{ cursor: "pointer" }}
-                    onClick={() => {
-                      handleClick(item.id);
-                    }}
-                  >
-                    +
-                  </button>
+                  <button style={{ cursor: "pointer" }}>+</button>
                 </Link>
               </div>
             </div>

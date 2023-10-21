@@ -96,6 +96,8 @@ import {
 } from "../ImportImage";
 import Link from "next/link";
 import { useGetDataData } from "@/app/_hooks/useGetDataData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 const MainIndex = () => {
   const [indexItem, setIndexItem] = useState(0);

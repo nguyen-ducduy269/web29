@@ -4,7 +4,7 @@ import React, { Dispatch } from "react";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 ///// import hooks
-import { useGetDataDetailsProject } from "@/app/_hooks/useGetDataDetailsProject";
+import { useFetchingDetailsProject } from "@/app/_hooks/useFetchingDetailsProject";
 
 const PopUp = ({
   id,
@@ -13,7 +13,7 @@ const PopUp = ({
   id: string;
   setOpenPopUp: Dispatch<string | null>;
 }) => {
-  const { data: details } = useGetDataDetailsProject(id);
+  const { data: details } = useFetchingDetailsProject(id);
 
   return (
     <div className="popup">
