@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/router";
+import { useParams } from "next/navigation";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -15,13 +15,9 @@ import { useGetDataDetailsProject } from "@/app/_hooks/useGetDataDetailsProject"
 import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
-interface Props {
-  params: string;
-}
-
-const MiniNews = (props: Props) => {
-  const id = parseInt(props.params);
-  const { data: entities } = useGetDataDetailsProject(id);
+const MiniNews = () => {
+  const params = useParams();
+  const { data: entities } = useGetDataDetailsProject(+params?.slug);
   if (!entities) return;
   const data = entities[0];
 
@@ -39,7 +35,7 @@ const MiniNews = (props: Props) => {
                 <div className="item">
                   <div className="all">
                     <div className="title">
-                      {data.mainTitle}, {data.moduleTitle}
+                      {data?.mainTitle}, {data?.moduleTitle}
                     </div>
 
                     <div className="about">
@@ -52,7 +48,7 @@ const MiniNews = (props: Props) => {
                           }}
                         />
                       </div>
-                      <div className="day">{data.mainContentText}</div>
+                      <div className="day">{data?.mainContentText}</div>
                       <div className="line">|</div>
                       <div className="eye">
                         <FontAwesomeIcon
@@ -64,16 +60,21 @@ const MiniNews = (props: Props) => {
                           }}
                         />
                       </div>
-                      <div className="view">{data.mainView}</div>
+                      <div className="view">{data?.mainView}</div>
                     </div>
 
                     <div className="content">
-                      <Image src={data.image} width={668} height={372} alt="" />
-                      <div className="text">{data.denote}</div>
-                      <div className="text">{data.unpacked}</div>
-                      <div className="text">{data.yourSelf}</div>
-                      <div className="text">{data.bodyMeet}</div>
-                      <div className="text">{data.smilling}</div>
+                      <Image
+                        src={data?.image}
+                        width={668}
+                        height={372}
+                        alt=""
+                      />
+                      <div className="text">{data?.denote}</div>
+                      <div className="text">{data?.unpacked}</div>
+                      <div className="text">{data?.yourSelf}</div>
+                      <div className="text">{data?.bodyMeet}</div>
+                      <div className="text">{data?.smilling}</div>
                     </div>
                   </div>
                 </div>
@@ -105,7 +106,7 @@ const MiniNews = (props: Props) => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{data.moduleNewText}</div>
+                            <div className="title">{data?.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -115,7 +116,7 @@ const MiniNews = (props: Props) => {
                                   }}
                                 />
                               </div>
-                              <div className="day">{data.mainContentText}</div>
+                              <div className="day">{data?.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -127,7 +128,7 @@ const MiniNews = (props: Props) => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{data.moduleNewText}</div>
+                            <div className="title">{data?.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -137,7 +138,7 @@ const MiniNews = (props: Props) => {
                                   }}
                                 />
                               </div>
-                              <div className="day">{data.mainContentText}</div>
+                              <div className="day">{data?.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -149,7 +150,7 @@ const MiniNews = (props: Props) => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{data.moduleNewText}</div>
+                            <div className="title">{data?.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -159,7 +160,7 @@ const MiniNews = (props: Props) => {
                                   }}
                                 />
                               </div>
-                              <div className="day">{data.mainContentText}</div>
+                              <div className="day">{data?.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -171,7 +172,7 @@ const MiniNews = (props: Props) => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{data.moduleNewText}</div>
+                            <div className="title">{data?.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -181,7 +182,7 @@ const MiniNews = (props: Props) => {
                                   }}
                                 />
                               </div>
-                              <div className="day">{data.mainContentText}</div>
+                              <div className="day">{data?.mainContentText}</div>
                             </div>
                           </div>
                         </div>
@@ -193,7 +194,7 @@ const MiniNews = (props: Props) => {
                         </div>
                         <div className="col-md-8">
                           <div className="detail">
-                            <div className="title">{data.moduleNewText}</div>
+                            <div className="title">{data?.moduleNewText}</div>
                             <div className="more">
                               <div className="clock">
                                 <FontAwesomeIcon
@@ -203,7 +204,7 @@ const MiniNews = (props: Props) => {
                                   }}
                                 />
                               </div>
-                              <div className="day">{data.mainContentText}</div>
+                              <div className="day">{data?.mainContentText}</div>
                             </div>
                           </div>
                         </div>
