@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
     "@types/styled-components": "^5.1.26",
     "axios": "^1.4.0",
     "json-server": "^0.17.3",

@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import axios from "axios";
