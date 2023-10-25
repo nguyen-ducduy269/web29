@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Status from "./Status";
 import { fetchData, todoSlice } from "../features/todo/todoSlice";
+import { AppDispatch } from "../store/Store";
 
 interface Props {
   changeStatus: any;
@@ -14,7 +15,7 @@ interface Props {
 const Table = (props: Props) => {
   const tasks = useSelector((state: any) => state.todos.data) || [];
   const [searchValue, setSearchValue] = useState("");
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(fetchData());

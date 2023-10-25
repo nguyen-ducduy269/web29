@@ -7,13 +7,18 @@ export const fetchData = createAsyncThunk("todos/fetchData", async () => {
 
 const initialState = {
   isLoading: true,
-  data: [],
-};
+  data: [{}],
+} as todoType;
 
 export interface todoType {
-  id: number;
-  name: string;
-  status: any;
+  isLoading: boolean;
+  data: [
+    {
+      id: number;
+      name: string;
+      status: string;
+    }
+  ];
 }
 
 const todoSlice = createSlice({
