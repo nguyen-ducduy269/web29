@@ -56,34 +56,6 @@ const AddJob = (props: Props) => {
     setStatus("Active");
   };
 
-  // const handleBtn = () => {
-  //   if (props.selectedItem) {
-  //     const index = tasks.findIndex((t: any) => t.id == props.selectedItem.id);
-  //     const temp = [...tasks];
-  //     temp[index] = { id: props.selectedItem.id, name, status };
-  //     dispatch(Task(temp));
-
-  //     axios
-  //       .put(`http://localhost:3000/data/${props.selectedItem.id}`, temp[index])
-  //       .then((response) => console.log(response.data))
-  //       .then((error) => console.log(error));
-  //   } else {
-  //     const temp = {
-  //       id: Math.random(),
-  //       name: name,
-  //       status: status,
-  //     };
-  //     tasks.push(temp);
-  //     dispatch(Task(tasks));
-
-  //     axios
-  //       .post("http://localhost:3000/data", temp)
-  //       .then((response) => console.log("response.data", response.data))
-  //       .then((error) => console.log("error", error));
-  //   }
-  //   props.setIsDisplay(false);
-  // };
-
   return (
     <>
       <div className="left">

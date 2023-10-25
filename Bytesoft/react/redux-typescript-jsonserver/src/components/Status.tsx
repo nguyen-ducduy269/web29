@@ -1,31 +1,40 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import { todoSlice } from "../features/todo/todoSlice";
 
 const Status = () => {
-  // const dispatch = useDispatch();
-  // const [statusChange, setStatusChange] = useState("All");
+  const dispatch = useDispatch();
+  const [statusChange, setStatusChange] = useState("All");
 
-  // const handleStatus = async () => {
-  //   const data = await axios.get("http://localhost:3000/data");
-  //   const initValue = data.data;
+  useEffect(() => {
+    handleStatus();
+  }, [statusChange]);
 
-  //   if (statusChange == "All") {
-  //     dispatch(Task(initValue));
-  //   } else {
-  //     let array = [...initValue];
-  //     array = array.filter((arr: any) => {
-  //       return arr.status.toLowerCase().includes(statusChange.toLowerCase());
-  //     });
-  //     dispatch(Task(array));
-  //   }
-  // };
+  const handleStatus = async () => {
+    const data = await axios.get("http://localhost:3000/data");
+    const initValue = data.data;
+
+    if (statusChange == "All") {
+      dispatch(todoSlice.actions.filterStatus(initValue));
+    } else {
+      let array = [...initValue];
+      array = array.filter((arr: any) => {
+        return arr.status.toLowerCase().includes(statusChange.toLowerCase());
+      });
+      dispatch(todoSlice.actions.filterStatus(array));
+    }
+  };
 
   return (
     <>
       <td className="status">
-        <select>
+        <select
+          onChange={(e) => {
+            setStatusChange(e.target.value);
+          }}
+        >
           <option value={"All"}>All</option>
           <option value={"Active"}>Active</option>
           <option value={"Hide"}>Hide</option>
