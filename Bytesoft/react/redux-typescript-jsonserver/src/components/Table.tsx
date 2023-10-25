@@ -1,16 +1,33 @@
 "use client";
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Status from "./Status";
+import { fetchData, todoSlice } from "../features/todo/todoSlice";
 
-type props = {
-  handleBtn: (value: any) => void;
-  deleteBtn: (value: any) => void;
-};
+interface Props {
+  changeStatus: any;
+  setIsDisplay: (value: boolean) => void;
+  setSelectedItem: (value: any) => void;
+  setChangeStatus: (value: any) => void;
+}
 
-const Table = ({ handleBtn, deleteBtn }: props) => {
-  const tasks = useSelector((state: any) => state.Task.data) || [];
+const Table = (props: Props) => {
+  const tasks = useSelector((state: any) => state.todos.data) || [];
   const [searchValue, setSearchValue] = useState("");
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [props.changeStatus]);
+
+  const handleEdit = () => {
+    props.setIsDisplay(true);
+  };
+
+  const handleDelete = (params: any) => {
+    dispatch(todoSlice.actions.deleteItem(params));
+    props.setChangeStatus(!props.changeStatus);
+  };
 
   return (
     <>
@@ -31,6 +48,7 @@ const Table = ({ handleBtn, deleteBtn }: props) => {
               <input
                 className="add-input"
                 type="text"
+                value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
               ></input>
             </td>
@@ -53,12 +71,20 @@ const Table = ({ handleBtn, deleteBtn }: props) => {
                   <p className="status-active">{e.status}</p>
                 </td>
                 <td className="activity button">
-                  <button className="btn_edit" onClick={() => handleBtn(e)}>
+                  <button
+                    className="btn_edit"
+                    onClick={() => {
+                      handleEdit();
+                      props.setSelectedItem(e);
+                    }}
+                  >
                     Sửa
                   </button>
                   <button
                     className="btn_remove"
-                    onClick={() => deleteBtn(e.id)}
+                    onClick={() => {
+                      handleDelete(e.id);
+                    }}
                   >
                     Xóa
                   </button>

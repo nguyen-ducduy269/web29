@@ -1,13 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import axios from "axios";
+import { useState } from "react";
 
 // import components
 import AddJob from "./components/AddJob.tsx";
 import More from "./components/More.tsx";
 import Table from "./components/Table.tsx";
-import { Task } from "./store/actions/indexActions.tsx";
 
 // import css
 import { Header, Container, LeftJob, AddButton, RightJob } from "./App.ts";
@@ -15,39 +12,7 @@ import { Header, Container, LeftJob, AddButton, RightJob } from "./App.ts";
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isDisplay, setIsDisplay] = useState(false);
-  const tasks = useSelector((state: any) => state.Task.data);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    fetchData("http://localhost:3000/data");
-  }, []);
-
-  const dispatchData = (value: any) => {
-    dispatch(Task(value));
-  };
-
-  const fetchData = (url: any) => {
-    fetch(`${url}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        dispatchData(data);
-      });
-  };
-
-  const deleteBtn = (e: any) => {
-    let indexFilter = tasks.findIndex((item: any) => item.id === e);
-    const newArray = tasks.filter((item: any) => {
-      return item != tasks[indexFilter];
-    });
-
-    axios
-      .delete(`http://localhost:3000/data/${e}`)
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
-    dispatchData(newArray);
-  };
+  const [changeStatus, setChangeStatus] = useState(false);
 
   return (
     <>
@@ -57,7 +22,12 @@ function App() {
           className={isDisplay ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : ""}
         >
           {isDisplay ? (
-            <AddJob setIsDisplay={setIsDisplay} selectedItem={selectedItem} />
+            <AddJob
+              selectedItem={selectedItem}
+              setIsDisplay={setIsDisplay}
+              changeStatus={changeStatus}
+              setChangeStatus={setChangeStatus}
+            />
           ) : (
             false
           )}
@@ -81,11 +51,10 @@ function App() {
           <More />
 
           <Table
-            handleBtn={(e) => {
-              setSelectedItem(e);
-              setIsDisplay(true);
-            }}
-            deleteBtn={deleteBtn}
+            changeStatus={changeStatus}
+            setIsDisplay={setIsDisplay}
+            setSelectedItem={setSelectedItem}
+            setChangeStatus={setChangeStatus}
           />
         </RightJob>
       </Container>

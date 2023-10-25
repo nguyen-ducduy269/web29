@@ -2,11 +2,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import axios from "axios";
 
 // import components
 import Arrange from "./Arrange";
-import { Task } from "../store/actions/indexActions";
+import { todoSlice } from "../features/todo/todoSlice";
+import axios from "axios";
 
 const More = () => {
   const [arrange, setArrange] = useState(false);
@@ -23,10 +23,10 @@ const More = () => {
       newTask = newTask.filter((task: any) => {
         return task.name.toLowerCase().includes(search.toLowerCase());
       });
-      dispatch(Task(newTask));
+      dispatch(todoSlice.actions.filterName(newTask));
     }
     if (search == "" || search == null) {
-      dispatch(Task(initValue));
+      dispatch(todoSlice.actions.filterName(initValue));
     }
   };
 
@@ -44,7 +44,7 @@ const More = () => {
         <button className="reduce" onClick={() => setArrange(true)}>
           Sắp xếp
         </button>
-        {arrange ? <Arrange setArrange={setArrange} /> : false}
+        {arrange ? <Arrange setArrange={setArrange} /> : ""}
       </Mored>
     </>
   );

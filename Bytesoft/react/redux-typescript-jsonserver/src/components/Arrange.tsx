@@ -2,35 +2,24 @@
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import { todoSlice } from "../features/todo/todoSlice";
 
-// import components
-import { Task } from "../store/actions/indexActions";
+type Props = {
+  setArrange: (value: any) => void;
+};
 
-// type Props = {
-//   setArrange: (value: any) => void;
-// };
-
-interface Props {
-  setArrange: (value: boolean) => void;
-}
-
-const Arrange = (prop: Props) => {
+const Arrange = (props: Props) => {
   const dispatch = useDispatch();
-
-  const dispactchValue = (value: any) => {
-    dispatch(Task(value));
-  };
 
   const handleStatus = async (value: string) => {
     const data = await axios.get("http://localhost:3000/data");
     const initValue = data.data;
 
     let filterValue = [...initValue];
-    // let filterValue = [...initValue];
     filterValue = filterValue.filter((filter: any) => {
       return filter.status.includes(value);
     });
-    dispactchValue(filterValue);
+    dispatch(todoSlice.actions.filterStatus(filterValue));
   };
 
   const fromAToZ = async () => {
@@ -38,11 +27,10 @@ const Arrange = (prop: Props) => {
     const initValue = data.data;
 
     let filterValue = [...initValue];
-    // let filterValue = [...initValue];
     filterValue = filterValue.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
-    dispactchValue(filterValue);
+    dispatch(todoSlice.actions.filterStatus(filterValue));
   };
 
   const fromZToA = async () => {
@@ -50,13 +38,12 @@ const Arrange = (prop: Props) => {
     const initValue = data.data;
 
     let filterValue = [...initValue];
-    // let filterValue = [...initValue];
     filterValue = filterValue
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
       })
       .reverse();
-    dispactchValue(filterValue);
+    dispatch(todoSlice.actions.filterStatus(filterValue));
   };
 
   return (
@@ -67,8 +54,7 @@ const Arrange = (prop: Props) => {
             <a
               type="button"
               onClick={() => {
-                prop.setArrange(false);
-                // setArrange(false);
+                props.setArrange(false);
                 fromAToZ();
               }}
             >
@@ -79,8 +65,7 @@ const Arrange = (prop: Props) => {
             <a
               type="button"
               onClick={() => {
-                prop.setArrange(false);
-                // setArrange(false);
+                props.setArrange(false);
                 fromZToA();
               }}
             >
@@ -91,8 +76,7 @@ const Arrange = (prop: Props) => {
             <a
               type="button"
               onClick={() => {
-                prop.setArrange(false);
-                // setArrange(false);
+                props.setArrange(false);
                 handleStatus("Active");
               }}
             >
@@ -103,8 +87,7 @@ const Arrange = (prop: Props) => {
             <a
               type="button"
               onClick={() => {
-                prop.setArrange(false);
-                // setArrange(false);
+                props.setArrange(false);
                 handleStatus("Hide");
               }}
             >

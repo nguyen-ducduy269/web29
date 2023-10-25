@@ -1,26 +1,54 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
-
-// import components
-import { Task } from "../store/actions/indexActions";
+import { todoSlice } from "../features/todo/todoSlice";
 
 interface Props {
   selectedItem: any;
   setIsDisplay: (value: boolean) => void;
+  setChangeStatus: (value: any) => void;
+  changeStatus: any;
 }
 
 const AddJob = (props: Props) => {
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Active");
   const dispatch = useDispatch();
-  const tasks = useSelector((state: any) => state.Task.data);
+  const tasks = useSelector((state: any) => state.todos.data);
 
   useEffect(() => {
     setName(props.selectedItem?.name || "");
     setStatus(props.selectedItem?.status || "Active");
   }, [props.selectedItem]);
+
+  const handleText = () => {
+    if (props.selectedItem != null) {
+      const index = tasks.findIndex((t: any) => t.id == props.selectedItem.id);
+      const temp = [...tasks];
+      temp[index] = { id: props.selectedItem.id, name, status };
+
+      const item = {
+        id: props.selectedItem.id,
+        item: temp[index],
+      };
+      dispatch(todoSlice.actions.update(item));
+      props.setChangeStatus(!props.changeStatus);
+      props.setIsDisplay(false);
+    } else if (props.selectedItem == null) {
+      if (!name) {
+        return;
+      } else {
+        const item = {
+          name,
+          status,
+        };
+        dispatch(todoSlice.actions.add(item));
+        setName("");
+        setStatus("Active");
+        props.setIsDisplay(false);
+      }
+    }
+  };
 
   const closeForm = () => {
     props.setIsDisplay(false);
@@ -28,33 +56,33 @@ const AddJob = (props: Props) => {
     setStatus("Active");
   };
 
-  const handleBtn = () => {
-    if (props.selectedItem) {
-      const index = tasks.findIndex((t: any) => t.id == props.selectedItem.id);
-      const temp = [...tasks];
-      temp[index] = { id: props.selectedItem.id, name, status };
-      dispatch(Task(temp));
+  // const handleBtn = () => {
+  //   if (props.selectedItem) {
+  //     const index = tasks.findIndex((t: any) => t.id == props.selectedItem.id);
+  //     const temp = [...tasks];
+  //     temp[index] = { id: props.selectedItem.id, name, status };
+  //     dispatch(Task(temp));
 
-      axios
-        .put(`http://localhost:3000/data/${props.selectedItem.id}`, temp[index])
-        .then((response) => console.log(response.data))
-        .then((error) => console.log(error));
-    } else {
-      const temp = {
-        id: Math.random(),
-        name: name,
-        status: status,
-      };
-      tasks.push(temp);
-      dispatch(Task(tasks));
+  //     axios
+  //       .put(`http://localhost:3000/data/${props.selectedItem.id}`, temp[index])
+  //       .then((response) => console.log(response.data))
+  //       .then((error) => console.log(error));
+  //   } else {
+  //     const temp = {
+  //       id: Math.random(),
+  //       name: name,
+  //       status: status,
+  //     };
+  //     tasks.push(temp);
+  //     dispatch(Task(tasks));
 
-      axios
-        .post("http://localhost:3000/data", temp)
-        .then((response) => console.log("response.data", response.data))
-        .then((error) => console.log("error", error));
-    }
-    props.setIsDisplay(false);
-  };
+  //     axios
+  //       .post("http://localhost:3000/data", temp)
+  //       .then((response) => console.log("response.data", response.data))
+  //       .then((error) => console.log("error", error));
+  //   }
+  //   props.setIsDisplay(false);
+  // };
 
   return (
     <>
@@ -87,7 +115,7 @@ const AddJob = (props: Props) => {
               className="btn_add"
               onClick={(e) => {
                 e.preventDefault();
-                handleBtn();
+                handleText();
               }}
             >
               {props.selectedItem ? "Sửa" : "Thêm"}
