@@ -1,9 +1,14 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const fetchData = createAsyncThunk("todos/fetchData", async () => {
-  return await fetch("http://localhost:3000/data").then((res) => res.json());
-});
+///// import hooks
+import { fetchData } from "../../hooks/fetchData";
+import { fetchDataStatus } from "../../hooks/fetchDataStatus";
+import { updateJob } from "../../hooks/updateJob";
+import { deleteItem } from "../../hooks/deleteItem";
+import { filterName } from "../../hooks/filterName";
+import { sortJob } from "../../hooks/sortJob";
+import { orderSortJob } from "../../hooks/orderSortJob";
+import { addJob } from "../../hooks/addJob";
 
 const initialState = {
   isLoading: true,
@@ -26,57 +31,15 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     add(state, action) {
-      const temp = {
-        id: Math.random(),
-        name: action.payload.name,
-        status: action.payload.status,
-      };
-      state.data.push(temp);
-      axios.post("http://localhost:3000/data", temp);
-    },
-
-    update(state, action) {
-      console.log(state.data);
-      axios.put(
-        `http://localhost:3000/data/${action.payload.id}`,
-        action.payload.item
-      );
-    },
-
-    deleteItem(state, action) {
-      console.log(state.data);
-      axios.delete(`http://localhost:3000/data/${action.payload}`);
+      state.data.push(action.payload);
     },
 
     filter(state, action) {
       state.data = action.payload;
     },
-
-    // filterStatus(state, action) {
-    //   const handleFetch = async () => {
-    //     const response = await axios.get("http://localhost:3000/data");
-    //     return response.data;
-    //   };
-
-    //   const handleFetchStatus = async () => {
-    //     const response = await axios.get(
-    //       `http://localhost:3000/data?status=${action.payload}`
-    //     );
-    //     return response.data;
-    //   };
-
-    //   if (action.payload === "All") {
-    //     handleFetch().then((data) => {
-    //       state.data = data;
-    //     });
-    //   } else {
-    //     handleFetchStatus().then((data) => {
-    //       state.data = data;
-    //     });
-    //   }
-    // },
   },
   extraReducers: (builder) => {
+    //// render data
     builder.addCase(fetchData.pending, (state) => {
       state.isLoading = true;
     });
@@ -85,6 +48,87 @@ const todoSlice = createSlice({
       state.data = action.payload;
     });
     builder.addCase(fetchData.rejected, (state) => {
+      state.isLoading = false;
+    });
+
+    ///// add
+    builder.addCase(addJob.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(addJob.fulfilled, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(addJob.rejected, (state) => {
+      state.isLoading = false;
+    });
+
+    ///// update
+    builder.addCase(updateJob.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(updateJob.fulfilled, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(updateJob.rejected, (state) => {
+      state.isLoading = false;
+    });
+
+    ////// delete
+    builder.addCase(deleteItem.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(deleteItem.fulfilled, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(deleteItem.rejected, (state) => {
+      state.isLoading = false;
+    });
+
+    //// filter status
+    builder.addCase(fetchDataStatus.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(fetchDataStatus.fulfilled, (state, action) => {
+      state.isLoading = true;
+      state.data = action.payload;
+    });
+    builder.addCase(fetchDataStatus.rejected, (state) => {
+      state.isLoading = false;
+    });
+
+    ////// filter name
+    builder.addCase(filterName.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(filterName.fulfilled, (state, action) => {
+      state.isLoading = true;
+      state.data = action.payload;
+    });
+    builder.addCase(filterName.rejected, (state) => {
+      state.isLoading = false;
+    });
+
+    ////// sort from A to Z
+    builder.addCase(sortJob.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(sortJob.fulfilled, (state, action) => {
+      state.isLoading = true;
+      state.data = action.payload;
+    });
+    builder.addCase(sortJob.rejected, (state) => {
+      state.isLoading = false;
+    });
+
+    ////// sort from Z to A
+    builder.addCase(orderSortJob.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(orderSortJob.fulfilled, (state, action) => {
+      state.isLoading = true;
+      state.data = action.payload;
+    });
+    builder.addCase(orderSortJob.rejected, (state) => {
       state.isLoading = false;
     });
   },

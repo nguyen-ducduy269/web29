@@ -2,8 +2,11 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Status from "./Status";
-import { fetchData, todoSlice } from "../features/todo/todoSlice";
 import { AppDispatch } from "../store/Store";
+
+////// import hooks
+import { fetchData } from "../hooks/fetchData";
+import { deleteItem } from "../hooks/deleteItem";
 
 interface Props {
   changeStatus: any;
@@ -26,7 +29,7 @@ const Table = (props: Props) => {
   };
 
   const handleDelete = (params: any) => {
-    dispatch(todoSlice.actions.deleteItem(params));
+    dispatch(deleteItem(params));
     props.setChangeStatus(!props.changeStatus);
   };
 

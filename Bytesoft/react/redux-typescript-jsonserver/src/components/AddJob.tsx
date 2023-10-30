@@ -3,6 +3,11 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { todoSlice } from "../features/todo/todoSlice";
 
+///// import hooks
+import { AppDispatch } from "../store/Store";
+import { updateJob } from "../hooks/updateJob";
+import { addJob } from "../hooks/addJob";
+
 interface Props {
   selectedItem: any;
   setIsDisplay: (value: boolean) => void;
@@ -13,7 +18,7 @@ interface Props {
 const AddJob = (props: Props) => {
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Active");
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const tasks = useSelector((state: any) => state.todos.data);
 
   useEffect(() => {
@@ -31,7 +36,7 @@ const AddJob = (props: Props) => {
         id: props.selectedItem.id,
         item: temp[index],
       };
-      dispatch(todoSlice.actions.update(item));
+      dispatch(updateJob(item));
       props.setChangeStatus(!props.changeStatus);
       props.setIsDisplay(false);
     } else if (props.selectedItem == null) {
@@ -39,10 +44,12 @@ const AddJob = (props: Props) => {
         return;
       } else {
         const item = {
+          id: Math.random(),
           name,
           status,
         };
         dispatch(todoSlice.actions.add(item));
+        dispatch(addJob(item));
         setName("");
         setStatus("Active");
         props.setIsDisplay(false);

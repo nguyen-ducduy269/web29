@@ -1,32 +1,22 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import axios from "axios";
-import { todoSlice } from "../features/todo/todoSlice";
+import { AppDispatch } from "../store/Store";
+
+//// import hooks
+import { fetchDataStatus } from "../hooks/fetchDataStatus";
 
 const Status = () => {
-  const dispatch = useDispatch();
-  const [statusChange, setStatusChange] = useState("All");
+  const dispatch = useDispatch<AppDispatch>();
+
+  const [statusChange, setStatusChange] = useState<string>("All");
 
   useEffect(() => {
     handleStatus();
   }, [statusChange]);
 
   const handleStatus = async () => {
-    // dispatch(todoSlice.actions.filterStatus(statusChange));
-
-    const data = await axios.get("http://localhost:3000/data");
-    const initValue = data.data;
-
-    if (statusChange == "All") {
-      dispatch(todoSlice.actions.filter(initValue));
-    } else {
-      let array = [...initValue];
-      array = array.filter((arr: any) => {
-        return arr.status.toLowerCase().includes(statusChange.toLowerCase());
-      });
-      dispatch(todoSlice.actions.filter(array));
-    }
+    dispatch(fetchDataStatus(statusChange));
   };
 
   return (

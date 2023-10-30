@@ -2,32 +2,20 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
+import { AppDispatch } from "../store/Store";
 
 // import components
 import Arrange from "./Arrange";
-import { todoSlice } from "../features/todo/todoSlice";
-import axios from "axios";
+import { filterName } from "../hooks/filterName";
 
 const More = () => {
   const [arrange, setArrange] = useState(false);
   const [search, setSearch] = useState("");
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   // xử lý bất đồng bộ
-  const handleSearch = async () => {
-    const data = await axios.get("http://localhost:3000/data");
-    const initValue = data.data;
-
-    if (search != "" && search != null) {
-      let newTask = [...initValue];
-      newTask = newTask.filter((task: any) => {
-        return task.name.toLowerCase().includes(search.toLowerCase());
-      });
-      dispatch(todoSlice.actions.filter(newTask));
-    }
-    if (search == "" || search == null) {
-      dispatch(todoSlice.actions.filter(initValue));
-    }
+  const handleSearch = () => {
+    dispatch(filterName(search));
   };
 
   return (

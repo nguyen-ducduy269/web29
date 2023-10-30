@@ -1,49 +1,30 @@
 "use client";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import axios from "axios";
-import { todoSlice } from "../features/todo/todoSlice";
+import { fetchDataStatus } from "../hooks/fetchDataStatus";
+import { AppDispatch } from "../store/Store";
+
+////// import hooks
+import { sortJob } from "../hooks/sortJob";
+import { orderSortJob } from "../hooks/orderSortJob";
 
 type Props = {
   setArrange: (value: any) => void;
 };
 
 const Arrange = (props: Props) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleStatus = async (value: string) => {
-    const data = await axios.get("http://localhost:3000/data");
-    const initValue = data.data;
-
-    let filterValue = [...initValue];
-    filterValue = filterValue.filter((filter: any) => {
-      return filter.status.includes(value);
-    });
-    dispatch(todoSlice.actions.filterStatus(filterValue));
+    dispatch(fetchDataStatus(value));
   };
 
   const fromAToZ = async () => {
-    const data = await axios.get("http://localhost:3000/data");
-    const initValue = data.data;
-
-    let filterValue = [...initValue];
-    filterValue = filterValue.sort((a, b) => {
-      return a.name.localeCompare(b.name);
-    });
-    dispatch(todoSlice.actions.filterStatus(filterValue));
+    dispatch(sortJob());
   };
 
   const fromZToA = async () => {
-    const data = await axios.get("http://localhost:3000/data");
-    const initValue = data.data;
-
-    let filterValue = [...initValue];
-    filterValue = filterValue
-      .sort((a, b) => {
-        return a.name.localeCompare(b.name);
-      })
-      .reverse();
-    dispatch(todoSlice.actions.filterStatus(filterValue));
+    dispatch(orderSortJob());
   };
 
   return (
