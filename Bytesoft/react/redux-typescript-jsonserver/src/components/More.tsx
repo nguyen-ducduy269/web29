@@ -23,10 +23,10 @@ const More = () => {
       newTask = newTask.filter((task: any) => {
         return task.name.toLowerCase().includes(search.toLowerCase());
       });
-      dispatch(todoSlice.actions.filterName(newTask));
+      dispatch(todoSlice.actions.filter(newTask));
     }
     if (search == "" || search == null) {
-      dispatch(todoSlice.actions.filterName(initValue));
+      dispatch(todoSlice.actions.filter(initValue));
     }
   };
 

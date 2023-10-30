@@ -34,6 +34,7 @@ const todoSlice = createSlice({
       state.data.push(temp);
       axios.post("http://localhost:3000/data", temp);
     },
+
     update(state, action) {
       console.log(state.data);
       axios.put(
@@ -41,16 +42,39 @@ const todoSlice = createSlice({
         action.payload.item
       );
     },
+
     deleteItem(state, action) {
       console.log(state.data);
       axios.delete(`http://localhost:3000/data/${action.payload}`);
     },
-    filterName(state, action) {
+
+    filter(state, action) {
       state.data = action.payload;
     },
-    filterStatus(state, action) {
-      state.data = action.payload;
-    },
+
+    // filterStatus(state, action) {
+    //   const handleFetch = async () => {
+    //     const response = await axios.get("http://localhost:3000/data");
+    //     return response.data;
+    //   };
+
+    //   const handleFetchStatus = async () => {
+    //     const response = await axios.get(
+    //       `http://localhost:3000/data?status=${action.payload}`
+    //     );
+    //     return response.data;
+    //   };
+
+    //   if (action.payload === "All") {
+    //     handleFetch().then((data) => {
+    //       state.data = data;
+    //     });
+    //   } else {
+    //     handleFetchStatus().then((data) => {
+    //       state.data = data;
+    //     });
+    //   }
+    // },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchData.pending, (state) => {

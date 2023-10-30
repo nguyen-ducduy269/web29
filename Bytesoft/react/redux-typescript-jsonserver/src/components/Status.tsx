@@ -13,17 +13,19 @@ const Status = () => {
   }, [statusChange]);
 
   const handleStatus = async () => {
+    // dispatch(todoSlice.actions.filterStatus(statusChange));
+
     const data = await axios.get("http://localhost:3000/data");
     const initValue = data.data;
 
     if (statusChange == "All") {
-      dispatch(todoSlice.actions.filterStatus(initValue));
+      dispatch(todoSlice.actions.filter(initValue));
     } else {
       let array = [...initValue];
       array = array.filter((arr: any) => {
         return arr.status.toLowerCase().includes(statusChange.toLowerCase());
       });
-      dispatch(todoSlice.actions.filterStatus(array));
+      dispatch(todoSlice.actions.filter(array));
     }
   };
 
