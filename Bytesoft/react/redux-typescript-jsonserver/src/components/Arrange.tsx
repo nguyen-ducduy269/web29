@@ -5,8 +5,7 @@ import { fetchDataStatus } from "../hooks/fetchDataStatus";
 import { AppDispatch } from "../store/Store";
 
 ////// import hooks
-import { sortJob } from "../hooks/sortJob";
-import { orderSortJob } from "../hooks/orderSortJob";
+import { fetchData } from "../hooks/fetchData";
 
 type Props = {
   setArrange: (value: any) => void;
@@ -20,11 +19,11 @@ const Arrange = (props: Props) => {
   };
 
   const fromAToZ = async () => {
-    dispatch(sortJob());
+    dispatch(fetchData("sort"));
   };
 
   const fromZToA = async () => {
-    dispatch(orderSortJob());
+    dispatch(fetchData("order"));
   };
 
   return (
@@ -42,6 +41,7 @@ const Arrange = (props: Props) => {
               <span>Từ A - Z</span>
             </a>
           </li>
+
           <li>
             <a
               type="button"
@@ -53,6 +53,7 @@ const Arrange = (props: Props) => {
               <span>Từ Z - A</span>
             </a>
           </li>
+
           <li>
             <a
               type="button"
@@ -64,6 +65,7 @@ const Arrange = (props: Props) => {
               <span>Trạng thái Kích hoạt</span>
             </a>
           </li>
+
           <li>
             <a
               type="button"

@@ -6,27 +6,27 @@ import { AppDispatch } from "../store/Store";
 
 ////// import hooks
 import { fetchData } from "../hooks/fetchData";
-import { deleteItem } from "../hooks/deleteItem";
+import useJob from "../hooks/Job";
 
 interface Props {
-  changeStatus: any;
   setIsDisplay: (value: boolean) => void;
   setSelectedItem: (value: any) => void;
-  setChangeStatus: (value: any) => void;
 }
 
 const Table = (props: Props) => {
   const tasks = useSelector((state: any) => state.todos.data) || [];
   const [searchValue, setSearchValue] = useState("");
+  const { deleteJob } = useJob();
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(fetchData());
-  }, [props.changeStatus]);
+  }, []);
 
-  const handleDelete = (params: any) => {
-    dispatch(deleteItem(params));
-    props.setChangeStatus(!props.changeStatus);
+  const handleDelete = async (params: number) => {
+    try {
+      await deleteJob(params);
+    } catch (error) {}
   };
 
   return (

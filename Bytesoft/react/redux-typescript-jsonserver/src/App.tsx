@@ -12,7 +12,6 @@ import { Header, Container, LeftJob, AddButton, RightJob } from "./App.ts";
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isDisplay, setIsDisplay] = useState(false);
-  const [changeStatus, setChangeStatus] = useState(false);
 
   return (
     <>
@@ -22,12 +21,7 @@ function App() {
           className={isDisplay ? "col-xs-4 col-sm-4 col-md-4 col-lg-4" : ""}
         >
           {isDisplay ? (
-            <AddJob
-              selectedItem={selectedItem}
-              setIsDisplay={setIsDisplay}
-              changeStatus={changeStatus}
-              setChangeStatus={setChangeStatus}
-            />
+            <AddJob selectedItem={selectedItem} setIsDisplay={setIsDisplay} />
           ) : (
             false
           )}
@@ -51,10 +45,8 @@ function App() {
           <More />
 
           <Table
-            changeStatus={changeStatus}
             setIsDisplay={setIsDisplay}
             setSelectedItem={setSelectedItem}
-            setChangeStatus={setChangeStatus}
           />
         </RightJob>
       </Container>

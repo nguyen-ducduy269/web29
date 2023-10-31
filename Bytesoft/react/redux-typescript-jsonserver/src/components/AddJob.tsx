@@ -1,59 +1,54 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { todoSlice } from "../features/todo/todoSlice";
 
 ///// import hooks
-import { AppDispatch } from "../store/Store";
-import { updateJob } from "../hooks/updateJob";
-import { addJob } from "../hooks/addJob";
+import useJob from "../hooks/Job";
 
 interface Props {
   selectedItem: any;
   setIsDisplay: (value: boolean) => void;
-  setChangeStatus: (value: any) => void;
-  changeStatus: any;
 }
 
 const AddJob = (props: Props) => {
+  const { addJob, updateJob } = useJob();
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Active");
-  const dispatch = useDispatch<AppDispatch>();
-  const tasks = useSelector((state: any) => state.todos.data);
 
   useEffect(() => {
     setName(props.selectedItem?.name || "");
     setStatus(props.selectedItem?.status || "Active");
   }, [props.selectedItem]);
 
-  const handleText = () => {
-    if (props.selectedItem != null) {
-      const index = tasks.findIndex((t: any) => t.id == props.selectedItem.id);
-      const temp = [...tasks];
-      temp[index] = { id: props.selectedItem.id, name, status };
+  const handleSubmit = async () => {
+    const item = {
+      name,
+      status,
+    };
 
-      const item = {
+    if (!name) {
+      console.log("name hoặc status không đc trống");
+      return;
+    }
+
+    if (props.selectedItem?.id) {
+      const newItem = {
         id: props.selectedItem.id,
-        item: temp[index],
+        name,
+        status,
       };
-      dispatch(updateJob(item));
-      props.setChangeStatus(!props.changeStatus);
+
+      try {
+        await updateJob(newItem);
+      } catch (error) {}
       props.setIsDisplay(false);
-    } else if (props.selectedItem == null) {
-      if (!name) {
-        return;
-      } else {
-        const item = {
-          id: Math.random(),
-          name,
-          status,
-        };
-        dispatch(todoSlice.actions.add(item));
-        dispatch(addJob(item));
-        setName("");
-        setStatus("Active");
-        props.setIsDisplay(false);
-      }
+    } else {
+      try {
+        await addJob(item);
+      } catch (error) {}
+
+      setName("");
+      setStatus("Active");
+      props.setIsDisplay(false);
     }
   };
 
@@ -94,7 +89,7 @@ const AddJob = (props: Props) => {
               className="btn_add"
               onClick={(e) => {
                 e.preventDefault();
-                handleText();
+                handleSubmit();
               }}
             >
               {props.selectedItem ? "Sửa" : "Thêm"}
