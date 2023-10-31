@@ -8,6 +8,11 @@ import "aos/dist/aos.css";
 
 ////// import images
 import logo from "@/public/images/logo.png";
+import background from "@/public/images/Bg.png";
+import shape1 from "@/public/images/Shape1.png";
+import shape2 from "@/public/images/Shape2.png";
+import shape3 from "@/public/images/Shape3.png";
+import shape4 from "@/public/images/Shape4.png";
 
 ///// import style
 import { HeaderMain } from "../_style-components/Header";
@@ -31,8 +36,6 @@ const Header = () => {
   return (
     <>
       <HeaderMain>
-        <div className="outsite"></div>
-
         <Container className="main-header flex">
           <Link href="/" className="logo">
             <Image src={logo} alt="" width={40} height={32} />
@@ -46,30 +49,9 @@ const Header = () => {
           </div>
 
           <div className="auth">
-            <button
-              style={{
-                border: "1px solid white",
-                color: "white",
-                backgroundColor: "#58A7FF",
-                borderRadius: "20px",
-                fontWeight: "600",
-                cursor: "pointer",
-              }}
-            >
-              Log In
-            </button>
-            <button
-              style={{
-                border: "1px solid white",
-                color: "#58A7FF",
-                backgroundColor: "white",
-                borderRadius: "20px",
-                fontWeight: "600",
-                cursor: "pointer",
-              }}
-            >
-              Sign In
-            </button>
+            <div className="avatar">D</div>
+
+            <p>Welcome, Duy Nguyen Duc</p>
           </div>
 
           <div
@@ -87,17 +69,6 @@ const Header = () => {
                 <AiOutlineClose />
               </div>
 
-              {/* <Menu
-                mode="inline"
-                onClick={() => setOpenMenu(false)}
-                items={[
-                  { label: "Service", key: "service" },
-                  { label: "About Us", key: "about" },
-                  { label: "Contact Us", key: "contact" },
-                  { label: "Log In", key: "log-in" },
-                  { label: "Sign In", key: "sign-in" },
-                ]}
-              ></Menu> */}
               <Menu
                 mode="inline"
                 items={[
@@ -120,25 +91,12 @@ const Header = () => {
           )}
         </Container>
 
-        <Container className="header-content">
-          <h2 data-aos="fade-up" data-aos-duration="2500">
-            Explore the Colourful World
-          </h2>
+        <Container className="header-content"></Container>
 
-          <div
-            className="line"
-            data-aos="fade-up"
-            data-aos-duration="2500"
-          ></div>
-
-          <p data-aos="fade-up" data-aos-duration="2500">
-            FIND YOUR IDEAL HOLIDAY
-          </p>
-
-          <Button type="primary" className="button">
-            LEARN MORE
-          </Button>
-        </Container>
+        <Image src={shape1} className="shape1" alt="" />
+        <Image src={shape2} className="shape2" alt="" />
+        <Image src={shape3} className="shape3" alt="" />
+        <Image src={shape4} className="shape4" alt="" />
       </HeaderMain>
     </>
   );

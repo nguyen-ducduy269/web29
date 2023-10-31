@@ -24,10 +24,6 @@ const Table = (props: Props) => {
     dispatch(fetchData());
   }, [props.changeStatus]);
 
-  const handleEdit = () => {
-    props.setIsDisplay(true);
-  };
-
   const handleDelete = (params: any) => {
     dispatch(deleteItem(params));
     props.setChangeStatus(!props.changeStatus);
@@ -78,7 +74,7 @@ const Table = (props: Props) => {
                   <button
                     className="btn_edit"
                     onClick={() => {
-                      handleEdit();
+                      props.setIsDisplay(true);
                       props.setSelectedItem(e);
                     }}
                   >

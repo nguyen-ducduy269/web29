@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import bg from "@/public/images/Bg.png";
 
 export const HeaderMain = styled.div`
-  background-image: url(https://wallpapers.com/images/hd/1366x768-travel-background-vk9c2y88x4bx63ob.jpg);
-  background-repeat: no-repeat;
-  height: 600px;
+  background-color: #58a7ff;
   width: 100%;
   background-size: cover;
   background-position: top;
+  position: relative;
+  padding-bottom: 10px;
   position: relative;
   a {
     text-decoration: none;
@@ -58,9 +59,23 @@ export const HeaderMain = styled.div`
     .auth {
       display: flex;
       gap: 10px;
-      button {
-        width: 120px;
-        height: 32px;
+      .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: #f97400;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+      }
+      p {
+        line-height: 36px;
+        color: white;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
       }
     }
 
@@ -70,46 +85,20 @@ export const HeaderMain = styled.div`
   }
 
   .header-content {
-    width: 40%;
-    margin: 0 auto;
-    padding-top: 150px;
-    position: relative;
-    z-index: 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2 {
-      font-size: 24px;
-      color: white;
-      text-align: center;
-      margin: 0;
-    }
+    width: auto;
+    height: 200px;
+  }
 
-    .line {
-      width: 50px;
-      height: 3px;
-      background-color: #58a7ff;
-      margin-bottom: 20px;
-      margin-top: 10px;
-    }
+  .shape1,
+  .shape2,
+  .shape3,
+  .shape4 {
+    width: 697px;
+    height: 392px;
+  }
 
-    p {
-      font-size: 68px;
-      color: white;
-      text-align: center;
-      margin: 0;
-      font-weight: 600;
-      margin-bottom: 100px;
-    }
-
-    .button {
-      width: 140px;
-      height: 40px;
-      border-radius: 15px;
-      font-size: 14px;
-      font-weight: 600;
-      background-color: #58a7ff;
-    }
+  .shape1 {
+    position: absolute;
   }
 
   @media only screen and (min-width: 320px) {
@@ -142,10 +131,6 @@ export const HeaderMain = styled.div`
     }
 
     .header-content {
-      width: 100%;
-      p {
-        font-size: 45px;
-      }
     }
   }
 
@@ -179,10 +164,6 @@ export const HeaderMain = styled.div`
     }
 
     .header-content {
-      width: 100%;
-      p {
-        font-size: 55px;
-      }
     }
   }
 
@@ -228,46 +209,6 @@ export const HeaderMain = styled.div`
     }
 
     .header-content {
-      width: 40%;
-      margin: 0 auto;
-      padding-top: 70px;
-      position: relative;
-      z-index: 6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h2 {
-        font-size: 24px;
-        color: white;
-        text-align: center;
-        margin: 0;
-      }
-
-      .line {
-        width: 50px;
-        height: 3px;
-        background-color: #58a7ff;
-        margin-bottom: 20px;
-        margin-top: 10px;
-      }
-
-      p {
-        font-size: 68px;
-        color: white;
-        text-align: center;
-        margin: 0;
-        font-weight: 600;
-        margin-bottom: 100px;
-      }
-
-      .button {
-        width: 140px;
-        height: 40px;
-        border-radius: 15px;
-        font-size: 14px;
-        font-weight: 600;
-        background-color: #58a7ff;
-      }
     }
   }
 
@@ -313,46 +254,6 @@ export const HeaderMain = styled.div`
     }
 
     .header-content {
-      width: 40%;
-      margin: 0 auto;
-      padding-top: 70px;
-      position: relative;
-      z-index: 6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h2 {
-        font-size: 24px;
-        color: white;
-        text-align: center;
-        margin: 0;
-      }
-
-      .line {
-        width: 50px;
-        height: 3px;
-        background-color: #58a7ff;
-        margin-bottom: 20px;
-        margin-top: 10px;
-      }
-
-      p {
-        font-size: 68px;
-        color: white;
-        text-align: center;
-        margin: 0;
-        font-weight: 600;
-        margin-bottom: 100px;
-      }
-
-      .button {
-        width: 140px;
-        height: 40px;
-        border-radius: 15px;
-        font-size: 14px;
-        font-weight: 600;
-        background-color: #58a7ff;
-      }
     }
   }
 `;
