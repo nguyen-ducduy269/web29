@@ -20,7 +20,7 @@ const Table = (props: Props) => {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(fetchData(""));
   }, []);
 
   const handleDelete = async (params: number) => {

@@ -13,7 +13,6 @@ const More = () => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch<AppDispatch>();
 
-  // xử lý bất đồng bộ
   const handleSearch = () => {
     dispatch(filterName(search));
   };

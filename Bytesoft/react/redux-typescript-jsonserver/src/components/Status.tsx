@@ -8,7 +8,6 @@ import { fetchDataStatus } from "../hooks/fetchDataStatus";
 
 const Status = () => {
   const dispatch = useDispatch<AppDispatch>();
-
   const [statusChange, setStatusChange] = useState<string>("All");
 
   useEffect(() => {
