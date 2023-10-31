@@ -26,7 +26,7 @@ const AddJob = (props: Props) => {
     };
 
     if (!name) {
-      console.log("name hoặc status không đc trống");
+      alert("name hoặc status không đc trống");
       return;
     }
 
