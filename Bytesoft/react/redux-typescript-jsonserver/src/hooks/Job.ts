@@ -1,9 +1,9 @@
-import axios from "axios";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../store/Store";
 import { fetchData } from "./fetchData";
-import { todoSlice } from "../features/todo/todoSlice";
+import request from "../ulti/api";
+import URL_API from "../ulti/url";
 
 const useJob = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -11,25 +11,49 @@ const useJob = () => {
 
   const addJob = async (temp: any) => {
     setLoading(true);
-    return axios.post("http://localhost:3000/data", temp).then(() => {
-      setLoading(false);
-      dispatch(todoSlice.actions.add(temp));
+    return request({
+      method: "post",
+      url: URL_API.DATA,
+      data: temp,
+    }).then((res) => {
+      res.data;
       dispatch(fetchData(""));
     });
   };
 
   const updateJob = async (temp: any) => {
     setLoading(true);
-    return axios.put(`http://localhost:3000/data/${temp.id}`, temp).then(() => {
-      setLoading(false);
-      dispatch(fetchData(""));
+    return request({
+      method: "put",
+      url: `${URL_API.DATA}/${temp.id}`,
+      data: temp,
     });
   };
 
   const deleteJob = async (temp: number) => {
     setLoading(true);
-    return axios.delete(`http://localhost:3000/data/${temp}`).then(() => {
-      setLoading(false);
+    return request({
+      method: "delete",
+      url: `${URL_API.DATA}/${temp}`,
+    }).then((res) => {
+      res.data;
+      dispatch(fetchData(""));
+    });
+  };
+
+  const filter = async (name: any, status: string) => {
+    const name_like = name;
+    const statusFilter = status;
+
+    return await request({
+      method: "get",
+      url: URL_API.DATA,
+      params: {
+        name_like,
+        status: statusFilter,
+      },
+    }).then((res) => {
+      res.data;
       dispatch(fetchData(""));
     });
   };
@@ -38,6 +62,7 @@ const useJob = () => {
     addJob,
     updateJob,
     deleteJob,
+    filter,
   };
 };
 

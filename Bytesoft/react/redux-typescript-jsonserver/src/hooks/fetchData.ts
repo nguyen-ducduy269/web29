@@ -10,3 +10,6 @@ export const fetchData = createAsyncThunk(
     ).then((res) => res.json());
   }
 );
+
+
+//  { name: "a", status: "active"}
