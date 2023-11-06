@@ -7,14 +7,17 @@ import { AppDispatch } from "../store/Store";
 // import components
 import Arrange from "./Arrange";
 import { filterName } from "../hooks/filterName";
+// import useJob from "../hooks/Job";
 
 const More = () => {
   const [arrange, setArrange] = useState(false);
   const [search, setSearch] = useState("");
   const dispatch = useDispatch<AppDispatch>();
 
+  // const { filter } = useJob();
   const handleSearch = () => {
     dispatch(filterName(search));
+    // filter(search);
   };
 
   return (

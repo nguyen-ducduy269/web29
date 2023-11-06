@@ -7,6 +7,7 @@ import { AppDispatch } from "../store/Store";
 ////// import hooks
 import { fetchData } from "../hooks/fetchData";
 import useJob from "../hooks/Job";
+import { filterName } from "../hooks/filterName";
 
 interface Props {
   setIsDisplay: (value: boolean) => void;
@@ -29,6 +30,13 @@ const Table = (props: Props) => {
     } catch (error) {}
   };
 
+  const handleSearch = (e: any) => {
+    if (e.key === "Enter") {
+      // filter(searchValue);
+      dispatch(filterName(searchValue));
+    }
+  };
+
   return (
     <>
       <table>
@@ -49,7 +57,10 @@ const Table = (props: Props) => {
                 className="add-input"
                 type="text"
                 value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
+                onChange={(e) => {
+                  setSearchValue(e.target.value);
+                }}
+                onKeyDown={handleSearch}
               ></input>
             </td>
 
@@ -57,40 +68,34 @@ const Table = (props: Props) => {
             <td className="activity"></td>
           </tr>
 
-          {tasks
-            ?.filter((item: any) => {
-              return searchValue.toLocaleLowerCase() === ""
-                ? item
-                : item.name.toLocaleLowerCase().includes(searchValue);
-            })
-            .map((e: any, i: any) => (
-              <tr key={i}>
-                <td className="stt">{i + 1}</td>
-                <td className="name">{e.name}</td>
-                <td className="status">
-                  <p className="status-active">{e.status}</p>
-                </td>
-                <td className="activity button">
-                  <button
-                    className="btn_edit"
-                    onClick={() => {
-                      props.setIsDisplay(true);
-                      props.setSelectedItem(e);
-                    }}
-                  >
-                    Sửa
-                  </button>
-                  <button
-                    className="btn_remove"
-                    onClick={() => {
-                      handleDelete(e.id);
-                    }}
-                  >
-                    Xóa
-                  </button>
-                </td>
-              </tr>
-            ))}
+          {tasks.map((e: any, i: any) => (
+            <tr key={i}>
+              <td className="stt">{i + 1}</td>
+              <td className="name">{e.name}</td>
+              <td className="status">
+                <p className="status-active">{e.status}</p>
+              </td>
+              <td className="activity button">
+                <button
+                  className="btn_edit"
+                  onClick={() => {
+                    props.setIsDisplay(true);
+                    props.setSelectedItem(e);
+                  }}
+                >
+                  Sửa
+                </button>
+                <button
+                  className="btn_remove"
+                  onClick={() => {
+                    handleDelete(e.id);
+                  }}
+                >
+                  Xóa
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>

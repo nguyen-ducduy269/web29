@@ -27,6 +27,9 @@ const useJob = () => {
       method: "put",
       url: `${URL_API.DATA}/${temp.id}`,
       data: temp,
+    }).then((res) => {
+      res.data;
+      dispatch(fetchData(""));
     });
   };
 
@@ -41,20 +44,18 @@ const useJob = () => {
     });
   };
 
-  const filter = async (name: any, status: string) => {
+  const filter = async (name: any) => {
     const name_like = name;
-    const statusFilter = status;
 
     return await request({
       method: "get",
       url: URL_API.DATA,
       params: {
         name_like,
-        status: statusFilter,
       },
     }).then((res) => {
       res.data;
-      dispatch(fetchData(""));
+      dispatch(fetchData(name));
     });
   };
   return {
