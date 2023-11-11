@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Slide = styled.div`
   width: 100%;
-  height: 500px;
   h3 {
     height: 500px;
     color: white;

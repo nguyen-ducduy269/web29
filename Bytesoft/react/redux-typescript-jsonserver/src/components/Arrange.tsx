@@ -1,30 +1,35 @@
 "use client";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { fetchDataStatus } from "../hooks/fetchDataStatus";
+import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../store/Store";
+import { fetchData } from "../hooks/fetchData";
 
 ////// import hooks
-import { fetchData } from "../hooks/fetchData";
 
 type Props = {
   setArrange: (value: any) => void;
+  setFilter: (value: any) => void;
 };
 
 const Arrange = (props: Props) => {
+  const tasks = useSelector((state: any) => state.todos.data) || [];
   const dispatch = useDispatch<AppDispatch>();
 
   const handleStatus = async (value: string) => {
-    dispatch(fetchDataStatus(value));
+    props.setFilter((filter: any) => ({
+      ...filter,
+      status: value,
+    }));
   };
 
   const fromAToZ = async () => {
-    dispatch(fetchData("sort"));
+    console.log("tasks", tasks);
+    console.log("tasks", typeof tasks);
+    const data = dispatch(fetchData(""));
+    console.log("data", data);
   };
 
-  const fromZToA = async () => {
-    dispatch(fetchData("order"));
-  };
+  const fromZToA = async () => {};
 
   return (
     <>

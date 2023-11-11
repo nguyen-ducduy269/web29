@@ -15,8 +15,7 @@ const useJob = () => {
       method: "post",
       url: URL_API.DATA,
       data: temp,
-    }).then((res) => {
-      res.data;
+    }).then(() => {
       dispatch(fetchData(""));
     });
   };
@@ -27,8 +26,7 @@ const useJob = () => {
       method: "put",
       url: `${URL_API.DATA}/${temp.id}`,
       data: temp,
-    }).then((res) => {
-      res.data;
+    }).then(() => {
       dispatch(fetchData(""));
     });
   };
@@ -38,25 +36,13 @@ const useJob = () => {
     return request({
       method: "delete",
       url: `${URL_API.DATA}/${temp}`,
-    }).then((res) => {
-      res.data;
+    }).then(() => {
       dispatch(fetchData(""));
     });
   };
 
-  const filter = async (name: any) => {
-    const name_like = name;
-
-    return await request({
-      method: "get",
-      url: URL_API.DATA,
-      params: {
-        name_like,
-      },
-    }).then((res) => {
-      res.data;
-      dispatch(fetchData(name));
-    });
+  const filter = async ({ name, status }: any) => {
+    dispatch(fetchData({ name, status }));
   };
   return {
     loading,

@@ -1,23 +1,21 @@
 "use client";
 import { useState } from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../store/Store";
+
+interface Props {
+  filter: any;
+  setFilter: (value: any) => void;
+}
 
 // import components
 import Arrange from "./Arrange";
-import { filterName } from "../hooks/filterName";
-// import useJob from "../hooks/Job";
 
-const More = () => {
+const More = (props: Props) => {
   const [arrange, setArrange] = useState(false);
   const [search, setSearch] = useState("");
-  const dispatch = useDispatch<AppDispatch>();
 
-  // const { filter } = useJob();
-  const handleSearch = () => {
-    dispatch(filterName(search));
-    // filter(search);
+  const filterName = async () => {
+    props.setFilter({ ...props.filter, name: search });
   };
 
   return (
@@ -28,13 +26,22 @@ const More = () => {
           type="text"
           placeholder="Nhập từ khóa..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
         ></input>
-        <button onClick={handleSearch}>Tìm</button>
+        <button onClick={() => filterName()}>Tìm</button>
         <button className="reduce" onClick={() => setArrange(true)}>
           Sắp xếp
         </button>
-        {arrange ? <Arrange setArrange={setArrange} /> : ""}
+        {arrange ? (
+          <Arrange
+            setArrange={setArrange}
+            setFilter={props.setFilter}
+          />
+        ) : (
+          ""
+        )}
       </Mored>
     </>
   );
@@ -44,4 +51,7 @@ export default More;
 
 const Mored = styled.div`
   position: relative;
+  input {
+    padding-left: 5px;
+  }
 `;

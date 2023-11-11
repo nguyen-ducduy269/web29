@@ -7,17 +7,19 @@ import { AppDispatch } from "../store/Store";
 ////// import hooks
 import { fetchData } from "../hooks/fetchData";
 import useJob from "../hooks/Job";
-import { filterName } from "../hooks/filterName";
 
 interface Props {
   setIsDisplay: (value: boolean) => void;
   setSelectedItem: (value: any) => void;
+  filter: any;
+  setFilter: (value: any) => void;
 }
 
 const Table = (props: Props) => {
   const tasks = useSelector((state: any) => state.todos.data) || [];
   const [searchValue, setSearchValue] = useState("");
-  const { deleteJob } = useJob();
+
+  const { deleteJob, filter: fetchDataFilter } = useJob();
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
@@ -30,12 +32,9 @@ const Table = (props: Props) => {
     } catch (error) {}
   };
 
-  const handleSearch = (e: any) => {
-    if (e.key === "Enter") {
-      // filter(searchValue);
-      dispatch(filterName(searchValue));
-    }
-  };
+  useEffect(() => {
+    fetchDataFilter(props.filter);
+  }, [props.filter]);
 
   return (
     <>
@@ -59,12 +58,12 @@ const Table = (props: Props) => {
                 value={searchValue}
                 onChange={(e) => {
                   setSearchValue(e.target.value);
+                  props.setFilter({ ...props.filter, name: e.target.value });
                 }}
-                onKeyDown={handleSearch}
               ></input>
             </td>
 
-            <Status />
+            <Status setFilter={props.setFilter} />
             <td className="activity"></td>
           </tr>
 
