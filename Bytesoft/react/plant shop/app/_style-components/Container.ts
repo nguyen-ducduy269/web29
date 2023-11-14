@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 1200px;
+  width: 1400px;
   margin: 0 auto;
   @media only screen and (max-width: 1350px) {
-    width: 1170px;
+    width: 1200px;
   }
 
   @media only screen and (max-width: 1199px) {

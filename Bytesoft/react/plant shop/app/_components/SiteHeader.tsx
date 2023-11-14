@@ -14,7 +14,12 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 ///// import image
 import images from "@/public/images/logo.webp";
 
-const SiteHeader = () => {
+interface Props {
+  cardValue: number;
+  selectedItem: any;
+}
+
+const SiteHeader = (props: Props) => {
   const [display, setDisplay] = useState(false);
 
   return (
@@ -37,7 +42,9 @@ const SiteHeader = () => {
               <div className="shopping-cart">
                 <FaShoppingCart />
 
-                <div className="number-cart">10</div>
+                <div className="number-cart">
+                  {props.selectedItem != null ? props.cardValue : 0}
+                </div>
               </div>
             </Link>
           </div>

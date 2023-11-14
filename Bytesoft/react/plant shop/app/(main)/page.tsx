@@ -1,20 +1,32 @@
 "use client";
+import { useState } from "react";
 import Bar from "../_components/Bar";
 import FeatureProducts from "../_components/FeatureProducts";
 import Flickity from "../_components/Flickity";
 import Header from "../_components/Header";
 import ShotifySection from "../_components/ShotifySection";
 import SiteHeader from "../_components/SiteHeader";
+import Promo from "../_components/Promo";
+import Logoist from "../_components/Logoist";
 
 export default function Home() {
+  const [cardValue, setCardValue] = useState(1);
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
     <>
       <Header />
       <Bar />
-      <SiteHeader />
+      <SiteHeader cardValue={cardValue} selectedItem={selectedItem} />
       <Flickity />
       <ShotifySection />
-      <FeatureProducts />
+      <FeatureProducts
+        cardValue={cardValue}
+        setCardValue={setCardValue}
+        setSelectedItem={setSelectedItem}
+      />
+      <Promo />
+      <Logoist />
     </>
   );
 }
