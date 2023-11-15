@@ -8,6 +8,8 @@ import ShotifySection from "../_components/ShotifySection";
 import SiteHeader from "../_components/SiteHeader";
 import Promo from "../_components/Promo";
 import Logoist from "../_components/Logoist";
+import QuizKitContent from "../_components/QuizKitContent";
+import LooReview from "../_components/LooReview";
 
 export default function Home() {
   const [cardValue, setCardValue] = useState(1);
@@ -27,6 +29,8 @@ export default function Home() {
       />
       <Promo />
       <Logoist />
+      <QuizKitContent />
+      <LooReview />
     </>
   );
 }

@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "main_image": "https://images.loox.io/uploads/2023/11/15/gvXrz2j5Z_mid.jpg",
+      "title": "A.M.",
+      "rate": 5,
+      "description": "The experience was great from ordering to shipping and now having my beautiful pothos! Thank you guys so much for the instructions to care for my new baby!",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/files/3_POTHOS_NEON_x100.jpg?v=1687233535",
+      "infor": "Pothos 'Neon'",
+      "feature": true,
+      "newest": true,
+      "highest_rate": true,
+      "lowest_rate": false
+    }
+  ]
+}

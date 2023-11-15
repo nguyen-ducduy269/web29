@@ -47,6 +47,7 @@ const Flickity = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
   return (
     <Slide>
       <Carousel autoplay>
