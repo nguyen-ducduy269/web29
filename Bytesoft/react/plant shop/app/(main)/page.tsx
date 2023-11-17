@@ -10,6 +10,8 @@ import Promo from "../_components/Promo";
 import Logoist from "../_components/Logoist";
 import QuizKitContent from "../_components/QuizKitContent";
 import LooReview from "../_components/LooReview";
+import PromoInner from "../_components/PromoInner";
+import Footer from "../_components/Footer";
 
 export default function Home() {
   const [cardValue, setCardValue] = useState(1);
@@ -31,6 +33,8 @@ export default function Home() {
       <Logoist />
       <QuizKitContent />
       <LooReview />
+      <PromoInner />
+      <Footer />
     </>
   );
 }
