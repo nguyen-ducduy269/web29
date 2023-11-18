@@ -1,11 +1,19 @@
+"use client";
 import React from "react";
 import { Foot } from "../_style-components/Foot";
 import { Container } from "../_style-components/Container";
+import Image from "next/image";
 
 ///// import icons
 import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
 import { BsPinterest } from "react-icons/bs";
 import { BiLogoFacebook, BiSolidEnvelope } from "react-icons/bi";
+
+///// import images
+import ApplePay from "@/public/images/Apple-Pay.png";
+import GooglePay from "@/public/images/Google_Pay.png";
+import Visa from "@/public/images/visa.png";
+import Meta from "@/public/images/Meta-Logo.png";
 
 const Footer = () => {
   return (
@@ -31,13 +39,15 @@ const Footer = () => {
           </div>
 
           <div className="site-item">
-            <h2>Get the Seoop</h2>
+            <h2>Get the Scoop</h2>
 
-            <p>Subcribe to our newsletter</p>
+            <p>Subcribe to our newsletter.</p>
 
-            <input type="text" placeholder="Email address" />
+            <div className="submit">
+              <input type="text" placeholder="Email address" />
 
-            <button>Sign up</button>
+              <button>Sign up</button>
+            </div>
           </div>
 
           <div className="site-item">
@@ -61,7 +71,92 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="site-footer-item"></div>
+        <div className="site-footer-item">
+          <div className="site-left">
+            <div className="navigation">
+              <div className="nav-item">
+                <a href="">Shop</a>
+              </div>
+              <div className="nav-item">
+                <a href="">About Us</a>
+              </div>
+              <div className="nav-item">
+                <a href="">LIVE Weather</a>
+              </div>
+              <div className="nav-item">
+                <a href="">Plant Care</a>
+              </div>
+              <div className="nav-item">
+                <a href="">Contact</a>
+              </div>
+              <div className="nav-item">
+                <a href="">FAQ</a>
+              </div>
+              <div className="nav-item">
+                <a href="">Shipping</a>
+              </div>
+              <div className="nav-item">
+                <a href="">Terms and Conditions</a>
+              </div>
+              <div className="nav-item">
+                <a href="">Wholesale | Dropshipping</a>
+              </div>
+              <div className="nav-item">
+                <a href="">House Plant Shop VietNam</a>
+              </div>
+              <div className="nav-item">
+                <a href="">House Plant Resource</a>
+              </div>
+              <div className="nav-item">
+                <a href="">Shopify Collective</a>
+              </div>
+              <div className="nav-item">
+                <a href="">Climate Commitment</a>
+              </div>
+              <div className="nav-item">
+                <a href="">PPC | Plant Products Company</a>
+              </div>
+            </div>
+
+            <div className="credit">Copyright © 2023 House Plant Shop.</div>
+
+            <div className="shopify">Powered by Shopify</div>
+          </div>
+
+          <div className="site-right">
+            <img
+              src="https://logowik.com/content/uploads/images/amazon6707.jpg"
+              alt=""
+            />
+
+            <img
+              src="https://i.pinimg.com/736x/c9/10/94/c910944ac6247ed2d0d47279453c5959.jpg"
+              alt=""
+            />
+
+            <Image src={ApplePay} alt="" />
+
+            <img
+              src="https://cdn.icon-icons.com/icons2/1178/PNG/512/discover_82082.png"
+              alt=""
+            />
+
+            <Image src={Meta} alt="" style={{ backgroundColor: "white" }} />
+
+            <Image
+              src={GooglePay}
+              alt=""
+              style={{ backgroundColor: "white" }}
+            />
+
+            <Image src={Visa} alt="" style={{ backgroundColor: "white" }} />
+
+            <img
+              src="https://ae01.alicdn.com/kf/S7b20ce778ba44e60a062008c35e98b57M/216x144.png"
+              alt=""
+            />
+          </div>
+        </div>
       </Container>
     </Foot>
   );

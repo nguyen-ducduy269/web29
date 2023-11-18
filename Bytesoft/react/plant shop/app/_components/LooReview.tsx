@@ -34,7 +34,7 @@ const LooReview = () => {
   };
 
   useEffect(() => {
-    fetchData("http://localhost:3001/users");
+    fetchData("http://localhost:4001/users");
   }, []);
 
   const rateStar = (params: number) => {
@@ -124,7 +124,7 @@ const LooReview = () => {
                       key={index}
                       onClick={() => {
                         setOpenIndex(index);
-                        fetchData(`http://localhost:3001/users${item.filter}`);
+                        fetchData(`http://localhost:4001/users${item.filter}`);
                       }}
                     >
                       {item.name} {openIndex == index ? <MdOutlineDone /> : ""}
