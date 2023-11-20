@@ -1,15 +1,15 @@
 "use client";
-import React from "react";
-import { useState } from "react";
-
-//// import components
 import Bar from "@/app/_components/home-page/Bar";
 import Footer from "@/app/_components/home-page/Footer";
 import Header from "@/app/_components/home-page/Header";
 import SiteHeader from "@/app/_components/home-page/SiteHeader";
-import MainContent from "@/app/_components/card/MainContent";
+import DetailProduct from "@/app/_components/product/DetailProduct";
+import React from "react";
+import { useState } from "react";
 
-const Cart = () => {
+//// import components
+
+const Product = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
@@ -17,10 +17,10 @@ const Cart = () => {
       <Header />
       <Bar />
       <SiteHeader selectedItem={selectedItem} />
-      <MainContent />
+      <DetailProduct />
       <Footer />
     </>
   );
 };
 
-export default Cart;
+export default Product;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { Promomosaic } from "../_style-components/Promomosaic";
-import { Container } from "../_style-components/Container";
+import { Promomosaic } from "../../_style-components/home-page-css/Promomosaic";
+import { Container } from "../../_style-components/home-page-css/Container";
 
 import Link from "next/link";
 import Aos from "aos";

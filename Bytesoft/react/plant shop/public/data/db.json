@@ -280,7 +280,6 @@
       "highest_rate": true,
       "lowest_rate": false
     },
-
     {
       "id": 21,
       "main_image": "https://images.loox.io/uploads/2021/5/11/Vkczoj7_5_mid.jpg",
@@ -560,5 +559,27 @@
       "highest_rate": true,
       "lowest_rate": false
     }
+  ],
+  "card": [
+    [
+      {
+        "id": "new product",
+        "name": "Monstera Deliciosa Mint Large Form",
+        "price": 999.99,
+        "image": "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
+        "quantity": 1,
+        "total_price": 999.99
+      }
+    ],
+    [
+      {
+        "id": "new product",
+        "name": "Monstera Deliciosa Mint Large Form",
+        "price": 999.99,
+        "image": "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
+        "quantity": "6",
+        "total_price": 5999.9400000000005
+      }
+    ]
   ]
 }

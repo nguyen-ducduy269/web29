@@ -292,6 +292,10 @@ export const Review = styled.div`
               align-items: center;
               gap: 3px;
               cursor: pointer;
+              a {
+                text-decoration: unset;
+                color: black;
+              }
             }
           }
         }

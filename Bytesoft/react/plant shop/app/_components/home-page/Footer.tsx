@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Foot } from "../_style-components/Foot";
-import { Container } from "../_style-components/Container";
+import { Foot } from "../../_style-components/home-page-css/Foot";
+import { Container } from "../../_style-components/home-page-css/Container";
 import Image from "next/image";
 
 ///// import icons

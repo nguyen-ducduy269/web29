@@ -1,6 +1,6 @@
 import React from "react";
-import { Logo } from "../_style-components/Logo";
-import { Container } from "../_style-components/Container";
+import { Logo } from "../../_style-components/home-page-css/Logo";
+import { Container } from "../../_style-components/home-page-css/Container";
 import Image from "next/image";
 
 ///// import images

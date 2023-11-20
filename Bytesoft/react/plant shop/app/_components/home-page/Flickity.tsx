@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { Carousel } from "antd";
-import { Slide } from "../_style-components/Slide";
+import { Slide } from "../../_style-components/home-page-css/Slide";
 import Aos from "aos";
 
 const data = [

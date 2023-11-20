@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Container } from "../_style-components/Container";
-import { Shotify } from "../_style-components/Shotify";
+import { Container } from "../../_style-components/home-page-css/Container";
+import { Shotify } from "../../_style-components/home-page-css/Shotify";
 
 const ShotifySection = () => {
   return (

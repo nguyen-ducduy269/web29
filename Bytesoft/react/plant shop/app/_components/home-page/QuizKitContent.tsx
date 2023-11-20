@@ -1,6 +1,9 @@
 import React from "react";
-import { PlantCare, QuizKit } from "../_style-components/QuizKit";
-import { Container } from "../_style-components/Container";
+import {
+  PlantCare,
+  QuizKit,
+} from "../../_style-components/home-page-css/QuizKit";
+import { Container } from "../../_style-components/home-page-css/Container";
 
 const QuizKitContent = () => {
   return (

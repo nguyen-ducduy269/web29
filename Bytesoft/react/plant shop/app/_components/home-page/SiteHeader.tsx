@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import { Site } from "../_style-components/Site";
-import { Container } from "../_style-components/Container";
+import React, { useEffect, useState } from "react";
+import { Site } from "../../_style-components/home-page-css/Site";
+import { Container } from "../../_style-components/home-page-css/Container";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "antd";
@@ -15,12 +15,22 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import images from "@/public/images/logo.webp";
 
 interface Props {
-  cardValue: number;
   selectedItem: any;
 }
 
 const SiteHeader = (props: Props) => {
   const [display, setDisplay] = useState(false);
+  const [cardNumber, setCardNumber] = useState([]);
+
+  const fetchData = async (url: string) => {
+    const response = await fetch(url);
+    const users = await response.json();
+    setCardNumber(users);
+  };
+
+  useEffect(() => {
+    fetchData("http://localhost:4001/card");
+  }, [props.selectedItem]);
 
   return (
     <>
@@ -42,9 +52,7 @@ const SiteHeader = (props: Props) => {
               <div className="shopping-cart">
                 <FaShoppingCart />
 
-                <div className="number-cart">
-                  {props.selectedItem != null ? props.cardValue : 0}
-                </div>
+                <div className="number-cart">{cardNumber.length}</div>
               </div>
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Inner } from "../_style-components/Inner";
-import { Container } from "../_style-components/Container";
+import { Inner } from "../../_style-components/home-page-css/Inner";
+import { Container } from "../../_style-components/home-page-css/Container";
 
 const PromoInner = () => {
   return (

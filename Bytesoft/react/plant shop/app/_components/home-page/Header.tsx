@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Container } from "../_style-components/Container";
-import { HeaderMain } from "../_style-components/Header";
+import { Container } from "../../_style-components/home-page-css/Container";
+import { HeaderMain } from "../../_style-components/home-page-css/Header";
 
 const Header = () => {
   return (

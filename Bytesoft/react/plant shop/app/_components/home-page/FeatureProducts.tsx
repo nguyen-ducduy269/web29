@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { Feature } from "../_style-components/Feature";
-import { Container } from "../_style-components/Container";
+import { Feature } from "../../_style-components/home-page-css/Feature";
+import { Container } from "../../_style-components/home-page-css/Container";
 import Image from "next/image";
 import { Button } from "antd";
 import Link from "next/link";
+import axios from "axios";
 
 ///// import images
 import bigtree1 from "@/public/images/big-image-tree1.webp";
@@ -20,13 +21,29 @@ import pinterest from "@/public/images/pinterest.png";
 import { FcGoogle } from "react-icons/fc";
 
 interface Props {
-  cardValue: number;
-  setCardValue: (value: number) => void;
   setSelectedItem: (value: any) => void;
 }
 
 const FeatureProducts = (props: Props) => {
+  const [cardValue, setCardValue] = useState(1);
   const [choosePlant, setChoosePlant] = useState(0);
+
+  const product = [
+    {
+      id: "new product",
+      name: "Monstera Deliciosa Mint Large Form",
+      price: 999.99,
+      image:
+        "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
+      quantity: cardValue,
+      total_price: 999.99 * cardValue,
+    },
+  ];
+
+  const onSubmit = () => {
+    props.setSelectedItem(Math.random());
+    axios.post("http://localhost:4001/card", product);
+  };
 
   return (
     <Feature>
@@ -77,8 +94,8 @@ const FeatureProducts = (props: Props) => {
                 id=""
                 min={1}
                 placeholder="1"
-                value={props.cardValue}
-                onChange={(e: any) => props.setCardValue(e.target.value)}
+                value={cardValue}
+                onChange={(e: any) => setCardValue(e.target.value)}
               />
             </div>
 
@@ -92,7 +109,7 @@ const FeatureProducts = (props: Props) => {
                 fontSize: "16px",
               }}
               onClick={() => {
-                props.setSelectedItem(Math.random());
+                onSubmit();
               }}
             >
               Add to Card

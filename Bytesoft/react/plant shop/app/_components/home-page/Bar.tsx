@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { BarStyle } from "../_style-components/Bar";
+import { BarStyle } from "../../_style-components/home-page-css/Bar";
 
 const Bar = () => {
   return (

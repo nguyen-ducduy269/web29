@@ -1,34 +1,29 @@
 "use client";
 import { useState } from "react";
-import Bar from "../_components/Bar";
-import FeatureProducts from "../_components/FeatureProducts";
-import Flickity from "../_components/Flickity";
-import Header from "../_components/Header";
-import ShotifySection from "../_components/ShotifySection";
-import SiteHeader from "../_components/SiteHeader";
-import Promo from "../_components/Promo";
-import Logoist from "../_components/Logoist";
-import QuizKitContent from "../_components/QuizKitContent";
-import LooReview from "../_components/LooReview";
-import PromoInner from "../_components/PromoInner";
-import Footer from "../_components/Footer";
+import Bar from "../_components/home-page/Bar";
+import FeatureProducts from "../_components/home-page/FeatureProducts";
+import Flickity from "../_components/home-page/Flickity";
+import Header from "../_components/home-page/Header";
+import ShotifySection from "../_components/home-page/ShotifySection";
+import SiteHeader from "../_components/home-page/SiteHeader";
+import Promo from "../_components/home-page/Promo";
+import Logoist from "../_components/home-page/Logoist";
+import QuizKitContent from "../_components/home-page/QuizKitContent";
+import LooReview from "../_components/home-page/LooReview";
+import PromoInner from "../_components/home-page/PromoInner";
+import Footer from "../_components/home-page/Footer";
 
 export default function Home() {
-  const [cardValue, setCardValue] = useState(1);
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <>
       <Header />
       <Bar />
-      <SiteHeader cardValue={cardValue} selectedItem={selectedItem} />
+      <SiteHeader selectedItem={selectedItem} />
       <Flickity />
       <ShotifySection />
-      <FeatureProducts
-        cardValue={cardValue}
-        setCardValue={setCardValue}
-        setSelectedItem={setSelectedItem}
-      />
+      <FeatureProducts setSelectedItem={setSelectedItem} />
       <Promo />
       <Logoist />
       <QuizKitContent />

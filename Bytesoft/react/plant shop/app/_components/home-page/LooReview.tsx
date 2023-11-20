@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Review } from "../_style-components/Review";
-import { Container } from "../_style-components/Container";
+import { Review } from "../../_style-components/home-page-css/Review";
+import { Container } from "../../_style-components/home-page-css/Container";
+import Link from "next/link";
 
 ////// import icons
 import { FaStar } from "react-icons/fa";
@@ -250,7 +251,9 @@ const LooReview = () => {
                     <div className="owner">
                       <div className="name">{popUpInfor.infor}</div>
                       <button>
-                        <AiOutlineShopping /> View products
+                        <Link href={"/product"}>
+                          <AiOutlineShopping /> View products
+                        </Link>
                       </button>
                     </div>
                   </div>
