@@ -17,7 +17,7 @@ const Product = () => {
       <Header />
       <Bar />
       <SiteHeader selectedItem={selectedItem} />
-      <DetailProduct />
+      <DetailProduct setSelectedItem={setSelectedItem} />
       <Footer />
     </>
   );

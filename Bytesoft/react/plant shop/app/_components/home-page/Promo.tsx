@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import { Promomosaic } from "../../_style-components/home-page-css/Promomosaic";
 import { Container } from "../../_style-components/home-page-css/Container";

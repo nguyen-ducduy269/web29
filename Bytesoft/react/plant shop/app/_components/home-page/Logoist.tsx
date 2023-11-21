@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Logo } from "../../_style-components/home-page-css/Logo";
 import { Container } from "../../_style-components/home-page-css/Container";

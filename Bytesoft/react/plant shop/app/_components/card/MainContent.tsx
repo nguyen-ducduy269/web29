@@ -1,3 +1,4 @@
+"use client";
 import { Main } from "@/app/_style-components/card-css/Main";
 import { Container } from "@/app/_style-components/home-page-css/Container";
 import React from "react";

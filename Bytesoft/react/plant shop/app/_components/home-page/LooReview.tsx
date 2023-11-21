@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Review } from "../../_style-components/home-page-css/Review";
 import { Container } from "../../_style-components/home-page-css/Container";
@@ -250,7 +251,14 @@ const LooReview = () => {
 
                     <div className="owner">
                       <div className="name">{popUpInfor.infor}</div>
-                      <button>
+                      <button
+                        onClick={() => {
+                          localStorage.setItem(
+                            "detail-products",
+                            JSON.stringify(popUpInfor)
+                          );
+                        }}
+                      >
                         <Link href={"/product"}>
                           <AiOutlineShopping /> View products
                         </Link>

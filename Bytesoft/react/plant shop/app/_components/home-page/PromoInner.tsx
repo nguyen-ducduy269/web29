@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Inner } from "../../_style-components/home-page-css/Inner";
 import { Container } from "../../_style-components/home-page-css/Container";

@@ -28,17 +28,15 @@ const FeatureProducts = (props: Props) => {
   const [cardValue, setCardValue] = useState(1);
   const [choosePlant, setChoosePlant] = useState(0);
 
-  const product = [
-    {
-      id: "new product",
-      name: "Monstera Deliciosa Mint Large Form",
-      price: 999.99,
-      image:
-        "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
-      quantity: cardValue,
-      total_price: 999.99 * cardValue,
-    },
-  ];
+  const product = {
+    id: "new product",
+    name: "Monstera Deliciosa Mint Large Form",
+    price: 999.99,
+    image:
+      "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
+    quantity: cardValue,
+    total_price: 999.99 * cardValue,
+  };
 
   const onSubmit = () => {
     props.setSelectedItem(Math.random());
