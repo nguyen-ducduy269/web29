@@ -44,6 +44,7 @@ const useJob = () => {
   const filter = async ({ name, status }: any) => {
     dispatch(fetchData({ name, status }));
   };
+
   return {
     loading,
     addJob,

@@ -7,20 +7,20 @@ import { AppDispatch } from "../store/Store";
 ////// import hooks
 import { fetchData } from "../hooks/fetchData";
 import useJob from "../hooks/Job";
+import { todoSlice } from "../features/todo/todoSlice";
 
 interface Props {
   setIsDisplay: (value: boolean) => void;
   setSelectedItem: (value: any) => void;
-  filter: any;
-  setFilter: (value: any) => void;
 }
 
 const Table = (props: Props) => {
   const tasks = useSelector((state: any) => state.todos.data) || [];
   const [searchValue, setSearchValue] = useState("");
-
-  const { deleteJob, filter: fetchDataFilter } = useJob();
+  const { deleteJob } = useJob();
   const dispatch = useDispatch<AppDispatch>();
+
+  const filterValue = useSelector((state: any) => state.todos.filter);
 
   useEffect(() => {
     dispatch(fetchData(""));
@@ -33,8 +33,8 @@ const Table = (props: Props) => {
   };
 
   useEffect(() => {
-    fetchDataFilter(props.filter);
-  }, [props.filter]);
+    dispatch(todoSlice.actions.filter({ ...filterValue, name: searchValue }));
+  }, [searchValue]);
 
   return (
     <>
@@ -58,16 +58,15 @@ const Table = (props: Props) => {
                 value={searchValue}
                 onChange={(e) => {
                   setSearchValue(e.target.value);
-                  props.setFilter({ ...props.filter, name: e.target.value });
                 }}
               ></input>
             </td>
 
-            <Status setFilter={props.setFilter} />
+            <Status />
             <td className="activity"></td>
           </tr>
 
-          {tasks.map((e: any, i: any) => (
+          {tasks?.map((e: any, i: any) => (
             <tr key={i}>
               <td className="stt">{i + 1}</td>
               <td className="name">{e.name}</td>

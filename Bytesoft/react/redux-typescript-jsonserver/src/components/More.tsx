@@ -2,21 +2,14 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-interface Props {
-  filter: any;
-  setFilter: (value: any) => void;
-}
-
 // import components
 import Arrange from "./Arrange";
 
-const More = (props: Props) => {
+const More = () => {
   const [arrange, setArrange] = useState(false);
   const [search, setSearch] = useState("");
 
-  const filterName = async () => {
-    props.setFilter({ ...props.filter, name: search });
-  };
+  const filterName = async () => {};
 
   return (
     <>
@@ -34,14 +27,7 @@ const More = (props: Props) => {
         <button className="reduce" onClick={() => setArrange(true)}>
           Sắp xếp
         </button>
-        {arrange ? (
-          <Arrange
-            setArrange={setArrange}
-            setFilter={props.setFilter}
-          />
-        ) : (
-          ""
-        )}
+        {arrange ? <Arrange setArrange={setArrange} /> : ""}
       </Mored>
     </>
   );

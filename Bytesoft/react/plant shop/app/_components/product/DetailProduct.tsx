@@ -16,6 +16,7 @@ import { GoChevronRight } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { CiStar } from "react-icons/ci";
+import { MdCircle } from "react-icons/md";
 
 ///// import images
 import facebook from "@/public/images/facebook.png";
@@ -140,107 +141,7 @@ const DetailProduct = (props: Props) => {
             </div>
           </div>
 
-          <div className="detail-information">
-            <h1>{product.name}</h1>
-
-            <div className="stars">{rateStar(product.rate)}</div>
-
-            <div className="price">${product.price}</div>
-
-            <ul>
-              <li>
-                <strong>Botanical Name:</strong> {product.botanical_name}
-              </li>
-              <li>
-                <strong>Common Names:</strong> {product.common_name}
-              </li>
-              <li>
-                <strong>Description:</strong> {product.detail_description}
-              </li>
-            </ul>
-          </div>
-
-          <div className="summary">
-            <h4>Size</h4>
-
-            <div className="select-size">
-              {product.pot.map((item: any, index: number) => {
-                return (
-                  <button
-                    className={changePot == item.id ? "active" : ""}
-                    onClick={() => setChangePot(index)}
-                    style={{ cursor: "pointer" }}
-                    key={item.id}
-                  >
-                    {item.name}
-                  </button>
-                );
-              })}
-            </div>
-
-            <div>
-              <p>CA Greenhouse: {product.pot[changePot].ca}</p>
-              <p>Fl Greenhouse: {product.pot[changePot].fl}</p>
-            </div>
-
-            <div className="form">
-              <label htmlFor="">Quantity</label>
-              <input
-                type="number"
-                name=""
-                id=""
-                min={1}
-                placeholder="1"
-                value={quantity}
-                onChange={(e: any) => setQuantity(e.target.value)}
-              />
-            </div>
-
-            <Button
-              style={{
-                height: "48px",
-                color: "#1e8570",
-                backgroundColor: "white",
-                width: "100%",
-                fontWeight: "500",
-                fontSize: "16px",
-              }}
-              onClick={() => {
-                console.log("productAddToCard", productAddToCard);
-                onAddToCart();
-              }}
-            >
-              Add to Card
-            </Button>
-
-            <Button
-              style={{
-                height: "48px",
-                color: "white",
-                backgroundColor: "black",
-                width: "100%",
-                fontWeight: "500",
-                fontSize: "16px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              Buy with <FcGoogle style={{ marginLeft: "7px" }} />
-              Pay
-            </Button>
-
-            <Link href={""}>More payment options</Link>
-            <p>Share this:</p>
-            <div className="internet-contact">
-              <Image src={facebook} width={24} height={24} alt="facebook" />
-              <Image src={twitter} width={24} height={24} alt="twitter" />
-              <Image src={linked_in} width={24} height={24} alt="linked_in" />
-              <Image src={pinterest} width={24} height={24} alt="pinterest" />
-            </div>
-          </div>
-
-          <div className="response">
+          <div className="content">
             <div className="detail-information">
               <h1>{product.name}</h1>
 
@@ -249,16 +150,62 @@ const DetailProduct = (props: Props) => {
               <div className="price">${product.price}</div>
 
               <ul>
+                {product.botanical_name ? (
+                  <li>
+                    <MdCircle /> <strong>Botanical Name:</strong>{" "}
+                    {product.botanical_name}
+                  </li>
+                ) : (
+                  ""
+                )}
+                {product.common_name ? (
+                  <li>
+                    <MdCircle /> <strong>Common Names:</strong>{" "}
+                    {product.common_name}
+                  </li>
+                ) : (
+                  ""
+                )}
                 <li>
-                  <strong>Botanical Name:</strong> {product.botanical_name}
-                </li>
-                <li>
-                  <strong>Common Names:</strong> {product.common_name}
-                </li>
-                <li>
-                  <strong>Description:</strong> {product.detail_description}
+                  <MdCircle /> <strong>Description:</strong>{" "}
+                  {product.detail_description}
                 </li>
               </ul>
+
+              {product.include_title ? (
+                <div style={{ marginTop: "30px" }}>
+                  <strong>
+                    Winter Plant Shipping Protection Includes (As Needed):
+                  </strong>
+                </div>
+              ) : (
+                ""
+              )}
+
+              {product.include ? (
+                <div>
+                  {product.include.map((item: any) => {
+                    return <div style={{ marginTop: "10px" }}>- {item}</div>;
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
+
+              {product.covid ? (
+                <div
+                  style={{
+                    marginTop: "10px",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    lineHeight: "25px",
+                  }}
+                >
+                  {product.covid}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className="summary">
@@ -280,9 +227,35 @@ const DetailProduct = (props: Props) => {
               </div>
 
               <div>
-                <p>CA Greenhouse: {product.pot[changePot].ca}</p>
-                <p>Fl Greenhouse: {product.pot[changePot].fl}</p>
+                <p>
+                  CA Greenhouse:
+                  {product.pot[changePot].ca ? product.pot[changePot].ca : 0}
+                </p>
+                <p>
+                  Fl Greenhouse:
+                  {product.pot[changePot].fl ? product.pot[changePot].fl : 0}
+                </p>
               </div>
+
+              {product.pot_style ? (
+                <div className="pot_style">
+                  <h4>Pot Style</h4>
+
+                  {product.pot_style.map((item: any) => {
+                    return (
+                      <button
+                        className={item.status == true ? "active" : ""}
+                        style={{ cursor: "pointer" }}
+                        key={item.id}
+                      >
+                        {item.name}
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
 
               <div className="form">
                 <label htmlFor="">Quantity</label>
@@ -297,39 +270,80 @@ const DetailProduct = (props: Props) => {
                 />
               </div>
 
-              <Button
-                style={{
-                  height: "48px",
-                  color: "#1e8570",
-                  backgroundColor: "white",
-                  width: "100%",
-                  fontWeight: "500",
-                  fontSize: "16px",
-                }}
-                onClick={() => {
-                  console.log("productAddToCard", productAddToCard);
-                  onAddToCart();
-                }}
-              >
-                Add to Card
-              </Button>
+              {product.sold_out == true ? (
+                <>
+                  <Button
+                    style={{
+                      height: "48px",
+                      color: "white",
+                      backgroundColor: "gray",
+                      width: "100%",
+                      fontWeight: "500",
+                      fontSize: "16px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    Sold Out
+                  </Button>
 
-              <Button
-                style={{
-                  height: "48px",
-                  color: "white",
-                  backgroundColor: "black",
-                  width: "100%",
-                  fontWeight: "500",
-                  fontSize: "16px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                Buy with <FcGoogle style={{ marginLeft: "7px" }} />
-                Pay
-              </Button>
+                  <Button
+                    style={{
+                      height: "48px",
+                      color: "white",
+                      backgroundColor: "gray",
+                      width: "100%",
+                      fontWeight: "500",
+                      fontSize: "16px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    Buy with <FcGoogle style={{ marginLeft: "7px" }} />
+                    Pay
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    style={{
+                      height: "48px",
+                      color: "#1e8570",
+                      backgroundColor: "white",
+                      width: "100%",
+                      fontWeight: "500",
+                      fontSize: "16px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    onClick={() => {
+                      onAddToCart();
+                    }}
+                  >
+                    Add to Card
+                  </Button>
+
+                  <Button
+                    style={{
+                      height: "48px",
+                      color: "white",
+                      backgroundColor: "black",
+                      width: "100%",
+                      fontWeight: "500",
+                      fontSize: "16px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    Buy with <FcGoogle style={{ marginLeft: "7px" }} />
+                    Pay
+                  </Button>
+                </>
+              )}
 
               <Link href={""}>More payment options</Link>
               <p>Share this:</p>

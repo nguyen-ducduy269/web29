@@ -35,170 +35,127 @@ export const Product = styled.div`
       }
     }
 
-    .detail-information {
-      width: 500px;
-      .stars {
-        margin-bottom: 15px;
-        svg {
-          font-size: 26px;
+    .content {
+      display: flex;
+      gap: 30px;
+      .detail-information {
+        width: 500px;
+        .stars {
+          margin-bottom: 15px;
+          svg {
+            font-size: 26px;
+            color: #00634b;
+          }
+        }
+
+        .price {
+          font-size: 20px;
+          font-weight: 500;
           color: #00634b;
         }
+
+        ul {
+          margin-top: 30px;
+          padding: 0px 15px 0px;
+          li {
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px;
+            svg {
+              font-size: 7px;
+            }
+          }
+        }
       }
 
-      .price {
-        font-size: 20px;
-        font-weight: 500;
-        color: #00634b;
-      }
-
-      ul {
-        margin-top: 30px;
-        li {
-          margin-top: 20px;
+      .summary {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h4 {
           font-size: 14px;
-          font-weight: 500;
-          line-height: 25px;
-        }
-      }
-    }
-
-    .summary {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      h4 {
-        font-size: 14px;
-      }
-
-      .select-size {
-        button {
-          width: 60px;
-          height: 33px;
-          border: 0.5px solid #8080805e;
-          border-radius: 5px;
         }
 
-        .active {
+        .select-size {
+          button {
+            width: 60px;
+            height: 33px;
+            border: 0.5px solid #8080805e;
+            border-radius: 5px;
+          }
+
+          .active {
+            color: #f8ba8c;
+            background-color: #f8ba8c0f;
+            border-color: #f8ba8c0f;
+          }
+        }
+
+        div {
+          p {
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+
+        .pot_style {
+          h4 {
+            margin-bottom: 10px;
+          }
+
+          button {
+            padding: 10px 10px 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+            border: 0.5px solid #0000002b;
+            border-radius: 5px;
+            text-decoration: line-through;
+            color: gray;
+            font-weight: 500;
+          }
+
+          .active {
+            padding: 10px 10px 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+            border: 0.5px solid #0000002b;
+            border-radius: 5px;
+            text-decoration: unset;
+            color: #f8ba8c;
+            font-weight: 500;
+          }
+        }
+
+        .form {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          input {
+            width: 120px;
+            height: 50px;
+            padding-left: 10px;
+          }
+        }
+
+        a {
+          width: 100%;
+          text-align: center;
+          text-decoration: unset;
           color: #f8ba8c;
-          background-color: #f8ba8c0f;
-          border-color: #f8ba8c0f;
-        }
-      }
-
-      div {
-        p {
-          font-size: 12px;
-          font-weight: 600;
-        }
-      }
-
-      .form {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        input {
-          width: 120px;
-          height: 50px;
-          padding-left: 10px;
-        }
-      }
-
-      a {
-        width: 100%;
-        text-align: center;
-        text-decoration: unset;
-        color: #f8ba8c;
-      }
-
-      .internet-contact {
-        display: flex;
-        gap: 5px;
-      }
-    }
-  }
-
-  .response {
-    display: none;
-    .detail-information {
-      width: 500px;
-      .stars {
-        margin-bottom: 15px;
-        svg {
-          font-size: 26px;
-          color: #00634b;
-        }
-      }
-
-      .price {
-        font-size: 20px;
-        font-weight: 500;
-        color: #00634b;
-      }
-
-      ul {
-        margin-top: 30px;
-        li {
-          margin-top: 20px;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 25px;
-        }
-      }
-    }
-
-    .summary {
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      h4 {
-        font-size: 14px;
-      }
-
-      .select-size {
-        button {
-          width: 60px;
-          height: 33px;
-          border: 0.5px solid #8080805e;
-          border-radius: 5px;
         }
 
-        .active {
-          color: #f8ba8c;
-          background-color: #f8ba8c0f;
-          border-color: #f8ba8c0f;
+        .internet-contact {
+          display: flex;
+          gap: 5px;
         }
-      }
-
-      div {
-        p {
-          font-size: 12px;
-          font-weight: 600;
-        }
-      }
-
-      .form {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        input {
-          width: 120px;
-          height: 50px;
-          padding-left: 10px;
-        }
-      }
-
-      a {
-        width: 100%;
-        text-align: center;
-        text-decoration: unset;
-        color: #f8ba8c;
-      }
-
-      .internet-contact {
-        display: flex;
-        gap: 5px;
       }
     }
   }
@@ -224,12 +181,16 @@ export const Product = styled.div`
         }
       }
 
-      .detail-information {
-        width: 100%;
-      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        .detail-information {
+          width: 100%;
+        }
 
-      .summary {
-        width: 100%;
+        .summary {
+          width: 100%;
+        }
       }
     }
   }
@@ -294,40 +255,20 @@ export const Product = styled.div`
 
   @media only screen and (min-width: 600px) {
     .main-content {
-      .detail-information,
-      .summary {
-        display: none;
-      }
-
-      .response {
-        display: block;
-        .detail-information,
-        .summary {
-          display: block;
-        }
-      }
-
-      .response {
-        display: flex;
-        height: fit-content;
+      .content {
         flex-direction: row;
-        gap: 20px;
-        .detail-information {
-          h1 {
-            font-size: 18px;
-          }
+        .summary {
+          .pot_style {
+            button {
+              padding: 7px 7px 7px;
+              margin-right: 5px;
+            }
 
-          .stars {
-            svg {
-              font-size: 24px;
+            .active {
+              padding: 7px 7px 7px;
+              margin-right: 5px;
             }
           }
-        }
-
-        .summary {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
         }
       }
     }
@@ -344,104 +285,97 @@ export const Product = styled.div`
         .more-img {
           margin-top: 10px;
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
           gap: 10px;
           img {
             width: 100%;
-            height: 116px;
+            height: 90px;
           }
         }
       }
 
-      .detail-information,
-      .summary {
-        display: block;
-      }
+      .content {
+        .detail-information {
+          width: 500px;
+          .stars {
+            margin-bottom: 15px;
+            svg {
+              font-size: 26px;
+              color: #00634b;
+            }
+          }
 
-      .detail-information {
-        width: 500px;
-        .stars {
-          margin-bottom: 15px;
-          svg {
-            font-size: 26px;
+          .price {
+            font-size: 20px;
+            font-weight: 500;
             color: #00634b;
           }
+
+          ul {
+            margin-top: 30px;
+            li {
+              margin-top: 20px;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 25px;
+            }
+          }
         }
 
-        .price {
-          font-size: 20px;
-          font-weight: 500;
-          color: #00634b;
-        }
-
-        ul {
-          margin-top: 30px;
-          li {
-            margin-top: 20px;
+        .summary {
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          h4 {
             font-size: 14px;
-            font-weight: 500;
-            line-height: 25px;
-          }
-        }
-      }
-
-      .summary {
-        width: 300px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        h4 {
-          font-size: 14px;
-        }
-
-        .select-size {
-          button {
-            width: 60px;
-            height: 33px;
-            border: 0.5px solid #8080805e;
-            border-radius: 5px;
           }
 
-          .active {
+          .select-size {
+            button {
+              width: 60px;
+              height: 33px;
+              border: 0.5px solid #8080805e;
+              border-radius: 5px;
+            }
+
+            .active {
+              color: #f8ba8c;
+              background-color: #f8ba8c0f;
+              border-color: #f8ba8c0f;
+            }
+          }
+
+          div {
+            p {
+              font-size: 12px;
+              font-weight: 600;
+            }
+          }
+
+          .form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            input {
+              width: 120px;
+              height: 50px;
+              padding-left: 10px;
+            }
+          }
+
+          a {
+            width: 100%;
+            text-align: center;
+            text-decoration: unset;
             color: #f8ba8c;
-            background-color: #f8ba8c0f;
-            border-color: #f8ba8c0f;
+          }
+
+          .internet-contact {
+            display: flex;
+            gap: 5px;
           }
         }
-
-        div {
-          p {
-            font-size: 12px;
-            font-weight: 600;
-          }
-        }
-
-        .form {
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          input {
-            width: 120px;
-            height: 50px;
-            padding-left: 10px;
-          }
-        }
-
-        a {
-          width: 100%;
-          text-align: center;
-          text-decoration: unset;
-          color: #f8ba8c;
-        }
-
-        .internet-contact {
-          display: flex;
-          gap: 5px;
-        }
-      }
-
-      .response {
-        display: none;
       }
     }
   }
@@ -458,106 +392,100 @@ export const Product = styled.div`
         .more-img {
           margin-top: 10px;
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(5, 1fr);
           gap: 10px;
           img {
             width: 100%;
-            height: 116px;
+            height: 90px;
           }
         }
       }
 
-      .detail-information,
-      .summary {
-        display: block;
-      }
+      .content {
+        .detail-information {
+          width: 500px;
+          .stars {
+            margin-bottom: 15px;
+            svg {
+              font-size: 26px;
+              color: #00634b;
+            }
+          }
 
-      .detail-information {
-        width: 500px;
-        .stars {
-          margin-bottom: 15px;
-          svg {
-            font-size: 26px;
+          .price {
+            font-size: 20px;
+            font-weight: 500;
             color: #00634b;
           }
+
+          ul {
+            margin-top: 30px;
+            padding: 0px 15px 0px;
+            li {
+              margin-top: 20px;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 25px;
+            }
+          }
         }
 
-        .price {
-          font-size: 20px;
-          font-weight: 500;
-          color: #00634b;
-        }
-
-        ul {
-          margin-top: 30px;
-          li {
-            margin-top: 20px;
+        .summary {
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          h4 {
             font-size: 14px;
-            font-weight: 500;
-            line-height: 25px;
-          }
-        }
-      }
-
-      .summary {
-        width: 300px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        h4 {
-          font-size: 14px;
-        }
-
-        .select-size {
-          display: flex;
-          gap: 5px;
-          button {
-            width: 60px;
-            height: 33px;
-            border: 0.5px solid #8080805e;
-            border-radius: 5px;
           }
 
-          .active {
+          .select-size {
+            display: flex;
+            gap: 5px;
+            button {
+              width: 60px;
+              height: 33px;
+              border: 0.5px solid #8080805e;
+              border-radius: 5px;
+            }
+
+            .active {
+              color: #f8ba8c;
+              background-color: #f8ba8c0f;
+              border-color: #f8ba8c0f;
+            }
+          }
+
+          div {
+            p {
+              font-size: 12px;
+              font-weight: 600;
+            }
+          }
+
+          .form {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            input {
+              width: 120px;
+              height: 50px;
+              padding-left: 10px;
+            }
+          }
+
+          a {
+            width: 100%;
+            text-align: center;
+            text-decoration: unset;
             color: #f8ba8c;
-            background-color: #f8ba8c0f;
-            border-color: #f8ba8c0f;
+          }
+
+          .internet-contact {
+            display: flex;
+            gap: 5px;
           }
         }
-
-        div {
-          p {
-            font-size: 12px;
-            font-weight: 600;
-          }
-        }
-
-        .form {
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          input {
-            width: 120px;
-            height: 50px;
-            padding-left: 10px;
-          }
-        }
-
-        a {
-          width: 100%;
-          text-align: center;
-          text-decoration: unset;
-          color: #f8ba8c;
-        }
-
-        .internet-contact {
-          display: flex;
-          gap: 5px;
-        }
-      }
-
-      .response {
-        display: none;
       }
     }
   }
