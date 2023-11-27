@@ -1700,30 +1700,140 @@
     },
     {
       "id": 27,
-      "main_image": "https://images.loox.io/uploads/2021/7/7/EJBfcy16c_mid.jpg",
-      "title": "G.L.",
-      "ticked": false,
-      "rate": 3,
-      "description": "There must’ve been some issue with shipping, the plant arrived much later than the other item I ordered it with. The plant had also come out of the 6” pot and was loose in the packaging when I opened the box. She is very droopy and there is some slight browning to her leaves but hopefully after repotting her and getting some water it will be alright. She is still a gorgeous plant, I love all the colors, and can’t wait to watch her grow.",
-      "infor": "Pothos 'N'joy'",
+      "main_image": "https://images.loox.io/uploads/2023/11/10/zuWfGBuWqG_mid.jpg",
+      "title": "L.F.",
+      "ticked": true,
+      "rate": 2,
+      "description": "I was very excited about this plant because it was a gift for my wife that she had been wanting for a while. There were yellow and brown leaves when we received the plant. I’m not the type to normally complain but seeing the disappointment in my wife’s face can change that.",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/image_png_1350410938_x100.png?v=1675522880",
+      "infor": "Monstera Adansonii 'Swiss Cheese'",
       "feature": true,
       "newest": true,
       "highest_rate": false,
-      "lowest_rate": true
+      "lowest_rate": true,
+      "name": "Monstera Adansonii 'Swiss Cheese'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_1350410938_445x445.png?v=1643765015",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_1350410938_75x75_crop_center.png?v=1643765015"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-DETAIL-6_445x445.jpg?v=1623090125",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-DETAIL-6_75x75_crop_center.jpg?v=1623090125"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-4-DETAIL_445x445.jpg?v=1623090125",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-4-DETAIL_75x75_crop_center.jpg?v=1623090125"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-6_445x445.jpg?v=1623090125",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-6_75x75_crop_center.jpg?v=1623090125"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-HOLD-6_445x445.jpg?v=1623090125",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Monstera-SwissCheese-HOLD-6_75x75_crop_center.jpg?v=1623090125"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/45a7304c-fe66-4890-9883-5f3750422e0e_445x593.png?v=1657400037",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/45a7304c-fe66-4890-9883-5f3750422e0e_57x75_crop_center.png?v=1657400037"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/5cd91725-c6b2-47eb-92ed-ee6b7e00667f_445x593.png?v=1673420637",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/5cd91725-c6b2-47eb-92ed-ee6b7e00667f_57x75_crop_center.png?v=1673420637"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/0a3a0d9b-f3bb-42de-b5ff-b1003eb20b06_445x593.png?v=1675522879",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/0a3a0d9b-f3bb-42de-b5ff-b1003eb20b06_57x75_crop_center.png?v=1675522879"
+        }
+      ],
+      "price": 20.99,
+      "botanical_name": "Monstera adansonii",
+      "common_name": "Adanson's monstera, Swiss cheese vine, five holes plant",
+      "detail_description": "The Swiss Cheese plant, gets its name from its large, heart-shaped leaves, which become covered with holes that resemble swiss cheese as it gets older. Part of the Araceae family that's native to South and Central America, this Monstera is easy to grow and loves to climb and grow upwards.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 0,
+          "fl": 30
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 0,
+          "fl": 41
+        },
+        {
+          "id": 2,
+          "name": "8' Pot",
+          "ca": 0,
+          "fl": 5
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Black Cylinder",
+          "status": false
+        },
+        {
+          "name": "White Cylinder",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta",
+          "status": false
+        }
+      ]
     },
     {
       "id": 28,
-      "main_image": "https://images.loox.io/uploads/2023/10/6/fG5_AUOBl_mid.jpg",
-      "title": "J.R.",
-      "ticked": false,
+      "main_image": "https://images.loox.io/uploads/2021/6/7/NyXTeDUcq_mid.jpg",
+      "title": "S.M.",
+      "ticked": true,
       "rate": 3,
-      "description": "Plant was smaller than expected, with wilted and slimy leaves. Hopefully it will recover, but for the price, I'm disappointed.",
-      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/97a3b676-92ea-45f2-99c1-bf5537ac0810_x100.png?v=1687974464",
-      "infor": "Tradescantia 'Nanouk'",
+      "description": "I am a big fan of Peperomias so I was happy to add this to my collection. However,  the plant was not package well. It appeared it was just recently added to a nursery pot as it was not established yet. It was really wet that several of the leaves came off.",
+      "infor": "Peperomia 'Rosso'",
       "feature": true,
       "newest": true,
       "highest_rate": false,
-      "lowest_rate": true
+      "lowest_rate": true,
+      "name": "Peperomia 'Rosso'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1601318718_445x445.png?v=1643836068",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1601318718_75x75_crop_center.png?v=1643836068"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Peperomia-Rosso-4DETAIL_445x445.jpg?v=1627692585",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Peperomia-Rosso-4DETAIL_75x75_crop_center.jpg?v=1627692585"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Peperomia-Rosso-4HOLD_445x445.jpg?v=1627692585",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Peperomia-Rosso-4HOLD_75x75_crop_center.jpg?v=1627692585"
+        }
+      ],
+      "price": 19.99,
+      "botanical_name": "Peperomia caperata 'Rosso'",
+      "common_name": "Peperomia Rosso, Eden Rosso",
+      "detail_description": "The Rosso has very distinctive pointed leaves with an attractive flowering variety with striking red undersides and deeply grooved glossy green leaves. Native to tropical Brazil, this plant will require similar care to most peperomias and succulents.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 79,
+          "fl": 27
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 1,
+          "fl": 0
+        }
+      ]
     },
     {
       "id": 29,
@@ -1737,7 +1847,79 @@
       "feature": true,
       "newest": true,
       "highest_rate": false,
-      "lowest_rate": true
+      "lowest_rate": true,
+      "name": "Pilea Peperomioides 'Chinese Money'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png491705038_445x445.png?v=1622837452",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png491705038_75x75_crop_center.png?v=1622837452"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4DETAIL_445x445.jpg?v=1622837456",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4DETAIL_75x75_crop_center.jpg?v=1622837456"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4HOLD_445x445.jpg?v=1622837461",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4HOLD_75x75_crop_center.jpg?v=1622837461"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Navarro_445x445.jpg?v=1622837467",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Navarro_75x75_crop_center.jpg?v=1622837467"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_black_round_445x445.jpg?v=1622837471",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_black_round_75x75_crop_center.jpg?v=1622837471"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Huey_445x445.jpg?v=1622837475",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Huey_75x75_crop_center.jpg?v=1622837475"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_FiberPot_445x445.jpg?v=1636587409",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_FiberPot_75x75_crop_center.jpg?v=1636587409"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_TerraCotta_445x445.jpg?v=1636587408",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_TerraCotta_75x75_crop_center.jpg?v=1636587408"
+        }
+      ],
+      "price": 22.99,
+      "botanical_name": "Pilea peperomioides",
+      "common_name": "Chinese money plant, Friendship plant",
+      "detail_description": "Each of its lily pad like leaves float on dainty looking stems that will bob around independently in a gentle breeze. Towards the upper part of every single leaf will be a white, or lighter shade of green, dot where the stem meets the leaf and holds it in place.",
+      "covid": "*due to COVID inventory issues on the raw materials, planters are not shipped with the saucer.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 76,
+          "fl": 72
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 24,
+          "fl": 30
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Black Cylinder",
+          "status": true
+        },
+        {
+          "name": "Natural Plant Fiber",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta Standard",
+          "status": false
+        }
+      ]
     },
     {
       "id": 30,
@@ -1751,7 +1933,74 @@
       "feature": true,
       "newest": true,
       "highest_rate": true,
-      "lowest_rate": false
+      "lowest_rate": false,
+      "name": "Spider Plant 'Bonnie'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_2120732463_445x445.png?v=1622834973",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_2120732463_75x75_crop_center.png?v=1622834973"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-4-DETAIL_445x445.jpg?v=1622834977",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-4-DETAIL_75x75_crop_center.jpg?v=1622834977"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-6_5_445x445.jpg?v=1622834982",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-6_5_75x75_crop_center.jpg?v=1622834982"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-6_5DETAIL_445x445.jpg?v=1622834986",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-6_5DETAIL_75x75_crop_center.jpg?v=1622834986"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-4-HOLD_445x445.jpg?v=1622834991",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-4-HOLD_75x75_crop_center.jpg?v=1622834991"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-6_5HOLD_445x445.jpg?v=1622834996",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Bonnie-6_5HOLD_75x75_crop_center.jpg?v=1622834996"
+        }
+      ],
+      "price": 21.99,
+      "botanical_name": "Chlorophytum comosum, ",
+      "common_name": "Spider plant, airplane plant, spider ivy",
+      "detail_description": "The Spider plant is a flowering perennial native tropical South Africa. The leaves of the spider plant are thin ribbon like strands which end in a point and grow upward and bend downward giving it the look of a spider. The Spider plant produces small white flowers that grow along a long stalk independent to the leaves of the spider plant. Also known for their air purifying qualities, the spider plant is a great companion to any household of office.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 47,
+          "fl": 0
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 0,
+          "fl": 22
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Plant Fiber Pot",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta Standard",
+          "status": false
+        },
+        {
+          "name": "White Cylinder",
+          "status": false
+        },
+        {
+          "name": "Black Cylinder",
+          "status": false
+        }
+      ]
     },
     {
       "id": 31,
@@ -1760,25 +2009,105 @@
       "ticked": true,
       "rate": 4,
       "description": "Bought one for sister earlier and it was beautiful!  Had high hopes for similar, but was a bit disappointed.  The other plant ordered was the least attractive with more damage prior to shipping as well as from nearly 7 days in the box.  I will trim dead and damaged stems and leaves and am confident this plant will be beautiful in time.  Just not the instant gratification one hopes for as they anticipate getting a new plant.  Sigh.",
-      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/image_png1421405229_x100.png?v=1678910489",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/4_HOYA_AUSTRALIS_1_e3c53e72-34a3-4977-b5c3-69f4d91ca3cd_x100.jpg?v=1654050450",
       "infor": "Hoya Carnosa 'Tricolor'",
       "feature": true,
       "newest": true,
       "highest_rate": true,
-      "lowest_rate": false
+      "lowest_rate": false,
+      "name": "Hoya Carnosa 'Tricolor'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1421405229_445x445.png?v=1643835250",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1421405229_75x75_crop_center.png?v=1643835250"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hoya-Tricolor-DETAIL-6_445x445.jpg?v=1623090128",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hoya-Tricolor-DETAIL-6_75x75_crop_center.jpg?v=1623090128"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hoya-Tricolor-HOLD-6_445x445.jpg?v=1623090128",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hoya-Tricolor-HOLD-6_75x75_crop_center.jpg?v=1623090128"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hoya-Tricolor-6_445x445.jpg?v=1623090128",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hoya-Tricolor-6_75x75_crop_center.jpg?v=1623090128"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/7f6a7311-3f43-403e-9b49-f4e2d30c70e3_445x593.png?v=1678910487",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/7f6a7311-3f43-403e-9b49-f4e2d30c70e3_57x75_crop_center.png?v=1678910487"
+        }
+      ],
+      "price": 22.99,
+      "botanical_name": "Hoya carnosa 'tricolor'",
+      "common_name": "Tricolor, Porcelain Flower, Wax Plant, Honey Plant",
+      "detail_description": "Remind yourself how spectacular you are by surrounding yourself with the beautiful, leafy vines of a Hoya Tricolor. The indoor vines of this plant love to change color according to how much light they receive. Turning pink is this houseplant’s way of showing you how well you are caring for it. The brighter the indirect light, the more pink variegation these plants may produce. Just remember to keep them away from direct sunlight.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 83
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 0,
+          "fl": 20
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 19,
+          "fl": 17
+        }
+      ]
     },
     {
       "id": 32,
-      "main_image": "https://images.loox.io/uploads/2023/5/8/j7lbBjnxN_mid.jpg",
-      "title": "L.S.",
+      "main_image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_1_e3c53e72-34a3-4977-b5c3-69f4d91ca3cd_445x445.jpg?v=1654049443",
+      "title": "B.B.",
       "ticked": false,
       "rate": 4,
-      "description": "Disappointed.  Very scraggly plant with leaves obviously damaged  prior to shipping in addition to losses due to 7 days in box.  Very pricy for the quality of this one.  Bought a tricolor queen for sister earlier and it was so beautiful that I hoped for similar.  Contacted company but they referred it to route provider, but we have never had USPS honor any damage claim and this box was in perfect shape and tracked 'on schedule' so not going there.  A partial refund by the company would have been a welcome gesture as both plants in this order will likely grow into beautiful plants in time so full replacement would be too much.  Just no instant gratification.  Sigh. Strange if this gets posted since I tried a numberof times to post the review with my genuine rating of 3 stars ⭐ ⭐ ⭐.",
-      "infor": "Hoya Carnosa 'Krimson Princess'",
+      "description": "Dirt was a little moldy when is showed up and lost some leaves, but looking healthy now after a second repot. 6m old and doing alright.",
+      "infor": "Hoya 'Australis'",
       "feature": true,
       "newest": true,
       "highest_rate": true,
-      "lowest_rate": false
+      "lowest_rate": false,
+      "name": "Hoya 'Australis'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_1_e3c53e72-34a3-4977-b5c3-69f4d91ca3cd_445x445.jpg?v=1654049443",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_1_e3c53e72-34a3-4977-b5c3-69f4d91ca3cd_75x75_crop_center.jpg?v=1654049443"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_2_445x445.jpg?v=1654049443",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_2_75x75_crop_center.jpg?v=1654049443"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_3_445x445.jpg?v=1654050452",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_3_75x75_crop_center.jpg?v=1654050452"
+        }
+      ],
+      "price": 39.99,
+      "botanical_name": "Hoya Australis",
+      "common_name": "Waxvine, Honey plant, Porcelain Flower",
+      "detail_description": "In the wild, it mostly grows across the edge of rainforests, rocky areas and is famous because of its ability to attract butterflies. Hoya australis is now becoming a popular garden and houseplant because of its fragrant and showy white flowers.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 20,
+          "fl": 10
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 40,
+          "fl": 0
+        }
+      ]
     },
     {
       "id": 33,
@@ -1792,7 +2121,62 @@
       "feature": true,
       "newest": true,
       "highest_rate": true,
-      "lowest_rate": false
+      "lowest_rate": false,
+      "name": "Spider Plant 'Reverse'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png309158502_445x445.png?v=1643836070",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png309158502_75x75_crop_center.png?v=1643836070"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_SPIDER_REVERSE_2_445x445.jpg?v=1655239098",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_SPIDER_REVERSE_2_75x75_crop_center.jpg?v=1655239098"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Reverse-4HOLD_445x445.jpg?v=1655239098",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Reverse-4HOLD_75x75_crop_center.jpg?v=1655239098"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/6_SPIDER_REVERSE_2NEW_445x445.jpg?v=1664488411",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/6_SPIDER_REVERSE_2NEW_75x75_crop_center.jpg?v=1664488411"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/6_SPIDER_REVERSE_1NEW_445x445.jpg?v=1664488411",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/6_SPIDER_REVERSE_1NEW_75x75_crop_center.jpg?v=1664488411"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/3_Spider_Reverse_1_445x445.jpg?v=1664488411",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/3_Spider_Reverse_1_75x75_crop_center.jpg?v=1664488411"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Reverse-HOLD-2_445x445.jpg?v=1664488411",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Spider-Reverse-HOLD-2_75x75_crop_center.jpg?v=1664488411"
+        }
+      ],
+      "price": 13.99,
+      "botanical_name": "Chlorophytum comosum,",
+      "common_name": "spider plant, airplane plant, spider ivy",
+      "detail_description": "The Spider plant is a flowering perennial native tropical South Africa. The leaves of the spider plant are thin ribbon like strands which end in a point and grow upward and bend downward giving it the look of a spider, this particular variety will have leaves which grow outward and upward.The Spider plant produces small white flowers that grow along a long stalk independent to the leaves of the spider plant. Also known for their air purifying qualities,the spider plant is a great companion to any household of office.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 63
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 63,
+          "fl": 46
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 21,
+          "fl": 39
+        }
+      ]
     },
     {
       "id": 34,
@@ -1806,7 +2190,79 @@
       "feature": true,
       "newest": true,
       "highest_rate": false,
-      "lowest_rate": true
+      "lowest_rate": true,
+      "name": "Pilea Peperomioides 'Chinese Money'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png491705038_445x445.png?v=1622837452",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png491705038_75x75_crop_center.png?v=1622837452"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4DETAIL_445x445.jpg?v=1622837456",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4DETAIL_75x75_crop_center.jpg?v=1622837456"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4HOLD_445x445.jpg?v=1622837461",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pilea-Peperomiodes-4HOLD_75x75_crop_center.jpg?v=1622837461"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Navarro_445x445.jpg?v=1622837467",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Navarro_75x75_crop_center.jpg?v=1622837467"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_black_round_445x445.jpg?v=1622837471",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_black_round_75x75_crop_center.jpg?v=1622837471"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Huey_445x445.jpg?v=1622837475",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Pilea_Peperomioides_Huey_75x75_crop_center.jpg?v=1622837475"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_FiberPot_445x445.jpg?v=1636587409",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_FiberPot_75x75_crop_center.jpg?v=1636587409"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_TerraCotta_445x445.jpg?v=1636587408",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/PileaPeperomioides_TerraCotta_75x75_crop_center.jpg?v=1636587408"
+        }
+      ],
+      "price": 22.99,
+      "botanical_name": "Pilea peperomioides",
+      "common_name": "Chinese money plant, Friendship plant",
+      "detail_description": "Each of its lily pad like leaves float on dainty looking stems that will bob around independently in a gentle breeze. Towards the upper part of every single leaf will be a white, or lighter shade of green, dot where the stem meets the leaf and holds it in place.",
+      "covid": "*due to COVID inventory issues on the raw materials, planters are not shipped with the saucer.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 76,
+          "fl": 72
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 24,
+          "fl": 30
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Black Cylinder",
+          "status": true
+        },
+        {
+          "name": "Natural Plant Fiber",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta Standard",
+          "status": false
+        }
+      ]
     },
     {
       "id": 35,
@@ -1821,11 +2277,43 @@
       "feature": true,
       "newest": true,
       "highest_rate": false,
-      "lowest_rate": true
+      "lowest_rate": true,
+      "name": "Pothos 'Golden' Cuttings (5 Pack)",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_POTHOS_GOLDEN_2_445x445.jpg?v=1618846756",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_POTHOS_GOLDEN_2_75x75_crop_center.jpg?v=1618846756"
+        }
+      ],
+      "price": 7.99,
+      "botanical_name": "Epipremnum Aureum",
+      "common_name": "Devil's Ivy",
+      "detail_description": "This Air purifying plant is arguably one of the easiest plants to grow indoors. The pothos grows in a vine like fashion making it a great plant to have in a hanging display to fill up any empty space on a shelf or desktop. Place where the vines can fall freely or trail along a shelf for the best effect. Looks great grown in containers and hanging baskets. A terrific plant for tall plant stands where the trailing foliage will create a cascade of foliage over time.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 43
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 141,
+          "fl": 90
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 28,
+          "fl": 39
+        }
+      ],
+      "sold_out": true
     },
     {
       "id": 36,
-      "main_image": "https://images.loox.io/uploads/2021/6/10/EkzEFtjcc_mid.jpg",
+      "main_image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_445x445.jpg?v=1687233535",
       "title": "S.G.",
       "ticked": true,
       "rate": 3,
@@ -1834,7 +2322,50 @@
       "feature": true,
       "newest": true,
       "highest_rate": false,
-      "lowest_rate": true
+      "lowest_rate": true,
+      "name": "Pothos 'Neon'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_445x445.jpg?v=1687233535",
+          "small_image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_75x75_crop_center.jpg?v=1687233535"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/files/ab733e0c-1d92-40d1-bc80-33b0547ded0c_445x445.png?v=1689825691",
+          "small_image": "https://houseplantshop.com/cdn/shop/files/ab733e0c-1d92-40d1-bc80-33b0547ded0c_75x75_crop_center.png?v=1689825691"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/files/69d3e9d9-935d-43b5-bce8-48f481eced5a_445x445.png?v=1689825698",
+          "small_image": "https://houseplantshop.com/cdn/shop/files/69d3e9d9-935d-43b5-bce8-48f481eced5a_75x75_crop_center.png?v=1689825698"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/files/3_POTHOS_NEON_445x593.jpg?v=1687233535",
+          "small_image": "https://houseplantshop.com/cdn/shop/files/3_POTHOS_NEON_57x75_crop_center.jpg?v=1687233535"
+        }
+      ],
+      "price": 13.99,
+      "botanical_name": "Epipremnum pinnatum",
+      "common_name": "Neon Pothos",
+      "detail_description": "An electrifying color variation on the standard Pothos. ‘Neon’ has all of the tough, reliable features houseplant lovers have come to expect from Pothos, but with glowing, neon-green foliage. Place where the vines can fall freely or trail along a shelf for the best effect. Looks great grown in containers and hanging baskets. A terrific plant for tall plant stands where the trailing foliage will create a cascade of foliage over time.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 22
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 14,
+          "fl": 108
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 24,
+          "fl": 42
+        }
+      ]
     },
     {
       "id": 37,
@@ -1848,48 +2379,492 @@
       "feature": true,
       "newest": true,
       "highest_rate": true,
-      "lowest_rate": false
+      "lowest_rate": false,
+      "name": "Pothos 'Marble Queen' Cuttings (5 Pack)",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_1658138998_445x445.png?v=1643834857",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_1658138998_75x75_crop_center.png?v=1643834857"
+        }
+      ],
+      "price": 11.99,
+      "botanical_name": "Epipremnum aureum 'Snow Queen'",
+      "common_name": "Snow Queen Pothos, Marble Queen Pothos, ",
+      "detail_description": "This Pothos is a variegated version with more white than green. It is so easy, perfect for beginners, as pothos is one of the easiest plants to grow. This plant is so easy going. You can grow it in a hanging basket, let it climb or even grow horizontally along a tabletop or mantle. This plant will tolerate any light condition, though it's preference is moist soil and medium to high light spots. It even forgives for the occasional missed watering! No need to fertilize very often, maybe twice per year.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 22
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 14,
+          "fl": 108
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 24,
+          "fl": 42
+        }
+      ],
+      "sold_out": true
     },
     {
       "id": 38,
-      "main_image": "https://images.loox.io/uploads/2022/12/3/4JMJ5jXDp_mid.jpg",
-      "title": "S.S.",
-      "ticked": false,
-      "rate": 2,
-      "description": "4inch moonshine snake plant. Looks as pictured. Appears healthy. Packaging was five stars.",
-      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/4_SNAKE_MOONSHINE_1_x100.jpg?v=1627695927",
-      "infor": "Snake Plant 'Moonshine'",
+      "main_image": "https://images.loox.io/uploads/2023/5/4/Ub2lcZp_X_mid.jpg",
+      "title": "P.D.",
+      "ticked": true,
+      "rate": 4,
+      "description": "Some brown spots on leaves. Cold shipping weather and did opt for the cold protection. Seems to be perking up after repotting",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/3_Arabica_Coffee_1_x100.jpg?v=1636129404",
+      "infor": "Arabica Coffee",
       "feature": true,
       "newest": true,
-      "highest_rate": false,
-      "lowest_rate": true
+      "highest_rate": true,
+      "lowest_rate": false,
+      "name": "Arabica Coffee",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_445x445.jpg?v=1627689722",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_75x75_crop_center.jpg?v=1627689722"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4DETAIL_445x445.jpg?v=1627689722",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4DETAIL_75x75_crop_center.jpg?v=1627689722"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4HOLD_445x445.jpg?v=1627689722",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4HOLD_75x75_crop_center.jpg?v=1627689722"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/3_Arabica_Coffee_1_445x445.jpg?v=1636129404",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/3_Arabica_Coffee_1_75x75_crop_center.jpg?v=1636129404"
+        }
+      ],
+      "price": 13.99,
+      "botanical_name": "Coffea arabica",
+      "common_name": "Arabian Coffee, Mountain Coffee",
+      "detail_description": "The easy-to-care-for Arabian Coffee Plant has become popular indoor house plant that can produce white flowers and colorful cherries if grown large enough. The seeds inside the cherries are actually coffee beans, and make up around 60% of the world's coffee production. Originally found and documented in Yemen around the 12th century, Coffea arabica has a truly global distribution today. As a house plant, it requires minimum maintenance and can be put outside when the weather warms up.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 66
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 96,
+          "fl": 53
+        }
+      ]
     },
     {
       "id": 39,
-      "main_image": "https://images.loox.io/uploads/2022/12/11/E1uo51J_6_mid.jpg",
+      "main_image": "https://houseplantshop.com/cdn/shop/products/3-POTHOS-SATIN-1_445x445.jpg?v=1630013105",
       "title": "C.K.",
       "ticked": true,
       "rate": 4,
-      "description": "Needs some loving care but coming along nicely.",
+      "description": "I love the leaves. This will be 5 stars when the roots take.  Perking up already..",
       "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/3-POTHOS-SATIN-1_x100.jpg?v=1643834816",
       "infor": "Pothos 'Satin'",
       "feature": true,
       "newest": true,
       "highest_rate": true,
-      "lowest_rate": false
+      "lowest_rate": false,
+      "name": "Pothos 'Satin'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_766621418_445x445.png?v=1643834815",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_766621418_75x75_crop_center.png?v=1643834815"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-4DETAIL_445x445.jpg?v=1627692891",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-4DETAIL_75x75_crop_center.jpg?v=1627692891"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-6_11HOLD_445x445.jpg?v=1627692891",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-6_11HOLD_75x75_crop_center.jpg?v=1627692891"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-6_11_445x445.jpg?v=1627692891",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-6_11_75x75_crop_center.jpg?v=1627692891"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-4HOLD_445x445.jpg?v=1627692891",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Satin-4HOLD_75x75_crop_center.jpg?v=1627692891"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/3-POTHOS-SATIN-1_445x445.jpg?v=1630013105",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/3-POTHOS-SATIN-1_75x75_crop_center.jpg?v=1630013105"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/3-POTHOS-SATIN-3_445x445.jpg?v=1630013122",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/3-POTHOS-SATIN-3_75x75_crop_center.jpg?v=1630013122"
+        }
+      ],
+      "price": 14.99,
+      "botanical_name": "Scindapsus pictus 'Argyraeus'",
+      "common_name": "Pothos, Satin, Pothos Pictus, Silver Vine",
+      "detail_description": "This striking tropical plant is fairly new to house plant nurseries, and is garnering a lot of attention. Big, heart-shaped leaves are dark-green and splashed with silvery gray, giving them a satin sheen. Its compact growth habit makes Scindapsus pictus 'Argyraeus' a beautiful hanging basket plant. You'll see the best leaf color and variegation by keeping it in bright, indirect light. You'll also keep the plant healthy by boosting the humidity around it. In fact, its variegated foliage makes Satin Pothos a beautiful addition to a terrarium.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 80
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 74,
+          "fl": 93
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 16,
+          "fl": 41
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Black Cylinder",
+          "status": false
+        },
+        {
+          "name": "White Cylinder",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta",
+          "status": false
+        }
+      ],
+      "sold_out": true
     },
     {
       "id": 40,
-      "main_image": "https://images.loox.io/uploads/2023/2/14/ZZRqQwU7Y_mid.jpg",
-      "title": "C.C.",
-      "ticked": true,
+      "main_image": "https://images.loox.io/uploads/2022/12/3/NJOfti7Pp_mid.jpg",
+      "title": "A.A.",
+      "ticked": false,
       "rate": 4,
-      "description": "The plant looks okay but it needed TLC upon arrival.  There were a number of broken stems that could have happened in shipping.  I hope it recovers and prospers.",
-      "infor": "Tradescantia Callisia 'Pink Panther'",
+      "description": "4inch starfish snake plant. Smaller than I expected but overall pleased. Packaging was five stars.",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/4_SNAKE_STARFISH_1_x100.jpg?v=1655239027",
+      "infor": "Snake Plant 'Starfish'",
       "feature": true,
       "newest": true,
       "highest_rate": true,
-      "lowest_rate": false
+      "lowest_rate": false,
+      "name": "Snake Plant 'Starfish'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_SNAKE_STARFISH_1_445x445.jpg?v=1627696064",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_SNAKE_STARFISH_1_75x75_crop_center.jpg?v=1627696064"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Snake-Starfish-6-DETAIL_126fa8e9-0629-4865-8dcc-d9075fb3b42e_445x445.jpg?v=1627696064",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Snake-Starfish-6-DETAIL_126fa8e9-0629-4865-8dcc-d9075fb3b42e_75x75_crop_center.jpg?v=1627696064"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_SNAKE_STARFISH_2_445x445.jpg?v=1655239036",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_SNAKE_STARFISH_2_75x75_crop_center.jpg?v=1655239036"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Snake-Starfish-6_445x445.jpg?v=1655239036",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Snake-Starfish-6_75x75_crop_center.jpg?v=1655239036"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Snake-Starfish-6-HOLD_5de11806-573c-4cf9-a64b-0da1acea55ca_445x445.jpg?v=1655239036",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Snake-Starfish-6-HOLD_5de11806-573c-4cf9-a64b-0da1acea55ca_75x75_crop_center.jpg?v=1655239036"
+        }
+      ],
+      "price": 13.99,
+      "botanical_name": "Sansevieria Cylindrica",
+      "common_name": "Snake plant Starfish",
+      "detail_description": "This evergreen perennial native to tropical West Africa and Nigeria, is a great addition to any office or household as a natural air purifier. The Starfish  snake plant is a unique variant on a normal snake plant as it has very compact, cylindrical pointed leaves that grows outward giving it a distinct look apart from other snake plants.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 7,
+          "fl": 0
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 28,
+          "fl": 0
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 23,
+          "fl": 23
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "main_image": "https://images.loox.io/uploads/2022/9/18/EkJ7Qty-a_mid.jpg",
+      "title": "N.J.",
+      "ticked": true,
+      "rate": 4,
+      "description": "The plant survived a 12 day trek from the post office. Very frustrated by the delay and no phone number to contact. You can see the leaves are yellowing but hopefully it will do okay with some care. I hope so as it was a housewarming gift!",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/4_MONSTERA_DELICIOSA_1_x100.jpg?v=1636582094",
+      "infor": "Monstera 'Split-Leaf'",
+      "feature": true,
+      "newest": true,
+      "highest_rate": true,
+      "lowest_rate": false,
+      "name": "Monstera 'Split-Leaf'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_black_round_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_black_round_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6-DETAIL_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6-DETAIL_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-4DETAIL_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-4DETAIL_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Huey_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Huey_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Navarro_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Navarro_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-1_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-1_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-3_445x445.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-3_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_FiberPot_445x445.jpg?v=1636582102",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_FiberPot_75x75_crop_center.jpg?v=1636582102"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_TerraCotta_445x445.jpg?v=1636582102",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_TerraCotta_75x75_crop_center.jpg?v=1636582102"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_WhiteRound_445x445.jpg?v=1636582103",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_WhiteRound_75x75_crop_center.jpg?v=1636582103"
+        }
+      ],
+      "price": 19.99,
+      "botanical_name": "Philodendron Monstera deliciosa",
+      "common_name": "Swiss Cheese or Hurricane Plant, Fruit Salad Plant , Monstera",
+      "detail_description": "Native to the tropical forests of Central and South America, these plants have glossy, heart shaped leaves which develops its unique splits in its maturity. It is a climbing, evergreen perennial vine that is perhaps most noted for its large perforated leaves on thick plant stems and its long cord-like aerial roots.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 131,
+          "fl": 104
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 51,
+          "fl": 2
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Black Cylinder",
+          "status": true
+        },
+        {
+          "name": "White Cylinder",
+          "status": true
+        },
+        {
+          "name": "Natural Plant Fiber",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta",
+          "status": true
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "main_image": "https://images.loox.io/uploads/2022/4/18/N134r2LN2_mid.jpg",
+      "title": "G.B.",
+      "ticked": true,
+      "rate": 4,
+      "description": "It’s green will it get any pink splash on it .",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/image_png1945204943_x100.png?v=1643765031",
+      "infor": "Philodendron 'Pink Princess'",
+      "feature": true,
+      "newest": true,
+      "highest_rate": true,
+      "lowest_rate": false,
+      "name": "Philodendron 'Pink Princess'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1945204943_445x445.png?v=1643765030",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1945204943_75x75_crop_center.png?v=1643765030"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_PINKPRINCESS-2_445x445.jpg?v=1634228235",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_PINKPRINCESS-2_75x75_crop_center.jpg?v=1634228235"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/54071f1a-cedc-4323-a78a-5e1d66eb1564_445x445.png?v=1662217567",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/54071f1a-cedc-4323-a78a-5e1d66eb1564_75x75_crop_center.png?v=1662217567"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_TEMP_445x593.jpg?v=1668442600",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_TEMP_57x75_crop_center.jpg?v=1668442600"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_1_445x445.jpg?v=1668442602",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_1_75x75_crop_center.jpg?v=1668442602"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_2_445x445.jpg?v=1668442602",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_2_75x75_crop_center.jpg?v=1668442602"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_3_445x445.jpg?v=1668442602",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/6_PHILODENDRON_PINK.PRINCESS_3_75x75_crop_center.jpg?v=1668442602"
+        }
+      ],
+      "price": 97.99,
+      "botanical_name": "Philodendron erubescens 'pink princess'",
+      "common_name": "Pink Princess",
+      "detail_description": "Apart from the splendid pink and dark green leaves, the plant is identified by large waxy leaves. These leaves can grow up to 9” long and 5” wide. The pinkness on the leaves is due to a lack of chlorophyll—the chemical that makes plants’ leaves green. However, some greenness on the leaves is also necessary so that the plants can photosynthesize.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 0,
+          "fl": 0
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 0,
+          "fl": 2
+        },
+        {
+          "id": 2,
+          "name": "8' Pot",
+          "ca": 10,
+          "fl": 0
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Black Cylinder",
+          "status": false
+        },
+        {
+          "name": "White Cylinder",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta",
+          "status": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "main_image": "https://images.loox.io/uploads/2022/3/17/VJqnTK2b2_mid.jpg",
+      "title": "D.R.",
+      "ticked": false,
+      "rate": 4,
+      "description": "Phyllis arrived nicely packaged. She’s a little smaller than I had hoped for, but she looks completely healthy and I’m sure with the right lighting and watering she will soon adapt to her new home. I was very happy to welcome her into my home.",
+      "small_image": "https://cdn.shopify.com/s/files/1/2528/3612/products/4_PHILODENDRON_BRASIL_1_x100.jpg?v=1627692675",
+      "infor": "Philodendron Hederaceum 'Brasil'",
+      "feature": true,
+      "newest": true,
+      "highest_rate": true,
+      "lowest_rate": false,
+      "name": "Philodendron Hederaceum 'Brasil'",
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_1_445x445.jpg?v=1627692675",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_1_75x75_crop_center.jpg?v=1627692675"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_2_d40563fa-6b03-4edd-8aab-8783216448b3_445x445.jpg?v=1655238824",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_PHILODENDRON_BRASIL_2_d40563fa-6b03-4edd-8aab-8783216448b3_75x75_crop_center.jpg?v=1655238824"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Brasil-4_HOLD_445x445.jpg?v=1655238824",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Brasil-4_HOLD_75x75_crop_center.jpg?v=1655238824"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Brasil-6_445x445.jpg?v=1655238824",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Brasil-6_75x75_crop_center.jpg?v=1655238824"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Brasil-6-HOLD_445x445.jpg?v=1655238824",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Brasil-6-HOLD_75x75_crop_center.jpg?v=1655238824"
+        }
+      ],
+      "price": 13.99,
+      "botanical_name": "Philodendron cordatum",
+      "common_name": "Cordatum Brasil",
+      "detail_description": "This common epyphytic houseplant is native to coastal Brazil and grows in a vinelike or climbing fashion. It wields heartshaped leaves and is a great addition to any office or household as it is very easy to care for, requiring minimal waterings and only needing low to medium indirect sunlight. This particular, 'Brasil' variety, will have segment on each leaf seperating its yellow and green color.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "3' Pot",
+          "ca": 0,
+          "fl": 94
+        },
+        {
+          "id": 1,
+          "name": "4' Pot",
+          "ca": 61,
+          "fl": 33
+        },
+        {
+          "id": 2,
+          "name": "6' Pot",
+          "ca": 21,
+          "fl": 38
+        }
+      ]
     }
   ],
   "card": [
