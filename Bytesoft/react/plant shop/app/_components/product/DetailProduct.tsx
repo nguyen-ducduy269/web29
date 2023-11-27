@@ -9,7 +9,6 @@ import axios from "axios";
 ///// import components
 import { Product } from "@/app/_style-components/detail-product/Product";
 import { Container } from "@/app/_style-components/home-page-css/Container";
-import LooReview from "../home-page/LooReview";
 
 ///// import icons
 import { GoChevronRight } from "react-icons/go";
@@ -356,8 +355,6 @@ const DetailProduct = (props: Props) => {
             </div>
           </div>
         </div>
-
-        <LooReview />
       </Container>
     </Product>
   );
