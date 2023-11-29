@@ -131,8 +131,11 @@ const DetailProduct = (props: Props) => {
                 return (
                   <img
                     src={item.small_image}
-                    onClick={() => onChangeImage(index)}
+                    onClick={() => {
+                      onChangeImage(index);
+                    }}
                     style={{ cursor: "pointer" }}
+                    className={changeImage == index ? "active" : ""}
                     alt=""
                   />
                 );

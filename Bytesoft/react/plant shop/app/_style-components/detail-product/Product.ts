@@ -32,6 +32,11 @@ export const Product = styled.div`
           width: fit-content;
           height: 116px;
         }
+
+        .active {
+          border: 1px solid black;
+          padding: 5px;
+        }
       }
     }
 
