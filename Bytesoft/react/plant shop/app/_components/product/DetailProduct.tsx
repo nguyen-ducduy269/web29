@@ -320,6 +320,7 @@ const DetailProduct = (props: Props) => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      cursor: "pointer",
                     }}
                     onClick={() => {
                       onAddToCart();
@@ -339,6 +340,7 @@ const DetailProduct = (props: Props) => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      cursor: "pointer",
                     }}
                   >
                     Buy with <FcGoogle style={{ marginLeft: "7px" }} />
