@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,11 +22,110 @@ import facebook from "@/public/images/facebook.png";
 import twitter from "@/public/images/twitter.png";
 import linked_in from "@/public/images/linked-in.png";
 import pinterest from "@/public/images/pinterest.png";
+import axios from "axios";
 
-const Collections = () => {
+interface Props {
+  item: string;
+  setSelectedItem: (value: any) => void;
+  title: string;
+}
+
+const Collections = (props: Props) => {
   const [openSortPopUp, setOpenSortPopUp] = useState(false);
   const [openQuickShopPopUp, setOpenQuickShopPopUp] = useState(false);
   const [openChooseOptionPopUp, setOpenChooseOptionPopUp] = useState(false);
+  const [allProduct, setAllProduct] = useState([]);
+  const [popUpInfor, setPopUpInfor] = useState<any>([]);
+  const [changeQuickShopPopUpImg, setChangeQuickShopPopUpImg] = useState(0);
+  const [changePot, setChangePot] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>(1);
+
+  const fetchData = async (url: string) => {
+    const response = await fetch(url);
+    const users = await response.json();
+    setAllProduct(users);
+  };
+
+  useEffect(() => {
+    fetchData(`http://localhost:4001/${props.item}`);
+  }, []);
+
+  const rateStar = (params: number) => {
+    if (params === 5) {
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+        </>
+      );
+    }
+    if (params === 4) {
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <CiStar />
+        </>
+      );
+    }
+    if (params === 3) {
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <CiStar />
+          <CiStar />
+        </>
+      );
+    }
+    if (params === 2) {
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+        </>
+      );
+    }
+    if (params === 1) {
+      return (
+        <>
+          <FaStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+        </>
+      );
+    }
+  };
+
+  const onAddToCart = () => {
+    const total_price = popUpInfor.price * quantity;
+
+    const productAddToCard = {
+      id: popUpInfor.id,
+      name: popUpInfor.name,
+      image: popUpInfor.main_image,
+      size: popUpInfor.pot[changePot].name,
+      price: popUpInfor.price,
+      ca: popUpInfor.pot[changePot].ca,
+      fl: popUpInfor.pot[changePot].fl,
+      quantity: quantity,
+      total_price: total_price,
+    };
+
+    props.setSelectedItem(Math.random());
+    axios.post("http://localhost:4001/card", productAddToCard);
+  };
 
   return (
     <CollectionsStyle>
@@ -291,10 +390,10 @@ const Collections = () => {
 
           <div className="collections">
             <div className="title">
-              <Link href={"/"}>Home</Link> <SlArrowRight /> All PLants
+              <Link href={"/"}>Home</Link> <SlArrowRight /> {props.title}
             </div>
 
-            <h1>All Plants</h1>
+            <h1>{props.title}</h1>
 
             <div className="filter-choice">
               <div className="light">
@@ -632,111 +731,50 @@ const Collections = () => {
             )}
 
             <div className="all-product">
-              <div className="product-item">
-                <img
-                  src="https://houseplantshop.com/cdn/shop/products/route-package-protection-logo_592x592.jpg?v=1687351602"
-                  alt=""
-                />
+              {allProduct.map((item: any) => {
+                return (
+                  <div className="product-item">
+                    <Link
+                      href={"/product"}
+                      onClick={() => {
+                        localStorage.setItem(
+                          "detail-products",
+                          JSON.stringify(item)
+                        );
+                      }}
+                    >
+                      <img src={item.main_image} alt="" />
+                    </Link>
 
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                </div>
+                    <div className="stars">{rateStar(item.rate)}</div>
 
-                <div className="product-price">from $0.98</div>
+                    <div className="product-price">from ${item.price}</div>
 
-                <div className="owner">Route Package Protection</div>
+                    <div className="owner">{item.name}</div>
 
-                <div className="option">
-                  <button
-                    className="quick-shop"
-                    onClick={() => setOpenQuickShopPopUp(true)}
-                  >
-                    Quick shop
-                  </button>
-                  <button
-                    className="choose-option"
-                    onClick={() => setOpenChooseOptionPopUp(true)}
-                  >
-                    Choose Options
-                  </button>
-                </div>
-              </div>
-
-              <div className="product-item">
-                <img
-                  src="https://houseplantshop.com/cdn/shop/products/route-package-protection-logo_592x592.jpg?v=1687351602"
-                  alt=""
-                />
-
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                </div>
-
-                <div className="product-price">from $0.98</div>
-
-                <div className="owner">Route Package Protection</div>
-
-                <div className="option">
-                  <button className="quick-shop">Quick shop</button>
-                  <button className="choose-option">Choose Options</button>
-                </div>
-              </div>
-
-              <div className="product-item">
-                <img
-                  src="https://houseplantshop.com/cdn/shop/products/route-package-protection-logo_592x592.jpg?v=1687351602"
-                  alt=""
-                />
-
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                </div>
-
-                <div className="product-price">from $0.98</div>
-
-                <div className="owner">Route Package Protection</div>
-
-                <div className="option">
-                  <button className="quick-shop">Quick shop</button>
-                  <button className="choose-option">Choose Options</button>
-                </div>
-              </div>
-
-              <div className="product-item">
-                <img
-                  src="https://houseplantshop.com/cdn/shop/products/route-package-protection-logo_592x592.jpg?v=1687351602"
-                  alt=""
-                />
-
-                <div className="stars">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                </div>
-
-                <div className="product-price">from $0.98</div>
-
-                <div className="owner">Route Package Protection</div>
-
-                <div className="option">
-                  <button className="quick-shop">Quick shop</button>
-                  <button className="choose-option">Choose Options</button>
-                </div>
-              </div>
+                    <div className="option">
+                      <button
+                        className="quick-shop"
+                        onClick={() => {
+                          setOpenQuickShopPopUp(true);
+                          setPopUpInfor(item);
+                        }}
+                      >
+                        Quick shop
+                      </button>
+                      <button
+                        className="choose-option"
+                        onClick={() => {
+                          setOpenChooseOptionPopUp(true);
+                          setPopUpInfor(item);
+                        }}
+                      >
+                        Choose Options
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             {openQuickShopPopUp == true ? (
@@ -744,71 +782,32 @@ const Collections = () => {
                 <div className="pop-up">
                   <div className="product-image">
                     <img
-                      src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_570x570.jpg?v=1627692378"
+                      src={
+                        popUpInfor.detail_image[changeQuickShopPopUpImg]
+                          .big_image
+                      }
                       alt=""
                       className="main-img"
                     />
 
                     <div className="more-img">
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
-
-                      <img
-                        src="https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
-                        alt=""
-                      />
+                      {popUpInfor.detail_image.map(
+                        (item: any, index: number) => {
+                          return (
+                            <img
+                              src={item.small_image}
+                              onClick={() => {
+                                setChangeQuickShopPopUpImg(index);
+                              }}
+                              style={{ cursor: "pointer" }}
+                              className={
+                                changeQuickShopPopUpImg == index ? "active" : ""
+                              }
+                              alt=""
+                            />
+                          );
+                        }
+                      )}
                     </div>
                   </div>
 
@@ -817,30 +816,21 @@ const Collections = () => {
                       <ul>
                         <li>
                           <MdCircle /> <strong>Botanical Name :</strong>
-                          Philodendron Monstera deliciosa
+                          {popUpInfor.botanical_name}
                         </li>
 
                         <li>
-                          <MdCircle /> <strong>Common Name(s) :</strong> Swiss
-                          Cheese or Hurricane Plant, Fruit Salad Plant ,
-                          Monstera
+                          <MdCircle /> <strong>Common Name(s) :</strong>
+                          {popUpInfor.common_name}
                         </li>
 
                         <li>
-                          <MdCircle /> <strong>Description :</strong> Native to
-                          the tropical forests of Central and South America,
-                          these plants have glossy, heart shaped leaves which
-                          develops its unique splits in its maturity. It is a
-                          climbing, evergreen perennial vine that is perhaps
-                          most noted for its large perforated leaves on thick
-                          plant stems and its long cord-like aerial roots.
+                          <MdCircle /> <strong>Description :</strong>{" "}
+                          {popUpInfor.detail_description}
                         </li>
                       </ul>
 
-                      <div className="covid">
-                        *due to COVID inventory issues on the raw materials,
-                        planters are not shipped with the saucer.
-                      </div>
+                      <div className="covid">{popUpInfor.covid}</div>
 
                       <div className="share-contact">
                         <p>Share this:</p>
@@ -874,30 +864,52 @@ const Collections = () => {
                     </div>
 
                     <div className="summary">
-                      <div className="name">Monstera 'Split-Leaf'</div>
+                      <div className="name">{popUpInfor.name}</div>
 
-                      <div className="price">$19.99</div>
+                      <div className="price">${popUpInfor.price}</div>
 
                       <div className="choose-size">
                         <div className="title">Size</div>
 
                         <div className="button">
-                          <button className="active">4" Pot</button>
-                          <button>6" Pot</button>
+                          {popUpInfor.pot.map((item: any, index: number) => {
+                            return (
+                              <button
+                                className={changePot == item.id ? "active" : ""}
+                                onClick={() => setChangePot(index)}
+                                style={{ cursor: "pointer" }}
+                                key={item.id}
+                              >
+                                {item.name}
+                              </button>
+                            );
+                          })}
                         </div>
                       </div>
 
-                      <div className="choose-type">
-                        <div className="title">Pop Type</div>
+                      {popUpInfor.pot_style ? (
+                        <div className="choose-type">
+                          <div className="title">Pop Type</div>
 
-                        <div className="type">
-                          <button className="active">Nursery Pot</button>
-                          <button>Black Cylinder</button>
-                          <button>White Cylinder</button>
-                          <button>Natural Plant Fiber</button>
-                          <button>Terra Cotta</button>
+                          <div className="type">
+                            {popUpInfor.pot_style.map((item: any) => {
+                              return (
+                                <button
+                                  className={
+                                    item.status == true ? "active" : ""
+                                  }
+                                  style={{ cursor: "pointer" }}
+                                  key={item.id}
+                                >
+                                  {item.name}
+                                </button>
+                              );
+                            })}
+                          </div>
                         </div>
-                      </div>
+                      ) : (
+                        ""
+                      )}
 
                       <form action="">
                         <label htmlFor="">Quantity</label>
@@ -907,9 +919,200 @@ const Collections = () => {
                           id=""
                           min={1}
                           placeholder="1"
+                          value={quantity}
+                          onChange={(e: any) => setQuantity(e.target.value)}
                         />
                       </form>
 
+                      {popUpInfor.sold_out == true ? (
+                        <>
+                          <button
+                            style={{
+                              height: "48px",
+                              color: "white",
+                              backgroundColor: "gray",
+                              width: "100%",
+                              fontWeight: "500",
+                              fontSize: "16px",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                          >
+                            Sold Out
+                          </button>
+
+                          <button
+                            style={{
+                              height: "48px",
+                              color: "white",
+                              backgroundColor: "gray",
+                              width: "100%",
+                              fontWeight: "500",
+                              fontSize: "16px",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                          >
+                            Buy with <FcGoogle /> Pay
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          <button
+                            style={{
+                              height: "48px",
+                              color: "#1e8570",
+                              backgroundColor: "white",
+                              width: "100%",
+                              fontWeight: "500",
+                              fontSize: "16px",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              marginBottom: "10px",
+                              border: "1px solid #dddddd",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => {
+                              onAddToCart();
+                              setOpenQuickShopPopUp(false);
+                            }}
+                          >
+                            Add to Cart
+                          </button>
+
+                          <button
+                            style={{
+                              height: "48px",
+                              color: "white",
+                              backgroundColor: "black",
+                              width: "100%",
+                              fontWeight: "500",
+                              fontSize: "16px",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              cursor: "pointer",
+                            }}
+                          >
+                            Buy with <FcGoogle /> Pay
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </div>
+
+                  <div
+                    className="exit"
+                    onClick={() => setOpenQuickShopPopUp(false)}
+                  >
+                    <IoCloseSharp />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {openChooseOptionPopUp == true ? (
+              <div className="choose-option-pop-up">
+                <div className="choose-option">
+                  <div className="name">{popUpInfor.name}</div>
+
+                  <div className="price">${popUpInfor.price}</div>
+
+                  <div className="choose-size">
+                    <div className="title">Size</div>
+
+                    <div className="button">
+                      {popUpInfor.pot.map((item: any, index: number) => {
+                        return (
+                          <button
+                            className={changePot == item.id ? "active" : ""}
+                            onClick={() => setChangePot(index)}
+                            style={{ cursor: "pointer" }}
+                            key={item.id}
+                          >
+                            {item.name}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {popUpInfor.pot_style ? (
+                    <div className="choose-type">
+                      <div className="title">Pop Type</div>
+
+                      <div className="type">
+                        {popUpInfor.pot_style.map((item: any) => {
+                          return (
+                            <button
+                              className={item.status == true ? "active" : ""}
+                              style={{ cursor: "pointer" }}
+                              key={item.id}
+                            >
+                              {item.name}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+
+                  <form action="">
+                    <label htmlFor="">Quantity</label>
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      min={1}
+                      placeholder="1"
+                      value={quantity}
+                      onChange={(e: any) => setQuantity(e.target.value)}
+                    />
+                  </form>
+
+                  {popUpInfor.sold_out == true ? (
+                    <>
+                      <button
+                        style={{
+                          height: "48px",
+                          color: "white",
+                          backgroundColor: "gray",
+                          width: "100%",
+                          fontWeight: "500",
+                          fontSize: "16px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Sold Out
+                      </button>
+
+                      <button
+                        style={{
+                          height: "48px",
+                          color: "white",
+                          backgroundColor: "gray",
+                          width: "100%",
+                          fontWeight: "500",
+                          fontSize: "16px",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        Buy with <FcGoogle /> Pay
+                      </button>
+                    </>
+                  ) : (
+                    <>
                       <button
                         style={{
                           height: "48px",
@@ -924,6 +1127,10 @@ const Collections = () => {
                           marginBottom: "10px",
                           border: "1px solid #dddddd",
                           cursor: "pointer",
+                        }}
+                        onClick={() => {
+                          onAddToCart();
+                          setOpenChooseOptionPopUp(false);
                         }}
                       >
                         Add to Cart
@@ -945,95 +1152,8 @@ const Collections = () => {
                       >
                         Buy with <FcGoogle /> Pay
                       </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="exit"
-                    onClick={() => setOpenQuickShopPopUp(false)}
-                  >
-                    <IoCloseSharp />
-                  </div>
-                </div>
-              </div>
-            ) : (
-              ""
-            )}
-
-            {openChooseOptionPopUp == true ? (
-              <div className="choose-option-pop-up">
-                <div className="choose-option">
-                  <div className="name">Monstera 'Split-Leaf'</div>
-
-                  <div className="price">$19.99</div>
-
-                  <div className="choose-size">
-                    <div className="title">Size</div>
-
-                    <div className="button">
-                      <button className="active">4" Pot</button>
-                      <button>6" Pot</button>
-                    </div>
-                  </div>
-
-                  <div className="choose-type">
-                    <div className="title">Pop Type</div>
-
-                    <div className="type">
-                      <button className="active">Nursery Pot</button>
-                      <button>Black Cylinder</button>
-                      <button>White Cylinder</button>
-                      <button>Natural Plant Fiber</button>
-                      <button>Terra Cotta</button>
-                    </div>
-                  </div>
-
-                  <form action="">
-                    <label htmlFor="">Quantity</label>
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      min={1}
-                      placeholder="1"
-                    />
-                  </form>
-
-                  <button
-                    style={{
-                      height: "48px",
-                      color: "#1e8570",
-                      backgroundColor: "white",
-                      width: "100%",
-                      fontWeight: "500",
-                      fontSize: "16px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      marginBottom: "10px",
-                      border: "1px solid #dddddd",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Add to Cart
-                  </button>
-
-                  <button
-                    style={{
-                      height: "48px",
-                      color: "white",
-                      backgroundColor: "black",
-                      width: "100%",
-                      fontWeight: "500",
-                      fontSize: "16px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Buy with <FcGoogle /> Pay
-                  </button>
+                    </>
+                  )}
 
                   <div
                     className="exit"

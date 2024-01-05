@@ -10,13 +10,19 @@ import Footer from "@/app/_components/home-page/Footer";
 
 const Shop = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+  const item = "all_product";
+  const title = "All Plants";
 
   return (
     <>
       <Header />
       <Bar />
       <SiteHeader selectedItem={selectedItem} />
-      <Collections />
+      <Collections
+        item={item}
+        title={title}
+        setSelectedItem={setSelectedItem}
+      />
       <Footer />
     </>
   );

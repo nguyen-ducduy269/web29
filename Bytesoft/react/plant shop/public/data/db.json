@@ -2869,34 +2869,154 @@
   ],
   "card": [
     {
-      "id": "new product",
-      "name": "Monstera Deliciosa Mint Large Form",
-      "price": 999.99,
-      "image": "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
-      "quantity": "4",
-      "total_price": 3999.96
-    },
-    {
-      "name": "Pothos 'Neon'",
-      "image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_592x592.jpg?v=1687233535",
-      "size": "4' Pot",
-      "price": 13.99,
-      "ca": 141,
-      "fl": 90,
-      "quantity": "4",
-      "total_price": 55.96,
-      "id": "NfmpYBk"
-    },
-    {
-      "name": "Aloe Vera",
-      "image": "https://houseplantshop.com/cdn/shop/products/4_SUCC_ALOE_VERA_1_592x592.jpg?v=1627922614",
+      "id": 18,
+      "name": "String of Hearts Variegated",
+      "image": "https://houseplantshop.com/cdn/shop/products/5a2e0547-fac5-42f9-a77f-2c13c815f134_592x789.png?v=1664998449",
       "size": "3' Pot",
-      "price": 13.99,
+      "price": 22.99,
+      "ca": 18,
+      "fl": 0,
+      "quantity": "2",
+      "total_price": 45.98
+    },
+    {
+      "id": 27,
+      "name": "Monstera Adansonii 'Swiss Cheese'",
+      "image": "https://houseplantshop.com/cdn/shop/products/image_png_1350410938_445x445.png?v=1643765015",
+      "size": "4' Pot",
+      "price": 20.99,
       "ca": 0,
-      "fl": 43,
+      "fl": 30,
       "quantity": 1,
-      "total_price": 13.99,
-      "id": "CUdjqjJ"
+      "total_price": 20.99
+    },
+    {
+      "id": 32,
+      "name": "Hoya 'Australis'",
+      "image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_1_e3c53e72-34a3-4977-b5c3-69f4d91ca3cd_445x445.jpg?v=1654049443",
+      "size": "6' Pot",
+      "price": 39.99,
+      "ca": 40,
+      "fl": 0,
+      "quantity": "5",
+      "total_price": 199.95000000000002
+    },
+    {
+      "id": 5,
+      "name": " Ficus Elastica 'Burgundy'",
+      "image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
+      "size": "6' Pot",
+      "price": 22.99,
+      "ca": 25,
+      "fl": 29,
+      "quantity": "8",
+      "total_price": 183.92
     }
-  ]
+  ],
+  "all_product": [
+    {
+      "id": 1,
+      "main_image": "https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_592x592.jpg?v=1627692378",
+      "rate": 5,
+      "name": "Monstera 'Split-Leaf'",
+      "price": 19.99,
+      "detail_image": [
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_black_round_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_black_round_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6-DETAIL_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6-DETAIL_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-4DETAIL_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-4DETAIL_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Huey_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Huey_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Navarro_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/Philodendron_Monstera_Navarro_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/1-Philodendron-Monstera-6_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-1_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-1_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-3_592x592.jpg?v=1627692378",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/8-MONSTERA-3_75x75_crop_center.jpg?v=1627692378"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_FiberPot_592x592.jpg?v=1636582102",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_FiberPot_75x75_crop_center.jpg?v=1636582102"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_TerraCotta_592x592.jpg?v=1636582102",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_TerraCotta_75x75_crop_center.jpg?v=1636582102"
+        },
+        {
+          "big_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_WhiteRound_592x592.jpg?v=1636582103",
+          "small_image": "https://houseplantshop.com/cdn/shop/products/MonsteraDeliciosa_WhiteRound_75x75_crop_center.jpg?v=1636582103"
+        }
+      ],
+      "botanical_name": "Philodendron Monstera deliciosa",
+      "common_name": "Swiss Cheese or Hurricane Plant, Fruit Salad Plant , Monstera",
+      "detail_description": "Native to the tropical forests of Central and South America, these plants have glossy, heart shaped leaves which develops its unique splits in its maturity. It is a climbing, evergreen perennial vine that is perhaps most noted for its large perforated leaves on thick plant stems and its long cord-like aerial roots.",
+      "covid": "*due to COVID inventory issues on the raw materials, planters are not shipped with the saucer.",
+      "pot": [
+        {
+          "id": 0,
+          "name": "4' Pot",
+          "ca": 129,
+          "fl": 80
+        },
+        {
+          "id": 1,
+          "name": "6' Pot",
+          "ca": 47,
+          "fl": 19
+        }
+      ],
+      "pot_style": [
+        {
+          "name": "Nursery Pot",
+          "status": true
+        },
+        {
+          "name": "Black Cylinder",
+          "status": true
+        },
+        {
+          "name": "White Cylinder",
+          "status": true
+        },
+        {
+          "name": "Natural Plant Fiber",
+          "status": false
+        },
+        {
+          "name": "Terra Cotta Standard",
+          "status": false
+        }
+      ],
+      "low_light": false,
+      "mini": false,
+      "small": true,
+      "medium": true,
+      "large": true,
+      "cutting": false
+    }
+  ],
+  "holiday_plant": []
 }

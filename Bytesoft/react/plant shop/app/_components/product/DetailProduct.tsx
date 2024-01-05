@@ -98,6 +98,7 @@ const DetailProduct = (props: Props) => {
   const total_price = product.price * quantity;
 
   const productAddToCard = {
+    id: product.id,
     name: product.name,
     image: product.detail_image[0].big_image,
     size: product.pot[changePot].name,
@@ -111,6 +112,8 @@ const DetailProduct = (props: Props) => {
   const onAddToCart = () => {
     props.setSelectedItem(Math.random());
     axios.post("http://localhost:4001/card", productAddToCard);
+    alert("Successfull add product to your card! Continue Shopping?");
+    window.location.href = "http://localhost:3000";
   };
 
   return (

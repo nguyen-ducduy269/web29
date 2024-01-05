@@ -84,7 +84,7 @@ const SiteHeader = (props: Props) => {
               <div className="shopping">
                 <div className="shopping-cart">
                   <FaShoppingCart />
-                  <div className="number-cart">10</div>
+                  <div className="number-cart">{cardNumber.length}</div>
                 </div>
               </div>
             </div>
