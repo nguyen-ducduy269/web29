@@ -9,13 +9,14 @@ import { Container } from "@/app/_style-components/home-page-css/Container";
 
 ///// import icons
 import { SlArrowRight } from "react-icons/sl";
-import { AiFillCloseCircle } from "react-icons/ai";
 import { CgDisplayGrid } from "react-icons/cg";
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { MdCircle, MdOutlineFilterAlt } from "react-icons/md";
 import { IoCloseSharp } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
+import { BsChevronDoubleLeft } from "react-icons/bs";
+import { BsChevronDoubleRight } from "react-icons/bs";
 
 ///// import images
 import facebook from "@/public/images/facebook.png";
@@ -106,6 +107,17 @@ const Collections = (props: Props) => {
         </>
       );
     }
+    if (params === 0) {
+      return (
+        <>
+          <CiStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+        </>
+      );
+    }
   };
 
   const onAddToCart = () => {
@@ -131,301 +143,12 @@ const Collections = (props: Props) => {
     <CollectionsStyle>
       <Container>
         <div className="shoptify-collection">
-          <div className="filter">
-            <h4>Filters</h4>
-
-            <div className="filter-option">
-              <div className="title">Light</div>
-
-              <form action="">
-                <input type="checkbox" value={"low_light"} />
-                <label htmlFor="">Low Light</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"bright_light"} />
-                <label htmlFor="">Bright Light</label>
-              </form>
-            </div>
-
-            <div className="filter-option">
-              <div className="title">Plant Size</div>
-
-              <form action="">
-                <input type="checkbox" value={"mini"} />
-                <label htmlFor="">Mini (2"-3" Pot)</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"small"} />
-                <label htmlFor="">Small (4" Pot)</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"medium"} />
-                <label htmlFor="">Medium (6" Pot)</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"large"} />
-                <label htmlFor="">Large (8"-10" Pot)</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"cutting"} />
-                <label htmlFor="">Cuttings</label>
-              </form>
-            </div>
-
-            <div className="filter-option">
-              <div className="title">Genus</div>
-
-              <form action="">
-                <input type="checkbox" value={"zantedeschia"} />
-                <label htmlFor="">Zantedeschia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"alocasia"} />
-                <label htmlFor="">Alocasia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"amaryllis"} />
-                <label htmlFor="">Amaryllis</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"amydrium"} />
-                <label htmlFor="">Amydrium</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"anthurium"} />
-                <label htmlFor="">Anthurium</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"aralia"} />
-                <label htmlFor="">Aralia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"aralia"} />
-                <label htmlFor="">Aralia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"azalea"} />
-                <label htmlFor="">Azalea</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"begonia"} />
-                <label htmlFor="">Begonia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"bromeliad"} />
-                <label htmlFor="">Bromeliad</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"cactus"} />
-                <label htmlFor="">Cactus</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"calathea"} />
-                <label htmlFor="">Calathea</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"carnivorous"} />
-                <label htmlFor="">Carnivorous</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"castanospermum"} />
-                <label htmlFor="">Castanospermum</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"chinese_evergreen"} />
-                <label htmlFor="">Chinese Evergreen</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"clusia"} />
-                <label htmlFor="">Clusia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"fern"} />
-                <label htmlFor="">Fern</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"monstera"} />
-                <label htmlFor="">Monstera</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"orchid"} />
-                <label htmlFor="">Orchid</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"palm"} />
-                <label htmlFor="">Palm</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"philodendron"} />
-                <label htmlFor="">Philodendron</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"pothos"} />
-                <label htmlFor="">Pothos</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"snake"} />
-                <label htmlFor="">Snake</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"succ_euphorbia"} />
-                <label htmlFor="">Succ. Euphorbia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"succulent_huernia"} />
-                <label htmlFor="">Succulent_ Huernia</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"succulent_all"} />
-                <label htmlFor="">Succulent_All</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"succulent_orbea"} />
-                <label htmlFor="">Succulent_Orbea</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"succulent_senecio"} />
-                <label htmlFor="">Succulent_Senecio</label>
-              </form>
-            </div>
-
-            <div className="filter-option">
-              <div className="title">Type</div>
-
-              <form action="">
-                <input type="checkbox" value={"flowering"} />
-                <label htmlFor="">Flowering</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"potted"} />
-                <label htmlFor="">Pre Potted</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"rare_plants"} />
-                <label htmlFor="">Rare Plants</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"succulents"} />
-                <label htmlFor="">Succulents and Cacti</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"tropical"} />
-                <label htmlFor="">Tropical Indoor Plant</label>
-              </form>
-            </div>
-
-            <div className="filter-option">
-              <div className="title">Benefits</div>
-
-              <form action="">
-                <input type="checkbox" value={"purifier"} />
-                <label htmlFor="">Air Purifier</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"care"} />
-                <label htmlFor="">Easy Care</label>
-              </form>
-
-              <form action="">
-                <input type="checkbox" value={"pet"} />
-                <label htmlFor="">Pet Friendly</label>
-              </form>
-            </div>
-
-            <div className="filter-option">
-              <div className="title">New</div>
-
-              <form action="">
-                <input type="checkbox" value={"arrival"} />
-                <label htmlFor="">Arrival</label>
-              </form>
-            </div>
-
-            <div className="filter-option">
-              <div className="title">Sale</div>
-
-              <form action="">
-                <input type="checkbox" value={"discounted"} />
-                <label htmlFor="">Discounted Items</label>
-              </form>
-            </div>
-          </div>
-
           <div className="collections">
             <div className="title">
               <Link href={"/"}>Home</Link> <SlArrowRight /> {props.title}
             </div>
 
             <h1>{props.title}</h1>
-
-            <div className="filter-choice">
-              <div className="light">
-                Light - Low Light <AiFillCloseCircle />
-              </div>
-
-              <div className="plant-size">
-                Plant Size - Mini (2"-3" Pot) <AiFillCloseCircle />
-              </div>
-
-              <div className="genus">
-                Genus - Alocasia <AiFillCloseCircle />
-              </div>
-
-              <div className="type">
-                Type - Flowering <AiFillCloseCircle />
-              </div>
-
-              <div className="benefits">
-                Benefits - Air Purifier <AiFillCloseCircle />
-              </div>
-
-              <div className="new">
-                New - Arrival <AiFillCloseCircle />
-              </div>
-
-              <div className="sale">
-                Sale - Discounted Items <AiFillCloseCircle />
-              </div>
-
-              <button>Remove all filters</button>
-            </div>
 
             <div className="sort">
               <div className="sort-by">
@@ -438,8 +161,6 @@ const Collections = (props: Props) => {
                   <option value="">Alphabetically, Z-A</option>
                   <option value="">Price, low to high</option>
                   <option value="">Price, high to low</option>
-                  <option value="">Date, old to new</option>
-                  <option value="">Date, new to old</option>
                 </select>
               </div>
 
@@ -471,258 +192,12 @@ const Collections = (props: Props) => {
                   </div>
 
                   <div className="option">
-                    <div className="filter-option">
-                      <div className="title">Light</div>
-
-                      <form action="">
-                        <input type="checkbox" value={"low_light"} />
-                        <label htmlFor="">Low Light</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"bright_light"} />
-                        <label htmlFor="">Bright Light</label>
-                      </form>
-                    </div>
-
-                    <div className="filter-option">
-                      <div className="title">Plant Size</div>
-
-                      <form action="">
-                        <input type="checkbox" value={"mini"} />
-                        <label htmlFor="">Mini (2"-3" Pot)</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"small"} />
-                        <label htmlFor="">Small (4" Pot)</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"medium"} />
-                        <label htmlFor="">Medium (6" Pot)</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"large"} />
-                        <label htmlFor="">Large (8"-10" Pot)</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"cutting"} />
-                        <label htmlFor="">Cuttings</label>
-                      </form>
-                    </div>
-
-                    <div className="filter-option">
-                      <div className="title">Genus</div>
-
-                      <form action="">
-                        <input type="checkbox" value={"zantedeschia"} />
-                        <label htmlFor="">Zantedeschia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"alocasia"} />
-                        <label htmlFor="">Alocasia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"amaryllis"} />
-                        <label htmlFor="">Amaryllis</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"amydrium"} />
-                        <label htmlFor="">Amydrium</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"anthurium"} />
-                        <label htmlFor="">Anthurium</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"aralia"} />
-                        <label htmlFor="">Aralia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"aralia"} />
-                        <label htmlFor="">Aralia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"azalea"} />
-                        <label htmlFor="">Azalea</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"begonia"} />
-                        <label htmlFor="">Begonia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"bromeliad"} />
-                        <label htmlFor="">Bromeliad</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"cactus"} />
-                        <label htmlFor="">Cactus</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"calathea"} />
-                        <label htmlFor="">Calathea</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"carnivorous"} />
-                        <label htmlFor="">Carnivorous</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"castanospermum"} />
-                        <label htmlFor="">Castanospermum</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"chinese_evergreen"} />
-                        <label htmlFor="">Chinese Evergreen</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"clusia"} />
-                        <label htmlFor="">Clusia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"fern"} />
-                        <label htmlFor="">Fern</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"monstera"} />
-                        <label htmlFor="">Monstera</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"orchid"} />
-                        <label htmlFor="">Orchid</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"palm"} />
-                        <label htmlFor="">Palm</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"philodendron"} />
-                        <label htmlFor="">Philodendron</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"pothos"} />
-                        <label htmlFor="">Pothos</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"snake"} />
-                        <label htmlFor="">Snake</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"succ_euphorbia"} />
-                        <label htmlFor="">Succ. Euphorbia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"succulent_huernia"} />
-                        <label htmlFor="">Succulent_ Huernia</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"succulent_all"} />
-                        <label htmlFor="">Succulent_All</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"succulent_orbea"} />
-                        <label htmlFor="">Succulent_Orbea</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"succulent_senecio"} />
-                        <label htmlFor="">Succulent_Senecio</label>
-                      </form>
-                    </div>
-
-                    <div className="filter-option">
-                      <div className="title">Type</div>
-
-                      <form action="">
-                        <input type="checkbox" value={"flowering"} />
-                        <label htmlFor="">Flowering</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"potted"} />
-                        <label htmlFor="">Pre Potted</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"rare_plants"} />
-                        <label htmlFor="">Rare Plants</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"succulents"} />
-                        <label htmlFor="">Succulents and Cacti</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"tropical"} />
-                        <label htmlFor="">Tropical Indoor Plant</label>
-                      </form>
-                    </div>
-
-                    <div className="filter-option">
-                      <div className="title">Benefits</div>
-
-                      <form action="">
-                        <input type="checkbox" value={"purifier"} />
-                        <label htmlFor="">Air Purifier</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"care"} />
-                        <label htmlFor="">Easy Care</label>
-                      </form>
-
-                      <form action="">
-                        <input type="checkbox" value={"pet"} />
-                        <label htmlFor="">Pet Friendly</label>
-                      </form>
-                    </div>
-
-                    <div className="filter-option">
-                      <div className="title">New</div>
-
-                      <form action="">
-                        <input type="checkbox" value={"arrival"} />
-                        <label htmlFor="">Arrival</label>
-                      </form>
-                    </div>
-
-                    <div className="filter-option">
-                      <div className="title">Sale</div>
-
-                      <form action="">
-                        <input type="checkbox" value={"discounted"} />
-                        <label htmlFor="">Discounted Items</label>
-                      </form>
-                    </div>
+                    <div className="filter-option">Featured</div>
+                    <div className="filter-option">Best Selling</div>
+                    <div className="filter-option">Alphabetically, A-Z</div>
+                    <div className="filter-option">Alphabetically, Z-A</div>
+                    <div className="filter-option">Price, low to high</div>
+                    <div className="filter-option">Price, high to low</div>
                   </div>
                 </div>
               </div>
@@ -762,15 +237,28 @@ const Collections = (props: Props) => {
                       >
                         Quick shop
                       </button>
-                      <button
-                        className="choose-option"
-                        onClick={() => {
-                          setOpenChooseOptionPopUp(true);
-                          setPopUpInfor(item);
-                        }}
-                      >
-                        Choose Options
-                      </button>
+                      {item.sold_out == true ? (
+                        <button
+                          style={{
+                            backgroundColor: "#808080ba",
+                            border: "unset",
+                            color: "#00634b",
+                            fontWeight: "600",
+                          }}
+                        >
+                          Sold Out
+                        </button>
+                      ) : (
+                        <button
+                          className="choose-option"
+                          onClick={() => {
+                            setOpenChooseOptionPopUp(true);
+                            setPopUpInfor(item);
+                          }}
+                        >
+                          Choose Options
+                        </button>
+                      )}
                     </div>
                   </div>
                 );
@@ -937,6 +425,7 @@ const Collections = (props: Props) => {
                               display: "flex",
                               justifyContent: "center",
                               alignItems: "center",
+                              border: "unset",
                             }}
                           >
                             Sold Out
@@ -951,6 +440,8 @@ const Collections = (props: Props) => {
                               fontWeight: "500",
                               fontSize: "16px",
                               display: "flex",
+                              marginTop: "10px",
+                              border: "unset",
                               justifyContent: "center",
                               alignItems: "center",
                             }}
@@ -1166,6 +657,18 @@ const Collections = (props: Props) => {
             ) : (
               ""
             )}
+
+            <div className="change-page">
+              <button>
+                <BsChevronDoubleLeft /> Previous Page
+              </button>
+              <div>1</div>
+              <div>2</div>
+              <div>...</div>
+              <button>
+                Next Page <BsChevronDoubleRight />
+              </button>
+            </div>
           </div>
         </div>
       </Container>

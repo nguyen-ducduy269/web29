@@ -52,32 +52,6 @@ export const CollectionsStyle = styled.div`
         margin: 20px 0px 20px 0px;
       }
 
-      .filter-choice {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 30px;
-        div {
-          padding: 7px 15px 7px 15px;
-          display: flex;
-          align-items: center;
-          gap: 7px;
-          background-color: #f8ba8c;
-          color: white;
-          font-size: 14px;
-          font-weight: 700;
-        }
-
-        button {
-          border: unset;
-          background-color: white;
-          color: #f8ba8c;
-          font-size: 14px;
-          font-weight: 600;
-        }
-      }
-
       .sort {
         width: 100%;
         background-color: #f6f6f6;
@@ -127,6 +101,7 @@ export const CollectionsStyle = styled.div`
           border: 1px solid #0000002e;
           border-radius: 5px;
           padding: 15px;
+          width: 100%;
           height: fit-content;
           img {
             width: 100%;
@@ -474,6 +449,29 @@ export const CollectionsStyle = styled.div`
           }
         }
       }
+
+      .change-page {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        button {
+          width: 130px;
+          padding: 10px 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #f8ba8c;
+          border: unset;
+          color: #00634b;
+          font-weight: 600;
+        }
+      }
     }
   }
 
@@ -537,14 +535,16 @@ export const CollectionsStyle = styled.div`
           left: 0;
           right: 0;
           bottom: 0;
+          display: flex;
+          align-items: center;
           .pop-up {
             background-color: white;
             width: 90%;
             margin: 0 auto;
-            height: 100%;
+            height: fit-content;
             margin-top: 20px;
             margin-bottom: 20px;
-            padding: 20px;
+            padding: 30px;
             .side-bar {
               width: 100%;
               display: flex;
@@ -560,21 +560,6 @@ export const CollectionsStyle = styled.div`
             .option {
               .filter-option {
                 margin-top: 20px;
-                .title {
-                  font-size: 18px;
-                  font-weight: 600;
-                }
-
-                form {
-                  margin-top: 10px;
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-                  label {
-                    font-size: 14px;
-                    font-weight: 500;
-                  }
-                }
               }
             }
           }
@@ -686,6 +671,19 @@ export const CollectionsStyle = styled.div`
             width: 90%;
           }
         }
+
+        .change-page {
+          justify-content: space-between;
+          gap: 10px;
+          button {
+            width: 100px;
+            font-size: 10px;
+          }
+
+          div {
+            font-size: 12px;
+          }
+        }
       }
     }
   }
@@ -750,14 +748,16 @@ export const CollectionsStyle = styled.div`
           left: 0;
           right: 0;
           bottom: 0;
+          display: flex;
+          align-items: center;
           .pop-up {
             background-color: white;
             width: 90%;
             margin: 0 auto;
-            height: 100%;
+            height: fit-content;
             margin-top: 20px;
             margin-bottom: 20px;
-            padding: 20px;
+            padding: 30px;
             .side-bar {
               width: 100%;
               display: flex;
@@ -773,21 +773,6 @@ export const CollectionsStyle = styled.div`
             .option {
               .filter-option {
                 margin-top: 20px;
-                .title {
-                  font-size: 18px;
-                  font-weight: 600;
-                }
-
-                form {
-                  margin-top: 10px;
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-                  label {
-                    font-size: 14px;
-                    font-weight: 500;
-                  }
-                }
               }
             }
           }
@@ -867,6 +852,19 @@ export const CollectionsStyle = styled.div`
             width: 90%;
           }
         }
+
+        .change-page {
+          justify-content: center;
+          gap: 15px;
+          button {
+            width: 100px;
+            font-size: 10px;
+          }
+
+          div {
+            font-size: 12px;
+          }
+        }
       }
     }
   }
@@ -931,14 +929,16 @@ export const CollectionsStyle = styled.div`
           left: 0;
           right: 0;
           bottom: 0;
+          display: flex;
+          align-items: center;
           .pop-up {
             background-color: white;
             width: 90%;
             margin: 0 auto;
-            height: 100%;
+            height: fit-content;
             margin-top: 20px;
             margin-bottom: 20px;
-            padding: 20px;
+            padding: 30px;
             .side-bar {
               width: 100%;
               display: flex;
@@ -954,21 +954,6 @@ export const CollectionsStyle = styled.div`
             .option {
               .filter-option {
                 margin-top: 20px;
-                .title {
-                  font-size: 18px;
-                  font-weight: 600;
-                }
-
-                form {
-                  margin-top: 10px;
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-                  label {
-                    font-size: 14px;
-                    font-weight: 500;
-                  }
-                }
               }
             }
           }
@@ -1046,6 +1031,19 @@ export const CollectionsStyle = styled.div`
         .choose-option-pop-up {
           .choose-option {
             width: 90%;
+          }
+        }
+
+        .change-page {
+          justify-content: center;
+          gap: 20px;
+          button {
+            width: 130px;
+            font-size: 14px;
+          }
+
+          div {
+            font-size: 14px;
           }
         }
       }
@@ -1237,7 +1235,7 @@ export const CollectionsStyle = styled.div`
         }
 
         .all-product {
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(5, 1fr);
           .product-item {
             .option {
               display: block;
@@ -1370,7 +1368,7 @@ export const CollectionsStyle = styled.div`
         }
 
         .all-product {
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           .product-item {
             .option {
               display: block;
@@ -1430,9 +1428,9 @@ export const CollectionsStyle = styled.div`
               .more-img {
                 width: 40%;
                 display: flex;
-                flex-wrap: wrap;
+                gap: 10px;
                 align-content: flex-start;
-                gap: 5px;
+                justify-content: flex-start;
               }
             }
 

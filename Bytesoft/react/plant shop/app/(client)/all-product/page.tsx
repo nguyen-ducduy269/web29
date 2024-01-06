@@ -10,7 +10,7 @@ import Footer from "@/app/_components/home-page/Footer";
 
 const Shop = () => {
   const [selectedItem, setSelectedItem] = useState(null);
-  const item = "all_product";
+  const item = "all_product?_page=1&_per_page=25";
   const title = "All Plants";
 
   return (

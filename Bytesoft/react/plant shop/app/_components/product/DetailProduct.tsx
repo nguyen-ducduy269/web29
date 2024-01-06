@@ -89,6 +89,17 @@ const DetailProduct = (props: Props) => {
         </>
       );
     }
+    if (params === 0) {
+      return (
+        <>
+          <CiStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+        </>
+      );
+    }
   };
 
   const onChangeImage = (params: number) => {

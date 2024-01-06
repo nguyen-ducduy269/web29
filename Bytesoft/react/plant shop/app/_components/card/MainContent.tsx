@@ -31,7 +31,6 @@ const MainContent = () => {
   }
 
   const deleteProduct = (id: any) => {
-    console.log("id", id);
     if (confirm("Are you sure to delete this product?")) {
       axios.delete(`http://localhost:4001/card/${id}`);
       window.location.reload();

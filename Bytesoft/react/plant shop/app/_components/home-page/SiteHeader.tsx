@@ -59,7 +59,7 @@ const SiteHeader = (props: Props) => {
 
           <div className="site-main">
             <div className="site-page">
-              <Link href={"/shop"}>Shop</Link>
+              <Link href={"/all-product"}>All Product</Link>
               <Link href={"/holiday"}>Holiday Plants</Link>
               <Link href={"/care"}>Plants Care</Link>
               <Link href={"/subscription"}>Monthly Subscription Box</Link>

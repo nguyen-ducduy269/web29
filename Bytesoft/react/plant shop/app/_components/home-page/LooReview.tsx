@@ -95,6 +95,17 @@ const LooReview = () => {
         </>
       );
     }
+    if (params === 0) {
+      return (
+        <>
+          <CiStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+          <CiStar />
+        </>
+      );
+    }
   };
 
   return (

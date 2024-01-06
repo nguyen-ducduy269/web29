@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Carousel } from "antd";
 import { Slide } from "../../_style-components/home-page-css/Slide";
-import Aos from "aos";
 
 const data = [
   {
@@ -44,26 +43,20 @@ const data = [
 ];
 
 const Flickity = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   return (
     <Slide>
       <Carousel autoplay>
         {data.map((item: any) => {
           return (
-            <div data-aos="fade-up" data-aos-duration="1500">
-              <h3 className={item.className}>
-                <div className="slide">
-                  <div className="slide-title">{item.title}</div>
+            <h3 className={item.className}>
+              <div className="slide">
+                <div className="slide-title">{item.title}</div>
 
-                  <div className="slide-description">{item.description}</div>
+                <div className="slide-description">{item.description}</div>
 
-                  <button>{item.button}</button>
-                </div>
-              </h3>
-            </div>
+                <button>{item.button}</button>
+              </div>
+            </h3>
           );
         })}
       </Carousel>
