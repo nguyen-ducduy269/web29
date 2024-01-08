@@ -127,43 +127,6 @@ export const CollectionsStyle = styled.div`
             font-size: 16px;
             font-weight: 600;
           }
-
-          .option {
-            display: none;
-          }
-        }
-
-        .product-item:hover {
-          .option {
-            display: block;
-          }
-
-          .option {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            animation-duration: 3s;
-            margin-top: 30px;
-            button {
-              height: 37px;
-              padding: 0px 10px 0px 10px;
-              cursor: pointer;
-            }
-
-            .quick-shop {
-              background-color: white;
-              color: #00634b;
-              font-weight: 600;
-              border: 1px solid #0000002e;
-            }
-
-            .choose-option {
-              background-color: #f8ba8c;
-              color: #00634b;
-              font-weight: 600;
-              border: 1px solid #f8ba8c;
-            }
-          }
         }
       }
 
@@ -456,7 +419,15 @@ export const CollectionsStyle = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
+        .page-active:hover {
+          background-color: #f8ba8c;
+          color: #00634b;
+          font-weight: 600;
+          border-radius: 100%;
+          cursor: pointer;
+        }
+
         button {
           width: 130px;
           padding: 10px 10px;
@@ -464,10 +435,23 @@ export const CollectionsStyle = styled.div`
           align-items: center;
           justify-content: center;
           cursor: pointer;
+          border: unset;
         }
         button:hover {
           background-color: #f8ba8c;
           border: unset;
+          color: #00634b;
+          font-weight: 600;
+        }
+
+        div {
+          padding: 5px 10px;
+          font-weight: 500;
+        }
+
+        .active {
+          background-color: #f8ba8c;
+          border-radius: 100%;
           color: #00634b;
           font-weight: 600;
         }
@@ -576,39 +560,7 @@ export const CollectionsStyle = styled.div`
               display: flex;
               flex-direction: column;
               gap: 10px;
-              margin-top: 30px;
               button {
-                height: 37px;
-                padding: 0px 10px 0px 10px;
-                cursor: pointer;
-              }
-
-              .quick-shop {
-                background-color: white;
-                color: #00634b;
-                font-weight: 600;
-                border: 1px solid #0000002e;
-              }
-
-              .choose-option {
-                background-color: #f8ba8c;
-                color: #00634b;
-                font-weight: 600;
-                border: 1px solid #f8ba8c;
-              }
-            }
-          }
-
-          .product-item:hover {
-            .option {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-between;
-              animation-duration: 3s;
-              margin-top: 30px;
-              button {
-                width: 100%;
                 height: 37px;
                 padding: 0px 10px 0px 10px;
                 cursor: pointer;
@@ -975,6 +927,7 @@ export const CollectionsStyle = styled.div`
                 height: 37px;
                 padding: 0px 10px 0px 10px;
                 cursor: pointer;
+                font-size: 12px;
               }
 
               .quick-shop {
@@ -1119,6 +1072,7 @@ export const CollectionsStyle = styled.div`
                 height: 37px;
                 padding: 0px 10px 0px 10px;
                 cursor: pointer;
+                font-size: 14px;
               }
 
               .quick-shop {
@@ -1375,12 +1329,6 @@ export const CollectionsStyle = styled.div`
             }
 
             .option {
-              display: none;
-            }
-          }
-
-          .product-item:hover {
-            .option {
               display: block;
             }
 
@@ -1392,9 +1340,11 @@ export const CollectionsStyle = styled.div`
               animation-duration: 3s;
               margin-top: 30px;
               button {
+                width: 50%;
                 height: 37px;
                 padding: 0px 10px 0px 10px;
                 cursor: pointer;
+                font-size: 10px;
               }
 
               .quick-shop {

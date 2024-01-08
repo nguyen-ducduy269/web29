@@ -15,7 +15,6 @@ import { CiStar } from "react-icons/ci";
 import { MdCircle, MdOutlineFilterAlt } from "react-icons/md";
 import { IoCloseSharp } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
-import { BsChevronDoubleLeft } from "react-icons/bs";
 import { BsChevronDoubleRight } from "react-icons/bs";
 
 ///// import images
@@ -29,6 +28,8 @@ interface Props {
   item: string;
   setSelectedItem: (value: any) => void;
   title: string;
+  setChangePage: (value: any) => void;
+  changePage: number;
 }
 
 const Collections = (props: Props) => {
@@ -49,7 +50,7 @@ const Collections = (props: Props) => {
 
   useEffect(() => {
     fetchData(`http://localhost:4001/${props.item}`);
-  }, []);
+  }, [props.changePage]);
 
   const rateStar = (params: number) => {
     if (params === 5) {
@@ -137,6 +138,10 @@ const Collections = (props: Props) => {
 
     props.setSelectedItem(Math.random());
     axios.post("http://localhost:4001/card", productAddToCard);
+  };
+
+  const handleClickScroll = () => {
+    window.scrollTo(0, 300);
   };
 
   return (
@@ -237,6 +242,7 @@ const Collections = (props: Props) => {
                       >
                         Quick shop
                       </button>
+
                       {item.sold_out == true ? (
                         <button
                           style={{
@@ -658,17 +664,122 @@ const Collections = (props: Props) => {
               ""
             )}
 
-            <div className="change-page">
-              <button>
-                <BsChevronDoubleLeft /> Previous Page
-              </button>
-              <div>1</div>
-              <div>2</div>
-              <div>...</div>
-              <button>
-                Next Page <BsChevronDoubleRight />
-              </button>
-            </div>
+            {allProduct.length >= 10 ? (
+              <div className="change-page">
+                {props.changePage == 1 ? (
+                  <div
+                    className="page-active active"
+                    onClick={() => props.setChangePage(1)}
+                  >
+                    1
+                  </div>
+                ) : (
+                  <div
+                    className="page-active"
+                    onClick={() => props.setChangePage(1)}
+                  >
+                    1
+                  </div>
+                )}
+
+                {props.changePage == 2 ? (
+                  <div
+                    className="page-active active"
+                    onClick={() => props.setChangePage(2)}
+                  >
+                    2
+                  </div>
+                ) : (
+                  <div
+                    className="page-active"
+                    onClick={() => props.setChangePage(2)}
+                  >
+                    2
+                  </div>
+                )}
+
+                {props.changePage == 3 ? (
+                  <div
+                    className="page-active active"
+                    onClick={() => props.setChangePage(3)}
+                  >
+                    3
+                  </div>
+                ) : (
+                  <div
+                    className="page-active"
+                    onClick={() => props.setChangePage(3)}
+                  >
+                    3
+                  </div>
+                )}
+
+                {props.changePage == 4 ? (
+                  <div
+                    className="page-active active"
+                    onClick={() => props.setChangePage(4)}
+                  >
+                    4
+                  </div>
+                ) : (
+                  <div
+                    className="page-active"
+                    onClick={() => props.setChangePage(4)}
+                  >
+                    4
+                  </div>
+                )}
+
+                {props.changePage == 5 ? (
+                  <div
+                    className="page-active active"
+                    onClick={() => props.setChangePage(5)}
+                  >
+                    5
+                  </div>
+                ) : (
+                  <div
+                    className="page-active"
+                    onClick={() => props.setChangePage(5)}
+                  >
+                    5
+                  </div>
+                )}
+
+                {props.changePage == 6 ? (
+                  <div
+                    className="page-active active"
+                    onClick={() => props.setChangePage(6)}
+                  >
+                    6
+                  </div>
+                ) : (
+                  <div
+                    className="page-active"
+                    onClick={() => props.setChangePage(6)}
+                  >
+                    6
+                  </div>
+                )}
+
+                {props.changePage != 6 ? (
+                  <button
+                    onClick={() => {
+                      props.setChangePage(props.changePage + 1);
+                      handleClickScroll();
+                    }}
+                  >
+                    Next Page <BsChevronDoubleRight />
+                  </button>
+                ) : (
+                  <button style={{ backgroundColor: "gray", color: "white" }}>
+                    Next Page <BsChevronDoubleRight />
+                  </button>
+                )}
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </Container>

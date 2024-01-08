@@ -10,6 +10,7 @@ import Footer from "@/app/_components/home-page/Footer";
 
 const Holiday = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+  const [changePage, setChangePage] = useState(1);
   const item = "holiday_plant";
   const title = "Holiday Plants";
 
@@ -22,6 +23,8 @@ const Holiday = () => {
         item={item}
         title={title}
         setSelectedItem={setSelectedItem}
+        setChangePage={setChangePage}
+        changePage={changePage}
       />
       <Footer />
     </>
