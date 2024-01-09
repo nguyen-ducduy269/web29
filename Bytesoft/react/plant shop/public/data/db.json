@@ -13657,5 +13657,896 @@
       "featured": true,
       "best_selling": true
     }
+  ],
+  "plant_care": [
+    {
+      "id": "air-plant",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/airplant_insta1-1674008634387.jpg?v=1674008710",
+      "name": "Air Plant",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-852d1804--T-Velutina.jpg?v=1610136905",
+      "meet_content": "Air plants are easy to grow, but they must be given the appropriate care in order to thrive. Proper watering and lighting are the most important components of plant care, but humidity and temperature also play a role.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-dd852d18--5-Air-Plant-Fertilizer.jpg?v=1610136901",
+      "light": "Light is an important variable when it comes to keeping your Air Plant healthy. We recommend placing your Air Plant near a window with direct sunlight. Make sure the plant doesn't get too much direct sun though! Too much sun will be harmful to the Air Plant. Artificial light is also a great source of light for Air Plants. Some types of air plants have a blooming once in their life and will live for many years with the appropriate care. Look for a reddish tint when the air plant starts blooming.",
+      "pet": "Yes",
+      "water": "Most Air Plants will be their healthiest with a weekly watering. Air Plants will become dry while in the terrarium and will need to be sprayed with water 1-3 times a week. More often in a hot, dry environment, less often in a cool, humid one. If you see the plants drying out, submerge the Air Plant in a bowl of water upside down up to an hour. Repeat weekly. They benefit from overnight soaks in water. Please make sure to dry the plant completely after the watering as the air plants can die from having water sitting in the center of the plant or at the base.",
+      "humidity": "Air is an important component of the health of an Air Plant. All Air Plants live off the air and will be healthier in a terrarium that is not enclosed. Place your Air Plant at a distance from your heater or cooler to avoid drying out the plant. After watering, Air Plants should be given enough light and air circulation to dry in four hours or less. Do not keep the plant constantly wet or moist.",
+      "temperature": "Keep your Air Plant in warm conditions. They thrive in a temperature range of 50°-90° F.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why is the base of my air plant brown and mushy?",
+        "This may be a sign of root rot. A few ways to prevent this is to stick to a consistent watering schedule to make sure you do not overwater. A key thing to remember in that Air Plants unlike most plants take in water through their leaves, not their roots and they are vulnerable to overwatering.",
+        "What are my leaves curling and browning?",
+        "This is likely a sign of under watering. Although Air Plants are easy to take care of they still need water. Air Plants should be watered about once a week.",
+        "How often should I use my fertilizer spray?",
+        "Over fertilization can cause your Air Plant to burn. It is recommended to only spray your air plant with fertilizer spray once a month at the same time you water. A little goes a long way!"
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-12dd852d--3pk-Ionantha-Pot-6.jpg?v=1610136897",
+      "shop": [
+        {
+          "id": 52,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/HPS-standardplant_IonanthaGuatemala_8cd06e06-1697-4cd6-a408-af3727d4b7aa.jpg?v=1622839155",
+          "name": "Tillandsia Air Plant Ionantha Guatemala",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/HPS-standardplant_IonanthaGuatemala_8cd06e06-1697-4cd6-a408-af3727d4b7aa_592x592.jpg?v=1622839155",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/HPS-standardplant_IonanthaGuatemala_8cd06e06-1697-4cd6-a408-af3727d4b7aa_75x75_crop_center.jpg?v=1622839155"
+            }
+          ],
+          "price": 17.99,
+          "rate": 0,
+          "botanical_name": "Ionantha Guatemala",
+          "detail_description": "With its striking spiky appearance, and beautiful bright green it really does liven up any space. The Tillandsia Ionantha Guatamala Air Plant has red tips when blooming and adds a unique color to the leaves. The Tillandsia Ionantha Guatamala easy to cultivate and very versatile.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 235,
+              "fl": 105
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 47,
+              "fl": 21
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 23,
+              "fl": 10
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 53,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/T.Velutina.jpg?v=1622834171",
+          "name": "Tillandsia Air Plant Veluntina",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/T.Velutina_592x592.jpg?v=1622834171",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/T.Velutina_75x75_crop_center.jpg?v=1622834171"
+            }
+          ],
+          "price": 7.99,
+          "rate": 0,
+          "botanical_name": "Tillandsia Veluntina",
+          "detail_description": "The Veluntina is a unique grey air plant with with pointed leaves which are arranged in a spiral around its long stem, forming a dense rosette. This air plant will flower and reward you with a beautiful orange-red stem with blueish pink petals.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 32,
+              "fl": 14
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 30,
+              "fl": 3
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 54,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Caput-Medusae.jpg?v=1622834185",
+          "name": "Tillandsia Air Plant Caput-Medusae",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Caput-Medusae_592x592.jpg?v=1622834185",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Caput-Medusae_75x75_crop_center.jpg?v=1622834185"
+            }
+          ],
+          "price": 8.99,
+          "rate": 0,
+          "botanical_name": "Tillandsia Caput-Medusae",
+          "detail_description": "The Tillandsia Caput-Medusae is a larger air plant which grows from a substrate. It has thick tendrils which grow from a bulb and are covered in trichomes giving it a peach like texture.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 67,
+              "fl": 3
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 13,
+              "fl": 3
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 55,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Kolby_592x592.jpg?v=1622834101",
+          "name": "Tillandsia Air Plant Kolby",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Kolby_592x592.jpg?v=1622834101",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Kolby_75x75_crop_center.jpg?v=1622834101"
+            }
+          ],
+          "price": 7.99,
+          "rate": 0,
+          "botanical_name": "Tillandsia Kolby",
+          "detail_description": "The Kolby has thick, pointed leaves which grow uniformly from its base. The tips of this air plant will turn red once this plant is ready to flower. This plant is a great variation and 'sister' to the Ionantha Guatemala.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 67,
+              "fl": 3
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 173,
+              "fl": 68
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 56,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/DSC_0293_592x592.jpg?v=1622834131",
+          "name": "Tillandsia Air Plant Bulbosay",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DSC_0293_592x592.jpg?v=1622834131",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DSC_0293_75x75_crop_center.jpg?v=1622834131"
+            }
+          ],
+          "price": 9.99,
+          "rate": 0,
+          "botanical_name": "Tillandsia Bulbosa",
+          "detail_description": "The Tillandsia Bulbosa Air Plant is a unique air plant with thick, glossy, tentacle like leaves which sprout from a bulb. These air plants are quite easy to grow as its thick leaves retain much of the plants' moisture. ",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 101,
+              "fl": 25
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 173,
+              "fl": 68
+            },
+            {
+              "id": 2,
+              "name": "8' Pot",
+              "ca": 67,
+              "fl": 3
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 57,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Xerographica_592x592.jpg?v=1617323545",
+          "name": "Tillandsia Air Plant Xerographica",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Xerographica_592x592.jpg?v=1617323545",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/HPS-standard_plant_Xerographica_75x75_crop_center.jpg?v=1617323545"
+            }
+          ],
+          "price": 22.99,
+          "rate": 0,
+          "botanical_name": "Tillandsia Xerographica",
+          "detail_description": "The wide and curly leaves unfold from the center of the Tillandsia Xerographica to form a gorgeous rose-like plant. They are drought-tolerant and easy to care for. Xerographica is a very popular plant for someone looking for a large easy to maintain air plant. ",
+          "pot": [
+            {
+              "id": 0,
+              "name": "2' Pot",
+              "ca": 101,
+              "fl": 25
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 10,
+              "fl": 3
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 67,
+              "fl": 16
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 58,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/3pk_Ionantha_Pot_6_592x592.jpg?v=1622836886",
+          "name": "3 Ionantha Air Plants with Mini Terra Cotta Pots",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3pk_Ionantha_Pot_6_592x592.jpg?v=1622836886",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3pk_Ionantha_Pot_6_75x75_crop_center.jpg?v=1622836886"
+            }
+          ],
+          "price": 13.99,
+          "rate": 0,
+          "botanical_name": "Ionantha Guatemala",
+          "detail_description": "With its striking spiky appearance, and beautiful bright green it really does liven up any space. The Tillandsia Ionantha Guatamala Air Plant has red tips when blooming and adds a unique color to the leaves. The Tillandsia Ionantha Guatamala easy to cultivate and very versatile.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "2' Pot",
+              "ca": 77,
+              "fl": 35
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 59,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/DSC_0278_592x592.jpg?v=1622834404",
+          "name": "3 Small Tillandsia Air Plant Pack with Fertilizer Spray",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DSC_0278_592x592.jpg?v=1622834404",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DSC_0278_75x75_crop_center.jpg?v=1622834404"
+            }
+          ],
+          "price": 11.99,
+          "rate": 5,
+          "botanical_name": "Magic Mist Fertilizer Spray",
+          "detail_description": "3 of our favorite smaller Tillandsia air plants! These plants are easy to take care of and are a great start to any air plant collection. These air plants only require a soak in water bath every week or so, depending on how fast your plants are drying out and your climate.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 34,
+              "fl": 0
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 60,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/DSC_0829_592x592.jpg?v=1622834410",
+          "name": "5 Tillandsia Air Plant Pack with Fertilizer Spray",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DSC_0829_592x592.jpg?v=1622834410",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DSC_0829_75x75_crop_center.jpg?v=1622834410"
+            }
+          ],
+          "price": 14.99,
+          "rate": 5,
+          "botanical_name": "Ionantha Guatemala",
+          "detail_description": "5 of our favorite Tillandsia air plants! These plants are easy to take care of and are a great start to any air plant collection. These air plants only require a soak in water bath every week or so, depending on how fast your plants are drying out and your climate.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 35,
+              "fl": 0
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 61,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/SpanishMoss_2048x2048_ce934b49-0789-4a1c-9704-2f10fbdd77c3_592x592.jpg?v=1625081388",
+          "name": "Tillandsia Air Plant Usneoides Spanish Moss",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/SpanishMoss_2048x2048_ce934b49-0789-4a1c-9704-2f10fbdd77c3_592x592.jpg?v=1625081388",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/SpanishMoss_2048x2048_ce934b49-0789-4a1c-9704-2f10fbdd77c3_75x75_crop_center.jpg?v=1625081388"
+            }
+          ],
+          "price": 24.99,
+          "rate": 0,
+          "botanical_name": "Tillandsia Usneoides",
+          "detail_description": "The spanish moss is an epiphytic air plant native to Central and South America. This plant will arrive in long strands which can be displayed as a hanging ornamental plant to give a foresty look to any household or office.",
+          "sold_out": true
+        }
+      ]
+    },
+    {
+      "id": "alocasia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_alocasia_blackvelvet_2-1674008633605.jpg?v=1674008733",
+      "name": "Alocasia",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-c3f57695--1AlocasiaAfricanMask6932x932.jpg?v=1606854464",
+      "meet_content": "The Alocasia Polly also known as the African Mask or Elephant Ear is all about the unusual and unique alien looking leaves. The Alocasia Polly is a unique houseplant but beware that it is on the harder side to care for.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-f76b8769--1AlocasiaAfricanMask6DETAIL4932x932.jpg?v=1606854826",
+      "light": "Bright indirect light, but no direct sun.",
+      "pet": "No",
+      "water": "Allow the top 2'- 3' of soil to dry out before watering. Try to keep the soil evenly moist. Alocasia plants require less water during the winter when it's dormant.",
+      "humidity": "High",
+      "temperature": "60°-80°F. These plants becomes dormant with prolonged exposure to temperatures below 60° F.",
+      "difficult_level": "Hard",
+      "common_problems": [
+        "Why are my leaves drooping?",
+        "You may be under-watering your plant, Alocasia plants prefer consistently moist soil. Alocasia plants thrive in humid environments. You can increase the humidity for your plant by misting the leaves regularly or placing a humidifier near by.",
+        "Why are my leaves yellowing?",
+        "You may be over watering your plant. Alocasia plants like to be kept damp but not overly wet. Keeping a regular watering schedule is important! Yellow leaves can also occur if the plant does not receive enough light. Remember some yellowing leaves are normal, plants will shed old leaves to send energy to the new ones!",
+        "Why are there spots on my leaves?",
+        "This may be a sign your plant has a disease or pests. This can be avoided by not overwatering and providing proper air circulation. If you do notice pests on your plant, spraying your plant with soapy water or neem oil will get rid of pests."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-6b87697d--1AlocasiaAfricanMask6HOLD932x932.jpg?v=1606854894",
+      "shop": [
+        {
+          "id": 62,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6_592x592.jpg?v=1622837081",
+          "name": "Alocasia Polly 'African Mask'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6_592x592.jpg?v=1622837081",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6_75x75_crop_center.jpg?v=1622837081"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6-DETAIL4_592x592.jpg?v=1622837086",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6-DETAIL4_75x75_crop_center.jpg?v=1622837086"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-4_592x592.jpg?v=1622837090",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-4_75x75_crop_center.jpg?v=1622837090"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-HOLD-4_592x592.jpg?v=1622837095",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-HOLD-4_75x75_crop_center.jpg?v=1622837095"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6-HOLD_592x592.jpg?v=1622837099",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6-HOLD_75x75_crop_center.jpg?v=1622837099"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Alocasia amazonica",
+          "common_name": "African Mask, Alocasia Polly, Elephant Ears",
+          "detail_description": "The Alocasia Polly also known as the African Mask or Elephant Ear is all about the unusual and unique alien looking leaves. The Alocasia Polly is a unique houseplant but beware that it is on the harder side to care for. It requires bright, indirect sunlight as well as soil that is constantly moist from watering. Toxic to pets.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 56
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 24
+            }
+          ],
+          "sold_out": false
+        }
+      ]
+    },
+    {
+      "id": "aloe",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_succ_aloe_vera_2-1674251531858.jpg?v=1674251536",
+      "name": "Aloe",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_succ_aloe_vera_1-1674251531841.jpg?v=1674251533",
+      "meet_content": "The Aloe Vera is a stemless succulent with thick and fleshy leaves that are lined with small teeth making it a great ornamental, low maintenance indoor plant which blooms a yellow tubular flower in the summertime. Native to the Arabian Peninsula, this plant is widely used around the world as its leaves are considered to be antimicrobial and has been used to treat burns as a topical medication.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_succ_aloe_vera_2-1674251531858.jpg?v=1674251536",
+      "light": "Aloe plants prefer bright indirect light to full sun. They can grow indoors and outdoors as long as they are getting enough sunlight. If growing indoors, place the plant near a sunny window.",
+      "pet": "No",
+      "water": "Water when the soil is completely dry. Do not water if the soil is still moist or wet. Water thoroughly until flows out the drainage hole and discard any extra water in the saucer to avoid root rot.",
+      "humidity": "Low",
+      "temperature": "Aloe plants can survive in most climates. But they thrive in temperatures 65-75°F.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves wrinkled and shriveled up?",
+        "This is likely a sign your plant needs more water. Although Aloe plants do not need much water they still cannot be completely neglected. You should water you plant soon after the soil has completely dried out.",
+        "Why are my leaves turning brown and mushy?",
+        "This is generally a sign your Aloe plant has been overwatered. You should cut back on your watering schedule and only water when your soil has dried out. Aloe plants are native to dry climates and are extremely drought tolerant!"
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_succ_aloe_vera_ppterrastd-1674251531864.jpg?v=1674251538",
+      "shop": [
+        {
+          "id": 63,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_SUCC_ALOE_VERA_1_592x592.jpg?v=1627922614",
+          "name": "Aloe Vera",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_SUCC_ALOE_VERA_1_592x592.jpg?v=1627922614",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_SUCC_ALOE_VERA_1_75x75_crop_center.jpg?v=1627922614"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/Pre-PottedblackroundAloe_592x592.jpg?v=1627922614",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/Pre-PottedblackroundAloe_75x75_crop_center.jpg?v=1627922614"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-4DETAIL_592x592.jpg?v=1627922614",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-4DETAIL_75x75_crop_center.jpg?v=1627922614"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-4HOLD_592x592.jpg?v=1627922614",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-4HOLD_75x75_crop_center.jpg?v=1627922614"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-6DETAIL_592x592.jpg?v=1627922614",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-6DETAIL_75x75_crop_center.jpg?v=1627922614"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-6MAIN_592x592.jpg?v=1627922614",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aloe-Vera-6MAIN_75x75_crop_center.jpg?v=1627922614"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/AloeVera_FiberPot_592x592.jpg?v=1636570675",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/AloeVera_FiberPot_75x75_crop_center.jpg?v=1636570675"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/AloeVera_TerraCotta_592x592.jpg?v=1636570675",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/AloeVera_TerraCotta_75x75_crop_center.jpg?v=1636570675"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/AloeVera_whiteround_592x592.jpg?v=1636570675",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/AloeVera_whiteround_75x75_crop_center.jpg?v=1636570675"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Aloe Barbadensis Mill",
+          "common_name": "Chinese Aloe, First Aid Plant, Burn Aloe, True Aloe.",
+          "detail_description": "The Aloe Vera is a stemless succulent with thick and fleshy leaves that are lined with small teeth making it a great ornamental, low maintenance indoor plant which blooms a yellow tubular flower in the summertime. Native to the Arabian Peninsula, this plant is widely used around the world as its leaves are considered to be antimicrobial and has been used to treat burns as a topical medication.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 86,
+              "fl": 20
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 46,
+              "fl": 25
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            },
+            {
+              "name": "Black Cylinder",
+              "status": false
+            },
+            {
+              "name": "White Cylinder",
+              "status": false
+            },
+            {
+              "name": "Natural Plant Fiber",
+              "status": false
+            },
+            {
+              "name": "Terra Cotta Standard",
+              "status": false
+            }
+          ],
+          "sold_out": false
+        }
+      ]
+    },
+    {
+      "id": "anthurium",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_anthurium_red_2-1-1674008633625.jpg?v=1674008736",
+      "name": "Anthurium",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-bfb05db8--1AnthuriumRed4-MAIN.jpg?v=1606958749",
+      "meet_content": "These exotic houseplants have glossy heart-shaped leaves with a beautiful bloom that comes in pink, red, purple, or white. They can bloom all year long with enough light and water. The Anthurium originated in the South American rain forest so they thrive in high-humidity environments with a decent amount of shade.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-b05db8f9--1AnthuriumRed4-DETAIL.jpg?v=1606958803",
+      "light": "Anthurium plants do best in bright indirect light. Avoid direct sunlight, as this will burn the leaves.",
+      "pet": "No",
+      "water": "Water your plant when the top 2-3 inches of soil is dry.",
+      "humidity": "High",
+      "temperature": "75°-85° F is the ideal temperature for Anthurium plants. Temperatures below 50° F slow the growth of leaves and flowers.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "How long does an Anthurium flower for?",
+        "Anthuriums can flower all year, but often they flower for about 3 months and then its cycle starts again. Anthurium plants generally have fewer flowers in the winter, but as the sun shines more the flowers grow back.",
+        "Why are my leaves yellowing?",
+        "Generally this is a sign that your plant is not happy. It is likely that the roots are too wet and your plant is getting too much direct sunlight.",
+        "Can an Anthurium grow outside?",
+        "Anthuriums are tropical plants so temperatures between 68°- 72° F are ideal. An Anthurium plant could survive outside provided that temperatures do not drop below 16°C are night and it is in a drought free place. "
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-5db8f991--1AnthuriumRed4-HOLD.jpg?v=1606958806",
+      "shop": [
+        {
+          "id": 64,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-6_592x592.jpg?v=1664475737",
+          "name": "Anthurium 'Red'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-6_592x592.jpg?v=1664475737",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-6_75x75_crop_center.jpg?v=1664475737"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-4DETAIL_592x592.jpg?v=1664475737",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-4DETAIL_75x75_crop_center.jpg?v=1664475737"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-4HOLD_592x592.jpg?v=1664475737",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-4HOLD_75x75_crop_center.jpg?v=1664475737"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-4MAIN_592x592.jpg?v=1664475737",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-4MAIN_75x75_crop_center.jpg?v=1664475737"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/ValentinePrePottedlargeblack_592x592.jpg?v=1622837614",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/ValentinePrePottedlargeblack_75x75_crop_center.jpg?v=1622837614"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/ValentinePrePottedlargewhite_592x592.jpg?v=1622837618",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/ValentinePrePottedlargewhite_75x75_crop_center.jpg?v=1622837618"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/AnthuriumRed_FiberPot_592x592.jpg?v=1636571218",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/AnthuriumRed_FiberPot_75x75_crop_center.jpg?v=1636571218"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/AnthuriumRed_TerraCotta_592x592.jpg?v=1636571220",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/AnthuriumRed_TerraCotta_75x75_crop_center.jpg?v=1636571220"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_RED_4_592x592.jpg?v=1680760703",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_RED_4_75x75_crop_center.jpg?v=1680760703"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Anthurium andraeanum",
+          "common_name": "Painted anthurium, flamingo flower, tailflower, painter's palette, laceleaf",
+          "detail_description": "These exotic houseplants have glossy heart-shaped leaves with a beautiful bloom that comes in a large array of colors. They can bloom all year long with enough light and water. The Anthurium originated in the South American rain forest so they thrive in high-humidity environments with a decent amount of shade.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 36,
+              "fl": 71
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 19
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            },
+            {
+              "name": "Black Cylinder",
+              "status": false
+            },
+            {
+              "name": "White Cylinder",
+              "status": false
+            },
+            {
+              "name": "Natural Plant Fiber",
+              "status": false
+            },
+            {
+              "name": "Terra Cotta Standard",
+              "status": false
+            },
+            {
+              "name": "Large White Cylinder",
+              "status": false
+            },
+            {
+              "name": "Large Black Cylinder",
+              "status": false
+            }
+          ],
+          "sold_out": false
+        }
+      ]
+    },
+    {
+      "id": "apoballis",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/89.jpg?v=1699006742",
+      "name": "Apoballis"
+    },
+    {
+      "id": "arabica",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_arabica_coffee_2-1674008633636.jpg?v=1674008739",
+      "name": "Arabica"
+    },
+    {
+      "id": "aralia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_aralia_fabianstump_2-1674008634069.jpg?v=1674008655",
+      "name": "Aralia"
+    },
+    {
+      "id": "begonia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_begonia_maculata_2-1674008633657.jpg?v=1674008743",
+      "name": "Begonia"
+    },
+    {
+      "id": "bird_of_paradise",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_strelitzia_birdofparadise_2-1674008634309.jpg?v=1674008699",
+      "name": "Bird of Paradise"
+    },
+    {
+      "id": "bromeliad",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_bromeliad_medusa_2-1-1674008634090.jpg?v=1674008659",
+      "name": "Bromeliad"
+    },
+    {
+      "id": "cactus",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_succ_cactus_fairycastle_2-1662587849767.jpg?v=1662587871",
+      "name": "Cactus"
+    },
+    {
+      "id": "calathea",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_calathea_medallion_2-1674008634114.jpg?v=1674008662",
+      "name": "Calathea"
+    },
+    {
+      "id": "chinese_evergreen",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_chevergreen_redsiam_2-1674511008549.jpg?v=1674511010",
+      "name": "Chinese Evergreen"
+    },
+    {
+      "id": "clusia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_CLUSIA_PRINCESS_2.jpg?v=1692315089",
+      "name": "Clusia"
+    },
+    {
+      "id": "cordyline",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_cordyline_glauca_2-1674008634156.jpg?v=1674008671",
+      "name": "Cordyline"
+    },
+    {
+      "id": "croton",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_croton_petra_2-1674008634179.jpg?v=1674008675",
+      "name": "Croton"
+    },
+    {
+      "id": "crytanthus",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_cryptanthus_pinkstar_2-1674008633674.jpg?v=1674008746",
+      "name": "Cryptanthus"
+    },
+    {
+      "id": "ctenanthe",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ctenanthe_yellow_2-1674507345245.jpg?v=1674507359",
+      "name": "Ctenanthe"
+    },
+    {
+      "id": "dieffenbachia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/3_dieffenbachia_camille_2-1674008633591.jpg?v=1674008729",
+      "name": "Dieffenbachia"
+    },
+    {
+      "id": "dracaena",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_dracaena_massangeana_2-1674008633692.jpg?v=1674008750",
+      "name": "Dracaena"
+    },
+    {
+      "id": "fern",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_fern_maidenhair_4-1674008633708.jpg?v=1674008753",
+      "name": "Fern"
+    },
+    {
+      "id": "epiphyllum",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/146.jpg?v=1698997919",
+      "name": "Epiphyllum"
+    },
+    {
+      "id": "ficus",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ficus_burgundy_2-1674008634193.jpg?v=1674008678",
+      "name": "Ficus"
+    },
+    {
+      "id": "fiddle_leaf_fig",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ficus_lyrata_2-1-1674008634220.jpg?v=1674008681",
+      "name": "Fiddle Leaf Fig"
+    },
+    {
+      "id": "fittonia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_fittonia_pink_2-1670959476204.jpg?v=1670959483",
+      "name": "Fittonia"
+    },
+    {
+      "id": "guzmania",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-3e7a8c2b--1GuzmaniaRed4-DETAIL.jpg?v=1608687608",
+      "name": "Guzmania (Bromeliad)"
+    },
+    {
+      "id": "herbs",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-b51a06f1--1HerbRosemary4-DETAIL.jpg?v=1609800334",
+      "name": "Herbs"
+    },
+    {
+      "id": "homalomena",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_HOMALOMENA_SELBY_2_64aada97-4930-48db-8c97-3a15d02e822d.jpg?v=1683317865",
+      "name": "Homalomena"
+    },
+    {
+      "id": "hoya",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_hoya_publicalyx_2-1674008633743.jpg?v=1674008760",
+      "name": "Hoya"
+    },
+    {
+      "id": "hydrangea",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/16.jpg?v=1698954462",
+      "name": "Hydrangea"
+    },
+    {
+      "id": "hypoestes",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_hypoestes_combo_2-1673473660235.jpg?v=1673473672",
+      "name": "Hypoestes"
+    },
+    {
+      "id": "ivy",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/2_ivy_glacier_2-1674008633560.jpg?v=1674008723",
+      "name": "Ivy"
+    },
+    {
+      "id": "kokedama",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/kokedama-moss-ball--njoy_with-beads-1674008634399.jpg?v=1674008714",
+      "name": "Kokedama"
+    },
+    {
+      "id": "lipstick",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_lipstick_blackpagoda_2-1674008633790.jpg?v=1674008767",
+      "name": "Lipstick"
+    },
+    {
+      "id": "maranta",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_maranta_red_2-1-1674008633846.jpg?v=1674008773",
+      "name": "Maranta"
+    },
+    {
+      "id": "money_tree",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-6f2b2bfe--1PachiraBraid4-DETAIL.jpg?v=1610416646",
+      "name": "Money Tree"
+    },
+    {
+      "id": "monstera",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_monstera_deliciosa_2-1674008634265.jpg?v=1674008689",
+      "name": "Monstera"
+    },
+    {
+      "id": "nematanthus",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_nematanthus_blackgoldfish_2-1-1674008634283.jpg?v=1674008693",
+      "name": "Nematanthus"
+    },
+    {
+      "id": "nettle",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4nettlesilver-sparkledetail-1-1674008634033.jpg?v=1674008647",
+      "name": "Nettle"
+    },
+    {
+      "id": "olive",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/main_5d65a3cf-4db1-40cf-a183-e9a0df1947d4.jpg?v=1698959794",
+      "name": "Olive"
+    },
+    {
+      "id": "orchid",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_orchid_phalaenopsis_yellow_2-1674257802005.jpg?v=1674257802",
+      "name": "Orchid"
+    },
+    {
+      "id": "palm",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/2_palm_parlor_2-1674008633570.jpg?v=1674008726",
+      "name": "Palm"
+    },
+    {
+      "id": "peace_lily",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/10_spathiphyllum_green_2-1674509113645.jpg?v=1674509118",
+      "name": "Peace Lily"
+    },
+    {
+      "id": "peperomia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_peperomia_ginny_2-1674008633865.jpg?v=1674008776",
+      "name": "Peperomia"
+    },
+    {
+      "id": "philidendron",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_philodendron_cordatum_2-1674008633876.jpg?v=1674008779",
+      "name": "Philodendron"
+    },
+    {
+      "id": "pine",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/0b1b4ebf-b941-415c-a357-00ad285bcb5d_379x379_de3f2428-c1d8-405b-bcf0-c307ca2ae0aa.webp?v=1698943465",
+      "name": "Pine"
+    },
+    {
+      "id": "pilea",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_pilea_peperomiodes_2-1-1674008633885.jpg?v=1674008783",
+      "name": "Pilea"
+    },
+    {
+      "id": "poinsettia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/599.jpg?v=1698951627",
+      "name": "Poinsettia"
+    },
+    {
+      "id": "pothos",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_pothos_golden_2-1660957966258.jpg?v=1660957982",
+      "name": "Pothos"
+    },
+    {
+      "id": "rhaphidophora",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/758.jpg?v=1699001558",
+      "name": "Rhaphidophora"
+    },
+    {
+      "id": "schefflera",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_schefflera_arboricola_2-1674008633956.jpg?v=1674008794",
+      "name": "Schefflera"
+    },
+    {
+      "id": "scindapsus",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/701.png?v=1699008420",
+      "name": "Scindapsus"
+    },
+    {
+      "id": "seeds",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/seed_banner-1674008634443.png?v=1674008719",
+      "name": "Seeds"
+    },
+    {
+      "id": "snake_plant",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_snake_laurentii_2-1674008634292.jpg?v=1674008695",
+      "name": "Snake Plant"
+    },
+    {
+      "id": "spider_plant",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_spider_reverse_2-1674008633966.jpg?v=1674008797",
+      "name": "Spider Plant"
+    },
+    {
+      "id": "stromanthe",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_stromanthe_sanguinea_2-1674008634330.jpg?v=1674008702",
+      "name": "Stromanthe"
+    },
+    {
+      "id": "succulent",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_succ_aeonium_kiwi_2-1673473660259.jpg?v=1673473676",
+      "name": "Succulent"
+    },
+    {
+      "id": "syngonium",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_syngonium_whitebutterfly_2-1674008634361.jpg?v=1674008706",
+      "name": "Syngonium"
+    },
+    {
+      "id": "tradescantia",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_tradescantia_sitarasgold_2-1674008634001.jpg?v=1674008644",
+      "name": "Tradescantia"
+    },
+    {
+      "id": "zamioculcas",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-eafe89be--1ZamioculcasZamiifolia4-DETAIL.jpg?v=1611974236",
+      "name": "Zamioculcas Zamiifolia 'ZZ'"
+    }
   ]
 }
