@@ -16,7 +16,7 @@ const Plants = () => {
       <Header />
       <Bar />
       <SiteHeader selectedItem={selectedItem} />
-      <PlantDetail />
+      <PlantDetail setSelectedItem={setSelectedItem} />
       <Footer />
     </>
   );

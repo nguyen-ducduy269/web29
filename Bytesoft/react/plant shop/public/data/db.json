@@ -2880,17 +2880,6 @@
       "total_price": 199.95000000000002
     },
     {
-      "id": 5,
-      "name": " Ficus Elastica 'Burgundy'",
-      "image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
-      "size": "6' Pot",
-      "price": 22.99,
-      "ca": 25,
-      "fl": 29,
-      "quantity": "8",
-      "total_price": 183.92
-    },
-    {
       "id": 1,
       "name": "Monstera 'Split-Leaf'",
       "image": "https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_592x592.jpg?v=1627692378",
@@ -2911,6 +2900,33 @@
       "fl": 26,
       "quantity": "4",
       "total_price": 87.96
+    },
+    {
+      "id": 63,
+      "name": "Aloe Vera",
+      "image": "https://houseplantshop.com/cdn/shop/products/4_SUCC_ALOE_VERA_1_592x592.jpg?v=1627922614",
+      "price": 24.99,
+      "quantity": 4,
+      "total_price": 99.96
+    },
+    {
+      "id": 60,
+      "name": "5 Tillandsia Air Plant Pack with Fertilizer Spray",
+      "image": "https://houseplantshop.com/cdn/shop/products/DSC_0829_592x592.jpg?v=1622834410",
+      "price": 14.99,
+      "quantity": 5,
+      "total_price": 74.95
+    },
+    {
+      "id": 62,
+      "name": "Alocasia Polly 'African Mask'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6_592x592.jpg?v=1622837081",
+      "size": "6' Pot",
+      "price": 24.99,
+      "ca": 0,
+      "fl": 24,
+      "quantity": "4",
+      "total_price": 99.96
     }
   ],
   "all_product": [
@@ -14254,18 +14270,233 @@
             }
           ],
           "sold_out": false
+        },
+        {
+          "id": 65,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_PINK_5_592x592.jpg?v=1627689611",
+          "name": "Anthurium 'Pink'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_PINK_5_592x592.jpg?v=1627689611",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_PINK_5_75x75_crop_center.jpg?v=1627689611"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-4DETAIL_592x592.jpg?v=1627689611",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-4DETAIL_75x75_crop_center.jpg?v=1627689611"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-4HOLD_592x592.jpg?v=1627689611",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-4HOLD_75x75_crop_center.jpg?v=1627689611"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-6_592x592.jpg?v=1627689611",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-6_75x75_crop_center.jpg?v=1627689611"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-6-HOLD_592x592.jpg?v=1627689611",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Pink-6-HOLD_75x75_crop_center.jpg?v=1627689611"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Anthurium andraeanum",
+          "common_name": "Painted anthurium, flamingo flower, tailflower, painter's palette, laceleaf",
+          "detail_description": "These exotic houseplants have glossy heart-shaped leaves with a beautiful bloom that comes in a large array of colors. They can bloom all year long with enough light and water. The Anthurium originated in the South American rain forest so they thrive in high-humidity environments with a decent amount of shade.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 44,
+              "fl": 25
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 8
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 66,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_PURPLE_1_592x592.jpg?v=1627689681",
+          "name": "Anthurium 'Pink'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_PURPLE_1_592x592.jpg?v=1627689681",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_PURPLE_1_75x75_crop_center.jpg?v=1627689681"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Purple-4DETAIL_592x592.jpg?v=1627689681",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Purple-4DETAIL_75x75_crop_center.jpg?v=1627689681"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Purple-4HOLD_592x592.jpg?v=1627689681",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Purple-4HOLD_75x75_crop_center.jpg?v=1627689681"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/ValentinePrePottedsmall_592x592.jpg?v=1627689681",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/ValentinePrePottedsmall_75x75_crop_center.jpg?v=1627689681"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Anthurium andraeanum",
+          "common_name": "Painted anthurium, flamingo flower, tailflower, painter's palette, laceleaf",
+          "detail_description": "These exotic houseplants have glossy heart-shaped leaves with a beautiful bloom that comes in a large array of colors. They can bloom all year long with enough light and water. The Anthurium originated in the South American rain forest so they thrive in high-humidity environments with a decent amount of shade.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 8,
+              "fl": 27
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 67,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-4MAIN_592x592.jpg?v=1622838196",
+          "name": "Anthurium 'White'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-4MAIN_592x592.jpg?v=1622838196",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-4MAIN_75x75_crop_center.jpg?v=1622838196"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_WHITE_2_592x592.jpg?v=1655236960",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_ANTHURIUM_WHITE_2_75x75_crop_center.jpg?v=1655236960"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-4HOLD_592x592.jpg?v=1655236960",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-4HOLD_75x75_crop_center.jpg?v=1655236960"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-6_592x592.jpg?v=1655236960",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-6_75x75_crop_center.jpg?v=1655236960"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-6-DETAIL_592x592.jpg?v=1655236960",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-6-DETAIL_75x75_crop_center.jpg?v=1655236960"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-6-HOLD_592x592.jpg?v=1655236960",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-White-6-HOLD_75x75_crop_center.jpg?v=1655236960"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Anthurium andraeanum",
+          "common_name": "Painted anthurium, flamingo flower, tailflower, painter's palette, laceleaf",
+          "detail_description": "These exotic houseplants have glossy heart-shaped leaves with a beautiful bloom that comes in a large array of colors. They can bloom all year long with enough light and water. The Anthurium originated in the South American rain forest so they thrive in high-humidity environments with a decent amount of shade.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 74,
+              "fl": 103
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 9,
+              "fl": 11
+            }
+          ],
+          "sold_out": false
         }
       ]
     },
     {
       "id": "apoballis",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/89.jpg?v=1699006742",
-      "name": "Apoballis"
+      "name": "Apoballis",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/89.jpg?v=1699006742",
+      "meet_content": "Apoballis species, a beloved classic with its distinctive foliage, remain a timeless favorite for both indoor and outdoor cultivation. They are a popular choice for various decorative and horticultural purposes.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/230.jpg?v=1699006742",
+      "light": "Apoballis species thrive in well-illuminated locations with indirect sunlight; it's recommended to protect them from direct sun exposure.",
+      "pet": "Pet-friendly",
+      "water": "It is highly recommended to allow the top one to two inches of the soil to dry out before watering, as Apoballis species prefer slightly moist soil and can withstand short periods of dryness. Adequate drainage is crucial to prevent root rot.",
+      "humidity": "Highly recommended to let the top one to two inches of the soil dry out before watering, as Apoballis species prefer slightly moist soil and can tolerate brief periods of dryness. Ensuring proper drainage is essential to prevent root rot.",
+      "temperature": "Apoballis species thrive in warm conditions, with an ideal temperature range between 65-85°F (18-29°C). To protect your plant from cold damage, it's crucial to avoid exposing it to temperatures below 50°F (10°C).",
+      "difficult_level": "Low Maintenance",
+      "common_problems": [
+        "Why are my leaf edges browning? ",
+        "Apoballis species thrive in conditions with higher humidity, and insufficient humidity can lead to the browning of leaf edges and reduced vibrancy. You can enhance the humidity around the plant by regularly misting the leaves, placing a tray of water nearby, or using a humidifier.",
+        "Why is my Apoballis experiencing leggy growth and losing color.",
+        "Insufficient light can result in Apoballis species developing leggy growth, losing their vibrant appearance, and displaying less-than-ideal development. To encourage their healthy growth, it's recommended to place your Apoballis plant in a location with bright, indirect light."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/files/458.jpg?v=1699006742",
+      "shop": []
     },
     {
       "id": "arabica",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_arabica_coffee_2-1674008633636.jpg?v=1674008739",
-      "name": "Arabica"
+      "name": "Arabica",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-f2e780e8--1ArabicaCoffee4-MAIN.jpg?v=1607126651",
+      "meet_content": "The easy-to-care-for Arabica Coffee Plant has become popular indoor house plant that can produce white flowers and colorful cherries if grown large enough. The seeds inside the cherries are actually coffee beans, and make up around 60% of the world's coffee production. Originally found and documented in Yemen around the 12th century, Coffee arabica has a truly global distribution today. As a house plant, it requires minimum maintenance and can be put outside when the weather warms up.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-c968f2e7--1ArabicaCoffee4-DETAIL.jpg?v=1607126643",
+      "light": "Coffee Plants need bright indirect light from an east or west facing window. Avoid direct sunlight.",
+      "pet": "No",
+      "water": "Water a Coffee Plant when the top 1'-2' of soil has dried out. These plants are not drought resistant and can suffer permanent damage if the soil totally dries out. Leaves fall off if the plant is over or under watered.",
+      "humidity": "High",
+      "temperature": "These plants prefer constant temperatures between 60° and 75° F. Coffee Plants can suffer damage if the temperature goes below 42° F or above 78° F",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are my leaves drooping?",
+        "Your plant needs water! Drooping leaves are a direct indicator that your plant is lacking water. Once watered the leaves will perk up in a few hours.",
+        "What is the best soil for coffee plants?",
+        "Soil on the acidic side. A pH of 6.0 to 6.5 is ideal. Use a soil with a lot of organic matter, good drainage, and volcanic rock.",
+        "Why are my leaves brown, dead leaf edges?",
+        "Your plant may be getting too much direct sunlight, try finding a spot with more shade. If the leaves are completely brown prune them off. Be careful to never prune more than 20% of your plant at once as this will shock the plant."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-68f2e780--1ArabicaCoffee4-HOLD.jpg?v=1607126647",
+      "shop": [
+        {
+          "id": 68,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_592x592.jpg?v=1627689722",
+          "name": "Arabica Coffee",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_592x592.jpg?v=1627689722",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_75x75_crop_center.jpg?v=1627689722"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4DETAIL_592x592.jpg?v=1627689722",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4DETAIL_75x75_crop_center.jpg?v=1627689722"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4HOLD_592x592.jpg?v=1627689722",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Arabica-Coffee-4HOLD_75x75_crop_center.jpg?v=1627689722"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_Arabica_Coffee_1_592x592.jpg?v=1636129404",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_Arabica_Coffee_1_75x75_crop_center.jpg?v=1636129404"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Coffea arabica",
+          "common_name": "Arabian Coffee, Mountain Coffee",
+          "detail_description": "The easy-to-care-for Arabian Coffee Plant has become popular indoor house plant that can produce white flowers and colorful cherries if grown large enough. The seeds inside the cherries are actually coffee beans, and make up around 60% of the world's coffee production. Originally found and documented in Yemen around the 12th century, Coffea arabica has a truly global distribution today. As a house plant, it requires minimum maintenance and can be put outside when the weather warms up.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 39
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 89,
+              "fl": 35
+            }
+          ],
+          "sold_out": false
+        }
+      ]
     },
     {
       "id": "aralia",

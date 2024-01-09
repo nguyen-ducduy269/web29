@@ -92,9 +92,13 @@ const MainContent = () => {
 
                             <div className="cart-detail">
                               <div className="name">{products.name}</div>
-                              <div className="size">
-                                <strong>Size</strong> {products.size}
-                              </div>
+                              {products.size ? (
+                                <div className="size">
+                                  <strong>Size</strong> {products.size}
+                                </div>
+                              ) : (
+                                ""
+                              )}
                               <div className="product-price">
                                 <strong>Price</strong> ${products.price}
                               </div>
@@ -118,13 +122,21 @@ const MainContent = () => {
                         </div>
 
                         <div className="greenhouse">
-                          <div className="greenhouse-item">
-                            <GoDot /> CA Greenhouse: {products.ca}
-                          </div>
+                          {products.ca ? (
+                            <div className="greenhouse-item">
+                              <GoDot /> CA Greenhouse: {products.ca}
+                            </div>
+                          ) : (
+                            ""
+                          )}
 
-                          <div className="greenhouse-item">
-                            <GoDot /> FL Greenhouse: {products.fl}
-                          </div>
+                          {products.fl ? (
+                            <div className="greenhouse-item">
+                              <GoDot /> FL Greenhouse: {products.fl}
+                            </div>
+                          ) : (
+                            ""
+                          )}
                         </div>
                       </div>
                     </div>

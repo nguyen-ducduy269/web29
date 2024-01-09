@@ -124,7 +124,6 @@ const DetailProduct = (props: Props) => {
     props.setSelectedItem(Math.random());
     axios.post("http://localhost:4001/card", productAddToCard);
     alert("Successfull add product to your card! Continue Shopping?");
-    window.location.href = "http://localhost:3000";
   };
 
   return (
