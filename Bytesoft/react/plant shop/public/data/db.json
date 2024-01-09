@@ -2869,28 +2869,6 @@
   ],
   "card": [
     {
-      "id": 18,
-      "name": "String of Hearts Variegated",
-      "image": "https://houseplantshop.com/cdn/shop/products/5a2e0547-fac5-42f9-a77f-2c13c815f134_592x789.png?v=1664998449",
-      "size": "3' Pot",
-      "price": 22.99,
-      "ca": 18,
-      "fl": 0,
-      "quantity": "2",
-      "total_price": 45.98
-    },
-    {
-      "id": 27,
-      "name": "Monstera Adansonii 'Swiss Cheese'",
-      "image": "https://houseplantshop.com/cdn/shop/products/image_png_1350410938_445x445.png?v=1643765015",
-      "size": "4' Pot",
-      "price": 20.99,
-      "ca": 0,
-      "fl": 30,
-      "quantity": 1,
-      "total_price": 20.99
-    },
-    {
       "id": 32,
       "name": "Hoya 'Australis'",
       "image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_1_e3c53e72-34a3-4977-b5c3-69f4d91ca3cd_445x445.jpg?v=1654049443",
@@ -2922,6 +2900,17 @@
       "fl": 80,
       "quantity": "4",
       "total_price": 79.96
+    },
+    {
+      "id": 10,
+      "name": "Maranta Variegated 'Beauty Kim'",
+      "image": "https://houseplantshop.com/cdn/shop/products/39a1baed-1be6-4fa0-9eb1-794e8df43d11_592x789.png?v=1670455869",
+      "size": "4' Pot",
+      "price": 21.99,
+      "ca": 0,
+      "fl": 26,
+      "quantity": "4",
+      "total_price": 87.96
     }
   ],
   "all_product": [
