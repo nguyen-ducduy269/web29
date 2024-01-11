@@ -14501,22 +14501,537 @@
     {
       "id": "aralia",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_aralia_fabianstump_2-1674008634069.jpg?v=1674008655",
-      "name": "Aralia"
+      "name": "Aralia",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-2b8878d9--1AraliaMingstump6-22.jpg?v=1607128477",
+      "meet_content": "The Aralia is a species of evergreen shrub with rich green leaves. Native to India and widely cultivated in the tropical Pacific Islands, this plant thrives brightly lit indoor areas and outdoors in warmer climates. Also used as Bonsai!",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_fatsia_spidersweb_2-1662786852032.jpg?v=1662786858",
+      "light": "Aralia plants can survive in low light conditions, but grow faster and produce more leaves in medium to bright indirect light. ",
+      "pet": "No",
+      "water": "In low light conditions, an aralia may need water as little as every 2-3 weeks. Too much water, resulting in root rot, is the main reason aralia plants die. Allow the top 50% of the soil to dry out before watering.",
+      "humidity": "High",
+      "temperature": "Aralia plants prefer temperatures between 60°-85° F.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are my leaves yellowing?",
+        "This may be due to a lack of nutrients, repotting or adding fertilizer may help this issue. Overwatering and sudden temperature changes could also be a reason for this issue.",
+        "What pest problems do Aralia plants have?",
+        "If an Aralia is properly cared for, there should be any serious disease or fungus issues. Watch out for Mealybugs sucking the plant juices, Nematodes, Whiteflies, Aphids (aka Plant Lice).",
+        "Why are my leaves dropping?",
+        "Low humidity and inadequate soil moisture may be causing this issue. Misting the foliage with distilled or filtered water may help with this issue."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_aralia_fabianstump_3-1662786852024.jpg?v=1662786854",
+      "shop": [
+        {
+          "id": 69,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_22_592x592.jpg?v=1622836012",
+          "name": "Aralia 'Ming Stump Plant'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_22_592x592.jpg?v=1622836012",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_22_75x75_crop_center.jpg?v=1622836012"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-Mingstump-6_22DETAIL_592x592.jpg?v=1622836017",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-Mingstump-6_22DETAIL_75x75_crop_center.jpg?v=1622836017"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-Mingstump-6_22HOLD_592x592.jpg?v=1622836022",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-Mingstump-6_22HOLD_75x75_crop_center.jpg?v=1622836022"
+            }
+          ],
+          "price": 44.99,
+          "rate": 5,
+          "botanical_name": "Polyscias fruticosa",
+          "common_name": "Ming Stump, Ming Aralia",
+          "detail_description": "The Ming Aralia is a species of evergreen shrub with rich green leaves. Native to India and widely cultivated in the tropical Pacific Islands, this plant thrives brightly lit indoor areas and outdoors in warmer climates. Also used as Bonsai, the Ming Aralia grows vertically and up to 8 feet! ",
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 22,
+              "fl": 15
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 70,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_21_592x592.jpg?v=1622836028",
+          "name": "Aralia Fabian Stump 'Polyscias Scutellaria'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_21_592x592.jpg?v=1622836028",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_21_75x75_crop_center.jpg?v=1622836028"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-6_21DETAIL_592x592.jpg?v=1622836033",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-6_21DETAIL_75x75_crop_center.jpg?v=1622836033"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-4MAIN_592x592.jpg?v=1622836038",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-4MAIN_75x75_crop_center.jpg?v=1622836038"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-6_21HOLD_592x592.jpg?v=1622836042",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-6_21HOLD_75x75_crop_center.jpg?v=1622836042"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-4DETAIL_592x592.jpg?v=1622836048",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Aralia-FabianStump-4DETAIL_75x75_crop_center.jpg?v=1622836048"
+            }
+          ],
+          "price": 44.99,
+          "rate": 5,
+          "botanical_name": "Polyscias scutellaria",
+          "common_name": "Fabian Stump",
+          "detail_description": "The Fabian Stump is a species of evergreen shrub with dark green leaves on a strong woody trunk. Originally from the tropical Pacific Islands, this plant thrives indoors and outdoors in warmer climates. Also used as Bonsai, this tree-like shrub grows vertically up to 8 feet! ",
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 19,
+              "fl": 0
+            }
+          ],
+          "sold_out": true
+        }
+      ]
     },
     {
       "id": "begonia",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_begonia_maculata_2-1674008633657.jpg?v=1674008743",
-      "name": "Begonia"
+      "name": "Begonia",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_begonia_exotica_1-1665103294982.jpg?v=1665103306",
+      "meet_content": "One of the most stunning and eye-catching plants you can cultivate inside is the begonia. They are not extremely fragile, but they may be a little demanding about light and water, which makes them a perfect intermediate-level plant project. With their complex leaves, begonias are vivacious and entertaining plants that will liven up your environment and offer a dash of color. ",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_begonia_rex_2_3-1665103294953.jpg?v=1665103296",
+      "light": "Cane Begonias love bright direct sunshine. Rex and Rhizomatous Begonias prefer a little more shade. Move your plant to a less sunny location if any of the leaves appear burned.",
+      "pet": "Begonia - No; Pellionia - Yes",
+      "water": "The biggest issue in cultivating Begonias is finding the proper watering balance. Since Begonias are extremely sensitive to overwatering and are prone to developing root rot, the soil should ideally always be slightly moist but not soggy. Before watering, test the soil with your finger; the top inch should feel dry (approximately up to your first knuckle). While watering the soil, keep the leaves dry.",
+      "humidity": "High",
+      "temperature": "Begonias like temperatures of around 72º F, although they can also tolerate slightly higher or lower temperatures. Begonias thrive at higher temps with greater humidity.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Are Begonias easy to care for?",
+        "Yes, as long as you give begonias the proper care, they are simple to cultivate. They are the pickiest when it comes to water and humidity, which can be challenging for some people to get just right.",
+        "Do Begonias prefer sun or shade?",
+        "The majority of Begonias prefer shade and will burn in direct sunlight. However this can vary slightly between different Begonia types.",
+        "Can Begonias live indoors?",
+        "Begonias are wonderful indoor plants and can survive indoors. Only the tuberous varieties, which need a period of winter hibernation, cannot be grown year-round inside."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_begonia_tigerpaws_3-1665103294976.jpg?v=1665103302",
+      "shop": [
+        {
+          "id": 71,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_PINK_SPOTTED_1_09a17283-1f19-4a87-a88a-2d21df53b7dd_592x592.jpg?v=1654049017",
+          "name": "Begonia 'Pink Spotted'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_PINK_SPOTTED_1_09a17283-1f19-4a87-a88a-2d21df53b7dd_592x592.jpg?v=1654049017",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_PINK_SPOTTED_1_09a17283-1f19-4a87-a88a-2d21df53b7dd_75x75_crop_center.jpg?v=1654049017"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_PINK_SPOTTED_2_592x592.jpg?v=1654049017",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_PINK_SPOTTED_2_75x75_crop_center.jpg?v=1654049017"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_PINK_SPOTTED_3_300228fa-978f-4b5f-b304-12d34eb68a7c_592x592.jpg?v=1654050318",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_PINK_SPOTTED_3_300228fa-978f-4b5f-b304-12d34eb68a7c_75x75_crop_center.jpg?v=1654050318"
+            }
+          ],
+          "price": 13.99,
+          "rate": 1,
+          "botanical_name": "Begonia Amphioxus",
+          "common_name": "Pink Spotted Begonia, Butterfly",
+          "detail_description": "Begonia Amphioxus is a small but eye-catching plant that you can never deny introducing in your garden. The beautiful plant does not bear negligence, so you need to take care of it and provide it with the right growing conditions. Begonia Amphioxus is native to Borneo, Indonesia, and is native to tropical regions. You will love to grow this plant in your household. The plant is bushy and belongs to the Begonia family. The plant’s scientific name originates from ‘amphi’ ‘oxys’, meaning that the plant has pointed ends and they are elongated as well.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 22,
+              "fl": 15
+            }
+          ],
+          "sold_out": true
+        },
+        {
+          "id": 72,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/6_BEGONIA_EXOTICA_1_592x592.jpg?v=1659393563",
+          "name": "Begonia 'Exotica'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_BEGONIA_EXOTICA_1_592x592.jpg?v=1659393563",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_BEGONIA_EXOTICA_1_75x75_crop_center.jpg?v=1659393563"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_BEGONIA_EXOTICA_2_592x592.jpg?v=1659393563",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_BEGONIA_EXOTICA_2_75x75_crop_center.jpg?v=1659393563"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_BEGONIA_EXOTICA_3_592x592.jpg?v=1659393563",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_BEGONIA_EXOTICA_3_75x75_crop_center.jpg?v=1659393563"
+            }
+          ],
+          "price": 44.99,
+          "rate": 0,
+          "botanical_name": "Begonia brevirimosa subsp. exotica",
+          "common_name": "Exotica, Edinburgh, Shrub Begonia",
+          "detail_description": "The Exotica Begonia is an exciting rarity from the rain forests of New Guinea. It's large, metallic-looking leaves sport bright-pink variegation that demands attention. This is a naturally-occurring form, not a cultivated hybrid. If you can meet its basic needs (some warmth & humidity) it is surprisingly easy to grow!",
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 19,
+              "fl": 0
+            }
+          ],
+          "sold_out": true
+        },
+        {
+          "id": 73,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/7178a5dc-127e-40c2-be70-d9b3cb2ab3a5_592x592.png?v=1664476397",
+          "name": "Begonia Mocca Deep Orange",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/7178a5dc-127e-40c2-be70-d9b3cb2ab3a5_592x592.png?v=1664476397",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/7178a5dc-127e-40c2-be70-d9b3cb2ab3a5_75x75_crop_center.png?v=1664476397"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_MOCCA.DEEP.ORANGE_2_592x592.jpg?v=1661883113",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_MOCCA.DEEP.ORANGE_2_75x75_crop_center.jpg?v=1661883113"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_MOCCA.DEEP.ORANGE_3_592x592.jpg?v=1661883113",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_MOCCA.DEEP.ORANGE_3_75x75_crop_center.jpg?v=1661883113"
+            }
+          ],
+          "price": 22.99,
+          "rate": 0,
+          "botanical_name": "Begonia x tuberhybrida",
+          "common_name": "Mocca Deep Orange Tuberous",
+          "detail_description": "Big, double blossoms on upright, bushy plants with bronzed foliage that is slightly more heat tolerant than most tuberous begonias–that describes the Non-Stop Mocha Mix. They belong to the Tuberhybrida Group, a collection of begonia hybrids derived from mountain-growing species native to the South American Andes. Plants arise in spring from winter-dormant root tubers and flower in the full-color array, of the Non-Stop Series, from white through yellow and orange to red. These extravagant flowers are produced from summer to mid-autumn and are set among open, succulent stems across the plant. They are produced in a cluster of three buds, with two smaller female flowers next to the larger, usually double, and showier male flower. Leaves are fleshy, jagged and pointed, glossy and dark or medium green in color, many with flashes of red or bronze.",
+          "sold_out": true
+        },
+        {
+          "id": 74,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/dc93196a-7c5c-43fb-bd2d-234d3f4392a0_592x592.png?v=1665176639",
+          "name": "Begonia 'Exotica'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/dc93196a-7c5c-43fb-bd2d-234d3f4392a0_592x592.png?v=1665176639",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/dc93196a-7c5c-43fb-bd2d-234d3f4392a0_75x75_crop_center.png?v=1665176639"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_TIGER.PAWS_2_592x592.jpg?v=1664601902",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_TIGER.PAWS_2_75x75_crop_center.jpg?v=1664601902"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_TIGER.PAWS_3_592x592.jpg?v=1664601902",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_TIGER.PAWS_3_75x75_crop_center.jpg?v=1664601902"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Begonia Bowerae",
+          "common_name": "Begonia Tiger Paws, Eyelash Begonia",
+          "detail_description": "Striking foliage of small, chocolate to bronze-red leaves, adorned with bright green, paw-like markings. The leaves have white eyelash-like hairs on their edges, hence the common name. Great as an indoor plant and outdoor plant, thanks to its rich colors and relatively rapid growth.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 19,
+              "fl": 0
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 75,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4181a27f-7779-4013-a692-664bb3d24a51_592x592.png?v=1654720332",
+          "name": "Begonia 'Rex' - 4 Pack Variety",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4181a27f-7779-4013-a692-664bb3d24a51_592x592.png?v=1654720332",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4181a27f-7779-4013-a692-664bb3d24a51_75x75_crop_center.png?v=1654720332"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_2_3_592x592.jpg?v=1654048824",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_2_3_75x75_crop_center.jpg?v=1654048824"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_2_4_592x592.jpg?v=1654048824",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_2_4_75x75_crop_center.jpg?v=1654048824"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_3_3_a53d97a9-8fb4-460d-8ce7-9998bacd767a_592x592.jpg?v=1654050298",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_3_3_a53d97a9-8fb4-460d-8ce7-9998bacd767a_75x75_crop_center.jpg?v=1654050298"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_1_592x592.jpg?v=1668441645",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_1_75x75_crop_center.jpg?v=1668441645"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_3_592x592.jpg?v=1668441640",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BEGONIA_REX_3_75x75_crop_center.jpg?v=1668441640"
+            }
+          ],
+          "price": 49.99,
+          "rate": 0,
+          "botanical_name": "Begonia Rex",
+          "common_name": "Rex Begonia",
+          "detail_description": "Rex begonia offers colorful foliage and is one of the most interesting indoor plants around. Despite its exotic looks, Rex begonia is actually easy to grow. Because it's a relatively short houseplant, Rex begonia is perfect for desks and tabletops where its wildly colorful, variegated foliage makes it a perfect contrast against other houseplants.",
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 13
+            }
+          ],
+          "sold_out": false
+        },
+        {
+          "id": 76,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_1_09933b74-e63d-4363-9ac5-f45ee4b757ae_592x592.jpg?v=1655278146",
+          "name": "Pellionia 'Watermelon' on Wood Mount",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_1_09933b74-e63d-4363-9ac5-f45ee4b757ae_592x592.jpg?v=1655278146",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_1_09933b74-e63d-4363-9ac5-f45ee4b757ae_75x75_crop_center.jpg?v=1655278146"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_2_caf95d80-c261-4c38-a9c2-f09e65624c1c_592x592.jpg?v=1655278157",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_2_caf95d80-c261-4c38-a9c2-f09e65624c1c_75x75_crop_center.jpg?v=1655278157"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_3_6ea2572e-c2ef-4d41-a09b-61bb8d7d8c17_592x592.jpg?v=1655278157",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_3_6ea2572e-c2ef-4d41-a09b-61bb8d7d8c17_75x75_crop_center.jpg?v=1655278157"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_4_56643f01-c217-4542-a969-4b2ae27d084e_592x592.jpg?v=1655278145",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/PELLIONIA_WATERMELON_ON.WOOD_4_56643f01-c217-4542-a969-4b2ae27d084e_75x75_crop_center.jpg?v=1655278145"
+            }
+          ],
+          "price": 29.99,
+          "rate": 0,
+          "botanical_name": "Peperomia argyreia",
+          "common_name": "Watermelon Peperomia, Watermelon Begonia",
+          "detail_description": "Native to northern South America, including Bolivia, Brazil, Ecuador, and Venezuela. The plant is not closely related to either watermelons or begonias. These terms relate to the shape, markings, and texture of the leaves. Growing to 20 cm tall. It is a perennial with asymmetrical oval green leaves, slightly fleshy, strikingly marked with curved silver stripes, and red stems. Tiny green flower spikes appear in summer.",
+          "sold_out": true
+        }
+      ]
     },
     {
       "id": "bird_of_paradise",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_strelitzia_birdofparadise_2-1674008634309.jpg?v=1674008699",
-      "name": "Bird of Paradise"
+      "name": "Bird of Paradise",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_strelitzia_birdofparadise_1-1670959476237.jpg?v=1670959494",
+      "meet_content": "The Strelitzia Nicolai, commonly known as the giant white bird of paradise or wild banana is a hardy plant that adds a tropical flair to any space! It features beautiful glossy banana-shaped leaves that fan out.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_strelitzia_birdofparadise_2-1670959476254.jpg?v=1670959501",
+      "light": "The Bird of Paradise can thrive in a variety of lighting conditions but will do best in a sunny spot.",
+      "pet": "No",
+      "water": "Water your Bird of Paradise when the top 50% of soil is dry. Be sure to water until liquid flows through the drainage hole and discard any extra water remaining in the saucer.",
+      "humidity": "High",
+      "temperature": "Bird of Paradise plants tolerate average room temperatures 65-80° F.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves dry and curling?",
+        "Your plant may be lacking moisture and humidity. The bird of paradise likes to be kept somewhat damp. If you notice the top 50% of soil is dry make sure to give your plant a thorough watering. You can also try misting your plant a few times a week or using a pebble tray.",
+        "What my Bird of Paradise bloom?",
+        "Its not likely your plant will bloom indoors but given the right circumstances it can happen. Keep in mind your plant needs to be about 4-5 years old before its is capable of producing flowers. Keep your plant in a sunny spot, do NOT repot often and give it consistent moisture. If your bird of Paradise does bloom, send us a photo, we would love to see it!",
+        "Why are there breaks and slits in the foliage?",
+        "Slits are not necessarily a cause for concern. They can naturally occur in the wild  to help the plant become more aerodynamic in the wind and rain."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_strelitzia_birdofparadise_3-1670959476282.jpg?v=1670959508",
+      "shop": [
+        {
+          "id": 77,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-6_592x592.jpg?v=1617637690",
+          "name": "White Bird of Paradise 'Strelitzia Nicolai'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-6_592x592.jpg?v=1617637690",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-6_75x75_crop_center.jpg?v=1617637690"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-DETAIL-6_799c4b24-f1bf-4766-a3ee-6a732ba9d127_592x592.jpg?v=1617637690",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-DETAIL-6_799c4b24-f1bf-4766-a3ee-6a732ba9d127_75x75_crop_center.jpg?v=1617637690"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-4_592x592.jpg?v=1617637690",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-4_75x75_crop_center.jpg?v=1617637690"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-HOLD-4_592x592.jpg?v=1617637690",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-BirdofParadise-HOLD-4_75x75_crop_center.jpg?v=1617637690"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Strelitzia Nicolai",
+          "common_name": "White Bird of Paradise",
+          "detail_description": "Strelitzia nicolai, commonly known as the giant white bird of paradise or wild banana, is a species of banana-like plants with erect woody stems reaching a height of 6 m and the clumps formed can spread as far as 3.5 m. ",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 18
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 22
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "bromeliad",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_bromeliad_medusa_2-1-1674008634090.jpg?v=1674008659",
-      "name": "Bromeliad"
+      "name": "Bromeliad",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-58eb94d5--1BromeliadDonna4-MAIN.jpg?v=1607548807",
+      "meet_content": "Bromeliads come mostly from South America but can be found as North as Virginia. They are relatives of the Pineapple. Bromeliads are very hardy plants and easy to care for. They make wonderful flowering house plants. If you live in a climate that never sees below freezing temperatures, you can grow Bromeliads outdoors.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-ab9c58eb--1BromeliadDonna4-DETAIL.jpg?v=1607548799",
+      "light": "Bromeliads like bright light but prolonged periods of direct sunlight can damage the plants. Ideally, you want to place your Bromeliad in a spot where it gets medium to bright light. ",
+      "pet": "Yes",
+      "water": "Bromeliads have a unique 'cup' at the center that can hold water. You should keep the center cup filled with water. Bromeliads do not need to be watered through the soil as long as the cup has water in it. It is important to keep the water in the cup fresh because you don't want stagnant water sitting in the cup. You should dump out the water and refresh it about every week.",
+      "humidity": "High",
+      "temperature": "Bromeliads can tolerate a large range of temperatures. They can survive temps as low as 40° F to as high as 90° F.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves yellowing?",
+        "The most common reason Bromeliads have yellow leaves is due to improper soil moisture/ overwatering. When watering you plant make sure to pour enough water so that liquid pours out the bottom drainage holes into a saucer. Pour out water in saucer, do not let the plant sit in water, this may lead to root rot.",
+        "What is the best size pot for my bromeliad?",
+        "A bromeliad's roots act as anchor and do not grow very large. A small pot about 4-6 inches should be large enough to hold our bromeliad plants. Using a pot that is too large will result in the potting soil retaining too much water and can eventually lead to root rot which causes the plant to die.",
+        "Why are my leaves Turning brown and drying out?",
+        "This most likely means that your bromeliad is lacking moisture, which could either mean you are not watering your plant enough or it is in an environment with low humidity. Try watering your bromeliad more frequently and maintaining a regular watering schedule."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-9c58eb94--1BromeliadDonna4-HOLD.jpg?v=1607548803",
+      "shop": [
+        {
+          "id": 78,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_DONNA_1_592x592.jpg?v=1627689795",
+          "name": "Bromeliad 'Donna'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_DONNA_1_592x592.jpg?v=1627689795",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_DONNA_1_75x75_crop_center.jpg?v=1627689795"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Donna-4DETAIL_592x592.jpg?v=1627689795",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Donna-4DETAIL_75x75_crop_center.jpg?v=1627689795"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Donna-4HOLD_592x592.jpg?v=1627689795",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Donna-4HOLD_75x75_crop_center.jpg?v=1627689795"
+            }
+          ],
+          "price": 34.99,
+          "rate": 0,
+          "botanical_name": "Neoregelia 'Donna'",
+          "common_name": "Donna",
+          "detail_description": "The Bromeliad Donna has a deep colored bloom with green outer leaves. This plant ships fully bloomed and looks very similar to the plant in the picture. These bromeliads prefer medium to low light and warm humid environments.",
+          "sold_out": true
+        },
+        {
+          "id": 79,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_MEDUSA_1_592x592.jpg?v=1627690610",
+          "name": "Bromeliad 'Medusa'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_MEDUSA_1_592x592.jpg?v=1627690610",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_MEDUSA_1_75x75_crop_center.jpg?v=1627690610"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Medusa-4DETAIL_592x592.jpg?v=1627690610",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Medusa-4DETAIL_75x75_crop_center.jpg?v=1627690610"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Medusa-6_592x592.jpg?v=1627690610",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Medusa-6_75x75_crop_center.jpg?v=1627690610"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Medusa-DETAIL-6_592x592.jpg?v=1627690610",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Medusa-DETAIL-6_75x75_crop_center.jpg?v=1627690610"
+            }
+          ],
+          "price": 45.99,
+          "rate": 5,
+          "botanical_name": "Neoregelia Medusa",
+          "common_name": "Bromeliad Medusa",
+          "detail_description": "The Bromeliad Medusa has a mixture of red and green leaves coming out of its center. This plant ships with the red leaves and looks very similar to the plant in the picture. These bromeliads prefer medium to low light and warm humid environments. ",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 17,
+              "fl": 0
+            }
+          ]
+        },
+        {
+          "id": 80,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1441501679_592x592.png?v=1615514173",
+          "name": "Bromeliad 'Silver Vase'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1441501679_592x592.png?v=1615514173",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1441501679_75x75_crop_center.png?v=1615514173"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-SilverVase-6_24DETAIL_6ebd63bd-4ad3-4d4f-9212-266a3a78a24c_592x592.jpg?v=1617637514",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-SilverVase-6_24DETAIL_6ebd63bd-4ad3-4d4f-9212-266a3a78a24c_75x75_crop_center.jpg?v=1617637514"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-SilverVase-6_24HOLD_592x592.jpg?v=1617637514",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-SilverVase-6_24HOLD_75x75_crop_center.jpg?v=1617637514"
+            }
+          ],
+          "price": 44.99,
+          "rate": 5,
+          "botanical_name": "Bromeliad Fasciata",
+          "common_name": "SilverVase or Urn Plant",
+          "detail_description": "This Bromeliad is a flowering plant native to Brazil. In nature, it is an epiphytic plant, which means it grows on other plants or trees. This bromeliad variety has thick, arching, gray-green leaves.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 5,
+              "fl": 0
+            }
+          ]
+        },
+        {
+          "id": 81,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_CYANEA_1_592x592.jpg?v=1627689759",
+          "name": "Bromeliad Cyanea 'Pink Quill'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_CYANEA_1_592x592.jpg?v=1627689759",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_BROMELIAD_CYANEA_1_75x75_crop_center.jpg?v=1627689759"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Cyanea-4DETAIL_592x592.jpg?v=1627689759",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Cyanea-4DETAIL_75x75_crop_center.jpg?v=1627689759"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Cyanea-4HOLD_592x592.jpg?v=1627689759",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Bromeliad-Cyanea-4HOLD_75x75_crop_center.jpg?v=1627689759"
+            }
+          ],
+          "price": 26.99,
+          "rate": 0,
+          "botanical_name": "Wallisia Cyanea",
+          "common_name": "Bromeliad Tillandsia Cyanea Pink Quill",
+          "detail_description": "The Pink Quill Plant, or Tillandsia Cyanea, is one sweet little plant. Cyanea Pink Quill has a deep pink colored bloom with green outer leaves. This plant ships fully bloomed and looks very similar to the plant in the picture. The Pink Quill, a Bromeliad which also grows an air plant, makes an easy & tough houseplant.",
+          "sold_out": true
+        }
+      ]
     },
     {
       "id": "cactus",
