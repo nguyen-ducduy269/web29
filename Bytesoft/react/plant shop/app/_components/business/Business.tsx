@@ -61,7 +61,7 @@ const BusinessPage = () => {
         <Container>
           <h1>How It Works</h1>
 
-          <h1 style={{ fontWeight: 200 }}>
+          <h1 style={{ fontWeight: 300 }}>
             Create an account for free and start selling plants today.
           </h1>
 

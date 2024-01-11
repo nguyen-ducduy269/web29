@@ -56,7 +56,7 @@ export const BusinessCss = styled.div`
     .start-work {
       margin-top: 30px;
       display: flex;
-      gap: 20px;
+      gap: 40px;
       .start {
         width: 50%;
         display: flex;
@@ -106,5 +106,122 @@ export const BusinessCss = styled.div`
   .email {
     padding: 100px;
     text-align: center;
+  }
+
+  @media only screen and (min-width: 320px) {
+    .drop-shipping {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .shipping-img {
+        width: 100%;
+      }
+
+      .shipping-content {
+        width: 90%;
+      }
+
+      .shipping-content {
+        margin-bottom: 30px;
+      }
+    }
+
+    .quantity-shipper {
+      padding: 100px 10px;
+    }
+
+    .work {
+      padding: 100px 10px;
+      .start-work {
+        flex-direction: column;
+        .start {
+          width: 100%;
+        }
+      }
+    }
+
+    .statistical {
+      padding: 100px 10px;
+      .statisty {
+        grid-template-columns: repeat(2, 1fr);
+        .stat {
+          padding: 10px 10px;
+          h1 {
+            font-size: 22px;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .email {
+      padding: 100px 10px;
+      text-align: center;
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .email {
+      padding: 100px 10px;
+      text-align: center;
+      h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 320px) {
+    .drop-shipping {
+      flex-direction: row;
+    }
+
+    .work {
+      padding: 100px 10px;
+      .start-work {
+        flex-direction: row;
+        .start {
+          width: 50%;
+        }
+      }
+    }
+
+    .statistical {
+      padding: 100px 10px;
+      .statisty {
+        grid-template-columns: repeat(4, 1fr);
+        .stat {
+          padding: 50px 10px;
+          h1 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+    .email {
+      padding: 100px 10px;
+      text-align: center;
+      h1 {
+        font-size: 42px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
   }
 `;
