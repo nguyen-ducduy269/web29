@@ -68,9 +68,9 @@ const SiteHeader = (props: Props) => {
               <Link href={"/business"}>For Business</Link>
             </div>
 
-            <Link href={"/log-in"} className="log-in">
+            <a href="#" className="log-in">
               Log In
-            </Link>
+            </a>
           </div>
 
           <div className="response-site">

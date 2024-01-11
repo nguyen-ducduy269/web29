@@ -70,12 +70,14 @@ export const ContactCss = styled.div`
           select {
             width: 100%;
             height: 32px;
+            border-radius: 5px;
           }
 
           textarea {
             width: 100%;
             height: 100px;
             padding-left: 20px;
+            padding-top: 10px;
           }
         }
 
@@ -94,10 +96,36 @@ export const ContactCss = styled.div`
             }
           }
         }
+
+        button {
+          padding: 10px 20px;
+          background-color: rgb(86, 86, 86);
+          color: white;
+          font-size: 14px;
+          font-weight: 600;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
       }
     }
   }
 
   @media only screen and (min-width: 320px) {
+    .contact {
+      width: 90%;
+      .form-question {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .contact {
+      width: 50%;
+      .form-question {
+        width: 70%;
+      }
+    }
   }
 `;
