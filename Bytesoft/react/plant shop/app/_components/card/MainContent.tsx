@@ -109,6 +109,7 @@ const MainContent = () => {
                             <div className="quantity">
                               Quantity: {products.quantity}
                             </div>
+
                             <div className="total-price">
                               ${Math.round(products.total_price * 100) / 100}
                             </div>

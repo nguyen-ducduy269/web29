@@ -2869,64 +2869,67 @@
   ],
   "card": [
     {
-      "id": 32,
-      "name": "Hoya 'Australis'",
-      "image": "https://houseplantshop.com/cdn/shop/products/4_HOYA_AUSTRALIS_1_e3c53e72-34a3-4977-b5c3-69f4d91ca3cd_445x445.jpg?v=1654049443",
-      "size": "6' Pot",
-      "price": 39.99,
-      "ca": 40,
-      "fl": 0,
-      "quantity": "5",
-      "total_price": 199.95000000000002
-    },
-    {
-      "id": 1,
-      "name": "Monstera 'Split-Leaf'",
-      "image": "https://houseplantshop.com/cdn/shop/products/4_MONSTERA_DELICIOSA_1_592x592.jpg?v=1627692378",
+      "id": 4,
+      "name": "Succulent Kalanchoe 'Panda Plant'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-Panda-4_592x592.jpg?v=1625074093",
       "size": "4' Pot",
       "price": 19.99,
-      "ca": 129,
-      "fl": 80,
-      "quantity": "4",
-      "total_price": 79.96
+      "quantity": "3",
+      "total_price": 59.97
     },
     {
-      "id": 10,
-      "name": "Maranta Variegated 'Beauty Kim'",
-      "image": "https://houseplantshop.com/cdn/shop/products/39a1baed-1be6-4fa0-9eb1-794e8df43d11_592x789.png?v=1670455869",
+      "id": 19,
+      "name": "Pothos 'Golden'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Golden-6_10_5dd9a1d3-f96e-4d21-81d3-8e9a8d5b5207_592x592.jpg?v=1649682211",
+      "size": "6' Pot",
+      "price": 34.99,
+      "ca": 24,
+      "fl": 81,
+      "quantity": "3",
+      "total_price": 104.97
+    },
+    {
+      "id": 36,
+      "name": "Pothos 'Neon'",
+      "image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_445x445.jpg?v=1687233535",
+      "size": "6' Pot",
+      "price": 13.99,
+      "ca": 24,
+      "fl": 42,
+      "quantity": "5",
+      "total_price": 69.95
+    },
+    {
+      "id": 45,
+      "name": "3 Ionantha Guatemala Air Plants - 2 Inch",
+      "image": "https://houseplantshop.com/cdn/shop/products/HPS-standardplant_IonanthaGuatemala_592x592.jpg?v=1622834154",
       "size": "4' Pot",
-      "price": 21.99,
+      "price": 9.99,
+      "ca": 78,
+      "fl": 32,
+      "quantity": "5",
+      "total_price": 49.95
+    },
+    {
+      "id": 68,
+      "name": "Arabica Coffee",
+      "image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_592x592.jpg?v=1627689722",
+      "price": 13.99,
       "ca": 0,
-      "fl": 26,
-      "quantity": "4",
-      "total_price": 87.96
-    },
-    {
-      "id": 63,
-      "name": "Aloe Vera",
-      "image": "https://houseplantshop.com/cdn/shop/products/4_SUCC_ALOE_VERA_1_592x592.jpg?v=1627922614",
-      "price": 24.99,
+      "fl": 39,
       "quantity": 4,
-      "total_price": 99.96
+      "total_price": 55.96
     },
     {
-      "id": 60,
-      "name": "5 Tillandsia Air Plant Pack with Fertilizer Spray",
-      "image": "https://houseplantshop.com/cdn/shop/products/DSC_0829_592x592.jpg?v=1622834410",
-      "price": 14.99,
-      "quantity": 5,
-      "total_price": 74.95
-    },
-    {
-      "id": 62,
-      "name": "Alocasia Polly 'African Mask'",
-      "image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6_592x592.jpg?v=1622837081",
+      "id": 64,
+      "name": "Anthurium 'Red'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-6_592x592.jpg?v=1664475737",
       "size": "6' Pot",
       "price": 24.99,
       "ca": 0,
-      "fl": 24,
-      "quantity": "4",
-      "total_price": 99.96
+      "fl": 19,
+      "quantity": "3",
+      "total_price": 74.97
     }
   ],
   "all_product": [

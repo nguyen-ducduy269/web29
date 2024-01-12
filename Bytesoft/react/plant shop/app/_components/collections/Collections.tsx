@@ -121,23 +121,25 @@ const Collections = (props: Props) => {
     }
   };
 
-  const onAddToCart = () => {
-    const total_price = popUpInfor.price * quantity;
+  const onAddToCart = (item: any) => {
+    const total_price = item.price * quantity;
 
     const productAddToCard = {
-      id: popUpInfor.id,
-      name: popUpInfor.name,
-      image: popUpInfor.main_image,
-      size: popUpInfor.pot[changePot].name,
-      price: popUpInfor.price,
-      ca: popUpInfor.pot[changePot].ca,
-      fl: popUpInfor.pot[changePot].fl,
+      id: item.id,
+      name: item.name,
+      image: item.main_image,
+      size: item.pot[changePot].name,
+      price: item.price,
+      ca: item.pot[changePot].ca,
+      fl: item.pot[changePot].fl,
       quantity: quantity,
-      total_price: total_price,
+      total_price: Math.round(total_price * 100) / 100,
     };
 
     props.setSelectedItem(Math.random());
     axios.post("http://localhost:4001/card", productAddToCard);
+    setChangePot(0);
+    setQuantity(1);
   };
 
   const handleClickScroll = () => {
@@ -473,7 +475,7 @@ const Collections = (props: Props) => {
                               cursor: "pointer",
                             }}
                             onClick={() => {
-                              onAddToCart();
+                              onAddToCart(popUpInfor);
                               setOpenQuickShopPopUp(false);
                             }}
                           >
@@ -626,7 +628,7 @@ const Collections = (props: Props) => {
                           cursor: "pointer",
                         }}
                         onClick={() => {
-                          onAddToCart();
+                          onAddToCart(popUpInfor);
                           setOpenChooseOptionPopUp(false);
                         }}
                       >

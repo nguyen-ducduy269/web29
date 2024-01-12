@@ -117,7 +117,7 @@ const DetailProduct = (props: Props) => {
     ca: product.pot[changePot].ca,
     fl: product.pot[changePot].fl,
     quantity: quantity,
-    total_price: total_price,
+    total_price: Math.round(total_price * 100) / 100,
   };
 
   const onAddToCart = () => {

@@ -16,13 +16,17 @@ const PlantDetail = (props: Props) => {
   const [quantity, setQuantity] = useState(1);
 
   const addToCard = (item: any) => {
+    const total_price = item.price * quantity;
+
     const plantAddToCard = {
       id: item.id,
       name: item.name,
       image: item.detail_image[0].big_image,
       price: item.price,
+      ca: item.pot[0].ca,
+      fl: item.pot[0].fl,
       quantity: quantity,
-      total_price: item.price * quantity,
+      total_price: Math.round(total_price * 100) / 100,
     };
 
     props.setSelectedItem(Math.random());

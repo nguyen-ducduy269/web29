@@ -46,9 +46,7 @@ const ContactPage = () => {
       alert("The name and email cannot be left blank!");
       window.scrollTo(0, 1300);
     } else {
-      alert(
-        "Submitted successfully! Thank you for your contributionsSubmit successful"
-      );
+      alert("Submitted successfully! Thank you for your contributions!");
       setName("");
       setEmail("");
       setQuestionRegarding("");
