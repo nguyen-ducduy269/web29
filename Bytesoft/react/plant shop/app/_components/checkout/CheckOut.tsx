@@ -149,6 +149,7 @@ const CheckOutPage = () => {
         axios.delete(`http://localhost:4001/card/${data[i].id}`);
       }
       alert("Payment Success!");
+      window.location.reload();
     }
   };
 

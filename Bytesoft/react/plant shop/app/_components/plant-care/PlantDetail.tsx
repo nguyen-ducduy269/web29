@@ -32,6 +32,7 @@ const PlantDetail = (props: Props) => {
     props.setSelectedItem(Math.random());
     axios.post("http://localhost:4001/card", plantAddToCard);
     alert("Successfull add product to your card! Continue Shopping?");
+    setQuantity(1);
   };
 
   return (
