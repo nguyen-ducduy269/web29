@@ -2867,7 +2867,30 @@
       ]
     }
   ],
-  "card": [],
+  "card": [
+    {
+      "id": 1,
+      "name": "Pothos 'Neon'",
+      "image": "https://images.loox.io/uploads/2023/11/15/gvXrz2j5Z_mid.jpg",
+      "size": "4' Pot",
+      "price": 13.99,
+      "ca": 141,
+      "fl": 90,
+      "quantity": 1,
+      "total_price": 13.99
+    },
+    {
+      "id": 3,
+      "name": "Dracaena 'Tornado'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Tornado-4_592x592.jpg?v=1617637542",
+      "size": "6' Pot",
+      "price": 20.99,
+      "ca": 0,
+      "fl": 11,
+      "quantity": "2",
+      "total_price": 41.98
+    }
+  ],
   "all_product": [
     {
       "id": 1,
