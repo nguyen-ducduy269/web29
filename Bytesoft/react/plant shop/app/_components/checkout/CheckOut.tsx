@@ -1,4 +1,6 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const CheckOutPage = () => {
   const [data, setData]: any = useState([]);
@@ -69,6 +71,15 @@ const CheckOutPage = () => {
     "Yên Bá",
   ];
   let finalTotalPrice = 0;
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [company, setCompany] = useState("");
+  const [addressText, setAddressText] = useState("");
+  const [apartment, setApartment] = useState("");
+  const [ward, setWard] = useState("");
+  const [place, setPlace] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const fetchData = async (url: string) => {
     const response = await fetch(url);
@@ -102,12 +113,56 @@ const CheckOutPage = () => {
     }
   };
 
+  const PayNow = () => {
+    if (email === "") {
+      window.scrollTo(0, 100);
+      alert("The email cannot be left blank!");
+    } else if (firstName === "" && lastName === "") {
+      window.scrollTo(0, 250);
+      alert("The name cannot be left blank!");
+    } else if (email === "" && firstName === "" && lastName === "") {
+      window.scrollTo(0, 100);
+      alert("The name and the email cannot be left blank!");
+    } else if (
+      addressText === "" ||
+      apartment === "" ||
+      ward === "" ||
+      place === ""
+    ) {
+      window.scrollTo(0, 400);
+      alert("Delivery address is not complete!");
+    } else if (phoneNumber === "") {
+      window.scrollTo(0, 650);
+      alert("The phone number cannot be left blank!");
+    } else {
+      setEmail("");
+      setFirstName("");
+      setLastName("");
+      setCompany("");
+      setAddressText("");
+      setApartment("");
+      setWard("");
+      setPlace("");
+      setPhoneNumber("");
+      for (let i = 0; i < data.length; i++) {
+        console.log(data[i].id);
+        axios.delete(`http://localhost:4001/card/${data[i].id}`);
+      }
+      alert("Payment Success!");
+    }
+  };
+
   return (
     <div className="check-out">
       <div className="contact">
         <div className="form-email">
           <label htmlFor="email">Contact</label>
-          <input type="email" placeholder="Email" />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e: any) => setEmail(e.target.value)}
+          />
         </div>
 
         <select name="" id="">
@@ -115,54 +170,103 @@ const CheckOutPage = () => {
         </select>
 
         <div className="name">
-          <input type="text" placeholder="First name" />
+          <input
+            type="text"
+            placeholder="First name"
+            value={firstName}
+            onChange={(e: any) => setFirstName(e.target.value)}
+          />
 
-          <input type="text" placeholder="Last name" />
+          <input
+            type="text"
+            placeholder="Last name"
+            value={lastName}
+            onChange={(e: any) => setLastName(e.target.value)}
+          />
         </div>
 
-        <input type="text" placeholder="Company (optional)" />
+        <input
+          type="text"
+          placeholder="Company (optional)"
+          value={company}
+          onChange={(e: any) => setCompany(e.target.value)}
+        />
 
-        <input type="text" placeholder="Address" />
+        <input
+          type="text"
+          placeholder="Address"
+          value={addressText}
+          onChange={(e: any) => setAddressText(e.target.value)}
+        />
 
-        <input type="text" placeholder="Apartment, suite, etc. (optional)" />
+        <input
+          type="text"
+          placeholder="Apartment, suite, etc. (optional)"
+          value={apartment}
+          onChange={(e: any) => setApartment(e.target.value)}
+        />
 
         <div className="place">
-          <input type="text" placeholder="Ward" />
+          <input
+            type="text"
+            placeholder="Ward"
+            value={ward}
+            onChange={(e: any) => setWard(e.target.value)}
+          />
 
-          <select name="" id="" placeholder="State">
+          <select
+            name=""
+            id=""
+            placeholder="State"
+            value={place}
+            onChange={(e: any) => setPlace(e.target.value)}
+          >
             {city.map((location: any) => {
-              return <option value="">{location}</option>;
+              return <option>{location}</option>;
             })}
           </select>
 
           <input type="text" placeholder="ZIP Code" />
         </div>
 
-        <input type="text" placeholder="Phone (optional)" />
+        <input
+          type="text"
+          placeholder="Phone (optional)"
+          value={phoneNumber}
+          onChange={(e: any) => setPhoneNumber(e.target.value)}
+        />
 
-        <div className="pay-now">Pay Now</div>
+        <div className="pay-now" onClick={() => PayNow()}>
+          Pay Now
+        </div>
       </div>
 
       <div className="summary">
-        <div className="order">
-          {data.map((item: any) => {
-            return (
-              <div className="order-item">
-                <div className="image">
-                  <img src={item.image} alt="" />
-                </div>
+        {data.length == 0 ? (
+          <div className="order">
+            <Link href={"/"}>Payment Success! Continue Shopping?</Link>
+          </div>
+        ) : (
+          <div className="order">
+            {data.map((item: any) => {
+              return (
+                <div className="order-item">
+                  <div className="image">
+                    <img src={item.image} alt="" />
+                  </div>
 
-                <div className="detail">
-                  <div className="name">{item.name}</div>
-                  <div className="pot">{item.size}</div>
-                  <div className="quantity">Quantity: {item.quantity}</div>
-                </div>
+                  <div className="detail">
+                    <div className="name">{item.name}</div>
+                    <div className="pot">{item.size}</div>
+                    <div className="quantity">Quantity: {item.quantity}</div>
+                  </div>
 
-                <div className="total-price">${item.total_price}</div>
-              </div>
-            );
-          })}
-        </div>
+                  <div className="total-price">${item.total_price}</div>
+                </div>
+              );
+            })}
+          </div>
+        )}
 
         <div className="discount-code">
           <input

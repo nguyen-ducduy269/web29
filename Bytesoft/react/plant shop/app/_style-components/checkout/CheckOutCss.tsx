@@ -136,6 +136,13 @@ export const CheckOutCss = styled.div`
             font-weight: 500;
           }
         }
+
+        a {
+          width: 100%;
+          text-decoration: none;
+          color: black;
+          text-align: center;
+        }
       }
 
       .discount-code {

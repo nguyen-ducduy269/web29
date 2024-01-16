@@ -2867,71 +2867,7 @@
       ]
     }
   ],
-  "card": [
-    {
-      "id": 4,
-      "name": "Succulent Kalanchoe 'Panda Plant'",
-      "image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-Panda-4_592x592.jpg?v=1625074093",
-      "size": "4' Pot",
-      "price": 19.99,
-      "quantity": "3",
-      "total_price": 59.97
-    },
-    {
-      "id": 19,
-      "name": "Pothos 'Golden'",
-      "image": "https://houseplantshop.com/cdn/shop/products/1-Pothos-Golden-6_10_5dd9a1d3-f96e-4d21-81d3-8e9a8d5b5207_592x592.jpg?v=1649682211",
-      "size": "6' Pot",
-      "price": 34.99,
-      "ca": 24,
-      "fl": 81,
-      "quantity": "3",
-      "total_price": 104.97
-    },
-    {
-      "id": 36,
-      "name": "Pothos 'Neon'",
-      "image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_445x445.jpg?v=1687233535",
-      "size": "6' Pot",
-      "price": 13.99,
-      "ca": 24,
-      "fl": 42,
-      "quantity": "5",
-      "total_price": 69.95
-    },
-    {
-      "id": 45,
-      "name": "3 Ionantha Guatemala Air Plants - 2 Inch",
-      "image": "https://houseplantshop.com/cdn/shop/products/HPS-standardplant_IonanthaGuatemala_592x592.jpg?v=1622834154",
-      "size": "4' Pot",
-      "price": 9.99,
-      "ca": 78,
-      "fl": 32,
-      "quantity": "5",
-      "total_price": 49.95
-    },
-    {
-      "id": 68,
-      "name": "Arabica Coffee",
-      "image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_592x592.jpg?v=1627689722",
-      "price": 13.99,
-      "ca": 0,
-      "fl": 39,
-      "quantity": 4,
-      "total_price": 55.96
-    },
-    {
-      "id": 64,
-      "name": "Anthurium 'Red'",
-      "image": "https://houseplantshop.com/cdn/shop/products/1-Anthurium-Red-6_592x592.jpg?v=1664475737",
-      "size": "6' Pot",
-      "price": 24.99,
-      "ca": 0,
-      "fl": 19,
-      "quantity": "3",
-      "total_price": 74.97
-    }
-  ],
+  "card": [],
   "all_product": [
     {
       "id": 1,
