@@ -41,6 +41,7 @@ const FeatureProducts = (props: Props) => {
   const onSubmit = () => {
     props.setSelectedItem(Math.random());
     axios.post("http://localhost:4001/card", product);
+    setCardValue(1);
   };
 
   return (

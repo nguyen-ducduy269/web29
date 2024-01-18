@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import Link from "next/link";
-
+import React from "react";
 import { Container } from "@/app/_style-components/home-page-css/Container";
 import { PLantDetailCss } from "@/app/_style-components/plant-care/PlantDetailCss";
-import axios from "axios";
+import PlantMore from "./PlantMore";
 
 interface Props {
   setSelectedItem: (value: any) => void;
@@ -13,27 +11,6 @@ const PlantDetail = (props: Props) => {
   const plant_care_detail = JSON.parse(
     localStorage.getItem("plant-care-item") || ""
   );
-  const [quantity, setQuantity] = useState(1);
-
-  const addToCard = (item: any) => {
-    const total_price = item.price * quantity;
-
-    const plantAddToCard = {
-      id: item.id,
-      name: item.name,
-      image: item.detail_image[0].big_image,
-      price: item.price,
-      ca: item.pot[0].ca,
-      fl: item.pot[0].fl,
-      quantity: quantity,
-      total_price: Math.round(total_price * 100) / 100,
-    };
-
-    props.setSelectedItem(Math.random());
-    axios.post("http://localhost:4001/card", plantAddToCard);
-    alert("Successfull add product to your card! Continue Shopping?");
-    setQuantity(1);
-  };
 
   return (
     <>
@@ -168,96 +145,10 @@ const PlantDetail = (props: Props) => {
 
               {plant_care_detail.shop.map((product: any) => {
                 return (
-                  <div className="item-detail" key={product.id}>
-                    <div className="item-img">
-                      <img src={product.main_image} alt="" />
-                    </div>
-
-                    <div className="details">
-                      <div className="item-title">{product.name}</div>
-
-                      <div className="item-price">${product.price}</div>
-
-                      <ul>
-                        <li>
-                          <strong>Botanical Name:</strong>{" "}
-                          {product.botanical_name}
-                        </li>
-                        <li>
-                          <strong>Description:</strong>{" "}
-                          {product.detail_description}
-                        </li>
-                      </ul>
-
-                      <div className="add-to-card-value">
-                        <div className="value">
-                          {quantity <= 1 ? (
-                            <button
-                              className="minus"
-                              style={{
-                                backgroundColor: "rgb(209, 213, 219)",
-                                color: "white",
-                              }}
-                            >
-                              -
-                            </button>
-                          ) : (
-                            <button
-                              className="minus"
-                              onClick={() => setQuantity(quantity - 1)}
-                            >
-                              -
-                            </button>
-                          )}
-                          <input
-                            type="text"
-                            className="quantity"
-                            value={quantity}
-                            min={1}
-                          />
-                          <button
-                            className="plus"
-                            onClick={() => setQuantity(quantity + 1)}
-                          >
-                            +
-                          </button>
-                        </div>
-
-                        {product.sold_out == true ? (
-                          <div
-                            className="add-to-card"
-                            style={{
-                              backgroundColor: "rgb(209, 213, 219)",
-                              color: "white",
-                            }}
-                          >
-                            Sold Out
-                          </div>
-                        ) : (
-                          <div
-                            className="add-to-card"
-                            onClick={() => {
-                              addToCard(product);
-                            }}
-                          >
-                            Add To Card
-                          </div>
-                        )}
-                      </div>
-
-                      <Link
-                        href={"/product"}
-                        onClick={() => {
-                          localStorage.setItem(
-                            "detail-products",
-                            JSON.stringify(product)
-                          );
-                        }}
-                      >
-                        View details
-                      </Link>
-                    </div>
-                  </div>
+                  <PlantMore
+                    product={product}
+                    setSelectedItem={props.setSelectedItem}
+                  />
                 );
               })}
             </div>

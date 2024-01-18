@@ -145,7 +145,6 @@ const CheckOutPage = () => {
       setPlace("");
       setPhoneNumber("");
       for (let i = 0; i < data.length; i++) {
-        console.log(data[i].id);
         axios.delete(`http://localhost:4001/card/${data[i].id}`);
       }
       alert("Payment Success!");

@@ -2889,6 +2889,56 @@
       "fl": 11,
       "quantity": "2",
       "total_price": 41.98
+    },
+    {
+      "id": "new product",
+      "name": "Monstera Deliciosa Mint Large Form",
+      "price": 999.99,
+      "image": "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
+      "quantity": "2",
+      "total_price": 1999.98
+    },
+    {
+      "id": 2,
+      "name": "Peperomia 'Rosso'",
+      "image": "https://houseplantshop.com/cdn/shop/products/image_png1601318718_592x592.png?v=1643836068",
+      "size": "6' Pot",
+      "price": 19.99,
+      "ca": 1,
+      "fl": 0,
+      "quantity": "3",
+      "total_price": 59.97
+    },
+    {
+      "id": 9,
+      "name": "Assorted Succulent Variety",
+      "image": "https://houseplantshop.com/cdn/shop/files/cb594089-e911-4a6a-9f1d-44b116d7666e_592x592.png?v=1692999053",
+      "size": "12 Pack",
+      "price": 69.99,
+      "ca": 100,
+      "fl": 97,
+      "quantity": "5",
+      "total_price": 349.95
+    },
+    {
+      "id": 56,
+      "name": "Tillandsia Air Plant Bulbosay",
+      "image": "https://houseplantshop.com/cdn/shop/products/DSC_0293_592x592.jpg?v=1622834131",
+      "price": 9.99,
+      "ca": 101,
+      "fl": 25,
+      "quantity": 4,
+      "total_price": 39.96
+    },
+    {
+      "id": 53,
+      "name": "Tillandsia Air Plant Veluntina",
+      "image": "https://houseplantshop.com/cdn/shop/products/T.Velutina_592x592.jpg?v=1622834171",
+      "price": 7.99,
+      "ca": 32,
+      "fl": 14,
+      "quantity": 3,
+      "total_price": 23.97
     }
   ],
   "all_product": [
@@ -13683,7 +13733,8 @@
               "fl": 10
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 53,
@@ -13713,7 +13764,8 @@
               "fl": 3
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 54,
@@ -13743,7 +13795,8 @@
               "fl": 3
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 55,
@@ -13773,7 +13826,8 @@
               "fl": 68
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 56,
@@ -13809,7 +13863,8 @@
               "fl": 3
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 57,
@@ -13845,7 +13900,8 @@
               "fl": 16
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 58,
@@ -13869,7 +13925,8 @@
               "fl": 35
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 59,
@@ -13893,7 +13950,8 @@
               "fl": 0
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 60,
@@ -13917,7 +13975,8 @@
               "fl": 0
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 61,
@@ -13933,7 +13992,8 @@
           "rate": 0,
           "botanical_name": "Tillandsia Usneoides",
           "detail_description": "The spanish moss is an epiphytic air plant native to Central and South America. This plant will arrive in long strands which can be displayed as a hanging ornamental plant to give a foresty look to any household or office.",
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         }
       ]
     },
@@ -14005,7 +14065,8 @@
               "fl": 24
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         }
       ]
     },
@@ -14113,7 +14174,8 @@
               "status": false
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         }
       ]
     },
@@ -14231,7 +14293,8 @@
               "status": false
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 65,
@@ -14278,7 +14341,8 @@
               "fl": 8
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 66,
@@ -14315,7 +14379,8 @@
               "fl": 27
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 67,
@@ -14366,7 +14431,8 @@
               "fl": 11
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         }
       ]
     },
@@ -14456,7 +14522,8 @@
               "fl": 35
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         }
       ]
     },
@@ -14514,7 +14581,8 @@
               "fl": 15
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 70,
@@ -14555,7 +14623,8 @@
               "fl": 0
             }
           ],
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         }
       ]
     },
@@ -14613,7 +14682,8 @@
               "fl": 15
             }
           ],
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         },
         {
           "id": 72,
@@ -14646,7 +14716,8 @@
               "fl": 0
             }
           ],
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         },
         {
           "id": 73,
@@ -14671,7 +14742,8 @@
           "botanical_name": "Begonia x tuberhybrida",
           "common_name": "Mocca Deep Orange Tuberous",
           "detail_description": "Big, double blossoms on upright, bushy plants with bronzed foliage that is slightly more heat tolerant than most tuberous begonias–that describes the Non-Stop Mocha Mix. They belong to the Tuberhybrida Group, a collection of begonia hybrids derived from mountain-growing species native to the South American Andes. Plants arise in spring from winter-dormant root tubers and flower in the full-color array, of the Non-Stop Series, from white through yellow and orange to red. These extravagant flowers are produced from summer to mid-autumn and are set among open, succulent stems across the plant. They are produced in a cluster of three buds, with two smaller female flowers next to the larger, usually double, and showier male flower. Leaves are fleshy, jagged and pointed, glossy and dark or medium green in color, many with flashes of red or bronze.",
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         },
         {
           "id": 74,
@@ -14704,7 +14776,8 @@
               "fl": 0
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 75,
@@ -14749,7 +14822,8 @@
               "fl": 13
             }
           ],
-          "sold_out": false
+          "sold_out": false,
+          "quantity": 1
         },
         {
           "id": 76,
@@ -14778,7 +14852,8 @@
           "botanical_name": "Peperomia argyreia",
           "common_name": "Watermelon Peperomia, Watermelon Begonia",
           "detail_description": "Native to northern South America, including Bolivia, Brazil, Ecuador, and Venezuela. The plant is not closely related to either watermelons or begonias. These terms relate to the shape, markings, and texture of the leaves. Growing to 20 cm tall. It is a perennial with asymmetrical oval green leaves, slightly fleshy, strikingly marked with curved silver stripes, and red stems. Tiny green flower spikes appear in summer.",
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         }
       ]
     },
@@ -14846,7 +14921,8 @@
               "ca": 0,
               "fl": 22
             }
-          ]
+          ],
+          "quantity": 1
         }
       ]
     },
@@ -14896,7 +14972,8 @@
           "botanical_name": "Neoregelia 'Donna'",
           "common_name": "Donna",
           "detail_description": "The Bromeliad Donna has a deep colored bloom with green outer leaves. This plant ships fully bloomed and looks very similar to the plant in the picture. These bromeliads prefer medium to low light and warm humid environments.",
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         },
         {
           "id": 79,
@@ -14933,7 +15010,8 @@
               "ca": 17,
               "fl": 0
             }
-          ]
+          ],
+          "quantity": 1
         },
         {
           "id": 80,
@@ -14966,7 +15044,8 @@
               "ca": 5,
               "fl": 0
             }
-          ]
+          ],
+          "quantity": 1
         },
         {
           "id": 81,
@@ -14991,19 +15070,714 @@
           "botanical_name": "Wallisia Cyanea",
           "common_name": "Bromeliad Tillandsia Cyanea Pink Quill",
           "detail_description": "The Pink Quill Plant, or Tillandsia Cyanea, is one sweet little plant. Cyanea Pink Quill has a deep pink colored bloom with green outer leaves. This plant ships fully bloomed and looks very similar to the plant in the picture. The Pink Quill, a Bromeliad which also grows an air plant, makes an easy & tough houseplant.",
-          "sold_out": true
+          "sold_out": true,
+          "quantity": 1
         }
       ]
     },
     {
       "id": "cactus",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_succ_cactus_fairycastle_2-1662587849767.jpg?v=1662587871",
-      "name": "Cactus"
+      "name": "Cactus",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/succulent-4-1674254178069.jpg?v=1674254185",
+      "meet_content": "Cacti are some of the easiest plants to care for. They are adaptive and can survive many conditions!",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_christmas-cactus_2-1674254178057.jpg?v=1674254182",
+      "light": "Cacti can grow indoors and outdoors as long as they are getting enough sunlight. Cacti thrive in bright light to full sunlight!",
+      "pet": "Yes, but their sharp spines are hazardous to pets!",
+      "water": "The rule of thumb is to water cacti when the soil is dry. Do not water if the soil is still moist or wet.",
+      "humidity": "Low",
+      "temperature": "Cacti can survive in most climates. They do best in temperatures between 55-90°F. Keep away from fans, heaters and air onditioning units.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves shriveling up and wrinkling?",
+        "Although Cacti do not need much water they still need some water. So don't forget to water your plant soon after the soil has completely dried out.",
+        "Why are there grey scab-like marks on my plant?",
+        "Although this may look worrisome, its most likely nothing to be afraid of! You may have noticed some scabbing on produce like tomatoes & cucumbers. Make sure you are not overwatering your plant and keep it away from any drafts, especially in the winter."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/3_ric-rac-cactus_3-1674254178045.jpg?v=1674254179",
+      "shop": [
+        {
+          "id": 82,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/3_RICRACCACTUS_1_592x592.jpg?v=1626808040",
+          "name": "Epiphyllum 'Ric Rac' Cactus",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_EPIPHYLLUM-RicRacCactus_592x592.jpg?v=1625262625",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_EPIPHYLLUM-RicRacCactus_75x75_crop_center.jpg?v=1625262625"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_EPIPHYLLUM-RicRacCactus-DETAIL_592x592.jpg?v=1625262625",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_EPIPHYLLUM-RicRacCactus-DETAIL_75x75_crop_center.jpg?v=1625262625"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_RICRACCACTUS_1_592x592.jpg?v=1626808040",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_RICRACCACTUS_1_75x75_crop_center.jpg?v=1626808040"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_RICRACCACTUS_3_592x592.jpg?v=1626808040",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_RICRACCACTUS_3_75x75_crop_center.jpg?v=1626808040"
+            }
+          ],
+          "price": 16.99,
+          "rate": 4,
+          "botanical_name": "Cryptocereus anthonyanus",
+          "common_name": "Ric Rac cactus, Zig Zag, Fishbone",
+          "detail_description": "The common name of this plant refers to the pattern of the grooves of this cactuses foliage, which closely resembles the skeleton of a dead fish. When matured this plant's leaves grow in an arch over the pot and is extremely resilient as it retains a lot of water as it is considered a cactus. This cactus can tolerate in indirect and bright sunlight making it a great choice for novice gardeners.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 38,
+              "fl": 0
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 53,
+              "fl": 197
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 26,
+              "fl": 18
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 83,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png2058051729_592x592.png?v=1643764613",
+          "name": "Zygocactus 'Christmas Cactus'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png2058051729_592x592.png?v=1643764613",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png2058051729_75x75_crop_center.png?v=1643764613"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_ChristmasCactus_2_592x592.jpg?v=1636130347",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_ChristmasCactus_2_75x75_crop_center.jpg?v=1636130347"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/files/6_SUCC_ZYGOCACTUS_RED_TEMP_12.6.23_592x789.jpg?v=1702406517",
+              "small_image": "https://houseplantshop.com/cdn/shop/files/6_SUCC_ZYGOCACTUS_RED_TEMP_12.6.23_57x75_crop_center.jpg?v=1702406517"
+            }
+          ],
+          "price": 19.99,
+          "rate": 4,
+          "botanical_name": "Schlumbergera truncata",
+          "common_name": "Zygocactus, Christmas Cactus",
+          "detail_description": "Zygocactus also known as Thanksgiving cactus, holiday cactus, or crab cactus. The crab name refers to the leaf-shaped stem segments that have curved, pointed teeth or claws along the edges. The Easter cactus (Schlumbergera buckleyi) has rounded edges on its leaf segments.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 60,
+              "fl": 19
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 75
+            },
+            {
+              "id": 2,
+              "name": "8' Pot",
+              "ca": 200,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 84,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/41724f9b-f4ec-441d-a479-e2de3a98e9d4_592x789.png?v=1680760565",
+          "name": "Drooping Prickly Pear Cactus",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/2_CACTUS_DROOPING.PRICKLY.PEAR_592x592.jpg?v=1680760565",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/2_CACTUS_DROOPING.PRICKLY.PEAR_75x75_crop_center.jpg?v=1680760565"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/41724f9b-f4ec-441d-a479-e2de3a98e9d4_592x789.png?v=1680760565",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/41724f9b-f4ec-441d-a479-e2de3a98e9d4_57x75_crop_center.png?v=1680760565"
+            }
+          ],
+          "price": 18.99,
+          "rate": 0,
+          "botanical_name": "Opuntia monacantha",
+          "common_name": "Prickly Pear Cactus",
+          "detail_description": "Opuntia monacantha is a succulent perennial cactus species from the Cactaceae family, originating from South America. This plant is a popular choice for growing as a houseplant, it is low maintenance, requiring good sunlight and infrequent watering. Produces showy flowers up to 10cm in length and between 3-7.5cm, they are borne on fleshy bases, appearing from the stem margins.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 85,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/e70ba524-ea4c-459d-8e5d-3d614ae156a9_592x592.png?v=1625262628",
+          "name": "Orchid Cactus 'Curly Sue'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/e70ba524-ea4c-459d-8e5d-3d614ae156a9_592x592.png?v=1625262628",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/e70ba524-ea4c-459d-8e5d-3d614ae156a9_75x75_crop_center.png?v=1625262628"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-OrchidCactus-CurlySue-Detail-6_592x592.jpg?v=1625262628",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-OrchidCactus-CurlySue-Detail-6_75x75_crop_center.jpg?v=1625262628"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-OrchidCactus-CurlySue-HOLD-6_592x592.jpg?v=1625262628",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-OrchidCactus-CurlySue-HOLD-6_75x75_crop_center.jpg?v=1625262628"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/IMG_3308_592x789.jpg?v=1661885657",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/IMG_3308_57x75_crop_center.jpg?v=1661885657"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/IMG_3307_592x789.jpg?v=1661885658",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/IMG_3307_57x75_crop_center.jpg?v=1661885658"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/IMG_3309_592x789.jpg?v=1661885658",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/IMG_3309_57x75_crop_center.jpg?v=1661885658"
+            }
+          ],
+          "price": 44.99,
+          "rate": 5,
+          "botanical_name": "Epiphyllum guatemalense",
+          "common_name": "Orchid Cactus 'Curly Sue'",
+          "detail_description": "The foliage of this Epiphyllum wants to twist and curl into great locks of flat, rich green foliage. Rather small for an Epiphyllum, the 3″ white flowers open at night and may be followed by small red, delicious, edible fruit.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 17,
+              "fl": 19
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 86,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-FairyCastleCactus-4MAIN_592x592.jpg?v=1622839944",
+          "name": "Fairy Castle Cactus",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-FairyCastleCactus-4MAIN_592x592.jpg?v=1622839944",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-FairyCastleCactus-4MAIN_75x75_crop_center.jpg?v=1622839944"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-FairyCastleCactus-4DETAIL_592x592.jpg?v=1622839948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-FairyCastleCactus-4DETAIL_75x75_crop_center.jpg?v=1622839948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-FairyCastleCactus-4HOLD_592x592.jpg?v=1622839954",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-FairyCastleCactus-4HOLD_75x75_crop_center.jpg?v=1622839954"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/IMG_3302_592x789.jpg?v=1661885386",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/IMG_3302_57x75_crop_center.jpg?v=1661885386"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/IMG_3301_592x789.jpg?v=1661885387",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/IMG_3301_57x75_crop_center.jpg?v=1661885387"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/d0b7dc5f-6554-4bf0-b695-15322b06eba1_592x789.png?v=1664478331",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/d0b7dc5f-6554-4bf0-b695-15322b06eba1_57x75_crop_center.png?v=1664478331"
+            }
+          ],
+          "price": 19.99,
+          "rate": 0,
+          "botanical_name": "Acanthocereus Tetragonus",
+          "common_name": "Fairy Castle Cactus",
+          "detail_description": "The cactus plant also originates in popular regions of Mexico, the Caribbean, Central America, and northern South America. The spiky plant shares resemblance with the turrets of a castle due to its curvy, columnar shape. This is the reason why it is popularly known as a fairy castle cactus.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 6,
+              "fl": 16
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 4,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "calathea",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_calathea_medallion_2-1674008634114.jpg?v=1674008662",
-      "name": "Calathea"
+      "name": "Calathea",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-634a9c29--1CalatheaOrnata4-MAIN.jpg?v=1607731789",
+      "meet_content": "Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. There are over 300 different types of Calathea Plants, many being man-made hybrids created by tissue cultures. The various Calathea varieties have leaves with a purple undersides and various vibrant colorful patterns on the top side. Indoors, a Calathea is a table plant or short bush that rarely gets bigger than 24” tall and 24”-26” wide.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-64b0634a--1CalatheaOrnata4-DETAIL.jpg?v=1607731782",
+      "light": "A Calathea Plant likes bright indirect light; so placing it in front of an east, west, or north window is ideal. Too much direct sun burns the leaves of a Calathea Plant and causes the beautiful leaf colors to fade.",
+      "pet": "Yes",
+      "water": "Allow the top 2-3” to dry out before watering. Never let a Calathea Plant sit in water. Calathea Plants are very sensitive to the water you use. Hard water, soft water, fluoridated water, or water of poor quality causes the leaves of a Calathea Plant to turn brown from leaf burn. The best way to water a Calathea Plant is to use distilled water, rainwater, or allow your tap water to sit out overnight before using it. Keep the soil of a Calathea Plant moist but never soggy.",
+      "humidity": "High",
+      "temperature": "Calathea Plants like temperatures between 65°-80° F degrees, and do not like cold drafts or temperatures below 55°-60° F degrees. Hot temperatures cause the leaves of a Calathea Plant to curl.",
+      "difficult_level": "Hard",
+      "common_problems": [
+        "Why are my leaves yellow?",
+        "This may be a sign your plant is receiving too little water. You don't want the soil to be soggy but you do want to keep it moist. Calathea plants can survive short periods of under watering, but if it goes on for too long you will notice yellowing leaves.",
+        "Why is the pattern on my leaves fading?",
+        "When a Calathea receives full sunlight the Chlorophyll in the leaves takes over and the light and dark patterns fade or disappear. Simply move your plant to an area with more shade or indirect light, the amount of Chlorophyll will be reduced and the pattern will reappear.",
+        "Why are my leaves turning brown and drying out?",
+        "This is usually a sign the air in the room is too dry. You can move you plant to a room with more humidity, like the bathroom, laundry room or kitchen. If you want to leave the plant where it is, misting the leaves can help!"
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-b0634a9c--1CalatheaOrnata4-HOLD.jpg?v=1607731786",
+      "shop": [
+        {
+          "id": 87,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_ORNATA_1_592x592.jpg?v=1627690830",
+          "name": "Calathea 'Ornata'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_ORNATA_1_592x592.jpg?v=1627690830",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_ORNATA_1_75x75_crop_center.jpg?v=1627690830"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4DETAIL_592x592.jpg?v=1627690830",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4DETAIL_75x75_crop_center.jpg?v=1627690830"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4HOLD_592x592.jpg?v=1627690830",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4HOLD_75x75_crop_center.jpg?v=1627690830"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-DETAIL-6_592x592.jpg?v=1627690830",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-DETAIL-6_75x75_crop_center.jpg?v=1627690830"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-HOLD-6_592x592.jpg?v=1627690830",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-HOLD-6_75x75_crop_center.jpg?v=1627690830"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_CALATHEA_ORNATA_TEMP_592x789.jpg?v=1654801213",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_CALATHEA_ORNATA_TEMP_57x75_crop_center.jpg?v=1654801213"
+            }
+          ],
+          "price": 27.99,
+          "rate": 5,
+          "botanical_name": "Calathea 'Ornata'",
+          "common_name": "Peacock Plant, Zebra Plant",
+          "detail_description": "Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. The various Calathea varieties have leaves with purple undersides and various vibrant colorful patterns on the top side.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 298,
+              "fl": 27
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 14,
+              "fl": 21
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 88,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_MEDALLION_1_592x592.jpg?v=1627690791",
+          "name": "Calathea Roseopicta 'Medallion'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_MEDALLION_1_592x592.jpg?v=1627690791",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_MEDALLION_1_75x75_crop_center.jpg?v=1627690791"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4DETAIL_592x592.jpg?v=1627690791",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4DETAIL_75x75_crop_center.jpg?v=1627690791"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4HOLD_592x592.jpg?v=1627690791",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4HOLD_75x75_crop_center.jpg?v=1627690791"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-DETAIL-6_592x592.jpg?v=1627690791",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-DETAIL-6_75x75_crop_center.jpg?v=1627690791"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_FiberPot_592x592.jpg?v=1636575389",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_FiberPot_75x75_crop_center.jpg?v=1636575389"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_WhiteRound_592x592.jpg?v=1636575389",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_WhiteRound_75x75_crop_center.jpg?v=1636575389"
+            }
+          ],
+          "price": 26.99,
+          "rate": 5,
+          "botanical_name": "Calathea Roseopicta 'Medallion'",
+          "common_name": "Peacock Plant, Zebra Plant",
+          "detail_description": "Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. The various Calathea varieties have leaves with purple undersides and various vibrant colorful patterns on the top side.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 42,
+              "fl": 71
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 17,
+              "fl": 29
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 89,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_FREDDIE_1_592x592.jpg?v=1627690669",
+          "name": "Calathea Concinna 'Freddie'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_FREDDIE_1_592x592.jpg?v=1627690669",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_FREDDIE_1_75x75_crop_center.jpg?v=1627690669"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Concinna-4DETAIL_592x592.jpg?v=1627690669",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Concinna-4DETAIL_75x75_crop_center.jpg?v=1627690669"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6_592x592.jpg?v=1627690669",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6_75x75_crop_center.jpg?v=1627690669"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6-HOLD_592x592.jpg?v=1627690669",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6-HOLD_75x75_crop_center.jpg?v=1627690669"
+            }
+          ],
+          "price": 29.99,
+          "rate": 5,
+          "botanical_name": "Calathea Concinna",
+          "common_name": "Peacock Plant, Zebra Plant, Freddie",
+          "detail_description": "This Calathea Concinna also commonly called the Freddie comes with soft green leaves with uniquely shaped shades. Like all Calathea plants, the leaves adjust as the sun rotates throughout the day. Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. ",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 10,
+              "fl": 30
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 25,
+              "fl": 20
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 90,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_PEACOCK_1_592x592.jpg?v=1627690874",
+          "name": "Calathea 'Peacock'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_PEACOCK_1_592x592.jpg?v=1627690874",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_PEACOCK_1_75x75_crop_center.jpg?v=1627690874"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4DETAIL_592x592.jpg?v=1627690874",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4DETAIL_75x75_crop_center.jpg?v=1627690874"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4HOLD_592x592.jpg?v=1627690874",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4HOLD_75x75_crop_center.jpg?v=1627690874"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/5b27e250-c708-59fa-8ac7-449327face85_592x592.jpg?v=1629765413",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/5b27e250-c708-59fa-8ac7-449327face85_75x75_crop_center.jpg?v=1629765413"
+            }
+          ],
+          "price": 29.99,
+          "rate": 0,
+          "botanical_name": "Calathea 'Peacock'",
+          "common_name": "Peacock Plant, Zebra Plant",
+          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 91,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1576336277_592x592.png?v=1643835203",
+          "name": "Calathea 'Beauty Star'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1576336277_592x592.png?v=1643835203",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1576336277_75x75_crop_center.png?v=1643835203"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4DETAIL_592x592.jpg?v=1630967600",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4DETAIL_75x75_crop_center.jpg?v=1630967600"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4HOLD_592x592.jpg?v=1630967600",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4HOLD_75x75_crop_center.jpg?v=1630967600"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6_592x592.jpg?v=1630967600",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6_75x75_crop_center.jpg?v=1630967600"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6-HOLD_592x592.jpg?v=1630967597",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6-HOLD_75x75_crop_center.jpg?v=1630967597"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Calathea 'Beauty Star'",
+          "common_name": "Peacock Plant, Zebra Plant",
+          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 399,
+              "fl": 28
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 22
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 92,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_497550177_592x592.png?v=1643836053",
+          "name": "Calathea Lancifolia 'Rattlesnake'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_497550177_592x592.png?v=1643836053",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_497550177_75x75_crop_center.png?v=1643836053"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-4DETAIL_592x592.jpg?v=1627690935",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-4DETAIL_75x75_crop_center.jpg?v=1627690935"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-6_592x592.jpg?v=1627690935",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-6_75x75_crop_center.jpg?v=1627690935"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-HOLD-6_592x592.jpg?v=1627690935",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-HOLD-6_75x75_crop_center.jpg?v=1627690935"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Calathea Lancifolia",
+          "common_name": "Peacock Plant, Zebra Plant, Rattlesnake",
+          "detail_description": "This Calathea Lancifolia also commonly called the Rattlesnake comes with dark green leaves that have unique ripples. Like all Calathea plants, the leaves adjust as the sun rotates throughout the day. Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. Exhibits strappy, spotted leaves and deep purple undersides.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 146,
+              "fl": 97
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 83,
+              "fl": 95
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 92,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1873641095_592x592.png?v=1615514151",
+          "name": "Calathea 'Grey Star'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1873641095_592x592.png?v=1615514151",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1873641095_75x75_crop_center.png?v=1615514151"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18DETAIL_592x592.jpg?v=1617637513",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18DETAIL_75x75_crop_center.jpg?v=1617637513"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18HOLD_592x592.jpg?v=1617637513",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18HOLD_75x75_crop_center.jpg?v=1617637513"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-4-DETAIL_592x592.jpg?v=1617637513",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-4-DETAIL_75x75_crop_center.jpg?v=1617637513"
+            }
+          ],
+          "price": 29.99,
+          "rate": 0,
+          "botanical_name": "Calathea 'Grey Star'",
+          "common_name": "Peacock Plant, Zebra Plant",
+          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 29
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 1,
+              "fl": 19
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 93,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png207552183_592x592.png?v=1622839527",
+          "name": "Calathea 'Makoyana'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png207552183_592x592.png?v=1622839527",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png207552183_75x75_crop_center.png?v=1622839527"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-4DETAIL_592x592.jpg?v=1622839532",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-4DETAIL_75x75_crop_center.jpg?v=1622839532"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6_592x592.jpg?v=1622839541",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6_75x75_crop_center.jpg?v=1622839541"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6-DETAIL_592x592.jpg?v=1622839546",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6-DETAIL_75x75_crop_center.jpg?v=1622839546"
+            }
+          ],
+          "price": 27.99,
+          "rate": 5,
+          "botanical_name": "Calathea 'Grey Star'",
+          "common_name": "Peacock Plant, Zebra Plant",
+          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 65,
+              "fl": 47
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 10,
+              "fl": 25
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 94,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1024120199_592x592.png?v=1617637619",
+          "name": "Calathea 'Vittata'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1024120199_592x592.png?v=1617637619",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1024120199_75x75_crop_center.png?v=1617637619"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-DETAIL-4_592x592.jpg?v=1617637619",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-DETAIL-4_75x75_crop_center.jpg?v=1617637619"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-HOLD-4_592x592.jpg?v=1617637619",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-HOLD-4_75x75_crop_center.jpg?v=1617637619"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/d8e22ceb-19fb-4c80-a381-ae685cf15fd6_592x789.png?v=1660309410",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/d8e22ceb-19fb-4c80-a381-ae685cf15fd6_57x75_crop_center.png?v=1660309410"
+            }
+          ],
+          "price": 29.99,
+          "rate": 4,
+          "botanical_name": "Calathea 'Vittata'",
+          "common_name": "Peacock Plant, Zebra Plant",
+          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 21
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 4,
+              "fl": 12
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 95,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_1491463121_592x592.png?v=1619042339",
+          "name": "Calathea 'Warscewiczii'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_1491463121_592x592.png?v=1619042339",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_1491463121_75x75_crop_center.png?v=1619042339"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-DETAIL_592x592.jpg?v=1619042339",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-DETAIL_75x75_crop_center.jpg?v=1619042339"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-HOLD_592x592.jpg?v=1619042339",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-HOLD_75x75_crop_center.jpg?v=1619042339"
+            }
+          ],
+          "price": 39.99,
+          "rate": 5,
+          "botanical_name": "Calathea warscewiczii",
+          "common_name": "Prayer plant, Jungle Velvet",
+          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. Its soft velvety leaves feature a striking light-and-dark green fishtail pattern with solid purplish tones underneath. The plant may bear small cream-colored flower cones in season.",
+          "sold_out": true,
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "chinese_evergreen",
