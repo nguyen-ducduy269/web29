@@ -2891,14 +2891,6 @@
       "total_price": 41.98
     },
     {
-      "id": "new product",
-      "name": "Monstera Deliciosa Mint Large Form",
-      "price": 999.99,
-      "image": "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
-      "quantity": "2",
-      "total_price": 1999.98
-    },
-    {
       "id": 2,
       "name": "Peperomia 'Rosso'",
       "image": "https://houseplantshop.com/cdn/shop/products/image_png1601318718_592x592.png?v=1643836068",
@@ -2939,6 +2931,16 @@
       "fl": 14,
       "quantity": 3,
       "total_price": 23.97
+    },
+    {
+      "id": 62,
+      "name": "Alocasia Polly 'African Mask'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6_592x592.jpg?v=1622837081",
+      "price": 24.99,
+      "ca": 0,
+      "fl": 56,
+      "quantity": 4,
+      "total_price": 99.96
     }
   ],
   "all_product": [
@@ -15803,442 +15805,124 @@
       "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-1e84e0cb--1ChineseEvergreenLadyVal4-HOLD.jpg?v=1607734982",
       "shop": [
         {
-          "id": 87,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_ORNATA_1_592x592.jpg?v=1627690830",
-          "name": "Calathea 'Ornata'",
+          "id": 97,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_LADY.VALENTINE_1_592x592.jpg?v=1627690984",
+          "name": "Chinese Evergreen 'Lady Valentine'",
           "detail_image": [
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_ORNATA_1_592x592.jpg?v=1627690830",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_ORNATA_1_75x75_crop_center.jpg?v=1627690830"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_LADY.VALENTINE_1_592x592.jpg?v=1627690984",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_LADY.VALENTINE_1_75x75_crop_center.jpg?v=1627690984"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4DETAIL_592x592.jpg?v=1627690830",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4DETAIL_75x75_crop_center.jpg?v=1627690830"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_LADY.VALENTINE_2_592x592.jpg?v=1655237106",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_LADY.VALENTINE_2_75x75_crop_center.jpg?v=1655237106"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4HOLD_592x592.jpg?v=1627690830",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-4HOLD_75x75_crop_center.jpg?v=1627690830"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-LadyVal-4HOLD_592x592.jpg?v=1655237106",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-LadyVal-4HOLD_75x75_crop_center.jpg?v=1655237106"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-DETAIL-6_592x592.jpg?v=1627690830",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-DETAIL-6_75x75_crop_center.jpg?v=1627690830"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-LadyVal-6_592x592.jpg?v=1655237106",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-LadyVal-6_75x75_crop_center.jpg?v=1655237106"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-HOLD-6_592x592.jpg?v=1627690830",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Ornata-HOLD-6_75x75_crop_center.jpg?v=1627690830"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-LadyVal-6-HOLD_592x592.jpg?v=1655237106",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-LadyVal-6-HOLD_75x75_crop_center.jpg?v=1655237106"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/3_CALATHEA_ORNATA_TEMP_592x789.jpg?v=1654801213",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/3_CALATHEA_ORNATA_TEMP_57x75_crop_center.jpg?v=1654801213"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CHINESE_EVERGREEN_LADY.VALENTINE_4_592x592.jpg?v=1680760827",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CHINESE_EVERGREEN_LADY.VALENTINE_4_75x75_crop_center.jpg?v=1680760827"
             }
           ],
-          "price": 27.99,
+          "price": 22.99,
           "rate": 5,
-          "botanical_name": "Calathea 'Ornata'",
-          "common_name": "Peacock Plant, Zebra Plant",
-          "detail_description": "Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. The various Calathea varieties have leaves with purple undersides and various vibrant colorful patterns on the top side.",
+          "botanical_name": "Aglaonema 'Lady Valentine'",
+          "common_name": "Chinese Evergreen",
+          "detail_description": "This Chinese Evergreen Lady Valentine comes with large pink splashes of color on the center of leaves. The Chinese Evergreen also known as Aglaonema, is an easy plant to grow and care for. Native to Asia it tolerates almost any indoor condition. The larger leaves come with unique patterns that work with all types of planters and furniture.",
           "sold_out": false,
           "pot": [
             {
               "id": 0,
               "name": "4' Pot",
-              "ca": 298,
-              "fl": 27
-            },
-            {
-              "id": 1,
-              "name": "6' Pot",
-              "ca": 14,
-              "fl": 21
-            }
-          ],
-          "pot_style": [
-            {
-              "name": "Nursery Pot",
-              "status": true
-            }
-          ],
-          "quantity": 1
-        },
-        {
-          "id": 88,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_MEDALLION_1_592x592.jpg?v=1627690791",
-          "name": "Calathea Roseopicta 'Medallion'",
-          "detail_image": [
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_MEDALLION_1_592x592.jpg?v=1627690791",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_MEDALLION_1_75x75_crop_center.jpg?v=1627690791"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4DETAIL_592x592.jpg?v=1627690791",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4DETAIL_75x75_crop_center.jpg?v=1627690791"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4HOLD_592x592.jpg?v=1627690791",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-4HOLD_75x75_crop_center.jpg?v=1627690791"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-DETAIL-6_592x592.jpg?v=1627690791",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Medallion-DETAIL-6_75x75_crop_center.jpg?v=1627690791"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_FiberPot_592x592.jpg?v=1636575389",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_FiberPot_75x75_crop_center.jpg?v=1636575389"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_WhiteRound_592x592.jpg?v=1636575389",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/CalatheaMedallion_WhiteRound_75x75_crop_center.jpg?v=1636575389"
-            }
-          ],
-          "price": 26.99,
-          "rate": 5,
-          "botanical_name": "Calathea Roseopicta 'Medallion'",
-          "common_name": "Peacock Plant, Zebra Plant",
-          "detail_description": "Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. The various Calathea varieties have leaves with purple undersides and various vibrant colorful patterns on the top side.",
-          "sold_out": false,
-          "pot": [
-            {
-              "id": 0,
-              "name": "4' Pot",
-              "ca": 42,
-              "fl": 71
-            },
-            {
-              "id": 1,
-              "name": "6' Pot",
-              "ca": 17,
-              "fl": 29
-            }
-          ],
-          "pot_style": [
-            {
-              "name": "Nursery Pot",
-              "status": true
-            }
-          ],
-          "quantity": 1
-        },
-        {
-          "id": 89,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_FREDDIE_1_592x592.jpg?v=1627690669",
-          "name": "Calathea Concinna 'Freddie'",
-          "detail_image": [
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_FREDDIE_1_592x592.jpg?v=1627690669",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_FREDDIE_1_75x75_crop_center.jpg?v=1627690669"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Concinna-4DETAIL_592x592.jpg?v=1627690669",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Concinna-4DETAIL_75x75_crop_center.jpg?v=1627690669"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6_592x592.jpg?v=1627690669",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6_75x75_crop_center.jpg?v=1627690669"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6-HOLD_592x592.jpg?v=1627690669",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Freddie-6-HOLD_75x75_crop_center.jpg?v=1627690669"
-            }
-          ],
-          "price": 29.99,
-          "rate": 5,
-          "botanical_name": "Calathea Concinna",
-          "common_name": "Peacock Plant, Zebra Plant, Freddie",
-          "detail_description": "This Calathea Concinna also commonly called the Freddie comes with soft green leaves with uniquely shaped shades. Like all Calathea plants, the leaves adjust as the sun rotates throughout the day. Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. ",
-          "sold_out": false,
-          "pot": [
-            {
-              "id": 0,
-              "name": "4' Pot",
-              "ca": 10,
-              "fl": 30
-            },
-            {
-              "id": 1,
-              "name": "6' Pot",
-              "ca": 25,
-              "fl": 20
-            }
-          ],
-          "quantity": 1
-        },
-        {
-          "id": 90,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_PEACOCK_1_592x592.jpg?v=1627690874",
-          "name": "Calathea 'Peacock'",
-          "detail_image": [
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_PEACOCK_1_592x592.jpg?v=1627690874",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CALATHEA_PEACOCK_1_75x75_crop_center.jpg?v=1627690874"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4DETAIL_592x592.jpg?v=1627690874",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4DETAIL_75x75_crop_center.jpg?v=1627690874"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4HOLD_592x592.jpg?v=1627690874",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Peacock-4HOLD_75x75_crop_center.jpg?v=1627690874"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/5b27e250-c708-59fa-8ac7-449327face85_592x592.jpg?v=1629765413",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/5b27e250-c708-59fa-8ac7-449327face85_75x75_crop_center.jpg?v=1629765413"
-            }
-          ],
-          "price": 29.99,
-          "rate": 0,
-          "botanical_name": "Calathea 'Peacock'",
-          "common_name": "Peacock Plant, Zebra Plant",
-          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
-          "sold_out": true,
-          "quantity": 1
-        },
-        {
-          "id": 91,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1576336277_592x592.png?v=1643835203",
-          "name": "Calathea 'Beauty Star'",
-          "detail_image": [
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1576336277_592x592.png?v=1643835203",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1576336277_75x75_crop_center.png?v=1643835203"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4DETAIL_592x592.jpg?v=1630967600",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4DETAIL_75x75_crop_center.jpg?v=1630967600"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4HOLD_592x592.jpg?v=1630967600",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-4HOLD_75x75_crop_center.jpg?v=1630967600"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6_592x592.jpg?v=1630967600",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6_75x75_crop_center.jpg?v=1630967600"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6-HOLD_592x592.jpg?v=1630967597",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-BeautyStar-6-HOLD_75x75_crop_center.jpg?v=1630967597"
-            }
-          ],
-          "price": 24.99,
-          "rate": 5,
-          "botanical_name": "Calathea 'Beauty Star'",
-          "common_name": "Peacock Plant, Zebra Plant",
-          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
-          "sold_out": false,
-          "pot": [
-            {
-              "id": 0,
-              "name": "4' Pot",
-              "ca": 399,
-              "fl": 28
+              "ca": 21,
+              "fl": 0
             },
             {
               "id": 1,
               "name": "6' Pot",
               "ca": 0,
-              "fl": 22
+              "fl": 23
             }
           ],
           "quantity": 1
         },
         {
-          "id": 92,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_497550177_592x592.png?v=1643836053",
-          "name": "Calathea Lancifolia 'Rattlesnake'",
+          "id": 98,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_SILVER.BAY_1_592x592.jpg?v=1627691023",
+          "name": "Chinese Evergreen 'Silver Bay'",
           "detail_image": [
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_497550177_592x592.png?v=1643836053",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_497550177_75x75_crop_center.png?v=1643836053"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_SILVER.BAY_1_592x592.jpg?v=1627691023",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_SILVER.BAY_1_75x75_crop_center.jpg?v=1627691023"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-4DETAIL_592x592.jpg?v=1627690935",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-4DETAIL_75x75_crop_center.jpg?v=1627690935"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_SILVER.BAY_2_592x592.jpg?v=1655237213",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CH.EVERGREEN_SILVER.BAY_2_75x75_crop_center.jpg?v=1655237213"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-6_592x592.jpg?v=1627690935",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-6_75x75_crop_center.jpg?v=1627690935"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_19_592x592.jpg?v=1655237213",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-name-6_19_75x75_crop_center.jpg?v=1655237213"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-HOLD-6_592x592.jpg?v=1627690935",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Rattlesnake-HOLD-6_75x75_crop_center.jpg?v=1627690935"
-            }
-          ],
-          "price": 24.99,
-          "rate": 5,
-          "botanical_name": "Calathea Lancifolia",
-          "common_name": "Peacock Plant, Zebra Plant, Rattlesnake",
-          "detail_description": "This Calathea Lancifolia also commonly called the Rattlesnake comes with dark green leaves that have unique ripples. Like all Calathea plants, the leaves adjust as the sun rotates throughout the day. Calathea Plants, native to tropical South and Central America, Africa, and the West Indies, are grown primarily for their beautiful, brightly colored, upright, oval leaves. Exhibits strappy, spotted leaves and deep purple undersides.",
-          "sold_out": false,
-          "pot": [
-            {
-              "id": 0,
-              "name": "4' Pot",
-              "ca": 146,
-              "fl": 97
-            },
-            {
-              "id": 1,
-              "name": "6' Pot",
-              "ca": 83,
-              "fl": 95
-            }
-          ],
-          "quantity": 1
-        },
-        {
-          "id": 93,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1873641095_592x592.png?v=1615514151",
-          "name": "Calathea 'Grey Star'",
-          "detail_image": [
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1873641095_592x592.png?v=1615514151",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1873641095_75x75_crop_center.png?v=1615514151"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18DETAIL_592x592.jpg?v=1617637513",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18DETAIL_75x75_crop_center.jpg?v=1617637513"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18HOLD_592x592.jpg?v=1617637513",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-6_18HOLD_75x75_crop_center.jpg?v=1617637513"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-4-DETAIL_592x592.jpg?v=1617637513",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-GreyStar-4-DETAIL_75x75_crop_center.jpg?v=1617637513"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-SilverBay-6_19HOLD_592x592.jpg?v=1655237213",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-SilverBay-6_19HOLD_75x75_crop_center.jpg?v=1655237213"
             }
           ],
           "price": 29.99,
-          "rate": 0,
-          "botanical_name": "Calathea 'Grey Star'",
-          "common_name": "Peacock Plant, Zebra Plant",
-          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
-          "sold_out": false,
-          "pot": [
-            {
-              "id": 0,
-              "name": "4' Pot",
-              "ca": 0,
-              "fl": 29
-            },
-            {
-              "id": 1,
-              "name": "6' Pot",
-              "ca": 1,
-              "fl": 19
-            }
-          ],
-          "quantity": 1
-        },
-        {
-          "id": 94,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png207552183_592x592.png?v=1622839527",
-          "name": "Calathea 'Makoyana'",
-          "detail_image": [
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png207552183_592x592.png?v=1622839527",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png207552183_75x75_crop_center.png?v=1622839527"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-4DETAIL_592x592.jpg?v=1622839532",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-4DETAIL_75x75_crop_center.jpg?v=1622839532"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6_592x592.jpg?v=1622839541",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6_75x75_crop_center.jpg?v=1622839541"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6-DETAIL_592x592.jpg?v=1622839546",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Makoyana-6-DETAIL_75x75_crop_center.jpg?v=1622839546"
-            }
-          ],
-          "price": 27.99,
           "rate": 5,
-          "botanical_name": "Calathea 'Grey Star'",
-          "common_name": "Peacock Plant, Zebra Plant",
-          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
+          "botanical_name": "Aglaonema 'Silver Bay'",
+          "common_name": "Chinese Evergreen",
+          "detail_description": "The Chinese Evergreen also known as Aglaonema, it is an easy plant to grow and care for. Native to Asia it just about tolerates any indoor condition. The stem and leaves are both semi-glossy, and the variegated leaves have different combinations of dark green to light green to silver colors.",
           "sold_out": false,
           "pot": [
             {
               "id": 0,
               "name": "4' Pot",
-              "ca": 65,
-              "fl": 47
+              "ca": 53,
+              "fl": 56
             },
             {
               "id": 1,
               "name": "6' Pot",
-              "ca": 10,
-              "fl": 25
+              "ca": 2,
+              "fl": 0
             }
           ],
           "quantity": 1
         },
         {
-          "id": 95,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1024120199_592x592.png?v=1617637619",
-          "name": "Calathea 'Vittata'",
+          "id": 99,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-Cutlass-6_592x592.jpg?v=1622836931",
+          "name": "Chinese Evergreen 'Cutlass'",
           "detail_image": [
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1024120199_592x592.png?v=1617637619",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1024120199_75x75_crop_center.png?v=1617637619"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-Cutlass-6_592x592.jpg?v=1622836931",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-Cutlass-6_75x75_crop_center.jpg?v=1622836931"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-DETAIL-4_592x592.jpg?v=1617637619",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-DETAIL-4_75x75_crop_center.jpg?v=1617637619"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-Cutlass-6-DETAIL_592x592.jpg?v=1622836935",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-Cutlass-6-DETAIL_75x75_crop_center.jpg?v=1622836935"
             },
             {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-HOLD-4_592x592.jpg?v=1617637619",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Vittata-HOLD-4_75x75_crop_center.jpg?v=1617637619"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/d8e22ceb-19fb-4c80-a381-ae685cf15fd6_592x789.png?v=1660309410",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/d8e22ceb-19fb-4c80-a381-ae685cf15fd6_57x75_crop_center.png?v=1660309410"
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-Cutlass-6-HOLD_592x592.jpg?v=1622836939",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-ChineseEvergreen-Cutlass-6-HOLD_75x75_crop_center.jpg?v=1622836939"
             }
           ],
-          "price": 29.99,
-          "rate": 4,
-          "botanical_name": "Calathea 'Vittata'",
-          "common_name": "Peacock Plant, Zebra Plant",
-          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. They are commonly called calatheas or (like their relatives) prayer plants.",
-          "sold_out": false,
-          "pot": [
-            {
-              "id": 0,
-              "name": "4' Pot",
-              "ca": 0,
-              "fl": 21
-            },
-            {
-              "id": 1,
-              "name": "6' Pot",
-              "ca": 4,
-              "fl": 12
-            }
-          ],
-          "quantity": 1
-        },
-        {
-          "id": 96,
-          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_1491463121_592x592.png?v=1619042339",
-          "name": "Calathea 'Warscewiczii'",
-          "detail_image": [
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_1491463121_592x592.png?v=1619042339",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_1491463121_75x75_crop_center.png?v=1619042339"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-DETAIL_592x592.jpg?v=1619042339",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-DETAIL_75x75_crop_center.jpg?v=1619042339"
-            },
-            {
-              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-HOLD_592x592.jpg?v=1619042339",
-              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Calathea-Warscewiczii-6-HOLD_75x75_crop_center.jpg?v=1619042339"
-            }
-          ],
-          "price": 39.99,
+          "price": 44.99,
           "rate": 5,
-          "botanical_name": "Calathea warscewiczii",
-          "common_name": "Prayer plant, Jungle Velvet",
-          "detail_description": "There are several dozen species in this genus. Native to the tropical Americas, many of the species are popular as pot plants due to their decorative leaves and, in some species, colorful inflorescence. Its soft velvety leaves feature a striking light-and-dark green fishtail pattern with solid purplish tones underneath. The plant may bear small cream-colored flower cones in season.",
+          "botanical_name": "Aglaonema",
+          "common_name": "Chinese Evergreen 'Cutlass'",
+          "detail_description": "The Chinese Evergreen also known as Aglaonema, it is an easy plant to grow and care for. Native to Asia it just about tolerates any indoor condition. 'Cutlass' is a hybrid selection of Chinese evergreen that features long, slender, lanceolate, grey-green foliage with darker green margins and streaks. Mature plants will reach up to 4' tall with a similar spread.",
           "sold_out": true,
           "quantity": 1
         }
@@ -16247,32 +15931,599 @@
     {
       "id": "clusia",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_CLUSIA_PRINCESS_2.jpg?v=1692315089",
-      "name": "Clusia"
+      "name": "Clusia",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_CLUSIA_PRINCESS.jpg?v=1692315089",
+      "meet_content": "Clusia, also known as Autograph Tree or Pitch Apple, is a popular houseplant known for its glossy, thick leaves and relatively easy care requirements!",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_CLUSIA_PRINCESS_2.jpg?v=1692315089",
+      "light": "Clusia plants thrive in bright, indirect light, avoid direct sunlight.",
+      "pet": "Not pet-friendly",
+      "water": "Allow the top inch or two of the soil to dry out before watering. Clusia prefers slightly moist soil but can tolerate short periods of drought. Overwatering can lead to root rot, so it's important to ensure the pot has proper drainage and that the plant isn't sitting in standing water.",
+      "humidity": "Clusia plants prefer higher humidity levels. You can increase humidity around the plant by using a humidity tray, a room humidifier, or occasionally misting the leaves with water.",
+      "temperature": "Clusia prefers warm temperatures between 65-85°F (18-29°C). Avoid exposing the plant to temperatures below 50°F (10°C), as it can lead to cold damage.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaf edges browning?",
+        "Clusia plants prefer higher humidity levels, and low humidity can lead to browning leaf edges and a generally unhealthy appearance. Increase humidity around the plant by misting it regularly, placing a tray of water near the plant, or using a humidifier.",
+        "Why is my Clusia experiencing leggy growth and losing color?",
+        "Inadequate light can cause Clusia plants to become leggy, lose their vibrant color, and grow poorly. Place your Clusia in bright, indirect light. Avoid exposing it to direct sunlight, especially during the hottest parts of the day."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_CLUSIA_PRINCESS_TEMP.jpg?v=1692315089",
+      "shop": []
     },
     {
       "id": "cordyline",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_cordyline_glauca_2-1674008634156.jpg?v=1674008671",
-      "name": "Cordyline"
+      "name": "Cordyline",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-c8dda9bc--1CordylineGlauca6-7.jpg?v=1607737081",
+      "meet_content": "The Cordyline Plant typically has leathery leaves shaped like a spear with a variety of colors including green, red, yellow, white, purple, and purplish-red. Caring for these plants indoors is simple and straightforward, but they must be kept warm and they need a lot of light.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-642fc8dd--1CordylineGlauca6-7-DETAIL.jpg?v=1607737073",
+      "light": "Cordyline needs bright light, but avoid direct sunlight in unhabituated plants. Also, green-leaved Cordyline tends to do best with direct light, while those with other colored leaves may prefer bright indirect or filtered sunlight.",
+      "pet": "No",
+      "water": "It is important to keep the soil continuously moist. Reduce watering during the winter and water your plant whenever the soil surface starts to feel dry.",
+      "humidity": "High",
+      "temperature": "Cordyline thrives in temperatures above 62° F and prefers a high humidity environment. Avoid putting the plant near a cold draft like a window, especially if the temperature drops lower than 62° F. These are jungle plants, so if you're experiencing leaf drop, try raising both the temperature and humidity.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are my leaves yellow?",
+        "This may be a sign your plant is receiving too little water. You don't want the soil to be soggy but you do want to keep it moist. Make sure to water your plant when the top soil is dry. ",
+        "What type of soil does my Cordyline need?",
+        "Cordyline needs a rich, well-drained high-quality potting mix with a pH of 6 to 6.5. If you move the plant outdoors during warmer months, make sure the outdoor soil drains well and any threat of frost has passed.",
+        "Why are my leaves Turning brown and drying out?",
+        "This is usually a sign the plant is under watered or too dry. Try watering your plant and placing it somewhere with more humidity."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-2fc8dda9--1CordylineGlauca6-7-HOLD.jpg?v=1607737077",
+      "shop": [
+        {
+          "id": 100,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Cordyline-Glauca-6_7_592x592.jpg?v=1592955983",
+          "name": "Cordyline Glauca",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Cordyline-Glauca-6_7_592x592.jpg?v=1592955983",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Cordyline-Glauca-6_7_75x75_crop_center.jpg?v=1592955983"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Cordyline-Glauca-6_7DETAIL_592x592.jpg?v=1617637512",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Cordyline-Glauca-6_7DETAIL_75x75_crop_center.jpg?v=1617637512"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Cordyline-Glauca-6_7HOLD_592x592.jpg?v=1617637512",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Cordyline-Glauca-6_7HOLD_75x75_crop_center.jpg?v=1617637512"
+            }
+          ],
+          "price": 34.99,
+          "rate": 0,
+          "botanical_name": "Cordyline Fruticosa Glauca",
+          "common_name": "Cordyline Glauca, Green Ti Plant, Soledad Purple Cordyline",
+          "detail_description": "This Cordyline is an attractive plant, forming dense upright clusters of rich, deep green foliage. Leaves are bright green and strap-like, with new growth emerging in a deep purple shade. Similar to Dracaenas, they will lose the lower leaves to help promote growth to the top leaves. ",
+          "sold_out": true,
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "croton",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_croton_petra_2-1674008634179.jpg?v=1674008675",
-      "name": "Croton"
+      "name": "Croton",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-7adf6d88--1CrotonPetra4-MAIN.jpg?v=1608150984",
+      "meet_content": "Croton (Codiaeum Variegatum) are colorful shrubs that can mature and grow up to 6 feet tall. The bright colors on the leaves can help brighten up any room! Overall a very resilient house plant, we have a guide designed to help you grow and care for Croton houseplants.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-569e7adf--1CrotonPetra4-DETAIL.jpg?v=1608150974",
+      "light": "These plants require six to eight hours of direct sunlight a day to produce gorgeous yellow, red, and purple foliage. It is best to position a croton plant in an east or west window to ensure that it gets enough sunlight. If the plant is lacking the light it requires, the leaves will turn green.",
+      "pet": "No",
+      "water": "You will need to water your Croton plants rather frequently during the growing season. They require the soil to be constantly moist, so when the top begins to feel dry, the plant must be watered again. In addition, these plants like a humid environment. If you cannot find a location that provides this type of atmosphere, then you need to mist the leaves to create it artificially. During the winter months, the watering requirements will decrease, so be careful not to overwater your plants.",
+      "humidity": "High",
+      "temperature": "Croton plants should also be kept away from drafts and cold, as it cannot tolerate temperatures below 60 F. If it is exposed to temps lower than this, the croton will lose leaves and possibly die.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are my leaves wilting and dropping?",
+        "Leaf drop is likely due to stress. Stress can occur when a Croton is moved or transplanted. Crotons do not like change so the plant will experience shock. Give your croton some extra care and in a few weeks your plant should be thriving again. Croton plants are resilient!",
+        "Why are my leaves limp and drooping?",
+        "This is usually an easy fix. Croton plants like their soil to be consistently moist. If the soil dries out you may notice your croton leaves droop. After you water your plant the leaves should perk up shortly after!",
+        "Why are there brown spots on my leaves?",
+        "This is generally a sign of of a bacterial disease affecting your plant. We recommend cutting off any of the infected foliage and avoid having the leaves touch any other plants since this could further spread the bacteria."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-9e7adf6d--1CrotonPetra4-HOLD.jpg?v=1608150980",
+      "shop": [
+        {
+          "id": 101,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-4HOLD_a5dedaec-07c9-41ae-a44e-2632b3cd7548_592x592.jpg?v=1687238385",
+          "name": "Croton Petra 'Joseph's Coat'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-4HOLD_a5dedaec-07c9-41ae-a44e-2632b3cd7548_592x592.jpg?v=1687238385",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-4HOLD_a5dedaec-07c9-41ae-a44e-2632b3cd7548_75x75_crop_center.jpg?v=1687238385"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-6_15_9304dc87-df11-4db2-8e2d-4dca0e906dbe_592x592.jpg?v=1687238385",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-6_15_9304dc87-df11-4db2-8e2d-4dca0e906dbe_75x75_crop_center.jpg?v=1687238385"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-6_15DETAIL_97e6963f-f136-4192-823e-0a6a9941a79b_592x592.jpg?v=1687238385",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-6_15DETAIL_97e6963f-f136-4192-823e-0a6a9941a79b_75x75_crop_center.jpg?v=1687238385"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-6_15HOLD_233ff823-6962-4a5b-b93a-cb5c9c3f0174_592x592.jpg?v=1687238385",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Petra-6_15HOLD_233ff823-6962-4a5b-b93a-cb5c9c3f0174_75x75_crop_center.jpg?v=1687238385"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Codiadeum variegatum",
+          "common_name": "Petra, Joseph's Coat",
+          "detail_description": "Croton plants produce intense colors. There are many croton varieties with an array of many leaf shapes and they make excellent additions to a patio, deck or terrace. Indoors crotons need lots of light to keep their color. Indoors the croton needs lots of light to keep its color.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 58
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 377,
+              "fl": 50
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 14,
+              "fl": 20
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            },
+            {
+              "name": "Black Cylinder",
+              "status": true
+            },
+            {
+              "name": "White Cylinder",
+              "status": true
+            },
+            {
+              "name": "Terra Cotta",
+              "status": false
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 102,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CROTON_GOLD.DUST_1_592x592.jpg?v=1627691062",
+          "name": "Croton 'Gold Dust'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CROTON_GOLD.DUST_1_592x592.jpg?v=1627691062",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CROTON_GOLD.DUST_1_75x75_crop_center.jpg?v=1627691062"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_CROTON_GOLDDUST_1_592x592.jpg?v=1627691062",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_CROTON_GOLDDUST_1_75x75_crop_center.jpg?v=1627691062"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_CROTON_GOLDDUST_2_592x592.jpg?v=1627691062",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_CROTON_GOLDDUST_2_75x75_crop_center.jpg?v=1627691062"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_CROTON_GOLDDUST_3_592x592.jpg?v=1627691062",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_CROTON_GOLDDUST_3_75x75_crop_center.jpg?v=1627691062"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Codiadeum variegatum",
+          "common_name": "Gold Dust",
+          "detail_description": "The Croton Gold Dust house plant has deep green leaves with yellow spots. The bright colors on the leaves help light up rooms. The Croton Gold dust like all crotons, like high humidity and ample light. They are overall robust plants that have bright colors.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 19
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 78,
+              "fl": 33
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 103,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CROTON_MAMMY_1_592x592.jpg?v=1627691101",
+          "name": "Croton Mammy",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CROTON_MAMMY_1_592x592.jpg?v=1627691101",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CROTON_MAMMY_1_75x75_crop_center.jpg?v=1627691101"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-4DETAIL_592x592.jpg?v=1627691101",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-4DETAIL_75x75_crop_center.jpg?v=1627691101"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-4HOLD_592x592.jpg?v=1627691101",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-4HOLD_75x75_crop_center.jpg?v=1627691101"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-6_16_592x592.jpg?v=1627691101",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-6_16_75x75_crop_center.jpg?v=1627691101"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-6_16DETAIL_592x592.jpg?v=1627691101",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-6_16DETAIL_75x75_crop_center.jpg?v=1627691101"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-6_16HOLD_592x592.jpg?v=1627691101",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-Mammy-6_16HOLD_75x75_crop_center.jpg?v=1627691101"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_Croton_Mammy_1_592x592.jpg?v=1636129574",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_Croton_Mammy_1_75x75_crop_center.jpg?v=1636129574"
+            }
+          ],
+          "price": 14.99,
+          "rate": 5,
+          "botanical_name": "Codiadeum",
+          "common_name": "Mammy",
+          "detail_description": "The Codiaeum Mammy is an evergreen shrub growing to 3-8 feet tall and has large, thick, leathery, shiny evergreen leaves which are alternately arranged. Its leaves are broad, and depending on the variety, bright yellow, red, green, purple and brown colors.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 82,
+              "fl": 40
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 34
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 28,
+              "fl": 13
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 104,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-SunnyStar-4MAIN_592x592.jpg?v=1622834442",
+          "name": "Croton 'Sunny Star'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-SunnyStar-4MAIN_592x592.jpg?v=1622834442",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-SunnyStar-4MAIN_75x75_crop_center.jpg?v=1622834442"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-SunnyStar-4DETAIL_592x592.jpg?v=1622834447",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-SunnyStar-4DETAIL_75x75_crop_center.jpg?v=1622834447"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-SunnyStar-4HOLD_592x592.jpg?v=1622834452",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-SunnyStar-4HOLD_75x75_crop_center.jpg?v=1622834452"
+            }
+          ],
+          "price": 19.99,
+          "rate": 0,
+          "botanical_name": "Codiadeum variegatum",
+          "common_name": "Sunny Star",
+          "detail_description": "Croton plants produce intense colors. There are many croton varieties with an array of many leaf shapes and they make excellent additions to a patio, deck or terrace as planted or as potted specimens. Indoors crotons need lots of light to keep their color. Indoors the croton needs lots of light to keep their color.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 11
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 105,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-OakLeaf-6_592x592.jpg?v=1617637622",
+          "name": "Croton 'Oakleaf'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-OakLeaf-6_592x592.jpg?v=1617637622",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-OakLeaf-6_75x75_crop_center.jpg?v=1617637622"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-OakLeaf-DETAIL-6_592x592.jpg?v=1617637622",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-OakLeaf-DETAIL-6_75x75_crop_center.jpg?v=1617637622"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-OakLeaf-HOLD-6_592x592.jpg?v=1617637623",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Croton-OakLeaf-HOLD-6_75x75_crop_center.jpg?v=1617637623"
+            }
+          ],
+          "price": 39.99,
+          "rate": 0,
+          "botanical_name": "Codiadeum variegatum",
+          "common_name": "Oakleaf",
+          "detail_description": "The Croton Oakleaf is a robust plant with large colorful leaves. These plants can mature to large indoor house plants if properly cared for. Features interesting lobed leaves, giving the plant extra texture (and lending it its name). Each dark green leave is accented with veins and strips of yellow, orange, and red.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 10,
+              "fl": 11
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "crytanthus",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_cryptanthus_pinkstar_2-1674008633674.jpg?v=1674008746",
-      "name": "Cryptanthus"
+      "name": "Cryptanthus",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-36a2494c--1CryptanthusEarthStar4-MAIN.jpg?v=1608157741",
+      "meet_content": "With over 1,200 different varieties, Cryptanthus have incredibly varied and beautiful foliage ranging from dark green and variegated to bright reds and pinks to silvery stripes. Most Cryptanthus grow close to the ground and can be as small as three inches in height. However, there are some species of Cryptanthus that can grow as tall as three feet.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-6436a249--1CryptanthusEarthStar4-DETAIL.jpg?v=1608157738",
+      "light": "Grow Cryptanthus in a bright spot. These small indoor plants can take some direct sun on their leaves, so they're perfect for dressing up an otherwise bland window sill. As a general rule, the brighter the light, the more colorful the plants are.",
+      "pet": "Yes",
+      "water": "Water Cryptanthus so the soil just dries before watering again. They don't seem to be particularly fussy and will thrive in moist soil. Likewise, if you forget to water your Cryptanthus now and again, they don't mind.",
+      "humidity": "Medium",
+      "temperature": "It prefers temperatures between 60° and 85° F.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves yellowing?",
+        "This is generally a sign that you are overwatering your plant. This may also be a sign your plant is getting too little light. Try moving your plant to an area where it will receive bright, indirect light. ",
+        "Why are my leaves curled and brown?",
+        "Your Cryptanthus is getting too little water and too much light. Cryptanthus plants do best in bright, indirect light.",
+        "Why is mold developing on the soil?",
+        "This is a sign your plant is receiving too little light, and is being over watered. Although this is harmless, it may be unsightly and may want to remove it. Remove the top two inches of soil and replace it with fresh soil."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-36a2494c--1CryptanthusEarthStar4-MAIN.jpg?v=1608157741",
+      "shop": [
+        {
+          "id": 106,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_536229612_592x592.png?v=1617637551",
+          "name": "Cryptanthus 'Pink Star'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_536229612_592x592.png?v=1617637551",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_536229612_75x75_crop_center.png?v=1617637551"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Cryptanthus-EarthStar-4DETAIL_592x592.jpg?v=1617637552",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Cryptanthus-EarthStar-4DETAIL_75x75_crop_center.jpg?v=1617637552"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/f7faa8fe-6e88-43f2-ad32-669b06166cf0_e41ae4cb-f32c-4196-a9c2-374ac2892b4a_478x637.png?v=1654147943",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/f7faa8fe-6e88-43f2-ad32-669b06166cf0_e41ae4cb-f32c-4196-a9c2-374ac2892b4a_57x75_crop_center.png?v=1654147943"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_CRYPTANTHUS_PINK.STAR_3_592x592.jpg?v=1668441183",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_CRYPTANTHUS_PINK.STAR_3_75x75_crop_center.jpg?v=1668441183"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CRYPTANTHUS_PINK.STAR_2_592x592.jpg?v=1680760982",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CRYPTANTHUS_PINK.STAR_2_75x75_crop_center.jpg?v=1680760982"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Cryptanthus 'Pink Star'",
+          "common_name": "Pink Star, Earth Star",
+          "detail_description": "Earth Stars are unusual houseplants perfect for adding a dash of color and texture to your spaces. Small indoor plants, they're perfect for growing on bright tabletops -- and make excellent living centerpieces for special gatherings. Because they're easy to grow, earth stars are also ideal additions to your desk at work. They don't need constant nurturing, so you can enjoy their beauty without a lot of maintenance.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 57
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "ctenanthe",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ctenanthe_yellow_2-1674507345245.jpg?v=1674507359",
-      "name": "Ctenanthe"
+      "name": "Ctenanthe",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ctenanthe_yellow_1-1674507345236.jpg?v=1674507354",
+      "meet_content": "The Ctenanthe features long oval leaves with a variety of unique patterns ranging from yellow stripes to green stripes.  As a member of the prayer plant family the Ctenanthe also folds up its leaves at night.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ctenanthe_yellow_2-1674507345245.jpg?v=1674507359",
+      "light": "The Ctenanthe thrives best in Medium-bright indirect light, but can also tolerate low light conditions. Avoid direct sunlight as the leaves will burn.",
+      "pet": "Yes",
+      "water": "Water your Ctenanthe when the top 25-50% of the soil becomes dry. This plant is not drought tolerant but it will forgive the occasional missed watering.",
+      "humidity": "High",
+      "temperature": "Ctenanthe plants prefer warmer temperatures, somewhere between 65°-85° F.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are my yellowing and dropping?",
+        "Your Ctenanthe is probably being overwatered, make sure you are keeping a consistent watering schedule. If your plant is over watered for too long your plant may experience root rot.",
+        "Why does my Ctenanthe have brown leaf tips and edges?",
+        "This is likely due to underwatering. We recommend watering your plant thoroughly when the top 25-50% of soil is dry."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ctenanthe_yellow_3-1674507345255.jpg?v=1674507363",
+      "shop": [
+        {
+          "id": 107,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/6_CTENANTHE_YELLOW_1_592x592.jpg?v=1655313091",
+          "name": "Ctenanthe Lubbersiana 'Bamburanta'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_CTENANTHE_YELLOW_1_592x592.jpg?v=1655313091",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_CTENANTHE_YELLOW_1_75x75_crop_center.jpg?v=1655313091"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_CTENANTHE_YELLOW_2_592x592.jpg?v=1655313093",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_CTENANTHE_YELLOW_2_75x75_crop_center.jpg?v=1655313093"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_CTENANTHE_YELLOW_3_592x592.jpg?v=1655313093",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_CTENANTHE_YELLOW_3_75x75_crop_center.jpg?v=1655313093"
+            }
+          ],
+          "price": 24.99,
+          "rate": 0,
+          "botanical_name": "Ctenanthe lubbersiana",
+          "common_name": "Bamburanta, Never-never plant",
+          "detail_description": "This plant shows many similar traits with other species of prayer plants. The most prominent distinction would be the presence of golden splashes over the leaf surface. As a member of the Marantaceae family, Ctenanthe lubbersiana is best known for its attractive foliage with long oval leaves that fold up during the night.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 108,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_CTENANTHE_AMAGRIS_592x592.jpg?v=1680761075",
+          "name": "Ctenanthe burle-marxii 'Amagris'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CTENANTHE_AMAGRIS_592x592.jpg?v=1680761075",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CTENANTHE_AMAGRIS_75x75_crop_center.jpg?v=1680761075"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CTENANTHE_AMAGRIS_2.1_592x592.jpg?v=1680761075",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CTENANTHE_AMAGRIS_2.1_75x75_crop_center.jpg?v=1680761075"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_CTENANTHE_AMAGRIS_4_592x592.jpg?v=1680761075",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_CTENANTHE_AMAGRIS_4_75x75_crop_center.jpg?v=1680761075"
+            }
+          ],
+          "price": 24.99,
+          "rate": 5,
+          "botanical_name": "Ctenanthe burle-marxii 'Amagris'",
+          "common_name": "Prayer Plant, Never Never Plant, Fishbone Plant",
+          "detail_description": "The Ctenanthe burle marxii Amagris is slow growing with pale grey-green, oval leaves and dramatic dark green curving stripes. The leaves are wonderfully offset by a deep purple stem and leaf underside. Ctenanthe Amagris leaves close upwards at night like other prayer-plants. As with the Amabilis it is also commonly referred to as the Never Never Plant and Fishbone Plant.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 35
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "dieffenbachia",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/3_dieffenbachia_camille_2-1674008633591.jpg?v=1674008729",
-      "name": "Dieffenbachia"
+      "name": "Dieffenbachia",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-6771ec4f--1DieffenbachiaCamille4-MAIN.jpg?v=1608332843",
+      "meet_content": "Dumb Cane (also known as Dieffenbachia or the Leopard lily) is easy to care for. The Dumb Cane has large green leaves and thrives in a large range of environments. Yellow and green leaves make for a great addition to any area. Follow our easy guide to keep the Dumb Cane Dieffenbachia houseplant growing and thriving.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-81506771--1DieffenbachiaCamille4-DETAIL.jpg?v=1608332834",
+      "light": "This plant does better in a low light environment. Dumb Cane (Dieffenbachia) will sunburn if they get any direct sun at all, and the leaves will yellow and curl. ",
+      "pet": "No",
+      "water": "Check the soil to make sure it is dry an inch down before watering the Dieffenbachia plant. Plant the Dumb Cane in well-draining soil and water lightly, keeping the soil consistently moist, but not soggy.",
+      "humidity": "High",
+      "temperature": "The Dieffenbachia plant does well as a houseplant, thriving with year-round room temperatures averaging 65°-75° F. Temperatures below 60° F can harm the plant.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why does my plant have brown tips?",
+        "Brown tips can be caused by uneven watering. Make sure you are watering your plant consistently. Make sure the plant is not sitting in too much water, also the soil should not completely dry out for long periods of time.",
+        "Why are my leaves drooping?",
+        "This is likely caused by under watering. Once you water your plant the leaves should perk up within just a few hours!",
+        "How do I keep my plants growth even and full?",
+        "Keeping a consistent watering schedule and rotating your plant regularly is the key to a happy and full plant. Consistently pruning your plant can also prevent it from having a top heavy shape."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-506771ec--1DieffenbachiaCamille4-HOLD.jpg?v=1608332839",
+      "shop": [
+        {
+          "id": 109,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6_592x592.jpg?v=1664475886",
+          "name": "Dieffenbachia Camille",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6_592x592.jpg?v=1664475886",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6_75x75_crop_center.jpg?v=1664475886"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6-DETAIL_592x592.jpg?v=1664475886",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6-DETAIL_75x75_crop_center.jpg?v=1664475886"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/Pre-PottedblackroundCane_592x592.jpg?v=1664475886",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/Pre-PottedblackroundCane_75x75_crop_center.jpg?v=1664475886"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Camille-4HOLD_592x592.jpg?v=1664475886",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Camille-4HOLD_75x75_crop_center.jpg?v=1664475886"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6-HOLD_592x592.jpg?v=1627691192",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6-HOLD_75x75_crop_center.jpg?v=1627691192"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_DIEFFENBACHIA_CAMILLE_1_592x592.jpg?v=1626280790",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_DIEFFENBACHIA_CAMILLE_1_75x75_crop_center.jpg?v=1626280790"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_DIEFFENBACHIA_CAMILLE_2_592x592.jpg?v=1626280789",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_DIEFFENBACHIA_CAMILLE_2_75x75_crop_center.jpg?v=1626280789"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_DIEFFENBACHIA_CAMILLE_3_592x592.jpg?v=1626280790",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_DIEFFENBACHIA_CAMILLE_3_75x75_crop_center.jpg?v=1626280790"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DIEFFENBACHIA_CAMILLE_1_592x592.jpg?v=1627691200",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DIEFFENBACHIA_CAMILLE_1_75x75_crop_center.jpg?v=1627691200"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DiffenbachiaCamille_FiberPot_592x592.jpg?v=1636576293",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DiffenbachiaCamille_FiberPot_75x75_crop_center.jpg?v=1636576293"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DiffenbachiaCamille_TerraCotta_592x592.jpg?v=1636576293",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DiffenbachiaCamille_TerraCotta_75x75_crop_center.jpg?v=1636576293"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DiffenbachiaCamille_WhiteRound_592x592.jpg?v=1636576293",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DiffenbachiaCamille_WhiteRound_75x75_crop_center.jpg?v=1636576293"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Dieffenbachia Camille",
+          "common_name": "Cane, Camille, Dumb Cane",
+          "detail_description": "The Dieffenbachia Camille also known as the Dumb Cane has large leaves that are a creamy yellowish-white with dark green around the border and thrives in a large range of environments.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 7,
+              "fl": 0
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 80,
+              "fl": 39
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 24,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "dracaena",

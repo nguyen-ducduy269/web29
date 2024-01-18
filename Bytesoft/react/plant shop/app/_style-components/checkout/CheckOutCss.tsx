@@ -139,7 +139,6 @@ export const CheckOutCss = styled.div`
 
         a {
           width: 100%;
-          text-decoration: none;
           color: black;
           text-align: center;
         }

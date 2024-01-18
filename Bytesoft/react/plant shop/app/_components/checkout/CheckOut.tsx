@@ -144,11 +144,9 @@ const CheckOutPage = () => {
       setWard("");
       setPlace("");
       setPhoneNumber("");
-      for (let i = 0; i < data.length; i++) {
-        axios.delete(`http://localhost:4001/card/${data[i].id}`);
-      }
+
+      setData([]);
       alert("Payment Success!");
-      window.location.reload();
     }
   };
 
@@ -261,7 +259,9 @@ const CheckOutPage = () => {
                     <div className="quantity">Quantity: {item.quantity}</div>
                   </div>
 
-                  <div className="total-price">${item.total_price}</div>
+                  <div className="total-price">
+                    ${Math.round(item.total_price * 100) / 100}
+                  </div>
                 </div>
               );
             })}
