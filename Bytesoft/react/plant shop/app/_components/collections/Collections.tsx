@@ -136,8 +136,8 @@ const Collections = (props: Props) => {
       total_price: Math.round(total_price * 100) / 100,
     };
 
-    props.setSelectedItem(Math.random());
     axios.post("http://localhost:4001/card", productAddToCard);
+    props.setSelectedItem(Math.random());
     setChangePot(0);
     setQuantity(1);
   };

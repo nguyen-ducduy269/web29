@@ -109,6 +109,7 @@ const CheckOutPage = () => {
       alert("Apply discount code successfully!");
       setChangePercent(5);
     } else {
+      alert("Discount code does not exist!");
       return false;
     }
   };
@@ -145,7 +146,7 @@ const CheckOutPage = () => {
       setPlace("");
       setPhoneNumber("");
 
-      setData([]);
+      axios.delete(`http://localhost:4001/card`);
       alert("Payment Success!");
     }
   };

@@ -85,6 +85,7 @@ export const CheckOutCss = styled.div`
         border-radius: 5px;
         color: white;
         text-align: center;
+        cursor: pointer;
       }
     }
 
