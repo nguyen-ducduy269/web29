@@ -16528,7 +16528,463 @@
     {
       "id": "dracaena",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_dracaena_massangeana_2-1674008633692.jpg?v=1674008750",
-      "name": "Dracaena"
+      "name": "Dracaena",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-c5719003--1DraaenaLemonSurprise4-MAIN.jpg?v=1608334679",
+      "meet_content": "Dracaenas compose of a large group of popular foliage plants. Most grow strongly upright with long variegated leaves with a large array of colors. Dracaenas grow well at average room temperatures and like ample light. Dracaena houseplants are easy to care for and maintain. It tolerates low light conditions and has fairly low watering needs.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-a647c571--1DraaenaLemonSurprise4-DETAIL.jpg?v=1608334672",
+      "light": "Filtered indoor light (such as through a sheer curtain in front of a sunny window) or a semi-shade spot is an ideal location. Never place a dracaena plant in direct sun, as the rays will scorch its foliage.",
+      "pet": "No",
+      "water": "Always allow the topsoil to dry out before watering. Drooping or yellowing leaves could indicate over-watering or poor drainage. Keep your Dracaena hydrated by misting the leaves with water and keeping the soil lightly misted.",
+      "humidity": "High",
+      "temperature": "Dracaena prefers temperatures ranging from 65° – 78° F during the day. Night temperatures can drop about ten degrees cooler, but cold drafts and temperatures below 55° F will harm the plant.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why does my plant have brown tips?",
+        "This is most commonly caused by under watering or letting the soil dry out for extended periods of time. Allow the top soil to dry about 75% and then water your plant. Make sure the soil never dries out completely but also is not wet or soggy.",
+        "Why are my leaves yellowing?",
+        "This is likely caused by overwatering. Dracaena plants like to be damp but do not want to be wet or oversaturated. Keeping a regular watering schedule will help prevent this.!",
+        "Why do my leaves have white or yellow spots?",
+        "These spots generally develop because the plant is in direct sunlight and experiencing low temperatures. It is best place your dracaena in a place with filtered indoor light. Dracaena plants also prefer temperatures ranging from 65° – 78° F during the day."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-47c57190--1DraaenaLemonSurprise4-HOLD.jpg?v=1608334675",
+      "shop": [
+        {
+          "id": 110,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_LEMON.LIME_1_1_592x592.jpg?v=1655237582",
+          "name": "Dracaena Deremensis 'Lemon Lime'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_LEMON.LIME_1_1_592x592.jpg?v=1655237582",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_LEMON.LIME_1_1_75x75_crop_center.jpg?v=1655237582"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Draaena-LemonSurprise-4DETAIL_592x592.jpg?v=1655237582",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Draaena-LemonSurprise-4DETAIL_75x75_crop_center.jpg?v=1655237582"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Draaena-LemonSurprise-4HOLD_592x592.jpg?v=1655237582",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Draaena-LemonSurprise-4HOLD_75x75_crop_center.jpg?v=1655237582"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LemonLime-6_592x592.jpg?v=1655237582",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LemonLime-6_75x75_crop_center.jpg?v=1655237582"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LemonLime-6-DETAIL_592x592.jpg?v=1655237582",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LemonLime-6-DETAIL_75x75_crop_center.jpg?v=1655237582"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LemonLime-6-HOLD_592x592.jpg?v=1655237582",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LemonLime-6-HOLD_75x75_crop_center.jpg?v=1655237582"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Dracaena Deremensis 'Lemon Lime'",
+          "common_name": "Dragon Tree",
+          "detail_description": "Dracaena are composed of a large group of popular foliage plants. Most grow strongly upright with striking broad leaves striped with white and lime green on the edges and a darker shade of green in the middle of the leaves. Dracaenas grow well at average room temperatures but don't like cold drafts. Give plants medium to bright light to maintain the best leaf color. Allow the soil to dry to the touch between waterings.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 150,
+              "fl": 41
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 21,
+              "fl": 22
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 111,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_COLORAMA_1_592x592.jpg?v=1655237252",
+          "name": "Dracaena 'Colorama'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_COLORAMA_1_592x592.jpg?v=1655237252",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_COLORAMA_1_75x75_crop_center.jpg?v=1655237252"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Colorama-4DETAIL_592x592.jpg?v=1655237252",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Colorama-4DETAIL_75x75_crop_center.jpg?v=1655237252"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_Dracaena_Colorama_1_592x592.jpg?v=1655237252",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_Dracaena_Colorama_1_75x75_crop_center.jpg?v=1655237252"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Dracaena marginata 'Colorama'",
+          "common_name": "Dragon Tree",
+          "detail_description": "Dracaena are composed of a large group of popular foliage plants. Most grow strongly upright with long, straplike leaves variegated with white, cream, or red. Dracaenas grow well at average room temperatures but don't like cold drafts. Give plants medium to bright direct sunlight to maintain the best leaf color. Allow the soil to dry to the touch between waterings.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 34
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 61
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 27
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 112,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Dragontrea-4_592x592.jpg?v=1617637542",
+          "name": "Dracaena 'Dragon Tree Twister'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Dragontrea-4_592x592.jpg?v=1617637542",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Dragontrea-4_75x75_crop_center.jpg?v=1617637542"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Dragontrea-4_75x75_crop_center.jpg?v=1617637542",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Dragontrea-DETAIL-4_75x75_crop_center.jpg?v=1617637542"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Dragontrea-HOLD-4_592x592.jpg?v=1617637542",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-Dragontrea-HOLD-4_75x75_crop_center.jpg?v=1617637542"
+            }
+          ],
+          "price": 19.99,
+          "rate": 0,
+          "botanical_name": "Dracaena fragrans",
+          "common_name": "Dragon Tree, Twister",
+          "detail_description": "The dragon tree is a dracaena with deep green foliage which grows in a spiral from its cane like stem. A great low maintenance and low light plant which makes a great addition to any home or workspace.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 113,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_ELEGANCE_1_592x592.jpg?v=1627691304",
+          "name": "Dracaena 'Elegance'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_ELEGANCE_1_592x592.jpg?v=1627691304",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_ELEGANCE_1_75x75_crop_center.jpg?v=1627691304"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_ELEGANCE_2_592x592.jpg?v=1655237327",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_ELEGANCE_2_75x75_crop_center.jpg?v=1655237327"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Dracaena 'Elegance'",
+          "common_name": "Dragon Tree",
+          "detail_description": "A member of the Dracaena family, this durable plant can easily be mistaken for a palm plant. This carefree plant has dark green leaves and a unique stock. It thrives in a large range of environments and is great for adding a tropical appearance to any room.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 114,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_JANET.CRAIG_1_592x592.jpg?v=1655237471",
+          "name": "Dracaena 'Janet Craig'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_JANET.CRAIG_1_592x592.jpg?v=1655237471",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_JANET.CRAIG_1_75x75_crop_center.jpg?v=1655237471"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-JanetCraig-4DETAIL_d10ff363-33da-46d4-945b-26b9ecb6d00f_592x592.jpg?v=1655237471",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-JanetCraig-4DETAIL_d10ff363-33da-46d4-945b-26b9ecb6d00f_75x75_crop_center.jpg?v=1655237471"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-JanetCraig-4LIFE_592x592.jpg?v=1655237471",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-JanetCraig-4LIFE_75x75_crop_center.jpg?v=1655237471"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-JanetCraig-4HOLD_592x592.jpg?v=1655237471",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-JanetCraig-4HOLD_75x75_crop_center.jpg?v=1655237471"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/2_DRACAENA_JANET.CRAIG_1_592x592.jpg?v=1655237471",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/2_DRACAENA_JANET.CRAIG_1_75x75_crop_center.jpg?v=1655237471"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Dracaena 'Janet Craig'",
+          "common_name": "Dragon Tree",
+          "detail_description": "This Dracaena Janet Craig plant in a 4-inch pot is great for assortments or small spaces in the home or office. Dracaenas compose of a large group of popular foliage plants. Most grow strongly upright with long variegated leaves with a large array of colors. Dracaenas grow well at average room temperatures and like ample light.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 77
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 170,
+              "fl": 63
+            },
+            {
+              "id": 2,
+              "name": "6' Pot",
+              "ca": 7,
+              "fl": 15
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 115,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_SONG.OF.INDIA_1_592x592.jpg?v=1653006291",
+          "name": "Dracaena Song of India",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_SONG.OF.INDIA_1_592x592.jpg?v=1653006291",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_SONG.OF.INDIA_1_75x75_crop_center.jpg?v=1653006291"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-SongofIndia-4DETAIL_592x592.jpg?v=1653006291",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-SongofIndia-4DETAIL_75x75_crop_center.jpg?v=1653006291"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-SongOfIndia-6_592x592.jpg?v=1653006291",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-SongOfIndia-6_75x75_crop_center.jpg?v=1653006291"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DracaenaSongofIndia_FiberPot_592x592.jpg?v=1653006291",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DracaenaSongofIndia_FiberPot_75x75_crop_center.jpg?v=1653006291"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DracaenaSongofIndia_TerraCotta_592x592.jpg?v=1653006291",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DracaenaSongofIndia_TerraCotta_75x75_crop_center.jpg?v=1653006291"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Dracaena reflexa",
+          "common_name": "Dragon Tree, 'Song of India'",
+          "detail_description": "The Dracaena Plant has narrow smooth leaves with a bright yellow color. This hardy plant has yellow and green leaves that make for a great addition to any area. This Dracaena Song of India in a 4-inch pot is great for larger assortments or areas in your home or office near windows. Dracaenas compose of a large group of popular foliage plants. Most grow strongly upright with long variegated leaves with a large array of colors. Dracaenas grow well at average room temperatures and like ample light.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 42,
+              "fl": 0
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            },
+            {
+              "name": "Black Cylinder",
+              "status": false
+            },
+            {
+              "name": "White Cylinder",
+              "status": true
+            },
+            {
+              "name": "Terra Cotta",
+              "status": true
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 116,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_MARGINATA.SUNRAY_1_592x592.jpg?v=1630967677",
+          "name": "Dracaena Marginata 'Sunshine'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_MARGINATA.SUNRAY_1_592x592.jpg?v=1630967677",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_MARGINATA.SUNRAY_1_75x75_crop_center.jpg?v=1630967677"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataSunray-4DETAIL_592x592.jpg?v=1630967677",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataSunray-4DETAIL_75x75_crop_center.jpg?v=1630967677"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataSunray-4HOLD_592x592.jpg?v=1630967675",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataSunray-4HOLD_75x75_crop_center.jpg?v=1630967675"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Dracaena Marginata 'Sunshine'",
+          "common_name": "Dragon Tree",
+          "detail_description": "A member of the Dracaena family, this durable plant can easily be mistaken for a palm plant. Marginata Cane house plant is carefree and has thin leaves with vibrant colors. It thrives in a large range of environments. Most grow strongly upright with long variegated leaves with a large array of colors. Dracaenas grow well at average room temperatures and like ample light.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 73,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 117,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/Pre-PottedterracotaDracaena_ed1dab34-412a-4769-9bc7-4b984bbdb1d4_592x592.jpg?v=1617637650",
+          "name": "Dracaena 'Sted Sol Cane'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/Pre-PottedterracotaDracaena_ed1dab34-412a-4769-9bc7-4b984bbdb1d4_592x592.jpg?v=1617637650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/Pre-PottedterracotaDracaena_ed1dab34-412a-4769-9bc7-4b984bbdb1d4_75x75_crop_center.jpg?v=1617637650"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-StedSolCane-4DETAIL_592x592.jpg?v=1617637650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-StedSolCane-4DETAIL_75x75_crop_center.jpg?v=1617637650"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/Dracaena_Sted_Sol_Cane_White_Cylinder_592x592.jpg?v=1617637650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/Dracaena_Sted_Sol_Cane_White_Cylinder_75x75_crop_center.jpg?v=1617637650"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-StedSolCane-4HOLD_592x592.jpg?v=1617637651",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-StedSolCane-4HOLD_75x75_crop_center.jpg?v=1617637651"
+            }
+          ],
+          "price": 34.99,
+          "rate": 0,
+          "botanical_name": "Dracaena fragans",
+          "common_name": "Dragon Tree, 'Sted Sol Cane'",
+          "detail_description": "A member of the Dracaena family, this durable plant can easily be mistaken for a palm plant. This care-free plant is a strong upright, evergreen shrub with a stout tan stem topped by a rosette on long, sword-shaped leaves. Narrow and arching, the shiny leaves are striped with golden-yellow down their center. It thrives in a large range of environments and is great for adding a tropical appearance to any room.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 118,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_MARGINATA.CANE_1_592x592.jpg?v=1664475946",
+          "name": "Dracaena 'Marginata Cane'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_MARGINATA.CANE_1_592x592.jpg?v=1664475946",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_MARGINATA.CANE_1_75x75_crop_center.jpg?v=1664475946"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataCane-4DETAIL_592x592.jpg?v=1664475946",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataCane-4DETAIL_75x75_crop_center.jpg?v=1664475946"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/Dracaena_Marginata_Cane_black_round_592x592.jpg?v=1664475946",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/Dracaena_Marginata_Cane_black_round_75x75_crop_center.jpg?v=1664475946"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataCane-4HOLD_592x592.jpg?v=1655237746",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-MarginataCane-4HOLD_75x75_crop_center.jpg?v=1655237746"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/DracaenaMarginataCane_FiberPot_592x592.jpg?v=1655237746",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/DracaenaMarginataCane_FiberPot_75x75_crop_center.jpg?v=1655237746"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Dracaena Marginata Cane",
+          "common_name": "Dragon Tree",
+          "detail_description": "A member of the Dracaena family, this durable plant can easily be mistaken for a palm plant. Marginata Cane house plant is carefree and has thin leaves with vibrant colors. It thrives in a large range of environments. Most grow strongly upright with long variegated leaves with a large array of colors. Dracaenas grow well at average room temperatures and like ample light.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 72,
+              "fl": 0
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            },
+            {
+              "name": "Black Cylinder",
+              "status": false
+            },
+            {
+              "name": "White Cylinder",
+              "status": false
+            },
+            {
+              "name": "Terra Cotta Standard",
+              "status": false
+            },
+            {
+              "name": "Natural Plant Fiber",
+              "status": false
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 118,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_LUCKY.BAMBOO_1_592x592.jpg?v=1655237650",
+          "name": "Dracaena 'Lucky Bamboo'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_LUCKY.BAMBOO_1_592x592.jpg?v=1655237650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_DRACAENA_LUCKY.BAMBOO_1_75x75_crop_center.jpg?v=1655237650"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-4DETAIL_592x592.jpg?v=1655237650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-4DETAIL_75x75_crop_center.jpg?v=1655237650"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-4HOLD_592x592.jpg?v=1655237650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-4HOLD_75x75_crop_center.jpg?v=1655237650"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-6_592x592.jpg?v=1655237650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-6_75x75_crop_center.jpg?v=1655237650"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-HOLD-6_592x592.jpg?v=1655237650",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Dracaena-LuckyBamboo-HOLD-6_75x75_crop_center.jpg?v=1655237650"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Dracaena sanderiana",
+          "common_name": "Dragon Tree, 'Lucky Bamboo'",
+          "detail_description": "Erect, bright green, cane-like stem with terminal, corkscrew twist bearing shoots of small, lance-shaped, parallel-veined, green leaves. Dracaenas grow well at average room temperatures but don't like cold drafts. Give plants medium to bright light to maintain the best leaf color. Allow the soil to dry to the touch between waterings.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 140,
+              "fl": 0
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 14,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "fern",
