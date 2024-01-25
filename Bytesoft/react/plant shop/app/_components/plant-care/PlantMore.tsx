@@ -13,6 +13,7 @@ const PlantMore = ({ product, setSelectedItem }: any) => {
       name: item.name,
       image: item.detail_image[0].big_image,
       price: item.price,
+      size: item.pot[0].name,
       ca: item.pot[0].ca,
       fl: item.pot[0].fl,
       quantity: quantity,

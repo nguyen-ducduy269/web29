@@ -2913,36 +2913,6 @@
       "total_price": 349.95
     },
     {
-      "id": 56,
-      "name": "Tillandsia Air Plant Bulbosay",
-      "image": "https://houseplantshop.com/cdn/shop/products/DSC_0293_592x592.jpg?v=1622834131",
-      "price": 9.99,
-      "ca": 101,
-      "fl": 25,
-      "quantity": 4,
-      "total_price": 39.96
-    },
-    {
-      "id": 53,
-      "name": "Tillandsia Air Plant Veluntina",
-      "image": "https://houseplantshop.com/cdn/shop/products/T.Velutina_592x592.jpg?v=1622834171",
-      "price": 7.99,
-      "ca": 32,
-      "fl": 14,
-      "quantity": 3,
-      "total_price": 23.97
-    },
-    {
-      "id": 62,
-      "name": "Alocasia Polly 'African Mask'",
-      "image": "https://houseplantshop.com/cdn/shop/products/1-Alocasia-AfricanMask-6_592x592.jpg?v=1622837081",
-      "price": 24.99,
-      "ca": 0,
-      "fl": 56,
-      "quantity": 4,
-      "total_price": 99.96
-    },
-    {
       "id": 4,
       "name": "Succulent Kalanchoe 'Panda Plant'",
       "image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-Panda-4_592x592.jpg?v=1625074093",
@@ -2961,6 +2931,17 @@
       "fl": 53,
       "quantity": "4",
       "total_price": 55.96
+    },
+    {
+      "id": 69,
+      "name": "Aralia 'Ming Stump Plant'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-name-6_22_592x592.jpg?v=1622836012",
+      "price": 44.99,
+      "size": "6' Pot",
+      "ca": 22,
+      "fl": 15,
+      "quantity": 3,
+      "total_price": 134.97
     }
   ],
   "all_product": [
