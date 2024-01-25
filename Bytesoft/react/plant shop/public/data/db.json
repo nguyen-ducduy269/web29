@@ -2941,6 +2941,26 @@
       "fl": 56,
       "quantity": 4,
       "total_price": 99.96
+    },
+    {
+      "id": 4,
+      "name": "Succulent Kalanchoe 'Panda Plant'",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-Panda-4_592x592.jpg?v=1625074093",
+      "size": "4' Pot",
+      "price": 19.99,
+      "quantity": "3",
+      "total_price": 59.97
+    },
+    {
+      "id": 38,
+      "name": "Arabica Coffee",
+      "image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_445x445.jpg?v=1627689722",
+      "size": "4' Pot",
+      "price": 13.99,
+      "ca": 96,
+      "fl": 53,
+      "quantity": "4",
+      "total_price": 55.96
     }
   ],
   "all_product": [
@@ -16989,7 +17009,313 @@
     {
       "id": "fern",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_fern_maidenhair_4-1674008633708.jpg?v=1674008753",
-      "name": "Fern"
+      "name": "Fern",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-0ab858df--1FernAutumn4-MAIN-1.jpg?v=1608339220",
+      "meet_content": "Although most Ferns grow in moist shady places like forest floors, this does not mean that they need no light. Their normal situation in the wild is dappled light, and if the light level in the home is too low, you will see poor growth and yellowing fronds. Ferns make wonderful low maintenance house plants as long as they are provided the right amount of light and texture! Ferns like moist soil and regular waterings. Try pouring the water directly to the base of the plant to care for Ferns.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-566d0ab8--1FernAutumn4-DETAIL.jpg?v=1608339203",
+      "light": "Give your Ferns a position near a window that gets morning or late afternoon sun, and keep the Ferns away from strong sunlight, especially during the summer. Direct sunlight will make them lose their leaves or turn their fronds yellow. You can keep your Ferns in dim light as long as you give them regular breaks in bright light. They can be given artificial light, but this should be from a special gardening bulb or a fluorescent strip. Ordinary light bulbs generate too much heat.",
+      "pet": "Yes most are, however the Asparagus Fern and Fern 'Sprengeri' are NOT pet friendly",
+      "water": "Most Ferns like evenly moist soil with regular waterings. Allowing the soil to dry out between waterings stresses these plants. Bushy Ferns can be difficult to water. Try using a watering can with a long spout to direct the water to the center of the plant. Water generously, until it drains out of the bottom of the pot.",
+      "humidity": "High",
+      "temperature": "An individual Fern’s place of origin and adaptability will determine how high or low temperature the fern needs. Most Ferns don’t like cold. Those Ferns from tropical regions truly appreciate 60°-70° F. Those from more temperate regions enjoy temperatures between 50°-60° F.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves dry and crispy?",
+        "Your plant is probably being under watered, make sure you are keeping a consistent watering schedule. We also recommend pruning off the brown leaves to allow more room for new growth.",
+        "Why are my leaves yellowing?",
+        "This is likely caused by overwatering. Ferns like their soil to be damp but do not want to be wet or oversaturated. Keeping a regular watering schedule will help prevent overwatering.",
+        "Why are my leaves drooping?",
+        "This is likely because your Fern is not receiving enough water. Try to keep a consistent watering schedule. Water your Fern when the top 2-3 inches of soil are dry."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-6d0ab858--1FernAutumn4-HOLD.jpg?v=1608339209",
+      "shop": [
+        {
+          "id": 119,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/6_FERN_SOUTHERN_SHIELD_TEMP_HEIC_592x789.jpg?v=1658347062",
+          "name": "'Southern Shield' Fern",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FERN_SOUTHERN_SHIELD_TEMP_HEIC_592x789.jpg?v=1658347062",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FERN_SOUTHERN_SHIELD_TEMP_HEIC_57x75_crop_center.jpg?v=1658347062"
+            }
+          ],
+          "price": 39.99,
+          "rate": 5,
+          "botanical_name": "Thelypteris normalis",
+          "common_name": "River Fern, Southern Maiden Fern, Southern Shield Fern, Widespread Maiden Fern",
+          "detail_description": "The shield fern plant, like other ferns, is notable for its long arching, bright green fronds. These pinnate leaves are haired on both the upper and lower surface. This fern plant makes an excellent low-maintenance groundcover fern for shaded areas of the landscape. It can be propagated via root division and as mentioned is deer resistant. The plant spreads via rhizomes to form colonies and fill an area rapidly.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 120,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_AUSTRAL.GEM_1_592x592.jpg?v=1627691701",
+          "name": "Austral Gem Fern",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_AUSTRAL.GEM_1_592x592.jpg?v=1627691701",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_AUSTRAL.GEM_1_75x75_crop_center.jpg?v=1627691701"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-AustralGem-4DETAIL_592x592.jpg?v=1627691701",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-AustralGem-4DETAIL_75x75_crop_center.jpg?v=1627691701"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-AustralGem-4HOLD_592x592.jpg?v=1627691701",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-AustralGem-4HOLD_75x75_crop_center.jpg?v=1627691701"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Asplenium dimorphum x difforme",
+          "common_name": "Austral Gem Fern",
+          "detail_description": "This relatively new Australian fern grows uniquely shaped leaves with a waxy coating that prevents water loss and shedding. This durability and adaptability make it an ideal indoor plant (and gift) for any collection in any climate. It is a medium-sized plant that grows flat and works well for hanging pots or pedestals.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 60,
+              "fl": 29
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 8
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 121,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png742311785_592x592.png?v=1622834696",
+          "name": "Bird's Nest 'Nidus' Fern",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png742311785_592x592.png?v=1622834696",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png742311785_75x75_crop_center.png?v=1622834696"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-6-DETAIL_592x592.jpg?v=1622834700",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-6-DETAIL_75x75_crop_center.jpg?v=1622834700"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-4MAIN_592x592.jpg?v=1622834707",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-4MAIN_75x75_crop_center.jpg?v=1622834707"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-4HOLD_592x592.jpg?v=1622834714",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-4HOLD_75x75_crop_center.jpg?v=1622834714"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-4DETAIL_592x592.jpg?v=1622834718",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-4DETAIL_75x75_crop_center.jpg?v=1622834718"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-6-HOLD_592x592.jpg?v=1622834722",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Nidus-6-HOLD_75x75_crop_center.jpg?v=1622834722"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Asplenium nidus",
+          "common_name": "Bird's-Nest Nidus",
+          "detail_description": "Native to the tropical regions of Asia and east Africa, Asplenium Nidus has large, light green, often crinkled leaves. This tropical plant prefers 'rainforest' conditions in partial shade or indirect sunlight, and high humidity. With the proper environment and attentive care, leaves can grow up to 5 ft long.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 32,
+              "fl": 36
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 29,
+              "fl": 29
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 122,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_LESLIE_1_592x592.jpg?v=1627691817",
+          "name": "Bird’s Nest 'Leslie' Fern",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_LESLIE_1_592x592.jpg?v=1627691817",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_LESLIE_1_75x75_crop_center.jpg?v=1627691817"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/f5ed13c9-dab5-43fc-bf14-3bad1b464b59_592x592.png?v=1677196889",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/f5ed13c9-dab5-43fc-bf14-3bad1b464b59_75x75_crop_center.png?v=1677196889"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3d5626f8-cb01-449b-a71a-b747abbf6931_592x592.png?v=1678914120",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3d5626f8-cb01-449b-a71a-b747abbf6931_75x75_crop_center.png?v=1678914120"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Asplenium antiquum 'Leslie'",
+          "common_name": "Bird's-Nest Leslie, Crested Japanese Bird's-Nest Fern, ō-tani-watari (Japanese)",
+          "detail_description": "Native to the tropical regions of Asia and east Africa, Asplenium antiquum 'Leslie' comes from the same family of ferns as the 'Nidus'. Like the Nidus, this tropical plant prefers 'rainforest' conditions in partial shade or indirect sunlight, and humidity. Its leaves are differentiated from the 'Nidus' by its compact uniform width and split curly ends.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 127,
+              "fl": 55
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 123,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_1674606671_592x592.png?v=1617637556",
+          "name": "Bird’s Nest 'Victoria' Fern",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_1674606671_592x592.png?v=1617637556",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_1674606671_75x75_crop_center.png?v=1617637556"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Victoria-HOLD-4_592x592.jpg?v=1617637556",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Victoria-HOLD-4_75x75_crop_center.jpg?v=1617637556"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Asplenium antiquum",
+          "common_name": "Victoria",
+          "detail_description": "Native to the tropical regions of Asia and east Africa, Asplenium antiquum 'Leslie' comes from the same family of ferns as the 'Nidus'. Like the Nidus, this tropical plant prefers 'rainforest' conditions in partial shade or indirect sunlight, and humidity. Its leaves are differentiated from the 'Nidus' by its compact uniform width and split curly ends.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 36
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 10
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 124,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_COTTON.CANDY_1_592x592.jpg?v=1627691745",
+          "name": "Cotton Candy Fern",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_COTTON.CANDY_1_592x592.jpg?v=1627691745",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_COTTON.CANDY_1_75x75_crop_center.jpg?v=1627691745"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_COTTON.CANDY_2_592x592.jpg?v=1655237920",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FERN_COTTON.CANDY_2_75x75_crop_center.jpg?v=1655237920"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-CottonCandy-4HOLD_592x592.jpg?v=1655237920",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-CottonCandy-4HOLD_75x75_crop_center.jpg?v=1655237920"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Nephrolepis exaltata",
+          "common_name": "Cotton Candy Fern, Fluffy Ruffle Fern, Suzi Wong fern",
+          "detail_description": "The Cotton Candy fern has many soft and fluffy light-green leaves that flare up and outward as they grow. At full maturity, this fern can grow to be up to 5 feet tall. Like most ferns, it thrives in partial shade and indirect sunlight, moderate indoor temperatures, and moist but well-drained soil. Its vibrant green leaves make it a popular choice for hanging and pedestal displays.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 24,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 125,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png3784709_592x592.png?v=1617637556",
+          "name": "Emina Fern",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png3784709_592x592.png?v=1617637556",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png3784709_75x75_crop_center.png?v=1617637556"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-CandyCandy1-DETAIL-4_592x592.jpg?v=1617637556",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-CandyCandy1-DETAIL-4_75x75_crop_center.jpg?v=1617637556"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-CandyCandy1-HOLD-4_592x592.jpg?v=1617637556",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-CandyCandy1-HOLD-4_75x75_crop_center.jpg?v=1617637556"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Nephrolepis exaltata 'Emina'",
+          "common_name": "Curly Boston fern, Dragon Tail fern, ‘Emina’ Curly Boston fern",
+          "detail_description": "The Emina fern has many soft and fluffy light-green leaves that flare up and outward as they grow. At full maturity, this fern can grow to be up to 5 feet tall. Like most ferns, it thrives in partial shade and indirect sunlight, moderate indoor temperatures, and moist but well-drained soil. Its vibrant green leaves make it a popular choice for hanging and pedestal displays.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 126,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/a8e53e1e-815b-4bc4-9cd3-16c8ce3e6b8c_592x592.png?v=1622838225",
+          "name": "Fern 'Asparagus'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/a8e53e1e-815b-4bc4-9cd3-16c8ce3e6b8c_592x592.png?v=1622838225",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/a8e53e1e-815b-4bc4-9cd3-16c8ce3e6b8c_75x75_crop_center.png?v=1622838225"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Asparagus-6_13DETAIL_592x592.jpg?v=1622838230",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Asparagus-6_13DETAIL_75x75_crop_center.jpg?v=1622838230"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Asparagus-6_13HOLD_592x592.jpg?v=1622838235",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fern-Asparagus-6_13HOLD_75x75_crop_center.jpg?v=1622838235"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-PlantA-2_592x592.jpg?v=1622838239",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-PlantA-2_75x75_crop_center.jpg?v=1622838239"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-PlantA-DETAIL-2_592x592.jpg?v=1622838244",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-PlantA-DETAIL-2_75x75_crop_center.jpg?v=1622838244"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/62111d5b-ba4b-496c-a0e6-0d96d967a7c2_592x789.png?v=1664346840",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/62111d5b-ba4b-496c-a0e6-0d96d967a7c2_57x75_crop_center.png?v=1664346840"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Asparagus Setaceus",
+          "common_name": "Fern Asparagus",
+          "detail_description": "The asparagus fern plant is not really a fern at all, but a member of the Liliaceae family, making it a relative of lilies and tulips. However, care is similar to most ferns. When growing asparagus ferns inside, place them near places with humidity and indirect light. Mist regularly. Its lush and frilly foliage makes it appear soft and fuzzy, but beware that there are thorny spurs. It's toxic to humans and animals, and is commonly placed in hanging displays.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 57,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "epiphyllum",
