@@ -2902,17 +2902,6 @@
       "total_price": 59.97
     },
     {
-      "id": 9,
-      "name": "Assorted Succulent Variety",
-      "image": "https://houseplantshop.com/cdn/shop/files/cb594089-e911-4a6a-9f1d-44b116d7666e_592x592.png?v=1692999053",
-      "size": "12 Pack",
-      "price": 69.99,
-      "ca": 100,
-      "fl": 97,
-      "quantity": "5",
-      "total_price": 349.95
-    },
-    {
       "id": 4,
       "name": "Succulent Kalanchoe 'Panda Plant'",
       "image": "https://houseplantshop.com/cdn/shop/products/1-Succulent-Panda-4_592x592.jpg?v=1625074093",
@@ -2931,17 +2920,6 @@
       "fl": 53,
       "quantity": "4",
       "total_price": 55.96
-    },
-    {
-      "id": 69,
-      "name": "Aralia 'Ming Stump Plant'",
-      "image": "https://houseplantshop.com/cdn/shop/products/1-name-6_22_592x592.jpg?v=1622836012",
-      "price": 44.99,
-      "size": "6' Pot",
-      "ca": 22,
-      "fl": 15,
-      "quantity": 3,
-      "total_price": 134.97
     }
   ],
   "all_product": [

@@ -35,7 +35,7 @@ const FeatureProducts = (props: Props) => {
     image:
       "https://houseplantshop.com/cdn/shop/files/bf97e578-2f94-4342-b272-616b51e943ab_75x75_crop_center.png?v=1700069502",
     quantity: cardValue,
-    total_price: 999.99 * cardValue,
+    total_price: Math.round(999.99 * cardValue * 100) / 100,
   };
 
   const onSubmit = () => {

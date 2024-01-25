@@ -110,6 +110,7 @@ const CheckOutPage = () => {
       setChangePercent(5);
     } else {
       alert("Discount code does not exist!");
+      setChangePercent(0);
       return false;
     }
   };
@@ -284,7 +285,7 @@ const CheckOutPage = () => {
 
         <div className="final">
           <div className="subtotal">
-            Subtotal <p>${finalTotalPrice}</p>
+            Subtotal <p>${Math.round(finalTotalPrice * 100) / 100}</p>
           </div>
 
           <div className="shipping">

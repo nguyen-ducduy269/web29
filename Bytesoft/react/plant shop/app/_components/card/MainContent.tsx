@@ -94,13 +94,13 @@ const MainContent = () => {
                               <div className="name">{products.name}</div>
                               {products.size ? (
                                 <div className="size">
-                                  <strong>Size</strong> {products.size}
+                                  <strong>Size:</strong> {products.size}
                                 </div>
                               ) : (
                                 ""
                               )}
                               <div className="product-price">
-                                <strong>Price</strong> ${products.price}
+                                <strong>Price:</strong> ${products.price}
                               </div>
                             </div>
                           </div>
