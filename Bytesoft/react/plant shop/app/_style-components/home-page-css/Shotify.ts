@@ -37,7 +37,7 @@ export const Shotify = styled.div`
 
   @media only screen and (min-width: 1024px) {
     .shotify-section {
-      height: 210px;
+      width: 100%;
     }
   }
 

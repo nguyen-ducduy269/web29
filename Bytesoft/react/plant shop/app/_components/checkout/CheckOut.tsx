@@ -147,7 +147,7 @@ const CheckOutPage = () => {
       setPlace("");
       setPhoneNumber("");
 
-      axios.delete(`http://localhost:4001/card`);
+      axios.delete(`http://localhost:4001/card`, { data });
       alert("Payment Success!");
     }
   };

@@ -12,8 +12,13 @@ import { MdDelete } from "react-icons/md";
 import { GoDot } from "react-icons/go";
 import axios from "axios";
 
-const MainContent = () => {
+interface Props {
+  setSelectedItem: (value: any) => void;
+}
+
+const MainContent = (props: Props) => {
   const [data, setData]: any = useState([]);
+  const [reloadPage, setReloadPage] = useState(1);
   let finalTotalPrice = 0;
 
   const fetchData = async (url: string) => {
@@ -24,7 +29,7 @@ const MainContent = () => {
 
   useEffect(() => {
     fetchData("http://localhost:4001/card");
-  }, []);
+  }, [reloadPage]);
 
   for (let i = 0; i < data.length; i++) {
     finalTotalPrice += data[i].total_price;
@@ -33,8 +38,9 @@ const MainContent = () => {
   const deleteProduct = (id: any) => {
     if (confirm("Are you sure to delete this product?")) {
       axios.delete(`http://localhost:4001/card/${id}`);
-      window.location.reload();
     }
+    setReloadPage(Math.random());
+    props.setSelectedItem(Math.random());
   };
 
   return (

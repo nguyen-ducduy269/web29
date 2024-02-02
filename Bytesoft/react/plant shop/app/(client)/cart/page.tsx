@@ -17,7 +17,7 @@ const Cart = () => {
       <Header />
       <Bar />
       <SiteHeader selectedItem={selectedItem} />
-      <MainContent />
+      <MainContent setSelectedItem={setSelectedItem} />
       <Footer />
     </>
   );
