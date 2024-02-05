@@ -18423,12 +18423,48 @@
     {
       "id": "homalomena",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_HOMALOMENA_SELBY_2_64aada97-4930-48db-8c97-3a15d02e822d.jpg?v=1683317865",
-      "name": "Homalomena"
+      "name": "Homalomena",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/6_HOMALOMENA_SELBY_ebcfc7d9-aa17-4ae5-beb0-0afa93a79a57.jpg?v=1683316908",
+      "meet_content": "Homalomena  is a fun and low-maintenance houseplant native to Asia and South America. It appreciates warm temperatures, high humidity, and bright indirect light.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/4_HOMALOMENA_SELBY_2_64aada97-4930-48db-8c97-3a15d02e822d.jpg?v=1683317865",
+      "light": "Your Homalomena likes bright indirect light. They can tolerate lower light, but growth may slow significantly. If kept in direct sunlight, the foliage may burn.",
+      "pet": "No",
+      "water": "Allow the top 50% of the soil of your Homalomena to dry out between watering. They do not like soggy soil, but also do not like to dry out for extended periods of time.",
+      "humidity": "Your Homalomena is sensitive to temperatures below 65 degrees. Keep it in an area with temperatures between 65-85 degrees.",
+      "temperature": "Your Homalomena is sensitive to temperatures below 65 degrees. Keep it in an area with temperatures between 65-85 degrees.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are the leaves on my Homalomena drooping?",
+        "Your Homalomena likes to dry out 50-75% between watering, however if you accidentally let your plant’s soil dry out completely for an extended period of time, you may see leaves go limp, droop, and possibly start to brown. If the soil is extremely dry all the way through the pot, a thorough soak is in order.",
+        "Why are the leaves on my Homalomena turning yellow?",
+        "If there is new growth on your plant and the yellowing leaves are older, particularly at the bottom of the plant, this yellowing is natural. Your plant sheds its old leaves and sends energy to new growth. It is normal to see a leaf yellowing every few weeks. If it is happening more often than that, it can indicate that something is wrong."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/files/6_HOMALOMENA_EMERALD.GEM_3_ba9d5244-fcf9-49e4-855d-5f4a628d2da6.jpg?v=1683317843",
+      "shop": []
     },
     {
       "id": "hoya",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_hoya_publicalyx_2-1674008633743.jpg?v=1674008760",
-      "name": "Hoya"
+      "name": "Hoya",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-41cc71c5--1HoyaKrimsonQueen4.jpg?v=1609188603",
+      "meet_content": "Hoya vines are wood-like and hoya leaves are waxy. Native to tropical Asia, these houseplants do well in warm weather.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-75ae41cc--1HoyaKrimsonQueen4DETAIL.jpg?v=1609188594",
+      "light": "Hoya plants do best and bloom more often in very bright light. They are one of the few indoor plants that can handle direct sun. Although hoya plants can adapt to lower light, they will grow slower and not produce their fragrant waxy flowers that are so beautiful.",
+      "pet": "Yes",
+      "water": "Hoyas are succulent plants so allow the soil to dry out quite a bit before watering. These plants do thrive on neglect but need additional water when in bloom.",
+      "humidity": "Medium",
+      "temperature": "Hoya plants can adapt to almost any moderate temperature, but prefer 60°-65° F at night and 70°-80° F during the day.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why is my plant experiencing leaf-drop & blackening of leaves?",
+        "This is likely due to poor water drainage or temperatures that are too cool for your plant. ",
+        "Why are my leaves wrinkling?",
+        "This is generally a sign that your plant is lacking water. If you notice wrinkling simply water your plant and maintain a consistent watering schedule.",
+        "Why are my leaves lacking color?",
+        "This is likely due to insufficient light. In order to produce bright colored leaves and flowers Hoya plants need bright light. Try placing your Hoya in an area where it will receive bright light."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-ae41cc71--1HoyaKrimsonQueen4HOLD.jpg?v=1609188599",
+      "shop": []
     },
     {
       "id": "hydrangea",
