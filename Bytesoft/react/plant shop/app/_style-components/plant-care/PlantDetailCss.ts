@@ -169,11 +169,11 @@ export const PLantDetailCss = styled.div`
         gap: 15px;
         .item-title {
           font-size: 30px;
-          font-weight: 500;
+          font-weight: 600;
         }
 
         .item-price {
-          font-size: 30px;
+          font-size: 24px;
           font-weight: 500;
         }
 

@@ -2880,17 +2880,6 @@
       "total_price": 41.98
     },
     {
-      "id": 68,
-      "name": "Arabica Coffee",
-      "image": "https://houseplantshop.com/cdn/shop/products/4_ARABICA_COFFEE_1_592x592.jpg?v=1627689722",
-      "price": 13.99,
-      "size": "3' Pot",
-      "ca": 0,
-      "fl": 39,
-      "quantity": 3,
-      "total_price": 41.97
-    },
-    {
       "id": 1,
       "name": "Pothos 'Neon'",
       "image": "https://houseplantshop.com/cdn/shop/files/1-Pothos-Neon-6_592x592.jpg?v=1687233535",
@@ -2922,6 +2911,61 @@
       "fl": 19,
       "quantity": "3",
       "total_price": 59.97
+    },
+    {
+      "id": 11,
+      "name": "Pothos 'N'joy'",
+      "image": "https://houseplantshop.com/cdn/shop/files/2bc65491-ff71-446f-a90e-82475aaf6eb7_592x592.png?v=1689793344",
+      "size": "4' Pot",
+      "price": 13.99,
+      "ca": 155,
+      "fl": 39,
+      "quantity": "2",
+      "total_price": 27.98
+    },
+    {
+      "id": 13,
+      "name": "Dieffenbachia Camille",
+      "image": "https://houseplantshop.com/cdn/shop/products/DiffenbachiaCamille_FiberPot_592x592.jpg?v=1636576293",
+      "size": "3' Pot",
+      "price": 19.99,
+      "ca": 17,
+      "fl": 45,
+      "quantity": 1,
+      "total_price": 19.99
+    },
+    {
+      "id": 4,
+      "name": "Common Olive Tree (Olea europaea)",
+      "image": "https://houseplantshop.com/cdn/shop/products/84847c76-a9a4-4dcb-8f0d-0b50d16f9733_592x789.png?v=1678564881",
+      "size": "6' Pot",
+      "price": 39.99,
+      "ca": 146,
+      "fl": 59,
+      "quantity": 1,
+      "total_price": 39.99
+    },
+    {
+      "id": 6,
+      "name": "Poinsettia 'Pink'",
+      "image": "https://houseplantshop.com/cdn/shop/products/347edbf2-dc2c-4e34-9177-02455aa608e2_592x789.png?v=1672151554",
+      "size": "6' Pot",
+      "price": 37.99,
+      "ca": 0,
+      "fl": 6,
+      "quantity": 1,
+      "total_price": 37.99
+    },
+    {
+      "id": 109,
+      "name": "Dieffenbachia Camille",
+      "image": "https://houseplantshop.com/cdn/shop/products/1-Dieffenbachia-Carmille-6_592x592.jpg?v=1664475886",
+      "size": "4' Pot",
+      "price": 13.99,
+      "ca": 80,
+      "fl": 39,
+      "quantity": "2",
+      "total_price": 27.98
     }
   ],
   "all_product": [
@@ -17279,34 +17323,1102 @@
       ]
     },
     {
-      "id": "epiphyllum",
-      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/146.jpg?v=1698997919",
-      "name": "Epiphyllum"
-    },
-    {
       "id": "ficus",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ficus_burgundy_2-1674008634193.jpg?v=1674008678",
-      "name": "Ficus"
+      "name": "Ficus",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ficus_tineke_1-1674259437147.jpg?v=1674259444",
+      "meet_content": "Ficus, commonly known as the rubber plant has large leaves and is easy to care for. Although the Ficus plants grow naturally in lowland tropical forests they can thrive in a large range of environments.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4ficusaudreydetail-1674259437134.jpg?v=1674259441",
+      "light": "Place the Ficus near a window in a room that gets bright light in the summer with more moderate light in the winter. Turn the plant occasionally so all the growth does not occur on one side.",
+      "pet": "No",
+      "water": "Water weekly during the summer with room temperature water. Add water until it drains from the bottom of the pot. Discard the excess water if it flows into a container. Adjust the watering for your plant. Allow the soil to dry slightly between waterings. If the leaves turn yellow and begin to drop, you may need to increase or decrease the amount of water. Check the root ball. If the roots are soggy water the plant less often. If they are dry, increase watering. Humidity and light levels affect the amount of water needed.",
+      "humidity": "High",
+      "temperature": "Ficus plants will do best in temperatures between 50° to 85° F. If the temperatures exceed this the leaves will loose their turgid appearance. It is best to avoid any quick temperature drops.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves dry and brown?",
+        "You may be under watering your plant, it is best to maintain a consistent watering schedule and water your Ficus when the top 1-2 inches of soil are dry. It is also a good idea to trim off the brown leaves so your plant can put more energy into healthy new growth.",
+        "Why are my leaves dropping?",
+        "Ficus plants like to have consistently moist soil. Make sure you are not over or under watering your plant and try maintaining a regular watering schedule.",
+        "Why are my leaves yellowing?",
+        "This is likely due to water stress or low humidity. If the soil is moist and you still notice yellowing leaves try misting the leaves to increase humidity."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_ficus_triangularis_3-1674259502988.jpg?v=1674259504",
+      "shop": [
+        {
+          "id": 127,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
+          "name": "Ficus Elastica 'Burgundy'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4DETAIL_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4DETAIL_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4HOLD_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4HOLD_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-6DETAIL_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-6DETAIL_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_BURGUNDY_1_75x75_crop_center.jpg?v=1630968286"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Rubber Plant, Rubber Tree, Rubber Fig",
+          "detail_description": "Native to India and Southeast Asia, the Ficus elastica 'Burgundy' is perfect for those looking for a small indoor tree with thick, leathery, glossy, dark green leaves and pink to purplish stipules. In the wild, it grows up to around 200ft tall, and its roots are used in India to form living bridges. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if taken internally, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 40,
+              "fl": 43
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 14,
+              "fl": 19
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 128,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_1_a9d60ff1-76cc-4821-8a4d-7434fc32c8cc_592x592.jpg?v=1654049550",
+          "name": "Ficus 'Audrey'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_1_a9d60ff1-76cc-4821-8a4d-7434fc32c8cc_592x592.jpg?v=1654049550",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_1_a9d60ff1-76cc-4821-8a4d-7434fc32c8cc_75x75_crop_center.jpg?v=1654049550"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_2_592x592.jpg?v=1654049550",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_2_75x75_crop_center.jpg?v=1654049550"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_3_606ad0b3-fe63-4856-9389-2c71a75b9412_592x592.jpg?v=1654050653",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_3_606ad0b3-fe63-4856-9389-2c71a75b9412_75x75_crop_center.jpg?v=1654050653"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Variegated Rubber tree, Ficus Elastica Audrey",
+          "detail_description": "Native to tropical regions of India and Malaysia, Ficus is a hardy, vibrant evergreen plant. Care is similar to other rubber plants, but the variegation requires more light than the 'Burgundy' variety. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if ingested, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 20
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 13
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 129,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TINEKE_1copy_592x592.jpg?v=1627691948",
+          "name": "Ficus Elastica 'Tineke'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TINEKE_1copy_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TINEKE_1copy_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4DETAIL_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4DETAIL_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4HOLD_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4HOLD_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6_8295df4f-f545-44d0-9482-8199435a9fbe_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6_8295df4f-f545-44d0-9482-8199435a9fbe_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6-HOLD_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6-HOLD_75x75_crop_center.jpg?v=1627691948"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Variegated Rubber tree, Ficus Elastica 'Tineke', Rubber plant",
+          "detail_description": "Native to tropical regions of India and Malaysia, Ficus Ruby 'Tineke' is a hardy, vibrant evergreen plant with green-yellow and white variegation. Care is similar to other rubber plants, but the variegation requires more light than the 'Burgundy' variety. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if ingested, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 78,
+              "fl": 22
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 34,
+              "fl": 3
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 130,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-4_592x592.jpg?v=1682369843",
+          "name": "Ficus 'Ginseng'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-4_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-4_75x75_crop_center.jpg?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1ee5fe9a-cc6e-49d3-a166-216c1ed20c7c_592x592.png?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1ee5fe9a-cc6e-49d3-a166-216c1ed20c7c_75x75_crop_center.png?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/files/ginseng_greypot_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/files/ginseng_greypot_75x75_crop_center.jpg?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-HOLD-4_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-HOLD-4_75x75_crop_center.jpg?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-6-DETAIL_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-6-DETAIL_75x75_crop_center.jpg?v=1682369843"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus Ginseng",
+          "common_name": "Pot-bellied Ficus",
+          "detail_description": "Native to Asia and Australia, Ficus 'Ginseng' is a cultivar used extensively in bonsai for its bulbous, thick roots reminiscent of ginseng that rise out of the ground and has small evergreen leaves and is a popular houseplant for its ease of care and elegant growth. Although the Ficus plant grows naturally in lowland tropical forests, it can thrive in a large range of environments. In its natural habitat, this ficus grows to a large and stately tree up to 100ft tall, so indoor growing may require pruning. Although it was determined that Ficus Ginseng is effective at removing common household air toxins formaldehyde and xylene, it is also a source of allergies, especially for people allergic to latex. Not recommended for pet owners.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 66,
+              "fl": 37
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 24,
+              "fl": 26
+            },
+            {
+              "id": 2,
+              "name": "8' Pot",
+              "ca": 3,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 131,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-6_592x592.jpg?v=1622836091",
+          "name": "Ficus Elastica 'Ruby Pink'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-6_592x592.jpg?v=1622836091",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-6_75x75_crop_center.jpg?v=1622836091"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-10-DETAIL_33457746-6784-4bed-9296-32c9b71ee27a_592x592.jpg?v=1622836095",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-10-DETAIL_33457746-6784-4bed-9296-32c9b71ee27a_75x75_crop_center.jpg?v=1622836095"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-HOLD-6_592x592.jpg?v=1622836100",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-HOLD-6_75x75_crop_center.jpg?v=1622836100"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-Ruby_Pink_592x592.jpg?v=1622836104",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-Ruby_Pink_75x75_crop_center.jpg?v=1622836104"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-RubyPink-DETAIL_592x592.jpg?v=1622836112",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-RubyPink-DETAIL_75x75_crop_center.jpg?v=1622836112"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Variegated Rubber tree, Ficus Elastica Ruby",
+          "detail_description": "Native to tropical regions of India and Malaysia, Ficus Ruby Pink is a hardy, vibrant evergreen plant with red-pink and white variegation. Care is similar to other rubber plants, but the variegation requires more light than the 'Burgundy' variety. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if ingested, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 42,
+              "fl": 44
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 17,
+              "fl": 30
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 132,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_1_dba15c5f-cf28-4586-893a-ba9ce968dfa9_592x592.jpg?v=1654049416",
+          "name": "Ficus 'Triangularis Variegated'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_1_dba15c5f-cf28-4586-893a-ba9ce968dfa9_592x592.jpg?v=1654049416",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_1_dba15c5f-cf28-4586-893a-ba9ce968dfa9_75x75_crop_center.jpg?v=1654049416"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_2_592x592.jpg?v=1654049416",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_2_75x75_crop_center.jpg?v=1654049416"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_3_0cd1861e-763b-4d05-9d7d-9b4a8badbdb2_592x592.jpg?v=1654050415",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_3_0cd1861e-763b-4d05-9d7d-9b4a8badbdb2_75x75_crop_center.jpg?v=1654050415"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_FICUS_TRIANGULARIS.VAR_592x789.jpg?v=1654801475",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_FICUS_TRIANGULARIS.VAR_57x75_crop_center.jpg?v=1654801475"
+            }
+          ],
+          "price": 29.99,
+          "rate": 5,
+          "botanical_name": "Ficus Triangularis Variegata",
+          "common_name": "Ficus Triangularis Variegated",
+          "detail_description": "Ficus Triangularis 'Variegata' is a highly sought after and easy to grow houseplant. As the name suggests, it features gorgeous variegated triangular-shaped leaves.",
+          "sold_out": true,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 1,
+              "fl": 41
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 133,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/81ae5a65-b6da-4179-8cb9-5964860feb15_592x592.png?v=1660304024",
+          "name": "Ficus Altissima 'Yellow Gem'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/81ae5a65-b6da-4179-8cb9-5964860feb15_592x592.png?v=1660304024",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/81ae5a65-b6da-4179-8cb9-5964860feb15_75x75_crop_center.png?v=1660304024"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/f5600377-474c-43ab-9e61-2650024526da_592x592.png?v=1660304030",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/f5600377-474c-43ab-9e61-2650024526da_75x75_crop_center.png?v=1660304030"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_YELLOW.GEM_3_592x592.jpg?v=1659165588",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_YELLOW.GEM_3_75x75_crop_center.jpg?v=1659165588"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus Altissima 'Yellow Gem'",
+          "common_name": "Yellow Gem, Lofty Fig, False Banyan, and Council Tree",
+          "detail_description": "Ficus 'Yellow Gem' is made up of thick rubbery leaves, with a base color of bright green that features an attractive yellow-green blotchy border and yellow veins. This lemon and lime beauty will develop deeper contrast and variegation with ideal light conditions over time.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 5
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 7
+            }
+          ],
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "epiphyllum",
+      "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/146.jpg?v=1698997919",
+      "name": "Epiphyllum",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ficus_tineke_1-1674259437147.jpg?v=1674259444",
+      "meet_content": "Ficus, commonly known as the rubber plant has large leaves and is easy to care for. Although the Ficus plants grow naturally in lowland tropical forests they can thrive in a large range of environments.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4ficusaudreydetail-1674259437134.jpg?v=1674259441",
+      "light": "Place the Ficus near a window in a room that gets bright light in the summer with more moderate light in the winter. Turn the plant occasionally so all the growth does not occur on one side.",
+      "pet": "No",
+      "water": "Water weekly during the summer with room temperature water. Add water until it drains from the bottom of the pot. Discard the excess water if it flows into a container. Adjust the watering for your plant. Allow the soil to dry slightly between waterings. If the leaves turn yellow and begin to drop, you may need to increase or decrease the amount of water. Check the root ball. If the roots are soggy water the plant less often. If they are dry, increase watering. Humidity and light levels affect the amount of water needed.",
+      "humidity": "High",
+      "temperature": "Ficus plants will do best in temperatures between 50° to 85° F. If the temperatures exceed this the leaves will loose their turgid appearance. It is best to avoid any quick temperature drops.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves dry and brown?",
+        "You may be under watering your plant, it is best to maintain a consistent watering schedule and water your Ficus when the top 1-2 inches of soil are dry. It is also a good idea to trim off the brown leaves so your plant can put more energy into healthy new growth.",
+        "Why are my leaves dropping?",
+        "Ficus plants like to have consistently moist soil. Make sure you are not over or under watering your plant and try maintaining a regular watering schedule.",
+        "Why are my leaves yellowing?",
+        "This is likely due to water stress or low humidity. If the soil is moist and you still notice yellowing leaves try misting the leaves to increase humidity."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_ficus_triangularis_3-1674259502988.jpg?v=1674259504",
+      "shop": [
+        {
+          "id": 127,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
+          "name": "Ficus Elastica 'Burgundy'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_BURGUNDY_1_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4DETAIL_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4DETAIL_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4HOLD_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-4HOLD_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-6DETAIL_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Burgundy-6DETAIL_75x75_crop_center.jpg?v=1630968286"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_BURGUNDY_1_592x592.jpg?v=1630968286",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_BURGUNDY_1_75x75_crop_center.jpg?v=1630968286"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Rubber Plant, Rubber Tree, Rubber Fig",
+          "detail_description": "Native to India and Southeast Asia, the Ficus elastica 'Burgundy' is perfect for those looking for a small indoor tree with thick, leathery, glossy, dark green leaves and pink to purplish stipules. In the wild, it grows up to around 200ft tall, and its roots are used in India to form living bridges. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if taken internally, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 40,
+              "fl": 43
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 14,
+              "fl": 19
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 128,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_1_a9d60ff1-76cc-4821-8a4d-7434fc32c8cc_592x592.jpg?v=1654049550",
+          "name": "Ficus 'Audrey'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_1_a9d60ff1-76cc-4821-8a4d-7434fc32c8cc_592x592.jpg?v=1654049550",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_1_a9d60ff1-76cc-4821-8a4d-7434fc32c8cc_75x75_crop_center.jpg?v=1654049550"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_2_592x592.jpg?v=1654049550",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_2_75x75_crop_center.jpg?v=1654049550"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_3_606ad0b3-fe63-4856-9389-2c71a75b9412_592x592.jpg?v=1654050653",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/6_FICUS_AUDREY_3_606ad0b3-fe63-4856-9389-2c71a75b9412_75x75_crop_center.jpg?v=1654050653"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Variegated Rubber tree, Ficus Elastica Audrey",
+          "detail_description": "Native to tropical regions of India and Malaysia, Ficus is a hardy, vibrant evergreen plant. Care is similar to other rubber plants, but the variegation requires more light than the 'Burgundy' variety. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if ingested, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 20
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 13
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 129,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TINEKE_1copy_592x592.jpg?v=1627691948",
+          "name": "Ficus Elastica 'Tineke'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TINEKE_1copy_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TINEKE_1copy_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4DETAIL_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4DETAIL_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4HOLD_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-4HOLD_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6_8295df4f-f545-44d0-9482-8199435a9fbe_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6_8295df4f-f545-44d0-9482-8199435a9fbe_75x75_crop_center.jpg?v=1627691948"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6-HOLD_592x592.jpg?v=1627691948",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Tineke-6-HOLD_75x75_crop_center.jpg?v=1627691948"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Variegated Rubber tree, Ficus Elastica 'Tineke', Rubber plant",
+          "detail_description": "Native to tropical regions of India and Malaysia, Ficus Ruby 'Tineke' is a hardy, vibrant evergreen plant with green-yellow and white variegation. Care is similar to other rubber plants, but the variegation requires more light than the 'Burgundy' variety. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if ingested, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 78,
+              "fl": 22
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 34,
+              "fl": 3
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 130,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-4_592x592.jpg?v=1682369843",
+          "name": "Ficus 'Ginseng'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-4_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-4_75x75_crop_center.jpg?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1ee5fe9a-cc6e-49d3-a166-216c1ed20c7c_592x592.png?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1ee5fe9a-cc6e-49d3-a166-216c1ed20c7c_75x75_crop_center.png?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/files/ginseng_greypot_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/files/ginseng_greypot_75x75_crop_center.jpg?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-HOLD-4_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-HOLD-4_75x75_crop_center.jpg?v=1682369843"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-6-DETAIL_592x592.jpg?v=1682369843",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Ginseng-6-DETAIL_75x75_crop_center.jpg?v=1682369843"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus Ginseng",
+          "common_name": "Pot-bellied Ficus",
+          "detail_description": "Native to Asia and Australia, Ficus 'Ginseng' is a cultivar used extensively in bonsai for its bulbous, thick roots reminiscent of ginseng that rise out of the ground and has small evergreen leaves and is a popular houseplant for its ease of care and elegant growth. Although the Ficus plant grows naturally in lowland tropical forests, it can thrive in a large range of environments. In its natural habitat, this ficus grows to a large and stately tree up to 100ft tall, so indoor growing may require pruning. Although it was determined that Ficus Ginseng is effective at removing common household air toxins formaldehyde and xylene, it is also a source of allergies, especially for people allergic to latex. Not recommended for pet owners.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 66,
+              "fl": 37
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 24,
+              "fl": 26
+            },
+            {
+              "id": 2,
+              "name": "8' Pot",
+              "ca": 3,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 131,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-6_592x592.jpg?v=1622836091",
+          "name": "Ficus Elastica 'Ruby Pink'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-6_592x592.jpg?v=1622836091",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-6_75x75_crop_center.jpg?v=1622836091"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-10-DETAIL_33457746-6784-4bed-9296-32c9b71ee27a_592x592.jpg?v=1622836095",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-10-DETAIL_33457746-6784-4bed-9296-32c9b71ee27a_75x75_crop_center.jpg?v=1622836095"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-HOLD-6_592x592.jpg?v=1622836100",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-RubyPink-HOLD-6_75x75_crop_center.jpg?v=1622836100"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-Ruby_Pink_592x592.jpg?v=1622836104",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-Ruby_Pink_75x75_crop_center.jpg?v=1622836104"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-RubyPink-DETAIL_592x592.jpg?v=1622836112",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4-Ficus-RubyPink-DETAIL_75x75_crop_center.jpg?v=1622836112"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus elastica",
+          "common_name": "Variegated Rubber tree, Ficus Elastica Ruby",
+          "detail_description": "Native to tropical regions of India and Malaysia, Ficus Ruby Pink is a hardy, vibrant evergreen plant with red-pink and white variegation. Care is similar to other rubber plants, but the variegation requires more light than the 'Burgundy' variety. It won't do well in low light spaces, so place in bright indirect light. Water to keep soil moist at all times. Ficus elastica is a source of latex that is toxic to the skin, and poisonous if ingested, so pet-owners and those allergic to latex should be cautious.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 42,
+              "fl": 44
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 17,
+              "fl": 30
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 132,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_1_dba15c5f-cf28-4586-893a-ba9ce968dfa9_592x592.jpg?v=1654049416",
+          "name": "Ficus 'Triangularis Variegated'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_1_dba15c5f-cf28-4586-893a-ba9ce968dfa9_592x592.jpg?v=1654049416",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_1_dba15c5f-cf28-4586-893a-ba9ce968dfa9_75x75_crop_center.jpg?v=1654049416"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_2_592x592.jpg?v=1654049416",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_2_75x75_crop_center.jpg?v=1654049416"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_3_0cd1861e-763b-4d05-9d7d-9b4a8badbdb2_592x592.jpg?v=1654050415",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_TRIANGULARIS_3_0cd1861e-763b-4d05-9d7d-9b4a8badbdb2_75x75_crop_center.jpg?v=1654050415"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/3_FICUS_TRIANGULARIS.VAR_592x789.jpg?v=1654801475",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/3_FICUS_TRIANGULARIS.VAR_57x75_crop_center.jpg?v=1654801475"
+            }
+          ],
+          "price": 29.99,
+          "rate": 5,
+          "botanical_name": "Ficus Triangularis Variegata",
+          "common_name": "Ficus Triangularis Variegated",
+          "detail_description": "Ficus Triangularis 'Variegata' is a highly sought after and easy to grow houseplant. As the name suggests, it features gorgeous variegated triangular-shaped leaves.",
+          "sold_out": true,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 1,
+              "fl": 41
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 133,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/81ae5a65-b6da-4179-8cb9-5964860feb15_592x592.png?v=1660304024",
+          "name": "Ficus Altissima 'Yellow Gem'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/81ae5a65-b6da-4179-8cb9-5964860feb15_592x592.png?v=1660304024",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/81ae5a65-b6da-4179-8cb9-5964860feb15_75x75_crop_center.png?v=1660304024"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/f5600377-474c-43ab-9e61-2650024526da_592x592.png?v=1660304030",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/f5600377-474c-43ab-9e61-2650024526da_75x75_crop_center.png?v=1660304030"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_YELLOW.GEM_3_592x592.jpg?v=1659165588",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_YELLOW.GEM_3_75x75_crop_center.jpg?v=1659165588"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Ficus Altissima 'Yellow Gem'",
+          "common_name": "Yellow Gem, Lofty Fig, False Banyan, and Council Tree",
+          "detail_description": "Ficus 'Yellow Gem' is made up of thick rubbery leaves, with a base color of bright green that features an attractive yellow-green blotchy border and yellow veins. This lemon and lime beauty will develop deeper contrast and variegation with ideal light conditions over time.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 5
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 0,
+              "fl": 7
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "fiddle_leaf_fig",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/6_ficus_lyrata_2-1-1674008634220.jpg?v=1674008681",
-      "name": "Fiddle Leaf Fig"
+      "name": "Fiddle Leaf Fig",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-d86f53f4--1FicusLybata6.jpg?v=1608682913",
+      "meet_content": "Native to tropical western Africa, Ficus Lyrata, commonly known as the Fiddle-Feaf Fig, has very large green leaves with a leather-like texture. Although Ficus Lyrata grows naturally in lowland tropical forests it can thrive in a large range of environments. ",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-3b27d86f--1FicusLybata6DETAIL.jpg?v=1608682905",
+      "light": "Fiddle Leaf Fig plants like bright filtered light. Be sure to turn your plant every few months if it starts learning toward the light. This will help maintain a full and healthy plant.",
+      "pet": "No",
+      "water": "Water your Ficus when the top 50-75% of the soil becomes dry. Be sure to thoroughly water your Ficus until water drains from the bottom of the pot. If there is too much water in the saucer be sure to pour it out so the plant is not sitting in water.",
+      "humidity": "High",
+      "temperature": "Fiddle Leaf Fig plants prefer warmer temperatures, somewhere between 65°-75° F. If temperatures fall below 50° F your plant may develop brown spots.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are my yellowing and dropping?",
+        "Your Fiddle Leaf Fig is probably being over watered, make sure you are keeping a consistent watering schedule. If your plant is over watered for too long your plant may experience root rot.",
+        "Why do my leaves have brown spots?",
+        "This may be due to root rot. If you notice your roots are dark and mushy this is likely the case. You will need to remove the rotted roots and repot your plant. Be careful not to over water your plant! You may benefit from using a moisture meter.",
+        "Why are my leaves drooping?",
+        "This is likely because your Fiddle Leaf Fig is not receiving enough water. Try to keep a consistent watering schedule. Water your plant when the top 1-2 inches of soil are dry."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-27d86f53--1FicusLybata6HOLD.jpg?v=1608682909",
+      "shop": [
+        {
+          "id": 134,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6-DETAIL_592x592.jpg?v=1622837332",
+          "name": "Ficus Lyrata 'Fiddle Leaf Fig' - In 10' Pot",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6-DETAIL_592x592.jpg?v=1622837332",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6-DETAIL_75x75_crop_center.jpg?v=1622837332"
+            }
+          ],
+          "price": 139.99,
+          "rate": 5,
+          "botanical_name": "Ficus lyrata",
+          "common_name": "Fiddle-leaf Fig",
+          "detail_description": "Native to tropical western Africa, Ficus lyrata, commonly known as the fiddle-leaf fig, has green, leathery and shiny and have distinctive, pale veins. These veins are embedded in the violin-shaped leaves. Although Ficus lyrata grows naturally in lowland tropical forests it can thrive in a large range of environments. Place in bright indirect sunlight, on the ground where it can grow up to 6' tall. Keep soil moist. Toxic to pets if ingested.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 5
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 135,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_LYRATA_1_592x592.jpg?v=1627691918",
+          "name": "Ficus Lyrata 'Fiddle Leaf Fig'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_LYRATA_1_592x592.jpg?v=1627691918",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_LYRATA_1_75x75_crop_center.jpg?v=1627691918"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_LYRATA_2_592x592.jpg?v=1655238333",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FICUS_LYRATA_2_75x75_crop_center.jpg?v=1655238333"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lyrata-4HOLD_592x592.jpg?v=1655238333",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lyrata-4HOLD_75x75_crop_center.jpg?v=1655238333"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6_592x592.jpg?v=1655238333",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6_75x75_crop_center.jpg?v=1655238333"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6-DETAIL_5b609303-8c2d-4912-afb9-5197b338b831_592x592.jpg?v=1655238333",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6-DETAIL_5b609303-8c2d-4912-afb9-5197b338b831_75x75_crop_center.jpg?v=1655238333"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6-HOLD_592x592.jpg?v=1655238333",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ficus-Lybata-6-HOLD_75x75_crop_center.jpg?v=1655238333"
+            }
+          ],
+          "price": 39.99,
+          "rate": 5,
+          "botanical_name": "Ficus lyrata",
+          "common_name": "Fiddle-leaf Fig",
+          "detail_description": "Native to tropical western Africa, Ficus lyrata, commonly known as the fiddle-leaf fig, has green, leathery and shiny and have distinctive, pale veins. These veins are embedded in the violin-shaped leaves. Although Ficus lyrata grows naturally in lowland tropical forests it can thrive in a large range of environments. Place in bright indirect sunlight, on the ground where it can grow up to 6' tall. Keep soil moist. Toxic to pets if ingested.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "6' Pot",
+              "ca": 8,
+              "fl": 42
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "fittonia",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_fittonia_pink_2-1670959476204.jpg?v=1670959483",
-      "name": "Fittonia"
+      "name": "Fittonia",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/2_fittonia_white_1-1670959476180.jpg?v=1670959478",
+      "meet_content": "The Fittionia is a spreading evergreen perennial with delicately veined, deep-green leaves. Although the most popular vein color is silvery-white, you can also readily find varieties with veins in red, pink, white, and green.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_fittonia_pink_2-1670959476204.jpg?v=1670959483",
+      "light": "Fittonias prefer bright, indirect light. Low light can cause the foliage to loose some of its color and too much sunlight can scorch the leaves.",
+      "pet": "Yes",
+      "water": "Fittonias love to stay consistently moist. Water thoroughly when the top 50% of soil is dry. If you let your ittonia dry out too much you will notice limp leaves. But don't worry, once you give your plant a thorough watering the leaves will perk right up.",
+      "humidity": "High",
+      "temperature": "Your Fittonia will thrive in average indoor temperatures between 65-80°F. ",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why are my leaves limp and droopy?",
+        "The most common reason Fittonias experience droopy leaves is due to a lack of water. Give your plant a thorough watering and you should notice the leaves perk up!",
+        "Why are my leaves turning yellow?",
+        "Yellow leaves are likely due to overwatering. Make sure you are using a pot with drainage holes to avoid soggy soil.",
+        "Why are my leaves dropping?",
+        "This is usually the result of cold temperatures or drafts. be sure to move your Fittonia away from direct airflow from heaters during the winter months."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_fittonia_pink_3-1670959476227.jpg?v=1670959489",
+      "shop": [
+        {
+          "id": 136,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_1258541330_592x592.png?v=1617637616",
+          "name": "Fittonia 'White'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_1258541330_592x592.png?v=1617637616",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_1258541330_75x75_crop_center.png?v=1617637616"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-White-DETAIL-2_592x592.jpg?v=1617637616",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-White-DETAIL-2_75x75_crop_center.jpg?v=1617637616"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-White-HOLD-2_592x592.jpg?v=1617637616",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-White-HOLD-2_75x75_crop_center.jpg?v=1617637616"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-White-4_4505880f-6218-4c95-ab45-67cea19d6055_592x592.jpg?v=1617637617",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-White-4_4505880f-6218-4c95-ab45-67cea19d6055_75x75_crop_center.jpg?v=1617637617"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Fittonia albivenis",
+          "common_name": "Nerve Plant",
+          "detail_description": "The Fittionia is a spreading evergreen perennial with delicately veined, deep-green leaves. Although the most popular vein color is silvery-white, you can also readily find varieties with veins in red, pink, white, and green. Small buds may appear after a time where the stem splits into leaves. Flowers are small with a white to off-white color.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 88
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 50
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 137,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_619739379_592x592.png?v=1619042362",
+          "name": "Fittonia 'Pink'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_619739379_592x592.png?v=1619042362",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_619739379_75x75_crop_center.png?v=1619042362"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-Pink-DETAIL-2_592x592.jpg?v=1619042362",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Fittonia-Pink-DETAIL-2_75x75_crop_center.jpg?v=1619042362"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/c44623e9-c216-4a07-85c6-81a51401a370_592x592.png?v=1660241080",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/c44623e9-c216-4a07-85c6-81a51401a370_75x75_crop_center.png?v=1660241080"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FITTONIA_PINK_2_592x592.jpg?v=1659392721",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FITTONIA_PINK_2_75x75_crop_center.jpg?v=1659392721"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_FITTONIA_PINK_4_592x592.jpg?v=1680760681",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_FITTONIA_PINK_4_75x75_crop_center.jpg?v=1680760681"
+            }
+          ],
+          "price": 22.99,
+          "rate": 5,
+          "botanical_name": "Fittonia albivenis",
+          "common_name": "Nerve Plant",
+          "detail_description": "The Fittionia is a spreading evergreen perennial with delicately veined, deep-green leaves. Although the most popular vein color is silvery-white, you can also readily find varieties with veins in red, pink, white, and green. Small buds may appear after a time where the stem splits into leaves. Flowers are small with a white to off-white color.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 23,
+              "fl": 35
+            },
+            {
+              "id": 1,
+              "name": "6' Pot",
+              "ca": 8,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "guzmania",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-3e7a8c2b--1GuzmaniaRed4-DETAIL.jpg?v=1608687608",
-      "name": "Guzmania (Bromeliad)"
+      "name": "Guzmania (Bromeliad)",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-8c2b90ab--1GuzmaniaRed4-MAIN.jpg?v=1608687616",
+      "meet_content": "Guzmania's are one of the most common bromeliads grown as a houseplant, and one of the most stunning. Its green leaves are topped by clusters of red, orange, yellow, purple, or white flowers.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-3e7a8c2b--1GuzmaniaRed4-DETAIL.jpg?v=1608687608",
+      "light": "Guzmanias prefer and are happiest in bright, natural light. An east or west exposure would be best but just be sure they avoid exposure to any direct, hot sun because they’ll burn. They’ll be fine in low light for a few weeks, but they won’t be as long-lasting. If you want them for the long haul & have them produce pups, bright light is the ticket.",
+      "pet": "Yes",
+      "water": "Guzmanias have a tank, cup, vase or urn (the central well which the flower stalk arises out of) which is how they collect a lot of the water they need. You want to keep that vase about 1/4 of the way full of water & flush it out with fresh water every 1-2 months to avoid any build-up of bacteria.",
+      "humidity": "High",
+      "temperature": "If your house is a comfortable temperature for you, then your Guzmania will do just fine. You just want to avoid any areas with cold or hot drafts.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "What is the best size pot for my bromeliad?",
+        "A Guzmania's roots act as anchor and do not grow very large. A small pot about 4-6 inches should be large enough to hold our Bromeliad Guzmania plants. Using a pot that is too large will result in the potting soil retaining too much water and can eventually lead to root rot which causes the plant to die.",
+        "Why are my leaves Turning brown and drying out?",
+        "This most likely means that your Guzmania is lacking moisture, which could either mean you are not watering your plant enough or it is in an environment with low humidity. Try watering your Guzmania more frequently and maintaining a regular watering schedule.",
+        "Why are my leaves yellowing?",
+        "The most common reason Guzmanias have yellow leaves is due to improper soil moisture/ overwatering. When watering your plant make sure to pour enough water so that liquid pours out the bottom drainage holes into a saucer. Pour out water in saucer, do not let the plant sit in water, this may lead to root rot."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-7a8c2b90--1GuzmaniaRed4-HOLD.jpg?v=1608687612",
+      "shop": [
+        {
+          "id": 138,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png_1961023591_592x592.png?v=1622835930",
+          "name": "Bromeliad Guzmania 'Red'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png_1961023591_592x592.png?v=1622835930",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png_1961023591_75x75_crop_center.png?v=1622835930"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Red-4DETAIL_592x592.jpg?v=1622835934",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Red-4DETAIL_75x75_crop_center.jpg?v=1622835934"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Red-4HOLD_592x592.jpg?v=1622835939",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Red-4HOLD_75x75_crop_center.jpg?v=1622835939"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Red-6_592x592.jpg?v=1629764423",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Red-6_75x75_crop_center.jpg?v=1629764423"
+            }
+          ],
+          "price": 29.99,
+          "rate": 5,
+          "botanical_name": "Guzmania lingulata",
+          "common_name": "Bromeliad Guzmania, Vase plant",
+          "detail_description": "The Bromeliad Guzmania is a popular bromeliad that comes in a large variety of colors. It grows tall and is part of the same family as the pineapple. Striking bracts grow from the center of the plant and can be red, yellow, orange, or deep purple depending on the species. Leaves are thin and dark green. The leaves collect rainwater and the plant receives nourishment in its natural environment from decomposing leaves and droppings from monkeys and birds.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 139,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png1710205367_592x592.png?v=1622835873",
+          "name": "Bromeliad Guzmania 'Rose' - 4' Pot",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png1710205367_592x592.png?v=1622835873",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png1710205367_75x75_crop_center.png?v=1622835873"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Rose-4DETAIL_592x592.jpg?v=1622835877",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Rose-4DETAIL_75x75_crop_center.jpg?v=1622835877"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Rose-4HOLD_592x592.jpg?v=1622835882",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Rose-4HOLD_75x75_crop_center.jpg?v=1622835882"
+            }
+          ],
+          "price": 29.99,
+          "rate": 0,
+          "botanical_name": "Guzmania lingulata",
+          "common_name": "Bromeliad Guzmania, Vase plant",
+          "detail_description": "The Bromeliad Guzmania is a popular bromeliad that comes in a large variety of colors. It grows tall and is part of the same family as the pineapple. Striking bracts grow from the center of the plant and can be red, yellow, orange, or deep purple depending on the species. Leaves are thin and dark green. The leaves collect rainwater and the plant receives nourishment in its natural environment from decomposing leaves and droppings from monkeys and birds.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 140,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_GUZMANIA_YELLOW_1_592x592.jpg?v=1630967893",
+          "name": "Bromeliad Guzmania 'Yellow' - 4' Pot",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_GUZMANIA_YELLOW_1_592x592.jpg?v=1630967893",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_GUZMANIA_YELLOW_1_75x75_crop_center.jpg?v=1630967893"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Yellow-4DETAIL_592x592.jpg?v=1692034238",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Yellow-4DETAIL_75x75_crop_center.jpg?v=1692034238"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/files/IMG_5416_592x789.jpg?v=1692034238",
+              "small_image": "https://houseplantshop.com/cdn/shop/files/IMG_5416_57x75_crop_center.jpg?v=1692034238"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Yellow-4HOLD_592x592.jpg?v=1692034238",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Guzmania-Yellow-4HOLD_75x75_crop_center.jpg?v=1692034238"
+            }
+          ],
+          "price": 29.99,
+          "rate": 5,
+          "botanical_name": "Guzmania lingulata",
+          "common_name": "Bromeliad Guzmania, Vase plant",
+          "detail_description": "The Bromeliad Guzmania is a popular bromeliad that comes in a large variety of colors. It grows tall and is part of the same family as the pineapple. Striking bracts grow from the center of the plant and can be red, yellow, orange, or deep purple depending on the species. Leaves are thin and dark green. The leaves collect rainwater and the plant receives nourishment in its natural environment from decomposing leaves and droppings from monkeys and birds.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 10,
+              "fl": 0
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "herbs",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-b51a06f1--1HerbRosemary4-DETAIL.jpg?v=1609800334",
-      "name": "Herbs"
+      "name": "Herbs",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-f12806f3--1HerbRosemary4-MAIN.jpg?v=1609800345",
+      "meet_content": "In general use, herbs are plants with savory or aromatic properties that are used for flavoring and garnishing food, medicinal purposes, or for fragrances.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-b51a06f1--1HerbRosemary4-DETAIL.jpg?v=1609800334",
+      "light": "Herbs will need at least 5-6 hours of good, hot sun each day. Those long hours of sunlight force herbs to produce the oils that give them their unique aromas and flavors in the first place. So...the more sun, the better!",
+      "pet": "Yes",
+      "water": "Keep the soil moist but not damp. Always water in the morning or the early part of the day, never at night.",
+      "humidity": "Medium",
+      "temperature": "Place pots in a south-facing window where the temperature stays between 60-75° F.",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why is my colors fading?",
+        "This is likely due to inadequate lighting. If your Hypoestes plant is placed in low light the growth will become leggy and the color will fade. A location that is too bright will also cause colors to fade. Hypoestes plants like plants with bright indirect light.",
+        "Why is my plant wilting?",
+        "This is generally a sign that your plant is not receiving enough water. Watering your plant should help it perk right up. Maintaining a consistent watering schedule will help keep your plant happy.",
+        "Why are my leaves damaged?",
+        "Make sure to water you plant from a soil level, If you water from the top the foliage may experience some damage."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-1a06f128--1HerbRosemary4-HOLD.jpg?v=1609800340",
+      "shop": [
+        {
+          "id": 141,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png929749436_592x592.png?v=1643836046",
+          "name": "Hypoestes 'Polka Dot'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png929749436_592x592.png?v=1643836046",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png929749436_75x75_crop_center.png?v=1643836046"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4DETAIL_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4DETAIL_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4HOLD_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4HOLD_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-2_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-2_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-DETAIL-2_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-DETAIL-2_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-HOLD-2_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-HOLD-2_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-DETAIL-4_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-DETAIL-4_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-HypoestesPink-HOLD-4_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-HypoestesPink-HOLD-4_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-4_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-4_75x75_crop_center.jpg?v=1627692206"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Hypoestes Phyllostachya",
+          "common_name": "Polka Dot Plant",
+          "detail_description": "Native to South Africa, Madagascar, and south east Asia, the polka dot plant is a lively and beautiful little plant with brightly spotted leaves that stand out especially well against other plants. Put them in a mass of ferns or ivies, and their colors will stand out in bright contrast. In colder climates it is an annual plant, expected to live for about one year and die off after its sprout. In tropical climates, it is a perennial that lives a long time.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 26
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "homalomena",
@@ -17321,7 +18433,26 @@
     {
       "id": "hydrangea",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/files/16.jpg?v=1698954462",
-      "name": "Hydrangea"
+      "name": "Hydrangea",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/16.jpg?v=1698954462",
+      "meet_content": "Hydrangea, a beloved classic with its iconic blooms, is a timeless favorite for both indoor and outdoor settings. A popular choice for a variety of occasions and floral arrangements.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/files/470.jpg?v=1698954552",
+      "light": "Hydrangea species thrive in well-lit locations with indirect sunlight; it's best to protect them from direct sun exposure.",
+      "pet": "Pet-friendly",
+      "water": "Highly recommended to allow the top one to two inches of the soil to dry before watering, as Hydrangea species prefer slightly moist soil and can withstand short periods of dryness. To prevent root rot, ensure proper drainage in the pots.",
+      "humidity": "Hydrangea species flourish in higher humidity environments, use a humidity tray, a room humidifier, or occasionally misting the leaves with water to enhance the humidity",
+      "temperature": "Hydrangea species thrive in warm conditions, with an ideal temperature range between 65-85°F (18-29°C). To protect your plant from cold damage, it's crucial to avoid exposing it to temperatures below 50°F (10°C).",
+      "difficult_level": "Low Maintenance",
+      "common_problems": [
+        "Why are my leaf edges browning?",
+        "Hydrangea species thrive in conditions with higher humidity, and a lack of sufficient humidity can lead to browning of leaf edges and a less vibrant appearance. To increase humidity around the plant, you can regularly mist the leaves, place a tray of water nearby, or use a humidifier",
+        "Why is my Hydrangea experiencing leggy growth and losing color?",
+        "Inadequate light may result in Hydrangea species becoming leggy, losing their vibrant color, and exhibiting less-than-ideal growth. To ensure their healthy development, it's recommended to place your Hydrangea in a spot with bright, indirect light",
+        "Why are my leaves damaged?",
+        "Make sure to water you plant from a soil level, If you water from the top the foliage may experience some damage."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/files/806.jpg?v=1698955021",
+      "shop": []
     },
     {
       "id": "hypoestes",

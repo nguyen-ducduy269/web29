@@ -48,7 +48,7 @@ const Flickity = () => {
       <Carousel autoplay>
         {data.map((item: any) => {
           return (
-            <h3 className={item.className}>
+            <h3 className={item.className} key={item.id}>
               <div className="slide">
                 <div className="slide-title">{item.title}</div>
 

@@ -303,7 +303,7 @@ const CheckOutPage = () => {
                 ) / 100}
               </p>
             ) : (
-              <p>${finalTotalPrice}</p>
+              <p>${Math.round(finalTotalPrice * 100) / 100}</p>
             )}
           </div>
         </div>
