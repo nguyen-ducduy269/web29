@@ -18493,12 +18493,360 @@
     {
       "id": "hypoestes",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/4_hypoestes_combo_2-1673473660235.jpg?v=1673473672",
-      "name": "Hypoestes"
+      "name": "Hypoestes",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-d1e41da8--1HypoestesCombo4-MAIN.jpg?v=1609798009",
+      "meet_content": "The most common Polka Dot Plant on the market is the pink polka dot, but in recent years growers have introduced new varieties in colors such as white or red. They've also developed plants with deeper colors and brighter contrast, so your plants will pop even more!",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-8a28d1e4--1HypoestesCombo4-DETAIL.jpg?v=1609797999",
+      "light": "A Hypoestes, grows best in bright indirect light. Too much light or too little light causes the colors in the leaves of this plant to fade.",
+      "pet": "Yes",
+      "water": "Water a Hypoestes plant well and then allow the top 25% of the soil to dry out before watering again. Over-watering causes root rot. If the leaves of a Hypoestes droop, they quickly perk up after a little water.",
+      "humidity": "Medium",
+      "temperature": "Hypoestes plants prefer warm temperatures around 75° F. ",
+      "difficult_level": "Medium",
+      "common_problems": [
+        "Why is my colors fading?",
+        "This is likely due to inadequate lighting. If your Hypoestes plant is placed in low light the growth will become leggy and the color will fade. A location that is too bright will also cause colors to fade. Hypoestes plants like plants with bright indirect light.",
+        "Why is my plant wilting?",
+        "This is generally a sign that your plant is not receiving enough water. Watering your plant should help it perk right up. Maintaining a consistent watering schedule will help keep your plant happy.",
+        "Why are my leaves damaged?",
+        "Make sure to water you plant from a soil level, If you water from the top the foliage may experience some damage."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-28d1e41d--1HypoestesCombo4-HOLD.jpg?v=1609798005",
+      "shop": [
+        {
+          "id": 142,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/image_png929749436_592x592.png?v=1643836046",
+          "name": "Hypoestes 'Polka Dot'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/image_png929749436_592x592.png?v=1643836046",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/image_png929749436_75x75_crop_center.png?v=1643836046"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4DETAIL_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4DETAIL_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4HOLD_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Combo-4HOLD_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-2_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-2_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-DETAIL-2_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-DETAIL-2_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-HOLD-2_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes_Combo-HOLD-2_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-DETAIL-4_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-DETAIL-4_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-HypoestesPink-HOLD-4_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-HypoestesPink-HOLD-4_75x75_crop_center.jpg?v=1627692206"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-4_592x592.jpg?v=1627692206",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Hypoestes-Pink-4_75x75_crop_center.jpg?v=1627692206"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Hypoestes Phyllostachya",
+          "common_name": "Polka Dot Plant",
+          "detail_description": "Native to South Africa, Madagascar, and south east Asia, the polka dot plant is a lively and beautiful little plant with brightly spotted leaves that stand out especially well against other plants. Put them in a mass of ferns or ivies, and their colors will stand out in bright contrast. In colder climates it is an annual plant, expected to live for about one year and die off after its sprout. In tropical climates, it is a perennial that lives a long time.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 26
+            }
+          ],
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "ivy",
       "image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/2_ivy_glacier_2-1674008633560.jpg?v=1674008723",
-      "name": "Ivy"
+      "name": "Ivy",
+      "meet_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-25b5d8c2--1IvyGoldChild4-MAIN.jpg?v=1609800908",
+      "meet_content": "One of the best choices for a fast-growing screen or ground cover. Ivy is easy to grow and very rewarding.  With the proper light, water and care an Ivy will excel indoors, and can beautifully vine down from a hanging pot.",
+      "condition_img": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-0be025b5--1IvyGoldChild4-DETAIL.jpg?v=1609800899",
+      "light": "Grow Ivy in medium light for best results. It does tolerate low light, but Ivy won't grow as well or last as long in dim spots. Ivy can take bright light indoors, as well, and even a bit of direct sun on its foliage. In general, Ivy varieties that have white variegation on their leaves are more susceptible to damage from too much sun.",
+      "pet": "No",
+      "water": "Water your Ivy when the top inch or so of the potting mix dries out. If you miss a watering or two and your Ivy wilts, don't worry it should recover after you give it a splash of water. Take care not to overwater Ivy. It's best to keep this houseplant a little too dry than a little too wet.",
+      "humidity": "Medium",
+      "temperature": "A variegated Ivy tolerates most indoor temperatures, but room temperature of 50° to 70° F during the day and 5° to 10° F lower at night is best.",
+      "difficult_level": "Easy",
+      "common_problems": [
+        "Why are my leaves brown/have dead patches?",
+        "Your plant is likely experiencing leaf scorch. Harsh sun and drying conditions can be the cause of this. Ivy growing a south facing wall and pavement may be scorched by reflected light and heat. keeping a consistent watering schedule can help prevent this.",
+        "Why are my leaves crispy and have brown edges?",
+        "Unlike most houseplants crispy leaves and brown edges does not mean your Ivy needs more water. Your Ivy plant actually needs less water. Ivy plants have brown leaves because the roots are too wet and cannot bring the necessary nutrients to the plant. It is better to keep your Ivy plant on the dry side.",
+        "Why is my Ivy dropping leaves?",
+        "This is likely due to an environmental imbalance. This is particularly common during the winter months when the heater is on creating dry air and therefore causing leaf drop. Consider moving your plant to a less drafty spot and increase humidity with a humidifier."
+      ],
+      "common_image": "https://cdn.shopify.com/s/files/1/2528/3612/t/11/assets/pf-e025b5d8--1IvyGoldChild4-HOLD.jpg?v=1609800904",
+      "shop": [
+        {
+          "id": 143,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_GOLD.CHILD_1_592x592.jpg?v=1627692248",
+          "name": "English Ivy 'Gold Child'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_GOLD.CHILD_1_592x592.jpg?v=1627692248",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_GOLD.CHILD_1_75x75_crop_center.jpg?v=1627692248"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GoldChild-4DETAIL_592x592.jpg?v=1627692248",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GoldChild-4DETAIL_75x75_crop_center.jpg?v=1627692248"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GoldChild-4HOLD_592x592.jpg?v=1627692248",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GoldChild-4HOLD_75x75_crop_center.jpg?v=1627692248"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Hedera helix 'Gold Child'",
+          "common_name": "English Ivy, Common Ivy",
+          "detail_description": "An evergreen climber with medium-sized, lustrous, three to five lobed, gray-green leaves, 2-3 in across, adorned with bright gold margins. One of the best choices for a fast-growing arrangement or ground cover. Easy to grow vining plant that grows fairly quickly.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 60,
+              "fl": 68
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 115,
+              "fl": 32
+            },
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 1,
+              "fl": 13
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 144,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_GREEN_1_592x592.jpg?v=1630959922",
+          "name": "English Ivy 'Green California'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_GREEN_1_592x592.jpg?v=1630959922",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_GREEN_1_75x75_crop_center.jpg?v=1630959922"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-4DETAIL_592x592.jpg?v=1630959922",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-4DETAIL_75x75_crop_center.jpg?v=1630959922"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-4HOLD_592x592.jpg?v=1630959922",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-4HOLD_75x75_crop_center.jpg?v=1630959922"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-6_592x592.jpg?v=1630959922",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-6_75x75_crop_center.jpg?v=1630959922"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-HOLD-6_592x592.jpg?v=1630959922",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-GreenCalifornia-HOLD-6_75x75_crop_center.jpg?v=1630959922"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/Ivy_Green_black_round_592x592.jpg?v=1630959922",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/Ivy_Green_black_round_75x75_crop_center.jpg?v=1630959922"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Hedera helix 'Green California'",
+          "common_name": "English Ivy, Common Ivy",
+          "detail_description": "Attractive, deep green colored foliage with no variegation. One of the best choices for a fast-growing arrangement or ground cover. Easy to grow vining plant that grows fairly quickly.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 63
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 76,
+              "fl": 60
+            },
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 0,
+              "fl": 12
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": true
+            },
+            {
+              "name": "Black Cylinder",
+              "status": true
+            },
+            {
+              "name": "White Cylinder",
+              "status": false
+            },
+            {
+              "name": "Terra Cotta",
+              "status": false
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 145,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-4DETAIL_1_592x592.jpg?v=1655236664",
+          "name": "English Ivy 'Glacier'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-4DETAIL_1_592x592.jpg?v=1655236664",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-4DETAIL_1_75x75_crop_center.jpg?v=1655236664"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/Ivy_Glacier_black_round_592x592.jpg?v=1655236664",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/Ivy_Glacier_black_round_75x75_crop_center.jpg?v=1655236664"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-6_592x592.jpg?v=1655236658",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-6_75x75_crop_center.jpg?v=1655236658"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-4DETAIL_592x592.jpg?v=1655238465",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-4DETAIL_75x75_crop_center.jpg?v=1655238465"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-HOLD-6_592x592.jpg?v=1655238465",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Glacier-HOLD-6_75x75_crop_center.jpg?v=1655238465"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/IvyGlacier_FiberPot_592x592.jpg?v=1655238465",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/IvyGlacier_FiberPot_75x75_crop_center.jpg?v=1655238465"
+            }
+          ],
+          "price": 13.99,
+          "rate": 5,
+          "botanical_name": "Hedera helix 'Glacier'",
+          "common_name": "English Ivy, Common Ivy",
+          "detail_description": "Foliage bears a rich, emerald green coloring with high contrast, creamy white margins. A fast growing vine that roots as it travels, or climbs with clinging rootlets onto any vertical surface. One of the best choices for a fast-growing arrangement or ground cover.",
+          "sold_out": false,
+          "pot": [
+            {
+              "id": 0,
+              "name": "3' Pot",
+              "ca": 0,
+              "fl": 45
+            },
+            {
+              "id": 1,
+              "name": "4' Pot",
+              "ca": 92,
+              "fl": 84
+            },
+            {
+              "id": 0,
+              "name": "4' Pot",
+              "ca": 4,
+              "fl": 4
+            }
+          ],
+          "pot_style": [
+            {
+              "name": "Nursery Pot",
+              "status": false
+            },
+            {
+              "name": "Black Cylinder",
+              "status": true
+            },
+            {
+              "name": "White Cylinder",
+              "status": true
+            },
+            {
+              "name": "Terra Cotta",
+              "status": false
+            }
+          ],
+          "quantity": 1
+        },
+        {
+          "id": 146,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_KOLIBRE_1_592x592.jpg?v=1630967935",
+          "name": "English Ivy 'Kolibre'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_KOLIBRE_1_592x592.jpg?v=1630967935",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/4_IVY_KOLIBRE_1_75x75_crop_center.jpg?v=1630967935"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Kolibre-4DETAIL_592x592.jpg?v=1630967935",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Kolibre-4DETAIL_75x75_crop_center.jpg?v=1630967935"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Kolibre-4HOLD_592x592.jpg?v=1630967935",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Kolibre-4HOLD_75x75_crop_center.jpg?v=1630967935"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Hedera helix 'Kolibre'",
+          "common_name": "English Ivy, Common Ivy",
+          "detail_description": "A climbing, borderline hardy, evergreen shrub bearing small, triangular, lobed, cream-marked, grey-green leaves. One of the best choices for a fast-growing screen or ground cover. Easy to grow and very rewarding.",
+          "sold_out": true,
+          "quantity": 1
+        },
+        {
+          "id": 147,
+          "main_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Heart-4MAIN_592x592.jpg?v=1622839833",
+          "name": "English Ivy 'Teardrop'",
+          "detail_image": [
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Heart-4MAIN_592x592.jpg?v=1622839833",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Heart-4MAIN_75x75_crop_center.jpg?v=1622839833"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Heart-4DETAIL_592x592.jpg?v=1622839837",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Heart-4DETAIL_75x75_crop_center.jpg?v=1622839837"
+            },
+            {
+              "big_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Heart-4HOLD_592x592.jpg?v=1622839842",
+              "small_image": "https://houseplantshop.com/cdn/shop/products/1-Ivy-Heart-4HOLD_75x75_crop_center.jpg?v=1622839842"
+            }
+          ],
+          "price": 19.99,
+          "rate": 5,
+          "botanical_name": "Hedera helix 'Teardrop'",
+          "common_name": "English Ivy, Common Ivy",
+          "detail_description": "A moderate to easy, fast-growing large-leafed evergreen vining plant with attractive glossy, tear drop shaped dark green leaves with whitish to light green veining on vines that trail, climb, and cascade. One of the best choices for a fast-growing screen or ground cover.",
+          "sold_out": true,
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "kokedama",
