@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Status from "./Status";
 import { AppDispatch } from "../store/Store";
+import { filterJobAsync } from "../features/todo/todoSlice";
 
 ////// import hooks
 import { fetchData } from "../hooks/fetchData";
 import useJob from "../hooks/Job";
-import { todoSlice } from "../features/todo/todoSlice";
 
 interface Props {
   setIsDisplay: (value: boolean) => void;
@@ -20,8 +20,6 @@ const Table = (props: Props) => {
   const { deleteJob } = useJob();
   const dispatch = useDispatch<AppDispatch>();
 
-  const filterValue = useSelector((state: any) => state.todos.filter);
-
   useEffect(() => {
     dispatch(fetchData(""));
   }, []);
@@ -33,7 +31,7 @@ const Table = (props: Props) => {
   };
 
   useEffect(() => {
-    dispatch(todoSlice.actions.filter({ ...filterValue, name: searchValue }));
+    dispatch(filterJobAsync({ ...tasks, name: searchValue }));
   }, [searchValue]);
 
   return (

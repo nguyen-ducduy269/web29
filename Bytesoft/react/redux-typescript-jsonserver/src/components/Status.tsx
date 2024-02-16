@@ -2,16 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { todoSlice } from "../features/todo/todoSlice";
 import { AppDispatch } from "../store/Store";
+import { filterJobAsync } from "../features/todo/todoSlice";
 
 const Status = () => {
   const [status, setStatus] = useState("");
   const dispatch = useDispatch<AppDispatch>();
-  const filterValue = useSelector((state: any) => state.todos.filter);
+  const filterValue = useSelector((state: any) => state.todos.data);
 
   useEffect(() => {
-    dispatch(todoSlice.actions.filter({ ...filterValue, status: status }));
+    dispatch(filterJobAsync({ ...filterValue, status: status }));
   }, [status]);
 
   return (

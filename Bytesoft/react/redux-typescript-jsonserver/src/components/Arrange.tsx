@@ -1,7 +1,8 @@
 "use client";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../store/Store";
+import { filterJobAsync, sortJobAsync } from "../features/todo/todoSlice";
 
 ////// import hooks
 
@@ -11,12 +12,27 @@ type Props = {
 
 const Arrange = (props: Props) => {
   const dispatch = useDispatch<AppDispatch>();
+  const filterValue = useSelector((state: any) => state.todos.data);
 
-  const handleStatus = async (value: string) => {};
+  const handleStatus = async (value: string) => {
+    dispatch(filterJobAsync({ ...filterValue, status: value }));
+  };
 
-  const fromAToZ = async () => {};
+  const fromAToZ = async () => {
+    const res = await fetch(`http://localhost:3000/data?_sort=name`).then(
+      (res) => res.json()
+    );
+    dispatch(sortJobAsync(res));
+  };
 
-  const fromZToA = async () => {};
+  const fromZToA = async () => {
+    const res = (
+      await fetch(`http://localhost:3000/data?_sort=name`).then((res) =>
+        res.json()
+      )
+    ).reverse();
+    dispatch(sortJobAsync(res));
+  };
 
   return (
     <>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Header = styled.h1`
+const Header = styled.h1`
   width: 100%;
   font-size: 45px;
   text-align: center;
@@ -8,7 +8,7 @@ export const Header = styled.h1`
   margin-bottom: 50px;
 `;
 
-export const Container = styled.div`
+const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -33,7 +33,7 @@ export const Container = styled.div`
   }
 `;
 
-export const LeftJob = styled.div`
+const LeftJob = styled.div`
   position: relative;
   #name {
     width: 97%;
@@ -68,7 +68,7 @@ export const LeftJob = styled.div`
   }
 `;
 
-export const AddButton = styled.button`
+const AddButton = styled.button`
   position: relative;
   width: 150px;
   height: 30px;
@@ -76,7 +76,7 @@ export const AddButton = styled.button`
   color: white;
 `;
 
-export const RightJob = styled.div`
+const RightJob = styled.div`
   height: 276.6px;
   button {
     background-color: #0000ffc7;
@@ -178,3 +178,5 @@ export const RightJob = styled.div`
     color: white;
   }
 `;
+
+export { Header, Container, LeftJob, AddButton, RightJob };

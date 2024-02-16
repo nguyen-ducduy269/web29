@@ -1,15 +1,22 @@
 "use client";
 import { useState } from "react";
 import styled from "styled-components";
+import { filterJobAsync } from "../features/todo/todoSlice";
 
 // import components
 import Arrange from "./Arrange";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch } from "../store/Store";
 
 const More = () => {
   const [arrange, setArrange] = useState(false);
   const [search, setSearch] = useState("");
+  const dispatch = useDispatch<AppDispatch>();
+  const filterValue = useSelector((state: any) => state.todos.data);
 
-  const filterName = async () => {};
+  const filterName = () => {
+    dispatch(filterJobAsync({ ...filterValue, name: search }));
+  };
 
   return (
     <>
