@@ -27,7 +27,9 @@ const Table = (props: Props) => {
   const handleDelete = async (params: number) => {
     try {
       await deleteJob(params);
-    } catch (error) {}
+    } catch (error) {
+      console.log("error", error);
+    }
   };
 
   useEffect(() => {
