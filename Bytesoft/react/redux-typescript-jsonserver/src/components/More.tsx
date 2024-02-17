@@ -31,7 +31,7 @@ const More = () => {
           }}
         ></input>
         <button onClick={() => filterName()}>Tìm</button>
-        <button className="reduce" onClick={() => setArrange(true)}>
+        <button className="reduce" onClick={() => setArrange(!arrange)}>
           Sắp xếp
         </button>
         {arrange ? <Arrange setArrange={setArrange} /> : ""}
