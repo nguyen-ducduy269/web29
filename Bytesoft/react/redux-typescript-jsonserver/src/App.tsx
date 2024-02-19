@@ -12,6 +12,8 @@ import { Header, Container, LeftJob, AddButton, RightJob } from "./App.ts";
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isDisplay, setIsDisplay] = useState(false);
+  const [filterName, setFilterName] = useState("");
+  const [filterStatus, setFilterStatus] = useState("");
 
   return (
     <>
@@ -42,11 +44,20 @@ function App() {
           >
             Thêm công việc
           </AddButton>
-          <More />
+          <More
+            filterName={filterName}
+            setFilterName={setFilterName}
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
+          />
 
           <Table
             setIsDisplay={setIsDisplay}
             setSelectedItem={setSelectedItem}
+            filterName={filterName}
+            setFilterName={setFilterName}
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
           />
         </RightJob>
       </Container>

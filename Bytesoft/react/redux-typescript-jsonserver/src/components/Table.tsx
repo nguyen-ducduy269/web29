@@ -3,21 +3,26 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Status from "./Status";
 import { AppDispatch } from "../store/Store";
-import { filterJobAsync } from "../features/todo/todoSlice";
 
 ////// import hooks
 import { fetchData } from "../hooks/fetchData";
 import useJob from "../hooks/Job";
+import { filterJob } from "../hooks/filterJob";
 
 interface Props {
   setIsDisplay: (value: boolean) => void;
   setSelectedItem: (value: any) => void;
+  filterName: string;
+  setFilterName: (value: string) => void;
+  filterStatus: string;
+  setFilterStatus: (value: string) => void;
 }
 
 const Table = (props: Props) => {
   const tasks = useSelector((state: any) => state.todos.data) || [];
-  const [searchValue, setSearchValue] = useState("");
+  const [reload, setReload] = useState(0);
   const { deleteJob } = useJob();
+  const { filter } = filterJob();
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
@@ -33,8 +38,8 @@ const Table = (props: Props) => {
   };
 
   useEffect(() => {
-    dispatch(filterJobAsync({ ...tasks, name: searchValue }));
-  }, [searchValue]);
+    filter(props.filterName, props.filterStatus);
+  }, [reload]);
 
   return (
     <>
@@ -55,14 +60,19 @@ const Table = (props: Props) => {
               <input
                 className="add-input"
                 type="text"
-                value={searchValue}
+                value={props.filterName}
                 onChange={(e) => {
-                  setSearchValue(e.target.value);
+                  props.setFilterName(e.target.value);
+                  setReload(reload + 1);
                 }}
               ></input>
             </td>
 
-            <Status />
+            <Status
+              setStatus={props.setFilterStatus}
+              setReload={setReload}
+              reload={reload}
+            />
             <td className="activity"></td>
           </tr>
 

@@ -1,22 +1,26 @@
 "use client";
-import { useState } from "react";
-import styled from "styled-components";
-import { filterJobAsync } from "../features/todo/todoSlice";
+import { useEffect, useState } from "react";
+import { Mored } from "../App.ts";
 
 // import components
 import Arrange from "./Arrange";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch } from "../store/Store";
+import { filterJob } from "../hooks/filterJob.ts";
 
-const More = () => {
+interface Props {
+  filterName: string;
+  setFilterName: (value: string) => void;
+  filterStatus: string;
+  setFilterStatus: (value: string) => void;
+}
+
+const More = (props: Props) => {
   const [arrange, setArrange] = useState(false);
-  const [search, setSearch] = useState("");
-  const dispatch = useDispatch<AppDispatch>();
-  const filterValue = useSelector((state: any) => state.todos.data);
+  const [reload, setReload] = useState(0);
+  const { filter } = filterJob();
 
-  const filterName = () => {
-    dispatch(filterJobAsync({ ...filterValue, name: search }));
-  };
+  useEffect(() => {
+    filter(props.filterName, props.filterStatus);
+  }, [reload]);
 
   return (
     <>
@@ -25,26 +29,28 @@ const More = () => {
           className="main-input"
           type="text"
           placeholder="Nhập từ khóa..."
-          value={search}
+          value={props.filterName}
           onChange={(e) => {
-            setSearch(e.target.value);
+            props.setFilterName(e.target.value);
           }}
         ></input>
-        <button onClick={() => filterName()}>Tìm</button>
+        <button onClick={() => setReload(reload + 1)}>Tìm</button>
         <button className="reduce" onClick={() => setArrange(!arrange)}>
           Sắp xếp
         </button>
-        {arrange ? <Arrange setArrange={setArrange} /> : ""}
+        {arrange ? (
+          <Arrange
+            setArrange={setArrange}
+            setSearchStatus={props.setFilterStatus}
+            setReload={setReload}
+            reload={reload}
+          />
+        ) : (
+          ""
+        )}
       </Mored>
     </>
   );
 };
 
 export default More;
-
-const Mored = styled.div`
-  position: relative;
-  input {
-    padding-left: 5px;
-  }
-`;

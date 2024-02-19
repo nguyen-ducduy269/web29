@@ -4,6 +4,7 @@ import { AppDispatch } from "../store/Store";
 import { fetchData } from "./fetchData";
 import request from "../ulti/api";
 import URL_API from "../ulti/url";
+import { sortJobAsync } from "../features/todo/todoSlice";
 
 const useJob = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -41,8 +42,20 @@ const useJob = () => {
     });
   };
 
-  const filter = async ({ name, status }: any) => {
-    dispatch(fetchData({ name, status }));
+  const fromAToZ = async () => {
+    const res = await fetch(`http://localhost:3000/data?_sort=name`).then(
+      (res) => res.json()
+    );
+    dispatch(sortJobAsync(res));
+  };
+
+  const fromZToA = async () => {
+    const res = (
+      await fetch(`http://localhost:3000/data?_sort=name`).then((res) =>
+        res.json()
+      )
+    ).reverse();
+    dispatch(sortJobAsync(res));
   };
 
   return {
@@ -50,7 +63,8 @@ const useJob = () => {
     addJob,
     updateJob,
     deleteJob,
-    filter,
+    fromAToZ,
+    fromZToA,
   };
 };
 
