@@ -1,10 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Mored } from "../App.ts";
 
 // import components
-import Arrange from "./Arrange";
 import { filterJob } from "../hooks/filterJob.ts";
+import Arrange from "./Arrange";
 
 interface Props {
   filterName: string;
@@ -15,12 +15,7 @@ interface Props {
 
 const More = (props: Props) => {
   const [arrange, setArrange] = useState(false);
-  const [reload, setReload] = useState(0);
   const { filter } = filterJob();
-
-  useEffect(() => {
-    filter(props.filterName, props.filterStatus);
-  }, [reload]);
 
   return (
     <>
@@ -34,7 +29,13 @@ const More = (props: Props) => {
             props.setFilterName(e.target.value);
           }}
         ></input>
-        <button onClick={() => setReload(reload + 1)}>Tìm</button>
+        <button
+          onClick={() => {
+            filter(props.filterName, props.filterStatus);
+          }}
+        >
+          Tìm
+        </button>
         <button className="reduce" onClick={() => setArrange(!arrange)}>
           Sắp xếp
         </button>
@@ -42,8 +43,6 @@ const More = (props: Props) => {
           <Arrange
             setArrange={setArrange}
             setSearchStatus={props.setFilterStatus}
-            setReload={setReload}
-            reload={reload}
           />
         ) : (
           ""

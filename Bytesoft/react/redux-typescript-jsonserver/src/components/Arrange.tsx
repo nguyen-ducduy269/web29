@@ -7,8 +7,6 @@ import useJob from "../hooks/Job.ts";
 type Props = {
   setArrange: (value: boolean) => void;
   setSearchStatus: (value: string) => void;
-  setReload: (value: number) => void;
-  reload: number;
 };
 
 const Arrange = (props: Props) => {
@@ -47,8 +45,19 @@ const Arrange = (props: Props) => {
               type="button"
               onClick={() => {
                 props.setArrange(false);
+                props.setSearchStatus("");
+              }}
+            >
+              <span>Tất cả</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              type="button"
+              onClick={() => {
+                props.setArrange(false);
                 props.setSearchStatus("Active");
-                props.setReload(props.reload + 1);
               }}
             >
               <span>Trạng thái Kích hoạt</span>
@@ -61,7 +70,6 @@ const Arrange = (props: Props) => {
               onClick={() => {
                 props.setArrange(false);
                 props.setSearchStatus("Hide");
-                props.setReload(props.reload + 1);
               }}
             >
               <span>Trạng thái Ẩn</span>

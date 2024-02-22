@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 ///// import hooks
 import { fetchData } from "../../hooks/fetchData";
-import { AppDispatch } from "../../store/Store";
 
 const initialState: todoType = {
   isLoading: true,
@@ -41,33 +40,5 @@ const todoSlice = createSlice({
     });
   },
 });
-
-export const { setData } = todoSlice.actions;
-
-export const filterJobAsync =
-  (filter: any) => async (dispatch: AppDispatch) => {
-    let filterString = "";
-    if (filter.name || filter.status) {
-      filterString += "?";
-    }
-    if (filter.name) {
-      filterString += `name_like=${filter.name}`;
-    }
-    if (filter.status) {
-      if (filter.name) {
-        filterString += "&";
-      }
-      filterString += `status=${filter.status}`;
-    }
-    const res = await fetch(`http://localhost:3000/data${filterString}`).then(
-      (res) => res.json()
-    );
-
-    dispatch(setData(res));
-  };
-
-export const sortJobAsync = (sort: any) => async (dispatch: AppDispatch) => {
-  dispatch(setData(sort));
-};
 
 export { todoSlice };

@@ -1,11 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useCallback, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Status from "./Status";
-import { AppDispatch } from "../store/Store";
 
 ////// import hooks
-import { fetchData } from "../hooks/fetchData";
 import useJob from "../hooks/Job";
 import { filterJob } from "../hooks/filterJob";
 
@@ -20,14 +18,16 @@ interface Props {
 
 const Table = (props: Props) => {
   const tasks = useSelector((state: any) => state.todos.data) || [];
-  const [reload, setReload] = useState(0);
+  const [filterValue, setFilterValue] = useState("");
   const { deleteJob } = useJob();
   const { filter } = filterJob();
-  const dispatch = useDispatch<AppDispatch>();
+  const [filterData, setFilterData] = useState([]);
+  const [filterStatus, setFilterStatus] = useState("");
 
   useEffect(() => {
-    dispatch(fetchData(""));
-  }, []);
+    filter(props.filterName, props.filterStatus);
+    setFilterData([]);
+  }, [props.filterName, props.filterStatus]);
 
   const handleDelete = async (params: number) => {
     try {
@@ -37,9 +37,35 @@ const Table = (props: Props) => {
     }
   };
 
+  const filterTableData = useCallback(
+    (keyword: string, status: string) => {
+      if (keyword) {
+        const newItem = tasks.filter((params: any) => {
+          return new RegExp(`${keyword}`, "i").test(params.name);
+        });
+        setFilterData(newItem);
+      } else if (status) {
+        const newItem = tasks.filter((params: any) => {
+          return new RegExp(`${status}`, "i").test(params.status);
+        });
+        setFilterData(newItem);
+      } else if (keyword && status) {
+        const newItem = tasks.filter((params: any) => {
+          return new RegExp(`${status} ${keyword}`, "i").test(
+            params.name || params.status
+          );
+        });
+        setFilterData(newItem);
+      } else {
+        setFilterData(tasks);
+      }
+    },
+    [tasks]
+  );
+
   useEffect(() => {
-    filter(props.filterName, props.filterStatus);
-  }, [reload]);
+    filterTableData(filterValue, filterStatus);
+  }, [filterValue, filterStatus]);
 
   return (
     <>
@@ -60,50 +86,47 @@ const Table = (props: Props) => {
               <input
                 className="add-input"
                 type="text"
-                value={props.filterName}
+                value={filterValue}
                 onChange={(e) => {
-                  props.setFilterName(e.target.value);
-                  setReload(reload + 1);
+                  setFilterValue(e.target.value);
                 }}
               ></input>
             </td>
 
-            <Status
-              setStatus={props.setFilterStatus}
-              setReload={setReload}
-              reload={reload}
-            />
+            <Status setFilterStatus={setFilterStatus} />
             <td className="activity"></td>
           </tr>
 
-          {tasks?.map((e: any, i: any) => (
-            <tr key={i}>
-              <td className="stt">{i + 1}</td>
-              <td className="name">{e.name}</td>
-              <td className="status">
-                <p className="status-active">{e.status}</p>
-              </td>
-              <td className="activity button">
-                <button
-                  className="btn_edit"
-                  onClick={() => {
-                    props.setIsDisplay(true);
-                    props.setSelectedItem(e);
-                  }}
-                >
-                  Sửa
-                </button>
-                <button
-                  className="btn_remove"
-                  onClick={() => {
-                    handleDelete(e.id);
-                  }}
-                >
-                  Xóa
-                </button>
-              </td>
-            </tr>
-          ))}
+          {(filterData.length > 0 ? filterData : tasks)?.map(
+            (e: any, i: any) => (
+              <tr key={i}>
+                <td className="stt">{i + 1}</td>
+                <td className="name">{e.name}</td>
+                <td className="status">
+                  <p className="status-active">{e.status}</p>
+                </td>
+                <td className="activity button">
+                  <button
+                    className="btn_edit"
+                    onClick={() => {
+                      props.setIsDisplay(true);
+                      props.setSelectedItem(e);
+                    }}
+                  >
+                    Sửa
+                  </button>
+                  <button
+                    className="btn_remove"
+                    onClick={() => {
+                      handleDelete(e.id);
+                    }}
+                  >
+                    Xóa
+                  </button>
+                </td>
+              </tr>
+            )
+          )}
         </tbody>
       </table>
     </>

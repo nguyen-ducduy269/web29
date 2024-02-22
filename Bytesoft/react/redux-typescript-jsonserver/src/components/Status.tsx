@@ -1,9 +1,7 @@
 "use client";
 
 interface Props {
-  setStatus: (value: string) => void;
-  setReload: (value: number) => void;
-  reload: number;
+  setFilterStatus: (value: string) => void;
 }
 
 const Status = (props: Props) => {
@@ -12,8 +10,7 @@ const Status = (props: Props) => {
       <td className="status">
         <select
           onClick={(e: any) => {
-            props.setStatus(e.target.value);
-            props.setReload(props.reload + 1);
+            props.setFilterStatus(e.target.value);
           }}
         >
           <option value={""}>All</option>

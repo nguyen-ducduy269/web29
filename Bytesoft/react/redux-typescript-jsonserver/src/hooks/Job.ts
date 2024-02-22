@@ -1,14 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../store/Store";
 import { fetchData } from "./fetchData";
 import request from "../ulti/api";
 import URL_API from "../ulti/url";
-import { sortJobAsync } from "../features/todo/todoSlice";
+import { todoSlice } from "../features/todo/todoSlice";
 
 const useJob = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const dispatch = useDispatch<AppDispatch>();
+  const [newData, setNewData]: any = useState([]);
+  const { setData } = todoSlice.actions;
+
+  const renderData = async () => {
+    const res = await fetch(`http://localhost:3000/data?_sort=name`).then(
+      (res) => res.json()
+    );
+    setNewData(res);
+  };
+
+  useEffect(() => {
+    renderData();
+  }, []);
 
   const addJob = async (temp: any) => {
     setLoading(true);
@@ -43,19 +56,11 @@ const useJob = () => {
   };
 
   const fromAToZ = async () => {
-    const res = await fetch(`http://localhost:3000/data?_sort=name`).then(
-      (res) => res.json()
-    );
-    dispatch(sortJobAsync(res));
+    dispatch(setData(newData));
   };
 
   const fromZToA = async () => {
-    const res = (
-      await fetch(`http://localhost:3000/data?_sort=name`).then((res) =>
-        res.json()
-      )
-    ).reverse();
-    dispatch(sortJobAsync(res));
+    dispatch(setData(newData.reverse()));
   };
 
   return {
