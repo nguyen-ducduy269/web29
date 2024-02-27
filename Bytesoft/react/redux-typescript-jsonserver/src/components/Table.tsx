@@ -1,13 +1,11 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Status from "./Status";
 
 ////// import hooks
 import useJob from "../hooks/Job";
-import { fetchData } from "../hooks/fetchData";
 import { filterJob } from "../hooks/filterJob";
-import { AppDispatch } from "../store/Store";
 
 interface Props {
   setIsDisplay: (value: boolean) => void;
@@ -25,7 +23,6 @@ const Table = (props: Props) => {
   const [filterData, setFilterData] = useState([]);
   const [filterValue, setFilterValue] = useState("");
   const [filterStatus, setFilterStatus] = useState("");
-  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     filter(props.filterName, props.filterStatus);
@@ -42,47 +39,7 @@ const Table = (props: Props) => {
 
   const filterTableData = useCallback(
     (keyword: string, status: string) => {
-      // const newItem = tasks.filter((params: any) => {
-      //   const regex = new RegExp(`${keyword}.${status}`, "i");
-      //   console.log("regex", regex);
-
-      //   return regex.test(params.name || "") && regex.test(params.status || "");
-      // });
-
-      // setFilterData(newItem);
-
-      if (keyword && status) {
-        const item = dispatch(
-          fetchData({
-            ...tasks,
-            name: keyword,
-            status: status,
-          })
-        );
-
-        console.log("item", item);
-      }
-
-      if (keyword) {
-        const newItem = tasks.filter((params: any) => {
-          return new RegExp(`${keyword}`, "i").test(params.name);
-        });
-
-        setFilterData(newItem);
-      }
-
-      if (status) {
-        const newItem = tasks.filter((params: any) => {
-          return new RegExp(`${status}`, "i").test(params.status);
-        });
-        console.log("regex", newItem);
-
-        setFilterData(newItem);
-      }
-
-      if (!keyword && !status) {
-        setFilterData(tasks);
-      }
+      filter(keyword, status);
     },
     [tasks]
   );
