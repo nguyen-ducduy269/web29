@@ -11,18 +11,23 @@ export function Account() {
   const { disconnect } = useDisconnect();
   const { data: ensName } = useEnsName({ address });
   const { data: ensAvatar } = useEnsAvatar({ name: ensName! });
-
   const IP = "0xBda61E0D09776FcE75cDF3971ED6213F51000b7D";
 
+  const wagmigotchiContract = {
+    address: IP,
+  } as const;
+
   const result = useReadContracts({
-    allowFailure: false,
     contracts: [
       {
-        address: IP,
+        ...wagmigotchiContract,
+        functionName: "ownerOf",
+        args: [69],
       },
     ],
   });
-  console.log("result", result);
+
+  console.log("data", result);
 
   return (
     <div>
@@ -30,10 +35,11 @@ export function Account() {
       {address && (
         <div>
           <div>Wallet ID: {ensName ? `${ensName} (${address})` : address}</div>
-          <div>Wallet Value: </div>
         </div>
       )}
       <button onClick={() => disconnect()}>Disconnect</button>
+      <br />
+      <br />
     </div>
   );
 }
