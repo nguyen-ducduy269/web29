@@ -1,24 +1,35 @@
-import { Index } from "@/app/index";
-import { useAccount, useDisconnect, useEnsAvatar, useEnsName } from "wagmi";
+import { useReadContract } from "wagmi";
 
 export function Account() {
-  const { address } = useAccount();
-  const { disconnect } = useDisconnect();
-  const { data: ensName } = useEnsName({ address });
-  const { data: ensAvatar } = useEnsAvatar({ name: ensName! });
+  const abi = [
+    {
+      type: "function",
+      name: "balanceOf",
+      stateMutability: "view",
+      inputs: [{ name: "account", type: "address" }],
+      outputs: [{ type: "uint256" }],
+    },
+    {
+      type: "function",
+      name: "totalSupply",
+      stateMutability: "view",
+      inputs: [],
+      outputs: [{ name: "supply", type: "uint256" }],
+    },
+  ];
+
+  const result = useReadContract({
+    abi,
+    address: "0xBda61E0D09776FcE75cDF3971ED6213F51000b7D",
+    functionName: "totalSupply",
+  });
+
+  console.log("result", result);
 
   return (
     <div>
-      {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
-      {address && (
-        <div>
-          <div>Wallet ID: {ensName ? `${ensName} (${address})` : address}</div>
-        </div>
-      )}
-      <button onClick={() => disconnect()}>Disconnect</button>
-      <br />
-      <Index />
-      <br />
+      <div>ID:</div>
+      <div>Balance: {result?.toString()}</div>
     </div>
   );
 }
