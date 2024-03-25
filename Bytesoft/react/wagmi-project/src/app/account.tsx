@@ -1,4 +1,5 @@
 import { useAccount, useBalance, useDisconnect } from "wagmi";
+import { SendGLDTransaction } from "./exam";
 import { SendTransaction } from "./sendTranstions";
 
 export function Account() {
@@ -25,6 +26,8 @@ export function Account() {
       <br />
       <br />
       <SendTransaction />
+      <br />
+      <SendGLDTransaction />
     </div>
   );
 }
