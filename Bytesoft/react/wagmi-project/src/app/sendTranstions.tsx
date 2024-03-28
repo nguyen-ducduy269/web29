@@ -1,14 +1,12 @@
 import * as React from "react";
 import { parseEther } from "viem";
 import {
-  useAccount,
   useSendTransaction,
   useWaitForTransactionReceipt,
   type BaseError,
 } from "wagmi";
 
 export function SendTransaction() {
-  const { address } = useAccount();
   const {
     data: hash,
     error,
