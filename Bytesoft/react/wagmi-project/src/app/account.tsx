@@ -26,7 +26,6 @@ export function Account() {
       <br />
       <br />
       <SendTransaction />
-      <br />
       <SendGLDTransaction />
     </div>
   );

@@ -28,41 +28,43 @@ export function SendTransaction() {
     });
 
   return (
-    <form onSubmit={submit}>
-      <input
-        name="address"
-        placeholder="0x......"
-        required
-        style={{ width: "350px", height: "25px", paddingLeft: "10px" }}
-      />
-      <input
-        name="value"
-        placeholder="0.05"
-        required
-        style={{
-          width: "100px",
-          height: "25px",
-          marginLeft: 10,
-          paddingLeft: "10px",
-        }}
-      />
-      <button
-        disabled={isPending}
-        type="submit"
-        style={{
-          width: "150px",
-          height: "33px",
-          marginLeft: 10,
-        }}
-      >
-        {isPending ? "Confirming..." : "Send"}
-      </button>
-      {hash && <div>Transaction Hash: {hash}</div>}
-      {isConfirming && <div>Waiting for confirmation...</div>}
-      {isConfirmed && <div>Transaction confirmed.</div>}
-      {error && (
-        <div>Error: {(error as BaseError).shortMessage || error.message}</div>
-      )}
-    </form>
+    <>
+      <form onSubmit={submit}>
+        <input
+          name="address"
+          placeholder="0x......"
+          required
+          style={{ width: "350px", height: "25px", paddingLeft: "10px" }}
+        />
+        <input
+          name="value"
+          placeholder="0.05"
+          required
+          style={{
+            width: "100px",
+            height: "25px",
+            marginLeft: 10,
+            paddingLeft: "10px",
+          }}
+        />
+        <button
+          disabled={isPending}
+          type="submit"
+          style={{
+            width: "150px",
+            height: "33px",
+            marginLeft: 10,
+          }}
+        >
+          {isPending ? "Confirming..." : "Send"}
+        </button>
+        {hash && <div>Transaction Hash: {hash}</div>}
+        {isConfirming && <div>Waiting for confirmation...</div>}
+        {isConfirmed && <div>Transaction confirmed.</div>}
+        {error && (
+          <div>Error: {(error as BaseError).shortMessage || error.message}</div>
+        )}
+      </form>
+    </>
   );
 }
