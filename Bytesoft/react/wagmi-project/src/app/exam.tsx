@@ -13,8 +13,8 @@ export function SendGLDTransaction() {
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const to = formData.get("receive-address") as `0x${string}`;
-    const toToken = formData.get("receive-token-address") as `0x${string}`;
+    const to = formData.get("receive-address") as `0x${string}`; ////// địa chỉ tk nhận
+    const toToken = formData.get("receive-token-address") as `0x${string}`; ///// địa chỉ token của tk gửi
     const value = formData.get("value") as string;
 
     writeContract({
