@@ -1,6 +1,7 @@
 import { useAccount, useBalance, useDisconnect } from "wagmi";
-import { SendGLDTransaction } from "./exam";
-import { SendTransaction } from "./sendTranstions";
+// import { SendGLDTransaction } from "./exam";
+import Exam2 from "./exam2";
+// import { SendTransaction } from "./sendTranstions";
 
 export function Account() {
   const { address } = useAccount();
@@ -23,10 +24,10 @@ export function Account() {
       <div>Balance: {result1.data?.symbol}</div>
       <div>Token: {result1.data?.formatted}</div>
       <button onClick={() => disconnect()}>Disconnect</button>
+      {/* <SendTransaction />
+      <SendGLDTransaction /> */}
       <br />
-      <br />
-      <SendTransaction />
-      <SendGLDTransaction />
+      <Exam2 />
     </div>
   );
 }
